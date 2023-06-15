@@ -15,6 +15,7 @@ fatcat-openapi-client = "^0.5.0"
 layoutparser = "^0.3.4"
 numpy = "^1.24.2"
 torchvision = "^0.15.1"
+bs4 = "^0.0.1"
 
 
 [build-system]
