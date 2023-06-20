@@ -1,3 +1,15 @@
+# Setup
+
+python3 -m venv .venv
+cd fatcat
+
+Activate the python environment.
+Inside the python env type:
+
+pip install poetry
+poetry install
+
+
 # Scraping Journal PDFs from fatcat
 
 # Identifiinng relevant publishers

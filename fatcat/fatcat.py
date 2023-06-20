@@ -8,6 +8,8 @@ import re
 
 
 def scrape_container_archive(container_id):
+    # alternatively:
+    # https://search.fatcat.wiki/fatcat_release/_search?q=preservation:bright+AND+container_id:%22jgycezv425g3noofwb2asxefwi%22
     container_id = "jgycezv425g3noofwb2asxefwi"
     base_url = "https://fatcat.wiki/container/" + container_id + "/browse"
     bright_archives = []
