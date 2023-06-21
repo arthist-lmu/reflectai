@@ -4,15 +4,17 @@ import pprint as pp
 import time
 from bs4 import BeautifulSoup
 import re
+from journals.list_google import journals_list_google
+from journals.list_wd_query import query_journals
+
+import csv
 
 
 
 def scrape_container_archive(container_id):
-    # alternatively:
-    # https://search.fatcat.wiki/fatcat_release/_search?q=preservation:bright+AND+container_id:%22jgycezv425g3noofwb2asxefwi%22
     container_id = "jgycezv425g3noofwb2asxefwi"
     base_url = "https://fatcat.wiki/container/" + container_id + "/browse"
-    bright_archives = []
+    bright_releases = []
     
     response = requests.get(base_url)
     soup = BeautifulSoup(response.content, 'html.parser')
@@ -24,7 +26,6 @@ def scrape_container_archive(container_id):
             urls.append(href)
 
     for url in urls:
-        print(url)
         response = requests.get("https://fatcat.wiki/" + url)
         soup = BeautifulSoup(response.content, 'html.parser')
         tds = soup.find_all('td')
@@ -36,12 +37,44 @@ def scrape_container_archive(container_id):
                     links_in_td = td.find_all('a', href=True)
                     for link_in_td in links_in_td:
                         if '/release/' in link_in_td['href']:
-                            print(link_in_td['href'].replace("/release/", ""))
-                            bright_archives.append(link_in_td['href'].replace("/release/", ""))
+                            row = [link_in_td['href'].replace("/release/", ""), get_archive_link(links_in_td)]
+                            bright_releases.append(row)
+    return bright_releases
 
-    return bright_archives
+def get_archive_link(links):
+    for link in links:
+        if 'web.archive.org' in link['href']:
+            return link['href']
   
-    
+def get_bright_releases(container_id):
+    bright_releases = []
+    for x in range(0,100000,40):
+        base_url = "https://search.fatcat.wiki/fatcat_release/_search?q=preservation:bright+AND+container_id:" + container_id + "&size=40&from=" + str(x)
+        r = requests.get(base_url)
+        content = json.loads(r.content)
+        if len(content["hits"]["hits"]) > 0:
+            for hit in content["hits"]["hits"]: 
+                #print(hit)
+                try:
+                    row = [hit["_id"], hit["_source"]["doi"], hit["_source"]["release_year"], hit["_source"]["language"], hit["_source"]["country_code"], hit["_source"]["ia_pdf_url"], hit["_source"]["title"]]
+                    bright_releases.append(row)
+                except:
+                    print("some key error")
+        else:
+            break
+        time.sleep(0.1)
+    return bright_releases
+
+def qid_to_fatcat_id(qid):
+    try:
+        url = "https://api.fatcat.wiki/v0/container/lookup?wikidata_qid=" + qid
+        r = requests.get(url)
+        json_content = json.loads(r.content)
+        container_id = json_content["ident"]
+        return container_id
+    except:
+        print("well that didn't work")
+        return None
 
 def lookup_containers(glist):
     bright_total = 0
@@ -99,28 +132,22 @@ def container_stats(id):
         return [bright, dark, no]
 
 if __name__ == "__main__":
-    bright_archives = scrape_container_archive("erffsf")
-    print(bright_archives)
-    exit()
 
+    writer = csv.writer(open("wd_query_list_download_links.csv", 'w'))
+    #query_journals
+    for i, journal in enumerate(query_journals):
+        #if i > 1:
+        #    break
+        print("processing journal number: " + str(i) + " qid: " + journal)
+        fatcat_id = qid_to_fatcat_id(journal)
+        if fatcat_id is not None:
+            bright_releases = get_bright_releases(fatcat_id)
+            for row in bright_releases:
+                writer.writerow(row)
 
-    # ISSN-L list of journals to request
-    example_journals_list = [
-        "0141-6790",
-    ]
-    lookup_containers(query_journals)
-
-    exit()
-
-
-    for issnl in example_journals_list:
-        r = requests.get("https://api.fatcat.wiki/v0/container/lookup?issnl=" + issnl)
-        json_content = json.loads(r.content)
-        container_id = json_content["ident"]
-        container_stats(container_id)
-        #download_container_contents(container_id)
-
-
+    
+    #bright_archives = scrape_container_archive("erffsf")
+    #print(bright_archives)
     exit()
 
 
