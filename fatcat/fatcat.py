@@ -52,16 +52,19 @@ def get_bright_releases(container_id):
         base_url = "https://search.fatcat.wiki/fatcat_release/_search?q=preservation:bright+AND+container_id:" + container_id + "&size=40&from=" + str(x)
         r = requests.get(base_url)
         content = json.loads(r.content)
-        if len(content["hits"]["hits"]) > 0:
-            for hit in content["hits"]["hits"]: 
-                #print(hit)
-                try:
-                    row = [hit["_id"], hit["_source"]["doi"], hit["_source"]["release_year"], hit["_source"]["language"], hit["_source"]["country_code"], hit["_source"]["ia_pdf_url"], hit["_source"]["title"]]
-                    bright_releases.append(row)
-                except:
-                    print("some key error")
-        else:
-            break
+        try:
+            if len(content["hits"]["hits"]) > 0:
+                for hit in content["hits"]["hits"]: 
+                    #print(hit)
+                    try:
+                        row = [hit["_id"], hit["_source"]["doi"], hit["_source"]["release_year"], hit["_source"]["language"], hit["_source"]["country_code"], hit["_source"]["ia_pdf_url"], hit["_source"]["title"], hit["_source"]["container_name"], hit["_source"]["publisher"]]
+                        bright_releases.append(row)
+                    except:
+                        print("some key error")
+            else:
+                break
+        except:
+            print("severe key error")
         time.sleep(0.1)
     return bright_releases
 
@@ -133,9 +136,9 @@ def container_stats(id):
 
 if __name__ == "__main__":
 
-    writer = csv.writer(open("wd_query_list_download_links.csv", 'w'))
-    #query_journals
-    for i, journal in enumerate(query_journals):
+    writer = csv.writer(open("goole_list_download_links_expanded.csv", 'w'))
+    #query_journals journals_list_google
+    for i, journal in enumerate(journals_list_google):
         #if i > 1:
         #    break
         print("processing journal number: " + str(i) + " qid: " + journal)
