@@ -70,8 +70,10 @@ processed_count = 0
 for filename in os.listdir(folder_path):
     if filename.endswith('.pdf'):
         pdf_path = os.path.join(folder_path, filename)
-        pdf_to_json_and_images(pdf_path, processed_path)
-        
+        try:
+            pdf_to_json_and_images(pdf_path, processed_path)
+        except:
+            logging.error("Critical failure")
         processed_count += 1
         percentage_done = (processed_count / total_pdfs) * 100
         logging.info(f'Processed {processed_count} out of {total_pdfs} PDFs ({percentage_done:.2f}% done)')
