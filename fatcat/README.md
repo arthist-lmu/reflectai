@@ -1,3 +1,13 @@
+# Reflectai Scraping
+
+Folder locations for raw pdfs on the server: /nfs/data/reflectai/scientific_pdfs
+Folder locations for processed files: /nfs/data/reflectai/scientific_pdfs/processed
+
+
+Every paper has a a folder with a .json file of the same name. 
+
+The json contains the text of the pdf, as well as an array of images with locations.
+
 # Setup
 
 python3 -m venv .venv
