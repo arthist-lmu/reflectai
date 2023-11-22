@@ -13,6 +13,7 @@ torchvision = "^0.16.1"
 torchaudio = "^2.1.1"
 nltk = "^3.8.1"
 pyvis = "^0.3.2"
+iprogress = "^0.4"
 
 
 [build-system]
