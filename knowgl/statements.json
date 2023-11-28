@@ -1,0 +1,182 @@
+[
+    {
+        "subject": {
+            "mention": "Happy, smiling pair",
+            "label": "Happy, smiling pair",
+            "type": "photograph"
+        },
+        "relation": {
+            "label": "instance of"
+        },
+        "object": {
+            "mention": "pair",
+            "label": "Photograph",
+            "type": "work"
+        }
+    },
+    {
+        "subject": {
+            "mention": "Mozart",
+            "label": "Wolfgang Amadeus Mozart",
+            "type": "human"
+        },
+        "relation": {
+            "label": "notable work"
+        },
+        "object": {
+            "mention": "The Marriage of Figaro",
+            "label": "The Marriage of Figaro",
+            "type": "dramatico-musical work"
+        }
+    },
+    {
+        "subject": {
+            "mention": "The Marriage of Figaro",
+            "label": "The Marriage of Figaro",
+            "type": "dramatico-musical work"
+        },
+        "relation": {
+            "label": "composer"
+        },
+        "object": {
+            "mention": "Mozart",
+            "label": "Wolfgang Amadeus Mozart",
+            "type": "human"
+        }
+    },
+    {
+        "subject": {
+            "mention": "The Marriage of Figaro",
+            "label": "The Marriage of Figaro",
+            "type": "dramatico-musical work"
+        },
+        "relation": {
+            "label": "composer"
+        },
+        "object": {
+            "mention": "Ludwig van Beethoven",
+            "label": "Ludwig van Beethoven",
+            "type": "human"
+        }
+    },
+    {
+        "subject": {
+            "mention": "Ludwig van Beethoven",
+            "label": "Ludwig van Beethoven",
+            "type": "human"
+        },
+        "relation": {
+            "label": "notable work"
+        },
+        "object": {
+            "mention": "The Marriage of Figaro",
+            "label": "The Marriage of Figaro",
+            "type": "dramatico-musical work"
+        }
+    },
+    {
+        "subject": {
+            "mention": "Ludwig van Beethoven",
+            "label": "Ludwig van Beethoven",
+            "type": "human"
+        },
+        "relation": {
+            "label": "notable work"
+        },
+        "object": {
+            "mention": "The Marriage of Figaro",
+            "label": "The Marriage of Figaro",
+            "type": "dramatico-musical work"
+        }
+    },
+    {
+        "subject": {
+            "mention": "Ludwig van Beethoven",
+            "label": "Ludwig van Beethoven",
+            "type": "human"
+        },
+        "relation": {
+            "label": "notable work"
+        },
+        "object": {
+            "mention": "The Marriage of Figaro",
+            "label": "The Marriage of Figaro",
+            "type": "dramatico-musical work"
+        }
+    },
+    {
+        "subject": {
+            "mention": "The Marriage of Figaro",
+            "label": "The Marriage of Figaro",
+            "type": "dramatico-musical work"
+        },
+        "relation": {
+            "label": "composer"
+        },
+        "object": {
+            "mention": "Ludwig van Beethoven",
+            "label": "Ludwig van Beethoven",
+            "type": "human"
+        }
+    },
+    {
+        "subject": {
+            "mention": "Ludwig van Beethoven",
+            "label": "Ludwig van Beethoven",
+            "type": "human"
+        },
+        "relation": {
+            "label": "notable work"
+        },
+        "object": {
+            "mention": "Symphony No. 14",
+            "label": "Symphony No. 14 (Beethoven)",
+            "type": "painting"
+        }
+    },
+    {
+        "subject": {
+            "mention": "Symphony No. 14",
+            "label": "Symphony No. 14 (Beethoven)",
+            "type": "painting"
+        },
+        "relation": {
+            "label": "creator"
+        },
+        "object": {
+            "mention": "Ludwig van Beethoven",
+            "label": "Ludwig van Beethoven",
+            "type": "human"
+        }
+    },
+    {
+        "subject": {
+            "mention": "Symphony No. 14",
+            "label": "Symphony No. 14 (Beethoven)",
+            "type": "painting"
+        },
+        "relation": {
+            "label": "creator"
+        },
+        "object": {
+            "mention": "Ludwig van Beethoven",
+            "label": "Ludwig van Beethoven",
+            "type": "human"
+        }
+    },
+    {
+        "subject": {
+            "mention": "gardland of love",
+            "label": "Garden of love",
+            "type": "garden"
+        },
+        "relation": {
+            "label": "facet of"
+        },
+        "object": {
+            "mention": "love",
+            "label": "Love",
+            "type": "emotion"
+        }
+    }
+]

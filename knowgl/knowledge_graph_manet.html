@@ -88,8 +88,8 @@
                   
 
                   // parsing and collecting nodes and edges from the python
-                  nodes = new vis.DataSet([{"color": "#97c2fc", "id": "Q825", "label": "God in Christianity", "shape": "dot"}, {"color": "#97c2fc", "id": "Q302", "label": "Jesus", "shape": "dot"}, {"color": "#97c2fc", "id": "Q345", "label": "Virgin Mary", "shape": "dot"}, {"color": "#97c2fc", "id": "Q9077", "label": "Moses", "shape": "dot"}, {"color": "#97c2fc", "id": "Q34623", "label": "Ten Commandments", "shape": "dot"}, {"color": "#97c2fc", "id": "", "label": "", "shape": "dot"}, {"color": "#97c2fc", "id": "Q1513117", "label": "damnation", "shape": "dot"}, {"color": "#97c2fc", "id": "Q51624", "label": "Resurrection of Jesus", "shape": "dot"}]);
-                  edges = new vis.DataSet([{"from": "Q825", "label": "child", "to": "Q302"}, {"from": "Q302", "label": "mother", "to": "Q345"}, {"from": "Q9077", "label": "mother", "to": "Q345"}, {"from": "Q34623", "label": "author", "to": "Q9077"}, {"from": "", "label": "opposite of", "to": "Q1513117"}, {"from": "Q51624", "label": "opposite of", "to": ""}]);
+                  nodes = new vis.DataSet([{"color": "#97c2fc", "id": "", "label": "", "shape": "dot"}, {"color": "#97c2fc", "id": "Q125191", "label": "photograph", "shape": "dot"}, {"color": "#97c2fc", "id": "Q254", "label": "Wolfgang Amadeus Mozart", "shape": "dot"}, {"color": "#97c2fc", "id": "Q201873", "label": "The Marriage of Figaro", "shape": "dot"}, {"color": "#97c2fc", "id": "Q255", "label": "Ludwig van Beethoven", "shape": "dot"}, {"color": "#97c2fc", "id": "Q316", "label": "love", "shape": "dot"}]);
+                  edges = new vis.DataSet([{"from": "", "label": "instance of", "to": "Q125191"}, {"from": "Q254", "label": "notable work", "to": "Q201873"}, {"from": "Q201873", "label": "composer", "to": "Q255"}, {"from": "Q255", "label": "notable work", "to": ""}, {"from": "", "label": "facet of", "to": "Q316"}]);
 
                   nodeColors = {};
                   allNodes = nodes.get({ returnType: "Object" });
