@@ -34,7 +34,7 @@ with open(file_path, "r") as file:
             if line_count == 10:
                 break
 
-print("Input text pages: " + str(len(input_text)))
+print("Input text pages: " + line_count)
 
 import nltk
 
