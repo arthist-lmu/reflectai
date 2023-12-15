@@ -1,0 +1,250 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 800px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+             #loadingBar {
+                 position:absolute;
+                 top:0px;
+                 left:0px;
+                 width: 100%;
+                 height: 800px;
+                 background-color:rgba(200,200,200,0.8);
+                 -webkit-transition: all 0.5s ease;
+                 -moz-transition: all 0.5s ease;
+                 -ms-transition: all 0.5s ease;
+                 -o-transition: all 0.5s ease;
+                 transition: all 0.5s ease;
+                 opacity:1;
+             }
+
+             #bar {
+                 position:absolute;
+                 top:0px;
+                 left:0px;
+                 width:20px;
+                 height:20px;
+                 margin:auto auto auto auto;
+                 border-radius:11px;
+                 border:2px solid rgba(30,30,30,0.05);
+                 background: rgb(0, 173, 246); /* Old browsers */
+                 box-shadow: 2px 0px 4px rgba(0,0,0,0.4);
+             }
+
+             #border {
+                 position:absolute;
+                 top:10px;
+                 left:10px;
+                 width:500px;
+                 height:23px;
+                 margin:auto auto auto auto;
+                 box-shadow: 0px 0px 4px rgba(0,0,0,0.2);
+                 border-radius:10px;
+             }
+
+             #text {
+                 position:absolute;
+                 top:8px;
+                 left:530px;
+                 width:30px;
+                 height:50px;
+                 margin:auto auto auto auto;
+                 font-size:22px;
+                 color: #000000;
+             }
+
+             div.outerBorder {
+                 position:relative;
+                 top:400px;
+                 width:600px;
+                 height:44px;
+                 margin:auto auto auto auto;
+                 border:8px solid rgba(0,0,0,0.1);
+                 background: rgb(252,252,252); /* Old browsers */
+                 background: -moz-linear-gradient(top,  rgba(252,252,252,1) 0%, rgba(237,237,237,1) 100%); /* FF3.6+ */
+                 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,252,252,1)), color-stop(100%,rgba(237,237,237,1))); /* Chrome,Safari4+ */
+                 background: -webkit-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Chrome10+,Safari5.1+ */
+                 background: -o-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Opera 11.10+ */
+                 background: -ms-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* IE10+ */
+                 background: linear-gradient(to bottom,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* W3C */
+                 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+                 border-radius:72px;
+                 box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+             }
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+            <div id="loadingBar">
+              <div class="outerBorder">
+                <div id="text">0%</div>
+                <div id="border">
+                  <div id="bar"></div>
+                </div>
+              </div>
+            </div>
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#97c2fc", "id": "Q2267754", "label": "Northwest hip hop", "shape": "dot"}, {"color": "#97c2fc", "id": "Q4028", "label": "Paul Simon", "shape": "dot"}, {"color": "#97c2fc", "id": "Q1104069", "label": "Canadian dollar", "shape": "dot"}, {"color": "#97c2fc", "id": "Q16", "label": "Canada", "shape": "dot"}, {"color": "#97c2fc", "id": "Q12350632", "label": "Ken Thomson", "shape": "dot"}, {"color": "#97c2fc", "id": "Q670250", "label": "Art Gallery of Ontario", "shape": "dot"}, {"color": "#97c2fc", "id": "Q6238868", "label": "John Henry Lefroy", "shape": "dot"}, {"color": "#97c2fc", "id": "Q58136563", "label": "Magnetic instruments in the Canadian Arctic expeditions of Franklin, Lefroy, and Nares", "shape": "dot"}, {"color": "#97c2fc", "id": "Q7896496", "label": "University of Toronto Press", "shape": "dot"}, {"color": "#97c2fc", "id": "Q172", "label": "Toronto", "shape": "dot"}, {"color": "#97c2fc", "id": "Q325854", "label": "George Simpson", "shape": "dot"}, {"color": "#97c2fc", "id": "", "label": "*New: Simpson\u0027s western expeditions", "shape": "dot"}, {"color": "#97c2fc", "id": "Q511878", "label": "Coureur des bois", "shape": "dot"}, {"color": "#97c2fc", "id": "Q214724", "label": "snowshoe", "shape": "dot"}, {"color": "#97c2fc", "id": "Q134932", "label": "tipi", "shape": "dot"}, {"color": "#97c2fc", "id": "Q744299", "label": "Indigenous peoples of California", "shape": "dot"}, {"color": "#97c2fc", "id": "Q9626", "label": "Conservative Party", "shape": "dot"}, {"color": "#97c2fc", "id": "Q3943728", "label": "1852 United Kingdom general election", "shape": "dot"}, {"color": "#97c2fc", "id": "Q98102298", "label": "Lefroy", "shape": "dot"}, {"color": "#97c2fc", "id": "Q913250", "label": "Library and Archives Canada", "shape": "dot"}, {"color": "#97c2fc", "id": "Q361", "label": "World War I", "shape": "dot"}, {"color": "#97c2fc", "id": "Q362", "label": "World War II", "shape": "dot"}, {"color": "#97c2fc", "id": "Q105830860", "label": "David P. Silcox", "shape": "dot"}, {"color": "#97c2fc", "id": "Q654762", "label": "Sotheby\u0027s", "shape": "dot"}, {"color": "#97c2fc", "id": "Q60", "label": "New York City", "shape": "dot"}, {"color": "#97c2fc", "id": "Q81178", "label": "Baffin Island", "shape": "dot"}, {"color": "#97c2fc", "id": "Q3106117", "label": "Lawren Harris", "shape": "dot"}, {"color": "#97c2fc", "id": "Q110094098", "label": "Portrait of Maungwudaus", "shape": "dot"}, {"color": "#97c2fc", "id": "Q1904", "label": "Ontario", "shape": "dot"}, {"color": "#97c2fc", "id": "Q1530896", "label": "Glenbow Museum", "shape": "dot"}, {"color": "#97c2fc", "id": "Q36312", "label": "Calgary", "shape": "dot"}, {"color": "#97c2fc", "id": "Q5597", "label": "Raphael", "shape": "dot"}, {"color": "#97c2fc", "id": "Q201873", "label": "The Marriage of Figaro", "shape": "dot"}, {"color": "#97c2fc", "id": "Q50843860", "label": "Among the Firs", "shape": "dot"}, {"color": "#97c2fc", "id": "Q1133777", "label": "Cornelius Krieghoff", "shape": "dot"}, {"color": "#97c2fc", "id": "Q255", "label": "Ludwig van Beethoven", "shape": "dot"}, {"color": "#97c2fc", "id": "Q31682995", "label": "Symphony No. 9", "shape": "dot"}, {"color": "#97c2fc", "id": "Q112427160", "label": "William Kane", "shape": "dot"}, {"color": "#97c2fc", "id": "Q52159419", "label": "Harriet Clench Kane", "shape": "dot"}, {"color": "#97c2fc", "id": "Q3889203", "label": "Gozzi Altarpiece", "shape": "dot"}, {"color": "#97c2fc", "id": "Q47551", "label": "Titian", "shape": "dot"}, {"color": "#97c2fc", "id": "Q3905105", "label": "Pinacoteca civica \"Francesco Podesti\"", "shape": "dot"}, {"color": "#97c2fc", "id": "Q3415", "label": "Ancona", "shape": "dot"}, {"color": "#97c2fc", "id": "Q812768", "label": "bashi-bazouk", "shape": "dot"}, {"color": "#97c2fc", "id": "Q212499", "label": "Jean-L\u00e9on G\u00e9r\u00f4me", "shape": "dot"}, {"color": "#97c2fc", "id": "Q12560", "label": "Ottoman Empire", "shape": "dot"}, {"color": "#97c2fc", "id": "Q7302", "label": "George Frideric Handel", "shape": "dot"}, {"color": "#97c2fc", "id": "Q160236", "label": "Metropolitan Museum of Art", "shape": "dot"}, {"color": "#97c2fc", "id": "Q229272", "label": "Ernst Ludwig Kirchner", "shape": "dot"}, {"color": "#97c2fc", "id": "Q80113", "label": "expressionism", "shape": "dot"}, {"color": "#97c2fc", "id": "Q64", "label": "Berlin", "shape": "dot"}, {"color": "#97c2fc", "id": "Q3618220", "label": "Little Girls and High Finance", "shape": "dot"}, {"color": "#97c2fc", "id": "Q9880", "label": "Werkendam", "shape": "dot"}, {"color": "#97c2fc", "id": "Q108440834", "label": "Expressionismus", "shape": "dot"}, {"color": "#97c2fc", "id": "Q62613603", "label": "Das Bild ohne Gnade", "shape": "dot"}, {"color": "#97c2fc", "id": "Q162991", "label": "false start", "shape": "dot"}, {"color": "#97c2fc", "id": "Q27927940", "label": "Lovis Corinth: Die Gem\u00e4lde", "shape": "dot"}, {"color": "#97c2fc", "id": "Q155057", "label": "Jasper Johns", "shape": "dot"}, {"color": "#97c2fc", "id": "Q134147", "label": "pop art", "shape": "dot"}, {"color": "#97c2fc", "id": "Q2111259", "label": "Prix Iris", "shape": "dot"}, {"color": "#97c2fc", "id": "Q328341", "label": "Robert Smithson", "shape": "dot"}, {"color": "#97c2fc", "id": "Q668343", "label": "Spiral Jetty", "shape": "dot"}, {"color": "#97c2fc", "id": "Q860861", "label": "sculpture", "shape": "dot"}, {"color": "#97c2fc", "id": "Q49070262", "label": "Rozel Point", "shape": "dot"}, {"color": "#97c2fc", "id": "Q178741", "label": "Great Salt Lake", "shape": "dot"}, {"color": "#97c2fc", "id": "Q1207930", "label": "Dia Art Foundation", "shape": "dot"}, {"color": "#97c2fc", "id": "Q96387954", "label": "list of Dia Art Foundation locations and sites", "shape": "dot"}, {"color": "#97c2fc", "id": "Q84", "label": "London", "shape": "dot"}, {"color": "#97c2fc", "id": "Q23941623", "label": "Fire Pit", "shape": "dot"}, {"color": "#97c2fc", "id": "Q8063", "label": "rock", "shape": "dot"}, {"color": "#97c2fc", "id": "Q408", "label": "Australia", "shape": "dot"}, {"color": "#97c2fc", "id": "Q36074", "label": "Queensland", "shape": "dot"}, {"color": "#97c2fc", "id": "Q3224", "label": "New South Wales", "shape": "dot"}, {"color": "#97c2fc", "id": "Q28669170", "label": "The life of Christ", "shape": "dot"}, {"color": "#97c2fc", "id": "Q175166", "label": "tempera", "shape": "dot"}, {"color": "#97c2fc", "id": "Q897", "label": "gold", "shape": "dot"}, {"color": "#97c2fc", "id": "Q15790", "label": "Cimabue", "shape": "dot"}, {"color": "#97c2fc", "id": "Q641", "label": "Venice", "shape": "dot"}, {"color": "#97c2fc", "id": "Q2044", "label": "Florence", "shape": "dot"}, {"color": "#97c2fc", "id": "Q490", "label": "Milan", "shape": "dot"}, {"color": "#97c2fc", "id": "Q174728", "label": "centimetre", "shape": "dot"}, {"color": "#97c2fc", "id": "Q929302", "label": "dimension of a vector space", "shape": "dot"}, {"color": "#97c2fc", "id": "Q22043516", "label": "Polyptych", "shape": "dot"}, {"color": "#97c2fc", "id": "Q1411766", "label": "predella", "shape": "dot"}, {"color": "#97c2fc", "id": "Q7841665", "label": "Trigadilly", "shape": "dot"}, {"color": "#97c2fc", "id": "Q7428052", "label": "Save Outdoor Sculpture!", "shape": "dot"}, {"color": "#97c2fc", "id": "Q131626", "label": "Smithsonian Institution", "shape": "dot"}, {"color": "#97c2fc", "id": "Q254", "label": "Wolfgang Amadeus Mozart", "shape": "dot"}, {"color": "#97c2fc", "id": "Q190237", "label": "Der Ring des Nibelungen", "shape": "dot"}, {"color": "#97c2fc", "id": "Q11277", "label": "Rockefeller Center", "shape": "dot"}, {"color": "#97c2fc", "id": "Q11249", "label": "Midtown Manhattan", "shape": "dot"}, {"color": "#97c2fc", "id": "Q21558077", "label": "One Fifth Avenue", "shape": "dot"}, {"color": "#97c2fc", "id": "Q624556", "label": "St. Patrick\u0027s Cathedral", "shape": "dot"}, {"color": "#97c2fc", "id": "Q130818", "label": "Atlas", "shape": "dot"}, {"color": "#97c2fc", "id": "Q183281", "label": "Phoebe", "shape": "dot"}, {"color": "#97c2fc", "id": "Q2869431", "label": "Atlas", "shape": "dot"}, {"color": "#97c2fc", "id": "Q71409", "label": "Lee Lawrie", "shape": "dot"}, {"color": "#97c2fc", "id": "Q173782", "label": "Art Deco", "shape": "dot"}, {"color": "#97c2fc", "id": "Q2293115", "label": "National Gallery of Art sculpture garden", "shape": "dot"}, {"color": "#97c2fc", "id": "Q107043627", "label": "Sculpted vault of heaven with Herakles, Atlas and Hesperides at Olympia", "shape": "dot"}, {"color": "#97c2fc", "id": "Q12980", "label": "Polaris", "shape": "dot"}, {"color": "#97c2fc", "id": "Q11299", "label": "Manhattan", "shape": "dot"}, {"color": "#97c2fc", "id": "Q16950902", "label": "Beauty Revealed", "shape": "dot"}, {"color": "#97c2fc", "id": "Q7422343", "label": "Sarah Goodridge", "shape": "dot"}, {"color": "#97c2fc", "id": "Q3305213", "label": "painting", "shape": "dot"}, {"color": "#97c2fc", "id": "Q11472", "label": "paper", "shape": "dot"}, {"color": "#97c2fc", "id": "Q429220", "label": "pink", "shape": "dot"}, {"color": "#97c2fc", "id": "Q1075", "label": "color", "shape": "dot"}, {"color": "#97c2fc", "id": "Q3531409", "label": "Tomorrow\u0027s World Tour (Live at the Roundhouse)", "shape": "dot"}, {"color": "#97c2fc", "id": "Q28823", "label": "textile", "shape": "dot"}, {"color": "#97c2fc", "id": "Q106231", "label": "Daniel Webster", "shape": "dot"}, {"color": "#97c2fc", "id": "Q6780937", "label": "Mary Webster", "shape": "dot"}, {"color": "#97c2fc", "id": "Q29169292", "label": "Gloria Manney", "shape": "dot"}, {"color": "#97c2fc", "id": "Q115039064", "label": "Tokens of Friendship: Miniature Watercolors of William T. Richards from the Richard and Gloria Manney Collection", "shape": "dot"}]);
+                  edges = new vis.DataSet([{"from": "Q2267754", "label": "creator", "to": "Q4028"}, {"from": "Q1104069", "label": "applies to jurisdiction", "to": "Q16"}, {"from": "Q12350632", "label": "owner of", "to": "Q670250"}, {"from": "Q6238868", "label": "participant in", "to": "Q58136563"}, {"from": "Q7896496", "label": "location", "to": "Q172"}, {"from": "Q7896496", "label": "followed by", "to": "Q7896496"}, {"from": "Q325854", "label": "participant in", "to": ""}, {"from": "Q511878", "label": "subclass of", "to": "Q214724"}, {"from": "Q134932", "label": "occupant", "to": "Q744299"}, {"from": "", "label": "member of political party", "to": "Q9626"}, {"from": "", "label": "candidacy in election", "to": "Q3943728"}, {"from": "", "label": "candidacy in election", "to": ""}, {"from": "", "label": "family name", "to": "Q98102298"}, {"from": "Q913250", "label": "applies to jurisdiction", "to": "Q16"}, {"from": "Q361", "label": "followed by", "to": "Q362"}, {"from": "Q105830860", "label": "headquarters location", "to": "Q172"}, {"from": "Q654762", "label": "headquarters location", "to": "Q60"}, {"from": "Q81178", "label": "creator", "to": "Q3106117"}, {"from": "Q110094098", "label": "part of", "to": "Q2267754"}, {"from": "Q16", "label": "contains administrative territorial entity", "to": "Q1904"}, {"from": "Q1530896", "label": "headquarters location", "to": "Q36312"}, {"from": "Q5597", "label": "notable work", "to": "Q201873"}, {"from": "Q50843860", "label": "creator", "to": "Q1133777"}, {"from": "Q255", "label": "notable work", "to": "Q31682995"}, {"from": "Q112427160", "label": "spouse", "to": "Q52159419"}, {"from": "Q3889203", "label": "creator", "to": "Q47551"}, {"from": "Q3905105", "label": "location", "to": "Q3415"}, {"from": "Q812768", "label": "creator", "to": "Q212499"}, {"from": "Q812768", "label": "time period", "to": "Q12560"}, {"from": "Q7302", "label": "has works in the collection", "to": "Q160236"}, {"from": "Q229272", "label": "movement", "to": "Q80113"}, {"from": "Q64", "label": "contains administrative territorial entity", "to": "Q3618220"}, {"from": "Q9880", "label": "part of", "to": "Q108440834"}, {"from": "Q62613603", "label": "collection", "to": ""}, {"from": "Q162991", "label": "instance of", "to": "Q27927940"}, {"from": "Q162991", "label": "creator", "to": "Q155057"}, {"from": "Q155057", "label": "movement", "to": "Q134147"}, {"from": "Q155057", "label": "award received", "to": "Q2111259"}, {"from": "", "label": "creator", "to": "Q328341"}, {"from": "Q668343", "label": "instance of", "to": "Q860861"}, {"from": "Q49070262", "label": "located in or next to body of water", "to": "Q178741"}, {"from": "Q1207930", "label": "owner of", "to": "Q96387954"}, {"from": "Q60", "label": "twinned administrative body", "to": "Q84"}, {"from": "Q23941623", "label": "made from material", "to": "Q8063"}, {"from": "Q408", "label": "contains administrative territorial entity", "to": "Q36074"}, {"from": "Q36074", "label": "shares border with", "to": "Q3224"}, {"from": "Q28669170", "label": "made from material", "to": "Q175166"}, {"from": "Q28669170", "label": "made from material", "to": "Q897"}, {"from": "Q15790", "label": "work location", "to": "Q641"}, {"from": "Q2044", "label": "twinned administrative body", "to": "Q490"}, {"from": "Q174728", "label": "measured physical quantity", "to": "Q929302"}, {"from": "Q22043516", "label": "different from", "to": "Q1411766"}, {"from": "Q7841665", "label": "creator", "to": "Q7841665"}, {"from": "Q7428052", "label": "parent organization", "to": "Q131626"}, {"from": "Q254", "label": "notable work", "to": "Q190237"}, {"from": "Q11277", "label": "location", "to": "Q11249"}, {"from": "Q21558077", "label": "connects with", "to": "Q624556"}, {"from": "Q130818", "label": "instance of", "to": "Q183281"}, {"from": "Q2869431", "label": "creator", "to": "Q71409"}, {"from": "Q11277", "label": "architectural style", "to": "Q173782"}, {"from": "Q11277", "label": "instance of", "to": "Q2293115"}, {"from": "Q130818", "label": "owner of", "to": "Q107043627"}, {"from": "Q60", "label": "located in or next to body of water", "to": "Q12980"}, {"from": "Q11299", "label": "shares border with", "to": "Q21558077"}, {"from": "Q16950902", "label": "creator", "to": "Q7422343"}, {"from": "Q3305213", "label": "made from material", "to": "Q11472"}, {"from": "Q429220", "label": "instance of", "to": "Q1075"}, {"from": "Q3531409", "label": "uses", "to": "Q28823"}, {"from": "Q106231", "label": "spouse", "to": "Q6780937"}, {"from": "Q29169292", "label": "spouse", "to": "Q115039064"}, {"from": "Q16950902", "label": "collection", "to": "Q160236"}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+                      network.on("stabilizationProgress", function(params) {
+                          document.getElementById('loadingBar').removeAttribute("style");
+                          var maxWidth = 496;
+                          var minWidth = 20;
+                          var widthFactor = params.iterations/params.total;
+                          var width = Math.max(minWidth,maxWidth * widthFactor);
+                          document.getElementById('bar').style.width = width + 'px';
+                          document.getElementById('text').innerHTML = Math.round(widthFactor*100) + '%';
+                      });
+                      network.once("stabilizationIterationsDone", function() {
+                          document.getElementById('text').innerHTML = '100%';
+                          document.getElementById('bar').style.width = '496px';
+                          document.getElementById('loadingBar').style.opacity = 0;
+                          // really clean the dom element
+                          setTimeout(function () {document.getElementById('loadingBar').style.display = 'none';}, 500);
+                      });
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>
