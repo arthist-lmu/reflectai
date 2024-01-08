@@ -1,0 +1,31 @@
+Bootstrap: docker
+From: pytorch/pytorch:2.1.2-cuda11.8-cudnn8-devel
+
+%post
+  export DEBIAN_FRONTEND=noninteractive 
+  apt update -y && apt upgrade -y && apt install python3-opencv git -y
+  conda install -y  -c conda-forge -c pytorch torchdata torchvision
+  conda install -y  -c conda-forge -c pytorch pytorch-lightning torchmetrics
+  conda install -y  -c conda-forge -c pytorch pip
+  pip install git+https://github.com/rwightman/pytorch-image-models
+  pip install ray[tune] ftfy regex
+  pip install functorch
+  pip install transformers
+  pip install open_clip_torch
+  pip install datasets
+  pip install bitsandbytes
+  pip install imageio
+  pip install msgpack-python
+  pip install webdataset
+  pip install h5py
+  pip install scikit-learn
+  pip install pandas
+  pip install tqdm
+  pip install matplotlib
+  pip install pycocotools
+  pip install importlib-metadata
+  pip install rich
+  pip install accelerate
+  pip install wandb
+  pip install jupyterlab
+  pip install poetry

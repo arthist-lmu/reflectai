@@ -2,33 +2,15 @@ import os
 import sys
 import re
 import argparse
-from transformers import pipeline
-
-
-class Translator:
-    def __init__(self):
-        pass
-
-    def __call__(self, text):
-        pass
-
-
-class NLLB200(Translator):
-    def __init__(self):
-        model_ckpt = "facebook/nllb-200-distilled-1.3B"
-        self.pipe = pipeline(
-            "translation", model=model_ckpt, src_lang="eng_Latn", tgt_lang="deu_Latn"
-        )
-
-    def __call__(self, text):
-        preds = self.pipe(text)
-        return preds
+from pipeline.plugin import Plugin
+from pipeline.manager import Manager
 
 
 def parse_args():
     parser = argparse.ArgumentParser(description="")
 
     parser.add_argument("-v", "--verbose", action="store_true", help="verbose output")
+    parser.add_argument("-p", "--plugin", help="verbose output")
     parser.add_argument(
         "-t", "--text", required=True, help="text for language detection"
     )
@@ -38,9 +20,12 @@ def parse_args():
 
 def main():
     args = parse_args()
-    translator = NLLB200()
 
-    print(translator(args.text))
+    manager = Manager(os.path.abspath(os.path.dirname(__file__)))
+    plugin = manager.build_plugin(args.plugin)
+    # # coreference_resolution = FCoref()
+
+    print(plugin(args.text))
 
     return 0
 

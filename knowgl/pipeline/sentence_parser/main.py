@@ -2,30 +2,15 @@ import os
 import sys
 import re
 import argparse
-import spacy
-
-
-class SentenceParser:
-    def __init__(self):
-        pass
-
-    def __call__(self, text):
-        pass
-
-
-class SpacyParser(SentenceParser):
-    def __init__(self):
-        self.nlp = spacy.load("en_core_web_sm")
-
-    def __call__(self, text):
-        doc = self.nlp(text)
-        return list(doc.sents)
+from pipeline.plugin import Plugin
+from pipeline.manager import Manager
 
 
 def parse_args():
     parser = argparse.ArgumentParser(description="")
 
     parser.add_argument("-v", "--verbose", action="store_true", help="verbose output")
+    parser.add_argument("-p", "--plugin", help="verbose output")
     parser.add_argument(
         "-t", "--text", required=True, help="text for language detection"
     )
@@ -35,9 +20,12 @@ def parse_args():
 
 def main():
     args = parse_args()
-    parser = SpacyParser()
 
-    print(parser(args.text))
+    manager = Manager(os.path.abspath(os.path.dirname(__file__)))
+    plugin = manager.build_plugin(args.plugin)
+    # # coreference_resolution = FCoref()
+
+    print(plugin(args.text))
 
     return 0
 
