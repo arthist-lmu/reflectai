@@ -90,3 +90,10 @@ Fatcat dump 195.659 journals
 Downloaded: https://archive.org/details/fatcat_bulk_exports_2022-11-24
 Processing: removing languages other that de en
 Remove obvous mismatches: Bio, Buissness, Medical etc
+
+
+# Running KnowGL pipeline
+
+'''
+poetry run pipeline -i /nfs/data/reflectai/redai-data/data/processed/rijksmuseum-20220107.jsonl -p '[{"plugin": "NLTKSentenceSplitter"}, {"plugin": "XLMRobertaLanguageDetection"},{"plugin": "SentenceMerger"}, {"plugin": "KnowGL"}]'
+'''
