@@ -18,6 +18,17 @@ spacy = "^3.7.2"
 en-core-web-sm = {url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1-py3-none-any.whl"}
 neo4j = "^4.4.2"
 fastcoref = "^2.1.6"
+trankit = "^1.1.1"
+llmgraph = "^1.2.0"
+bitsandbytes = "^0.42.0"
+peft = "^0.7.1"
+datasets = "^2.16.1"
+sentencepiece = "^0.1.99"
+scipy = "^1.11.4"
+accelerate = "^0.26.1"
+pydantic = "^2.5.3"
+requests = "^2.31.0"
+boto3 = "^1.34.19"
 
 
 

@@ -1,9 +1,6 @@
-import torch
-from transformers import AutoTokenizer, AutoModel
-from fastcoref import spacy_component
-import spacy
 from pipeline.plugin import Plugin
 from pipeline.manager import Manager
+from typing import List, Dict
 
 default_config = {}
 
@@ -18,21 +15,25 @@ class SentenceMergerPlugin(
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
-        # device = "gpu" if torch.cuda.is_available() else "cpu"
-        # self.tokenizer = AutoTokenizer.from_pretrained("biu-nlp/f-coref")
-        # self.model = AutoModel.from_pretrained("biu-nlp/f-coref")
+    def merge_sentence_list(self, text_entries: List[Dict]) -> Dict:
+        text = " ".join(x["text"] for x in text_entries)
 
-        # self.model = FCoref(device=device)
+        return {**text_entries[0], "text": text}
 
-        self.nlp = spacy.load("en_core_web_sm")
-        self.nlp.add_pipe("fastcoref")
+    def call(self, text_entries: List[Dict]) -> List[Dict]:
+        results = []
 
-    def call(self, text):
-        doc = self.nlp(  # for multiple texts use nlp.pipe
-            text, component_cfg={"fastcoref": {"resolve_text": True}}
-        )
+        doc_cache = None
+        current_document_id = -1
+        for entry in text_entries:
+            if entry["document"] != current_document_id:
+                if doc_cache is not None:
+                    results.append(self.merge_sentece_list(doc_cache))
+                doc_cache = []
 
-        # input_data = self.tokenizer(text, return_tensors="pt")
-        # print(input_data)
-        # preds = self.model(**input_data)
-        return doc._.resolved_text
+            doc_cache.append(entry)
+
+            if doc_cache is not None:
+                results.append(self.merge_sentece_list(doc_cache))
+
+        return results
