@@ -1,6 +1,7 @@
 import sys
 import argparse
-
+import json
+import uuid
 
 # {
 #     "url": "https:\/\/en.wikipedia.org\/wiki\/Scene_in_the_Northwest:_Portrait_of_John_Henry_Lefroy",
@@ -17,7 +18,7 @@ import argparse
 
 def parse_args():
     parser = argparse.ArgumentParser(
-        description="Transfer wikipedia data to a common format"
+        description="Transfer tate data to a common format"
     )
 
     parser.add_argument("-v", "--verbose", action="store_true", help="verbose output")
