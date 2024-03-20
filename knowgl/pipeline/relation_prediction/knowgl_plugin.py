@@ -42,6 +42,7 @@ class KnowGLPlugin(
     def call(self, text_entries: List[Dict]) -> List[Dict]:
         results = []
         for entry in text_entries:
+            # print(f"----> {entry['text']}")
             inputs = self.tokenizer(entry["text"], return_tensors="pt").to(self.device)
             num_beams = 15
             output = self.model.generate(**inputs, max_length=1000, num_beams=num_beams)
@@ -49,8 +50,9 @@ class KnowGLPlugin(
             decoded_output = self.tokenizer.decode(
                 output[0].to("cpu"), skip_special_tokens=True
             )
+            # print(f"\t {decoded_output}")
             results.append(
-                {**entry, "triplets": {[{"type": "knowgl", "content": decoded_output}]}}
+                {**entry, "triplets": [{"type": "knowgl", "content": decoded_output}]}
             )
         return results
         # This can take a while too
