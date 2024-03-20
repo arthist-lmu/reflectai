@@ -24,16 +24,26 @@ class SentenceMergerPlugin(
         results = []
 
         doc_cache = None
-        current_document_id = -1
+        current_document_index = -1
+        current_entry_index = -1
+
         for entry in text_entries:
-            if entry["document"] != current_document_id:
+
+            if (
+                entry["document_index"] != current_document_index
+                or entry["entry_index"] != current_entry_index
+            ):
                 if doc_cache is not None:
-                    results.append(self.merge_sentece_list(doc_cache))
+
+                    results.append(self.merge_sentence_list(doc_cache))
+
+                current_document_index = entry["document_index"]
+                current_entry_index = entry["entry_index"]
                 doc_cache = []
 
             doc_cache.append(entry)
 
-            if doc_cache is not None:
-                results.append(self.merge_sentece_list(doc_cache))
+        if doc_cache is not None:
+            results.append(self.merge_sentence_list(doc_cache))
 
         return results

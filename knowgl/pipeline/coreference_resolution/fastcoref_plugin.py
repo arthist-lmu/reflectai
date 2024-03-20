@@ -4,6 +4,7 @@ from fastcoref import spacy_component
 import spacy
 from pipeline.plugin import Plugin
 from pipeline.manager import Manager
+from typing import List, Dict
 
 default_config = {}
 
@@ -27,12 +28,15 @@ class FCorefPlugin(
         self.nlp = spacy.load("en_core_web_sm")
         self.nlp.add_pipe("fastcoref")
 
-    def call(self, text):
-        doc = self.nlp(  # for multiple texts use nlp.pipe
-            text, component_cfg={"fastcoref": {"resolve_text": True}}
-        )
+    def call(self, text_entries: List[Dict]) -> List[Dict]:
+        results = []
+        for entry in text_entries:
+            doc = self.nlp(  # for multiple texts use nlp.pipe
+                entry["text"], component_cfg={"fastcoref": {"resolve_text": True}}
+            )
+            results.append({**entry, "text": doc._.resolved_text})
 
         # input_data = self.tokenizer(text, return_tensors="pt")
         # print(input_data)
         # preds = self.model(**input_data)
-        return doc._.resolved_text
+        return results

@@ -17,6 +17,9 @@ def parse_args():
     parser.add_argument("-o", "--output_path", help="path to the output file")
     parser.add_argument("-p", "--pipeline", help="pipeline definition input")
     parser.add_argument(
+        "-n", "--number", type=int, help="number of samples selected from the dataset"
+    )
+    parser.add_argument(
         "-t", "--tmp_path", help="save single step results in a tmp folder"
     )
     args = parser.parse_args()
@@ -28,9 +31,17 @@ def read_dataset(path: str) -> List[Dict]:
     with open(path, "r") as file:
         for i, line in enumerate(file):
             data = json.loads(line)
-            results.append(
-                dict(original_file=path, text=data["text"]["entry"], document=i)
-            )
+            for j, text_entry in enumerate(data["text"]):
+
+                results.append(
+                    dict(
+                        id=data["id"],
+                        document_index=i,
+                        entry_index=j,
+                        original_file=path,
+                        text=text_entry["content"],
+                    )
+                )
 
     return results
 
@@ -57,16 +68,22 @@ def main():
                 os.path.abspath(os.path.dirname(__file__)), "relation_prediction"
             ),
             os.path.join(os.path.abspath(os.path.dirname(__file__)), "translation"),
+            os.path.join(os.path.abspath(os.path.dirname(__file__)), "utils"),
         ]
     )
 
-    datasets = datasets[:1]
+    if args.number:
+        datasets = datasets[: args.number]
 
     for p in pipeline_definition:
+        print("################################")
+        print(p["plugin"])
         plugin = manager.build_plugin(p["plugin"])
+        print(f"-> {datasets}")
         new_datasets = plugin(datasets)
         datasets = new_datasets
-        print(new_datasets)
+        print("\n\n")
+        print(f"<- {datasets}")
     return 0
 
 

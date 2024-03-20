@@ -49,7 +49,8 @@ class KnowGLPlugin(
             decoded_output = self.tokenizer.decode(
                 output[0].to("cpu"), skip_special_tokens=True
             )
-            print(decoded_output)
-
+            results.append(
+                {**entry, "triplets": {[{"type": "knowgl", "content": decoded_output}]}}
+            )
         return results
         # This can take a while too

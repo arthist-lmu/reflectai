@@ -22,5 +22,5 @@ class SpacySentenceSplitterPlugin(
         for entry in text_entries:
             doc = self.nlp(entry["text"])
             for i, t in enumerate(doc.sents):
-                results.append({**entry, "text": t.text, "sentences_nr": i})
+                results.append({**entry, "text": t.text, "sentences_index": i})
         return results

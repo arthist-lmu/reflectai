@@ -24,6 +24,6 @@ class NLTKSentenceSplitterPlugin(
         for entry in text_entries:
             sents = sent_tokenize(entry["text"])
             for i, t in enumerate(sents):
-                results.append({**entry, "text": t, "sentences_nr": i})
+                results.append({**entry, "text": t, "sentences_index": i})
 
         return results

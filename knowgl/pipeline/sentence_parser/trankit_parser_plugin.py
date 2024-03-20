@@ -26,6 +26,6 @@ class TrankitSentenceSplitterPlugin(
             sents = self.p(entry["text"])["sentences"]
 
             for i, t in enumerate(sents):
-                results.append({**entry, "text": t["text"], "sentences_nr": i})
+                results.append({**entry, "text": t["text"], "sentences_index": i})
 
         return results
