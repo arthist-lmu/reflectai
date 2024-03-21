@@ -18,6 +18,7 @@ import uuid
     },
 }
 
+
 def parse_args():
     parser = argparse.ArgumentParser(
         description="Transfer pinakothek data to a common format"
@@ -34,6 +35,7 @@ def parse_args():
 def main():
     args = parse_args()
 
+    results = []
     with open(args.input_path) as f:
         for line in f:
             line_data = json.loads(line)
@@ -43,9 +45,8 @@ def main():
             if isinstance(language, (list, set)):
                 for l in language:
                     if l.lower() == "en":
-                        language = "en" """
-
-"""                 if language != "en":
+                        language = "en"                                          
+                    if language != "en":
                     print(f"Unknown language: {line_data}")
                     exit(1) """
 
@@ -53,27 +54,15 @@ def main():
                 {
                     "id": line_id,
                     "meta": {"url": line_data["url"]},
-                    "text": [
-                        {
-                            "content": line_data["title"],
-                            "page": 0,
-                            "type": "title",
-                            "language": language.lower(),
-                        },
-                        {
-                            "content": line_data["text"]["entry"],
-                            "page": 0,
-                            "type": "text",
-                            "language": language.lower(),
-                        },
-                    ],
+                    "title": line_data["title"],
+                    "text": line_data["text"],
                     "images": [
                         {
-                            "url": x,
+                            "url": line_data["url"],
                             "page": 0,
-                            "id": uuid.uuid5(uuid.NAMESPACE_URL, x).hex,
+                            "id": uuid.uuid5(uuid.NAMESPACE_URL, line_data["url"]).hex,
                         }
-                        for x in line_data.get("images", [])
+                        # for x in line_data.get("images", [])
                     ],
                 }
             )
