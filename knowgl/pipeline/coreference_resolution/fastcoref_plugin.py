@@ -1,7 +1,3 @@
-import torch
-from transformers import AutoTokenizer, AutoModel
-from fastcoref import spacy_component
-import spacy
 from pipeline.plugin import Plugin
 from pipeline.manager import Manager
 from typing import List, Dict
@@ -18,6 +14,10 @@ class FCorefPlugin(
 ):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
+        import torch
+        from transformers import AutoTokenizer, AutoModel
+        from fastcoref import spacy_component
+        import spacy
 
         # device = "gpu" if torch.cuda.is_available() else "cpu"
         # self.tokenizer = AutoTokenizer.from_pretrained("biu-nlp/f-coref")
