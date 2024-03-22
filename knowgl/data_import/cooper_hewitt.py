@@ -4,7 +4,7 @@ import json
 import uuid
 
 
-'''
+"""
 {
   "url": "https://collection.cooperhewitt.org/objects/68250857/",
   "title": "Textile (Netherlands)",
@@ -16,7 +16,8 @@ import uuid
   ],
   "language": "EN"
 }
-'''
+"""
+
 
 def parse_args():
     parser = argparse.ArgumentParser(
@@ -62,7 +63,7 @@ def main():
                             "language": language.lower(),
                         },
                         {
-                            "content": line_data["text"]["entry"],
+                            "content": line_data["text"]["description"],
                             "page": 0,
                             "type": "text",
                             "language": language.lower(),
