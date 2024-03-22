@@ -42,20 +42,32 @@ class Manager:
         file_re = re.compile(r"(.+?)\.py$")
         subfolder = path.split("knowgl/pipeline/")[-1]
         for pl in os.listdir(path):
-            match = re.match(file_re, pl)
-            if match:
-                if match.group(1) in ["main", "__init__"]:
-                    continue
-                print(
-                    "pipeline.{}.{}".format(subfolder.replace("/", "."), match.group(1))
-                )
-                a = importlib.import_module(
-                    "pipeline.{}.{}".format(subfolder.replace("/", "."), match.group(1))
-                )
-                # print(a)
-                function_dir = dir(a)
-                if "register" in function_dir:
-                    a.register(self)
+            if os.path.isdir(os.path.join(path, pl)):
+                for sub_pl in os.listdir(os.path.join(path, pl)):
+
+                    match = re.match(file_re, sub_pl)
+                    if match:
+                        a = importlib.import_module(
+                            "pipeline.{}.{}".format(subfolder.replace("/", "."), pl)
+                        )
+                        # print(a)
+                        function_dir = dir(a)
+                        if "register" in function_dir:
+                            a.register(self)
+            else:
+                match = re.match(file_re, pl)
+                if match:
+                    if match.group(1) in ["main", "__init__"]:
+                        continue
+                    a = importlib.import_module(
+                        "pipeline.{}.{}".format(
+                            subfolder.replace("/", "."), match.group(1)
+                        )
+                    )
+                    # print(a)
+                    function_dir = dir(a)
+                    if "register" in function_dir:
+                        a.register(self)
 
     def plugins(self):
         return self.plugin_list
