@@ -38,3 +38,12 @@ def main():
 
 if __name__ == "__main__":
     sys.exit(main())
+
+
+#Leiden
+#Rijksmusem
+#tate
+#met
+#cooper_hewitt
+#jstor
+# 
