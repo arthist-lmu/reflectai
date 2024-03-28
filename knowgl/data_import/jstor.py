@@ -1,7 +1,3 @@
-import sys
-import argparse
-
-
 # {
 #     "datePublished": "1890-11-01",
 #     "docSubType": "research-article",
@@ -59,14 +55,20 @@ import argparse
 #     },
 # }
 
+import sys
+import argparse
+import json
+import uuid
+
 
 def parse_args():
     parser = argparse.ArgumentParser(
-        description="Transfer wikipedia data to a common format"
+        description="Transfer jstor data to a common format"
     )
 
     parser.add_argument("-v", "--verbose", action="store_true", help="verbose output")
     parser.add_argument("-i", "--input_path", help="verbose output")
+    parser.add_argument("-o", "--output_path", help="verbose output")
 
     args = parser.parse_args()
     return args
@@ -74,6 +76,74 @@ def parse_args():
 
 def main():
     args = parse_args()
+
+    results = []
+    with open(args.input_path) as f:
+        for line in f:
+            line_data = json.loads(line)
+            line_id = uuid.uuid5(uuid.NAMESPACE_URL, line_data["url"]).hex
+
+            language = line_data["language"]
+            if isinstance(language, (list, set)):
+                for l in language:
+                    if l.lower() == "eng":
+                        language = "eng"
+
+                if language != "eng":
+                    print(f"Unknown language: {line_data}")
+                    exit(1)
+
+            issn_value = None
+            for item in line_data["identifier"]:
+                if item.get("name") == "issn":
+                    issn_value = item.get("value")
+                    break
+
+            if issn_value is None:
+                print(f"ISSN value not found for line_id {line_id}")
+                # Handle this error as per your requirements, e.g., continue, exit, etc.
+
+            results.append(
+                {
+                    "id": line_id,
+                    "meta": {
+                        "url": line_data["url"],
+                        "issn_identifier": issn_value,
+                        "date": line_data["datePublished"],
+                        "year_published": line_data["publicationYear"],
+                        "doctype": line_data["docType"],
+                        "journal": line_data["isPartOf"],
+                        "issue number": line_data["issueNumber"],
+                        "volume number": line_data["volumeNumber"],
+                    },
+                    "text": [
+                        {
+                            "content": line_data["title"],
+                            "page": 0,
+                            "type": "title",
+                            "language": language.lower(),
+                        },
+                        {
+                            "content": line_data["fullText"],
+                            "page": 0,
+                            "type": "text",
+                            "language": language.lower(),
+                        },
+                    ],
+                    # "images": [
+                    #     {
+                    #         "url": x,
+                    #         "page": 0,
+                    #         "id": uuid.uuid5(uuid.NAMESPACE_URL, x).hex,
+                    #     }
+                    #     for x in line_data.get("images", [])
+                    # ],
+                }
+            )
+
+    with open(args.output_path, "w") as f:
+        for r in results:
+            f.write(json.dumps(r) + "\n")
 
     return 0
 
