@@ -1,7 +1,7 @@
 from transformers import pipeline
 import torch
-from pipeline.plugin import Plugin
-from pipeline.manager import Manager
+from kg_pipeline.plugin import Plugin
+from kg_pipeline.manager import Manager
 import numpy as np
 
 default_config = {}

@@ -6,7 +6,7 @@ import argparse
 from typing import List, Dict
 
 
-from .manager import Manager
+from kg_pipeline.manager import Manager
 
 
 def parse_args():

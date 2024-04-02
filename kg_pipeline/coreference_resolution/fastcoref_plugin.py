@@ -1,5 +1,5 @@
-from pipeline.plugin import Plugin
-from pipeline.manager import Manager
+from kg_pipeline.plugin import Plugin
+from kg_pipeline.manager import Manager
 from typing import List, Dict
 
 default_config = {}

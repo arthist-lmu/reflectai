@@ -28,11 +28,22 @@ From: pytorch/pytorch:2.1.2-cuda11.8-cudnn8-devel
   pip install accelerate
   pip install wandb
   pip install jupyterlab
-  pip install poetry
+  pip install nltk
+  pip install fastcoref 
+  pip install trankit 
+  pip install pydantic 
+  pip install requests 
+  pip install boto3 
+  pip install sentencepiece 
+  pip install scipy 
+  pip install llmgraph 
+
+  pip install spacy
+  pip install "https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1-py3-none-any.whl"
+
 
   pip install black 
   pip install Jinja2 
-  pip install rich 
   pip install psutil 
   pip install ruff 
   pip install fschat

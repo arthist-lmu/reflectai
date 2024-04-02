@@ -2,8 +2,8 @@ import os
 import sys
 import re
 import argparse
-from pipeline.plugin import Plugin
-from pipeline.manager import Manager
+from kg_pipeline.plugin import Plugin
+from kg_pipeline.manager import Manager
 
 
 def parse_args():
