@@ -43,7 +43,7 @@ def main():
 
                 if language != "en":
                     print(f"Unknown language: {line_data}")
-                    exit(1)
+                    # exit(1)
 
             results.append(
                 {
