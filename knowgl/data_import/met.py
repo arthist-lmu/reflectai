@@ -2,29 +2,28 @@ import sys
 import argparse
 import json
 import uuid
-
-
-"""
-{
-  "url": "https://resources.metmuseum.org/resources/metpublications/pdf/Abraham_Lincoln_The_Man_Standing_Lincoln_The_Metropolitan_Museum_Journal_v_48_2013.pdf",
-  "title": "Abraham Lincoln: The Man (Standing Lincoln): A Bronze Statuette by Augustus Saint-Gaudens",
-  "journal": "Metropolitan Museum Journal, v. 48 (2013)",
-  "language": [
-    "EN"
-  ]
-}
-"""
+import re  # Import regular expressions
 
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Transfer met data to a common format")
 
     parser.add_argument("-v", "--verbose", action="store_true", help="verbose output")
-    parser.add_argument("-i", "--input_path", help="verbose output")
-    parser.add_argument("-o", "--output_path", help="verbose output")
+    parser.add_argument(
+        "-i", "--input_path", help="path to input file"
+    )  # Corrected help text
+    parser.add_argument(
+        "-o", "--output_path", help="path to output file"
+    )  # Corrected help text
 
     args = parser.parse_args()
     return args
+
+
+def extract_year(journal_text):
+    # Use regular expression to find year in parentheses
+    match = re.search(r"\((\d{4})\)", journal_text)
+    return match.group(1) if match else "Unknown"
 
 
 def main():
@@ -36,29 +35,29 @@ def main():
             line_data = json.loads(line)
             line_id = uuid.uuid5(uuid.NAMESPACE_URL, line_data["url"]).hex
 
-            language = line_data["language"]
+            language = line_data.get("language", "Unknown")
             if isinstance(language, (list, set)):
-                for l in language:
-                    if l.lower() == "en":
-                        language = "en"
+                language = "en" if "EN" in [l.upper() for l in language] else "Unknown"
 
-                if language != "en":
-                    print(f"Unknown language: {line_data}")
-                    exit(1)
+            journal = line_data.get("journal", "Unknown")
+            year = extract_year(journal)
 
             results.append(
                 {
                     "id": line_id,
-                    "meta": {"url": line_data["url"]},
+                    "meta": {
+                        "url": line_data["url"],
+                        "year": year,
+                    },
                     "text": [
                         {
-                            "content": line_data["title"],
+                            "content": line_data.get("title", "Unknown"),
                             "page": 0,
                             "type": "title",
                             "language": language.lower(),
                         },
                         {
-                            "content": line_data["journal"],
+                            "content": journal,
                             "page": 0,
                             "type": "text",
                             "language": language.lower(),
@@ -72,7 +71,6 @@ def main():
                                 uuid.NAMESPACE_URL, line_data.get("url")
                             ).hex,
                         }
-                        # for x in line_data.get("url", [])
                     ],
                 }
             )
