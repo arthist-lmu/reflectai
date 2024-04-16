@@ -15,6 +15,7 @@ def parse_args():
     parser.add_argument("-v", "--verbose", action="store_true", help="verbose output")
     parser.add_argument("-i", "--input_paths", nargs="+", help="path to input files")
     parser.add_argument("-o", "--output_path", help="path to the output file")
+    parser.add_argument("-c", "--cache_path", help="path to a cache folder")
     parser.add_argument("-p", "--pipeline", help="pipeline definition input")
     parser.add_argument(
         "-n", "--number", type=int, help="number of samples selected from the dataset"
@@ -78,7 +79,7 @@ def main():
     for p in pipeline_definition:
         print("################################")
         print(p["plugin"])
-        plugin = manager.build_plugin(p["plugin"])
+        plugin = manager.build_plugin(p["plugin"], p.get("config", {}))
         print(f"-> {datasets}")
         new_datasets = plugin(datasets)
         datasets = new_datasets

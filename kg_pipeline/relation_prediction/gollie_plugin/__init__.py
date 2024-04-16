@@ -1,9 +1,9 @@
-import torch
 from kg_pipeline.plugin import Plugin
 from kg_pipeline.manager import Manager
 from typing import List, Dict
 
-default_config = {}
+
+default_config = {"model_name": "HiTZ/GoLLIE-13B", "template": "paintin_content"}
 
 
 default_parameters = {}
@@ -15,13 +15,23 @@ class GolliePlugin(
 ):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
+        import torch
         import inspect
         from jinja2 import Template
-        from .triplet_relation import (
-            ENTITY_DEFINITIONS,
-        )
+        import importlib
         import torch
         from transformers import AutoTokenizer, AutoModelForCausalLM
+
+        from .templates.painting_content import ENTITY_DEFINITIONS
+
+        print(self.config.get("template"))
+        # ENTITY_DEFINITIONS = importlib.import_module(
+        #     "kg_pipeline.relation_prediction.gollie_plugin.templates.{}".format(
+        #         self.config.get("template")
+        #     )
+        # ).ENTITY_DEFINITIONS
+
+        print(ENTITY_DEFINITIONS)
 
         if torch.cuda.is_available():
             self.device = torch.device("cuda")
@@ -63,6 +73,9 @@ result = [
 
         self.template = Template(template_string)
 
+        print(self.guidelines)
+        # exit()
+
     def call(self, text_entries: List[Dict]) -> List[Dict]:
         import black
         from .utils_typing import AnnotationList
@@ -103,19 +116,25 @@ result = [
                 num_beams=1,
                 num_return_sequences=1,
             )
-            # print(model_ouput)
+            print(
+                self.tokenizer.decode(model_ouput[0], skip_special_tokens=True).split(
+                    "result = "
+                )[-1]
+            )
 
             result = AnnotationList.from_output(
                 self.tokenizer.decode(model_ouput[0], skip_special_tokens=True).split(
                     "result = "
                 )[-1],
-                task_module="kg_pipeline.relation_prediction.gollie_plugin.triplet_relation",
+                task_module="kg_pipeline.relation_prediction.gollie_plugin.templates.{}".format(
+                    self.config.get("template")
+                ),
             )
             for x in result:
                 print(f"\t--> {x}")
 
             results.append(
-                {**entry, "triplets": [{"type": "knowgl", "content": result}]}
+                {**entry, "triplets": [{"type": "gollie", "content": result}]}
             )
         return results
         # This can take a while too
