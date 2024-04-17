@@ -1,5 +1,12 @@
 # WP2: Creation of art-historical KGs
 
+Extracting the triplets from the raw text and transferring to a graph hosting software.
+
+# KnowledgeGraph solutions
+
+Possible approaches:
+* Integration of ReflectAI triplets with 
+
 # Running KnowGL pipeline
 
 ```
