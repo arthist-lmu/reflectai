@@ -1,5 +1,5 @@
 Bootstrap: docker
-From: pytorch/pytorch:2.1.2-cuda11.8-cudnn8-devel
+From: pytorch/pytorch:2.2.2-cuda12.1-cudnn8-devel
 
 %post
   export DEBIAN_FRONTEND=noninteractive 
@@ -7,9 +7,9 @@ From: pytorch/pytorch:2.1.2-cuda11.8-cudnn8-devel
   conda install -y  -c conda-forge -c pytorch torchdata torchvision
   conda install -y  -c conda-forge -c pytorch pytorch-lightning torchmetrics
   conda install -y  -c conda-forge -c pytorch pip
+  pip install lmdb
   pip install git+https://github.com/rwightman/pytorch-image-models
   pip install ray[tune] ftfy regex
-  pip install functorch
   pip install transformers
   pip install open_clip_torch
   pip install datasets
