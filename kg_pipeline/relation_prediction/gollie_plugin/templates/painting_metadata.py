@@ -56,12 +56,13 @@ class MovementRelation(Template):
 
 @dataclass
 class LocationDisplayed(Template):
-    """Name of the location the painting is currently displayed. The location of creation refers to the specific place or setting where an artwork,
-    particularly a painting, was physically created by the artist. This could be an artist's studio, a plein air (outdoor) site, a particular
-    city or country, or any space that has influenced the work's execution."""
+    """Name of the location the painting is currently displayed. The location of the painting
+    could refer to a private collection or a museum that acquired the works and either displays
+    them now or archive them. The location could either bought, acquired or were gifted the 
+    artwork that is now in their possession"""
 
     painting: str  # The name of the painting, i.e. Mona Lisa, Starry Night, Guernica, The Scream
-    creator: str  # The name of the location, i.e. Florence, Provence, Paris, Oslo
+    locationdisplayed: str  # The name of the location, i.e. Louvre, Metropolitan Museum of Art, Private Collection, Gallery
 
 ENTITY_DEFINITIONS: List[Template] = [
     CreatorRelation,
