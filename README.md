@@ -97,3 +97,15 @@ Remove obvous mismatches: Bio, Buissness, Medical etc
 ```
 poetry run pipeline -i /nfs/data/reflectai/redai-data/data/processed/rijksmuseum-20220107.jsonl -p '[{"plugin": "NLTKSentenceSplitter"}, {"plugin": "XLMRobertaLanguageDetection"},{"plugin": "SentenceMerger"}, {"plugin": "KnowGL"}]'
 ```
+
+
+import json
+resultSet = []
+for cand in cell.recon.candidates:   
+    resultDet = {}
+    resultDet["suggest_name"] = cand.name   
+    resultDet["suggest_score"] = cand.score
+    resultDet["suggest_link"] = cand.types[0]
+    resultDet["suggest_id"] = cand.id
+    resultSet.append(resultDet)
+return json.dumps(resultSet)
