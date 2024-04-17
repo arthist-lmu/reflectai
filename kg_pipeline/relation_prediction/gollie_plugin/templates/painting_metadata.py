@@ -6,6 +6,7 @@ from ..utils_typing import Generic as Template
 """
 Relation definitions
 """
+
 @dataclass
 class CreatorRelation(Template):
     """The name or pseudonym of the painter that created the painting. The creator is involved in the conception and creation of artwork
@@ -42,6 +43,14 @@ class PaintingMaterial(Template):
 
     painting: str  # The name of the painting, i.e. Mona Lisa
     material: str  # The material of a painting, i.e. oil on canvas
+
+@dataclass
+class PaintingGenre(Template):
+    """The genre of a painting like abstract, portrait, still life or landscape"""
+
+    painting: str  # The name of the painting, i.e. Mona Lisa
+    subject: str  # The genre of a painting, i.e. portrait, landscape
+
 
 @dataclass
 class AliasNames(Template):
@@ -89,6 +98,7 @@ ENTITY_DEFINITIONS: List[Template] = [
     LocationCreationRelation,
     InceptionRelation,
     PaintingMaterial,
+    PaintingGenre,
     AliasNames,
     TitleLanguages,
     MovementRelation,
