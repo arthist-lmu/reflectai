@@ -26,7 +26,7 @@ class PaintingSubject(Template):
 
 @dataclass
 class PaintingSceneDescription(Template):
-    """A long describtion of the depicted scene in the painting."""
+    """A long description of the depicted scene in the painting."""
 
     painting: str  # The name of the painting, i.e. Mona Lisa
     """

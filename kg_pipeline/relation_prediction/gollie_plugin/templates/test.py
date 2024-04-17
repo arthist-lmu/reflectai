@@ -7,7 +7,7 @@ class PaintingDepictedConcept(Template):
     """
     A list of mentioned attributes of the mentioned depicted conceptes
     """
-    atributes: List[str]
+    attributes: List[str]
 
 
 @dataclass
