@@ -1,3 +1,5 @@
+# WP1: Data Acquisition and Preprocessing
+
 # Reflectai Scraping
 
 Folder locations for raw pdfs on the server: /nfs/data/reflectai/scientific_pdfs
