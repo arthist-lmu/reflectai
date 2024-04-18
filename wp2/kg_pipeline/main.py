@@ -43,6 +43,7 @@ def read_dataset(path: str) -> List[Dict]:
                         entry_index=j,
                         original_file=path,
                         text=text_entry["content"],
+                        language=text_entry.get("language", None),
                     )
                 )
 

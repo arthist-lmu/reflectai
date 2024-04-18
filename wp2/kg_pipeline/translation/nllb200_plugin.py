@@ -2,7 +2,10 @@ from kg_pipeline.plugin import Plugin
 from kg_pipeline.manager import Manager
 from typing import List, Dict
 
-default_config = {}
+default_config = {
+    "src_lang": "de",
+    "tgt_lang": "en",
+}
 
 
 default_parameters = {}
@@ -21,20 +24,47 @@ class NLLB200Plugin(
         import spacy
 
         model_ckpt = "facebook/nllb-200-distilled-600M"
+
+        src_lang = self.translate_lang_flag(self.config.get("src_lang"))
+        assert src_lang, f"Unknown language {self.config.get('src_lang')}"
+
+        tgt_lang = self.translate_lang_flag(self.config.get("tgt_lang"))
+        assert tgt_lang, f"Unknown language {self.config.get('tgt_lang')}"
+
         self.pipe = pipeline(
             "translation",
             model=model_ckpt,
-            src_lang="deu_Latn",
-            tgt_lang="eng_Latn",
+            src_lang=src_lang,
+            tgt_lang=tgt_lang,
             max_length=2000,
         )
+
+    def translate_lang_flag(self, language):
+        if language == "de":
+            return "deu_Latn"
+        if language == "en":
+            return "eng_Latn"
+
+        return None
 
     def call(self, text_entries: List[Dict]) -> List[Dict]:
         results = []
         for entry in text_entries:
 
-            preds = self.pipe(entry["text"])
+            if entry.get("language", None) == self.config.get("src_lang"):
+                # print(entry)
 
-            print(f'{entry["text"]} ------> {preds[0]["translation_text"]}')
-            results.append({**entry, "text": preds[0]["translation_text"]})
+                preds = self.pipe(entry["text"])
+
+                # print(f'{entry["text"]} ------> {preds[0]["translation_text"]}')
+                results.append(
+                    {
+                        **entry,
+                        "text": preds[0]["translation_text"],
+                        "language": self.config.get("tgt_lang"),
+                    }
+                )
+            else:
+                results.append(entry)
+
         return results
