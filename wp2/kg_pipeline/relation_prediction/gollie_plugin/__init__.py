@@ -22,22 +22,18 @@ class GolliePlugin(
         import torch
         from transformers import AutoTokenizer, AutoModelForCausalLM
 
-        # from .templates.painting_content import ENTITY_DEFINITIONS
-
-        print(self.config.get("template"))
-        ENTITY_DEFINITIONS = importlib.import_module(
+        template_definition = importlib.import_module(
             "kg_pipeline.relation_prediction.gollie_plugin.templates.{}".format(
                 self.config.get("template")
             )
-        ).ENTITY_DEFINITIONS
+        )
 
-        print(ENTITY_DEFINITIONS)
+        self.ENTITY_PARSER = template_definition.ENTITY_PARSER
+        self.ENTITY_DEFINITIONS = template_definition.ENTITY_DEFINITIONS
 
         self.guidelines = [
-            inspect.getsource(definition) for definition in ENTITY_DEFINITIONS
+            inspect.getsource(definition) for definition in self.ENTITY_DEFINITIONS
         ]
-
-        print(self.guidelines)
 
         if torch.cuda.is_available():
             self.device = torch.device("cuda")
@@ -72,12 +68,20 @@ result = [
 {%- endfor %}
 ]
         """
-
         self.gold = ""
-
         self.template = Template(template_string)
 
-        # exit()
+    def convert_to_triplets(self, gollie_outputs: List):
+        results = []
+        for x in gollie_outputs:
+            if x.__class__.__name__ in self.ENTITY_PARSER:
+                triplets = self.ENTITY_PARSER[x.__class__.__name__](x)
+                print("FOUND")
+                print(triplets)
+                results.extend(triplets)
+            print(f"\t--> {x}")
+
+        return results
 
     def call(self, text_entries: List[Dict]) -> List[Dict]:
         import black
@@ -133,11 +137,12 @@ result = [
                     self.config.get("template")
                 ),
             )
-            for x in result:
-                print(f"\t--> {x}")
+            triplets = self.convert_to_triplets(result)
 
+            for x in triplets:
+                print(x)
             results.append(
-                {**entry, "triplets": [{"type": "gollie", "content": result}]}
+                {**entry, "triplets": [{"type": "gollie", "content": triplets}]}
             )
         return results
         # This can take a while too
