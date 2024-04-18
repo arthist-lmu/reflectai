@@ -58,3 +58,15 @@ ENTITY_DEFINITIONS: List[Template] = [
     PaintingSubject,
     PaintingDepictsPerson,
 ]
+
+
+class PaintingDepictsPersonToWikidata:
+    def __call__(self, package):
+        return [
+            (package.painting, "wdt:P180", package.name),
+            (package.name, "wdt:P3828", package.clothing),
+            (package.name, "wdt:P31", "wd:Q5"),
+        ]
+
+
+ENTITY_PARSER: List = [PaintingDepictsPersonToWikidata]

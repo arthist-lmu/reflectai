@@ -3,7 +3,7 @@ from kg_pipeline.manager import Manager
 from typing import List, Dict
 
 
-default_config = {"model_name": "HiTZ/GoLLIE-13B", "template": "paintin_content"}
+default_config = {"model": "HiTZ/GoLLIE-13B", "template": "paintin_content"}
 
 
 default_parameters = {}
@@ -22,16 +22,22 @@ class GolliePlugin(
         import torch
         from transformers import AutoTokenizer, AutoModelForCausalLM
 
-        from .templates.painting_content import ENTITY_DEFINITIONS
+        # from .templates.painting_content import ENTITY_DEFINITIONS
 
         print(self.config.get("template"))
-        # ENTITY_DEFINITIONS = importlib.import_module(
-        #     "kg_pipeline.relation_prediction.gollie_plugin.templates.{}".format(
-        #         self.config.get("template")
-        #     )
-        # ).ENTITY_DEFINITIONS
+        ENTITY_DEFINITIONS = importlib.import_module(
+            "kg_pipeline.relation_prediction.gollie_plugin.templates.{}".format(
+                self.config.get("template")
+            )
+        ).ENTITY_DEFINITIONS
 
         print(ENTITY_DEFINITIONS)
+
+        self.guidelines = [
+            inspect.getsource(definition) for definition in ENTITY_DEFINITIONS
+        ]
+
+        print(self.guidelines)
 
         if torch.cuda.is_available():
             self.device = torch.device("cuda")
@@ -43,9 +49,11 @@ class GolliePlugin(
             print("Falling back to CPU")
             self.device = torch.device("cpu")
 
-        self.tokenizer = AutoTokenizer.from_pretrained("HiTZ/GoLLIE-13B")
+        self.tokenizer = AutoTokenizer.from_pretrained(self.config.get("model"))
         self.model = AutoModelForCausalLM.from_pretrained(
-            "HiTZ/GoLLIE-13B", trust_remote_code=True, torch_dtype=torch.bfloat16
+            self.config.get("model"),
+            trust_remote_code=True,
+            torch_dtype=torch.bfloat16,
         )
         self.model.to(self.device)
         template_string = """
@@ -65,15 +73,10 @@ result = [
 ]
         """
 
-        self.guidelines = [
-            inspect.getsource(definition) for definition in ENTITY_DEFINITIONS
-        ]
-
         self.gold = ""
 
         self.template = Template(template_string)
 
-        print(self.guidelines)
         # exit()
 
     def call(self, text_entries: List[Dict]) -> List[Dict]:
