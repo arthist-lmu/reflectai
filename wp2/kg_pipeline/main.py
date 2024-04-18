@@ -8,6 +8,8 @@ from typing import List, Dict
 
 from kg_pipeline.manager import Manager
 
+from output import OutputWrapper
+
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Knowledge extraction pipeline script")
@@ -76,15 +78,19 @@ def main():
     if args.number:
         datasets = datasets[: args.number]
 
+    if args.output_path:
+        os.makedirs(args.output_path, exist_ok=True)
+
     for p in pipeline_definition:
         print("################################")
         print(p["plugin"])
         plugin = manager.build_plugin(p["plugin"], p.get("config", {}))
-        print(f"-> {datasets}")
+        if args.output_path:
+            plugin = OutputWrapper(
+                plugin, {"output_path": args.output_path, "format": "json"}
+            )
         new_datasets = plugin(datasets)
         datasets = new_datasets
-        print("\n\n")
-        print(f"<- {datasets}")
     return 0
 
 

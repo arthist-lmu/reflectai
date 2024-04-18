@@ -2,7 +2,7 @@ import hashlib
 import json
 import logging
 from typing import List, Dict
-from .plugin import Plugin
+from kg_pipeline.plugin import Plugin
 
 
 def flat_dict(data_dict, parse_json=False):
