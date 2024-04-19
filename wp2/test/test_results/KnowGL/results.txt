@@ -1,0 +1,74 @@
+https://sammlung.belvedere.at/objects/23443/5jahresplan?ctx=38e3a89cffd339f987eeeef38ba7d801a2ac33a2&idx=11
+         Lebanon,member of,Commonwealth of Nations
+https://sammlung.belvedere.at/objects/23443/5jahresplan?ctx=38e3a89cffd339f987eeeef38ba7d801a2ac33a2&idx=11
+         Video art,subclass of,Photograph
+         Installation art,subclass of,Photograph
+         Time,part of,Time
+         Jermolaewa,notable work,Scurry and absurdity
+         Scurry and absurdity,creator,Jermolaewa
+         Russia,history of topic,History of Russia
+         History of Russia,facet of,Russia
+         Five Year Plan,narrative location,Moscow
+         Film criticism of the Soviet government,subclass of,Film criticism of the Soviet government
+https://collection.cooperhewitt.org/objects/68250857/
+         Textile,use,Textile
+https://collection.cooperhewitt.org/objects/68250857/
+         West Africa,part of,Africa
+         Vlisco,history of topic,History of Vlisco
+         History of Vlisco,facet of,Vlisco
+         Franklin D. Roosevelt,conflict,World War II
+         Winston Churchill,conflict,World War II
+         Willem-Alexander of the Netherlands,spouse,Queen Máxima of the Netherlands
+         Queen Máxima of the Netherlands,spouse,Willem-Alexander of the Netherlands
+         Fish Scales,manufacturer,Vlisco
+         Willem-Alexander of the Netherlands,position held,King of the Netherlands
+         King of the Netherlands,officeholder,Willem-Alexander of the Netherlands
+https://www.rijksmuseum.nl/en/collection/RP-P-1991-685/catalogue-entry
+         Smoking utensil,subclass of,Utensil
+https://www.rijksmuseum.nl/en/collection/RP-P-1991-685/catalogue-entry
+         Tobacco pipe,uses,Tobacco
+         Manju,made from material,Ojime
+         Smoking set,made from material,Gold leaf
+         Kōshurin Atotsugi,father,Ōya Urasumi
+         Ōya Urasumi,child,Kōshurin Atotsugi
+         Mount Nurioke,said to be the same as,Norioke
+         Norioke,said to be the same as,Mount Nurioke
+         Issued,different from,Unsigned
+         Unsigned,different from,Issued
+https://www.rijksmuseum.nl/en/collection/RP-T-1897-A-3376/catalogue-entry
+         View of Ruins at the Bank of a River,depicts,Ruins
+https://www.rijksmuseum.nl/en/collection/RP-T-1897-A-3376/catalogue-entry
+         Karel van der Kabel,has works in the collection,Museum of Modern Art
+         Arcadianism,subclass of,Classicism
+         Tower,made from material,Fir
+         Column,made from material,Fir
+         Shape,part of,Character (arts)
+         Character (arts),has parts of the class,Shape
+         Shape,has parts of the class,Shape
+         Shape,part of,Character (arts)
+         Shape,has parts of the class,Shape
+         Statens Museum for Kunst,location,Copenhagen
+         Wolfgang Amadeus Mozart,notable work,The Magic Flute
+         The Magic Flute,composer,Wolfgang Amadeus Mozart
+         Gaspard Dughet,work location,Paris
+         Frits Lugt,work location,Paris
+         Wolfgang Amadeus Mozart,notable work,The Magic Flute
+         The Magic Flute,composer,Wolfgang Amadeus Mozart
+         Recto,followed by,Verso (geometry)
+         Karel van der Kabel,work location,Lyon
+         Lyon,twinned administrative body,Italy
+         Italy,twinned administrative body,Lyon
+https://www.rijksmuseum.nl/en/collection/SK-A-4952/catalogue-entry
+         Still Life with Silver-Gilt Glass Holder,made from material,Glass
+https://www.rijksmuseum.nl/en/collection/SK-A-4952/catalogue-entry
+         Abraham van Beyeren,has works in the collection,National Gallery of Art
+         Johannes Lutma,work location,Amsterdam
+         Luxury,said to be the same as,Wealth
+         Transitory goods,subclass of,Material goods
+         Abraham van Beyeren,instance of,Monogram
+         Abraham van Beyeren,said to be the same as,Abraham van Beyeren\u2019s
+         Abraham van Beyeren\u2019s,said to be the same as,Abraham van Beyeren\u2019s
+         The eight-pointed salver,creator,Abraham van Beyeren
+         Abraham van Beyeren,notable work,Abraham van Beyeren Still Life
+         Willem Kalf,work location,Amsterdam
+         Willem van Aelst,work location,Amsterdam
