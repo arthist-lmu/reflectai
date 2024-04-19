@@ -18,7 +18,21 @@ class SentenceMergerPlugin(
     def merge_sentence_list(self, text_entries: List[Dict]) -> Dict:
         text = " ".join(x["text"] for x in text_entries)
 
-        return {**text_entries[0], "text": text}
+        result = {**text_entries[0], "text": text}
+
+        if "triplets" in text_entries[0]:
+            new_triplets = {}
+            for entry in text_entries:
+                for triplets in entry["triplets"]:
+                    if triplets["type"] not in new_triplets:
+                        new_triplets[triplets["type"]] = []
+                    new_triplets[triplets["type"]].extend(triplets["content"])
+
+            result["triplets"] = []
+            for key, value in new_triplets.items():
+                result["triplets"].append({"type": key, "content": value})
+
+        return result
 
     def call(self, text_entries: List[Dict]) -> List[Dict]:
         results = []
