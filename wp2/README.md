@@ -1,5 +1,7 @@
 # WP2: Creation of art-historical KGs
 
+(WP 1) serve the (semi-)automatic creation of art-historical knowledge
+graphs (WP 2).
 Extracting the triplets from the raw text and transferring to a graph hosting software.
 
 # KnowledgeGraph solutions

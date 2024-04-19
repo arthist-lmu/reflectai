@@ -1,5 +1,7 @@
 # WP1: Data Acquisition and Preprocessing
 
+The acquisition and preprocessing of art-historical data from various (multimodal) sources such as encyclopedias, books, and catalogs.
+
 # Reflectai Scraping
 
 Folder locations for raw pdfs on the server: /nfs/data/reflectai/scientific_pdfs
