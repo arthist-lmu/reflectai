@@ -57,11 +57,20 @@ Possible approaches:
 * Upload reconciled ReflectAI triplets to a controlled Wikibase. Create all reconciled item with only the ReflectAI triplets (mostly empty), and link them to Wikidata, either via sitelink or property
 * Upload only ReflectAI triplets without reconciliation
 * Integrate correct triplets into Wikidata
-* 
+* Cloning Wikidata (e.g while stripping subgraphs (scientific literature, astronomy etc.)) and appending ReflectAI triplets (Involves hosting a Reconciliation Endpoint)
 
 Improvements:
 * Reducing noise via HITL (Human in the loop) before upload (required for upload in Wikidata, optional otherwise)
 * Improving Reconciliation via HITL before upload (required for upload in Wikidata, optional otherwise)
+
+The main difficulty with these decisions is the question of how to query the resulting dataset in the end.
+In the case of a unevenly distributed set of properties with no expectation or grantee of their existence, SPARQL queries become difficult, even more so in the case of federated queries.
+
+LLM query generation for e.g for visualization (WP4) is notoriously unreliable in the usage of Q and P numbers. An approach using this would need to template federated queries algorithmically and process the suggested query to ensure some level of correctness.
+
+Without some support in query generation users could only be expected to work with carefully prepared queries that showcase the federated capabilities, and to querying the local ReflectAI Wikibase (with the expected gaps)
+
+A cloned Wikidata introduces complexity but would allow for a simpler query structure and better possible query generation, through losing the federated aspect.
 
 # Setup
 
