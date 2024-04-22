@@ -28,7 +28,7 @@ class LocationCreationRelation(Template):
     city or country, or any space that has influenced the work's execution."""
 
     painting: str  # The name of the painting, i.e. Mona Lisa, Starry Night, Guernica, The Scream
-    creator: str  # The name of the location, i.e. Florence, Provence, Paris, Oslo
+    location: str  # The name of the location, i.e. Florence, Provence, Paris, Oslo
 
 
 @dataclass
@@ -65,7 +65,7 @@ class AliasNames(Template):
     striking features, or emotional responses elicited by the artwork."""
 
     painting: str  # The name of the painting, i.e. Mona Lisa
-    alias: str  # The alias name of a painting, i.e. La Gioconda
+    alias: List[str]  # The alias name of a painting, i.e. La Gioconda
 
 
 @dataclass
@@ -113,4 +113,86 @@ ENTITY_DEFINITIONS: List[Template] = [
     LocationDisplayed,
 ]
 
-ENTITY_PARSER = {}
+
+def creator_relation_to_triplet(package: CreatorRelation):
+    triplets = [
+        {
+            "subject": {
+                "label": package.painting,
+            },
+            "relation": {
+                "label": "creator",
+                "wikidata_id": "",
+            },
+            "object": {
+                "label": package.creator,
+            },
+        }
+    ]
+
+    return triplets
+
+
+def location_creation_relation_to_triplet(package: LocationCreationRelation):
+    triplets = [
+        {
+            "subject": {
+                "label": package.painting,
+            },
+            "relation": {
+                "label": "location",
+                "wikidata_id": "",
+            },
+            "object": {
+                "label": package.location,
+            },
+        }
+    ]
+
+    return triplets
+
+
+def inception_relation_to_triplet(package: InceptionRelation):
+    triplets = [
+        {
+            "subject": {
+                "label": package.painting,
+            },
+            "relation": {
+                "label": "inception",
+                "wikidata_id": "",
+            },
+            "object": {
+                "label": package.year,
+            },
+        }
+    ]
+
+    return triplets
+
+
+def painting_genre_to_triplet(package: PaintingGenre):
+    triplets = [
+        {
+            "subject": {
+                "label": package.painting,
+            },
+            "relation": {
+                "label": "genre",
+                "wikidata_id": "",
+            },
+            "object": {
+                "label": package.genre,
+            },
+        }
+    ]
+
+    return triplets
+
+
+ENTITY_PARSER = {
+    CreatorRelation.__name__: creator_relation_to_triplet,
+    LocationCreationRelation.__name__: location_creation_relation_to_triplet,
+    InceptionRelation.__name__: inception_relation_to_triplet,
+    PaintingGenre.__name__: painting_genre_to_triplet,
+}

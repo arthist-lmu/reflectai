@@ -117,16 +117,11 @@ result = [
             model_input["attention_mask"] = model_input["attention_mask"][:, :-1]
             model_ouput = self.model.generate(
                 **model_input.to(self.model.device),
-                max_new_tokens=128,
+                max_new_tokens=256,
                 do_sample=False,
                 min_new_tokens=0,
                 num_beams=1,
                 num_return_sequences=1,
-            )
-            print(
-                self.tokenizer.decode(model_ouput[0], skip_special_tokens=True).split(
-                    "result = "
-                )[-1]
             )
 
             result = AnnotationList.from_output(
@@ -137,6 +132,10 @@ result = [
                     self.config.get("template")
                 ),
             )
+            print("##########")
+            print(result)
+            print("##########")
+
             triplets = self.convert_to_triplets(result)
 
             for x in triplets:
