@@ -10,3 +10,4 @@ build/
 *.egg-info/
 *.sif
 .DStore
+.DS_Store
