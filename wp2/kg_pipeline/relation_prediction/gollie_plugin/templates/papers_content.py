@@ -19,7 +19,8 @@ class NamesMentioned(Template):
 @dataclass
 class MuseumsMentioned(Template):
     """Names of museums which are mentioned in the article. They could have acquired the artworks or added
-    them to their collection. 
+    them to their collection. Museums are places and locations that collect artworks and put them into
+    exhibitions. 
     """
 
     name: str  # The name of the museum, i.e. Louvre, Tate Gallery, Smithsonian
