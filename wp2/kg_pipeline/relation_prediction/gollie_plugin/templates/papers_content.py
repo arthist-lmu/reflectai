@@ -16,6 +16,13 @@ class NamesMentioned(Template):
 
     name: str  # The name of the researcher, artist, writer, philosopher who was quoted in the article
 
+@dataclass
+class MuseumsMentioned(Template):
+    """Names of museums which are mentioned in the article. They could have acquired the artworks or added
+    them to their collection. 
+    """
+
+    name: str  # The name of the museum, i.e. Louvre, Tate Gallery, Smithsonian
 
 @dataclass
 class ArtworksMentioned(Template):
