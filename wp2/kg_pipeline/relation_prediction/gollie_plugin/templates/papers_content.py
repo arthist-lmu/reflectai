@@ -37,6 +37,7 @@ class ArtworksMentioned(Template):
 ENTITY_DEFINITIONS: List[Template] = [
     NamesMentioned,
     ArtworksMentioned,
+    MuseumsMentioned,
 ]
 
 
