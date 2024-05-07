@@ -25,18 +25,17 @@ class ArtistsMentioned(Template):
 
 @dataclass
 class MuseumsMentioned(Template):
-    """Names of museums that are mentioned in the article. If no name of a museum is mentioned then the place of the museum should be used.
+    """
     """
 
-    name: str  # The name of the museum, i.e. Louvre, Tate Gallery, Smithsonian
-
+    name: str  # The name of the museum mentioned
 @dataclass
 class ArtworksMentioned(Template):
     """
     …
     """
 
-    name: str  # The name of the artworks mentioned in the text like
+    name: str  # The name of the artworks mentioned in the text 
 
 
 
