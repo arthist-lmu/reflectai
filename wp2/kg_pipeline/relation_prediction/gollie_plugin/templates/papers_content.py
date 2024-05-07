@@ -25,7 +25,7 @@ class ArtistsMentioned(Template):
 
 @dataclass
 class MuseumsMentioned(Template):
-    """
+    """Name of a Museum
     """
 
     name: str  # The name of the museum mentioned
