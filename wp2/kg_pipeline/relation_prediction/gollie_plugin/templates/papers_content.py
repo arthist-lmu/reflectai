@@ -17,7 +17,8 @@ class NamesMentioned(Template):
 
 @dataclass
 class ArtistsMentioned(Template):
-    """Names of other artists that are mentioned in the article. 
+    """An artist that is mentioned in the painting description, if no name is mentioned then the general terms like woman, man,
+    person or child etc. are sufficient. 
     """
 
     name: str  # The name of the mentioned artists i.e. Leonardo da Vinci, Michelangelo, van Gogh
