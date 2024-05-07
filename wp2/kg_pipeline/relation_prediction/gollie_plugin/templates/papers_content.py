@@ -15,6 +15,7 @@ class NamesMentioned(Template):
 
     name: str  # The name of the person mentioned in the article
 
+
 @dataclass
 class ArtistsMentioned(Template):
     """An artist that is mentioned in the painting description, if no name is mentioned then the general terms like woman, man,
@@ -25,7 +26,7 @@ class ArtistsMentioned(Template):
 
 @dataclass
 class MuseumsMentioned(Template):
-    """Name of a Museum
+    """Name of a museum
     """
 
     name: str  # The name of the museum mentioned
