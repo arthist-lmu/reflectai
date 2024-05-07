@@ -24,7 +24,7 @@ class ArtistsMentioned(Template):
 
 @dataclass
 class MuseumsMentioned(Template):
-    """Names of museums that are mentioned in the article. Museums are places and locations that collect artworks.
+    """Names of museums that are mentioned in the article. If no name of a museum is mentioned then the place of the museum should be used.
     """
 
     name: str  # The name of the museum, i.e. Louvre, Tate Gallery, Smithsonian
