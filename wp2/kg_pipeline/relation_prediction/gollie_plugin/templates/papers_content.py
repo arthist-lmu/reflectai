@@ -26,10 +26,12 @@ class ArtistsMentioned(Template):
 
 @dataclass
 class MuseumsMentioned(Template):
-    """Name of a museum
+    """Name of a museum where an artwork is exhibited or acquired
     """
 
     name: str  # The name of the museum mentioned
+    location: str # The location of the museum
+    artwork: str # The name of the artwork within in the museum
 @dataclass
 class ArtworksMentioned(Template):
     """
