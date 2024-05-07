@@ -10,10 +10,10 @@ Relation definitions
 
 @dataclass
 class NamesMentioned(Template):
-    """Names which are mentioned in the article. They could be quoted or cited in order to enrich the text.
+    """Each distinct person, or set of people, mentioned in a document refers to an entity of type Person. For example, people may be specified by name ("John Smith"), occupation ("the butcher"), family relation ("mum"), pronoun ("they"), etc., or by some combination of these.
     """
 
-    name: str  # The name of the researcher, artist, writer, philosopher who was quoted in the article
+    name: str  # The name of the person mentioned in the article
 
 @dataclass
 class ArtistsMentioned(Template):
