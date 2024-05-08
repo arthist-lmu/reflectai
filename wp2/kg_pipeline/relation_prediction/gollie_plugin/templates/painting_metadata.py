@@ -186,7 +186,7 @@ def painting_genre_to_triplet(package: PaintingGenre):
 
     return triplets
 
-'''
+
 
 ENTITY_PARSER = {
     CreatorRelation.__name__: creator_relation_to_triplet,
@@ -194,3 +194,4 @@ ENTITY_PARSER = {
     InceptionRelation.__name__: inception_relation_to_triplet,
     PaintingGenre.__name__: painting_genre_to_triplet,
 }
+'''
