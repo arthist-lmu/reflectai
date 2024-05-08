@@ -26,12 +26,13 @@ class ArtistsMentioned(Template):
 
 @dataclass
 class MuseumsMentioned(Template):
-    """The museum is a place where an artwork is exhibited or acquired
+    """Names of museums that are mentioned in the article. If no name of a museum is mentioned then the place of the museum should be used.
     """
 
     name: str  # The name of the museum mentioned
     location: str # The location of the museum
     artwork: str # The name of the artwork within in the museum
+    
 @dataclass
 class ArtworksMentioned(Template):
     """
