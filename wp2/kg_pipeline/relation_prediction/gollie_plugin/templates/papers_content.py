@@ -26,7 +26,7 @@ class ArtistsMentioned(Template):
 
 @dataclass
 class MuseumsMentioned(Template):
-    """Names of museums that are mentioned in the article. If no name of a museum is mentioned then the place of the museum should be used.
+    """A museum that is mentioned in the article
     """
 
     name: str  # The name of the museum mentioned
@@ -36,7 +36,7 @@ class MuseumsMentioned(Template):
 @dataclass
 class ArtworksMentioned(Template):
     """
-    …
+    An artwork mentioned in the article
     """
 
     name: str  # The name of the artworks mentioned in the text 
