@@ -35,7 +35,7 @@ ENTITY_DEFINITIONS: List[Template] = [
 
 ENTITY_PARSER = {}
 
-def name_mentioned_relation_to_triplet(package: NamesMentioned) -> List:
+def name_mentioned_relation_to_triplet(package: MuseumsMentioned) -> List:
     triplets = [
         {
             "subject": {
