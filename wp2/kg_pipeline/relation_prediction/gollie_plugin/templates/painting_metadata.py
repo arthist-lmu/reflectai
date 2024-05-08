@@ -23,9 +23,7 @@ class CreatorRelation(Template):
 
 @dataclass
 class LocationCreationRelation(Template):
-    """Name of the location the painting was created. The location of creation refers to the specific place or setting where an artwork,
-    particularly a painting, was physically created by the artist. This could be an artist's studio, a plein air (outdoor) site, a particular
-    city or country, or any space that has influenced the work's execution."""
+    """The name of the location where the painting was created"""
 
     painting: str  # The name of the painting, i.e. Mona Lisa, Starry Night, Guernica, The Scream
     location: str  # The name of the location, i.e. Florence, Provence, Paris, Oslo
@@ -33,9 +31,8 @@ class LocationCreationRelation(Template):
 
 @dataclass
 class InceptionRelation(Template):
-    """Year when an painting was painted or created. The creation date of a painting refers to the specific year or range of years
-    during which the artwork was produced. This date can sometimes be precisely known or estimated based on historical records,
-    stylistic analysis, or the artist's own documentation."""
+    """The Year when an painting was painted or created. The creation date of a painting refers to the specific year or range of years
+    during which the artwork was produced."""
 
     painting: str  # The name of the painting, i.e. Mona Lisa, Starry Night, Guernica, The Scream
     date: int  # The year in which the picture was painted or created
@@ -43,7 +40,7 @@ class InceptionRelation(Template):
 
 @dataclass
 class PaintingMaterial(Template):
-    """The material of a painting like oil painting on canvas"""
+    """The material of a painting mentioned in the article like oil painting on canvas"""
 
     painting: str  # The name of the painting, i.e. Mona Lisa
     material: str  # The material of a painting, i.e. oil on canvas
