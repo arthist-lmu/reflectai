@@ -195,3 +195,6 @@ ENTITY_PARSER = {
     PaintingGenre.__name__: painting_genre_to_triplet,
 }
 '''
+
+ENTITY_PARSER = {}
+
