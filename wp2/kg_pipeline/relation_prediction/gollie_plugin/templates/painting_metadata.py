@@ -110,7 +110,7 @@ ENTITY_DEFINITIONS: List[Template] = [
     LocationDisplayed,
 ]
 
-
+'''
 def creator_relation_to_triplet(package: CreatorRelation):
     triplets = [
         {
@@ -186,6 +186,7 @@ def painting_genre_to_triplet(package: PaintingGenre):
 
     return triplets
 
+'''
 
 ENTITY_PARSER = {
     CreatorRelation.__name__: creator_relation_to_triplet,
