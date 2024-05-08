@@ -22,11 +22,11 @@ class ArtistsMentioned(Template):
     person or child etc. are sufficient. 
     """
 
-    name: str  # The name of the mentioned artists i.e. Leonardo da Vinci, Michelangelo, van Gogh
+    name: str  # The name of the mentioned artists 
 
 @dataclass
 class MuseumsMentioned(Template):
-    """Name of a museum where an artwork is exhibited or acquired
+    """The museum is a place where an artwork is exhibited or acquired
     """
 
     name: str  # The name of the museum mentioned
