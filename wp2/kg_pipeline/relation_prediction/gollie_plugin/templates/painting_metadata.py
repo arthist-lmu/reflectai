@@ -99,14 +99,14 @@ class LocationDisplayed(Template):
 
 
 ENTITY_DEFINITIONS: List[Template] = [
-    CreatorRelation,
-    LocationCreationRelation,
+    #CreatorRelation,
+    #LocationCreationRelation,
     InceptionRelation,
     PaintingMaterial,
     PaintingGenre,
-    AliasNames,
-    TitleLanguages,
-    MovementRelation,
+    #AliasNames,
+    #TitleLanguages,
+    #MovementRelation,
     LocationDisplayed,
 ]
 
