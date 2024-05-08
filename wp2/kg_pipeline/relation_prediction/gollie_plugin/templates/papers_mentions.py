@@ -27,8 +27,6 @@ class ArtistsMentioned(Template):
 ENTITY_DEFINITIONS: List[Template] = [
     NamesMentioned,
     ArtistsMentioned,
-    ArtworksMentioned,
-    MuseumsMentioned,
 ]
 
 
