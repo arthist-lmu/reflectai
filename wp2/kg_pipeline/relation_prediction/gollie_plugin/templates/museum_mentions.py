@@ -12,6 +12,7 @@ class MuseumsMentioned(Template):
     """A museum that is mentioned in the article
     """
 
+    artwork: str # The name of the artwork mentioned
     name: str  # The name of the museum mentioned
     location: str # The location of the museum
 
@@ -41,7 +42,7 @@ def name_mentioned_relation_to_triplet(package: MuseumsMentioned) -> List:
                 "wikidata_id": "P276",
             },
             "object": {
-                "label": package.museum,
+                "label": package.name,
             },
         }
     ]
