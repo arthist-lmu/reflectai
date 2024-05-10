@@ -37,23 +37,6 @@ class InceptionRelation(Template):
     painting: str  # The name of the painting, i.e. Mona Lisa, Starry Night, Guernica, The Scream
     date: int  # The year in which the picture was painted or created
 
-
-@dataclass
-class PaintingMaterial(Template):
-    """The material of a painting mentioned in the article like oil painting on canvas"""
-
-    painting: str  # The name of the painting, i.e. Mona Lisa
-    material: str  # The material of a painting, i.e. oil on canvas
-
-
-@dataclass
-class PaintingGenre(Template):
-    """The genre of a painting like abstract, portrait, still life or landscape"""
-
-    painting: str  # The name of the painting, i.e. Mona Lisa
-    genre: str  # The genre of a painting, i.e. portrait, landscape
-
-
 @dataclass
 class AliasNames(Template):
     """Alias names for artworks refer to alternative titles or nicknames that a piece of art
@@ -75,27 +58,6 @@ class TitleLanguages(Template):
     FrenchName: str  # The French name of a painting, Le Cri
     EnglishName: str  # The English name of painting, The Scream
 
-
-@dataclass
-class MovementRelation(Template):
-    """The movement with which the painting is associated. An artistic movement is a style or tendency in art with a specific common philosophy or
-    goal, followed by a group of artists during a restricted period of time. Artistic movements are usually characterized by a distinctive style
-    or technique that emerges as a reaction to preceding art forms, social conditions, or artistic philosophies.
-    """
-
-    painting: str  # The name of the painting, i.e. Mona Lisa, Starry Night, Guernica, The Scream
-    movement: str  # The name of the movement, i.e. Renaissance, Impressionism, Kubism, Expressionism
-
-
-@dataclass
-class LocationDisplayed(Template):
-    """Name of the location the painting is currently displayed. The location of the painting
-    could refer to a private collection or a museum that acquired the works and either displays
-    them now or archive them. The location could either bought, acquired or were gifted the
-    artwork that is now in their possession"""
-
-    painting: str  # The name of the painting, i.e. Mona Lisa, Starry Night, Guernica, The Scream
-    locationdisplayed: str  # The name of the location, i.e. Louvre, Metropolitan Museum of Art, Private Collection, Gallery
 
 
 ENTITY_DEFINITIONS: List[Template] = [
