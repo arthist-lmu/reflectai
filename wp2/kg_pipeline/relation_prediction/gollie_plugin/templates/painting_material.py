@@ -24,7 +24,7 @@ class PaintingGenre(Template):
     genre: str  # The genre of a painting, i.e. portrait, landscape
 
 @dataclass
-class MovementRelation(Template):
+class Movement(Template):
     """The movement with which the painting is associated. An artistic movement is a style or tendency in art with a specific common philosophy or
     goal, followed by a group of artists during a restricted period of time. Artistic movements are usually characterized by a distinctive style
     or technique that emerges as a reaction to preceding art forms, social conditions, or artistic philosophies.
@@ -34,74 +34,29 @@ class MovementRelation(Template):
     movement: str  # The name of the movement, i.e. Renaissance, Impressionism, Kubism, Expressionism
 
 ENTITY_DEFINITIONS: List[Template] = [
-    #CreatorRelation,
-    #LocationCreationRelation,
-    #InceptionRelation,
     PaintingMaterial,
     PaintingGenre,
-    #AliasNames,
-    #TitleLanguages,
     MovementRelation,
-    #LocationDisplayed,
 ]
 
-'''
-def creator_relation_to_triplet(package: CreatorRelation):
+
+def painting_material_relation_to_triplet(package: PaintingMaterial):
     triplets = [
         {
             "subject": {
                 "label": package.painting,
             },
             "relation": {
-                "label": "creator",
-                "wikidata_id": "",
+                "label": "made from material",
+                "wikidata_id": "P186",
             },
             "object": {
-                "label": package.creator,
+                "label": package.material,
             },
         }
     ]
 
     return triplets
-
-
-def location_creation_relation_to_triplet(package: LocationCreationRelation):
-    triplets = [
-        {
-            "subject": {
-                "label": package.painting,
-            },
-            "relation": {
-                "label": "location",
-                "wikidata_id": "",
-            },
-            "object": {
-                "label": package.location,
-            },
-        }
-    ]
-
-    return triplets
-
-
-def inception_relation_to_triplet(package: InceptionRelation):
-    triplets = [
-        {
-            "subject": {
-                "label": package.painting,
-            },
-            "relation": {
-                "label": "inception",
-                "wikidata_id": "",
-            },
-            "object": {
-                "label": package.year,
-            },
-        }
-    ]
-
-    return triplets
-
 
 def painting_genre_to_triplet(package: PaintingGenre):
     triplets = [
@@ -121,15 +76,28 @@ def painting_genre_to_triplet(package: PaintingGenre):
 
     return triplets
 
+def Movement_to_triplet(package: Movement):
+    triplets = [
+        {
+            "subject": {
+                "label": package.painting,
+            },
+            "relation": {
+                "label": "movement",
+                "wikidata_id": "P135",
+            },
+            "object": {
+                "label": package.movement,
+            },
+        }
+    ]
+
+    return triplets
+
 
 
 ENTITY_PARSER = {
-    CreatorRelation.__name__: creator_relation_to_triplet,
-    LocationCreationRelation.__name__: location_creation_relation_to_triplet,
-    InceptionRelation.__name__: inception_relation_to_triplet,
+    PaintingMaterial.__name__: painting_material_relation_to_triplet,
     PaintingGenre.__name__: painting_genre_to_triplet,
+    Movement.__name__: Movement_to_triplet,
 }
-'''
-
-ENTITY_PARSER = {}
-
