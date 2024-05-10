@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Dict
 
 from ..utils_typing import Relation, dataclass
 from ..utils_typing import Generic as Template
@@ -14,7 +14,6 @@ class MuseumsMentioned(Template):
 
     name: str  # The name of the museum mentioned
     location: str # The location of the museum
-    year: int # The year of the artwork within in the museum
 
 @dataclass
 class AuctionHousesMentioned(Template):
@@ -23,7 +22,6 @@ class AuctionHousesMentioned(Template):
 
     name: str  # The name of the auctionhouse mentioned
     location: str # The location of the auctionhouse
-    year: int # The date of the transaction with the auction house
     
 
 
@@ -32,23 +30,25 @@ ENTITY_DEFINITIONS: List[Template] = [
     AuctionHousesMentioned,
 ]
 
-
-ENTITY_PARSER = {}
-
 def name_mentioned_relation_to_triplet(package: MuseumsMentioned) -> List:
     triplets = [
         {
             "subject": {
-                "label": package.paper,
+                "label": package.artwork,
             },
             "relation": {
-                "label": "cites",
-                "wikidata_id": "P2860",
+                "label": "displayed",
+                "wikidata_id": "P276",
             },
             "object": {
-                "label": package.mentioned,
+                "label": package.museum,
             },
         }
     ]
 
     return triplets
+
+ENTITY_PARSER: Dict = {
+    MuseumsMentioned.__name__: name_mentioned_relation_to_triplet
+
+}
