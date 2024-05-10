@@ -18,6 +18,7 @@ class AliasNames(Template):
     alias: List[str]  # The alias name of a painting, i.e. La Gioconda
 
 
+
 @dataclass
 class TitleLanguages(Template):
     """Names of artworks in different languages represent the various translations or
