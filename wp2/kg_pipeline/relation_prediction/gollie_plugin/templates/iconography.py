@@ -17,16 +17,16 @@ class Attributes(Template):
 
 @dataclass
 class ReligiousFigures(Template):
-    """Religious Figrues depicted in the painting which are part of the content. These religious figures could depict scenes from the Bible or from martyr stories."""
+    """Religious Figures depicted in the painting which are part of the content. These religious figures could depict scenes from the Bible or from martyr stories."""
 
-    painting: str  # The name of the painting, i.e. Mona Lisa
+    #painting: str  # The name of the painting, i.e. Mona Lisa
     figure: list  # The figures depicted in the painting, i.e. Jesus, Mary Magdalene, Angel etc.
 
 @dataclass
 class MythologicalFigures(Template):
-    """Mythological Figrues depicted in the painting which are part of the content. These  figures could depict scenes from Greek and Roman Mythologies."""
+    """Mythological Figures depicted in the painting which are part of the content. These  figures could depict scenes from Greek and Roman Mythologies."""
 
-    painting: str  # The name of the painting, i.e. Mona Lisa
+    #painting: str  # The name of the painting, i.e. Mona Lisa
     figure: list  # The figures depicted in the painting, i.e. Venus, Volcan, Jupyter
 
 ENTITY_DEFINITIONS: List[Template] = [
@@ -54,7 +54,7 @@ def Attributes_relation_to_triplet(package: Attributes):
 
     return triplets
 
-def ReligiousFigures_relation_to_triplet(package: Attributes):
+def ReligiousFigures_relation_to_triplet(package: ReligiousFigures):
     triplets = [
         {
             "subject": {
