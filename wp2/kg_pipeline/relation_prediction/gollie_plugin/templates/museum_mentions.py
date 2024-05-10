@@ -53,7 +53,7 @@ def museum_location_to_triplet(package: MuseumsMentioned) -> List:
     triplets = [
         {
             "subject": {
-                "label": package.museum,
+                "label": package.name,
             },
             "relation": {
                 "label": "displayed",
