@@ -43,8 +43,8 @@ def Attributes_relation_to_triplet(package: Attributes):
                 "label": package.painting,
             },
             "relation": {
-                "label": "made from material",
-                "wikidata_id": "P186",
+                "label": "shown with features",
+                "wikidata_id": "P1354",
             },
             "object": {
                 "label": package.objects,
