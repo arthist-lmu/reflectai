@@ -17,8 +17,6 @@ class AliasNames(Template):
     painting: str  # The name of the painting, i.e. Mona Lisa
     alias: List[str]  # The alias name of a painting, i.e. La Gioconda
 
-
-
 @dataclass
 class TitleLanguages(Template):
     """Names of artworks in different languages represent the various translations or
@@ -36,8 +34,7 @@ ENTITY_DEFINITIONS: List[Template] = [
     TitleLanguages,
 ]
 
-'''
-def creator_relation_to_triplet(package: CreatorRelation):
+def AliasNames_to_triplet(package: AliasNames):
     triplets = [
         {
             "subject": {
@@ -48,7 +45,7 @@ def creator_relation_to_triplet(package: CreatorRelation):
                 "wikidata_id": "",
             },
             "object": {
-                "label": package.creator,
+                "label": package.alias,
             },
         }
     ]
@@ -56,7 +53,7 @@ def creator_relation_to_triplet(package: CreatorRelation):
     return triplets
 
 
-def location_creation_relation_to_triplet(package: LocationCreationRelation):
+def TitleLanguages_to_triplet(package: TitleLanguages):
     triplets = [
         {
             "subject": {
@@ -67,60 +64,15 @@ def location_creation_relation_to_triplet(package: LocationCreationRelation):
                 "wikidata_id": "",
             },
             "object": {
-                "label": package.location,
+                "label": package.GermanName,
             },
         }
     ]
 
     return triplets
-
-
-def inception_relation_to_triplet(package: InceptionRelation):
-    triplets = [
-        {
-            "subject": {
-                "label": package.painting,
-            },
-            "relation": {
-                "label": "inception",
-                "wikidata_id": "",
-            },
-            "object": {
-                "label": package.year,
-            },
-        }
-    ]
-
-    return triplets
-
-
-def painting_genre_to_triplet(package: PaintingGenre):
-    triplets = [
-        {
-            "subject": {
-                "label": package.painting,
-            },
-            "relation": {
-                "label": "genre",
-                "wikidata_id": "",
-            },
-            "object": {
-                "label": package.genre,
-            },
-        }
-    ]
-
-    return triplets
-
 
 
 ENTITY_PARSER = {
-    CreatorRelation.__name__: creator_relation_to_triplet,
-    LocationCreationRelation.__name__: location_creation_relation_to_triplet,
-    InceptionRelation.__name__: inception_relation_to_triplet,
-    PaintingGenre.__name__: painting_genre_to_triplet,
+    AliasNames.__name__: AliasNames_to_triplet,
+    TitleLanguages.__name__: TitleLanguages_to_triplet,
 }
-'''
-
-ENTITY_PARSER = {}
-
