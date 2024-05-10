@@ -63,7 +63,7 @@ def creator_relation_to_triplet(package: CreatorRelation):
     return triplets
 
 
-def location_creation_relation_to_triplet(package: LocationCreationRelation):
+#def location_creation_relation_to_triplet(package: LocationCreationRelation):
     triplets = [
         {
             "subject": {
@@ -103,6 +103,6 @@ def inception_relation_to_triplet(package: InceptionRelation):
 
 ENTITY_PARSER = {
     CreatorRelation.__name__: creator_relation_to_triplet,
-    LocationCreationRelation.__name__: location_creation_relation_to_triplet,
+    #LocationCreationRelation.__name__: location_creation_relation_to_triplet,
     InceptionRelation.__name__: inception_relation_to_triplet,
 }
