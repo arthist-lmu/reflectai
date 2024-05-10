@@ -93,7 +93,7 @@ def inception_relation_to_triplet(package: InceptionRelation):
                 "wikidata_id": "P571",
             },
             "object": {
-                "label": package.year,
+                "label": package.date,
             },
         }
     ]
