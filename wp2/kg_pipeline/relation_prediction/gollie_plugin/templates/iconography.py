@@ -92,6 +92,6 @@ def MythologicalFigures_relation_to_triplet(package: MythologicalFigures):
 
 ENTITY_PARSER = {
     Attributes.__name__: Attributes_relation_to_triplet,
-    ReligiousFigures.__name__: ReligiousFigures_relation_to_triplet
+    ReligiousFigures.__name__: ReligiousFigures_relation_to_triplet,
     MythologicalFigures.__name__: MythologicalFigures_relation_to_triplet
 }
