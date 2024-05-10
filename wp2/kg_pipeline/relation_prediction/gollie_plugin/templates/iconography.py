@@ -27,7 +27,7 @@ class MythologicalFigures(Template):
     """Mythological Figrues depicted in the painting which are part of the content. These  figures could depict scenes from Greek and Roman Mythologies."""
 
     painting: str  # The name of the painting, i.e. Mona Lisa
-    figure: list  # The figures depicted in the painting, i.e. Jesus, Mary Magdalene, Angel etc.
+    figure: list  # The figures depicted in the painting, i.e. Venus, Volcan, Jupyter
 
 ENTITY_DEFINITIONS: List[Template] = [
     Attributes,
@@ -61,8 +61,8 @@ def ReligiousFigures_relation_to_triplet(package: Attributes):
                 "label": package.painting,
             },
             "relation": {
-                "label": "made from material",
-                "wikidata_id": "P186",
+                "label": "depicts person",
+                "wikidata_id": "P1354",
             },
             "object": {
                 "label": package.figure,
@@ -79,8 +79,8 @@ def MythologicalFigures_relation_to_triplet(package: MythologicalFigures):
                 "label": package.painting,
             },
             "relation": {
-                "label": "made from material",
-                "wikidata_id": "P186",
+                "label": "depicts person",
+                "wikidata_id": "P1354",
             },
             "object": {
                 "label": package.figure,
