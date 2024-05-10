@@ -36,7 +36,7 @@ class Movement(Template):
 ENTITY_DEFINITIONS: List[Template] = [
     PaintingMaterial,
     PaintingGenre,
-    MovementRelation,
+    Movement,
 ]
 
 
