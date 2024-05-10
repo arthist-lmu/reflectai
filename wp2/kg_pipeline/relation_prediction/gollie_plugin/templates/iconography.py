@@ -10,14 +10,14 @@ Relation definitions
 
 @dataclass
 class Attributes(Template):
-    """Objects depicted in the painting"""
+    """Objects depicted in the painting that have symbolic value like a key or a tool used for certain professions"""
 
     painting: str  # The name of the painting, i.e. Mona Lisa
     objects: list  # The objects depicted in the painting
 
 @dataclass
 class ReligiousFigures(Template):
-    """Religious Figrues depicted in the painting"""
+    """Religious Figrues depicted in the painting which are part of the content. These religious figures could depict scenes from the Bible or from martyr stories."""
 
     painting: str  # The name of the painting, i.e. Mona Lisa
     figure: list  # The figures depicted in the painting, i.e. Jesus, Mary Magdalene, Angel etc.
