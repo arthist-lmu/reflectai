@@ -27,6 +27,5 @@ class TripletsPrinterPlugin(
                         f"\t {triplet['subject']['label']},{triplet['relation']['label']},{triplet['object']['label']}"
                     )
 
-            results.append(entry)
+            yield entry
 
-        return results

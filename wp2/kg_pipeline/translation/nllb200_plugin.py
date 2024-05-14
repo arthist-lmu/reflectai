@@ -1,6 +1,6 @@
 from kg_pipeline.plugin import Plugin
 from kg_pipeline.manager import Manager
-from typing import List, Dict
+from typing import List, Dict, Iterator
 
 default_config = {
     "src_lang": "de",
@@ -31,12 +31,20 @@ class NLLB200Plugin(
         tgt_lang = self.translate_lang_flag(self.config.get("tgt_lang"))
         assert tgt_lang, f"Unknown language {self.config.get('tgt_lang')}"
 
+        if torch.cuda.is_available():
+            self.device = torch.device("cuda")
+        else:
+            print("Falling back to CPU")
+            self.device = torch.device("cpu")
+
+
         self.pipe = pipeline(
             "translation",
             model=model_ckpt,
             src_lang=src_lang,
             tgt_lang=tgt_lang,
             max_length=2000,
+            device = self.device
         )
 
     def translate_lang_flag(self, language):
@@ -47,24 +55,18 @@ class NLLB200Plugin(
 
         return None
 
-    def call(self, text_entries: List[Dict]) -> List[Dict]:
-        results = []
+    def call(self, text_entries: List[Dict]) -> Iterator[Dict]:
         for entry in text_entries:
 
             if entry.get("language", None) == self.config.get("src_lang"):
                 # print(entry)
 
                 preds = self.pipe(entry["text"])
-
-                # print(f'{entry["text"]} ------> {preds[0]["translation_text"]}')
-                results.append(
-                    {
+                yield {
                         **entry,
                         "text": preds[0]["translation_text"],
                         "language": self.config.get("tgt_lang"),
                     }
-                )
+                
             else:
-                results.append(entry)
-
-        return results
+                yield entry

@@ -20,6 +20,7 @@ class OutputWrapper:
             ) as f:
                 for t in result:
                     f.write(msgpack.packb(t))
+                    yield t
         else:
             with open(
                 os.path.join(
@@ -29,5 +30,5 @@ class OutputWrapper:
             ) as f:
                 for t in result:
                     f.write(json.dumps(t) + "\n")
-
-        return result
+                    yield t
+        

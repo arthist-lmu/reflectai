@@ -1,5 +1,5 @@
 from packaging import version
-from typing import Union, Dict, Any, List
+from typing import Union, Dict, Any, List, Iterator
 
 
 class Plugin:
@@ -43,5 +43,5 @@ class Plugin:
     def name(cls):
         return cls._name
 
-    def __call__(self, text: List[Dict]) -> List[Dict]:
-        return self.call(text)
+    def __call__(self, text: List[Dict]) -> Iterator[Dict]:
+        yield from self.call(text)

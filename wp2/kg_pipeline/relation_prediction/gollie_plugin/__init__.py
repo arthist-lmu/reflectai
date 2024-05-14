@@ -140,8 +140,5 @@ result = [
 
             for x in triplets:
                 print(x)
-            results.append(
-                {**entry, "triplets": [{"type": "gollie", "content": triplets}]}
-            )
-        return results
-        # This can take a while too
+            yield {**entry, "triplets": [{"type": "gollie", "content": triplets}]}
+            

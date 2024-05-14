@@ -4,6 +4,7 @@ import re
 import json
 import argparse
 from typing import List, Dict
+from tqdm import tqdm
 
 
 from kg_pipeline.manager import Manager
@@ -90,7 +91,13 @@ def main():
             plugin = OutputWrapper(
                 plugin, {"output_path": args.output_path, "format": "json"}
             )
-        new_datasets = plugin(datasets)
+        new_datasets = []
+        plugin_iterator = plugin(datasets)
+        
+
+        for x in tqdm(plugin_iterator):
+            new_datasets.append(x)
+            
         datasets = new_datasets
     return 0
 
