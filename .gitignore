@@ -11,3 +11,4 @@ build/
 *.sif
 .DStore
 .DS_Store
+slurm*.out
