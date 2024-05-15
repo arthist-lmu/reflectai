@@ -35,6 +35,7 @@ def main():
     for input_path in args.input_paths:
         inputs.append(read_input_path(input_path))
 
+    # merge
     results = {}
     for x in inputs:
         for key, value in x.items():
@@ -47,6 +48,22 @@ def main():
                     if triplets_results_a["type"] == triplets_results_b["type"]:
 
                         triplets_results_a["content"].extend(triplets_results_b["content"])
+
+    # filter
+    for _, value in results.items():
+        for triplets_results in value["triplets"]:
+            filtered_triplets = []
+            for triplet in triplets_results["content"]:
+                if triplet["subject"]["label"] is None or triplet["subject"]["label"] == "None":
+                    continue
+                if triplet["object"]["label"] is None or triplet["object"]["label"] == "None":
+                    continue
+                if triplet["relation"]["wikidata_id"] == "":
+                    continue
+                filtered_triplets.append(triplet)
+            triplets_results["content"] = filtered_triplets
+
+
 
     count = 0
     with open(args.output_path, "w") as f:
