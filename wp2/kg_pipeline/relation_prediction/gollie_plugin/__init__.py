@@ -1,6 +1,7 @@
 from kg_pipeline.plugin import Plugin
 from kg_pipeline.manager import Manager
 from typing import List, Dict
+import logging
 
 
 default_config = {"model": "HiTZ/GoLLIE-13B", "template": "paintin_content"}
@@ -89,9 +90,9 @@ result = [
 
         results = []
         for entry in text_entries:
-            print(f"#######################################")
-            print(f"#######################################")
-            print(f"----> {entry['text']}")
+            # print(f"#######################################")
+            # print(f"#######################################")
+            # print(f"----> {entry['text']}")
 
             # Fill the template
             formated_text = self.template.render(
@@ -123,22 +124,25 @@ result = [
                 num_beams=1,
                 num_return_sequences=1,
             )
-
-            result = AnnotationList.from_output(
-                self.tokenizer.decode(model_ouput[0], skip_special_tokens=True).split(
-                    "result = "
-                )[-1],
-                task_module="kg_pipeline.relation_prediction.gollie_plugin.templates.{}".format(
-                    self.config.get("template")
-                ),
-            )
-            print("##########")
-            print(result)
-            print("##########")
+            try:
+                result = AnnotationList.from_output(
+                    self.tokenizer.decode(model_ouput[0], skip_special_tokens=True).split(
+                        "result = "
+                    )[-1],
+                    task_module="kg_pipeline.relation_prediction.gollie_plugin.templates.{}".format(
+                        self.config.get("template")
+                    ),
+                )
+            except Exception as e:
+                logging.error(f"Gollie parse error{e}")
+                yield {**entry, "triplets": [{"type": "gollie", "content": []}]}
+            # print("##########")
+            # print(result)
+            # print("##########")
 
             triplets = self.convert_to_triplets(result)
 
-            for x in triplets:
-                print(x)
+            # for x in triplets:
+            #     print(x)
             yield {**entry, "triplets": [{"type": "gollie", "content": triplets}]}
             
