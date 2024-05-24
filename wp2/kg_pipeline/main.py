@@ -35,18 +35,16 @@ def read_dataset(path: str) -> List[Dict]:
     with open(path, "r") as file:
         for i, line in enumerate(file):
             data = json.loads(line)
-            for j, text_entry in enumerate(data["text"]):
-
-                results.append(
-                    dict(
-                        id=data["id"],
-                        document_index=i,
-                        entry_index=j,
-                        original_file=path,
-                        text=text_entry["content"],
-                        language=text_entry.get("language", None),
-                    )
+            text = ' - '.join(text['content'] for text in data['text'])
+            results.append(
+                dict(
+                    id=data["id"],
+                    document_index=i,
+                    original_file=path,
+                    text=text,
+                    language=data['text'][0].get("language", None),
                 )
+            )
 
     return results
 
