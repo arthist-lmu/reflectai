@@ -18,7 +18,7 @@ class Attributes(Template):
 
 @dataclass
 class ReligiousFigures(Template):
-    """Religious Figures depicted in the painting which are part of the content. These religious figures could depict scenes from the Bible or from martyr stories."""
+    """Religious Figures depicted in the painting which are part of the content. These religious figures could depict scenes from the Bible or other religious sources."""
 
     painting: str  # The name of the painting, i.e. The Last Supper
     figure: List[
@@ -28,7 +28,7 @@ class ReligiousFigures(Template):
 
 @dataclass
 class MythologicalFigures(Template):
-    """Mythological Figures depicted in the painting which are part of the content. These  figures could depict scenes from Greek and Roman Mythologies."""
+    """Mythological Figures depicted in the painting which are part of the content. These figures could depict scenes from Greek and Roman Mythologies."""
 
     painting: str  # The name of the painting, i.e. The Last Supper
     figure: List[
@@ -38,7 +38,7 @@ class MythologicalFigures(Template):
 
 @dataclass
 class Allegory(Template):
-    """visual representation in which a character, place, or event can be interpreted to represent a meaning with moral or political significance"""
+    """An allegory is a visual representation in which a character, place, or event can be interpreted to represent a meaning with moral or political significance"""
 
     painting: str  # The name of the painting, i.e. The Last Supper
     allegory: str  # The name of the allegory, i.e. Allegory of Fortune, Allegory of Justice, Allegory of Time

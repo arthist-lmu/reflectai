@@ -55,7 +55,7 @@ class DeepKePlugin(
         from transformers import GenerationConfig
 
         for entry in text_entries:
-            system_prompt = "<<SYS>>\nYou are a helpful assistant. 你是一个乐于助人的助手。\n<</SYS>>\n\n"
+            system_prompt = "<<SYS>>\nYou are a helpful assistant. \n<</SYS>>\n\n"
 
             prompt = {
                 "instruction": "You are an expert specializing in relation extraction. Please extract relationship triples that comply with the schema definition from the input; return an empty list for non-existent relationships. Please respond in the JSON string format.",
@@ -75,7 +75,7 @@ class DeepKePlugin(
                                 {
                                     "subject": "The Lictors Bring to Brutus the Bodies of His Sons",
                                     "object": "Jacques Louis David",
-                                }
+                                },
                             ],
                             "PaintingSubject": [
                                 {
@@ -107,7 +107,7 @@ class DeepKePlugin(
                                 {
                                     "subject": "The Lictors Bring to Brutus the Bodies of His Sons",
                                     "object": "Neoclassical",
-                                }
+                                },
                             ],
                         },
                     }
