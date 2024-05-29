@@ -77,8 +77,6 @@ result = [
         for x in gollie_outputs:
             if x.__class__.__name__ in self.ENTITY_PARSER:
                 triplets = self.ENTITY_PARSER[x.__class__.__name__](x)
-                print("FOUND")
-                print(triplets)
                 results.extend(triplets)
             print(f"\t--> {x}")
 

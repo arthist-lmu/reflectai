@@ -13,7 +13,7 @@ class MuseumsMentioned(Template):
     """
 
     artwork: str # The name of the artwork mentioned
-    name: str  # The name of the museum mentioned
+    museum: str  # The name of the museum mentioned
     #location: str # The location of the museum
 
 @dataclass
@@ -22,7 +22,7 @@ class AuctionHousesMentioned(Template):
     """
 
     artwork: str # The name of the artwork mentioned
-    name: str  # The name of the auctionhouse mentioned
+    auctionhouse: str  # The name of the auctionhouse mentioned
     
 
 
@@ -42,30 +42,13 @@ def museum_mentioned_to_triplet(package: MuseumsMentioned) -> List:
                 "wikidata_id": "P276",
             },
             "object": {
-                "label": package.name,
+                "label": package.museum,
             },
         }
     ]
 
     return triplets
 
-def museum_location_to_triplet(package: MuseumsMentioned) -> List:
-    triplets = [
-        {
-            "subject": {
-                "label": package.name,
-            },
-            "relation": {
-                "label": "located in",
-                "wikidata_id": "P276",
-            },
-            "object": {
-                "label": package.location,
-            },
-        }
-    ]
-
-    return triplets
 
 def auctionhouse_mentioned_to_triplet(package: AuctionHousesMentioned) -> List:
     triplets = [
@@ -78,7 +61,7 @@ def auctionhouse_mentioned_to_triplet(package: AuctionHousesMentioned) -> List:
                 "wikidata_id": "P276",
             },
             "object": {
-                "label": package.name,
+                "label": package.auctionhouse,
             },
         }
     ]
@@ -87,6 +70,5 @@ def auctionhouse_mentioned_to_triplet(package: AuctionHousesMentioned) -> List:
 
 ENTITY_PARSER: Dict = {
     MuseumsMentioned.__name__: museum_mentioned_to_triplet,
-    MuseumsMentioned.__name__: museum_location_to_triplet,
     AuctionHousesMentioned.__name__: auctionhouse_mentioned_to_triplet, 
 }

@@ -23,9 +23,9 @@ class TitleLanguages(Template):
     adaptations of an artwork's title across cultural and linguistic boundaries."""
 
     painting: str  # The name of the painting, i.e. The Scream
-    GermanName: str  # The German name of a painting, Der Schrei
-    FrenchName: str  # The French name of a painting, Le Cri
-    EnglishName: str  # The English name of painting, The Scream
+    german_name: str  # The German name of a painting, Der Schrei
+    french_name: str  # The French name of a painting, Le Cri
+    english_name: str  # The English name of painting, The Scream
 
 
 
@@ -41,7 +41,7 @@ def AliasNames_to_triplet(package: AliasNames):
                 "label": package.painting,
             },
             "relation": {
-                "label": "creator",
+                "label": "alias",
                 "wikidata_id": "",
             },
             "object": {
@@ -60,11 +60,11 @@ def TitleLanguages_to_triplet(package: TitleLanguages):
                 "label": package.painting,
             },
             "relation": {
-                "label": "location",
+                "label": "language",
                 "wikidata_id": "",
             },
             "object": {
-                "label": package.GermanName,
+                "label": package.german_name,
             },
         }
     ]

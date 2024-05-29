@@ -21,9 +21,7 @@ class ReligiousFigures(Template):
     """Religious Figures depicted in the painting which are part of the content. These religious figures could depict scenes from the Bible or other religious sources."""
 
     painting: str  # The name of the painting, i.e. The Last Supper
-    figure: List[
-        str
-    ]  # The figures depicted in the painting, i.e. Jesus, Mary Magdalene, Angel etc.
+    figure: List[str]  # The figures depicted in the painting, i.e. Jesus, Mary Magdalene, Angel etc.
 
 
 @dataclass
@@ -31,9 +29,7 @@ class MythologicalFigures(Template):
     """Mythological Figures depicted in the painting which are part of the content. These figures could depict scenes from Greek and Roman Mythologies."""
 
     painting: str  # The name of the painting, i.e. The Last Supper
-    figure: List[
-        str
-    ]  # The figures depicted in the painting, i.e. Venus, Volcan, Jupyter
+    figure: List[str]  # The figures depicted in the painting, i.e. Venus, Volcan, Jupyter
 
 
 @dataclass
@@ -53,7 +49,11 @@ ENTITY_DEFINITIONS: List[Template] = [
 
 
 def Attributes_relation_to_triplet(package: Attributes):
-    triplets = [
+    
+    triplets = []
+
+    for x in package.objects:
+        triplets.append(
         {
             "subject": {
                 "label": package.painting,
@@ -63,17 +63,16 @@ def Attributes_relation_to_triplet(package: Attributes):
                 "wikidata_id": "P1354",
             },
             "object": {
-                "label": package.objects,
+                "label":x,
             },
-        }
-    ]
+        })
 
     return triplets
 
 
 def ReligiousFigures_relation_to_triplet(package: ReligiousFigures):
-    triplets = [
-        {
+
+    triplets = [{
             "subject": {
                 "label": package.painting,
             },

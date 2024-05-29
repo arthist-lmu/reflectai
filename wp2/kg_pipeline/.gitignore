@@ -1,2 +1,3 @@
 output/
 gollie_job_*.sh
+cache/
