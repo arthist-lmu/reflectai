@@ -13,14 +13,14 @@ class Attributes(Template):
     """Objects depicted in the painting that have symbolic value like a key or a tool used for certain professions"""
 
     painting: str  # The name of the painting, i.e. The Last Supper
-    objects: list  # The objects depicted in the painting
+    objects: List[str]  # The objects depicted in the painting
 
 @dataclass
 class ReligiousFigures(Template):
     """Religious Figures depicted in the painting which are part of the content. These religious figures could depict scenes from the Bible or from martyr stories."""
 
     painting: str  # The name of the painting, i.e. The Last Supper
-    figure: list  # The figures depicted in the painting, i.e. Jesus, Mary Magdalene, Angel etc.
+    figure: List[str]  # The figures depicted in the painting, i.e. Jesus, Mary Magdalene, Angel etc.
 
 @dataclass
 class MythologicalFigures(Template):
@@ -65,9 +65,9 @@ def ReligiousFigures_relation_to_triplet(package: ReligiousFigures):
                 "wikidata_id": "P1354",
             },
             "object": {
-                "label": package.figure,
+                "label": x,
             },
-        }
+        } for x in package.figure
     ]
 
     return triplets

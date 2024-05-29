@@ -20,7 +20,6 @@ class CreatorRelation(Template):
     creator: str  # The name of the painter, i.e. Leonardo da Vinci, Vincent van Gogh, Pablo Picasso, Edvard Munch
     workshop: str  # The name of the workshop
 
-
 @dataclass
 class LocationCreationRelation(Template):
     """The name of the location where the painting was created"""

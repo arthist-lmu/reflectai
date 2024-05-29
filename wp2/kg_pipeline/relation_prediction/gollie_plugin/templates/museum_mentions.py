@@ -14,7 +14,7 @@ class MuseumsMentioned(Template):
 
     artwork: str # The name of the artwork mentioned
     name: str  # The name of the museum mentioned
-    location: str # The location of the museum
+    #location: str # The location of the museum
 
 @dataclass
 class AuctionHousesMentioned(Template):
