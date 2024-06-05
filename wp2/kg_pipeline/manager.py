@@ -47,27 +47,32 @@ class Manager:
 
                     match = re.match(file_re, sub_pl)
                     if match:
-                        a = importlib.import_module(
-                            "kg_pipeline.{}.{}".format(subfolder.replace("/", "."), pl)
-                        )
-                        # print(a)
-                        function_dir = dir(a)
-                        if "register" in function_dir:
-                            a.register(self)
+                        try:
+                            a = importlib.import_module(
+                                "kg_pipeline.{}.{}".format(subfolder.replace("/", "."), pl)
+                            )
+                            function_dir = dir(a)
+                            if "register" in function_dir:
+                                a.register(self)
+                        except Exception as e:
+                            logging.error(f"Manager: Error importing {pl}")
             else:
                 match = re.match(file_re, pl)
                 if match:
                     if match.group(1) in ["main", "__init__"]:
                         continue
-                    a = importlib.import_module(
-                        "kg_pipeline.{}.{}".format(
-                            subfolder.replace("/", "."), match.group(1)
+                    try:
+                        a = importlib.import_module(
+                            "kg_pipeline.{}.{}".format(
+                                subfolder.replace("/", "."), match.group(1)
+                            )
                         )
-                    )
-                    # print(a)
-                    function_dir = dir(a)
-                    if "register" in function_dir:
-                        a.register(self)
+                        function_dir = dir(a)
+                        if "register" in function_dir:
+                            a.register(self)
+
+                    except Exception as e:
+                        logging.error(f"Manager: Error importing {pl}")
 
     def plugins(self):
         return self.plugin_list
@@ -89,14 +94,9 @@ class Manager:
             plugin_has_config = False
             plugin_config = {"params": {}}
             for x in configs:
-                # print("############", flush=True)
-                # print(x, flush=True)
-                # print("############", flush=True)
                 if x["type"].lower() == plugin_name.lower():
                     plugin_config.update(x)
                     plugin_has_config = True
-            # if not plugin_has_config:
-            #     continue
             plugin_list.append(
                 {
                     "plugin_key": plugin_name,

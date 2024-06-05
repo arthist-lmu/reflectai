@@ -1,7 +1,6 @@
 import json
 import time
 from pathlib import Path
-
 import ollama
 import requests
 from tqdm import tqdm

@@ -35,7 +35,7 @@ def read_dataset(path: str) -> List[Dict]:
     with open(path, "r") as file:
         for i, line in enumerate(file):
             data = json.loads(line)
-            text = ' - '.join(text['content'] for text in data['text'])
+            text = '; '.join(text['content'] for text in data['text'])
             results.append(
                 dict(
                     id=data["id"],
@@ -71,7 +71,9 @@ def main():
                 os.path.abspath(os.path.dirname(__file__)), "relation_prediction"
             ),
             os.path.join(os.path.abspath(os.path.dirname(__file__)), "translation"),
-            os.path.join(os.path.abspath(os.path.dirname(__file__)), "utils"),
+            os.path.join(os.path.abspath(os.path.dirname(__file__)), "utils"),            
+            os.path.join(os.path.abspath(os.path.dirname(__file__)), "reconciliation"),
+
         ]
     )
 
