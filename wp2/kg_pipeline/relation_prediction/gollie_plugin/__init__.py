@@ -4,7 +4,7 @@ from typing import List, Dict
 import logging
 
 
-default_config = {"model": "HiTZ/GoLLIE-13B", "template": "paintin_content"}
+default_config = {"model": "HiTZ/GoLLIE-13B", "template": "painting_content"}
 
 
 default_parameters = {}
@@ -133,7 +133,9 @@ result = [
                 )
             except Exception as e:
                 logging.error(f"Gollie parse error{e}")
-                yield {**entry, "triplets": [{"type": "gollie", "content": []}]}
+                entry['triplets'].append({"type": "gollie", "content": []})
+                yield entry
+                continue
             # print("##########")
             # print(result)
             # print("##########")
@@ -142,5 +144,6 @@ result = [
 
             # for x in triplets:
             #     print(x)
-            yield {**entry, "triplets": [{"type": "gollie", "content": triplets}]}
+            entry['triplets'].append({"type": "gollie", "content": triplets})
+            yield entry
             

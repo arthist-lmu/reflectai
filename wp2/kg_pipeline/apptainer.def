@@ -38,6 +38,7 @@ From: pytorch/pytorch:2.2.2-cuda12.1-cudnn8-devel
   pip install scipy 
   pip install llmgraph 
   pip install instructor
+  pip install ollama
 
   pip install spacy
   pip install "https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1-py3-none-any.whl"

@@ -69,10 +69,8 @@ class InstructorPlugin(
                     except Exception as e:
                         print('Exception when converting to triplet:', e)
 
-            yield {
-                **entry,
-                "triplets": [{
-                    "type": f"Instructor <{self.model_name}>",
-                    "content": triplets
-                }]
-            }
+            entry['triplets'].append({
+                "type": f"instructor <{self.model_name}>",
+                "content": triplets
+            })
+            yield entry

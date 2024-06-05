@@ -60,24 +60,24 @@ class DeepKePlugin(
             prompt = {
                 "instruction": "You are an expert specializing in relation extraction. Please extract relationship triples that comply with the schema definition from the input; return an empty list for non-existent relationships. Please respond in the JSON string format.",
                 "schema": {
-                    "PaintingSubject": "Main Subject of a painting",
-                    "PaintingGenre": "The genre of a painting like abstract, portrait, still life or landscape",
-                    "CreatorRelation": "The name or pseudonym of the painter that created the painting.",
-                    "MuseumsMentioned": "A museum that is mentioned in the article",
-                    "PaintingMaterial": "The material of a painting mentioned in the article like oil painting on canvas",
-                    "LocationCreationRelation": "The name of the location where the painting was created",
+                    "main subject": "Main Subject of a painting",
+                    "genre": "The genre of a painting like abstract, portrait, still life or landscape",
+                    "creator": "The name or pseudonym of the painter that created the painting.",
+                    "located in": "A museum that is mentioned in the article",
+                    "made from material": "The material of a painting mentioned in the article like oil painting on canvas",
+                    "location of creation": "The name of the location where the painting was created",
                 },
                 "example": [
                     {
                         "input": "The Lictors Bring to Brutus the Bodies of His Sons (French: Les licteurs rapportent à Brutus les corps de ses fils) is a work in oils by the French artist Jacques-Louis David. On a canvas of 146 square feet, this painting was first exhibited at the Paris Salon in 1789. The subject is the Roman leader Lucius Junius Brutus, founder of the Roman Republic, contemplating the fate of his sons. The painting was a bold allegory of civic virtue with immense resonance for the growing cause of republicanism. The style of painting is in the Neoclassical manner. The painting is on permanent display in the Louvre in Paris",
                         "output": {
-                            "CreatorRelation": [
+                            "creator": [
                                 {
                                     "subject": "The Lictors Bring to Brutus the Bodies of His Sons",
                                     "object": "Jacques Louis David",
                                 },
                             ],
-                            "PaintingSubject": [
+                            "main subject": [
                                 {
                                     "subject": "The Lictors Bring to Brutus the Bodies of His Sons",
                                     "object": "The subject is the Roman leader Lucius Junius Brutus, founder of the Roman Republic, contemplating the fate of his sons.",
@@ -87,7 +87,7 @@ class DeepKePlugin(
                                     "object": "The painting was a bold allegory of civic virtue with immense resonance for the growing cause of republicanism",
                                 },
                             ],
-                            "PaintingMaterial": [
+                            "made from material": [
                                 {
                                     "subject": "The Lictors Bring to Brutus the Bodies of His Sons",
                                     "object": "a work in oils",
@@ -97,13 +97,13 @@ class DeepKePlugin(
                                     "object": "on a canvas of 146 square feet",
                                 },
                             ],
-                            "MuseumsMentioned": [
+                            "located in": [
                                 {
                                     "subject": "The Lictors Bring to Brutus the Bodies of His Sons",
                                     "object": "Louvre in Paris",
                                 },
                             ],
-                            "PaintingGenre": [
+                            "genre": [
                                 {
                                     "subject": "The Lictors Bring to Brutus the Bodies of His Sons",
                                     "object": "Neoclassical",
@@ -169,7 +169,8 @@ class DeepKePlugin(
 
                 triplets.extend(self.rewrite_triplets(output))
 
-            yield {**entry, "triplets": [{"type": "deepke", "content": triplets}]}
+            entry['triplets'].append({"type": "deepke", "content": triplets})
+            yield entry
 
     def rewrite_triplets(self, triplets):
         reformatted = []

@@ -85,8 +85,6 @@ class KnowGLPlugin(
             )
 
             # print(f"\t {decoded_output}")
-            results.append(
-                {**entry, "triplets": [{"type": "knowgl", "content": self.convert_to_triplets(decoded_output)}]}
-            )
-        return results
+            entry['triplets'].append({"type": "knowgl", "content": self.convert_to_triplets(decoded_output)})
+            yield entry
         # This can take a while too

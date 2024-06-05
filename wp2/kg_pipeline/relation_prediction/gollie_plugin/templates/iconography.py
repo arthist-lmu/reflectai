@@ -49,11 +49,7 @@ ENTITY_DEFINITIONS: List[Template] = [
 
 
 def Attributes_relation_to_triplet(package: Attributes):
-    
-    triplets = []
-
-    for x in package.objects:
-        triplets.append(
+    return [
         {
             "subject": {
                 "label": package.painting,
@@ -63,11 +59,12 @@ def Attributes_relation_to_triplet(package: Attributes):
                 "wikidata_id": "P1354",
             },
             "object": {
-                "label":x,
+                "label": object,
             },
-        })
+        }
+        for object in package.objects
+    ]
 
-    return triplets
 
 
 def ReligiousFigures_relation_to_triplet(package: ReligiousFigures):
@@ -81,17 +78,14 @@ def ReligiousFigures_relation_to_triplet(package: ReligiousFigures):
                 "wikidata_id": "P1354",
             },
             "object": {
-                "label": x,
+                "label": figure,
             },
         }
-        for x in package.figure
+        for figure in package.figure
     ]
 
-    return triplets
-
-
 def MythologicalFigures_relation_to_triplet(package: MythologicalFigures):
-    triplets = [
+    return [
         {
             "subject": {
                 "label": package.painting,
@@ -101,10 +95,10 @@ def MythologicalFigures_relation_to_triplet(package: MythologicalFigures):
                 "wikidata_id": "P1354",
             },
             "object": {
-                "label": x,
+                "label": figure,
             },
         }
-        for x in package.figure
+        for figure in package.figure
     ]
 
 
