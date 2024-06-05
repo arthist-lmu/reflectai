@@ -62,12 +62,18 @@ class KnowGLPlugin(
                     "type": mention_label_type[2],
                 }
 
+        if not('object' in result and 'relation' in result and 'subject' in result):
+            raise ValueError('Triplet incomplete')
         return result
 
     def convert_to_triplets(self, knowgl_outputs: List):
         results = []
         for x in knowgl_outputs.split("$"):
-            results.append(self.parse_string(x))
+            try:
+                results.append(self.parse_string(x))
+            except Exception:
+                print('Exception when parsing:', x)
+                continue
 
         return results
 
