@@ -72,7 +72,7 @@ class Manager:
                             a.register(self)
 
                     except Exception as e:
-                        logging.error(f"Manager: Error importing {pl}")
+                        logging.error(f"Manager: Error importing {pl}: {e}")
 
     def plugins(self):
         return self.plugin_list
