@@ -78,24 +78,38 @@ class RefinedPlugin(
                     obj = triplet["object"]["label"]
 
                     sub_distance, sub_match = self.match_refined(spans, str(sub))
-                    # print(sub)
-                    # print(f"\t -> {sub_match}")
-
                     obj_distance, obj_match = self.match_refined(spans, str(obj))
-                    # print(obj)
-                    # print(f"\t -> {obj_match}")
 
-                    result_triplets.append({
-                        "subject":{
-                            "label": sub_match.predicted_entity.wikipedia_entity_title,
-                            "wikidata_id":sub_match.predicted_entity.wikidata_entity_id
-                        },
-                        "relation": triplet["relation"],
-                        "object":{
-                            "label": obj_match.predicted_entity.wikipedia_entity_title,
-                            "wikidata_id":obj_match.predicted_entity.wikidata_entity_id
+                    result_triplet = {**triplet}
+
+                    if sub_match.predicted_entity.wikidata_entity_id:
+                        result_triplet["subject"] = {
+                            "label": label,
+                            "wikidata_label": sub_match.predicted_entity.wikipedia_entity_title,
+                            "wikidata_id":"wd:"+sub_match.predicted_entity.wikidata_entity_id
                         }
-                    })
+                    else:
+                        result_triplet["subject"] = {
+                            "label": label,
+                            "wikidata_label": None,
+                            "wikidata_id": None
+                        }
+
+                    if obj_match.predicted_entity.wikidata_entity_id:
+                        result_triplet["object"] = {
+                            "label": label,
+                            "wikidata_label": obj_match.predicted_entity.wikipedia_entity_title,
+                            "wikidata_id":"wd:"+obj_match.predicted_entity.wikidata_entity_id
+                        }
+                    else:
+                        result_triplet["object"] = {
+                            "label": label,
+                            "wikidata_label": None,
+                            "wikidata_id": None
+                        }
+
+
+                    result_triplets.append(result_triplet)
                 result_type_triplets.append({
                     **triplets, "content": result_triplets
                 })
