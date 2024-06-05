@@ -55,7 +55,7 @@ def Movement_to_triplet(package: Movement):
             },
             "relation": {
                 "label": "movement",
-                "wikidata_id": "P135",
+                "wikidata_id": "wdt:P135",
             },
             "object": {
                 "label": package.movement,

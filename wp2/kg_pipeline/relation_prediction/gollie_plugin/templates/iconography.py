@@ -56,7 +56,7 @@ def Attributes_relation_to_triplet(package: Attributes):
             },
             "relation": {
                 "label": "shown with features",
-                "wikidata_id": "P1354",
+                "wikidata_id": "wdt:P1354",
             },
             "object": {
                 "label": object,
@@ -75,7 +75,7 @@ def ReligiousFigures_relation_to_triplet(package: ReligiousFigures):
             },
             "relation": {
                 "label": "depicts person",
-                "wikidata_id": "P1354",
+                "wikidata_id": "wdt:P1354",
             },
             "object": {
                 "label": figure,
@@ -92,7 +92,7 @@ def MythologicalFigures_relation_to_triplet(package: MythologicalFigures):
             },
             "relation": {
                 "label": "depicts person",
-                "wikidata_id": "P1354",
+                "wikidata_id": "wdt:P1354",
             },
             "object": {
                 "label": figure,
@@ -110,7 +110,7 @@ def Allegory_relation_to_triplet(package: Allegory):
             },
             "relation": {
                 "label": "depicts person",
-                "wikidata_id": "P1354",
+                "wikidata_id": "wdt:P1354",
             },
             "object": {
                 "label": x,

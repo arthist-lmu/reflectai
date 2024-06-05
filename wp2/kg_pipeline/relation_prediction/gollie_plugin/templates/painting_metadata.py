@@ -51,7 +51,7 @@ def creator_relation_to_triplet(package: CreatorRelation):
             },
             "relation": {
                 "label": "creator",
-                "wikidata_id": "P170",
+                "wikidata_id": "wdt:P170",
             },
             "object": {
                 "label": package.creator,
@@ -70,7 +70,7 @@ def creator_relation_to_triplet(package: CreatorRelation):
             },
             "relation": {
                 "label": "location of creation",
-                "wikidata_id": "P1071",
+                "wikidata_id": "wdt:P1071",
             },
             "object": {
                 "label": package.location,
@@ -89,7 +89,7 @@ def inception_relation_to_triplet(package: InceptionRelation):
             },
             "relation": {
                 "label": "inception",
-                "wikidata_id": "P571",
+                "wikidata_id": "wdt:P571",
             },
             "object": {
                 "label": package.date,

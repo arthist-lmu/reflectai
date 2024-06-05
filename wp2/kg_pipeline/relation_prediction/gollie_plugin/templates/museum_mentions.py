@@ -39,7 +39,7 @@ def museum_mentioned_to_triplet(package: MuseumsMentioned) -> List:
             },
             "relation": {
                 "label": "located in",
-                "wikidata_id": "P276",
+                "wikidata_id": "wdt:P276",
             },
             "object": {
                 "label": package.museum,
@@ -58,7 +58,7 @@ def auctionhouse_mentioned_to_triplet(package: AuctionHousesMentioned) -> List:
             },
             "relation": {
                 "label": "located in",
-                "wikidata_id": "P276",
+                "wikidata_id": "wdt:P276",
             },
             "object": {
                 "label": package.auctionhouse,

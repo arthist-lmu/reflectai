@@ -29,7 +29,7 @@ def painting_material_relation_to_triplet(package: PaintingMaterial):
             },
             "relation": {
                 "label": "made from material",
-                "wikidata_id": "P186",
+                "wikidata_id": "wdt:P186",
             },
             "object": {
                 "label": package.material,
