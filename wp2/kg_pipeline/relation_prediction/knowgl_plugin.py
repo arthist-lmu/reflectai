@@ -68,12 +68,10 @@ class KnowGLPlugin(
         results = []
         for x in knowgl_outputs.split("$"):
             results.append(self.parse_string(x))
-            print(f"\t--> {x}")
 
         return results
 
     def call(self, text_entries: List[Dict]) -> List[Dict]:
-        results = []
         for entry in text_entries:
             # print(f"----> {entry['text']}")
             inputs = self.tokenizer(entry["text"], return_tensors="pt").to(self.device)

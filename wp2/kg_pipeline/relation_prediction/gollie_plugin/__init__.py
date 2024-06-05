@@ -78,7 +78,6 @@ result = [
             if x.__class__.__name__ in self.ENTITY_PARSER:
                 triplets = self.ENTITY_PARSER[x.__class__.__name__](x)
                 results.extend(triplets)
-            print(f"\t--> {x}")
 
         return results
 
