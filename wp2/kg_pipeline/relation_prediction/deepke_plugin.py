@@ -63,9 +63,16 @@ class DeepKePlugin(
                     "main subject": "Main Subject of a painting",
                     "genre": "The genre of a painting like abstract, portrait, still life or landscape",
                     "creator": "The name or pseudonym of the painter that created the painting.",
-                    "located in": "A museum that is mentioned in the article",
+                    "located in": "A museum or auction house that is mentioned in the article",
                     "made from material": "The material of a painting mentioned in the article like oil painting on canvas",
                     "location of creation": "The name of the location where the painting was created",
+                    "movement": "The movement with which the painting is associated. An artistic movement is a style or tendency in art with a specific common philosophy or goal, followed by a group of artists during a restricted period of time. Artistic movements are usually characterized by a distinctive style or technique that emerges as a reaction to preceding art forms, social conditions, or artistic philosophies.",
+                    "alias": "Alias names for artworks refer to alternative titles or nicknames that a piece of art may acquire beyond its official title. These alternative names often arise from the public, critics, or the artists themselves and can reflect popular interpretations, striking features, or emotional responses elicited by the artwork.",
+                    "description": "A long description of the depicted scene in the painting.",
+                    "language": "Names of artworks in different languages represent the various translations or adaptations of an artwork's title across cultural and linguistic boundaries.",
+                    "inception": "The Year when an painting was painted or created. The creation date of a painting refers to the specific year or range of years during which the artwork was produced.",
+                    "shown with features": "Objects depicted in the painting that have symbolic value like a key or a tool used for certain professions",
+                    "depicts": "A person, animal, building or generic item mentioned in the painting description.",
                 },
                 "example": [
                     {
@@ -173,13 +180,30 @@ class DeepKePlugin(
             yield entry
 
     def rewrite_triplets(self, triplets):
+        relation_wikidata = {
+            "main subject": "wdt:P921",
+            "genre": None,
+            "creator": "wdt:P170",
+            "located in": "wdt:P276",
+            "made from material": "wdt:P186",
+            "location of creation": "wdt:P1071",
+            "movement": "wdt:P135",
+            "alias": None,
+            "description": "schema:description",
+            "language": None,
+            "inception": "wdt:P571",
+            "shown with features": "wdt:P1354",
+            "depicts": "wdt:P180",
+        }
+
         reformatted = []
         for relation, duplets in triplets.items():
             try:
                 for duplet in duplets:
                     reformatted.append(
                         {
-                            "relation": {"label": relation},
+                            "relation": {"label": relation,
+                                         "wikidata_id": relation_wikidata.get(relation, None)},
                             "subject": {"label": duplet["subject"]},
                             "object": {"label": duplet["object"]},
                         }
