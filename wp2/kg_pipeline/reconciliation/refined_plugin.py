@@ -80,7 +80,7 @@ class RefinedPlugin(
                     sub_distance, sub_match = self.match_refined(spans, str(sub))
                     obj_distance, obj_match = self.match_refined(spans, str(obj))
 
-                    if sub_match.predicted_entity.wikidata_entity_id:
+                    if sub_match.predicted_entity and sub_match.predicted_entity.wikidata_entity_id:
                         triplet['subject']['wikidata_label'] = sub_match.predicted_entity.wikipedia_entity_title
                         triplet['subject']['wikidata_id'] = "wd:"+sub_match.predicted_entity.wikidata_entity_id
 
@@ -88,7 +88,7 @@ class RefinedPlugin(
                         triplet['wikidata_label'] = None
                         triplet['wikidata_id'] = None
 
-                    if obj_match.predicted_entity.wikidata_entity_id:
+                    if obj_match.predicted_entity and obj_match.predicted_entity.wikidata_entity_id:
                         triplet['object']['wikidata_label'] = obj_match.predicted_entity.wikipedia_entity_title
                         triplet['object']['wikidata_id'] = "wd:"+obj_match.predicted_entity.wikidata_entity_id
                     else:
