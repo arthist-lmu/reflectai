@@ -6,7 +6,7 @@ from kg_pipeline.manager import Manager
 from kg_pipeline.plugin import Plugin
 
 
-default_config = {"truth": "ground_truth", "predicted": "gollie"}
+default_config = {"truth": "ground_truth", "predicted": "gollie", "check": "label"}
 default_parameters = {}
 
 
@@ -41,9 +41,9 @@ class EvaluatorPlugin(
             total_truth += len(truth_triplets)
             gt_triplets = [
                 '{},{},{}'.format(
-                    triplet['subject']['label'].lower(),
-                    triplet['relation']['label'].lower(),
-                    triplet['object']['label'].lower()
+                    triplet['subject'][self.config['check']].lower(),
+                    triplet['relation'][self.config['check']].lower(),
+                    triplet['object'][self.config['check']].lower()
                 )
                 for triplet in truth_triplets
             ]
@@ -51,17 +51,17 @@ class EvaluatorPlugin(
             predicted = 0
 
             for triplet in predicted_triplets:
-                total_predicted += 1
                 try:
                     triplet_str = '{},{},{}'.format(
-                        triplet['subject']['label'].lower(),
-                        triplet['relation']['label'].lower(),
-                        triplet['object']['label'].lower()
+                        triplet['subject'][self.config['check']].lower(),
+                        triplet['relation'][self.config['check']].lower(),
+                        triplet['object'][self.config['check']].lower()
                     )
-                except AttributeError:
+                except (AttributeError, KeyError):
                     print('Wrong format for triplet')
                     print(triplet)
                     continue
+                total_predicted += 1
                 if triplet_str in gt_triplets:
                     predicted += 1
             entry_overlap.append(predicted/len(truth_triplets))
