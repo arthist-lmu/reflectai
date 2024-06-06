@@ -6,7 +6,7 @@ from kg_pipeline.manager import Manager
 
 
 default_config = {
-    "model": "HiTZ/GoLLIE-7B",
+    "model": "HiTZ/GoLLIE-13B",
     "template": ["iconography","museum_mentions","painting_alias",
                  "painting_content","painting_genre","painting_material",
                  "painting_metadata"]
@@ -74,7 +74,11 @@ text = {{ text.__repr__() }}
         results = []
         for x in gollie_outputs:
             if x.__class__.__name__ in entity_parser:
-                triplets = entity_parser[x.__class__.__name__](x)
+                try:
+                    triplets = entity_parser[x.__class__.__name__](x)
+                except Exception as e:
+                    print('Error converting Gollie output to triplet', e)
+                    continue
                 results.extend(triplets)
 
         return results
@@ -106,6 +110,7 @@ text = {{ text.__repr__() }}
                     min_new_tokens=0,
                     num_beams=1,
                     num_return_sequences=1,
+                    pad_token_id=self.tokenizer.pad_token_id
                 )
                 try:
                     result = AnnotationList.from_output(
