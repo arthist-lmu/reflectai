@@ -82,6 +82,10 @@ def creator_relation_to_triplet(package: CreatorRelation):
 
 
 def inception_relation_to_triplet(package: InceptionRelation):
+    date = package.date
+    if isinstance(package.date, int):
+        date = str(package.date)
+
     triplets = [
         {
             "subject": {
@@ -92,7 +96,7 @@ def inception_relation_to_triplet(package: InceptionRelation):
                 "wikidata_id": "wdt:P571",
             },
             "object": {
-                "label": package.date,
+                "label": date,
             },
         }
     ]
