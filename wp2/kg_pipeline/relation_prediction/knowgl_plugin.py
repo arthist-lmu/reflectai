@@ -54,7 +54,8 @@ class KnowGLPlugin(
                     "type": mention_label_type[2],
                 }
             elif i == 1:
-                result["relation"] = {"label": mention_label_type[0]}
+                result["relation"] = {"label": mention_label_type[0],
+                                      "wikidata_id": self.map_relation_to_wikidata(mention_label_type[0])}
             else:
                 result["object"] = {
                     "mention": mention_label_type[0],
@@ -92,3 +93,49 @@ class KnowGLPlugin(
             entry['triplets'].append({"type": "knowgl", "content": self.convert_to_triplets(decoded_output)})
             yield entry
         # This can take a while too
+
+
+    def map_relation_to_wikidata(self, relation):
+        mapping = {
+            "applies to jurisdiction": "wdt:P1001",
+            "architectural style": "wdt:P149",
+            "award received": "wdt:P166",
+            "candidacy in election": "wdt:P726",
+            "capital": "wdt:P36",
+            "collection": "wdt:P195",
+            "connects with": "wdt:P2789",
+            "contains administrative territorial entity": "wdt:P150",
+            "creator": "wdt:P170",
+            "depicts": "wdt:P180",
+            "different from": "wdt:P1889",
+            "family name": "wdt:P734",
+            "followed by": "wdt:P156",
+            "has works in the collection": "wdt:P6379",
+            "headquarters location": "wdt:P159",
+            "instance of": "wdt:P31",
+            "located in or next to body of water": "wdt:P206",
+            "location": "wdt:P276",
+            "made from material": "wdt:P186",
+            "measured physical quantity": "wdt:P111",
+            "member of political party": "wdt:P102",
+            "mother": "wdt:P25",
+            "movement": "wdt:P135",
+            "notable work": "wdt:P800",
+            "occupant": "wdt:P466",
+            "owner of": "wdt:P1830",
+            "parent organization": "wdt:P749",
+            "part of": "wdt:P361",
+            "participant in": "wdt:P1344",
+            "significant person": "wdt:P3342",
+            "shares border with": "wdt:P47",
+            "spouse": "wdt:P26",
+            "subclass of": "wdt:P279",
+            "time period": "wdt:P2348",
+            "twinned administrative body": "wdt:P190",
+            "uses": "wdt:P2283",
+            "work location": "wdt:P937",
+        }
+        if relation in mapping:
+            return mapping[relation]
+        print(f'WARNING: relation not mapped to wikidata "{relation}"')
+        return None
