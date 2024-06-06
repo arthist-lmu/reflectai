@@ -1,12 +1,16 @@
+import logging
+from typing import Generator
+
 from kg_pipeline.plugin import Plugin
 from kg_pipeline.manager import Manager
-from typing import List, Dict
-import logging
 
 
-default_config = {"model": "HiTZ/GoLLIE-13B", "template": "painting_content"}
-
-
+default_config = {
+    "model": "HiTZ/GoLLIE-7B",
+    "template": ["iconography","museum_mentions","painting_alias",
+                 "painting_content","painting_genre","painting_material",
+                 "painting_metadata"]
+}
 default_parameters = {}
 
 
@@ -23,25 +27,26 @@ class GolliePlugin(
         import torch
         from transformers import AutoTokenizer, AutoModelForCausalLM
 
-        template_definition = importlib.import_module(
-            "kg_pipeline.relation_prediction.gollie_plugin.templates.{}".format(
-                self.config.get("template")
+        self.templates = []
+        for template in self.config.get('template'):
+            template_definition = importlib.import_module(
+                "kg_pipeline.relation_prediction.gollie_plugin.templates.{}".format(
+                    template
+                )
             )
-        )
-
-        self.ENTITY_PARSER = template_definition.ENTITY_PARSER
-        self.ENTITY_DEFINITIONS = template_definition.ENTITY_DEFINITIONS
-
-        self.guidelines = [
-            inspect.getsource(definition) for definition in self.ENTITY_DEFINITIONS
-        ]
+            self.templates.append({
+                'name': template,
+                'entity_parser': template_definition.ENTITY_PARSER,
+                'entity_definitions': template_definition.ENTITY_DEFINITIONS,
+                'guidelines': [
+                    inspect.getsource(definition)
+                    for definition in template_definition.ENTITY_DEFINITIONS
+                ]
+            })
 
         if torch.cuda.is_available():
             self.device = torch.device("cuda")
             print("GPU available")
-        # elif torch.backends.mps.is_available():
-        # device = torch.device("mps")
-        # print("MPS available")
         else:
             print("Falling back to CPU")
             self.device = torch.device("cpu")
@@ -62,87 +67,64 @@ class GolliePlugin(
 # This is the text to analyze
 text = {{ text.__repr__() }}
 
-# The annotation instances that take place in the text above are listed here
-result = [
-{%- for ann in annotations %}
-    {{ ann }},
-{%- endfor %}
-]
         """
-        self.gold = ""
         self.template = Template(template_string)
 
-    def convert_to_triplets(self, gollie_outputs: List):
+    def convert_to_triplets(self, gollie_outputs: list, entity_parser: dict) -> list[dict]:
         results = []
         for x in gollie_outputs:
-            if x.__class__.__name__ in self.ENTITY_PARSER:
-                triplets = self.ENTITY_PARSER[x.__class__.__name__](x)
+            if x.__class__.__name__ in entity_parser:
+                triplets = entity_parser[x.__class__.__name__](x)
                 results.extend(triplets)
 
         return results
 
-    def call(self, text_entries: List[Dict]) -> List[Dict]:
+    def call(self, text_entries: list[dict]) -> Generator[dict,None,None]:
         import black
         from .utils_typing import AnnotationList
 
-        results = []
         for entry in text_entries:
-            # print(f"#######################################")
-            # print(f"#######################################")
-            # print(f"----> {entry['text']}")
-
-            # Fill the template
-            formated_text = self.template.render(
-                guidelines=self.guidelines,
-                text=entry["text"],
-                annotations=self.gold,
-                gold=self.gold,
-            )
-            # print(formated_text)
-
-            black_mode = black.Mode()
-            formated_text = black.format_str(formated_text, mode=black_mode)
-
-            # print(formated_text)
-            prompt, _ = formated_text.split("result =")
-            prompt = prompt + "result ="
-
-            # print(prompt)
-            model_input = self.tokenizer(
-                prompt, add_special_tokens=True, return_tensors="pt"
-            )
-            model_input["input_ids"] = model_input["input_ids"][:, :-1]
-            model_input["attention_mask"] = model_input["attention_mask"][:, :-1]
-            model_ouput = self.model.generate(
-                **model_input.to(self.model.device),
-                max_new_tokens=256,
-                do_sample=False,
-                min_new_tokens=0,
-                num_beams=1,
-                num_return_sequences=1,
-            )
-            try:
-                result = AnnotationList.from_output(
-                    self.tokenizer.decode(model_ouput[0], skip_special_tokens=True).split(
-                        "result = "
-                    )[-1],
-                    task_module="kg_pipeline.relation_prediction.gollie_plugin.templates.{}".format(
-                        self.config.get("template")
-                    ),
+            triplets = []
+            for template in self.templates:
+                formated_text = self.template.render(
+                    guidelines=template['guidelines'],
+                    text=entry["text"],
                 )
-            except Exception as e:
-                logging.error(f"Gollie parse error{e}")
-                entry['triplets'].append({"type": "gollie", "content": []})
-                yield entry
-                continue
-            # print("##########")
-            # print(result)
-            # print("##########")
 
-            triplets = self.convert_to_triplets(result)
+                prompt = black.format_str(formated_text, mode=black.Mode())
+                prompt += "result = "
 
-            # for x in triplets:
-            #     print(x)
+                model_input = self.tokenizer(
+                    prompt, add_special_tokens=True, return_tensors="pt"
+                )
+                model_input["input_ids"] = model_input["input_ids"][:, :-1]
+                model_input["attention_mask"] = model_input["attention_mask"][:, :-1]
+                model_ouput = self.model.generate(
+                    **model_input.to(self.model.device),
+                    max_new_tokens=256,
+                    do_sample=False,
+                    min_new_tokens=0,
+                    num_beams=1,
+                    num_return_sequences=1,
+                )
+                try:
+                    result = AnnotationList.from_output(
+                        self.tokenizer.decode(model_ouput[0], skip_special_tokens=True).split(
+                            "result = "
+                        )[-1],
+                        task_module="kg_pipeline.relation_prediction.gollie_plugin.templates.{}".format(
+                            template['name']
+                        ),
+                    )
+                except Exception as e:
+                    logging.error(f"Gollie parse error: {e}")
+                    entry['triplets'].append({"type": "gollie", "content": []})
+                    yield entry
+                    continue
+
+                triplets.extend(
+                    self.convert_to_triplets(result, template['entity_parser'])
+                )
+
             entry['triplets'].append({"type": "gollie", "content": triplets})
             yield entry
-            
