@@ -68,8 +68,7 @@ def Attributes_relation_to_triplet(package: Attributes):
 
 
 def ReligiousFigures_relation_to_triplet(package: ReligiousFigures):
-
-    triplets = [{
+    return [{
             "subject": {
                 "label": package.painting,
             },
