@@ -83,8 +83,8 @@ class RefinedPlugin(
                         triplet['subject']['wikidata_id'] = "wd:" + sub_match.predicted_entity.wikidata_entity_id
 
                     else:
-                        triplet['wikidata_label'] = None
-                        triplet['wikidata_id'] = None
+                        triplet['subject']['wikidata_label'] = None
+                        triplet['subject']['wikidata_id'] = None
 
                     if obj_match.predicted_entity and obj_match.predicted_entity.wikidata_entity_id:
                         triplet['object']['wikidata_label'] = obj_match.predicted_entity.wikipedia_entity_title
