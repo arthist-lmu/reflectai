@@ -41,10 +41,10 @@ class EvaluatorPlugin(
             total_truth += len(truth_triplets)
             gt_triplets = [
                 '{},{},{}'.format(
-                    triplet['subject'][self.config['check']].lower(),
-                    triplet['relation'][self.config['check']].lower(),
-                    triplet['object'][self.config['check']].lower()
-                )
+                    triplet['subject'][self.config['check']],
+                    triplet['relation'][self.config['check']],
+                    triplet['object'][self.config['check']]
+                ).lower()
                 for triplet in truth_triplets
             ]
 
@@ -53,10 +53,10 @@ class EvaluatorPlugin(
             for triplet in predicted_triplets:
                 try:
                     triplet_str = '{},{},{}'.format(
-                        triplet['subject'][self.config['check']].lower(),
-                        triplet['relation'][self.config['check']].lower(),
-                        triplet['object'][self.config['check']].lower()
-                    )
+                        triplet['subject'][self.config['check']],
+                        triplet['relation'][self.config['check']],
+                        triplet['object'][self.config['check']]
+                    ).lower()
                 except (AttributeError, KeyError):
                     print('Wrong format for triplet')
                     print(triplet)
