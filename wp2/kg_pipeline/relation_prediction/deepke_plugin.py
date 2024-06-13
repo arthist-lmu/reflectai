@@ -76,7 +76,7 @@ class DeepKePlugin(
                 },
                 "example": [
                     {
-                        "input": "The Lictors Bring to Brutus the Bodies of His Sons (French: Les licteurs rapportent à Brutus les corps de ses fils) is a work in oils by the French artist Jacques-Louis David. On a canvas of 146 square feet, this painting was first exhibited at the Paris Salon in 1789. The subject is the Roman leader Lucius Junius Brutus, founder of the Roman Republic, contemplating the fate of his sons. The painting was a bold allegory of civic virtue with immense resonance for the growing cause of republicanism. The style of painting is in the Neoclassical manner. The painting is on permanent display in the Louvre in Paris",
+                        "input": "The Lictors Bring to Brutus the Bodies of His Sons (French: Les licteurs rapportent à Brutus les corps de ses fils), painted in Paris in the year 1789, is a work in oils by the French artist Jacques-Louis David. On a canvas of 146 square feet, this painting was first exhibited at the Paris Salon in 1789. The subject is the Roman leader Lucius Junius Brutus, founder of the Roman Republic, contemplating the fate of his sons. The painting was a bold allegory of civic virtue with immense resonance for the growing cause of republicanism. Brutus sits on a klismos on the left, alone and brooding; to the right, his wife holds their two horrified daughters, the elder of which is about to faint,while a servant on the far right quakes in anguish. Note Brutus' tense crossed feet in the picture, the sharp scissors that lay dead in the center of the painting, and the use of light and dark to draw a distinction between Brutus and his wife. Brutus does not even look back as his headless sons Tiberius and Titus are brought into the room. The style of painting is in the Neoclassical manner. The name is frequently rendered in English as Brutus Receiving the Bodies of His Sons. The painting is on permanent display in the Louvre in Paris",
                         "output": {
                             "creator": [
                                 {
@@ -119,7 +119,7 @@ class DeepKePlugin(
                             "location of creation": [
                                 {
                                     "subject": "The Lictors Bring to Brutus the Bodies of His Sons",
-                                    "object": "",
+                                    "object": "Paris",
                                 }
                             ],
                             "movement": [
@@ -131,37 +131,37 @@ class DeepKePlugin(
                             "alias": [
                                 {
                                     "subject": "The Lictors Bring to Brutus the Bodies of His Sons",
-                                    "object": "",
+                                    "object": "Brutus Receiving the Bodies of His Sons",
                                 }
                             ],
                             "description": [
                                 {
                                     "subject": "The Lictors Bring to Brutus the Bodies of His Sons",
-                                    "object": "",
+                                    "object": "The subject is the Roman leader Lucius Junius Brutus, founder of the Roman Republic, contemplating the fate of his sons. Brutus does not even look back as his headless sons Tiberius and Titus are brought into the room",
                                 }
                             ],
                             "language": [
                                 {
                                     "subject": "The Lictors Bring to Brutus the Bodies of His Sons",
-                                    "object": "",
+                                    "object": "French: Les licteurs rapportent à Brutus les corps de ses fils",
                                 }
                             ],
                             "inception": [
                                 {
                                     "subject": "The Lictors Bring to Brutus the Bodies of His Sons",
-                                    "object": "",
+                                    "object": "1789",
                                 }
                             ],
                             "shown with features": [
                                 {
                                     "subject": "The Lictors Bring to Brutus the Bodies of His Sons",
-                                    "object": "",
+                                    "object": "sharp scissors",
                                 }
                             ],
                             "depicts": [
                                 {
                                     "subject": "The Lictors Bring to Brutus the Bodies of His Sons",
-                                    "object": "",
+                                    "object": "Lucius Junius Brutus, wife holds their two horrified daughters, wife holds their two horrified daughters, Tiberius and Titus, sharp scissors, ",
                                 }
                             ],
                         },
