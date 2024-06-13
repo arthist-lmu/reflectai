@@ -116,6 +116,54 @@ class DeepKePlugin(
                                     "object": "Neoclassical",
                                 },
                             ],
+                            "location of creation": [
+                                {
+                                    "subject": "The Lictors Bring to Brutus the Bodies of His Sons",
+                                    "object": "",
+                                }
+                            ],
+                            "movement": [
+                                {
+                                    "subject": "The Lictors Bring to Brutus the Bodies of His Sons",
+                                    "object": "Neoclassical manner",
+                                }
+                            ],
+                            "alias": [
+                                {
+                                    "subject": "The Lictors Bring to Brutus the Bodies of His Sons",
+                                    "object": "",
+                                }
+                            ],
+                            "description": [
+                                {
+                                    "subject": "The Lictors Bring to Brutus the Bodies of His Sons",
+                                    "object": "",
+                                }
+                            ],
+                            "language": [
+                                {
+                                    "subject": "The Lictors Bring to Brutus the Bodies of His Sons",
+                                    "object": "",
+                                }
+                            ],
+                            "inception": [
+                                {
+                                    "subject": "The Lictors Bring to Brutus the Bodies of His Sons",
+                                    "object": "",
+                                }
+                            ],
+                            "shown with features": [
+                                {
+                                    "subject": "The Lictors Bring to Brutus the Bodies of His Sons",
+                                    "object": "",
+                                }
+                            ],
+                            "depicts": [
+                                {
+                                    "subject": "The Lictors Bring to Brutus the Bodies of His Sons",
+                                    "object": "",
+                                }
+                            ],
                         },
                     }
                 ],
@@ -176,7 +224,7 @@ class DeepKePlugin(
 
                 triplets.extend(self.rewrite_triplets(output))
 
-            entry['triplets'].append({"type": "deepke", "content": triplets})
+            entry["triplets"].append({"type": "deepke", "content": triplets})
             yield entry
 
     def rewrite_triplets(self, triplets):
@@ -202,8 +250,10 @@ class DeepKePlugin(
                 for duplet in duplets:
                     reformatted.append(
                         {
-                            "relation": {"label": relation,
-                                         "wikidata_id": relation_wikidata.get(relation, None)},
+                            "relation": {
+                                "label": relation,
+                                "wikidata_id": relation_wikidata.get(relation, None),
+                            },
                             "subject": {"label": duplet["subject"]},
                             "object": {"label": duplet["object"]},
                         }
