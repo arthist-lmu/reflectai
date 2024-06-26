@@ -123,8 +123,6 @@ text = {{ text.__repr__() }}
                     )
                 except Exception as e:
                     logging.error(f"Gollie parse error: {e}")
-                    entry['triplets'].append({"type": "gollie", "content": []})
-                    yield entry
                     continue
 
                 triplets.extend(
