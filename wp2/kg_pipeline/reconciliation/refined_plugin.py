@@ -54,6 +54,8 @@ class RefinedPlugin(
 
     @staticmethod
     def match_refined(spans: list[list], label:str):
+        if len(spans) == 0:
+            return None, None
         distances = []
         for span in spans:
             distance = levenshtein_distance(span.text, label)
@@ -78,7 +80,7 @@ class RefinedPlugin(
                     _, sub_match = self.match_refined(spans, str(sub))
                     _, obj_match = self.match_refined(spans, str(obj))
 
-                    if sub_match.predicted_entity and sub_match.predicted_entity.wikidata_entity_id:
+                    if sub_match and sub_match.predicted_entity and sub_match.predicted_entity.wikidata_entity_id:
                         triplet['subject']['wikidata_label'] = sub_match.predicted_entity.wikipedia_entity_title
                         triplet['subject']['wikidata_id'] = "wd:" + sub_match.predicted_entity.wikidata_entity_id
 
@@ -86,7 +88,7 @@ class RefinedPlugin(
                         triplet['subject']['wikidata_label'] = None
                         triplet['subject']['wikidata_id'] = None
 
-                    if obj_match.predicted_entity and obj_match.predicted_entity.wikidata_entity_id:
+                    if obj_match and obj_match.predicted_entity and obj_match.predicted_entity.wikidata_entity_id:
                         triplet['object']['wikidata_label'] = obj_match.predicted_entity.wikipedia_entity_title
                         triplet['object']['wikidata_id'] = "wd:" + obj_match.predicted_entity.wikidata_entity_id
                     else:
