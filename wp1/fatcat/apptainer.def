@@ -1,0 +1,9 @@
+Bootstrap: docker
+From: pytorch/pytorch:2.2.2-cuda12.1-cudnn8-devel
+
+%post
+  export DEBIAN_FRONTEND=noninteractive
+  apt update -y && apt upgrade -y && apt install tesseract-ocr tesseract-ocr-all git python3-pip poppler-utils -y
+  pip3 install torch torchvision torchaudio
+  pip install transformers numpy click pdf2image tqdm matplotlib layoutparser pillow==9.5.0 pytesseract pycountry
+  pip install 'git+https://github.com/facebookresearch/detectron2.git'

@@ -1,12 +1,18 @@
+from functools import partial
 import itertools
+import json
+import os
 from pathlib import Path
 
+import click
 import layoutparser as lp
 import matplotlib.pyplot as plt
 import numpy as np
 from PIL import Image
 import pdf2image
+import pycountry
 from tqdm import tqdm
+from tqdm.contrib.concurrent import thread_map
 from transformers import pipeline, Pipeline
 
 
@@ -15,7 +21,7 @@ def pdf_to_image(fpath: Path) -> Image:
     return images
 
 
-def parse_image(model: lp.models.base_layoutmodel.BaseLayoutModel, image: Image, lang_pipeline: Pipeline):
+def parse_image(model: lp.models.base_layoutmodel.BaseLayoutModel, lang_pipeline: Pipeline, image: Image):
     image = np.array(image)
     layout = model.detect(image)
 
@@ -32,13 +38,14 @@ def parse_image(model: lp.models.base_layoutmodel.BaseLayoutModel, image: Image,
     if len(figure_blocks) > 0:
         figures_captioned, text_blocks = find_captions(figure_blocks, text_blocks)
 
-    text_blocks = order_text(text_blocks, image)
+    if len(text_blocks) > 0:
+        text_blocks = order_text(text_blocks, image)
+        return {'content': ' '.join(text_blocks.get_texts()), 'language': lang}
 
-    print(' '.join(text_blocks.get_texts()))
+    return None
 
 
 def get_text_figure_blocks(layout: lp.Layout):
-    # separate text and figure blocks
     text_blocks = lp.Layout([b for b in layout if b.type == 'Text' or b.type == 'Title'])
     figure_blocks = lp.Layout([b for b in layout if b.type == 'Figure'])
     text_blocks = lp.Layout([
@@ -144,7 +151,8 @@ def visualize_detected_layout(image: Image, layout: lp.Layout):
     plt.show()
 
 
-def ocr_text_block(image, block, lang='eng'):
+def ocr_text_block(image, block, lang='en'):
+    lang = pycountry.languages.get(alpha_2=lang).alpha_3
     ocr_agent = lp.TesseractAgent(languages=lang)
     segment_image = (block.pad(left=5, right=5, top=5, bottom=5)
                           .crop_image(image))
@@ -155,40 +163,62 @@ def ocr_text_block(image, block, lang='eng'):
 
 def detect_language(pipeline: Pipeline, image: Image, text_blocks: lp.Layout):
     # Language packs need to be installed via the OS package manager.
-    # They are typically called something like tesseract-lang-spa.
-    text = ''
-    for block in text_blocks:
-        text += ocr_text_block(image, block) + ' '
-    lang = pipeline(text, truncation=True, max_length=128)[0]['label']
-    return {
-        'fr': 'fra',
-        'es': 'spa',
-        'de': 'deu',
-        'en': 'eng',
-    }[lang]
+    # They are called something like tesseract-lang-spa or tesseract-ocr-all.
+    text = ' '.join([ocr_text_block(image, block) for block in text_blocks])
+    return pipeline(text, truncation=True, max_length=128)[0]['label']
 
 
-def main(path: Path):
-    if path.is_file():
-        files = [path]
+@click.command()
+@click.option('--input', required=True, help='Input pdf or folder with pdfs',
+              type=click.Path(dir_okay=True, readable=True, path_type=Path, exists=True))
+@click.option('--output', default=Path('parsedpdfs.jsonl'), help='Output file',
+              type=click.Path(writable=True, dir_okay=False, path_type=Path))
+@click.option('--cpu', default=False, help='Run on CPU not CUDA', is_flag=True)
+def main(input: Path, output: Path, cpu: bool):
+    if input.is_file():
+        files = [input]
     else:
-        files = path.rglob('*pdf')
+        files = list(input.rglob('*pdf'))
 
+    # There is some mess-up between the model URL having "&dl=1" at the end
+    # and Detectron not accepting that.
+    if not os.path.exists(os.path.expanduser('~/.torch/iopath_cache/s/dgy9c10wykk4lq4/model_final.pth')):
+        try:
+            lp.models.Detectron2LayoutModel(config_path='lp://PubLayNet/faster_rcnn_R_50_FPN_3x/config')
+        except AssertionError:
+            pass
+    if os.path.exists(os.path.expanduser('~/.torch/iopath_cache/s/dgy9c10wykk4lq4/model_final.pth?dl=1')):
+        os.rename(os.path.expanduser('~/.torch/iopath_cache/s/dgy9c10wykk4lq4/model_final.pth?dl=1'),
+                  os.path.expanduser('~/.torch/iopath_cache/s/dgy9c10wykk4lq4/model_final.pth'))
     model = lp.models.Detectron2LayoutModel(
         config_path = 'lp://PubLayNet/faster_rcnn_R_50_FPN_3x/config',
         label_map = {0: "Text", 1: "Title", 2: "List", 3:"Table", 4:"Figure"},
-        extra_config = ["MODEL.ROI_HEADS.SCORE_THRESH_TEST", 0.6]  # probability when text block is detected as such
+        extra_config = ["MODEL.ROI_HEADS.SCORE_THRESH_TEST", 0.6],  # probability when text block is detected as such
+        model_path = os.path.expanduser('~/.torch/iopath_cache/s/dgy9c10wykk4lq4/model_final.pth')
     )
+
+    device = 'cuda'
+    if cpu:
+        device = 'cpu'
     lang_detect_model = "papluca/xlm-roberta-base-language-detection"
-    lang_detect_pipeline = pipeline("text-classification", model=lang_detect_model)
+    lang_detect_pipeline = pipeline("text-classification", model=lang_detect_model, device=device)
 
 
-    for file in tqdm(files):
-        images = pdf_to_image(file)
+    with output.open('w') as f:
+        for file in tqdm(files):
+            images = pdf_to_image(file)
+            texts = []
 
-        for image in tqdm(images):
-            parse_image(model, image, lang_detect_pipeline)
+            texts = [
+                text
+                for text in thread_map(partial(parse_image, model, lang_detect_pipeline),
+                                       images,
+                                       max_workers=20,
+                                       leave=False)
+            ]
+
+            f.write(json.dumps({'id': file.name, 'text': texts}) + '\n')
 
 
 if __name__ == '__main__':
-    main(Path('/nfs/data/reflectai/scientific_pdfs'))
+    main()
