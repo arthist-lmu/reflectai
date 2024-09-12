@@ -1,0 +1,14 @@
+Bootstrap: docker
+From: pytorch/pytorch:2.2.2-cuda12.1-cudnn8-devel
+
+%post
+  export DEBIAN_FRONTEND=noninteractive 
+  apt update -y && apt upgrade -y && apt install python3 git -y
+  conda install -y  -c conda-forge -c pytorch torchdata torchvision
+
+  pip install pykeen requests networkx rdflib
+
+  # install snap
+  git clone https://github.com/snap-stanford/snap.git
+  cd snap/examples/node2vec
+  make
