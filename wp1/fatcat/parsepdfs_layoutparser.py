@@ -1,4 +1,5 @@
 from functools import partial
+import hashlib
 import itertools
 import json
 import os
@@ -16,19 +17,27 @@ from tqdm.contrib.concurrent import thread_map
 from transformers import pipeline, Pipeline
 
 
+"""
+Parse PDFs in the specified folder and extract the text and images using layoutparser.
+"""
+
+
 def pdf_to_image(fpath: Path) -> Image:
     images = pdf2image.convert_from_bytes(fpath.read_bytes())
     return images
 
 
-def parse_image(model: lp.models.base_layoutmodel.BaseLayoutModel, lang_pipeline: Pipeline, image: Image):
+def parse_image(model: lp.models.base_layoutmodel.BaseLayoutModel, lang_pipeline: Pipeline,
+                image_folder: Path, image: Image):
     image = np.array(image)
     layout = model.detect(image)
 
     layout = filter_overlapping(layout)
     text_blocks, figure_blocks = get_text_figure_blocks(layout)
+
+    content = {'text': [], 'images': []}
     if len(text_blocks) == 0:
-        return
+        return content
 
     lang = detect_language(lang_pipeline, image, text_blocks[:5])
 
@@ -36,13 +45,30 @@ def parse_image(model: lp.models.base_layoutmodel.BaseLayoutModel, lang_pipeline
         ocr_text_block(image, block, lang)
 
     if len(figure_blocks) > 0:
-        figures_captioned, text_blocks = find_captions(figure_blocks, text_blocks)
+        figure_blocks, text_blocks = find_captions(figure_blocks, text_blocks)
+
+    if len(figure_blocks) > 0 and image_folder:
+        for figure, caption in figure_blocks:
+            cropped = figure.crop_image(image)
+            fig_id = hashlib.sha256(image.tobytes()).hexdigest()[:32]
+            img_path = (image_folder / fig_id[:2] / fig_id[2:4])
+            img_path.mkdir(exist_ok=True, parents=True)
+            img_path = img_path / (fig_id + '.jpg')
+            Image.fromarray(cropped).save(img_path)
+            meta = {
+                'path': str(img_path),
+                'points': figure.points.tolist(),
+                'id': fig_id
+            }
+            if caption:
+                meta['caption'] = caption.text
+            content['images'].append(meta)
 
     if len(text_blocks) > 0:
         text_blocks = order_text(text_blocks, image)
-        return {'content': ' '.join(text_blocks.get_texts()), 'language': lang}
+        content['text'] = {'content': ' '.join(text_blocks.get_texts()), 'language': lang}
 
-    return None
+    return content
 
 
 def get_text_figure_blocks(layout: lp.Layout):
@@ -143,6 +169,8 @@ def find_captions(figure_blocks: lp.Layout, text_blocks: lp.Layout):
                 figures.append((figure, caption))
                 captions.add(id(caption))
                 break
+        else:
+            figures.append((figure, None))
     text_blocks = lp.Layout([b for b in text_blocks if id(b) not in captions])
     return figures, text_blocks
 
@@ -176,10 +204,12 @@ def detect_language(pipeline: Pipeline, image: Image, text_blocks: lp.Layout):
               type=click.Path(dir_okay=True, readable=True, path_type=Path, exists=True))
 @click.option('--output', default=Path('parsedpdfs.jsonl'), help='Output file',
               type=click.Path(writable=True, dir_okay=False, path_type=Path))
-@click.option('--outputprogress', default=Path('parsedpdfs_progress.jsonl'), help='Output progress file',
-              type=click.Path(writable=True, dir_okay=False, path_type=Path))
 @click.option('--cpu', default=False, help='Run on CPU not CUDA', is_flag=True)
-def main(input: Path, output: Path, outputprogress: Path, cpu: bool):
+@click.option('--saveimages', default=False, help='Save images', is_flag=True)
+def main(input: Path, output: Path, cpu: bool, saveimages: bool):
+    if output.suffix != '.jsonl':
+        print('Wrong output format')
+        return
     if input.is_file():
         files = [input]
     else:
@@ -208,28 +238,35 @@ def main(input: Path, output: Path, outputprogress: Path, cpu: bool):
     lang_detect_model = "papluca/xlm-roberta-base-language-detection"
     lang_detect_pipeline = pipeline("text-classification", model=lang_detect_model, device=device)
 
+    outputprogress = Path(str(output).removesuffix('.jsonl') + '_progress.jsonl')
     if outputprogress.exists():
         with outputprogress.open() as f:
             progress = [l.strip() for l in f.readlines()]
     else:
         progress = []
 
+    image_folder = None
+    if saveimages:
+        image_folder = Path(str(output).removesuffix('.jsonl'))
+        image_folder.mkdir(exist_ok=True)
+
     with output.open('a') as f, outputprogress.open('a') as f_progress:
         for file in tqdm(files):
             if file.name in progress:
                 continue
             images = pdf_to_image(file)
-            texts = []
 
-            texts = [
-                text
-                for text in thread_map(partial(parse_image, model, lang_detect_pipeline),
+            infos = [
+                info
+                for info in thread_map(partial(parse_image, model, lang_detect_pipeline, image_folder),
                                        images,
                                        max_workers=20,
                                        leave=True)
             ]
+            texts = [info['text'] for info in infos]
+            images = [image for info in infos for image in info['images']]
 
-            f.write(json.dumps({'id': file.name, 'text': texts}) + '\n')
+            f.write(json.dumps({'id': file.name, 'text': texts, 'images': images}) + '\n')
 
             progress.append(file.name)
             f_progress.write(file.name + '\n')
