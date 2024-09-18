@@ -5,6 +5,7 @@ from pathlib import Path
 import ollama
 import requests
 from tqdm import tqdm
+import wikipediaapi
 
 SPARQL_URL = 'https://query.wikidata.org/sparql'
 
@@ -24,7 +25,7 @@ def run_query(query):
         print('Query: ', query)
         print('Response: ', r.content)
         time.sleep(10)
-    time.sleep(1)
+    time.sleep(0.5)
     return [statement for statement in data["results"]["bindings"]]
 
 
@@ -44,21 +45,21 @@ def get_art():
         }
     """
     categories = [
-        {'wikidata_id': category['item']['value'].rsplit('/')[-1],
+        {'wikidata_id': 'wd:' + category['item']['value'].rsplit('/')[-1],
          'label': category['label']['value']}
         for category in run_query(query)
     ]
 
     query = """
         SELECT ?item ?label WHERE {{
-            {{?item wdt:P31 wd:{} .}}
+            {{?item wdt:P31 {} .}}
             ?item rdfs:label ?label .
             FILTER (lang(?label) = "en") .
         }}
     """
     return [
         {
-            'wikidata_id': piece['item']['value'].rsplit('/')[-1],
+            'wikidata_id': 'wd:' + piece['item']['value'].rsplit('/')[-1],
             'label': piece['label']['value'],
         }
         for category in categories
@@ -71,7 +72,7 @@ def get_relations(entity):
     query = """
         SELECT ?wd ?wdLabel ?ps_Label ?ps_ WHERE {{
         VALUES ?item {{
-            wd:{}
+            {}
         }}
         ?item ?p ?statement.
         ?statement ?ps ?ps_.
@@ -81,15 +82,16 @@ def get_relations(entity):
         }}
     """.format(entity['wikidata_id'])
 
-    relations = ["P1354", "P276",  "P921", "P31", "P3828", "P6022", "P180",
+    relations = ["P1354", "P276",  "P921", "P3828", "P6022", "P180",
                  "P135", "P186", "P170", "P1071", "P571"]
 
     return [
         {
-            'subject': entity,
-            'relation': {'wikidata_id': relation['wd']['value'].split('/')[-1],
-                         'label': relation['wdLabel']['value']},
-            'object': {'wikidata_id': relation['ps_']['value'].split('/')[-1],
+            'subject': {'wikidata_id': entity['wikidata_id'],
+                        'label': entity['label']},
+            'relation': {'wikidata_id': 'wdt:' + relation['wd']['value'].split('/')[-1],
+                     'label': relation['wdLabel']['value']},
+            'object': {'wikidata_id': 'wd:' + relation['ps_']['value'].split('/')[-1],
                        'label': relation['ps_Label']['value']},
         }
         for relation in run_query(query)
@@ -104,9 +106,9 @@ def get_all_triplets():
         {
             'subject': piece,
             'triplets': [{'type': 'ground_truth', 'content': get_relations(piece)}],
-            'id': 'subject_' + piece['wikidata_id']
+            'id': 'subject_' + piece['wikidata_id'].replace(':', '')
         }
-        for piece in pieces
+        for piece in tqdm(pieces)
     ]
 
 
@@ -130,7 +132,24 @@ def generate_text(artpiece, model='mistral'):
     return response['message']['content']
 
 
-def main(filename=Path('test_set.jsonl')):
+def get_wikipedia_page_name(wd_id):
+    url = f"https://www.wikidata.org/w/api.php?action=wbgetentities&format=json&props=sitelinks&ids={wd_id}&sitefilter=enwiki"
+    header = {"User-Agent": "ArtMetaData/0.0 (elias.entrup@tib.eu)"}
+    data = requests.get(url, headers=header).json()
+    return data['entities'][wd_id]['sitelinks'].get('enwiki', {'title': None})['title']
+
+
+def get_wikipedia_text(wd_id):
+    name = get_wikipedia_page_name(wd_id)
+    if name is None:
+        return None
+    wiki_wiki = wikipediaapi.Wikipedia('ArtMetaData/0.0 (elias.entrup@tib.eu)', 'en')
+    page = wiki_wiki.page(name)
+    time.sleep(0.5)
+    return page.text
+
+
+def main(filename=Path('test_set.jsonl'), generate=False):
     if not filename.exists():
         print('Loading data from Wikidata')
         arts = get_all_triplets()
@@ -141,10 +160,18 @@ def main(filename=Path('test_set.jsonl')):
         with filename.open() as f:
             arts = [json.loads(l) for l in f]
 
-    print('Generating text')
-    for art in tqdm(arts):
-        art['text'] = [{'content': generate_text(art), 'language': 'en'}]
+    print('Generating/fetching text')
+    if generate:
+        for art in tqdm(arts):
+            art['text'] = [{'content': generate_text(art), 'language': 'en'}]
+    else:
+        for art in tqdm(arts):
+            wd_id = art['subject']['wikidata_id'].removeprefix('wd:')
+            text = get_wikipedia_text(wd_id)
+            if text:
+                art['text'] = [{'content': text, 'language': 'en'}]
 
+    arts = [art for art in arts if 'text' in art]
 
     with filename.open('w') as f:
         for art in arts:
