@@ -173,8 +173,10 @@ def detect_language(pipeline: Pipeline, image: Image, text_blocks: lp.Layout):
               type=click.Path(dir_okay=True, readable=True, path_type=Path, exists=True))
 @click.option('--output', default=Path('parsedpdfs.jsonl'), help='Output file',
               type=click.Path(writable=True, dir_okay=False, path_type=Path))
+@click.option('--outputprogress', default=Path('parsedpdfs_progress.jsonl'), help='Output progress file',
+              type=click.Path(writable=True, dir_okay=False, path_type=Path))
 @click.option('--cpu', default=False, help='Run on CPU not CUDA', is_flag=True)
-def main(input: Path, output: Path, cpu: bool):
+def main(input: Path, output: Path, outputprogress: Path, cpu: bool):
     if input.is_file():
         files = [input]
     else:
@@ -203,9 +205,16 @@ def main(input: Path, output: Path, cpu: bool):
     lang_detect_model = "papluca/xlm-roberta-base-language-detection"
     lang_detect_pipeline = pipeline("text-classification", model=lang_detect_model, device=device)
 
+    if outputprogress.exists():
+        with outputprogress.open() as f:
+            progress = [l.strip() for l in f.readlines()]
+    else:
+        progress = []
 
-    with output.open('w') as f:
+    with output.open('a') as f, outputprogress.open('a') as f_progress:
         for file in tqdm(files):
+            if file.name in progress:
+                continue
             images = pdf_to_image(file)
             texts = []
 
@@ -214,10 +223,13 @@ def main(input: Path, output: Path, cpu: bool):
                 for text in thread_map(partial(parse_image, model, lang_detect_pipeline),
                                        images,
                                        max_workers=20,
-                                       leave=False)
+                                       leave=True)
             ]
 
             f.write(json.dumps({'id': file.name, 'text': texts}) + '\n')
+
+            progress.append(file.name)
+            f_progress.write(file.name + '\n')
 
 
 if __name__ == '__main__':
