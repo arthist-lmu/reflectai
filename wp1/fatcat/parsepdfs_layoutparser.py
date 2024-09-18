@@ -135,7 +135,10 @@ def find_captions(figure_blocks: lp.Layout, text_blocks: lp.Layout):
             dist2 = figure.coordinates[1] - caption.coordinates[3]
             dist3 = caption.coordinates[0] - figure.coordinates[2]
             dist4 = figure.coordinates[0] - caption.coordinates[2]
-            min_dist = min([d for d in (dist1, dist2, dist3, dist4) if d > 0])
+            try:
+                min_dist = min([d for d in (dist1, dist2, dist3, dist4) if d > 0])
+            except ValueError:
+                continue
             if min_dist > 0 and min_dist < 80:
                 figures.append((figure, caption))
                 captions.add(id(caption))
