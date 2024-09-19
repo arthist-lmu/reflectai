@@ -51,7 +51,7 @@ def parse_image(model: lp.models.base_layoutmodel.BaseLayoutModel, lang_pipeline
         for figure, caption in figure_blocks:
             cropped = figure.crop_image(image)
             fig_id = hashlib.sha256(cropped.tobytes()).hexdigest()[:32]
-            img_path = (image_folder / fig_id[:2] / fig_id[2:4])
+            img_path = image_folder / fig_id[:2]
             img_path.mkdir(exist_ok=True, parents=True)
             img_path = img_path / (fig_id + '.jpg')
             Image.fromarray(cropped).save(img_path)
