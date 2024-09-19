@@ -254,7 +254,11 @@ def main(input: Path, output: Path, cpu: bool, saveimages: bool):
         for file in tqdm(files):
             if file.name in progress:
                 continue
-            images = pdf_to_image(file)
+            try:
+                images = pdf_to_image(file)
+            except pdf2image.exceptions.PDFPageCountError:
+                print('pdf2image failed to parse', file)
+                continue
 
             infos = [
                 info
