@@ -258,7 +258,8 @@ class DeepKePlugin(
                             "object": {"label": duplet["object"]},
                         }
                     )
-            except TypeError:
+            except (TypeError, KeyError) as e:
+                print('Exception when rewriting triplets:', e)
                 continue
 
         return reformatted
