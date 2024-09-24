@@ -45,9 +45,10 @@ def AliasNames_to_triplet(package: AliasNames):
                 "wikidata_id": "",
             },
             "object": {
-                "label": package.alias,
+                "label": alias,
             },
         }
+        for alias in package.alias
     ]
 
     return triplets
