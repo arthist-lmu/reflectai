@@ -61,6 +61,8 @@ class RefinedPlugin(
             distance = levenshtein_distance(span.text, label)
             distances.append(distance)
 
+        if np.min(distances) > 2:
+            return None, None
         lowest_ind = np.argmin(distances)
 
         return distances[lowest_ind], spans[lowest_ind]
