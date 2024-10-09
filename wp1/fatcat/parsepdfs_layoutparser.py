@@ -271,9 +271,11 @@ def main(input: Path, output: Path, cpu: bool, saveimages: bool):
             images = [image for info in infos for image in info['images']]
 
             f.write(json.dumps({'id': file.name, 'text': texts, 'images': images}) + '\n')
+            f.flush()
 
             progress.append(file.name)
             f_progress.write(file.name + '\n')
+            f_progress.flush()
 
 
 if __name__ == '__main__':
