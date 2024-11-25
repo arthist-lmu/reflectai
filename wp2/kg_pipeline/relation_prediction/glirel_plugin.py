@@ -3,8 +3,7 @@ import json
 from typing import List, Dict
 
 import spacy
-from spacy.language import Language
-from glirel import GLiREL
+import glirel
 
 from kg_pipeline.plugin import Plugin
 from kg_pipeline.manager import Manager
@@ -13,26 +12,7 @@ from kg_pipeline.manager import Manager
 default_config = {}
 default_parameters = {}
 
-######## bug fix for
-# - https://github.com/jackboyla/GLiREL/issues/13
-# - https://github.com/jackboyla/GLiREL/issues/14
-__all__ = ["GLiREL"]
-
-DEFAULT_SPACY_CONFIG = {
-    "model": "jackboyla/glirel-large-v0",
-    "batch_size": 1,
-    "device": None,
-}
-@Language.factory(
-    "glirelx",
-    assigns=["doc._.relations"],
-    default_config=DEFAULT_SPACY_CONFIG,
-)
-def _spacy_glirel_factory(nlp, name, model, batch_size, device):
-    from glirel.spacy_integration import SpacyGLiRELWrapper
-    return SpacyGLiRELWrapper(model, batch_size=batch_size, device='cpu')
-######## end bug fix code
-
+#TODO: some relations are returned multiple times by the model
 
 @Manager.export("Glirel")
 class GlirelPlugin(
@@ -41,7 +21,7 @@ class GlirelPlugin(
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self.nlppipe = spacy.load('en_core_web_sm')
-        self.nlppipe.add_pipe("glirelx", after="ner")
+        self.nlppipe.add_pipe("glirel", after="ner")
         self.nlp = spacy.load('en_core_web_sm')
 
         # check labels and meaning via:
