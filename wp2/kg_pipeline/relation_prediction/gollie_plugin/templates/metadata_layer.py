@@ -7,13 +7,15 @@ from ..utils_typing import Generic as Template
 Relation definitions
 """
 
+
 @dataclass
 class ArtGenre(Template):
     """
     form of art in terms of a medium, format, or theme
     """
 
-    genre: str #Description of genre like pre-impressionistic or 19th-century style
+    genre: str  # Genre like pre-impressionistic or 19th-century style
+
 
 @dataclass
 class ArtMaterial(Template):
@@ -21,13 +23,30 @@ class ArtMaterial(Template):
     substance, raw ingredient, or tool that is utilized by an artist to create a work of art
     """
 
-    material: str #Description of Material such as Oil on Canvas, Drawing, Photography, Woodcut
+    material: str  # Material such as Oil on Canvas, Drawing, Photography, Woodcut
+
+
+@dataclass
+class ArtMovement(Template):
+    """
+    tendency or style in art with a specific common philosophy or goal, possibly associated with a specific historical period
+    """
+
+    movement: str  # Movement like Cubism, Renaissance, Baroque or Historicism
+
+@dataclass
+class ArtisticTechnique(Template):
+    """
+    
+    """
+
 
 
 ENTITY_DEFINITIONS: List[Template] = [
     ArtGenre,
     ArtMaterial,
 ]
+
 
 def ArtGenre_relation_to_triplet(package: ArtGenre):
     triplets = [
@@ -55,7 +74,7 @@ def ArtMaterial_relation_to_triplet(package: ArtMaterial):
                 "label": package.painting,
             },
             "relation": {
-                "label": "inception",
+                "label": "material",
                 "wikidata_id": "wdt:Q15303351",
             },
             "object": {
@@ -67,7 +86,27 @@ def ArtMaterial_relation_to_triplet(package: ArtMaterial):
     return triplets
 
 
+def ArtMovement_relation_to_triplet(package: ArtMovement):
+    triplets = [
+        {
+            "subject": {
+                "label": package.painting,
+            },
+            "relation": {
+                "label": "art movement",
+                "wikidata_id": "wdt:Q968159",
+            },
+            "object": {
+                "label": package.ArtMovement,
+            },
+        }
+    ]
+
+    return triplets
+
+
 ENTITY_PARSER = {
     ArtGenre.__name__: ArtGenre_relation_to_triplet,
     ArtMaterial.__name__: ArtMaterial_relation_to_triplet,
+    ArtMovement.__name__: ArtMovement_relation_to_triplet,
 }
