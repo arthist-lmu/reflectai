@@ -37,9 +37,13 @@ class ArtMovement(Template):
 @dataclass
 class ArtisticTechnique(Template):
     """
-    
+    method by which art is produced
     """
 
+    technique: str # Technique like etching, impasto,wet paint
+
+@dataclass
+class 
 
 
 ENTITY_DEFINITIONS: List[Template] = [
