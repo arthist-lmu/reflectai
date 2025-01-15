@@ -71,6 +71,24 @@ class PointInTime(Template):
     type: str  # Any specific date, year or period related to a work of art
 
 
+@dataclass
+class StartTime(Template):
+    """
+    start of a temporal interval
+    """
+
+    type: str  # Date of a Start Time like 1508 or 1512
+
+
+@dataclass
+class EndTime(Template):
+    """
+    end of a temporal interval
+    """
+
+    type: str  # Date of an End Time like 1508 or 1512
+
+
 ENTITY_DEFINITIONS: List[Template] = [
     ArtGenre,
     ArtMaterial,
@@ -79,6 +97,8 @@ ENTITY_DEFINITIONS: List[Template] = [
     TypeOfWork,
     WorkOfArt,
     PointInTime,
+    StartTime,
+    EndTime,
 ]
 
 
@@ -215,6 +235,44 @@ def PointInTime_relation_to_triplet(package: PointInTime):
     return triplets
 
 
+def StartTime_relation_to_triplet(package: StartTime):
+    triplets = [
+        {
+            "subject": {
+                "label": package.painting,
+            },
+            "relation": {
+                "label": "art movement",
+                "wikidata_id": "wdt:Q24575110",
+            },
+            "object": {
+                "label": package.StartTime,
+            },
+        }
+    ]
+
+    return triplets
+
+
+def EndTime_relation_to_triplet(package: EndTime):
+    triplets = [
+        {
+            "subject": {
+                "label": package.painting,
+            },
+            "relation": {
+                "label": "art movement",
+                "wikidata_id": "wdt:Q24575125",
+            },
+            "object": {
+                "label": package.EndTime,
+            },
+        }
+    ]
+
+    return triplets
+
+
 ENTITY_PARSER = {
     ArtGenre.__name__: ArtGenre_relation_to_triplet,
     ArtMaterial.__name__: ArtMaterial_relation_to_triplet,
@@ -223,4 +281,6 @@ ENTITY_PARSER = {
     TypeOfWork.__name__: TypeOfWork_relation_to_triplet,
     WorkOfArt.__name__: WorkOfArt_relation_to_triplet,
     PointInTime.__name__: PointInTime_relation_to_triplet,
+    StartTime.__name__: StartTime_relation_to_triplet,
+    EndTime.__name__: EndTime_relation_to_triplet,
 }
