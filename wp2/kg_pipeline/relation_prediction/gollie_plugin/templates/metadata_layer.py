@@ -89,6 +89,15 @@ class EndTime(Template):
     type: str  # Date of an End Time like 1508 or 1512
 
 
+@dataclass
+class Person(Template):
+    """
+    being that has certain capacities or attributes constituting personhood
+    """
+
+    type: str  # Full names like Michelangelo or Leonardo da Vinci, as well as historical figures mentioned
+
+
 ENTITY_DEFINITIONS: List[Template] = [
     ArtGenre,
     ArtMaterial,
@@ -99,6 +108,7 @@ ENTITY_DEFINITIONS: List[Template] = [
     PointInTime,
     StartTime,
     EndTime,
+    Person,
 ]
 
 
@@ -273,6 +283,25 @@ def EndTime_relation_to_triplet(package: EndTime):
     return triplets
 
 
+def Person_relation_to_triplet(package: Person):
+    triplets = [
+        {
+            "subject": {
+                "label": package.painting,
+            },
+            "relation": {
+                "label": "art movement",
+                "wikidata_id": "wdt:Q215627",
+            },
+            "object": {
+                "label": package.Person,
+            },
+        }
+    ]
+
+    return triplets
+
+
 ENTITY_PARSER = {
     ArtGenre.__name__: ArtGenre_relation_to_triplet,
     ArtMaterial.__name__: ArtMaterial_relation_to_triplet,
@@ -283,4 +312,5 @@ ENTITY_PARSER = {
     PointInTime.__name__: PointInTime_relation_to_triplet,
     StartTime.__name__: StartTime_relation_to_triplet,
     EndTime.__name__: EndTime_relation_to_triplet,
+    Person.__name__: Person_relation_to_triplet,
 }
