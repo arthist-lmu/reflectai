@@ -34,21 +34,51 @@ class ArtMovement(Template):
 
     movement: str  # Movement like Cubism, Renaissance, Baroque or Historicism
 
+
 @dataclass
 class ArtisticTechnique(Template):
     """
     method by which art is produced
     """
 
-    technique: str # Technique like etching, impasto,wet paint
+    technique: str  # Technique like etching, impasto,wet paint
+
 
 @dataclass
-class 
+class TypeOfWork(Template):
+    """
+    type of art work based on shared characteristics, functions, or stylistic features
+    """
+
+    type: str  # Type or category like painting, sculpture, oil painting or marble sculpture
+
+
+@dataclass
+class WorkOfArt(Template):
+    """
+    aesthetic item or artistic creation
+    """
+
+    type: str  # Title or names of specific names of artworks like Mona Lisa and Sistine Chapel
+
+
+@dataclass
+class PointInTime(Template):
+    """
+    position of a particular instant in time
+    """
+
+    type: str  # Any specific date, year or period related to a work of art
 
 
 ENTITY_DEFINITIONS: List[Template] = [
     ArtGenre,
     ArtMaterial,
+    ArtMovement,
+    ArtisticTechnique,
+    TypeOfWork,
+    WorkOfArt,
+    PointInTime,
 ]
 
 
@@ -109,8 +139,88 @@ def ArtMovement_relation_to_triplet(package: ArtMovement):
     return triplets
 
 
+def ArtisticTechnique_relation_to_triplet(package: ArtisticTechnique):
+    triplets = [
+        {
+            "subject": {
+                "label": package.painting,
+            },
+            "relation": {
+                "label": "art movement",
+                "wikidata_id": "wdt:Q11177771",
+            },
+            "object": {
+                "label": package.ArtisticTechnique,
+            },
+        }
+    ]
+
+    return triplets
+
+
+def TypeOfWork_relation_to_triplet(package: TypeOfWork):
+    triplets = [
+        {
+            "subject": {
+                "label": package.painting,
+            },
+            "relation": {
+                "label": "art movement",
+                "wikidata_id": "wdt:Q116474095",
+            },
+            "object": {
+                "label": package.TypeOfWork,
+            },
+        }
+    ]
+
+    return triplets
+
+
+def WorkOfArt_relation_to_triplet(package: WorkOfArt):
+    triplets = [
+        {
+            "subject": {
+                "label": package.painting,
+            },
+            "relation": {
+                "label": "art movement",
+                "wikidata_id": "wdt:Q838948",
+            },
+            "object": {
+                "label": package.WorkOfArt,
+            },
+        }
+    ]
+
+    return triplets
+
+
+def PointInTime_relation_to_triplet(package: PointInTime):
+    triplets = [
+        {
+            "subject": {
+                "label": package.painting,
+            },
+            "relation": {
+                "label": "art movement",
+                "wikidata_id": "wdt:Q186408",
+            },
+            "object": {
+                "label": package.PointInTime,
+            },
+        }
+    ]
+
+    return triplets
+
+
 ENTITY_PARSER = {
     ArtGenre.__name__: ArtGenre_relation_to_triplet,
     ArtMaterial.__name__: ArtMaterial_relation_to_triplet,
     ArtMovement.__name__: ArtMovement_relation_to_triplet,
+    ArtisticTechnique.__name__: ArtisticTechnique_relation_to_triplet,
+    TypeOfWork.__name__: TypeOfWork_relation_to_triplet,
+    WorkOfArt.__name__: WorkOfArt_relation_to_triplet,
+    PointInTime.__name__: PointInTime_relation_to_triplet,
 }
