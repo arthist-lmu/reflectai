@@ -111,6 +111,17 @@ class Person(Template):
     )
 
 
+@dataclass
+class MythicalCharacter(Template):
+    """
+    character from mythology
+    """
+
+    TypeOfMythicalCharacter: (
+        str  # Characters from mythology like Zeus, Venus, Poseidon or Muses
+    )
+
+
 ENTITY_DEFINITIONS: List[Template] = [
     ArtisticTheme,
     Composition,
@@ -123,6 +134,8 @@ ENTITY_DEFINITIONS: List[Template] = [
     PointInTime,
     Season,
     Person,
+    MythicalCharacter,
+    MythicalCharacter,
 ]
 
 
@@ -335,6 +348,25 @@ def Person_relation_to_triplet(package: Person):
     return triplets
 
 
+def MythicalCharakter_relation_to_triplet(package: MythicalCharacter):
+    triplets = [
+        {
+            "subject": {
+                "label": package.painting,
+            },
+            "relation": {
+                "label": "has person",
+                "wikidata_id": "wdt:Q215627",
+            },
+            "object": {
+                "label": package.TypeOfMythicalCharacter,
+            },
+        }
+    ]
+
+    return triplets
+
+
 ENTITY_PARSER = {
     ArtisticTheme.__name__: ArtisticTheme_relation_to_triplet,
     Composition.__name__: Composition_relation_to_triplet,
@@ -347,4 +379,5 @@ ENTITY_PARSER = {
     PointInTime.__name__: PointInTime_relation_to_triplet,
     Season.__name__: Season_relation_to_triplet,
     Person.__name__: Person_relation_to_triplet,
+    MythicalCharacter.__name__: MythicalCharakter_relation_to_triplet,
 }
