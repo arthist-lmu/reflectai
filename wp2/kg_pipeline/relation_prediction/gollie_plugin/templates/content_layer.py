@@ -14,7 +14,7 @@ class ArtisticTheme(Template):
     theme or subject in a work of art
     """
 
-    genre: str  # Artistic theme like Adoration, Vanitas, Last Supper or Annunciation
+    theme: str  # Artistic theme like Adoration, Vanitas, Last Supper or Annunciation
 
 
 @dataclass
@@ -99,7 +99,7 @@ class Person(Template):
 
 
 ENTITY_DEFINITIONS: List[Template] = [
-    ArtGenre,
+    ArtisticTheme,
     ArtMaterial,
     ArtMovement,
     ArtisticTechnique,
@@ -112,18 +112,18 @@ ENTITY_DEFINITIONS: List[Template] = [
 ]
 
 
-def ArtGenre_relation_to_triplet(package: ArtGenre):
+def ArtisticTheme_relation_to_triplet(package: ArtisticTheme):
     triplets = [
         {
             "subject": {
                 "label": package.painting,
             },
             "relation": {
-                "label": "has genre",
-                "wikidata_id": "wdt:Q1792379",
+                "label": "has artistic theme",
+                "wikidata_id": "wdt:Q1406161",
             },
             "object": {
-                "label": package.ArtGenre,
+                "label": package.theme,
             },
         }
     ]
@@ -303,7 +303,7 @@ def Person_relation_to_triplet(package: Person):
 
 
 ENTITY_PARSER = {
-    ArtGenre.__name__: ArtGenre_relation_to_triplet,
+    ArtisticTheme.__name__: ArtisticTheme_relation_to_triplet,
     ArtMaterial.__name__: ArtMaterial_relation_to_triplet,
     ArtMovement.__name__: ArtMovement_relation_to_triplet,
     ArtisticTechnique.__name__: ArtisticTechnique_relation_to_triplet,
