@@ -27,12 +27,12 @@ class Composition(Template):
 
 
 @dataclass
-class ArtMovement(Template):
+class WorkofArt(Template):
     """
-    tendency or style in art with a specific common philosophy or goal, possibly associated with a specific historical period
+    aesthetic item or artistic creation
     """
 
-    movement: str  # Movement like Cubism, Renaissance, Baroque or Historicism
+    work: str  # Titles or names specific of artworks like Mona Lisa, The Sistine Chapel, or Guernica
 
 
 @dataclass
@@ -150,7 +150,7 @@ def Composition_relation_to_triplet(package: Composition):
     return triplets
 
 
-def ArtMovement_relation_to_triplet(package: ArtMovement):
+def WorkOfArt_relation_to_triplet(package: WorkOfArt):
     triplets = [
         {
             "subject": {
@@ -161,7 +161,7 @@ def ArtMovement_relation_to_triplet(package: ArtMovement):
                 "wikidata_id": "wdt:Q968159",
             },
             "object": {
-                "label": package.ArtMovement,
+                "label": package.work,
             },
         }
     ]
@@ -305,7 +305,7 @@ def Person_relation_to_triplet(package: Person):
 ENTITY_PARSER = {
     ArtisticTheme.__name__: ArtisticTheme_relation_to_triplet,
     Composition.__name__: Composition_relation_to_triplet,
-    ArtMovement.__name__: ArtMovement_relation_to_triplet,
+    WorkOfArt.__name__: WorkOfArt_relation_to_triplet,
     ArtisticTechnique.__name__: ArtisticTechnique_relation_to_triplet,
     TypeOfWork.__name__: TypeOfWork_relation_to_triplet,
     WorkOfArt.__name__: WorkOfArt_relation_to_triplet,
