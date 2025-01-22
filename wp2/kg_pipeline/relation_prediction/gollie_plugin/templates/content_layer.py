@@ -63,12 +63,12 @@ class Emotion(Template):
 
 
 @dataclass
-class PointInTime(Template):
+class Quality(Template):
     """
-    position of a particular instant in time
+    distinguishing feature
     """
 
-    type: str  # Any specific date, year or period related to a work of art
+    TypeOfQuality: str  # An artwork can have qualities like vibrant, delicate, beautiful or impressive
 
 
 @dataclass
@@ -105,6 +105,7 @@ ENTITY_DEFINITIONS: List[Template] = [
     Concept,
     RhetoricalDevice,
     Emotion,
+    Quality,
 ]
 
 
@@ -222,18 +223,18 @@ def Emotion_relation_to_triplet(package: Emotion):
     return triplets
 
 
-def PointInTime_relation_to_triplet(package: PointInTime):
+def Quality_relation_to_triplet(package: Quality):
     triplets = [
         {
             "subject": {
                 "label": package.painting,
             },
             "relation": {
-                "label": "art movement",
-                "wikidata_id": "wdt:Q186408",
+                "label": "has quality",
+                "wikidata_id": "wdt:Q185957",
             },
             "object": {
-                "label": package.PointInTime,
+                "label": package.TypeOfQuality,
             },
         }
     ]
@@ -305,7 +306,7 @@ ENTITY_PARSER = {
     Concept.__name__: Concept_relation_to_triplet,
     RhetoricalDevice.__name__: RhetoricalDevice_relation_to_triplet,
     Emotion.__name__: Emotion_relation_to_triplet,
-    PointInTime.__name__: PointInTime_relation_to_triplet,
+    Quality.__name__: Quality_relation_to_triplet,
     StartTime.__name__: StartTime_relation_to_triplet,
     EndTime.__name__: EndTime_relation_to_triplet,
     Person.__name__: Person_relation_to_triplet,
