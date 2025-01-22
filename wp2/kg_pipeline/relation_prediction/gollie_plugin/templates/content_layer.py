@@ -27,7 +27,7 @@ class Composition(Template):
 
 
 @dataclass
-class WorkofArt(Template):
+class WorkOfArt(Template):
     """
     aesthetic item or artistic creation
     """
@@ -45,12 +45,12 @@ class Concept(Template):
 
 
 @dataclass
-class TypeOfWork(Template):
+class RhetoricalDevice(Template):
     """
-    type of art work based on shared characteristics, functions, or stylistic features
+    technique or strategy that a person uses with the goal of persuading or to convey deeper meanings
     """
 
-    type: str  # Type or category like painting, sculpture, oil painting or marble sculpture
+    device: str  # Rhetorical Device like irony, allegory or sarcasm
 
 
 @dataclass
@@ -100,15 +100,10 @@ class Person(Template):
 
 ENTITY_DEFINITIONS: List[Template] = [
     ArtisticTheme,
-    ArtMaterial,
-    ArtMovement,
-    ArtisticTechnique,
-    TypeOfWork,
+    Composition,
     WorkOfArt,
-    PointInTime,
-    StartTime,
-    EndTime,
-    Person,
+    Concept,
+    RhetoricalDevice,
 ]
 
 
@@ -188,18 +183,18 @@ def Concept_relation_to_triplet(package: Concept):
     return triplets
 
 
-def TypeOfWork_relation_to_triplet(package: TypeOfWork):
+def RhetoricalDevice_relation_to_triplet(package: RhetoricalDevice):
     triplets = [
         {
             "subject": {
                 "label": package.painting,
             },
             "relation": {
-                "label": "art movement",
-                "wikidata_id": "wdt:Q116474095",
+                "label": "has rhetorical device",
+                "wikidata_id": "wdt:Q1762471",
             },
             "object": {
-                "label": package.TypeOfWork,
+                "label": package.device,
             },
         }
     ]
@@ -307,7 +302,7 @@ ENTITY_PARSER = {
     Composition.__name__: Composition_relation_to_triplet,
     WorkOfArt.__name__: WorkOfArt_relation_to_triplet,
     Concept.__name__: Concept_relation_to_triplet,
-    TypeOfWork.__name__: TypeOfWork_relation_to_triplet,
+    RhetoricalDevice.__name__: RhetoricalDevice_relation_to_triplet,
     WorkOfArt.__name__: WorkOfArt_relation_to_triplet,
     PointInTime.__name__: PointInTime_relation_to_triplet,
     StartTime.__name__: StartTime_relation_to_triplet,
