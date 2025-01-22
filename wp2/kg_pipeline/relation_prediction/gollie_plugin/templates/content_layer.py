@@ -54,12 +54,12 @@ class RhetoricalDevice(Template):
 
 
 @dataclass
-class WorkOfArt(Template):
+class Emotion(Template):
     """
-    aesthetic item or artistic creation
+    biological states associated with the nervous system
     """
 
-    type: str  # Title or names of specific names of artworks like Mona Lisa and Sistine Chapel
+    TypeOfEmotion: str  # Emotions or moods expressed by figures in the work of art like sadness, melancholy or joy
 
 
 @dataclass
@@ -104,6 +104,7 @@ ENTITY_DEFINITIONS: List[Template] = [
     WorkOfArt,
     Concept,
     RhetoricalDevice,
+    Emotion,
 ]
 
 
@@ -202,18 +203,18 @@ def RhetoricalDevice_relation_to_triplet(package: RhetoricalDevice):
     return triplets
 
 
-def WorkOfArt_relation_to_triplet(package: WorkOfArt):
+def Emotion_relation_to_triplet(package: Emotion):
     triplets = [
         {
             "subject": {
                 "label": package.painting,
             },
             "relation": {
-                "label": "art movement",
-                "wikidata_id": "wdt:Q838948",
+                "label": "includes emotion",
+                "wikidata_id": "wdt:Q9415",
             },
             "object": {
-                "label": package.WorkOfArt,
+                "label": package.TypeOfEmotion,
             },
         }
     ]
@@ -303,7 +304,7 @@ ENTITY_PARSER = {
     WorkOfArt.__name__: WorkOfArt_relation_to_triplet,
     Concept.__name__: Concept_relation_to_triplet,
     RhetoricalDevice.__name__: RhetoricalDevice_relation_to_triplet,
-    WorkOfArt.__name__: WorkOfArt_relation_to_triplet,
+    Emotion.__name__: Emotion_relation_to_triplet,
     PointInTime.__name__: PointInTime_relation_to_triplet,
     StartTime.__name__: StartTime_relation_to_triplet,
     EndTime.__name__: EndTime_relation_to_triplet,
