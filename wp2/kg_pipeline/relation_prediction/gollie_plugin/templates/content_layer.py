@@ -72,21 +72,21 @@ class Quality(Template):
 
 
 @dataclass
-class StartTime(Template):
+class Color(Template):
     """
-    start of a temporal interval
+    characteristic of visual perception
     """
 
-    type: str  # Date of a Start Time like 1508 or 1512
+    TypeOfColor: str  # Specific colors like gold, emerald green or pastel tones
 
 
 @dataclass
-class EndTime(Template):
+class PointInTime(Template):
     """
-    end of a temporal interval
+    position of a particular instant in time
     """
 
-    type: str  # Date of an End Time like 1508 or 1512
+    TypeOfPointInTime: str  #
 
 
 @dataclass
@@ -242,18 +242,18 @@ def Quality_relation_to_triplet(package: Quality):
     return triplets
 
 
-def StartTime_relation_to_triplet(package: StartTime):
+def Color_relation_to_triplet(package: Color):
     triplets = [
         {
             "subject": {
                 "label": package.painting,
             },
             "relation": {
-                "label": "art movement",
-                "wikidata_id": "wdt:Q24575110",
+                "label": "has color",
+                "wikidata_id": "wdt:Q1075",
             },
             "object": {
-                "label": package.StartTime,
+                "label": package.TypeOfColor,
             },
         }
     ]
@@ -307,7 +307,7 @@ ENTITY_PARSER = {
     RhetoricalDevice.__name__: RhetoricalDevice_relation_to_triplet,
     Emotion.__name__: Emotion_relation_to_triplet,
     Quality.__name__: Quality_relation_to_triplet,
-    StartTime.__name__: StartTime_relation_to_triplet,
+    Color.__name__: Color_relation_to_triplet,
     EndTime.__name__: EndTime_relation_to_triplet,
     Person.__name__: Person_relation_to_triplet,
 }
