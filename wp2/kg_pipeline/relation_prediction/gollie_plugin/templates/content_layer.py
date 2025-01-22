@@ -100,6 +100,17 @@ class Season(Template):
     TypeOfSeason: str  # Mention of seasons like spring, summer, fall and winter
 
 
+@dataclass
+class Person(Template):
+    """
+    being that has certain capacities or attributes constituting personhood
+    """
+
+    TypeOfPerson: (
+        str  # Specific persons that are visually represented or symbolically referenced
+    )
+
+
 ENTITY_DEFINITIONS: List[Template] = [
     ArtisticTheme,
     Composition,
@@ -111,6 +122,7 @@ ENTITY_DEFINITIONS: List[Template] = [
     Color,
     PointInTime,
     Season,
+    Person,
 ]
 
 
@@ -304,6 +316,25 @@ def Season_relation_to_triplet(package: Season):
     return triplets
 
 
+def Person_relation_to_triplet(package: Person):
+    triplets = [
+        {
+            "subject": {
+                "label": package.painting,
+            },
+            "relation": {
+                "label": "has person",
+                "wikidata_id": "wdt:Q215627",
+            },
+            "object": {
+                "label": package.TypeOfPerson,
+            },
+        }
+    ]
+
+    return triplets
+
+
 ENTITY_PARSER = {
     ArtisticTheme.__name__: ArtisticTheme_relation_to_triplet,
     Composition.__name__: Composition_relation_to_triplet,
@@ -315,4 +346,5 @@ ENTITY_PARSER = {
     Color.__name__: Color_relation_to_triplet,
     PointInTime.__name__: PointInTime_relation_to_triplet,
     Season.__name__: Season_relation_to_triplet,
+    Person.__name__: Person_relation_to_triplet,
 }
