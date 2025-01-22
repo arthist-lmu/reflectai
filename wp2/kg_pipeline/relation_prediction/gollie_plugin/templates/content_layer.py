@@ -92,12 +92,12 @@ class PointInTime(Template):
 
 
 @dataclass
-class Person(Template):
+class Season(Template):
     """
-    being that has certain capacities or attributes constituting personhood
+    section of a year
     """
 
-    type: str  # Full names like Michelangelo or Leonardo da Vinci, as well as historical figures mentioned
+    TypeOfSeason: str  # Mention of seasons like spring, summer, fall and winter
 
 
 ENTITY_DEFINITIONS: List[Template] = [
@@ -110,6 +110,7 @@ ENTITY_DEFINITIONS: List[Template] = [
     Quality,
     Color,
     PointInTime,
+    Season,
 ]
 
 
@@ -284,18 +285,18 @@ def PointInTime_relation_to_triplet(package: PointInTime):
     return triplets
 
 
-def Person_relation_to_triplet(package: Person):
+def Season_relation_to_triplet(package: Season):
     triplets = [
         {
             "subject": {
                 "label": package.painting,
             },
             "relation": {
-                "label": "art movement",
-                "wikidata_id": "wdt:Q215627",
+                "label": "has season",
+                "wikidata_id": "wdt:Q10688145",
             },
             "object": {
-                "label": package.Person,
+                "label": package.TypeOfSeason,
             },
         }
     ]
@@ -313,5 +314,5 @@ ENTITY_PARSER = {
     Quality.__name__: Quality_relation_to_triplet,
     Color.__name__: Color_relation_to_triplet,
     PointInTime.__name__: PointInTime_relation_to_triplet,
-    Person.__name__: Person_relation_to_triplet,
+    Season.__name__: Season_relation_to_triplet,
 }
