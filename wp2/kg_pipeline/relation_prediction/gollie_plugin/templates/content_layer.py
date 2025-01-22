@@ -9,12 +9,12 @@ Relation definitions
 
 
 @dataclass
-class ArtGenre(Template):
+class ArtisticTheme(Template):
     """
-    form of art in terms of a medium, format, or theme
+    theme or subject in a work of art
     """
 
-    genre: str  # Genre like pre-impressionistic or 19th-century style
+    genre: str  # Artistic theme like Adoration, Vanitas, Last Supper or Annunciation
 
 
 @dataclass
@@ -59,7 +59,7 @@ class WorkOfArt(Template):
     aesthetic item or artistic creation
     """
 
-    work: str  # Title or names of specific names of artworks like Mona Lisa and Sistine Chapel
+    type: str  # Title or names of specific names of artworks like Mona Lisa and Sistine Chapel
 
 
 @dataclass
@@ -68,7 +68,7 @@ class PointInTime(Template):
     position of a particular instant in time
     """
 
-    point: str  # Any specific date, year or period related to a work of art
+    type: str  # Any specific date, year or period related to a work of art
 
 
 @dataclass
@@ -77,7 +77,7 @@ class StartTime(Template):
     start of a temporal interval
     """
 
-    start: str  # Date of a Start Time like 1508 or 1512
+    type: str  # Date of a Start Time like 1508 or 1512
 
 
 @dataclass
@@ -86,7 +86,7 @@ class EndTime(Template):
     end of a temporal interval
     """
 
-    end: str  # Date of an End Time like 1508 or 1512
+    type: str  # Date of an End Time like 1508 or 1512
 
 
 @dataclass
@@ -95,7 +95,7 @@ class Person(Template):
     being that has certain capacities or attributes constituting personhood
     """
 
-    person: str  # Full names like Michelangelo or Leonardo da Vinci, as well as historical figures mentioned
+    type: str  # Full names like Michelangelo or Leonardo da Vinci, as well as historical figures mentioned
 
 
 ENTITY_DEFINITIONS: List[Template] = [
@@ -123,7 +123,7 @@ def ArtGenre_relation_to_triplet(package: ArtGenre):
                 "wikidata_id": "wdt:Q1792379",
             },
             "object": {
-                "label": package.genre,
+                "label": package.ArtGenre,
             },
         }
     ]
@@ -142,7 +142,7 @@ def ArtMaterial_relation_to_triplet(package: ArtMaterial):
                 "wikidata_id": "wdt:Q15303351",
             },
             "object": {
-                "label": package.material,
+                "label": package.ArtMaterial,
             },
         }
     ]
@@ -161,7 +161,7 @@ def ArtMovement_relation_to_triplet(package: ArtMovement):
                 "wikidata_id": "wdt:Q968159",
             },
             "object": {
-                "label": package.movement,
+                "label": package.ArtMovement,
             },
         }
     ]
@@ -180,7 +180,7 @@ def ArtisticTechnique_relation_to_triplet(package: ArtisticTechnique):
                 "wikidata_id": "wdt:Q11177771",
             },
             "object": {
-                "label": package.technique,
+                "label": package.ArtisticTechnique,
             },
         }
     ]
@@ -199,7 +199,7 @@ def TypeOfWork_relation_to_triplet(package: TypeOfWork):
                 "wikidata_id": "wdt:Q116474095",
             },
             "object": {
-                "label": package.type,
+                "label": package.TypeOfWork,
             },
         }
     ]
@@ -218,7 +218,7 @@ def WorkOfArt_relation_to_triplet(package: WorkOfArt):
                 "wikidata_id": "wdt:Q838948",
             },
             "object": {
-                "label": package.work,
+                "label": package.WorkOfArt,
             },
         }
     ]
@@ -237,7 +237,7 @@ def PointInTime_relation_to_triplet(package: PointInTime):
                 "wikidata_id": "wdt:Q186408",
             },
             "object": {
-                "label": package.point,
+                "label": package.PointInTime,
             },
         }
     ]
@@ -256,7 +256,7 @@ def StartTime_relation_to_triplet(package: StartTime):
                 "wikidata_id": "wdt:Q24575110",
             },
             "object": {
-                "label": package.start,
+                "label": package.StartTime,
             },
         }
     ]
@@ -275,7 +275,7 @@ def EndTime_relation_to_triplet(package: EndTime):
                 "wikidata_id": "wdt:Q24575125",
             },
             "object": {
-                "label": package.end,
+                "label": package.EndTime,
             },
         }
     ]
@@ -294,7 +294,7 @@ def Person_relation_to_triplet(package: Person):
                 "wikidata_id": "wdt:Q215627",
             },
             "object": {
-                "label": package.person,
+                "label": package.Person,
             },
         }
     ]
