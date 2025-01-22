@@ -86,7 +86,9 @@ class PointInTime(Template):
     position of a particular instant in time
     """
 
-    TypeOfPointInTime: str  #
+    TypeOfPointInTime: (
+        str  # Exact dates like 12. April 1450, circa 1890 or mid-16th century
+    )
 
 
 @dataclass
@@ -106,6 +108,8 @@ ENTITY_DEFINITIONS: List[Template] = [
     RhetoricalDevice,
     Emotion,
     Quality,
+    Color,
+    PointInTime,
 ]
 
 
@@ -261,18 +265,18 @@ def Color_relation_to_triplet(package: Color):
     return triplets
 
 
-def EndTime_relation_to_triplet(package: EndTime):
+def PointInTime_relation_to_triplet(package: PointInTime):
     triplets = [
         {
             "subject": {
                 "label": package.painting,
             },
             "relation": {
-                "label": "art movement",
-                "wikidata_id": "wdt:Q24575125",
+                "label": "has point in time",
+                "wikidata_id": "wdt:Q186408",
             },
             "object": {
-                "label": package.EndTime,
+                "label": package.TypeOfPointInTime,
             },
         }
     ]
@@ -308,6 +312,6 @@ ENTITY_PARSER = {
     Emotion.__name__: Emotion_relation_to_triplet,
     Quality.__name__: Quality_relation_to_triplet,
     Color.__name__: Color_relation_to_triplet,
-    EndTime.__name__: EndTime_relation_to_triplet,
+    PointInTime.__name__: PointInTime_relation_to_triplet,
     Person.__name__: Person_relation_to_triplet,
 }
