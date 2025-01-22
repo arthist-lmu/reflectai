@@ -23,7 +23,7 @@ class Composition(Template):
     placement or arrangement of visual elements in a work of art
     """
 
-    placement: str  # Spatial arrangement, placement or arrangement like diagonal lines, symetry or central figure
+    CompositionOfArtwork: str  # Spatial arrangement, placement or arrangement like diagonal lines, symetry or central figure
 
 
 @dataclass
@@ -36,12 +36,12 @@ class WorkofArt(Template):
 
 
 @dataclass
-class ArtisticTechnique(Template):
+class Concept(Template):
     """
-    method by which art is produced
+    semantic unit understood in different ways, e.g., as mental representation, ability, or abstract object
     """
 
-    technique: str  # Technique like etching, impasto,wet paint
+    ConceptOfArtwork: str  # Abstract concept or ideas like harmony, man or nature
 
 
 @dataclass
@@ -142,7 +142,7 @@ def Composition_relation_to_triplet(package: Composition):
                 "wikidata_id": "wdt:Q462437",
             },
             "object": {
-                "label": package.placement,
+                "label": package.CompositionOfArtwork,
             },
         }
     ]
@@ -157,8 +157,8 @@ def WorkOfArt_relation_to_triplet(package: WorkOfArt):
                 "label": package.painting,
             },
             "relation": {
-                "label": "art movement",
-                "wikidata_id": "wdt:Q968159",
+                "label": "is work of art",
+                "wikidata_id": "wdt:Q838948",
             },
             "object": {
                 "label": package.work,
@@ -169,18 +169,18 @@ def WorkOfArt_relation_to_triplet(package: WorkOfArt):
     return triplets
 
 
-def ArtisticTechnique_relation_to_triplet(package: ArtisticTechnique):
+def Concept_relation_to_triplet(package: Concept):
     triplets = [
         {
             "subject": {
                 "label": package.painting,
             },
             "relation": {
-                "label": "art movement",
-                "wikidata_id": "wdt:Q11177771",
+                "label": "has concept",
+                "wikidata_id": "wdt:Q151885",
             },
             "object": {
-                "label": package.ArtisticTechnique,
+                "label": package.ConceptOfArtwork,
             },
         }
     ]
@@ -306,7 +306,7 @@ ENTITY_PARSER = {
     ArtisticTheme.__name__: ArtisticTheme_relation_to_triplet,
     Composition.__name__: Composition_relation_to_triplet,
     WorkOfArt.__name__: WorkOfArt_relation_to_triplet,
-    ArtisticTechnique.__name__: ArtisticTechnique_relation_to_triplet,
+    Concept.__name__: Concept_relation_to_triplet,
     TypeOfWork.__name__: TypeOfWork_relation_to_triplet,
     WorkOfArt.__name__: WorkOfArt_relation_to_triplet,
     PointInTime.__name__: PointInTime_relation_to_triplet,
