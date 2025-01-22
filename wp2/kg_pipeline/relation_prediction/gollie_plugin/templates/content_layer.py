@@ -18,12 +18,12 @@ class ArtisticTheme(Template):
 
 
 @dataclass
-class ArtMaterial(Template):
+class Composition(Template):
     """
-    substance, raw ingredient, or tool that is utilized by an artist to create a work of art
+    placement or arrangement of visual elements in a work of art
     """
 
-    material: str  # Material such as Oil on Canvas, Drawing, Photography, Woodcut
+    placement: str  # Spatial arrangement, placement or arrangement like diagonal lines, symetry or central figure
 
 
 @dataclass
@@ -131,18 +131,18 @@ def ArtisticTheme_relation_to_triplet(package: ArtisticTheme):
     return triplets
 
 
-def ArtMaterial_relation_to_triplet(package: ArtMaterial):
+def Composition_relation_to_triplet(package: Composition):
     triplets = [
         {
             "subject": {
                 "label": package.painting,
             },
             "relation": {
-                "label": "material",
-                "wikidata_id": "wdt:Q15303351",
+                "label": "has composition",
+                "wikidata_id": "wdt:Q462437",
             },
             "object": {
-                "label": package.ArtMaterial,
+                "label": package.placement,
             },
         }
     ]
@@ -304,7 +304,7 @@ def Person_relation_to_triplet(package: Person):
 
 ENTITY_PARSER = {
     ArtisticTheme.__name__: ArtisticTheme_relation_to_triplet,
-    ArtMaterial.__name__: ArtMaterial_relation_to_triplet,
+    Composition.__name__: Composition_relation_to_triplet,
     ArtMovement.__name__: ArtMovement_relation_to_triplet,
     ArtisticTechnique.__name__: ArtisticTechnique_relation_to_triplet,
     TypeOfWork.__name__: TypeOfWork_relation_to_triplet,
