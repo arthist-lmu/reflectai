@@ -134,14 +134,12 @@ class ReligiousCharacter(Template):
 
 
 @dataclass
-class MythicalCharacter(Template):
+class AnatomicalStructure(Template):
     """
-    character from mythology
+    entity with a single connected shape
     """
 
-    TypeOfMythicalCharacter: (
-        str  # Characters from mythology like Zeus, Venus, Poseidon or Muses
-    )
+    TypeOfAnatomicalStructure: str  # Anatomical structure like torso, arm, head or arms
 
 
 ENTITY_DEFINITIONS: List[Template] = [
@@ -159,6 +157,7 @@ ENTITY_DEFINITIONS: List[Template] = [
     MythicalCharacter,
     MythicalCharacter,
     ReligiousCharacter,
+    AnatomicalStructure,
 ]
 
 
@@ -378,7 +377,7 @@ def MythicalCharakter_relation_to_triplet(package: MythicalCharacter):
                 "label": package.painting,
             },
             "relation": {
-                "label": "has person",
+                "label": "has mythical character",
                 "wikidata_id": "wdt:Q215627",
             },
             "object": {
@@ -409,6 +408,25 @@ def ReligiousCharacter_relation_to_triplet(package: ReligiousCharacter):
     return triplets
 
 
+def AnatomicalStructure_relation_to_triplet(package: ReligiousCharacter):
+    triplets = [
+        {
+            "subject": {
+                "label": package.painting,
+            },
+            "relation": {
+                "label": "has anatomical structure",
+                "wikidata_id": "wdt:Q4936952",
+            },
+            "object": {
+                "label": package.TypeOfAnatomicalStructure,
+            },
+        }
+    ]
+
+    return triplets
+
+
 ENTITY_PARSER = {
     ArtisticTheme.__name__: ArtisticTheme_relation_to_triplet,
     Composition.__name__: Composition_relation_to_triplet,
@@ -422,4 +440,6 @@ ENTITY_PARSER = {
     Season.__name__: Season_relation_to_triplet,
     Person.__name__: Person_relation_to_triplet,
     MythicalCharacter.__name__: MythicalCharakter_relation_to_triplet,
+    ReligiousCharacter.__name__: ReligiousCharacter_relation_to_triplet,
+    AnatomicalStructure.__name__: AnatomicalStructure_relation_to_triplet,
 }
