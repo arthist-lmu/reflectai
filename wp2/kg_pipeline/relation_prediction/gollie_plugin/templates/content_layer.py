@@ -122,6 +122,28 @@ class MythicalCharacter(Template):
     )
 
 
+@dataclass
+class ReligiousCharacter(Template):
+    """
+    character of a religious work, alleged to be historical
+    """
+
+    TypeOfReligiousCharacter: (
+        str  # Character from religion like Adam, Jesus or Apostles
+    )
+
+
+@dataclass
+class MythicalCharacter(Template):
+    """
+    character from mythology
+    """
+
+    TypeOfMythicalCharacter: (
+        str  # Characters from mythology like Zeus, Venus, Poseidon or Muses
+    )
+
+
 ENTITY_DEFINITIONS: List[Template] = [
     ArtisticTheme,
     Composition,
@@ -136,6 +158,7 @@ ENTITY_DEFINITIONS: List[Template] = [
     Person,
     MythicalCharacter,
     MythicalCharacter,
+    ReligiousCharacter,
 ]
 
 
@@ -360,6 +383,25 @@ def MythicalCharakter_relation_to_triplet(package: MythicalCharacter):
             },
             "object": {
                 "label": package.TypeOfMythicalCharacter,
+            },
+        }
+    ]
+
+    return triplets
+
+
+def ReligiousCharacter_relation_to_triplet(package: ReligiousCharacter):
+    triplets = [
+        {
+            "subject": {
+                "label": package.painting,
+            },
+            "relation": {
+                "label": "has religious character",
+                "wikidata_id": "wdt:Q18563354",
+            },
+            "object": {
+                "label": package.TypeOfReligiousCharacter,
             },
         }
     ]
