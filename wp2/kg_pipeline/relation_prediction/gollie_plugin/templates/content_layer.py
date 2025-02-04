@@ -169,6 +169,42 @@ class ArchitecturalStructure(Template):
     TypeOfArchitecturalStructure: str  # palace, bridge, water garde, castle
 
 
+@dataclass
+class GeographicalFeature(Template):
+    """
+    components of planets that can be geographically located
+    """
+
+    TypeOfGeographicalFeature: str  # forest, fields, pathways, mountains
+
+
+@dataclass
+class MythicalLocation(Template):
+    """
+    place that only exists in myths, legends, and folklore
+    """
+
+    TypeOfMythicalLocation: str  # paradise, hell, elysium, limbo
+
+
+@dataclass
+class PhysicalLocation(Template):
+    """
+    position of something in space
+    """
+
+    TypeOfPhysicalLocation: str  # Camposanto, Paris, Mount Fuji, Eiffel Tower
+
+
+@dataclass
+class PhysicalSurface(Template):
+    """
+    two-dimensional boundary of three-dimensional object
+    """
+
+    TypeOfPhysicalSurface: str  # brick wall, marble floor, wood wall
+
+
 ENTITY_DEFINITIONS: List[Template] = [
     ArtisticTheme,
     Composition,
@@ -188,6 +224,10 @@ ENTITY_DEFINITIONS: List[Template] = [
     Occupation,
     Posture,
     ArchitecturalStructure,
+    GeographicalFeature,
+    MythicalLocation,
+    PhysicalLocation,
+    PhysicalSurface,
 ]
 
 
@@ -514,6 +554,82 @@ def ArchitecturalStructure_relation_to_triplet(package: ArchitecturalStructure):
     return triplets
 
 
+def GeographicalFeature_relation_to_triplet(package: GeographicalFeature):
+    triplets = [
+        {
+            "subject": {
+                "label": package.painting,
+            },
+            "relation": {
+                "label": "has geographical feature",
+                "wikidata_id": "wdt:Q618123",
+            },
+            "object": {
+                "label": package.TypeOfGeographicalFeature,
+            },
+        }
+    ]
+
+    return triplets
+
+
+def MythicalLocation_relation_to_triplet(package: MythicalLocation):
+    triplets = [
+        {
+            "subject": {
+                "label": package.painting,
+            },
+            "relation": {
+                "label": "has mythical location",
+                "wikidata_id": "wdt:Q3238337",
+            },
+            "object": {
+                "label": package.TypeOfMythicalLocation,
+            },
+        }
+    ]
+
+    return triplets
+
+
+def PhysicalLocation_relation_to_triplet(package: PhysicalLocation):
+    triplets = [
+        {
+            "subject": {
+                "label": package.painting,
+            },
+            "relation": {
+                "label": "has physical location",
+                "wikidata_id": "wdt:Q17334923",
+            },
+            "object": {
+                "label": package.TypeOfPhysicalLocation,
+            },
+        }
+    ]
+
+    return triplets
+
+
+def PPhysicalSurface_relation_to_triplet(package: PhysicalSurface):
+    triplets = [
+        {
+            "subject": {
+                "label": package.painting,
+            },
+            "relation": {
+                "label": "has physical surface",
+                "wikidata_id": "wdt:Q3783831",
+            },
+            "object": {
+                "label": package.TypeOfPv,
+            },
+        }
+    ]
+
+    return triplets
+
+
 ENTITY_PARSER = {
     ArtisticTheme.__name__: ArtisticTheme_relation_to_triplet,
     Composition.__name__: Composition_relation_to_triplet,
@@ -532,4 +648,7 @@ ENTITY_PARSER = {
     Occupation.__name__: Occupation_relation_to_triplet,
     Posture.__name__: Posture_relation_to_triplet,
     ArchitecturalStructure.__name__: ArchitecturalStructure_relation_to_triplet,
+    MythicalLocation.__name__: MythicalCharakter_relation_to_triplet,
+    PhysicalLocation.__name__: PhysicalLocation_relation_to_triplet,
+    PhysicalSurface.__name__: PhysicalLocation_relation_to_triplet,
 }
