@@ -160,6 +160,15 @@ class Posture(Template):
     TypeOfPosture: str  # Reclining, head tilted, moving, sitting, standing
 
 
+@dataclass
+class ArchitecturalStructure(Template):
+    """
+    human-designed and -made structure
+    """
+
+    TypeOfArchitecturalStructure: str  # palace, bridge, water garde, castle
+
+
 ENTITY_DEFINITIONS: List[Template] = [
     ArtisticTheme,
     Composition,
@@ -178,6 +187,7 @@ ENTITY_DEFINITIONS: List[Template] = [
     AnatomicalStructure,
     Occupation,
     Posture,
+    ArchitecturalStructure,
 ]
 
 
@@ -485,6 +495,25 @@ def Posture_relation_to_triplet(package: Posture):
     return triplets
 
 
+def ArchitecturalStructure_relation_to_triplet(package: ArchitecturalStructure):
+    triplets = [
+        {
+            "subject": {
+                "label": package.painting,
+            },
+            "relation": {
+                "label": "has architecture",
+                "wikidata_id": "wdt:Q811979",
+            },
+            "object": {
+                "label": package.TypeOfArchitecturalStructure,
+            },
+        }
+    ]
+
+    return triplets
+
+
 ENTITY_PARSER = {
     ArtisticTheme.__name__: ArtisticTheme_relation_to_triplet,
     Composition.__name__: Composition_relation_to_triplet,
@@ -502,4 +531,5 @@ ENTITY_PARSER = {
     AnatomicalStructure.__name__: AnatomicalStructure_relation_to_triplet,
     Occupation.__name__: Occupation_relation_to_triplet,
     Posture.__name__: Posture_relation_to_triplet,
+    ArchitecturalStructure.__name__: ArchitecturalStructure_relation_to_triplet,
 }
