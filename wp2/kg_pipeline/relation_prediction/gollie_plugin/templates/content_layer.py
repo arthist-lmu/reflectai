@@ -142,6 +142,24 @@ class AnatomicalStructure(Template):
     TypeOfAnatomicalStructure: str  # Anatomical structure like torso, arm, head or arms
 
 
+@dataclass
+class Occupation(Template):
+    """
+    label applied to a person based on an activity they participate in
+    """
+
+    TypeOfOccupation: str  # Blacksmith, Priest, mourning women
+
+
+@dataclass
+class Posture(Template):
+    """
+    physical configuration that a human can take
+    """
+
+    TypeOfPosture: str  # Reclining, head tilted, moving, sitting, standing
+
+
 ENTITY_DEFINITIONS: List[Template] = [
     ArtisticTheme,
     Composition,
@@ -158,6 +176,8 @@ ENTITY_DEFINITIONS: List[Template] = [
     MythicalCharacter,
     ReligiousCharacter,
     AnatomicalStructure,
+    Occupation,
+    Posture,
 ]
 
 
@@ -408,7 +428,7 @@ def ReligiousCharacter_relation_to_triplet(package: ReligiousCharacter):
     return triplets
 
 
-def AnatomicalStructure_relation_to_triplet(package: ReligiousCharacter):
+def AnatomicalStructure_relation_to_triplet(package: AnatomicalStructure):
     triplets = [
         {
             "subject": {
@@ -420,6 +440,44 @@ def AnatomicalStructure_relation_to_triplet(package: ReligiousCharacter):
             },
             "object": {
                 "label": package.TypeOfAnatomicalStructure,
+            },
+        }
+    ]
+
+    return triplets
+
+
+def Occupation_relation_to_triplet(package: Occupation):
+    triplets = [
+        {
+            "subject": {
+                "label": package.painting,
+            },
+            "relation": {
+                "label": "has occupation",
+                "wikidata_id": "wdt:Q12737077",
+            },
+            "object": {
+                "label": package.TypeOfOccupation,
+            },
+        }
+    ]
+
+    return triplets
+
+
+def Posture_relation_to_triplet(package: Posture):
+    triplets = [
+        {
+            "subject": {
+                "label": package.painting,
+            },
+            "relation": {
+                "label": "has posture",
+                "wikidata_id": "wdt:Q8514257",
+            },
+            "object": {
+                "label": package.TypeOfPosture,
             },
         }
     ]
@@ -442,4 +500,6 @@ ENTITY_PARSER = {
     MythicalCharacter.__name__: MythicalCharakter_relation_to_triplet,
     ReligiousCharacter.__name__: ReligiousCharacter_relation_to_triplet,
     AnatomicalStructure.__name__: AnatomicalStructure_relation_to_triplet,
+    Occupation.__name__: Occupation_relation_to_triplet,
+    Posture.__name__: Posture_relation_to_triplet,
 }
