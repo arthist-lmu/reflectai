@@ -205,6 +205,42 @@ class PhysicalSurface(Template):
     TypeOfPhysicalSurface: str  # brick wall, marble floor, wood wall
 
 
+@dataclass
+class PhysicalSurface(Template):
+    """
+    two-dimensional boundary of three-dimensional object
+    """
+
+    TypeOfPhysicalSurface: str  # brick wall, marble floor, wood wall
+
+
+@dataclass
+class Animal(Template):
+    """
+    kingdom of multicellular eukaryotic organisms
+    """
+
+    TypeOfAnimal: str  # dog, giraffe, cat, horse, fish, elephant
+
+
+@dataclass
+class MythicalAnimal(Template):
+    """
+    creature in mythology and religion
+    """
+
+    TypeOfMythicalAnimal: str  # pegasus, sphinx, centaur
+
+
+@dataclass
+class Food(Template):
+    """
+    any substance consumed to provide nutritional support for the body
+    """
+
+    TypeOfMythicalAnimal: str  # bread, peach, plums, brioche
+
+
 ENTITY_DEFINITIONS: List[Template] = [
     ArtisticTheme,
     Composition,
@@ -228,6 +264,9 @@ ENTITY_DEFINITIONS: List[Template] = [
     MythicalLocation,
     PhysicalLocation,
     PhysicalSurface,
+    Animal,
+    MythicalAnimal,
+    Food,
 ]
 
 
@@ -611,7 +650,7 @@ def PhysicalLocation_relation_to_triplet(package: PhysicalLocation):
     return triplets
 
 
-def PPhysicalSurface_relation_to_triplet(package: PhysicalSurface):
+def PhysicalSurface_relation_to_triplet(package: PhysicalSurface):
     triplets = [
         {
             "subject": {
@@ -622,7 +661,64 @@ def PPhysicalSurface_relation_to_triplet(package: PhysicalSurface):
                 "wikidata_id": "wdt:Q3783831",
             },
             "object": {
-                "label": package.TypeOfPv,
+                "label": package.TypeOfPhysicalSurface,
+            },
+        }
+    ]
+
+    return triplets
+
+
+def Animal_relation_to_triplet(package: Animal):
+    triplets = [
+        {
+            "subject": {
+                "label": package.painting,
+            },
+            "relation": {
+                "label": "is animal",
+                "wikidata_id": "wdt:Q729",
+            },
+            "object": {
+                "label": package.TypeOfAnimal,
+            },
+        }
+    ]
+
+    return triplets
+
+
+def MythicalAnimal_relation_to_triplet(package: MythicalAnimal):
+    triplets = [
+        {
+            "subject": {
+                "label": package.painting,
+            },
+            "relation": {
+                "label": "is mythical animal",
+                "wikidata_id": "wdt:Q24334299",
+            },
+            "object": {
+                "label": package.TypeOfMythicalAnimal,
+            },
+        }
+    ]
+
+    return triplets
+
+
+def Food_relation_to_triplet(package: Food):
+    triplets = [
+        {
+            "subject": {
+                "label": package.painting,
+            },
+            "relation": {
+                "label": "is food",
+                "wikidata_id": "wdt:Q2095",
+            },
+            "object": {
+                "label": package.TypeOfFood,
             },
         }
     ]
@@ -651,4 +747,7 @@ ENTITY_PARSER = {
     MythicalLocation.__name__: MythicalCharakter_relation_to_triplet,
     PhysicalLocation.__name__: PhysicalLocation_relation_to_triplet,
     PhysicalSurface.__name__: PhysicalLocation_relation_to_triplet,
+    Animal.__name__: Animal_relation_to_triplet,
+    MythicalAnimal.__name__: MythicalAnimal_relation_to_triplet,
+    Food.__name__: Food_relation_to_triplet,
 }
