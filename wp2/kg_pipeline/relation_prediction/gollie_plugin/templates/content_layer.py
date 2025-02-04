@@ -241,6 +241,24 @@ class Food(Template):
     TypeOfMythicalAnimal: str  # bread, peach, plums, brioche
 
 
+@dataclass
+class PhysicalObject(Template):
+    """
+    singular aggregation of substance(s), with overall properties such as mass, position, or momentum
+    """
+
+    TypeOfPhysicalObject: str  # viola da gamba, sword, chair
+
+
+@dataclass
+class Plant(Template):
+    """
+    living thing in the kingdom of photosynthetic eukaryotes
+    """
+
+    TypeOfPlant: str  # Iris, tree, cactus, acanthus
+
+
 ENTITY_DEFINITIONS: List[Template] = [
     ArtisticTheme,
     Composition,
@@ -267,6 +285,8 @@ ENTITY_DEFINITIONS: List[Template] = [
     Animal,
     MythicalAnimal,
     Food,
+    PhysicalObject,
+    Plant,
 ]
 
 
@@ -726,6 +746,44 @@ def Food_relation_to_triplet(package: Food):
     return triplets
 
 
+def PhysicalObject_relation_to_triplet(package: PhysicalObject):
+    triplets = [
+        {
+            "subject": {
+                "label": package.painting,
+            },
+            "relation": {
+                "label": "is physical object",
+                "wikidata_id": "wdt:Q223557",
+            },
+            "object": {
+                "label": package.TypeOfPhysicalObject,
+            },
+        }
+    ]
+
+    return triplets
+
+
+def Plant_relation_to_triplet(package: Plant):
+    triplets = [
+        {
+            "subject": {
+                "label": package.painting,
+            },
+            "relation": {
+                "label": "is plant",
+                "wikidata_id": "wdt:Q756",
+            },
+            "object": {
+                "label": package.TypeOfPlant,
+            },
+        }
+    ]
+
+    return triplets
+
+
 ENTITY_PARSER = {
     ArtisticTheme.__name__: ArtisticTheme_relation_to_triplet,
     Composition.__name__: Composition_relation_to_triplet,
@@ -750,4 +808,6 @@ ENTITY_PARSER = {
     Animal.__name__: Animal_relation_to_triplet,
     MythicalAnimal.__name__: MythicalAnimal_relation_to_triplet,
     Food.__name__: Food_relation_to_triplet,
+    PhysicalObject.__name__: PhysicalObject_relation_to_triplet,
+    Plant.__name__: Plant_relation_to_triplet,
 }
