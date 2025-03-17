@@ -6,95 +6,94 @@ from ..utils_typing import Generic as Template
 """
 Relation definitions
 """
-
 @dataclass
 class ArtGenre(Template):
     """
-    form of art in terms of a medium, format, or theme
+    Art Genre is a kind of art based on how it looks or what it is about.
     """
 
-    genre: str  # Genre like pre-impressionistic or 19th-century style
+    genre: str  # Pre-Impressionism, 19th-century style, Romanticism, Symbolism, Futurism
 
 
 @dataclass
 class ArtMaterial(Template):
     """
-    substance, raw ingredient, or tool that is utilized by an artist to create a work of art
+    Art Material is what an artist uses.
     """
 
-    material: str  # Material such as Oil on Canvas, Drawing, Photography, Woodcut
+    material: str  # Oil on canvas, charcoal on paper, bronze sculpture, digital photography, woodcut print
 
 
 @dataclass
 class ArtMovement(Template):
     """
-    tendency or style in art with a specific common philosophy or goal, possibly associated with a specific historical period
+    Art Movement is a group of artists with a similar style or idea.
     """
 
-    movement: str  # Movement like Cubism, Renaissance, Baroque or Historicism
+    movement: str  # Cubism, Renaissance, Baroque, Historicism, Surrealism
 
 
 @dataclass
 class ArtisticTechnique(Template):
     """
-    method by which art is produced
+    Artistic Technique is how an artist makes art.
     """
 
-    technique: str  # Technique like etching, impasto,wet paint
+    technique: str  # Etching, impasto, wet-on-wet painting, chiaroscuro, stippling
 
 
 @dataclass
 class TypeOfWork(Template):
     """
-    type of art work based on shared characteristics, functions, or stylistic features
+    Type of Work is a category of art.
     """
 
-    type: str  # Type or category like painting, sculpture, oil painting or marble sculpture
+    type: str  # Painting, sculpture, oil painting, marble sculpture, lithograph
 
 
 @dataclass
 class WorkOfArt(Template):
     """
-    aesthetic item or artistic creation
+    Work of Art is a piece of art made by someone.
     """
 
-    work: str  # Title or names of specific names of artworks like Mona Lisa and Sistine Chapel
+    work: str  # Mona Lisa, The Sistine Chapel Ceiling, The Persistence of Memory, The Birth of Venus
 
 
 @dataclass
 class PointInTime(Template):
     """
-    position of a particular instant in time
+    Point in Time is a specific moment or date.
     """
 
-    point: str  # Any specific date, year or period related to a work of art
+    point: str  # 1495, 20th century, the Baroque period, the Dutch Golden Age
 
 
 @dataclass
 class StartTime(Template):
     """
-    start of a temporal interval
+    Start Time is when something starts.
     """
 
-    start: str  # Date of a Start Time like 1508 or 1512
+    start: str  # 1508, 1917, early Renaissance, 14th century
 
 
 @dataclass
 class EndTime(Template):
     """
-    end of a temporal interval
+    End Time is when something stops.
     """
 
-    end: str  # Date of an End Time like 1508 or 1512
+    end: str  # 1512, 1945, late Baroque, 19th century
 
 
 @dataclass
 class Person(Template):
     """
-    being that has certain capacities or attributes constituting personhood
+    Person is a human.
     """
 
-    person: str  # Full names like Michelangelo or Leonardo da Vinci, as well as historical figures mentioned
+    person: str  # Michelangelo, Leonardo da Vinci, Frida Kahlo, Artemisia Gentileschi, Vincent van Gogh
 
 
 ENTITY_DEFINITIONS: List[Template] = [
