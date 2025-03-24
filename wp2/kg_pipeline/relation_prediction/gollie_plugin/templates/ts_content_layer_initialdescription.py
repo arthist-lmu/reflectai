@@ -7,6 +7,7 @@ from ..utils_typing import Generic as Template
 Relation definitions
 """
 
+
 @dataclass
 class ArtisticTheme(Template):
     """
