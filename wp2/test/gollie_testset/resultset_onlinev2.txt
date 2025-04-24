@@ -1,0 +1,603 @@
+Wiese_mit_Blumen_unt_53f42fc97cc35e8bac54517a270a61b8.txt
+	 Lawn with Flowers Under a Thunderstorm;  made from material;  canvas
+	 Lawn with Flowers Under a Thunderstorm;  genre;  landscapes
+	 Lawn with Flowers Under a Thunderstorm;  made from material;  oil on canvas
+	 Lawn with Flowers Under a Thunderstorm;  creator;  Vincent van Gogh
+	 Lawn with Flowers Under a Thunderstorm;  inception;  1888
+Stromness,_Orkney_26b62d1bc3c75b178682753e1adae778.txt
+Die_Rckkehr_des_Graf_7203f484b00859b2a0a5d8cfaed808bd.txt
+A_Door_Is_Just_A_Met_93b736bd62ea5ef7a5da76daa5369012.txt
+Model_of_a_Pump_Wind_8bd841ef08eb510094d17486d47f7d52.txt
+The_Gross_Clinic_c7000431634f5028950b670046b11305.txt
+	 The Gross Clinic;  made from material;  oil on canvas
+	 The Gross Clinic;  depicts;  Samuel D. Gross
+	 Samuel D. Gross;  instance of;  human
+	 Samuel D. Gross;  wears;  black frock coat
+	 Samuel D. Gross;  expression, gesture or body pose;  lecturing
+	 The Gross Clinic;  depicts;  Eakins
+	 Eakins;  instance of;  human
+	 Eakins;  wears;  white cuffed sleeve
+	 Eakins;  expression, gesture or body pose;  sketching or writing
+	 The Gross Clinic;  depicts;  Franklin West
+	 Franklin West;  instance of;  human
+	 Franklin West;  expression, gesture or body pose;  taking notes
+	 The Gross Clinic;  made from material;  oil on canvas
+	 The Gross Clinic;  inception;  1875
+	 The Gross Clinic;  creator;  Thomas Eakins
+Head_of_an_Old_Woman_cedfa45c531a5bf0a73497ee082ac080.txt
+	 Head of an Old Woman;  located in;  Boston
+	 Bust of an Old Man;  located in;  Boston
+	 Head of an Old Woman;  alias;  Bust of an Old Man
+	 Head of an Old Woman;  genre;  drawing
+	 Head of an Old Woman;  made from material;  paper
+	 Head of an Old Woman;  creator;  Lievens
+Hirschjagd,_1540_-_1_180f2ab088a55da4b9a392b6b657a3fc.txt
+	 Hirschjagd;  located in;  Louvre
+Old_Woman_at_Her_Mea_3b82d62e09695e1abe4c73c481d8eb0b.txt
+	 Old Woman at Her Meal in an Interior;  located in;  Rijksmuseum
+	 Old Woman at Her Meal in an Interior;  depicts;  bread
+	 bread;  instance of;  landmark
+	 Old Woman at Her Meal in an Interior;  depicts;  glass
+	 glass;  instance of;  landmark
+	 Old Woman at Her Meal in an Interior;  genre;  interior
+	 Old Woman at Her Meal in an Interior;  made from material;  canvas
+The_Stone_Guest_(Dar_b214388bf1b25b598127f4e273d2c61c.txt
+Der_Brotschneider_7579bf0e33035f279c3dbb02bdbe7cc1.txt
+Heiliges_Rmisches_Re_2f7ebc83b7a25636bcf62f8db5bb26c3.txt
+Rm._Republik:_M._Bar_70def9b4e9ff50bea3772ccf52becb0f.txt
+Ghost_Series_#11_74ca106b237f54bfb9fd5c581796180a.txt
+	 Ghost Series;  located in;  Studio Museum
+	 Ghost Series;  alias;  Ghost Series
+	 Ghost Series;  language;  Ghost Series
+	 Ghost Series #11;  depicts;  postcards
+	 postcards;  instance of;  landmark
+	 Ghost Series;  genre;  ethnographic postcards
+	 Ghost Series #11;  creator;  Candice Breitz
+Portrait_of_an_Elega_3d85750b1bf755809471b7c97035188f.txt
+	 Portrait of an Elegant Woman;  located in;  
+	 Portrait of an Elegant Woman;  depicts;  Woman
+	 Woman;  instance of;  human
+	 Woman;  wears;  white blouse
+	 Woman;  wears;  green satin dress
+	 Portrait of an Elegant Woman;  genre;  portrait
+	 Portrait of an Elegant Woman;  made from material;  canvas
+Campagnalandschaft_m_01c9febe4bd8574caea5201cde321db9.txt
+Entwurf_fr_die_Alleg_696b1e95e83c5140a44fadd6533ea15d.txt
+	 Allegorie der Musik;  located in;  MAK
+	 allegorie der Musik (Orgelspielerin);  depicts;  organist
+	 organist;  instance of;  human
+	 organist;  wears;  blue silk cloth
+	 organist;  expression, gesture or body pose;  kneels
+	 Allegorie der Musik (Orgelspielerin);  genre;  allegory
+	 Allegorie der Musik;  made from material;  glue on canvas
+Seated_Man,_Half-Len_4026442537c3573ea87970b72e6dd242.txt
+	 Seated Man, Half-Length, at Work;  located in;  Heseltine
+	 Seated Man, Half-Length, at Work;  genre;  drawing
+	 Seated Man, Half-Length, at Work;  made from material;  chalk
+Waldkapelle_385c15a0f26f57f1836ecc8dfd9929fe.txt
+	 Waldkapelle;  depicts person;  Christ
+Die_Heilige_Dreifalt_e252890cf2175e57926f864450dcdde2.txt
+	 Die Heilige Dreifaltigkeit mit den Heiligen Rochus, Florian, Sebastian und Johannes von Nepomuk;  depicts person;  Rochus
+	 Die Heilige Dreifaltigkeit mit den Heiligen Rochus, Florian, Sebastian und Johannes von Nepomuk;  depicts person;  Sebastian
+	 Die Heilige Dreifaltigkeit mit den Heiligen Rochus, Florian, Sebastian und Johannes von Nepomuk;  depicts person;  John of Nepomuk
+	 Die Heilige Dreifaltigkeit mit den Heiligen Rochus, Florian, Sebastian und Johannes von Nepomuk;  depicts person;  Florian
+	 Die Heilige Dreifaltigkeit mit den Heiligen Rochus, Florian, Sebastian und Johannes von Nepomuk;  depicts person;  John
+	 Die Heilige Dreifaltigkeit mit den Heiligen Rochus, Florian, Sebastian und Johannes von Nepomuk;  depicts;  Rochus
+	 Rochus;  instance of;  human
+	 Die Heilige Dreifaltigkeit mit den Heiligen Rochus, Florian, Sebastian und Johannes von Nepomuk;  depicts;  Sebastian
+	 Sebastian;  instance of;  human
+	 Die Heilige Dreifaltigkeit mit den Heiligen Rochus, Florian, Sebastian und Johannes von Nepomuk;  depicts;  John of Nepomuk
+	 John of Nepomuk;  instance of;  human
+	 Die Heilige Dreifaltigkeit mit den Heiligen Rochus, Florian, Sebastian und Johannes von Nepomuk;  depicts;  Florian
+	 Florian;  instance of;  human
+Der_Tod_der_Ophelia_81e2c4af062a5a67a4f494f0cd4d13b5.txt
+	 Der Tod der Ophelia;  depicts;  Ophelia
+	 Ophelia;  instance of;  human
+	 Ophelia;  expression, gesture or body pose;  floating in the water
+	 Der Tod der Ophelia;  genre;  death
+Die_Belagerung_von_C_a59edb77c1315c30a2863b8726de8a6a.txt
+	 Arche de Cosel;  located in;  Baroque battle cycles
+	 Battle of Bar-sur-Aube;  located in;  Baroque battle cycles
+	 Arche de Cosel;  genre;  battle
+	 Battle of Bar-sur-Aube;  genre;  battle
+	 Arche de Cosel;  inception;  1808
+	 Battle of Bar-sur-Aube;  inception;  1817
+Diana_and_Endymion_f3ca0ec01d3757879d9fa6e86bfb87de.txt
+	 Diana and Endymion;  depicts person;  Diana
+	 Diana and Endymion;  located in;  National Museums Liverpool
+	 Diana and Endymion;  main subject;  Roman goddess Diana
+	 Diana and Endymion;  genre;  mythological
+	 Diana and Endymion;  made from material;  oil on canvas
+	 Diana and Endymion;  creator;  Francesco Solimena
+	 Diana and Endymion;  inception;  1705
+Blick_ber_die_Themse_6461d9ea26ad5acbb87c31fe8c3181d9.txt
+	 The painting;  depicts;  Themse
+	 Themse;  instance of;  landmark
+	 The painting;  depicts;  Syon House
+	 Syon House;  instance of;  landmark
+Mesembria_7f502710a0a8581c835e4dcd22636807.txt
+Der_Notar_Dr._Josef__b70ad572717d5193b5d6636f2f1af4ea.txt
+Padmasambhava_(Guru__543065110c3f54db91d58b8eb334dd25.txt
+Armbrustfibel_45d8b1e41d755f57807b7c029b845798.txt
+View_of_the_Fortress_a573b5803bf751fcac149fb5f9757d7a.txt
+Natura_morta_4081d713dd9e53d5823104612e15933b.txt
+	 Natura morta;  movement;  still life
+The_Buzz_Club,_Liver_8565dc5436c55260a6ed5888c69e156a.txt
+Die_Gtter_feiern_die_66ecf05e039a5b9896c830e3684e55a6.txt
+	 The Golden Donkey;  inception;  125
+	 The Golden Donkey;  inception;  170
+	 Favola di Psiche;  inception;  1530
+Tornado_over_Kansas_01980b7e41b05b3aadb66dca8cadff52.txt
+	 Tornado over Kansas;  located in;  Muskegon Museum of Art
+	 Tornado over Kansas;  language;  Tornado über Kansas
+	 Tornado over Kansas;  made from material;  oil-on-canvas
+	 Tornado over Kansas;  genre;  Regionalist
+	 Tornado over Kansas;  made from material;  oil-on-canvas
+	 Tornado over Kansas;  inception;  1929
+	 Tornado over Kansas;  creator;  John Steuart Curry
+	 Baptism in Kansas;  inception;  1928
+Interior_with_Women__29a7ba428ecf533b8aa494db2053c95a.txt
+	 Interior with Women Thrashing a Man;  shown with features;  broom
+	 Struggle for the Breeches;  located in;  Rijksmuseum
+	 Interior with Women Thrashing a Man;  alias;  Peasants Fighting
+	 Interior with Women Thrashing a Man (“Peasants Fighting”);  depicts;  women
+	 women;  instance of;  human
+	 Interior with Women Thrashing a Man (“Peasants Fighting”);  depicts;  man
+	 man;  instance of;  human
+	 Interior with Women Thrashing a Man (“Peasants Fighting”);  depicts;  woman
+	 woman;  instance of;  human
+	 Interior with Women Thrashing a Man (“Peasants Fighting”);  depicts;  child
+	 child;  instance of;  human
+	 Interior with Women Thrashing a Man;  genre;  Interior
+	 Interior with Women Thrashing a Man;  made from material;  canvas
+Madonna_and_Child_wi_ca24fb5799285c91ac266d1f71fcbafa.txt
+	 Madonna and Child with Saint Dominic and Saint Martha of Bethany;  depicts person;  Saint Martha
+	 Madonna and Child with Saint Dominic and Saint Martha of Bethany;  depicts person;  Saint Dominic
+	 Madonna and Child with Saint Dominic and Saint Martha of Bethany;  depicts person;  Saint Martha
+	 Madonna and Child with Saint Dominic and Saint Martha of Bethany;  depicts person;  Saint Dominic
+	 Madonna and Child with Saint Dominic and Saint Martha of Bethany;  located in;  UBI Banca
+	 Madonna and Child with Saint Dominic and Saint Martha of Bethany;  genre;  oil on canvas
+	 Madonna and Child with Saint Dominic and Saint Martha of Bethany;  made from material;  oil on canvas
+	 Madonna and Child with Saint Dominic and Saint Martha of Bethany;  creator;  Andrea Previtali
+	 Madonna and Child with Saint Dominic and Saint Martha of Bethany;  inception;  1517
+Prometheus._Miniatur_78ec06250763594c9fd65f56d60da37c.txt
+	 Prometheus;  depicts person;  Prometheus
+	 paintings;  located in;  National Gallery
+Morgen_nach_einer_St_bb1ad9164da059d8a9134a971b5cf1f7.txt
+	 Morning After a Storm;  depicts;  sailor
+	 sailor;  instance of;  human
+	 sailor;  expression, gesture or body pose;  sitting
+	 Morning After a Storm;  genre;  landscape
+Der_Schmadribachfall_9723af823e5055c3809a73521ac689fc.txt
+	 Smadriba fall;  alias;  Der Schmadribachfall
+	 Smadriba fall;  depicts;  waterfall
+	 waterfall;  instance of;  landmark
+	 Smadriba fall;  depicts;  mountain
+	 mountain;  instance of;  landmark
+	 Smadriba fall;  depicts;  stream
+	 stream;  instance of;  landmark
+	 Smadriba fall;  depicts;  forest
+	 forest;  instance of;  landmark
+	 Smadriba fall;  movement;  landscape
+	 Smadriba fall;  creator;  Koch
+San_Francesco_al_Pra_e37c55923e375d4b9c93fd8116415859.txt
+	 San Francesco al Prato Resurrection;  made from material;  Italian Renaissance
+	 San Francesco al Prato Resurrection;  movement;  Renaissance
+	 San Francesco al Prato Resurrection;  creator;  Pietro Perugino
+	 San Francesco al Prato Resurrection;  inception;  1499
+Stockmar,_Carl_Chris_92acc84bf45b55f19db3995d4829cbf0.txt
+The_letter_(McCubbin_b2289708820e5c05a5e26f95b604b805.txt
+	 The letter;  located in;  Art Gallery of Ballarat
+	 The letter;  main subject;  a young woman reading a letter
+	 The letter;  depicts;  stream
+	 stream;  instance of;  landmark
+	 The letter;  depicts;  bush
+	 bush;  instance of;  landmark
+	 The letter;  depicts;  Harriet McCubbin
+	 Harriet McCubbin;  instance of;  human
+	 The letter;  depicts;  Yarra River
+	 Yarra River;  instance of;  landmark
+	 The letter;  depicts;  Darebin Creek
+	 Darebin Creek;  instance of;  landmark
+	 The letter;  genre;  letter
+	 The letter;  inception;  1884
+	 The letter;  creator;  Frederick McCubbin
+Reiter_auf_Gestt_Beb_2441d7cd70675fb99d76637b29282bf9.txt
+Die_Sdkste_der_Insel_3e652ef20ff15902be657ed4b5dd380f.txt
+	 Capri's view of the Faraglioni;  depicts;  Faraglioni
+	 Faraglioni;  instance of;  landmark
+Whitehall_in_Winter_490d3598059d56329ae4790d5999e9ee.txt
+	 Whitehall in Winter;  movement;  Impressionist
+Untitled_148b4c5858515fcbb4c16312400d2084.txt
+	 Untitled;  creator;  Donald Locke
+Junge_Dame_in_Schwar_8871ce7a9320561cbf8090fcf6dc7d0a.txt
+	 Le Moulin de la Galette;  genre;  portrait
+Dasio,_Maximilian:_H_50aa9a4480ae5e07a867974572ee1dec.txt
+	 Heilige Drei Könige;  depicts person;  Mary
+'DIE_RUINEN_VON_RHAL_29d771d4d6315fd2afb38ac2efb71519.txt
+Merowinger:_Sigibert_8ef1455b530a5e04ae2a63188912984b.txt
+Die_Apostelgeschicht_57fbdc5f571a5719921dd901bea16c69.txt
+	 Die Apostelgeschichte: Vision des Petrus;  inception;  1613
+Johannes_der_Tufer_(_0524a08f1c4052769cc95a1d3b05feb2.txt
+	 The drawing from important English collections with John the Baptist and a male figure  probably Christ;  depicts;  John the Baptist
+	 John the Baptist;  instance of;  human
+	 The drawing from important English collections with John the Baptist and a male figure  probably Christ;  depicts;  Christ
+	 Christ;  instance of;  human
+South_Bank_8b2f395d077753ddbcc8edae46e792d0.txt
+	 this picture;  depicts;  South Bank
+	 South Bank;  instance of;  landmark
+'RAFAEL_UND_PINTURIC_604e18708095565980c703cfb3a1e34d.txt
+	 Pinturicchio;  located in;  Siena
+	 Raphael with the Perugino;  genre;  portraits
+Fortuna,_from_the_Fa_b3977b454eda5a938f9df4f62f14de79.txt
+	 Fortuna;  shown with features;  globe
+	 Fortuna;  located in;  Rijksmuseum
+	 Fortuna;  depicts;  globe
+	 globe;  instance of;  landmark
+Platte_(Gef)_d3af4e6612ac5828bfaded939ae5730a.txt
+Lancaster_from_the_A_3751e6edf5655089bc9b3e631b3500a5.txt
+Liegendes_Mdchen_(Ak_9eb28456a6f95323b662c5767b1e162c.txt
+	 Lying Girl;  located in;  Dresden
+	 Lying Girl;  alias;  Liegendes Mädchen
+	 Liegendes Mädchen (Akt auf Sofa);  depicts;  Mädchen
+	 Mädchen;  instance of;  human
+	 Mädchen;  expression, gesture or body pose;  lying
+	 Lying Girl;  genre;  Fauves
+Statue_in_the_Frost,_0004cf03764950cab825f2dd22e89471.txt
+	 Statue in the Frost, Crystal Palace Gardens;  depicts;  statues
+	 statues;  instance of;  landmark
+	 The Scream;  genre;  Expressionism
+Der_Prophet_Joel,_17_4f85f2317b705ae4b72af0749be5de30.txt
+Sketch_for_a_Figure_30aebfa4a64e59fda503371066a33eb7.txt
+Dmonenlampe_e4ab3d43b0685d90bbd2834eb9c5eb7b.txt
+Mountainous_Coastal__10d32aec083858efa4407b6603d00ebd.txt
+	 2 pièces;  located in;  Teylers Museum
+	 Mountainous Coastal Landscape;  depicts;  Tree
+	 Tree;  instance of;  landmark
+	 Mountainous Coastal Landscape with a Large Fir Tree;  inception;  1689
+Armbrustfibel_ce2353fc744953b4b7b9e75c2e8062f0.txt
+Summer_Morning_bb798542915750f8ad3589708b47d9e4.txt
+Seated_Boy,_Drawing_6fc29d1272b1502a8df6e8fe9173f6c1.txt
+	 Seated Boy, Drawing;  located in;  Noordbrabants Museum
+	 Seated Boy, Drawing;  depicts;  boy
+	 boy;  instance of;  human
+	 boy;  expression, gesture or body pose;  Seated
+	 Seated Boy, Drawing;  genre;  drawing
+Aussicht_von_Ariccia_1f753a73e95453ac9e43e8a495795526.txt
+	 painting;  depicts;  forest
+	 forest;  instance of;  landmark
+	 painting;  depicts;  coast
+	 coast;  instance of;  landmark
+	 painting;  depicts;  sea
+	 sea;  instance of;  landmark
+	 painting;  depicts;  Pontine marshes
+	 Pontine marshes;  instance of;  landmark
+	 painting;  depicts;  Monte Circeo
+	 Monte Circeo;  instance of;  landmark
+	 painting;  depicts;  Ponza Islands
+	 Ponza Islands;  instance of;  landmark
+	 painting;  depicts;  Tyrrhenian Sea
+	 Tyrrhenian Sea;  instance of;  landmark
+	 painting;  depicts;  Via Appia
+	 Via Appia;  instance of;  landmark
+	 Aussicht von Ariccia gegen das Meer;  genre;  landscape
+Bltenstaub_von_Kiefe_c74b4dbc8293503696a7f8adca6a9e93.txt
+	 Bloutenstab von Kiefern;  creator;  Wolfgang Laib
+	 Bloutenstab von Kiefern;  inception;  1983
+Untitled_8ed200e58b5f5b3ab0c2959d4a8ecd3f.txt
+	 P07737;  depicts person;  Hero
+	 P07738;  located in;  Kunstmuseum
+	 P07737;  made from material;  etching
+	 P07738;  made from material;  etching
+	 P07738;  genre;  etching
+	 P07738;  made from material;  etching
+	 P07737;  creator;  Baselitz
+	 P07738;  creator;  Baselitz
+Schfer_in_der_rmisch_81ab7dbb8de352b49448bf09be1da253.txt
+	 Schäfer in der römischen Campagna;  inception;  1837
+Strae_an_der_Elbe,_m_73923e722cb95a529cb8b5aad7482ab5.txt
+	 Vedute;  located in;  Dresden
+	 Straße an der Elbe;  depicts;  Elbufer
+	 Elbufer;  instance of;  landmark
+	 Straße an der Elbe;  depicts;  Elbtor
+	 Elbtor;  instance of;  landmark
+	 The most beautiful views from Saxony;  depicts;  Elbufer
+	 Elbufer;  instance of;  landmark
+	 The most beautiful views from Saxony;  depicts;  Elbtor
+	 Elbtor;  instance of;  landmark
+	 Vedute;  made from material;  unfinished
+Nebuchadnezzar_(Blak_094b6b723f2655898f8066c9fdf9330c.txt
+	 Nebuchadnezzar;  located in;  Tate Britain
+	 Nebuchadnezzar;  located in;  Museum of Fine Arts
+	 Nebuchadnezzar;  located in;  Minneapolis Institute of Art
+	 Nebuchadnezzar;  genre;  monotype print
+	 Nebuchadnezzar;  made from material;  monotype print
+	 Nebuchadnezzar;  creator;  Blake
+Self-Portrait_of_an__8de59f008eb35e5aae8ce98ce6de52e8.txt
+	 Self-Portrait of an Artist Seated at an Easel;  located in;  Leiden
+	 Self-Portrait of an Artist Seated at an Easel;  located in;  Detroit
+	 Self-Portrait of an Artist Seated at an Easel;  depicts;  artist
+	 artist;  instance of;  human
+	 artist;  expression, gesture or body pose;  Seated
+	 Self-Portrait of an Artist Seated at an Easel;  genre;  Self-portrait
+	 Self-Portrait of an Artist Seated at an Easel;  made from material;  canvas
+Dead_End_3_5ed797f2fbb85029b315b1cb3924cf6e.txt
+	 Dead End 3;  shown with features;  signs
+	 Dead End 3;  located in;  Tate
+	 Dead End 3;  alias;  Dead End 1
+	 Dead End 3;  alias;  Dead End 2
+	 Dead End 3;  genre;  mixografia
+	 Dead End 3;  made from material;  ink
+	 Dead End 3;  creator;  Ed Ruscha
+Auferweckung_des_Laz_17fdd0a5abf75c22af093c1db72df0e7.txt
+Landschaft_bei_Miese_3add6faaab5a53929c4496ac8c39f691.txt
+Portrait_of_Philip_E_3f38e2045bf051d9926254c012183c0a.txt
+	 Portrait of Philip Ernst;  depicts;  Philip Ernst
+	 Philip Ernst;  instance of;  human
+Moonlight_(painting)_d08cfcee91675c56805ba19b38c744d2.txt
+	 Moonlight;  located in;  Musée des Beaux-Arts
+	 Moonlight;  genre;  nocturne
+Half_Model_of_a_6-Gu_eb90a9d522595e4aa59e44c4a8901d2d.txt
+Drei_Ansichten_eines_3c84ac207e6556e4a6706069de893065.txt
+The_Lake,_Petworth,__f5e055a9f6195869876dbb6eb25bfdf2.txt
+	 Petworth Landscapes;  located in;  Tate Gallery
+	 Evening Landscape;  depicts;  Chichester Canal
+	 Chichester Canal;  instance of;  landmark
+	 Evening Landscape;  genre;  landscape
+	 Evening Landscape;  made from material;  canvas
+Huldigung_an_Jacquin_ec9c97016d415a00b1d079d5ba2968c2.txt
+Portrait_of_Laura_Di_ed45fca50bfc55a098c7daf8a12be7fa.txt
+	 Portrait of Laura Dianti;  located in;  Kreuzlingen
+	 Portrait of Laura Dianti;  genre;  Portrait
+Cat_Crouching_on_the_8b4f3dc2a36f590f8504691b4c771c0d.txt
+	 Cat Crouching on the Ledge of an Artist’s Atelier;  depicts person;  cat
+	 Cat Crouching on the Ledge of an Artist’s Atelier;  located in;  Leiden Collection
+	 Cat Crouching on the Ledge of an Artist’s Atelier;  alias;  Katzen auf dem Rand des Ateliers eines Künstlers
+	 Cat Crouching on the Ledge of an Artist’s Atelier;  language;  Katzen auf dem Rand des Ateliers eines Künstlers
+	 Cat Crouching on the Ledge of an Artist’s Atelier;  made from material;  canvas
+	 Cat Crouching on the Ledge of an Artist’s Atelier;  depicts;  cat
+	 cat;  instance of;  animal
+	 Cat Crouching on the Ledge of an Artist’s Atelier;  genre;  niche
+	 Cat Crouching on the Ledge of an Artist’s Atelier;  made from material;  canvas
+Portrait_Medallion_o_c28b665a1b1f5aa9ab7f23c99fa8d764.txt
+	 Portrait Medallion of Johan van Oldenbarnevelt;  located in;  Rijksmuseum
+	 Portrait Medallion of Johan van Oldenbarnevelt;  depicts;  Johan van Oldenbarnevelt
+	 Johan van Oldenbarnevelt;  instance of;  human
+	 Johan van Oldenbarnevelt;  expression, gesture or body pose;  profile
+	 Portrait Medallion of Johan van Oldenbarnevelt;  genre;  portrait
+	 Portrait Medallion of Johan van Oldenbarnevelt;  made from material;  ivory
+	 Portrait Medallion of Hugo Grotius;  made from material;  ivory
+Buyiden:_Aud_ad-Daul_cdbc0476353e57aea3409f240926b268.txt
+Ackergill_Tower,_Cai_82641ac797965b36b5e75e9f55bf8f62.txt
+Guernica_(Picasso)_5564abd10b8a53cebf875e7aa8bb281e.txt
+	 Guernica;  located in;  Museo Reina Sofía
+	 Guernica;  language;  Guernica
+	 Guernica;  depicts;  horse
+	 horse;  instance of;  animal
+	 Guernica;  depicts;  bull
+	 bull;  instance of;  animal
+	 Guernica;  depicts;  women
+	 women;  instance of;  human
+	 women;  expression, gesture or body pose;  screaming
+	 Guernica;  depicts;  baby
+	 baby;  instance of;  human
+	 baby;  expression, gesture or body pose;  dead
+	 Guernica;  depicts;  soldier
+	 soldier;  instance of;  human
+	 soldier;  expression, gesture or body pose;  dismembered
+	 Guernica;  movement;  Expressionism
+	 Guernica;  made from material;  oil
+	 Guernica;  creator;  Picasso
+	 Guernica;  inception;  1937
+Triumph_der_Galathea_0e6c66ad35a85eeb93b3931ae6aea311.txt
+	 Triumph der Galathea;  inception;  1753
+	 The work;  inception;  1657
+	 The work;  creator;  Carlo Cesio
+Psyche_und_Amor_auf__b49fb1d8129a5e5ebb5eb9fc007936e7.txt
+	 Psyche und Amor auf dem Hochzeitsbett;  inception;  1820
+Half_Model_of_a_3-Gu_75ca1f76e3ba5622a5c6ebd031241f8d.txt
+Luncheon_of_the_Boat_2addc6cc9c1056f49f7212a6dccd378d.txt
+	 Luncheon of the Boating Party;  located in;  Phillips Collection
+	 Luncheon of the Boating Party;  language;  Le Déjeuner des canotiers
+	 Luncheon of the Boating Party;  made from material;  oil
+	 Luncheon of the Boating Party;  genre;  impressionist
+	 Luncheon of the Boating Party;  creator;  Pierre-Auguste Renoir
+	 Luncheon of the Boating Party;  inception;  1881
+Portrait_of_a_Young__2cefc34226e85acaabc6b9a3dbe6947f.txt
+	 Portrait of a Young Boy with a Hat;  shown with features;  hat
+	 Portrait of a Young Boy with a Hat;  located in;  Leiden
+	 Portrait of a Young Boy with a Hat;  genre;  tronie
+	 Portrait of a Young Boy with a Hat;  made from material;  oil
+Inversion:_Plus_Minu_32733515f79257c6b5e66c728c057a76.txt
+Pergamon_1ee2a447e2c354a68a6a3f6dfee25492.txt
+Simeon_in_the_Temple_0f3af91ffb9a5e869365e759239f5883.txt
+	 Simeon in the Temple;  depicts person;  Simeon
+	 The Presentation in the Temple;  located in;  Leiden
+	 Simeon in the Temple;  depicts;  Simeon
+	 Simeon;  instance of;  human
+	 Simeon in the Temple;  depicts;  Jesus
+	 Jesus;  instance of;  human
+	 Simeon in the Temple;  genre;  Presentation
+	 Simeon in the Temple;  made from material;  oil on canvas
+Self-Portrait_with_S_ddafc45c16575167ad3d05194c698c18.txt
+	 Self-Portrait with Shaded Eyes;  shown with features;  beret
+	 Self-Portrait with Shaded Eyes;  located in;  Leiden
+	 Self-Portrait with Shaded Eyes;  depicts;  Rembrandt
+	 Rembrandt;  instance of;  human
+	 Self-Portrait with Shaded Eyes;  genre;  self-portrait
+	 Self-Portrait with Shaded Eyes;  made from material;  canvas
+Grundriss_des_untere_a3e713055aaa56b2860b1acffecded8b.txt
+Life_Buoy_1aa6120d4c28525785b24c22988c8137.txt
+Josephine_Schaumburg_5f64f90d1b8c5acfa167c2c111cde493.txt
+Demonstration_of_Wax_a9f5b3b6a8c05e1cb510bee2b53507a8.txt
+	 Demonstration of Wax Figures;  depicts;  cabinet
+	 cabinet;  instance of;  landmark
+	 Demonstration of Wax Figures;  genre;  still life
+	 Demonstration of Wax Figures;  made from material;  oil
+Composition_with_Two_9ff9dd32c57d5e5e94bc02395457f9f0.txt
+	 Composition with Two Ovals;  genre;  abstract
+	 Composition with Two Ovals;  made from material;  canvas
+Thenot_and_Colinet_ed5d73f406185092a3787a31c1facb39.txt
+	 Thorton's Pastorals of Virgil;  located in;  British Museum
+Byzantion_7779432e833d59539a19449c3cb76b25.txt
+Public_Notary_3ebd6c1226ea50469778899af0b6bf2b.txt
+	 Public Notary;  depicts person;  Pharisee
+	 Public Notary;  located in;  Louvre
+	 Public Notary;  depicts;  notary
+	 notary;  instance of;  human
+	 notary;  wears;  red cloak
+	 notary;  expression, gesture or body pose;  leans out of an arched window
+	 Public Notary;  genre;  genre
+	 Public Notary;  made from material;  panel
+	 Public Notary;  creator;  Gabriel Metsu
+Manichaean_Painting__a568188becc8575d82ee9e636466d247.txt
+	 Sacred Image of Christ;  located in;  Seiunji Temple
+	 The Manichaean Painting of the Buddha Jesus;  alias;  Yishu fo zhen
+	 The Manichaean Painting of the Buddha Jesus;  inception;  1200
+Bildnis_eines_unbeka_efb1944e81e353d29f36cc8b9abb6e88.txt
+Model_of_a_Gunboat_61e751ab729a5ccc9a25c21367e1694e.txt
+Man_with_a_Book_0fe0b6365d9c590da78d985244caf0c6.txt
+	 Man with a Book;  alias;  Scholar Interrupted at His Writing
+	 Man with a Book;  genre;  scholarly portrait
+	 Man with a Book;  made from material;  canvas
+	 Man with a Book;  creator;  Ferdinand Bol
+Blick_von_der_Villa__9b62a6e414ba5a499fa9ab28e39554b1.txt
+	 landscape;  located in;  Neue Pinakothek
+	 The four views of Rome;  genre;  landscape
+View_of_Ghent_3aa7baf0ddc8562493908503654c5459.txt
+Study_of_the_Syndic__c7ce65518c6f59cdb41c079cf8d1d792.txt
+	 The Syndics;  shown with features;  chair
+	 The Syndics;  located in;  Museum Boijmans Van Beuningen
+	 The Syndics;  depicts;  Van Loon
+	 Van Loon;  instance of;  human
+	 Van Loon;  expression, gesture or body pose;  seated
+	 The Syndics;  depicts;  Jansz
+	 Jansz;  instance of;  human
+	 Jansz;  expression, gesture or body pose;  standing
+	 The Syndics;  genre;  portrait
+	 The Syndics;  creator;  Rembrandt
+Heroische_Landschaft_c15c3833b6f351858339550c26a5c587.txt
+	 Heroische Landschaft mit dem hl. Georg;  depicts;  
+	 ;  instance of;  landmark
+	 Heroische Landschaft mit dem hl. Georg;  movement;  Renaissance
+Der_Turmbau_zu_Babel_be301a18ef135595a6c444ee7b2eb83c.txt
+	 Der Turmbau zu Babel;  creator;  Holbein
+Frontispiz:_Ansicht__de94432a3a8e5bd4a4c16e8f4749fc97.txt
+Venedig:_Stadt_357c7ce80d395755a09cb62a0df04bdf.txt
+	 St. Mark with Nimbus;  depicts person;  St. Mark
+	 St. Mark with Nimbus;  depicts person;  Nimbus
+	 Christ;  depicts person;  Christ
+Solomon_and_the_Quee_fd531688c26e504ca17fce2205a15ea4.txt
+	 Solomon and the Queen of Sheba;  located in;  Rijksmuseum
+	 Solomon and the Queen of Sheba;  genre;  history
+	 Solomon and the Queen of Sheba;  made from material;  oil
+Pauline_Bunny_01bb1d43bcfc5f6e9694348ca4324641.txt
+Bodyguard_335f60f3ce855abb821964050d9720e3.txt
+Margaret_Stonborough_a79227d4f69051b7924eecea87e0a40b.txt
+	 Margarethe Stonborough-Wittgenstein;  depicts;  Margarethe
+	 Margarethe;  instance of;  human
+	 Margarethe;  expression, gesture or body pose;  unmarried
+	 Picture of Fritza Riedler;  genre;  portrait
+	 Adele Bloch-Bauer I;  genre;  portrait
+The_Incredulity_of_S_6f92521abc2b5c8f8428360734ed89f9.txt
+	 Incredulity of St Thomas;  main subject;  Incredulity
+	 Incredulity of St Thomas;  genre;  Caravaggesque
+Diana_and_Her_Nymphs_869b22aba7645746bbbe4c3f1cb6febb.txt
+	 Diana and Her Nymphs in a Clearing;  depicts person;  Diana
+	 Diana and Her Nymphs in a Clearing;  located in;  Pommersfelden
+	 Diana and Her Nymphs in a Clearing;  located in;  London
+	 Diana and Her Nymphs in a Clearing;  depicts;  Diana
+	 Diana;  instance of;  human
+	 Diana;  expression, gesture or body pose;  None
+	 Diana and Her Nymphs in a Clearing;  depicts;  Nymphs
+	 Nymphs;  instance of;  human
+	 Nymphs;  expression, gesture or body pose;  None
+	 Diana and Her Nymphs in a Clearing;  genre;  portrait
+	 Diana and Her Nymphs in a Clearing;  made from material;  canvas
+Portrait_of_a_Man_in_70873e1bb86c57f58d1501dad756dec7.txt
+	 Portrait of a Man in a Red Coat;  shown with features;  red coat
+	 Portrait of a Man in a Red Coat;  located in;  RR
+	 Portrait of a Man in a Red Coat;  made from material;  oak
+	 Portrait of a Man in a Red Coat;  genre;  portrait
+	 Portrait of a Man in a Red Coat;  made from material;  oak
+Einfgung_52f3a25dd95655dd8f64cc859166ac0f.txt
+Half_Model_of_a_Scre_d92fd4af10ef569eb12e45308f37aac0.txt
+Traianus_b93260f21c7d598eae5a48f723c7b6b3.txt
+"Caprices_de_Berlin"_28f0fcbcc72e5d43b84dc7e77fb0ee45.txt
+Warwick_Castle,_Warw_12b3d8e6b212556bbb746f742f3845ef.txt
+Brigadebcher_(11)_au_55ba0ce7e6b05c46a6d24a2d1cedc530.txt
+Half_Model_of_a_Padd_023f72cfc3df5d0990f7e27aa4fc4f2e.txt
+Landschaft_mit_der_B_1d6d8f74f4b05de7b0b8ffa14e9c1ad1.txt
+	 Landschaft mit der Berufung des Hl. Petrus;  genre;  landscape
+Studie_eines_nach_re_e2ab7fd0f8645fb2bc32bcd4e0fc8f49.txt
+	 Studie eines nach rechts gewandten, grasenden Pferdes;  inception;  1881
+Crib_and_Rosa_60e593605da5577997952a17f828261a.txt
+	 Crib and Rosa;  made from material;  painting
+	 Crib and Rosa;  depicts;  Old English Bulldog
+	 Old English Bulldog;  instance of;  landmark
+	 Crib and Rosa;  depicts;  Old English Bulldogs
+	 Old English Bulldogs;  instance of;  landmark
+	 Crib and Rosa;  inception;  1817
+	 Crib and Rosa;  creator;  Abraham Cooper
+Kakiemon_elephants_(_1cf94f68f21f50f0a9af9a9d3fa1e051.txt
+	 Kakiemon elephants;  located in;  British Museum
+	 Kakiemon elephants;  located in;  British Museum
+Street_Musicians_e6158f2f34c85293a0088068f9e87b1c.txt
+Prinz_Eugen_von_Savo_f74bf672ab275e31b52bfac81510d55a.txt
+	 painting;  located in;  Berne Historical Museum
+	 Prince Eugene;  movement;  Baroque
+Plan_und_Aufriss_des_84523785676356d4bfdecbc939225b4d.txt
+Wander_und_Stasi_Ber_9b91a312b1ba5831b9064ed203eced74.txt
+Kuschan:_Kanishka_I._527cb6ae02425454bc465465cd57cf51.txt
+Woman_Seated_at_Her__7d9a4f2b17c25de98905bcc9b747bc36.txt
+	 Woman Seated at Her Toilet;  shown with features;  table
+	 Woman Seated at Her Toilet;  depicts;  woman
+	 woman;  instance of;  human
+	 woman;  wears;  red jacket
+	 woman;  expression, gesture or body pose;  seated
+	 Woman Seated at Her Toilet;  depicts;  maid
+	 maid;  instance of;  human
+	 maid;  wears;  apron
+	 maid;  expression, gesture or body pose;  bent
+	 Woman Seated at Her Toilet;  genre;  genre
+	 Woman Seated at Her Toilet;  made from material;  red jacket
+A_Samurai_Holding_a__086aec9a4a3559c48049d59721750567.txt
+Tnzerin_(Die_Geste)_c039e040cd705c9e9942afecb003f9bf.txt
+Nefertiti_Bust_872799c3e6e354d68ff2bf141d6d6c05.txt
+	 Nefertiti Bust;  located in;  Neues Museum
+	 Nefertiti Bust;  located in;  Altes Museum
+	 Nefertiti Bust;  located in;  Egyptian Museum
+	 Nefertiti Bust;  located in;  Dahlem museum
+	 Nefertiti Bust;  depicts;  Nefertiti
+	 Nefertiti;  instance of;  human
+	 Nefertiti;  expression, gesture or body pose;  sitting
+Selbstbildnis_456401aa994d5831b471681808128517.txt
+	 Selbstbildnis;  movement;  white-dominated suprematism
+The_Country_Road_d22f9dddd3ab57149f87d8bbc9c6e6f7.txt
+Hunter_Getting_Dress_f23a4b8a2ea4536abe1e1e0eef225d6f.txt
+	 Hunter Getting Dressed after Bathing;  located in;  Sp
+	 Hunter Getting Dressed after Bathing;  genre;  genre
+	 Hunter Getting Dressed after Bathing;  made from material;  canvas
+Ein_Sklave_des_Kapit_8ab30296c7b255d38b9e4f34cd372b89.txt
+	 Ein Sklave des Kapitals;  located in;  Tate
+	 Ein Sklave des Kapitals;  depicts;  tree
+	 tree;  instance of;  landmark
+	 Ein Sklave des Kapitals;  genre;  black and white
+Kalimuna_962649b2ae5d53718b86e6c981357b30.txt
+	 Kalimuna;  movement;  Baroque-era
+Memphis_060b94c7bcfb5a798ac8f84431490c77.txt
+	 MEMPHIS;  creator;  John Hoyland
+In_Thee_Rejoiceth_(K_ff77fd2e378253b18be9b69e7b96dc78.txt
+	 In Thee Rejoiceth;  located in;  Hellenic Institute of Byzantine and Post-Byzantine Studies Museum
+	 In Thee Rejoiceth;  alias;  Epi Si Harri
+	 In Thee Rejoiceth;  made from material;  tempera
+	 In Thee Rejoiceth;  genre;  tempera and gold leaf painting
+	 In Thee Rejoiceth;  made from material;  tempera and gold leaf
+Diana,_Goddess_of_th_8d4e8b73b2a05658ac11501fcfa6add8.txt
+	 Diana;  depicts person;  goddess of the hunt
+	 Diana, Goddess of the Hunt;  located in;  
+	 Diana, Goddess of the Hunt;  alias;  Artemis
+	 Diana, Goddess of the Hunt;  genre;  portrait historié
+	 Diana, Goddess of the Hunt;  made from material;  oil
+Puddle_f98f1f89b79550f4a9f0557b5f87976b.txt
+Wscherinnen_am_Nil_3eb1940ce44357c986b182c3f11b9c1f.txt

@@ -1,0 +1,5547 @@
+{
+    "angels": {
+        "has characteristic": [
+            "holding",
+            "white",
+            "sitting"
+        ]
+    },
+    "ABRAHAM BEWIRTET DIE DREI ENGEL": {
+        "depicts": [
+            "angels",
+            "Abraham",
+            "On the tablecloth"
+        ],
+        "contains": [
+            "background",
+            "door frame",
+            "On the right"
+        ],
+        "instance of": "painting",
+        "created by": "Alonso il Sordillo del Arco",
+        "made from material": "Oil on Canvas"
+    },
+    "On the tablecloth": {
+        "contains": "tinplate"
+    },
+    "tree trunk": {
+        "has characteristic": [
+            "shady",
+            "robust",
+            "leaves"
+        ]
+    },
+    "landscape": {
+        "has characteristic": [
+            "populated",
+            "hilly",
+            "dethimized"
+        ],
+        "contains": "group of peasants"
+    },
+    "in the center": {
+        "contains": [
+            "across the covered table",
+            "angels",
+            "flowers",
+            "musical instruments"
+        ]
+    },
+    "background": {
+        "contains": [
+            "to the right",
+            "landscape",
+            "hill",
+            "bouquet",
+            "hair",
+            "palace architecture"
+        ],
+        "has characteristic": [
+            "blue",
+            "neutral",
+            "right",
+            "dark",
+            "middle",
+            "parklike",
+            "frames"
+        ]
+    },
+    "door frame": {
+        "has characteristic": "darkened",
+        "contains": "Sarah"
+    },
+    "table": {
+        "has characteristic": [
+            "covered",
+            "tapestry"
+        ]
+    },
+    "holding": {
+        "has characteristic": [
+            "hands",
+            "wreath",
+            "gun"
+        ],
+        "contains": "standards"
+    },
+    "tinplate": {
+        "contains": [
+            "ribs",
+            "frying pan"
+        ]
+    },
+    "leaves": {
+        "has characteristic": [
+            "move across",
+            "white",
+            "darker",
+            "two-dimensional"
+        ]
+    },
+    "to the right": {
+        "contains": "tree trunk"
+    },
+    "on the left": {
+        "contains": [
+            "Abraham",
+            "door frame",
+            "woman",
+            "two farmers",
+            "Hungerford and Waterloo bridges"
+        ]
+    },
+    "On the right": {
+        "contains": [
+            "two other teenage figures",
+            "town of Ariccia",
+            "behind a rocky outcrop",
+            "army",
+            "town houses",
+            "piece"
+        ]
+    },
+    "lower section": {
+        "contains": "Holy Three Kings"
+    },
+    "ANBETUNG DER HEILIGEN DREI KÖNIGE": {
+        "depicts": "three spatial sections",
+        "has genre": "Venetian painting",
+        "contains": [
+            "Holy Three Kings",
+            "angels",
+            "Holy Family"
+        ],
+        "influenced by": [
+            "Giotto",
+            "Gothic",
+            "Byzantine influence",
+            "Paolo Veneziano"
+        ],
+        "instance of": "painting",
+        "created in": "14th century"
+    },
+    "upper part": {
+        "depicts": "cometary beam of light",
+        "contains": "angels"
+    },
+    "three spatial sections": {
+        "contains": [
+            "lower section",
+            "middle",
+            "upper part"
+        ]
+    },
+    "middle": {
+        "contains": [
+            "donkeys",
+            "oxen",
+            "Holy Family"
+        ],
+        "depicts": "in the cave"
+    },
+    "hill": {
+        "has characteristic": "fairy-like"
+    },
+    "kitchen": {
+        "has characteristic": "small"
+    },
+    "Auf dem Fischmarkt": {
+        "influenced by": [
+            "s Japanese sty",
+            "f Ukiyo"
+        ],
+        "depicts": [
+            "e fish mark",
+            "a Britonese wom",
+            "r chi"
+        ],
+        "instance of": "s painti",
+        "created by": "Carl Moser"
+    },
+    "To the left": {
+        "contains": [
+            "well",
+            "women",
+            "daughter of Pharaoh"
+        ]
+    },
+    "church": {
+        "has characteristic": [
+            "Bernini's",
+            "town of Ariccia",
+            "small",
+            "towers"
+        ]
+    },
+    "Pontine marshes": {
+        "has characteristic": "plain"
+    },
+    "in the background": {
+        "contains": [
+            "coast and sea",
+            "figures",
+            "woman"
+        ],
+        "has characteristic": "children"
+    },
+    "town of Ariccia": {
+        "has characteristic": "small"
+    },
+    "Maria dell'Assunzione": {
+        "has characteristic": "church"
+    },
+    "Aussicht von Ariccia gegen das Meer": {
+        "depicts": [
+            "foreground",
+            "skies",
+            "In the distance",
+            "in the background",
+            "town of Ariccia",
+            "landscape",
+            "mountains",
+            "To the left"
+        ],
+        "instance of": "painting",
+        "created by": "Catel",
+        "influenced by": "painted studies in the open air"
+    },
+    "In the distance": {
+        "contains": [
+            "Ponza Islands in the Tyrrhenian Sea",
+            "Monte Circeo",
+            "Pontine marshes"
+        ]
+    },
+    "foreground": {
+        "has characteristic": [
+            "shadowy",
+            "light sources"
+        ],
+        "contains": "group"
+    },
+    "Via Appia": {
+        "contains": "group of peasants"
+    },
+    "mountains": {
+        "has characteristic": [
+            "forest",
+            "high"
+        ]
+    },
+    "skies": {
+        "has characteristic": [
+            "lit",
+            "high"
+        ],
+        "contains": "cloud formations"
+    },
+    "women": {
+        "has characteristic": "jars"
+    },
+    "B-B Town": {
+        "created in": "1946",
+        "created by": "Feininger",
+        "depicts": [
+            "gh ",
+            "nds ",
+            "f Manhatt"
+        ],
+        "instance of": "painting"
+    },
+    "f Manhatt": {
+        "has characteristic": [
+            "ture ",
+            "archite"
+        ]
+    },
+    "ky-h": {
+        "has characteristic": "its "
+    },
+    "yscrapers d": {
+        "contains": "nds "
+    },
+    "gh ": {
+        "has characteristic": [
+            "yscrapers d",
+            "ky-h"
+        ]
+    },
+    "nds ": {
+        "has characteristic": [
+            " thous",
+            "ed wit"
+        ]
+    },
+    "mill": {
+        "has characteristic": "small"
+    },
+    "ÜBERFALL MIT REITERGEFECHT": {
+        "depicts": [
+            "combatant knights and infantry",
+            "flanked on the left and right",
+            "In the middle of the background",
+            "On the left side",
+            "On the right",
+            "hilly landscape",
+            "path",
+            "caravan of numerous figures"
+        ],
+        "influenced by": "Sebastian Vrancx",
+        "has characteristic": "restrained colour"
+    },
+    "horse": {
+        "has characteristic": "fallen to the ground"
+    },
+    "approaches": {
+        "has characteristic": "horses"
+    },
+    "In the middle of the background": {
+        "contains": "wooded hill"
+    },
+    "path": {
+        "has characteristic": [
+            "narrowing",
+            "wide"
+        ]
+    },
+    "men": {
+        "has characteristic": "fallen and lying"
+    },
+    "wooded hill": {
+        "contains": [
+            "in the middle",
+            "left side"
+        ]
+    },
+    "flanked on the left and right": {
+        "contains": "tree"
+    },
+    "combatant knights and infantry": {
+        "has characteristic": [
+            "rifles",
+            "daggers",
+            "lances"
+        ]
+    },
+    "figures": {
+        "has characteristic": [
+            "red",
+            "pottery",
+            "large group",
+            "shiny",
+            "brightly-lit",
+            "antique mythological",
+            "smaller",
+            "female",
+            "blurred"
+        ],
+        "symbolizes": "Sabine robbery",
+        "instance of": "porcelain"
+    },
+    "On the left side": {
+        "contains": [
+            "horse",
+            "men"
+        ]
+    },
+    "soldiers": {
+        "has characteristic": [
+            "holding",
+            "helmet",
+            "armor"
+        ]
+    },
+    "horses": {
+        "has characteristic": "white"
+    },
+    "standards": {
+        "has characteristic": "red-flagged"
+    },
+    "army": {
+        "contains": "soldiers",
+        "has characteristic": [
+            "small",
+            "approaches"
+        ]
+    },
+    "tree": {
+        "has characteristic": "tall"
+    },
+    "left side": {
+        "contains": "mill"
+    },
+    "in the middle": {
+        "contains": "church"
+    },
+    "horizon": {
+        "contains": [
+            "path",
+            "caravan of numerous figures"
+        ],
+        "has characteristic": "low-lying"
+    },
+    "BERGLANDSCHAFT MIT DREI REITERN  AN EINER FURT": {
+        "depicts": [
+            "rom the back left,",
+            "o the right,",
+            "watercourse",
+            "hree riders;",
+            "ehind a rocky ledge ",
+            "ider ",
+            "orse ",
+            "og,",
+            "ky."
+        ]
+    },
+    "ky.": {
+        "has characteristic": "ividly clouded "
+    },
+    "watercourse": {
+        "has characteristic": [
+            "illy ",
+            "ocky "
+        ]
+    },
+    "ehind a rocky ledge ": {
+        "contains": [
+            "ider ",
+            "orse ",
+            "og,"
+        ]
+    },
+    "illside ": {
+        "contains": "hree riders;"
+    },
+    "og,": {
+        "has characteristic": "unting "
+    },
+    "o the right,": {
+        "contains": "ould "
+    },
+    "ider ": {
+        "has characteristic": "ed-clad "
+    },
+    "rom the back left,": {
+        "contains": "ascade "
+    },
+    "orse ": {
+        "has characteristic": "ox-colored "
+    },
+    "arch": {
+        "has characteristic": [
+            "stone",
+            "high"
+        ]
+    },
+    "BILDHAUER BEI DER ARBEIT, IN WEITER LANDSCHAFT MIT ANTIKEN RUINEN": {
+        "depicts": [
+            "river",
+            "dog",
+            "husar",
+            "On the right side of the high stone arch",
+            "Under an ancient palace-like ruin",
+            "Sabine robbery",
+            "girl",
+            "sculpture",
+            "sculptor",
+            "under high skies",
+            "boy"
+        ]
+    },
+    "clothing": {
+        "has characteristic": [
+            "red",
+            "turquoise",
+            "partly gold-plated",
+            "sumptuous",
+            "tattered"
+        ]
+    },
+    "girl": {
+        "has characteristic": [
+            "sits",
+            "little",
+            "Young",
+            "pretty",
+            "dress",
+            "wreath",
+            "young"
+        ]
+    },
+    "husar": {
+        "has characteristic": "observes"
+    },
+    "coat": {
+        "has characteristic": [
+            "red",
+            "robe",
+            "tight",
+            "sleeves",
+            "waist",
+            "woolly"
+        ]
+    },
+    "ruin": {
+        "has characteristic": [
+            "palace-like",
+            "ancient"
+        ],
+        "contains": "Corinthian columns"
+    },
+    "Under the sculpture": {
+        "has characteristic": "in front of the sole"
+    },
+    "sculpture": {
+        "has characteristic": "marble"
+    },
+    "cloud formations": {
+        "has characteristic": [
+            "large",
+            "white"
+        ]
+    },
+    "Corinthian columns": {
+        "has characteristic": [
+            "canalised",
+            "high"
+        ]
+    },
+    "husser": {
+        "has characteristic": [
+            "looks carefully out of the picture",
+            "coat"
+        ]
+    },
+    "breasts": {
+        "has characteristic": "different"
+    },
+    "dog": {
+        "has characteristic": [
+            "little",
+            "sitting",
+            "Standing",
+            "lying",
+            "smaller",
+            "standing on its hind quarters"
+        ]
+    },
+    "into the distance": {
+        "contains": "river"
+    },
+    "On the right side of the high stone arch": {
+        "contains": "figures"
+    },
+    "sculptor's": {
+        "has characteristic": "work"
+    },
+    "On the left": {
+        "depicts": "into the distance",
+        "contains": [
+            "residence",
+            "San Simeone Piccolo"
+        ]
+    },
+    "under high skies": {
+        "contains": "river"
+    },
+    "BILDNIS EINER JUNGEN ADLIGEN, MÖGLICHERWEISE MARIA BEATRICE VON MODENA, HERZOGIN VON YORK": {
+        "created by": "Benedetto Gennari",
+        "created in": "1680",
+        "depicts": "Maria Beatrice di Modena",
+        "influenced by": [
+            "Pierre Mignard",
+            "Sir Peter Lely"
+        ],
+        "instance of": [
+            "portrait",
+            "paintings"
+        ]
+    },
+    "Benedetto Gennari": {
+        "influenced by": "Giovanni Francesco Barbieris"
+    },
+    "Maria Beatrice di Modena": {
+        "has characteristic": "young"
+    },
+    "In the trees above the well": {
+        "contains": "parrot",
+        "depicts": "birds"
+    },
+    "shoes": {
+        "has characteristic": "red"
+    },
+    "woman": {
+        "has characteristic": [
+            "sitting",
+            "cloth",
+            "young",
+            "pulse",
+            "weak",
+            "exchanges meaningful gazes",
+            "elegantly dressed",
+            "seated",
+            "bent, stick-leaning",
+            "talking",
+            "old",
+            "coat",
+            "elderly",
+            "hood",
+            "hair",
+            "neck",
+            "naked",
+            "lips",
+            "turned her head sideways",
+            "sitting on",
+            "dress",
+            "beautiful",
+            "shadow",
+            "reading a letter",
+            "walking in the bush"
+        ],
+        "symbolizes": [
+            "patient",
+            "ter Harriet McCu"
+        ]
+    },
+    "In front of her": {
+        "contains": [
+            "vase",
+            "shoes",
+            "mirror"
+        ]
+    },
+    "At the edge": {
+        "contains": [
+            "in the middle",
+            "pool"
+        ]
+    },
+    "BRUNNENANLAGE MIT BADENDEN FRAUEN": {
+        "depicts": [
+            "In the foreground",
+            "In front of her",
+            "At the edge",
+            "In the trees above the well"
+        ],
+        "instance of": "sculpture"
+    },
+    "beside her": {
+        "contains": "dog"
+    },
+    "cloak": {
+        "has characteristic": [
+            "red",
+            "blue"
+        ]
+    },
+    "In the foreground": {
+        "contains": [
+            "woman",
+            "market table",
+            "on the left"
+        ]
+    },
+    "lady": {
+        "has characteristic": [
+            "cloak",
+            "pretty",
+            "young",
+            "dress",
+            "reading",
+            "silk underw",
+            "well-to-do"
+        ]
+    },
+    "vase": {
+        "has characteristic": "glass"
+    },
+    "BÜSTE EINES JUNGEN MÄDCHENS „SUZON“": {
+        "fabrication method": "cold-worked",
+        "made from material": [
+            "golden-yellow bronze",
+            "bronze cast iron"
+        ],
+        "depicts": [
+            " sol",
+            " hai",
+            "head",
+            " bus"
+        ],
+        "influenced by": " late 18th century plastic",
+        "created by": " Rodin'",
+        "created in": " 1872/7",
+        "instance of": " bus"
+    },
+    "head": {
+        "has characteristic": [
+            "to the left",
+            "slightly lowered",
+            "looking down"
+        ]
+    },
+    " forehea": {
+        "has characteristic": " hai"
+    },
+    " attache": {
+        "contains": " sol"
+    },
+    " bus": {
+        "has characteristic": " femal"
+    },
+    " sol": {
+        "has characteristic": " round, curve"
+    },
+    "yellow": {
+        "has characteristic": "golden"
+    },
+    "trees": {
+        "has characteristic": [
+            "two",
+            "young",
+            "mighty"
+        ],
+        "contains": "cut-off parts"
+    },
+    "vest": {
+        "has characteristic": "red"
+    },
+    "cap": {
+        "has characteristic": [
+            "yellow",
+            "16th-century"
+        ]
+    },
+    "roof": {
+        "has characteristic": "straw"
+    },
+    "blue": {
+        "has characteristic": [
+            "light",
+            "dark",
+            "pale",
+            "deep"
+        ]
+    },
+    "shades": {
+        "has characteristic": "dark"
+    },
+    "sky": {
+        "has characteristic": [
+            "blue",
+            "lightly curved",
+            "moving",
+            "open"
+        ],
+        "contains": "floating"
+    },
+    "farmhouse": {
+        "has characteristic": "widely laid"
+    },
+    "Bayern 1549 - Kleiner Reisealtar": {
+        "depicts": [
+            "In its open state, the central depiction",
+            "Pre-Lennine",
+            "wings"
+        ],
+        "instance of": [
+            "reliefs",
+            "painting",
+            "altar",
+            "relief"
+        ],
+        "made from material": "Wood",
+        "created in": "1549"
+    },
+    "wings": {
+        "contains": [
+            "Franciscan",
+            "outer sides",
+            "Helena",
+            "Andrew",
+            "Anthony",
+            "Vitus"
+        ]
+    },
+    "right": {
+        "depicts": "gender of those of Brennberg from the Regensburg district"
+    },
+    "Pre-Lennine": {
+        "contains": "Christ"
+    },
+    "outer sides": {
+        "depicts": [
+            "coats of arms of the Augsburg Patrizier Langenmantel",
+            "gender of those of Brennberg from the Regensburg district"
+        ]
+    },
+    "Christ": {
+        "has characteristic": "crucifixion"
+    },
+    "In its open state, the central depiction": {
+        "contains": "Francis"
+    },
+    "left": {
+        "depicts": "coats of arms of the Augsburg Patrizier Langenmantel",
+        "contains": "princess"
+    },
+    "Francis": {
+        "has characteristic": "stigmatization"
+    },
+    " ado": {
+        "has characteristic": [
+            " shal",
+            "ts in ",
+            "ticle 2"
+        ]
+    },
+    " the right, moth": {
+        "contains": [
+            " co",
+            " is seen, a man l"
+        ]
+    },
+    "Belebte Ruinenlandschaft am Meeresufer": {
+        "contains": [
+            " Regulation (EC) N",
+            " co"
+        ],
+        "depicts": [
+            " ado",
+            " the right, moth",
+            " arched windows, a variety of ",
+            "The Comm",
+            "hor"
+        ],
+        "fabrication method": "ns, partly on the rig",
+        "instance of": "rful fig"
+    },
+    " co": {
+        "has characteristic": [
+            "t bank o",
+            "versation, a",
+            "ten",
+            "ould "
+        ]
+    },
+    "sua": {
+        "has characteristic": [
+            "men, are pla",
+            "thing, "
+        ]
+    },
+    "ticle 2": {
+        "has characteristic": [
+            "with A",
+            "dance"
+        ]
+    },
+    " is seen, a man l": {
+        "has characteristic": [
+            "re a shi",
+            "the river,"
+        ]
+    },
+    " Regulation (EC) N": {
+        "has characteristic": " of a la",
+        "contains": "ith"
+    },
+    "affing ": {
+        "has characteristic": "-figure s"
+    },
+    "hor": {
+        "has characteristic": [
+            "nd a high, sky-h",
+            "on a",
+            "back"
+        ]
+    },
+    "t bank o": {
+        "has characteristic": "n the le"
+    },
+    "ard, surrounded b": {
+        "has characteristic": [
+            "nd a high, sky-h",
+            "igure"
+        ]
+    },
+    " arched windows, a variety of ": {
+        "contains": [
+            "ourful c",
+            "gures i",
+            "n the for",
+            "sua"
+        ]
+    },
+    "igure": {
+        "has characteristic": "us groups of "
+    },
+    "scape": {
+        "has characteristic": [
+            "nd in",
+            " the lan"
+        ]
+    },
+    "The Comm": {
+        "contains": [
+            " ado",
+            " Regulation (EC) N"
+        ]
+    },
+    " thei": {
+        "has characteristic": "moth",
+        "contains": ", se"
+    },
+    "ts in ": {
+        "has characteristic": "egated a"
+    },
+    " of a la": {
+        "has characteristic": ".\nIn fron"
+    },
+    "nd a high, sky-h": {
+        "has characteristic": "h a bow "
+    },
+    "e s": {
+        "symbolizes": "igure",
+        "has characteristic": "high bl"
+    },
+    "ith": {
+        "has characteristic": " and ro"
+    },
+    "Besinnung (Affe vor blauem Grund)": {
+        "has characteristic": [
+            "emotionally charged",
+            "monkey paintings"
+        ],
+        "symbolizes": [
+            "humanity",
+            "figure of existence",
+            "visual proof of Darwin's theory of evolution",
+            "existence"
+        ],
+        "instance of": "paintings",
+        "created by": "Gabriel von Max",
+        "influenced by": [
+            "Charles Darwin",
+            "Pain Forgotten"
+        ],
+        "contains": "monkey",
+        "depicts": "background"
+    },
+    "monkey": {
+        "has characteristic": [
+            "gaze",
+            "unskilled"
+        ]
+    },
+    "gaze": {
+        "has characteristic": [
+            "gentle",
+            "penetrating"
+        ]
+    },
+    "in the distance": {
+        "has characteristic": [
+            "gaze",
+            "night sky"
+        ],
+        "contains": [
+            "silhouette of a city",
+            "St Paul's Cathedral"
+        ]
+    },
+    " stri": {
+        "has characteristic": " rectangular longitudina",
+        "contains": " color patter"
+    },
+    " blu": {
+        "has characteristic": " from indigo to azur"
+    },
+    "Bild E III (Caretera)": {
+        "depicts": [
+            " modulatio",
+            "forms",
+            " stri",
+            "geometric abstraction",
+            "strictly defined surface"
+        ],
+        "fabrication method": [
+            "colour processes",
+            "colour modulations"
+        ],
+        "created by": "Rupprecht Geiger's",
+        "has genre": "abstract",
+        "instance of": "painting"
+    },
+    " modulatio": {
+        "has characteristic": " blu"
+    },
+    " upper half of the imag": {
+        "contains": " modulatio"
+    },
+    " on the left edg": {
+        "contains": " stri"
+    },
+    " color patter": {
+        "has characteristic": " black to dark re"
+    },
+    "forms": {
+        "has characteristic": "free, non-object"
+    },
+    "nature": {
+        "has characteristic": [
+            "real",
+            "harsh, repulsive"
+        ]
+    },
+    "Blick über die Themse bei Richmond Gardens auf Syon House": {
+        "symbolizes": [
+            "landscape mood",
+            "nature"
+        ],
+        "contains": "people",
+        "depicts": [
+            "sunlight",
+            "mist",
+            "river landscape",
+            "on the right of the bank"
+        ],
+        "instance of": "painting",
+        "influenced by": "Claude Lorrain, Joseph Vernet and Canaletto",
+        "created by": "Wilson",
+        "created in": [
+            "1776",
+            "1761"
+        ]
+    },
+    "on the right of the bank": {
+        "depicts": "Syon House"
+    },
+    "mist": {
+        "has characteristic": "gentle"
+    },
+    "flowers": {
+        "has characteristic": [
+            "Smaller",
+            "shade",
+            "beautiful",
+            "light"
+        ]
+    },
+    "Blumenstück": {
+        "depicts": [
+            "bouquet",
+            "strawberry",
+            "flowers",
+            "over the edge of the table or the plate",
+            "Flowers"
+        ],
+        "has genre": "Biedermeier",
+        "instance of": "paintings"
+    },
+    "placed": {
+        "depicts": "over the edge of the table or the plate",
+        "contains": "vase"
+    },
+    "oval": {
+        "contains": "bouquet"
+    },
+    "light": {
+        "has characteristic": [
+            "most",
+            "Illuminated",
+            "reddish",
+            "soft"
+        ]
+    },
+    "fallen from": {
+        "contains": [
+            "vase",
+            "Flowers"
+        ]
+    },
+    "fruits": {
+        "has characteristic": [
+            "exotic",
+            "Native"
+        ]
+    },
+    "edge": {
+        "contains": "flowers"
+    },
+    "hand": {
+        "has characteristic": [
+            "right",
+            "left",
+            "clinges",
+            "rests"
+        ]
+    },
+    "wicker basket": {
+        "has characteristic": "large"
+    },
+    "dress": {
+        "has characteristic": [
+            "sumptuous",
+            "coat",
+            "silk",
+            "pink",
+            "black",
+            "red",
+            "almost shoulderless"
+        ]
+    },
+    "curtain": {
+        "has characteristic": [
+            "red",
+            "fringed"
+        ]
+    },
+    "ttributed,": {
+        "has characteristic": "ainting is "
+    },
+    "CLIO, EUTERPE UND TERPSICHORE": {
+        "instance of": "female f",
+        "depicts": [
+            "The Commission has al",
+            "on on the protection",
+            "ircle formed by the concentrically arranged limbs. \nFranchi, t"
+        ],
+        "created in": "e (lyrics",
+        "created by": "tes the"
+    },
+    "The Commission has al": {
+        "contains": "dopted a proposal fo"
+    },
+    "ircle formed by the concentrically arranged limbs. \nFranchi, t": {
+        "contains": "ttributed,"
+    },
+    "al el": {
+        "has characteristic": "environment.\nThe pyrami"
+    },
+    "on on the protection": {
+        "contains": "al el"
+    },
+    "e on a stone niche opening into an artist’s stud": {
+        "contains": "d c"
+    },
+    "e opening of a nic": {
+        "symbolizes": [
+            "a framing devi",
+            "n illusionistic constru"
+        ]
+    },
+    "Cat Crouching on the Ledge of an Artist’s Atelier": {
+        "depicts": [
+            "ate",
+            "t f",
+            "e on a stone niche opening into an artist’s stud",
+            "e opening of a nic",
+            "e front of the nic",
+            "d sto"
+        ],
+        "created by": "Gerrit Dou",
+        "fabrication method": [
+            "untless minuscule strokes of multicolor",
+            "illusionism"
+        ],
+        "instance of": "e painti"
+    },
+    "s p": {
+        "has characteristic": "e cat"
+    },
+    "y front of the picture pla": {
+        "contains": "e opening of a nic"
+    },
+    "e front of the nic": {
+        "has characteristic": "e upper le",
+        "symbolizes": "s light sour"
+    },
+    "e nic": {
+        "has characteristic": "a sto"
+    },
+    "ate": {
+        "has characteristic": "s p"
+    },
+    "e c": {
+        "has characteristic": "e ta"
+    },
+    "d c": {
+        "has characteristic": [
+            "t crouching in profi",
+            "a grey-and-white-strip"
+        ]
+    },
+    " baselight ope": {
+        "has characteristic": [
+            "hich th",
+            "ith "
+        ]
+    },
+    "acterized ": {
+        "has characteristic": [
+            "cha",
+            "ly 1990s were"
+        ]
+    },
+    "Cebe": {
+        "depicts": [
+            " \nOn a multi-",
+            "acterized ",
+            " baselight ope"
+        ],
+        "created in": "al 19",
+        "fabrication method": " a pasto-like linear and doted fin",
+        "instance of": "0s paint",
+        "created by": "ce\nThe Commiss"
+    },
+    "ith ": {
+        "has characteristic": [
+            "ncy ",
+            "tly pati"
+        ]
+    },
+    ", the ": {
+        "has characteristic": "ainter scatters coun"
+    },
+    "h a fi": {
+        "has characteristic": "ure on the "
+    },
+    " \nOn a multi-": {
+        "contains": ", the "
+    },
+    "Composition with Two Ovals": {
+        "created by": ". \nIt is",
+        "fabrication method": [
+            "se of primary colours and a sy",
+            "s Choucair’s characteristic curved, closed forms, geometry of line, repetition of modules and",
+            "m this period i"
+        ],
+        "depicts": [
+            "ve aro",
+            "hape an",
+            "ion w"
+        ],
+        "created in": "Comp",
+        "made from material": "ally o",
+        "instance of": " Ovals \n",
+        "has genre": " with Tw"
+    },
+    "ion w": {
+        "symbolizes": " artic",
+        "has characteristic": [
+            "vals the ",
+            "mposi"
+        ]
+    },
+    "ing ": {
+        "has characteristic": "ppea"
+    },
+    "hape an": {
+        "has characteristic": [
+            "tive ",
+            "ette ",
+            "lour p",
+            "sti",
+            "d, gr"
+        ]
+    },
+    "ve aro": {
+        "has characteristic": "ing "
+    },
+    "ist se": {
+        "contains": "at the ar"
+    },
+    "sterl": {
+        "has characteristic": "5 pounds"
+    },
+    "ers and, as a ": {
+        "has characteristic": "ral ot"
+    },
+    "Johan": {
+        "has characteristic": "law,"
+    },
+    " commi": {
+        "has characteristic": [
+            " led t",
+            " pro"
+        ]
+    },
+    "ed to h": {
+        "has characteristic": "ompa"
+    },
+    ". \nP": {
+        "has characteristic": "Europ"
+    },
+    "ntin": {
+        "has characteristic": " his Flor"
+    },
+    "latine": {
+        "has characteristic": "or P"
+    },
+    " of w": {
+        "has characteristic": "t), bot"
+    },
+    "’s return to": {
+        "has characteristic": "ter Schalcke"
+    },
+    "üsseldo": {
+        "has characteristic": "ourt in "
+    },
+    "e app": {
+        "has characteristic": " not ha"
+    },
+    "two r": {
+        "has characteristic": " elector"
+    },
+    "ificial": {
+        "has characteristic": [
+            "trayi",
+            " ar"
+        ]
+    },
+    " ce": {
+        "has characteristic": " woul"
+    },
+    "age, his": {
+        "has characteristic": "t patro"
+    },
+    "Cosim": {
+        "has characteristic": "ndon,"
+    },
+    "ter are still t": {
+        "has characteristic": " of the ma"
+    },
+    " lik": {
+        "contains": " mos"
+    },
+    "inting": {
+        "has characteristic": "ese p"
+    },
+    "finding of": {
+        "contains": [
+            "baby Moses",
+            "daughter of Pharaoh"
+        ],
+        "depicts": "water"
+    },
+    "Behind her": {
+        "contains": "two servants"
+    },
+    "robe": {
+        "has characteristic": [
+            "reddish-glowing",
+            "precious",
+            "gold",
+            "red-blue",
+            "close-up"
+        ]
+    },
+    "standing by the water": {
+        "contains": "basket",
+        "depicts": "water"
+    },
+    "DIE AUFFINDUNG DES MOSES": {
+        "depicts": [
+            "On the right bank",
+            "water",
+            "in the distance",
+            "To the left",
+            "Behind her",
+            "finding of"
+        ],
+        "contains": [
+            "daughter of Pharaoh",
+            "two servants",
+            "two maidens",
+            "mother of Moses",
+            "baby Moses"
+        ],
+        "instance of": "painting"
+    },
+    "infant": {
+        "has characteristic": "naked"
+    },
+    "sleeves": {
+        "has characteristic": [
+            "pointed",
+            "white",
+            "bracelet-length"
+        ]
+    },
+    "daughter of Pharaoh": {
+        "has characteristic": "dress"
+    },
+    "over her head": {
+        "has characteristic": "umbrella"
+    },
+    "umbrella": {
+        "has characteristic": "red"
+    },
+    "mother of Moses": {
+        "has characteristic": "kneeling"
+    },
+    "On the right bank": {
+        "contains": [
+            "two maidens",
+            "infant"
+        ]
+    },
+    "holds": {
+        "has characteristic": "cloak"
+    },
+    "king's daughter": {
+        "has characteristic": "turns to"
+    },
+    "silhouette of a city": {
+        "has characteristic": "bright"
+    },
+    "two maidens": {
+        "has characteristic": "took"
+    },
+    "two servants": {
+        "has characteristic": [
+            "over her head",
+            "holds"
+        ]
+    },
+    "bank": {
+        "has characteristic": "right"
+    },
+    "waist": {
+        "has characteristic": "narrow"
+    },
+    "DORF IN FLUSSLANDSCHAFT MIT FIGURENSTAFFAGE UND BRUNNEN": {
+        "depicts": [
+            "ing in its",
+            "igh",
+            "n, dated 31 ",
+            "ght ",
+            "nion by Dr. Klaus ",
+            " up a ",
+            "htly ",
+            "on the wa",
+            "n the shore. \nTo ",
+            "lef",
+            "rounde",
+            "tury and con"
+        ],
+        "has characteristic": "es. "
+    },
+    "verlooks a qui": {
+        "contains": "ght "
+    },
+    "on the wa": {
+        "has characteristic": " is"
+    },
+    "n the shore. \nTo ": {
+        "contains": [
+            " boat",
+            "ht no"
+        ]
+    },
+    "es. ": {
+        "has characteristic": [
+            "ay sk",
+            "h-g"
+        ]
+    },
+    " a couple is ": {
+        "has characteristic": "lef"
+    },
+    "lef": {
+        "has characteristic": "n the"
+    },
+    " up a ": {
+        "has characteristic": " to a c"
+    },
+    " boat": {
+        "has characteristic": ", while"
+    },
+    "rm a": {
+        "contains": " to the 20s of t",
+        "has characteristic": "nal f"
+    },
+    " pain": {
+        "has characteristic": "died th"
+    },
+    "k by Philipp": {
+        "contains": "tury and con"
+    },
+    "tury and con": {
+        "has characteristic": "th ce",
+        "contains": " it to be a"
+    },
+    " \nA s": {
+        "contains": "ree",
+        "has characteristic": "ee plantations"
+    },
+    "e left, a p": {
+        "contains": " up a "
+    },
+    "igh": {
+        "has characteristic": "p rises to the "
+    },
+    "htly ": {
+        "has characteristic": [
+            "rom a sli",
+            "nd sli"
+        ]
+    },
+    "n, dated 31 ": {
+        "contains": " pain"
+    },
+    "owing riv": {
+        "contains": "ght "
+    },
+    " viewpoint, ": {
+        "contains": "htly "
+    },
+    " to the 20s of t": {
+        "has characteristic": "ed i"
+    },
+    "ht no": {
+        "has characteristic": ", while"
+    },
+    "ing in its": {
+        "contains": "rm a"
+    },
+    "rounde": {
+        "has characteristic": "ree"
+    },
+    "l sailing bo": {
+        "contains": "on the wa"
+    },
+    " view to th": {
+        "contains": "verlooks a qui"
+    },
+    "wheel": {
+        "symbolizes": [
+            "martyrdom",
+            "tool of martyrdom"
+        ],
+        "has characteristic": [
+            "destroyed",
+            "lined with"
+        ]
+    },
+    "wrists": {
+        "has characteristic": "tied"
+    },
+    "angel": {
+        "has characteristic": [
+            "holding",
+            "floating",
+            "fallen"
+        ]
+    },
+    "Das Martyrium der Heiligen Katharina": {
+        "symbolizes": "martyrdom",
+        "depicts": [
+            "wheel",
+            "palm branch",
+            "wreath"
+        ],
+        "contains": [
+            "angel",
+            "torturer",
+            "Catherine"
+        ],
+        "instance of": "painting",
+        "fabrication method": "light-dark staging"
+    },
+    "Saint Catherine": {
+        "has characteristic": [
+            "eyes",
+            "wrists",
+            "chest",
+            "robe",
+            "head"
+        ]
+    },
+    "divine help": {
+        "has characteristic": "angels"
+    },
+    "touches": {
+        "has characteristic": "hand",
+        "contains": [
+            "wheel",
+            "palm branch"
+        ]
+    },
+    "lined with": {
+        "has characteristic": [
+            "iron nails",
+            "pointed saws"
+        ]
+    },
+    "pulling": {
+        "symbolizes": [
+            "hair",
+            "out of fear"
+        ]
+    },
+    "Catherine": {
+        "symbolizes": "virgin",
+        "has characteristic": "prayer"
+    },
+    "tool of martyrdom": {
+        "has characteristic": "destroyed"
+    },
+    "eyes": {
+        "has characteristic": [
+            "full of tears",
+            "watchful",
+            "attentive",
+            "looking openly",
+            "wild",
+            "terror"
+        ]
+    },
+    "in his outstretched left hand": {
+        "has characteristic": "wreath"
+    },
+    "on the upper left edge": {
+        "contains": "angel"
+    },
+    "virgin": {
+        "symbolizes": "Christ"
+    },
+    "tool of torture": {
+        "symbolizes": "martyrdom"
+    },
+    "chest": {
+        "has characteristic": "free"
+    },
+    "torturer": {
+        "has characteristic": [
+            "looks at her",
+            "pulling"
+        ]
+    },
+    "looks at her": {
+        "symbolizes": "amazement"
+    },
+    "palm branch": {
+        "symbolizes": "martyrdom"
+    },
+    "on the left edge": {
+        "contains": "torturer"
+    },
+    "Dead End 3": {
+        "created by": "Ed Ruscha",
+        "instance of": [
+            "prints",
+            "paper"
+        ],
+        "fabrication method": "mixografia",
+        "created in": [
+            "2015",
+            "2011"
+        ],
+        "depicts": "coloured inks",
+        "symbolizes": [
+            "warning notices",
+            "sales promotions"
+        ]
+    },
+    "warning notices": {
+        "has characteristic": "dilapidated"
+    },
+    "effects": {
+        "symbolizes": "metal"
+    },
+    "metal": {
+        "symbolizes": [
+            "warning notices",
+            "sales promotions"
+        ],
+        "has characteristic": "weathered"
+    },
+    "coloured inks": {
+        "has characteristic": "different"
+    },
+    "work": {
+        "has characteristic": "foliate"
+    },
+    "ambiance": {
+        "has characteristic": "private"
+    },
+    "book": {
+        "has characteristic": [
+            "illustrated",
+            "open",
+            "pages"
+        ]
+    },
+    "painter": {
+        "has characteristic": "highly regarded"
+    },
+    "Der Schmadribachfall": {
+        "depicts": [
+            "ountain massif ",
+            "t the foot ",
+            "ountain range ",
+            "ine forest ",
+            "aterfall "
+        ],
+        "symbolizes": [
+            "ature ",
+            "andscape "
+        ],
+        "contains": "hepherd ",
+        "created by": "och's "
+    },
+    "t the foot ": {
+        "contains": [
+            "eadwood.",
+            "hepherd ",
+            "tream "
+        ]
+    },
+    "ature ": {
+        "has characteristic": "mpoverished "
+    },
+    "ine forest ": {
+        "has characteristic": [
+            "reen ",
+            "ense,"
+        ]
+    },
+    "bove ": {
+        "contains": "ine forest "
+    },
+    "andscape ": {
+        "has characteristic": "eroic\""
+    },
+    "reen ": {
+        "has characteristic": "ark "
+    },
+    "tream ": {
+        "has characteristic": "ild "
+    },
+    "ountain ": {
+        "has characteristic": "t the foot "
+    },
+    "Der Tod der Ophelia": {
+        "contains": "Ophelia",
+        "depicts": [
+            "woodland",
+            "water"
+        ],
+        "created by": "Delacroix",
+        "symbolizes": "death"
+    },
+    "Ophelia": {
+        "has characteristic": [
+            "dying",
+            "floating",
+            "insane",
+            "clinges",
+            "drowns herself."
+        ]
+    },
+    "woodland": {
+        "has characteristic": [
+            "brown",
+            "lit",
+            "green"
+        ]
+    },
+    "green": {
+        "has characteristic": [
+            "dark",
+            "deep"
+        ]
+    },
+    "lit": {
+        "has characteristic": "mysteriously"
+    },
+    "water": {
+        "contains": [
+            "floating",
+            "Ophelia"
+        ]
+    },
+    "hair": {
+        "has characteristic": [
+            "loose",
+            "red",
+            "closely cropped",
+            "wreath",
+            "brown"
+        ]
+    },
+    "garment": {
+        "has characteristic": "wrinkles"
+    },
+    "s five figu": {
+        "contains": "eaves. \nThe"
+    },
+    "Der sogenannte Verzweifelnde": {
+        "depicts": [
+            "eft is",
+            " Dürer ",
+            "que of etch",
+            "onnectio",
+            "he fig",
+            "or mea",
+            "eaves. \nThe"
+        ],
+        "instance of": [
+            "lution. \nDi",
+            "baum "
+        ],
+        "created in": [
+            " are",
+            "and "
+        ],
+        "created by": "ery b",
+        "fabrication method": "rder ar"
+    },
+    "or mea": {
+        "has characteristic": "narrative"
+    },
+    "hich he c": {
+        "has characteristic": ", in "
+    },
+    "onnectio": {
+        "has characteristic": "ngful "
+    },
+    "eft is": {
+        "has characteristic": [
+            "the pro",
+            "ile ",
+            "n the "
+        ]
+    },
+    "que of etch": {
+        "contains": [
+            " Dürer ",
+            "hich he c"
+        ]
+    },
+    " Dürer ": {
+        "has characteristic": "1518"
+    },
+    "f his": {
+        "has characteristic": "portrait"
+    },
+    "eaves. \nThe": {
+        "has characteristic": [
+            "exhibition sho",
+            "six "
+        ]
+    },
+    "he fig": {
+        "has characteristic": "pots.\n"
+    },
+    "his mo": {
+        "has characteristic": " sub"
+    },
+    "issio": {
+        "has characteristic": " Com"
+    },
+    "Det syke barn I": {
+        "depicts": [
+            "d three di",
+            "his mo",
+            "issio"
+        ],
+        "has genre": "mportant grap",
+        "created by": "e Sick Child",
+        "instance of": "he sick ch",
+        "created in": "es \n"
+    },
+    " sub": {
+        "has characteristic": "t importan"
+    },
+    ", it was t": {
+        "has characteristic": [
+            "k chil",
+            "r the si"
+        ]
+    },
+    "ted in": {
+        "has characteristic": [
+            "prese",
+            "which he r"
+        ]
+    },
+    "rks be": {
+        "has characteristic": [
+            "okin",
+            ", it was t"
+        ]
+    },
+    "d three di": {
+        "has characteristic": "ings a",
+        "contains": "ted in"
+    },
+    "ct of": {
+        "has characteristic": "subj"
+    },
+    "okin": {
+        "has characteristic": "7. \nL"
+    },
+    "ed r": {
+        "has characteristic": [
+            "ed s",
+            " a gold-colo"
+        ]
+    },
+    "Diana, Goddess of the Hunt": {
+        "symbolizes": "ve Arcadian landsc",
+        "depicts": [
+            " a wo",
+            "ed landsc",
+            "window",
+            "nt mount",
+            "to ru"
+        ],
+        "created in": "in 1",
+        "created by": "1 \nWillem van Mie",
+        "influenced by": "Frans van Mieris the Elder"
+    },
+    " a wo": {
+        "has characteristic": [
+            "ed r",
+            "er sc",
+            "er h"
+        ]
+    },
+    "er h": {
+        "has characteristic": "ch feath"
+    },
+    "ch feath": {
+        "has characteristic": [
+            "nd wh",
+            "he b"
+        ]
+    },
+    "te ostr": {
+        "has characteristic": "ch feath"
+    },
+    "ng b": {
+        "has characteristic": "he shimmer"
+    },
+    "nt mount": {
+        "has characteristic": " a dist"
+    },
+    "ed landsc": {
+        "contains": [
+            "ed hi",
+            "y, woo"
+        ]
+    },
+    "ed s": {
+        "has characteristic": " a "
+    },
+    "er sc": {
+        "has characteristic": "ng b"
+    },
+    "framing devices": {
+        "contains": "window"
+    },
+    "Die Belagerung von Cosel": {
+        "created in": "1808",
+        "created by": "Wilhelm Kobell",
+        "depicts": [
+            "Bavarian army's staff",
+            "level below",
+            "Third Coalition War"
+        ],
+        "instance of": [
+            "battle images",
+            "paintings"
+        ]
+    },
+    "in the foreground": {
+        "contains": [
+            "Bavarian army's staff",
+            "farmer's",
+            "man",
+            "couple",
+            "Venus",
+            "grain",
+            "monster",
+            "martyr",
+            "façade",
+            "Victoria Embankment",
+            "child"
+        ]
+    },
+    "level below": {
+        "has characteristic": "shadowy",
+        "contains": "fighting"
+    },
+    "March 1807": {
+        "symbolizes": "Third Coalition War"
+    },
+    "on the right side of the hill": {
+        "contains": "in the foreground"
+    },
+    "field of grain": {
+        "has characteristic": "dry"
+    },
+    "basic mood": {
+        "has characteristic": "melancholic"
+    },
+    "Die Kaffeetafel": {
+        "depicts": "istic of thi",
+        "has characteristic": [
+            "sts\nThe ",
+            "n afte"
+        ],
+        "influenced by": "s influenced by the F",
+        "created by": "• \nFra",
+        "instance of": "l lighti"
+    },
+    "n afte": {
+        "has characteristic": "the c"
+    },
+    "istic of thi": {
+        "has characteristic": "haracte"
+    },
+    "Die Residenzstraße gegen den Max-Joseph-Platz im Jahr 1826": {
+        "depicts": [
+            "view",
+            "vedutes",
+            "On the right",
+            "Palais Toerring",
+            "Munich"
+        ],
+        "contains": "On the left",
+        "created by": "Domenico Quaglio",
+        "instance of": "painting"
+    },
+    "residence": {
+        "has characteristic": [
+            "Munich",
+            "sections"
+        ]
+    },
+    "town houses": {
+        "has characteristic": "small"
+    },
+    "Palais Toerring": {
+        "has characteristic": "late-baroque"
+    },
+    "sections": {
+        "has characteristic": [
+            "older southwestern",
+            "bright, rocky",
+            "Dark, wooded"
+        ]
+    },
+    "view": {
+        "contains": [
+            "residential street towards Max-Joseph Square",
+            "tree groups and mountainous heights",
+            "South Bank of the Thames",
+            "in the distance",
+            "in the foreground",
+            "on the left"
+        ],
+        "has characteristic": "local"
+    },
+    "flask": {
+        "contains": "urine"
+    },
+    "boy": {
+        "has characteristic": [
+            "held",
+            "handsomely dressed",
+            "blond-haired",
+            "clothes",
+            "lying",
+            "grabbing",
+            "leaning",
+            "plays"
+        ]
+    },
+    "basket": {
+        "has characteristic": [
+            "cylinder-shaped",
+            "large",
+            "potato"
+        ],
+        "contains": "flask"
+    },
+    "room": {
+        "contains": [
+            "chair",
+            "canopy bed",
+            "ceiling",
+            "table"
+        ]
+    },
+    "doctor": {
+        "has characteristic": "gray-bearded"
+    },
+    "Doctor’s Visit": {
+        "depicts": [
+            "room",
+            "boy",
+            "maid",
+            "patient",
+            "background",
+            "doctor"
+        ],
+        "instance of": "picture",
+        "fabrication method": "enamel-like finish",
+        "created in": "1660s",
+        "created by": "Jacob Toorenvliet"
+    },
+    "whites": {
+        "has characteristic": "bright"
+    },
+    "fabric": {
+        "has characteristic": "red"
+    },
+    "chair": {
+        "has characteristic": "fabric"
+    },
+    "tapestry": {
+        "has characteristic": "luxurious"
+    },
+    "canopy bed": {
+        "has characteristic": "curtain"
+    },
+    "ceiling": {
+        "has characteristic": "coffered"
+    },
+    "reds": {
+        "has characteristic": "bright"
+    },
+    "maid": {
+        "has characteristic": [
+            "exchanges meaningful gazes",
+            "hood",
+            "young"
+        ]
+    },
+    "paysage intime": {
+        "has characteristic": "outdoor light"
+    },
+    "Dorfstraße von Aresing": {
+        "created in": "1856",
+        "symbolizes": "paysage intime",
+        "depicts": [
+            "Aresing",
+            "in the foreground",
+            "outdoor light"
+        ],
+        "instance of": "landscape painting",
+        "created by": "Franz Lenbach's"
+    },
+    "village street": {
+        "symbolizes": "Aresing"
+    },
+    "farmer's": {
+        "has characteristic": "shadow"
+    },
+    "shadow": {
+        "has characteristic": "short"
+    },
+    "Eisacklandschaft (Klausen).": {
+        "depicts": [
+            "trees",
+            "Saber Klosterberg",
+            "structure",
+            "mountainous landscape",
+            "town",
+            "sky",
+            "valley",
+            "Klausen in South Tyrol"
+        ],
+        "instance of": "painting",
+        "created in": "1911",
+        "created by": "Kanoldt",
+        "fabrication method": "wide brush strokes"
+    },
+    "structure": {
+        "has characteristic": [
+            "monumental",
+            "shapes"
+        ]
+    },
+    "buildings": {
+        "has characteristic": "raised",
+        "symbolizes": "Saber Klosterberg"
+    },
+    "surround them on three sides": {
+        "contains": [
+            "trees",
+            "buildings"
+        ]
+    },
+    "center of the picture": {
+        "contains": [
+            "buildings",
+            "angel"
+        ]
+    },
+    "town": {
+        "has characteristic": "medieval"
+    },
+    "area": {
+        "has characteristic": "small",
+        "symbolizes": "sky"
+    },
+    "shapes": {
+        "has characteristic": "simplified, almost cubic"
+    },
+    "upper half of the image": {
+        "contains": "area"
+    },
+    "stand next to the automobiles": {
+        "contains": [
+            "utility pole",
+            "sign"
+        ]
+    },
+    "on the façade of the building": {
+        "contains": "signs and advertisements"
+    },
+    "Five Views": {
+        "instance of": "Panhandle Series"
+    },
+    "protrudes into the frame from the photograph’s upper edge": {
+        "contains": "form"
+    },
+    "Enco – Conway, Texas": {
+        "depicts": [
+            "signs and advertisements",
+            "parked in front of the station",
+            "sign",
+            "protrudes into the frame from the photograph’s upper edge",
+            "Two cars",
+            "form",
+            "on the façade of the building",
+            "gasoline station",
+            "stand next to the automobiles",
+            "utility pole",
+            "seen from across a road"
+        ],
+        "instance of": [
+            "black and white photograph",
+            "Five Views"
+        ],
+        "contains": "Ruscha",
+        "created by": "Ed Ruscha",
+        "created in": "1962, printed 2007"
+    },
+    "on the window of a car": {
+        "contains": "visor or wind-deflector"
+    },
+    "form": {
+        "has characteristic": "blurred",
+        "symbolizes": "visor or wind-deflector"
+    },
+    "Two cars": {
+        "has characteristic": [
+            "pale",
+            "black"
+        ]
+    },
+    "seen from across a road": {
+        "contains": "gasoline station"
+    },
+    "parked in front of the station": {
+        "contains": "Two cars"
+    },
+    "signs and advertisements": {
+        "has characteristic": "Smaller"
+    },
+    "station": {
+        "symbolizes": "company name: Enco"
+    },
+    "partially block the view of the building": {
+        "has characteristic": "Two cars"
+    },
+    "sign": {
+        "contains": "company name: Enco",
+        "has characteristic": [
+            "large circular",
+            "wooden",
+            "year",
+            "inscription"
+        ]
+    },
+    "Ruscha": {
+        "has characteristic": "sat in"
+    },
+    "car": {
+        "contains": "Ruscha",
+        "has characteristic": "window"
+    },
+    "valley": {
+        "contains": "city"
+    },
+    "man": {
+        "has characteristic": [
+            "young",
+            "stands",
+            "individual",
+            "sits",
+            "elegantly dressed",
+            "shoulder basket",
+            "looks",
+            "old",
+            "dignified",
+            "gaze",
+            "expression",
+            "beard",
+            "cloak",
+            "stares",
+            "leans out"
+        ],
+        "symbolizes": "smallness"
+    },
+    "FANTASIELANDSCHAFT MIT ANTIKER FIGURENSTAFFAGE": {
+        "contains": [
+            "Venus",
+            "tree groups and mountainous heights",
+            "figures",
+            "carriage",
+            "valley",
+            "swans",
+            "Adonis"
+        ],
+        "instance of": "painting",
+        "depicts": "landscape",
+        "influenced by": "Lucas van Uden"
+    },
+    "Venus": {
+        "has characteristic": [
+            "poorly dressed",
+            "embracing",
+            "breasts"
+        ]
+    },
+    "couple": {
+        "has characteristic": [
+            "young",
+            "dance"
+        ]
+    },
+    "suit": {
+        "has characteristic": [
+            "wide-cut",
+            "buttonless",
+            "striped",
+            "yellow-and-gray",
+            "woolen",
+            "burgundy-plum"
+        ]
+    },
+    "floor": {
+        "has characteristic": [
+            "earthenware",
+            "muddy",
+            "wood"
+        ],
+        "contains": "foot"
+    },
+    "pitcher": {
+        "has characteristic": "earthenware"
+    },
+    "window": {
+        "has characteristic": [
+            "open",
+            "arched"
+        ],
+        "contains": "leans out"
+    },
+    "pail": {
+        "contains": "herring"
+    },
+    "Fortuna, from the Facade of the Arminiushuis in Oudewater": {
+        "depicts": [
+            " fram",
+            " Lady Fortun",
+            " sai"
+        ],
+        "made from material": " sandston",
+        "has characteristic": " glob",
+        "instance of": " statu"
+    },
+    " fram": {
+        "has characteristic": " arche",
+        "contains": [
+            " corbe",
+            " ornamentatio"
+        ]
+    },
+    " stands o": {
+        "contains": " glob"
+    },
+    " Lady Fortun": {
+        "has characteristic": [
+            " holdin",
+            " stands o"
+        ]
+    },
+    " holdin": {
+        "has characteristic": " sai"
+    },
+    " sai": {
+        "has characteristic": [
+            " wind-blow",
+            " arches high abov",
+            " ful"
+        ]
+    },
+    " ornamentatio": {
+        "has characteristic": " renaissanc"
+    },
+    " arches high abov": {
+        "contains": " hea"
+    },
+    "vision": {
+        "has characteristic": [
+            "idealized",
+            "momentary"
+        ]
+    },
+    "legs": {
+        "has characteristic": "horse's"
+    },
+    "harvest": {
+        "has characteristic": "grain"
+    },
+    "At the horizon": {
+        "contains": [
+            "groups of trees",
+            "sky"
+        ]
+    },
+    "grain heaps": {
+        "has characteristic": "interlocking"
+    },
+    "in the front": {
+        "contains": "grain heaps"
+    },
+    "Getreideernte": {
+        "depicts": [
+            "divides the fields",
+            "in the front",
+            "five workers",
+            "harvest",
+            "in the foreground"
+        ],
+        "fabrication method": "targeted linearity",
+        "created in": "1930",
+        "created by": "Max Pechsteins"
+    },
+    "groups of trees": {
+        "has characteristic": [
+            "blue",
+            "green"
+        ]
+    },
+    "divides the fields": {
+        "symbolizes": "spatial depth",
+        "contains": "individual stripes"
+    },
+    "grain": {
+        "has characteristic": [
+            "oak",
+            "brown",
+            "yellow",
+            "white"
+        ]
+    },
+    "ore intense than": {
+        "symbolizes": "\nThis work is a testament to th",
+        "has characteristic": "in the"
+    },
+    "Grande Corbeille de Fleurs": {
+        "depicts": [
+            "ère-lib",
+            "ore intense than",
+            " los",
+            "which ",
+            "w assi"
+        ],
+        "has characteristic": [
+            " can look back on his fulf",
+            "untry of"
+        ],
+        "instance of": "ed with h",
+        "created by": "A true colle",
+        "created in": "t he"
+    },
+    " he cal": {
+        "contains": "ère-lib"
+    },
+    "which ": {
+        "contains": "ère-lib",
+        "has characteristic": "eedom),"
+    },
+    "ère-lib": {
+        "has characteristic": [
+            " (Light",
+            " lum"
+        ]
+    },
+    "g energy. \nThroug": {
+        "contains": "w assi"
+    },
+    " los": {
+        "has characteristic": "s neve"
+    },
+    "feels nowhe": {
+        "contains": "ore intense than"
+    },
+    "king with a v": {
+        "symbolizes": "ty of media in the "
+    },
+    "w assi": {
+        "depicts": "king with a v"
+    },
+    "e artist, wh": {
+        "contains": " los"
+    },
+    "grotto": {
+        "contains": "hermit",
+        "has characteristic": "monumental"
+    },
+    "Grotto Landscape with a Hermitage": {
+        "created in": "around 1625",
+        "made from material": "oil on canvas",
+        "created by": [
+            "Joos de Momper",
+            "Jan Brueghel the Younger"
+        ],
+        "contains": [
+            "hermit",
+            "several pilgrims",
+            "various animals"
+        ],
+        "depicts": "grotto",
+        "instance of": "painting"
+    },
+    "various animals": {
+        "contains": [
+            "dogs",
+            "birds"
+        ]
+    },
+    "hermit": {
+        "has characteristic": "reading"
+    },
+    " model.": {
+        "has characteristic": [
+            "r gesture of th",
+            "is t"
+        ]
+    },
+    "Halbakt einer jungen Frau, den Kopf mit der linken Hand gestützt": {
+        "instance of": [
+            "oose acc",
+            "es the pi"
+        ],
+        "depicts": [
+            "mate ",
+            "ifferen",
+            " 29.4",
+            " sen",
+            " model."
+        ],
+        "created by": "al, sel"
+    },
+    " sen": {
+        "has characteristic": "thin"
+    },
+    "is t": {
+        "has characteristic": "e "
+    },
+    "mate ": {
+        "has characteristic": "n int"
+    },
+    "The rest, like t": {
+        "contains": "iated form. "
+    },
+    "iated form. ": {
+        "contains": "ifferen"
+    },
+    "Hartmut Stöcker": {
+        "contains": [
+            " enh",
+            " hai",
+            "portra"
+        ],
+        "depicts": [
+            "ast and in clear lines, the da",
+            "ackground.\nThe Co"
+        ],
+        "fabrication method": "is own flat-plate paintin",
+        "has genre": [
+            "rld of adve",
+            "ol put port"
+        ],
+        "created by": "hol sets br"
+    },
+    "portra": {
+        "has characteristic": [
+            "g us.\nHe's d",
+            "\nAndy W",
+            "looking openly"
+        ]
+    },
+    " enh": {
+        "has characteristic": "s an"
+    },
+    " hai": {
+        "has characteristic": "s an"
+    },
+    "the ": {
+        "has characteristic": [
+            "nd sof",
+            "e in"
+        ]
+    },
+    "ackground.\nThe Co": {
+        "has characteristic": "the "
+    },
+    "princess": {
+        "has characteristic": [
+            "raising",
+            "praying",
+            "kneeling"
+        ]
+    },
+    "savior's": {
+        "has characteristic": "victory"
+    },
+    "grand panorama": {
+        "contains": [
+            "sections",
+            "staging area"
+        ]
+    },
+    "Heroische Landschaft": {
+        "contains": [
+            "monster",
+            "princess",
+            "George"
+        ],
+        "depicts": [
+            "grand panorama",
+            "Roman campagna at Subiaco in the Sabine Mountains"
+        ],
+        "influenced by": [
+            "Paolo Uccello",
+            "Raphael"
+        ],
+        "created by": "painter",
+        "has genre": "Renaissance painting"
+    },
+    "Roman campagna at Subiaco in the Sabine Mountains": {
+        "contains": "George"
+    },
+    "staging area": {
+        "contains": "figures"
+    },
+    "martyr": {
+        "has characteristic": [
+            "armor",
+            "fighting"
+        ]
+    },
+    "praying": {
+        "symbolizes": "victory"
+    },
+    "raising": {
+        "symbolizes": "heaven"
+    },
+    "hands": {
+        "has characteristic": [
+            "raising",
+            "hold open",
+            "large",
+            "boney",
+            "both",
+            "the vi",
+            " the gaze f"
+        ]
+    },
+    " of": {
+        "has characteristic": "a sta"
+    },
+    "ility,": {
+        "has characteristic": "ility to"
+    },
+    "te the ": {
+        "has characteristic": " desp"
+    },
+    "in high": {
+        "has characteristic": ", his wor"
+    },
+    "\nAs the p": {
+        "has characteristic": "nd."
+    },
+    "de n": {
+        "has characteristic": " his cr"
+    },
+    "Huldigung an Jacquin (\"Jacquins Denkmal\")": {
+        "created by": "Knapp",
+        "depicts": [
+            "cockatoo",
+            "diversity of the plant kingdom",
+            "urn",
+            "plants",
+            "monkey"
+        ],
+        "influenced by": [
+            "Nicholas Joseph von Jacquin",
+            "Carl von Linné"
+        ],
+        "instance of": "picture"
+    },
+    "base of the bust": {
+        "has characteristic": "swallowed up",
+        "depicts": "Nicholas Joseph von Jacquin"
+    },
+    "cockatoo": {
+        "has characteristic": "learned"
+    },
+    "swallowed up": {
+        "contains": "plants"
+    },
+    "urn": {
+        "symbolizes": "Carl von Linné"
+    },
+    "plants": {
+        "symbolizes": [
+            "Linnaea borealis",
+            "Jacquinia mucronata"
+        ]
+    },
+    "Hunter Getting Dressed after Bathing": {
+        "created by": "Gabriel Metsu",
+        "depicts": [
+            "powder horn",
+            "tree branch",
+            "bather",
+            "couple",
+            "water",
+            "hare",
+            "dog",
+            "Gabriel Metsu",
+            "figures",
+            "rifle"
+        ],
+        "instance of": "paintings",
+        "has genre": "Dutch art"
+    },
+    "bather": {
+        "depicts": "putting on",
+        "has characteristic": [
+            "smiles at",
+            "nude",
+            "seated nude"
+        ]
+    },
+    "on the ground": {
+        "contains": [
+            "powder horn",
+            "rifle"
+        ]
+    },
+    "bridge": {
+        "contains": "man",
+        "has characteristic": [
+            "little",
+            "wooden"
+        ]
+    },
+    "by his side": {
+        "contains": "dog"
+    },
+    "hare": {
+        "has characteristic": "dead"
+    },
+    "hanging": {
+        "contains": "hare"
+    },
+    "putting on": {
+        "depicts": "shirt"
+    },
+    "walking along": {
+        "contains": [
+            "road",
+            "bridge",
+            "couple"
+        ]
+    },
+    "In Thee Rejoiceth": {
+        "depicts": "Virgin Mary",
+        "has genre": "Cretan School",
+        "created by": "Georgios Klontzas",
+        "created in": "second half of the 16th century",
+        "instance of": "painting",
+        "made from material": "tempera and gold leaf"
+    },
+    "broom": {
+        "has characteristic": "short"
+    },
+    "lies": {
+        "symbolizes": "helpless"
+    },
+    "spoon": {
+        "has characteristic": [
+            "wooden",
+            "attach"
+        ]
+    },
+    "interior": {
+        "has characteristic": [
+            "simple",
+            "darkened",
+            "bare",
+            "reddish-brown"
+        ],
+        "contains": [
+            "elegantly dressed",
+            "at a table"
+        ]
+    },
+    "sea": {
+        "has characteristic": [
+            "blue",
+            "green"
+        ]
+    },
+    "unrest": {
+        "has characteristic": "expressive charged"
+    },
+    "surface": {
+        "has characteristic": [
+            "sparkling",
+            "homogeneous color"
+        ]
+    },
+    "JUGEND UND ALTER": {
+        "contains": [
+            "girl",
+            "woman",
+            "statue"
+        ],
+        "depicts": [
+            "well",
+            "pool",
+            "in front of",
+            "On the left, in the background of the wells",
+            "On the ground"
+        ],
+        "symbolizes": "vanity",
+        "instance of": "painting"
+    },
+    "silk": {
+        "has characteristic": [
+            "black",
+            "white"
+        ]
+    },
+    "On the ground": {
+        "contains": [
+            "pumpkins",
+            "fruit"
+        ],
+        "depicts": "on the right"
+    },
+    "vanity": {
+        "symbolizes": "transience of beauty"
+    },
+    "well": {
+        "contains": "sits"
+    },
+    "in front of": {
+        "contains": [
+            "woman",
+            "oriental carpet",
+            "in the center"
+        ]
+    },
+    "sleeve": {
+        "has characteristic": [
+            "silk",
+            "right"
+        ]
+    },
+    "On the left, in the background of the wells": {
+        "contains": "statue"
+    },
+    "statue": {
+        "symbolizes": "Venus"
+    },
+    "on the right": {
+        "contains": [
+            "distillate",
+            "clouds",
+            "moon",
+            "counterparts"
+        ]
+    },
+    "Junge Dame in Schwarz": {
+        "depicts": [
+            "dress",
+            "woman"
+        ],
+        "instance of": "portrait",
+        "created by": "Renoir",
+        "influenced by": "bourgeois girls"
+    },
+    "smile": {
+        "has characteristic": "flirtatious"
+    },
+    "cut": {
+        "has characteristic": "bold"
+    },
+    "KIRCHEN SANTA MARIA DI NAZARETH": {
+        "depicts": [
+            "in the foreground",
+            "On the left",
+            "Sestiere Santa Croce",
+            "Look into the canal",
+            "façades"
+        ],
+        "instance of": "painting",
+        "created by": "Bison",
+        "has genre": "er of Clas",
+        "influenced by": "il of Girolamo Romanino "
+    },
+    "San Simeone Piccolo": {
+        "has characteristic": [
+            "portico",
+            "dome",
+            "stairway"
+        ]
+    },
+    "Church of St": {
+        "has characteristic": [
+            "façade",
+            "gills",
+            "pillars"
+        ]
+    },
+    "dome": {
+        "has characteristic": "copper-covered"
+    },
+    "portico": {
+        "has characteristic": "columns"
+    },
+    "palaces": {
+        "has characteristic": "façades"
+    },
+    "canal": {
+        "contains": [
+            "façades",
+            "ducks"
+        ]
+    },
+    "houses": {
+        "has characteristic": [
+            "façades",
+            "tiles and roofs",
+            "facade",
+            "windows"
+        ]
+    },
+    "Kakiemon elephants": {
+        "created in": [
+            "1660",
+            "17th century",
+            "1690"
+        ],
+        "depicts": "elephants",
+        "has genre": "Kakiemon",
+        "instance of": "figures",
+        "created by": "Kakiemon potteries",
+        "made from material": [
+            "enamelled",
+            "porcelain"
+        ]
+    },
+    "porcelain": {
+        "instance of": "enamelled"
+    },
+    "„Kartoffelzähler“": {
+        "contains": [
+            " the ever-growi",
+            "\nThoma"
+        ],
+        "created by": " a quality in",
+        "symbolizes": " to use to this day.\nAt its co",
+        "instance of": "sum, "
+    },
+    " with": {
+        "has characteristic": "\nThoma"
+    },
+    "tif. He": {
+        "has characteristic": " with"
+    },
+    "\nThoma": {
+        "has characteristic": [
+            "ini",
+            "ely"
+        ]
+    },
+    " the ever-growi": {
+        "has characteristic": "wed Chin"
+    },
+    "Kleine Hermeneutik des Diskurses": {
+        "depicts": [
+            "arrangement",
+            "writing fields"
+        ],
+        "fabrication method": "engraved",
+        "instance of": "installations",
+        "created by": "Thomas Locher's",
+        "made from material": "aluminium"
+    },
+    "arrangement": {
+        "contains": [
+            "chairs",
+            "tables"
+        ],
+        "has characteristic": "symmetrical"
+    },
+    "symmetrical": {
+        "has characteristic": "geometrically"
+    },
+    "Partisan": {
+        "has characteristic": [
+            "smiling",
+            "female"
+        ]
+    },
+    "colorfulness": {
+        "has characteristic": [
+            "red",
+            "blue",
+            "yellow",
+            "bright-expressive"
+        ]
+    },
+    "La caduta dell’angelo": {
+        "created by": "Hödicke",
+        "depicts": "fall of angels",
+        "has genre": "contemporary art",
+        "has characteristic": [
+            "colorfulness",
+            "picturesque expression"
+        ],
+        "instance of": "picture",
+        "fabrication method": [
+            "bold, free gesture",
+            "open, experimental painting process",
+            "without prefixing or contouring"
+        ]
+    },
+    "being": {
+        "has characteristic": "higher, yellow-winged"
+    },
+    "n Asselijn.": {
+        "contains": [
+            "rtists li",
+            "Both and J"
+        ]
+    },
+    "Landscape with Sandy Path beside a River": {
+        "depicts": [
+            "1652.9 The p",
+            "icity of ",
+            "awn his inspiration fro",
+            "an be divided i",
+            "e 1650s t"
+        ],
+        "influenced by": [
+            "h a sout",
+            "European loo"
+        ],
+        "created in": "tered see",
+        "instance of": " rendere",
+        "created by": "ason to d",
+        "has characteristic": [
+            "since",
+            "er. \nThe lan"
+        ],
+        "contains": "he dista"
+    },
+    "awn his inspiration fro": {
+        "contains": [
+            "n Asselijn.",
+            "posed in the"
+        ]
+    },
+    "posed in the": {
+        "contains": "s scene was"
+    },
+    "1652.9 The p": {
+        "has characteristic": "esent pai"
+    },
+    "er. \nThe lan": {
+        "has characteristic": "lated to a river sc"
+    },
+    "an be divided i": {
+        "contains": ". It "
+    },
+    "e 1650s t": {
+        "has characteristic": "scape began playing an"
+    },
+    "since": {
+        "has characteristic": "t to Italy himself he "
+    },
+    "icity of ": {
+        "has characteristic": "which the s"
+    },
+    "s scene was": {
+        "contains": "ly co"
+    },
+    "Landschaft bei Miesenbach": {
+        "instance of": "landscape painting",
+        "depicts": [
+            "landscape",
+            "Miesenbach"
+        ],
+        "influenced by": "Jakob Gauermann",
+        "created by": "Gauermann"
+    },
+    "Landschaft mit Runenstein": {
+        "has genre": "Romantic",
+        "created by": "Achenbach's",
+        "influenced by": [
+            "Caspar David Friedrich",
+            "pre-Romantic",
+            "Carl Gustav Carus",
+            "17th-century Dutch"
+        ],
+        "symbolizes": "smallness",
+        "depicts": [
+            "nature",
+            "horizon",
+            "wanderer",
+            "two thirds",
+            "runestone"
+        ],
+        "instance of": "landscape painting",
+        "created in": "1839"
+    },
+    "wanderer": {
+        "has characteristic": "lonely"
+    },
+    "remains": {
+        "has characteristic": "prehistoric"
+    },
+    "ruins": {
+        "has characteristic": "medieval"
+    },
+    "monuments": {
+        "has characteristic": "natural"
+    },
+    "two thirds": {
+        "contains": "sky"
+    },
+    "Kirmes": {
+        "symbolizes": "kermesse",
+        "contains": [
+            "acrobats",
+            "belly dancer",
+            "price-shooting",
+            "horse-riding business",
+            "wild mouse"
+        ]
+    },
+    "Les Arènes du Nord, la kermesse": {
+        "instance of": "painting",
+        "depicts": "Kirmes",
+        "created by": "Marcel Stobbaerts"
+    },
+    "Madonna mit der Nelke": {
+        "symbolizes": [
+            "love",
+            "death"
+        ],
+        "fabrication method": "consistent use of light and dark",
+        "depicts": "clove",
+        "contains": [
+            "child",
+            "mother"
+        ],
+        "influenced by": "Andrea del Verrocchio",
+        "has characteristic": [
+            "emotion",
+            "vitality"
+        ],
+        "instance of": "painting",
+        "created by": "Leonardo da Vinci"
+    },
+    "seizes": {
+        "has characteristic": "clove"
+    },
+    "emotion": {
+        "has characteristic": "deep"
+    },
+    "death": {
+        "has characteristic": "sacrificial"
+    },
+    "gestures": {
+        "has characteristic": "concentrated"
+    },
+    "Leonardo da Vinci": {
+        "influenced by": "Andrea del Verrocchio"
+    },
+    "love": {
+        "has characteristic": "divine"
+    },
+    "clove": {
+        "symbolizes": [
+            "death",
+            "love"
+        ]
+    },
+    "Christ child": {
+        "has characteristic": "seizes"
+    },
+    "ng cost": {
+        "has characteristic": "d, historiciz"
+    },
+    "Man with a Book": {
+        "symbolizes": "he scholar in his st",
+        "created by": ". \n",
+        "depicts": [
+            "man",
+            "interior",
+            "wn backgro",
+            "tabard"
+        ],
+        "created in": "n the seventeenth c",
+        "fabrication method": "th careful contrasts of light and d",
+        "has characteristic": "of intellectual contemplat"
+    },
+    "wn backgro": {
+        "has characteristic": [
+            "he d",
+            "ep br"
+        ]
+    },
+    "tabard": {
+        "has characteristic": [
+            "buttons",
+            "sleeve",
+            "fur trimmed"
+        ]
+    },
+    "ng h": {
+        "has characteristic": [
+            "ck be",
+            "on s",
+            "of l"
+        ]
+    },
+    "ck w": {
+        "has characteristic": "he b"
+    },
+    "collar": {
+        "has characteristic": [
+            "cord",
+            "lace",
+            "high-necked",
+            "white"
+        ],
+        "contains": "beading"
+    },
+    "he left s": {
+        "symbolizes": " a sha",
+        "has characteristic": "ed f"
+    },
+    "ck be": {
+        "has characteristic": [
+            "sh bl",
+            "’s pl"
+        ]
+    },
+    "he ": {
+        "has characteristic": [
+            "’s featu",
+            "t” ",
+            "2:26)"
+        ]
+    },
+    "at a table": {
+        "contains": [
+            "man",
+            "book"
+        ]
+    },
+    "between his fingers": {
+        "has characteristic": "cord"
+    },
+    "ed f": {
+        "has characteristic": "is slightly blus"
+    },
+    "shadows": {
+        "contains": [
+            "fire",
+            "moonlight"
+        ],
+        "has characteristic": "subtle"
+    },
+    "Moonlight": {
+        "depicts": [
+            "shadows",
+            "animal",
+            "sources of light",
+            "water"
+        ],
+        "made from material": "canvas",
+        "created by": "Philip James de Loutherbourg",
+        "created in": "1777",
+        "symbolizes": "nocturne",
+        "instance of": "painting"
+    },
+    "skin": {
+        "has characteristic": "animal"
+    },
+    "sources of light": {
+        "contains": [
+            "fire",
+            "moonlight"
+        ]
+    },
+    "On the basket": {
+        "contains": "maid"
+    },
+    "NÄCHTLICHER GEMÜSEMARKT BEI KERZENLICHT": {
+        "depicts": [
+            "melons",
+            "market table",
+            "man",
+            "basket",
+            "houses",
+            "maid",
+            "cotton",
+            "moon",
+            "figures",
+            "shopkeeper",
+            "woman"
+        ],
+        "instance of": "picture"
+    },
+    "shopkeeper": {
+        "has characteristic": [
+            "young",
+            "well-dressed",
+            "holding"
+        ]
+    },
+    "light sources": {
+        "has characteristic": "two artificial"
+    },
+    "on the table": {
+        "contains": "candle-stack"
+    },
+    "tiles and roofs": {
+        "has characteristic": "decorative"
+    },
+    "her left arm": {
+        "has characteristic": "basket"
+    },
+    "clouds": {
+        "has characteristic": "dark"
+    },
+    "in the dark": {
+        "contains": "figures"
+    },
+    "candle": {
+        "symbolizes": "light",
+        "has characteristic": "burning"
+    },
+    "candle-stack": {
+        "contains": "candle"
+    },
+    "moon": {
+        "has characteristic": "light"
+    },
+    "hood": {
+        "has characteristic": "hair"
+    },
+    "console": {
+        "has characteristic": "small",
+        "contains": [
+            "flower",
+            "utensils"
+        ]
+    },
+    "NUDO ALLO SPECCHIO": {
+        "depicts": [
+            "mirror",
+            "bedspread",
+            "In a reddish-brown interior",
+            "woman"
+        ],
+        "created in": "1951",
+        "made from material": "The Commissio",
+        "created by": "hibition: An",
+        "contains": "console"
+    },
+    "foot": {
+        "has characteristic": "left"
+    },
+    "In a reddish-brown interior": {
+        "contains": "woman"
+    },
+    "mirror": {
+        "depicts": [
+            "upper arm",
+            "upper body"
+        ],
+        "has characteristic": "oval"
+    },
+    "flower": {
+        "has characteristic": "red"
+    },
+    "thigh": {
+        "has characteristic": "right"
+    },
+    "utensils": {
+        "has characteristic": "pink"
+    },
+    "neck": {
+        "has characteristic": "band"
+    },
+    "band": {
+        "has characteristic": [
+            "black",
+            "thin"
+        ]
+    },
+    "upper arm": {
+        "has characteristic": "right"
+    },
+    "bedspread": {
+        "has characteristic": "turquoise"
+    },
+    "Under the mirror": {
+        "contains": "console"
+    },
+    "Behind her left": {
+        "contains": "mirror"
+    },
+    "lips": {
+        "has characteristic": "red"
+    },
+    "sitting on": {
+        "symbolizes": "sitting half on her right thigh"
+    },
+    "at the centre": {
+        "contains": "single species"
+    },
+    "single species": {
+        "has characteristic": "various stages of bloom"
+    },
+    "Nandina (Nandina domestica)": {
+        "instance of": "flower drawings",
+        "made from material": [
+            "watercolour",
+            "opaque watercolour",
+            "graphite"
+        ],
+        "created by": "Withoos",
+        "fabrication method": "outlines with graphite"
+    },
+    "Nandina (Nandina domestica": {
+        "depicts": [
+            "at the centre",
+            "single species",
+            "leaves",
+            "flower"
+        ]
+    },
+    "sheet": {
+        "contains": "at the centre",
+        "has characteristic": "empty"
+    },
+    "enta in": {
+        "has characteristic": " the first docu"
+    },
+    " that ": {
+        "has characteristic": "rm of form"
+    },
+    "d illusion": {
+        "has characteristic": "ant-ga"
+    },
+    "emphasized": {
+        "has characteristic": "position is"
+    },
+    "repellin": {
+        "has characteristic": "tic, space-consuming and"
+    },
+    " in question": {
+        "has characteristic": "age understandable. \nThe motif"
+    },
+    "two-dimensio": {
+        "has characteristic": "mage as a"
+    },
+    "ant-ga": {
+        "has characteristic": "stic a"
+    },
+    "ivide th": {
+        "has characteristic": " that "
+    },
+    "Old Testament Babylonian king Nebuchadnezzar II": {
+        "has characteristic": "ruler"
+    },
+    "Nebuchadnezzar (Blake)": {
+        "depicts": [
+            "rocks",
+            "Old Testament Babylonian king Nebuchadnezzar II"
+        ],
+        "created by": "William Blake",
+        "made from material": "additions in ink and watercolour",
+        "instance of": "colour monotype print"
+    },
+    "king": {
+        "has characteristic": [
+            "mad",
+            "crawling",
+            "beard"
+        ]
+    },
+    "among the rocks": {
+        "contains": "king"
+    },
+    "terror": {
+        "has characteristic": "sullen"
+    },
+    "beard": {
+        "has characteristic": [
+            "tangled",
+            "golden",
+            "white",
+            "gray",
+            "full"
+        ]
+    },
+    "ple bro": {
+        "has characteristic": " a si"
+    },
+    "ciful co": {
+        "has characteristic": "sport fa"
+    },
+    " \nThe ": {
+        "has characteristic": [
+            "eth",
+            "ld or"
+        ]
+    },
+    " \nT": {
+        "has characteristic": "ess"
+    },
+    "nd ": {
+        "has characteristic": "ent "
+    },
+    "ard": {
+        "has characteristic": [
+            "ting of",
+            "a b"
+        ]
+    },
+    "the w": {
+        "has characteristic": "rt of",
+        "symbolizes": "ter Harriet McCu"
+    },
+    "th fig": {
+        "has characteristic": "se bust-len"
+    },
+    "with rai": {
+        "has characteristic": " right"
+    },
+    "ively facial expre": {
+        "has characteristic": " show "
+    },
+    "ng mod": {
+        "has characteristic": "on liv"
+    },
+    "PORTRAIT EINER DAME": {
+        "contains": [
+            "lady",
+            "n on t"
+        ],
+        "made from material": "dyOil on canvas, relin",
+        "depicts": [
+            "rted her ",
+            "armchair",
+            "e right side",
+            "at the table",
+            "is o",
+            " a bo"
+        ],
+        "created by": "49) Johann Heinrich Tischbein the E"
+    },
+    "e right side": {
+        "contains": [
+            ". \n(8",
+            "n on t"
+        ]
+    },
+    " a bo": {
+        "contains": [
+            "she ",
+            "et on h"
+        ]
+    },
+    "d her ": {
+        "contains": [
+            "et on h",
+            " finger. \nTh"
+        ]
+    },
+    "rted her ": {
+        "contains": [
+            " on a",
+            "w with"
+        ]
+    },
+    "w with": {
+        "has characteristic": [
+            " pill",
+            "de edges, the"
+        ]
+    },
+    "de edges, the": {
+        "has characteristic": "broc"
+    },
+    "n on t": {
+        "has characteristic": " colu"
+    },
+    ". \n(8": {
+        "has characteristic": " velu"
+    },
+    "she ": {
+        "has characteristic": " hand"
+    },
+    "silk underw": {
+        "has characteristic": [
+            "collars",
+            "rew. \nSh",
+            "silver",
+            " agraph"
+        ]
+    },
+    "in the armchair": {
+        "contains": "lady"
+    },
+    "Three-quarters image": {
+        "contains": "lady"
+    },
+    "at the table": {
+        "contains": "lady"
+    },
+    "rew. \nSh": {
+        "has characteristic": "top "
+    },
+    " on a": {
+        "has characteristic": "elbo"
+    },
+    "collars": {
+        "has characteristic": " top"
+    },
+    "r lap, int": {
+        "contains": "et on h"
+    },
+    "ally feature sa": {
+        "symbolizes": " pieces "
+    },
+    "Parable of the Lost Piece of Silver": {
+        "fabrication method": "or, too. \nHe soo",
+        "depicts": [
+            "ally feature sa",
+            "ich Scha",
+            "s lig",
+            " \nThe hierarchy"
+        ],
+        "contains": [
+            " fi",
+            "n his teacher’s somew"
+        ],
+        "symbolizes": "ll formats, but he gradually repla",
+        "made from material": [
+            "re, inhabiti",
+            "the ca"
+        ],
+        "instance of": "ith hand",
+        "influenced by": "ughout th",
+        "created in": "followers. ",
+        "created by": " (1613–75"
+    },
+    "ich Scha": {
+        "has characteristic": "\nThe manner in w"
+    },
+    " of h": {
+        "has characteristic": "n tha"
+    },
+    "re bour": {
+        "has characteristic": "ese m"
+    },
+    "s lig": {
+        "contains": "nd with a better s",
+        "has characteristic": [
+            "intings w",
+            "re bour"
+        ]
+    },
+    "tilled in the artis": {
+        "has characteristic": "been"
+    },
+    " fi": {
+        "has characteristic": [
+            "acher, Samuel van H",
+            " (1627–78), also know"
+        ]
+    },
+    "nd with a better s": {
+        "contains": "er, "
+    },
+    "er, ": {
+        "has characteristic": " of h"
+    },
+    " \nThe hierarchy": {
+        "contains": [
+            "sts",
+            "tilled in the artis"
+        ]
+    },
+    "n tha": {
+        "has characteristic": "er th"
+    },
+    "ith hand": {
+        "instance of": "re, inhabiti"
+    },
+    "been": {
+        "has characteristic": "nres had"
+    },
+    "n engravi": {
+        "influenced by": "a painti",
+        "created by": "y Willem Jacobsz van Del",
+        "created in": "d 16"
+    },
+    "d taba": {
+        "has characteristic": "a fur-edg"
+    },
+    " \nJohan van Oldenbarneve": {
+        "has characteristic": [
+            "d in profi",
+            "\nGrand Pensionar",
+            "y seventy years of a"
+        ]
+    },
+    "Portrait Medallion of Johan van Oldenbarnevelt (1547-1619": {
+        "depicts": [
+            " \nJohan van Oldenbarneve",
+            "d doubl",
+            "d taba",
+            "f coll"
+        ]
+    },
+    "d in profi": {
+        "contains": ", facing rig"
+    },
+    "Portrait Medallion of Johan van Oldenbarnevelt (1547-1619)": {
+        "influenced by": "n engravi",
+        "made from material": "ivory",
+        "instance of": "medallion"
+    },
+    "d doubl": {
+        "has characteristic": "a button"
+    },
+    "e ne": {
+        "has characteristic": "f coll"
+    },
+    "a painti": {
+        "created by": ", Michiel Jansz van Miereve",
+        "created in": "m 16"
+    },
+    "f coll": {
+        "has characteristic": "a ru"
+    },
+    "Portrait of Anne Hathaway": {
+        "created in": "1708",
+        "depicts": [
+            "ruff",
+            "cap",
+            "woman"
+        ],
+        "instance of": [
+            "portrait",
+            "line-drawing"
+        ],
+        "created by": "Sir Nathaniel Curzon",
+        "influenced by": "Elizabethan original"
+    },
+    "ruff": {
+        "has characteristic": "16th-century"
+    },
+    "flag": {
+        "has characteristic": [
+            "orange",
+            "red",
+            "blue",
+            "white"
+        ]
+    },
+    "frame": {
+        "has characteristic": "oval"
+    },
+    "ribbon": {
+        "has characteristic": "reddish orange"
+    },
+    "sword": {
+        "has characteristic": "raised"
+    },
+    "beret": {
+        "has characteristic": [
+            "red",
+            "velvet"
+        ]
+    },
+    "three-master": {
+        "has characteristic": [
+            "miniature",
+            "small"
+        ]
+    },
+    "braid": {
+        "has characteristic": "gold"
+    },
+    "woodcarving": {
+        "has characteristic": "ornate"
+    },
+    "lion": {
+        "has characteristic": "golden"
+    },
+    "stone basin": {
+        "has characteristic": "rectangular"
+    },
+    "feathers": {
+        "has characteristic": "white"
+    },
+    "shoulder": {
+        "has characteristic": "left"
+    },
+    "shawl": {
+        "has characteristic": "blue"
+    },
+    "cuffs": {
+        "has characteristic": [
+            "lace",
+            "matching"
+        ]
+    },
+    "ing": {
+        "has characteristic": "Leiden,"
+    },
+    "Portrait of a Fifty-Two Year Old Man": {
+        "instance of": [
+            "rrit Dou ",
+            "nters of "
+        ],
+        "depicts": [
+            "hing el",
+            "ubraken "
+        ],
+        "contains": "ok of ",
+        "influenced by": "at Sylvius gave ",
+        "created by": "72), an in"
+    },
+    " the ": {
+        "has characteristic": [
+            "ento",
+            "ies o",
+            "ork for "
+        ]
+    },
+    "Leiden,": {
+        "has characteristic": [
+            "n be i",
+            "penburg in"
+        ]
+    },
+    "ubraken ": {
+        "contains": [
+            "ribed as Van",
+            "s patron.\n2 \nThe 1",
+            "of "
+        ],
+        "symbolizes": "indicate"
+    },
+    "ds tod": {
+        "has characteristic": "indicate"
+    },
+    "hing el": {
+        "has characteristic": " astoni"
+    },
+    "of ": {
+        "has characteristic": "entory"
+    },
+    "ok of ": {
+        "has characteristic": " the "
+    },
+    " him": {
+        "has characteristic": "owned duri"
+    },
+    "Gerrit Dou": {
+        "created by": "a, Portrait of a Wo",
+        "influenced by": [
+            "th Salomon Sav",
+            "of Thomas de Key"
+        ]
+    },
+    "’s engrav": {
+        "instance of": "of pri"
+    },
+    "g “Standing Officer with Walking St": {
+        "instance of": "’s engrav",
+        "created by": "th Salomon Sav"
+    },
+    "Portrait of a Gentleman with a Walking Stick": {
+        "depicts": [
+            "suit",
+            "ly p",
+            "draped over his shoulder",
+            "rapier"
+        ],
+        "contains": [
+            "officer",
+            "man"
+        ],
+        "influenced by": "th Salomon Sav",
+        "created by": "Gerrit Dou",
+        "instance of": [
+            "th portr",
+            " a paint"
+        ]
+    },
+    "near his hip": {
+        "contains": "rapier"
+    },
+    "ly p": {
+        "has characteristic": [
+            "nd on a c",
+            "’s stat",
+            "ly resting on his "
+        ]
+    },
+    "nd the ot": {
+        "has characteristic": "ly resting on his "
+    },
+    "ht ": {
+        "has characteristic": "ed ri"
+    },
+    "crossing over his gorget": {
+        "contains": "hanger"
+    },
+    "ed l": {
+        "has characteristic": "ly dignif"
+    },
+    "hanger": {
+        "has characteristic": [
+            "rapier",
+            "embroidered"
+        ]
+    },
+    "ne h": {
+        "has characteristic": "nd on a c"
+    },
+    "expression": {
+        "has characteristic": "austere, unsmiling"
+    },
+    "draped over his shoulder": {
+        "contains": "cloak"
+    },
+    "he wo": {
+        "has characteristic": "m, resting"
+    },
+    "attire": {
+        "contains": [
+            "stomacher",
+            "atin ",
+            "around her shoulders",
+            "collar"
+        ],
+        "symbolizes": "more conservative ",
+        "has characteristic": "elegant"
+    },
+    "that c": {
+        "contains": " her"
+    },
+    " her": {
+        "has characteristic": [
+            "lace head",
+            "hair tied"
+        ]
+    },
+    "Portrait of a Lady, Seated with a Music Book on Her Lap": {
+        "depicts": [
+            "music book",
+            "young",
+            "jewelry",
+            " her",
+            "lady",
+            "attire"
+        ],
+        "created in": "early 1640s",
+        "instance of": "portrait",
+        "created by": "Gerrit Dou",
+        "contains": "lack outer"
+    },
+    "lace head": {
+        "has characteristic": [
+            " and extends to the ",
+            "hing",
+            "that c",
+            "th a mat"
+        ]
+    },
+    "beading": {
+        "has characteristic": [
+            "thin",
+            "gold"
+        ]
+    },
+    "pearl": {
+        "has characteristic": [
+            "black",
+            "single"
+        ]
+    },
+    "linen neckerchief": {
+        "has characteristic": [
+            "white",
+            "three-tiered"
+        ],
+        "contains": [
+            "sleeves",
+            "cuffs",
+            "trim"
+        ]
+    },
+    "music book": {
+        "has characteristic": "open"
+    },
+    "bow": {
+        "contains": "pearl"
+    },
+    "stomacher": {
+        "has characteristic": [
+            "ornamental",
+            "black"
+        ],
+        "contains": "bow"
+    },
+    "trim": {
+        "has characteristic": "lace"
+    },
+    "lack outer": {
+        "has characteristic": " her "
+    },
+    "atin ": {
+        "contains": "gold embro",
+        "has characteristic": [
+            "s an amber-co",
+            "ored "
+        ]
+    },
+    "around her shoulders": {
+        "contains": "linen neckerchief"
+    },
+    " and extends to the ": {
+        "contains": " her"
+    },
+    "in her lap": {
+        "contains": "music book"
+    },
+    "gold embro": {
+        "has characteristic": "with"
+    },
+    "dour peo": {
+        "has characteristic": "particula"
+    },
+    "Portrait of a Man in a Red Coat": {
+        "depicts": [
+            "ough t",
+            "for the",
+            "es Fra"
+        ],
+        "contains": [
+            "n Rijn",
+            "tch"
+        ],
+        "created by": "traits pr"
+    },
+    "es Fra": {
+        "has characteristic": [
+            "nt exclu",
+            "n ext"
+        ]
+    },
+    "n Rijn": {
+        "has characteristic": [
+            "f th",
+            "atest po"
+        ],
+        "symbolizes": "mbrandt had a remarkable ab"
+    },
+    "for the": {
+        "has characteristic": "ut,"
+    },
+    "ough t": {
+        "has characteristic": "g one’s spirits th"
+    },
+    "tch": {
+        "has characteristic": [
+            "with stiff starched collars, the",
+            "dour peo",
+            "aliz"
+        ]
+    },
+    "f th": {
+        "has characteristic": "tist "
+    },
+    "aliz": {
+        "has characteristic": [
+            "rs in th",
+            "r warmth"
+        ]
+    },
+    "r warmth": {
+        "has characteristic": "ke inn"
+    },
+    "atest po": {
+        "has characteristic": "the gr"
+    },
+    "s ra": {
+        "has characteristic": "rs in th"
+    },
+    "ut,": {
+        "has characteristic": "ts, "
+    },
+    "Public Notary": {
+        "depicts": [
+            "sign",
+            "man",
+            "window",
+            "gray c",
+            "folio",
+            "official document with attached wax seals"
+        ],
+        "influenced by": "to Christ and the Woman Taken in Adult",
+        "created in": "e, 1",
+        "has characteristic": "inct ",
+        "created by": "Gabriel Metsu",
+        "made from material": "g on ",
+        "instance of": "he paint"
+    },
+    "hold open": {
+        "contains": [
+            "official document with attached wax seals",
+            "folio"
+        ]
+    },
+    "sheets of paper": {
+        "has characteristic": [
+            "loose",
+            "number of"
+        ]
+    },
+    "inscription": {
+        "symbolizes": "openbaer Notarus"
+    },
+    "inct ": {
+        "has characteristic": [
+            "s o",
+            " and "
+        ]
+    },
+    "below the open shutter": {
+        "contains": "sign"
+    },
+    "folio": {
+        "contains": "sheets of paper"
+    },
+    "gray c": {
+        "has characteristic": "g of brownish"
+    },
+    "building": {
+        "has characteristic": [
+            "window",
+            "brownish-gray",
+            "stone"
+        ]
+    },
+    "pieces of garbage": {
+        "has characteristic": "small"
+    },
+    "Puddle": {
+        "made from material": [
+            "sand",
+            "stones",
+            "artificial resin",
+            "thrown"
+        ],
+        "created by": "Marlie Mul's",
+        "depicts": [
+            "sculptures",
+            "surfaces",
+            "pieces of garbage",
+            "floor",
+            "exhibition space"
+        ],
+        "instance of": "sculptures",
+        "symbolizes": "existential abyss of urban and suburban slums"
+    },
+    "surfaces": {
+        "has characteristic": "shiny"
+    },
+    "exhibition space": {
+        "has characteristic": [
+            "white",
+            "clean"
+        ]
+    },
+    "sculptures": {
+        "symbolizes": "raincoats",
+        "has characteristic": "flat"
+    },
+    "REITER, SCHIMMEL UND HUND VOR DEM WEIHERHAUS BEI EMMING, UM 1852": {
+        "created by": " a det",
+        "instance of": "ann dated",
+        "depicts": [
+            "ack w",
+            " is tru"
+        ],
+        "symbolizes": "lded wha",
+        "contains": "d the fa"
+    },
+    " is tru": {
+        "has characteristic": "e sam",
+        "depicts": "sent painting"
+    },
+    "\nThe": {
+        "depicts": "ack w"
+    },
+    "ork of": {
+        "has characteristic": "he late "
+    },
+    "painting is a memorial to the ": {
+        "contains": "ack w"
+    },
+    "hionable riding dress and": {
+        "contains": "d the fa"
+    },
+    ", who sit": {
+        "has characteristic": " in"
+    },
+    "ell fa": {
+        "has characteristic": " explained, Ko"
+    },
+    "e right. \nAs": {
+        "has characteristic": "ground to t"
+    },
+    "Rastende Bauern": {
+        "depicts": [
+            "peasants",
+            "angular shapes",
+            "four farmers",
+            "on the left",
+            "on the right",
+            "underground"
+        ],
+        "created in": [
+            "1923",
+            "1921"
+        ],
+        "created by": "Kirchner"
+    },
+    "to the left": {
+        "contains": "four farmers"
+    },
+    "peasants": {
+        "has characteristic": [
+            "resting",
+            "smoking",
+            "blowing pipes"
+        ]
+    },
+    "farmer": {
+        "has characteristic": [
+            "lying down",
+            "young"
+        ]
+    },
+    "two farmers": {
+        "has characteristic": "bodies"
+    },
+    "counterparts": {
+        "has characteristic": "green"
+    },
+    "bodies": {
+        "has characteristic": "white"
+    },
+    "angular shapes": {
+        "contains": [
+            "elbows",
+            "knees"
+        ]
+    },
+    "underground": {
+        "has characteristic": "blue"
+    },
+    "basis": {
+        "has characteristic": "oak-coloured"
+    },
+    "battle": {
+        "has characteristic": "dramatic"
+    },
+    "quote": {
+        "has characteristic": "direct"
+    },
+    "horse's": {
+        "contains": "anatomy"
+    },
+    "pattern": {
+        "has characteristic": "monochrome"
+    },
+    "composition": {
+        "has characteristic": "effective"
+    },
+    "crude musical inst": {
+        "has characteristic": "was a"
+    },
+    "hat": {
+        "has characteristic": [
+            "brim",
+            "wide-brimmed"
+        ]
+    },
+    "depiction": {
+        "has characteristic": "lifelike"
+    },
+    "face": {
+        "has characteristic": "wrinkled"
+    },
+    "musician": {
+        "has characteristic": "old"
+    },
+    " joyful fes": {
+        "has characteristic": "of suc"
+    },
+    "dmade inst": {
+        "has characteristic": " this ha"
+    },
+    "getic celeb": {
+        "has characteristic": "h the ene"
+    },
+    "ble half-length depict": {
+        "has characteristic": "two compar"
+    },
+    "ded m": {
+        "has characteristic": [
+            "lar bea",
+            "d a sim"
+        ]
+    },
+    "patchwork": {
+        "has characteristic": "visible"
+    },
+    "clothes": {
+        "has characteristic": [
+            "beige",
+            "red"
+        ]
+    },
+    "piece": {
+        "has characteristic": "attached",
+        "symbolizes": "shepherd's"
+    },
+    "SCHLAFENDER HIRTENJUNGE": {
+        "depicts": [
+            "boy",
+            "next to him",
+            "dog",
+            "In a far-off landscape",
+            "On the right",
+            "behind which"
+        ],
+        "created by": "artist",
+        "instance of": "ainting,"
+    },
+    "pasture basket": {
+        "has characteristic": "handle"
+    },
+    "leaning": {
+        "contains": [
+            "hand",
+            "head"
+        ]
+    },
+    "grabbing": {
+        "contains": [
+            "hand",
+            "elbows"
+        ]
+    },
+    "In a far-off landscape": {
+        "contains": "in front of a tree trunk"
+    },
+    "behind which": {
+        "contains": [
+            "stag tree",
+            "sky"
+        ]
+    },
+    "elbow": {
+        "has characteristic": [
+            "hand",
+            "right"
+        ]
+    },
+    "in front of a tree trunk": {
+        "contains": "boy"
+    },
+    "attached": {
+        "contains": "handle"
+    },
+    "next to him": {
+        "contains": "dog"
+    },
+    "SCHÖNHEIT IN ROTEM KLEID": {
+        "instance of": [
+            "small-format painting",
+            "portrait",
+            "chest portrait"
+        ],
+        "influenced by": [
+            "Tiziano Vecellio",
+            "Correggio"
+        ],
+        "created by": "Jean Jacques Henner",
+        "depicts": [
+            "background",
+            "woman",
+            "garments"
+        ],
+        "symbolizes": "sensuality"
+    },
+    "red": {
+        "has characteristic": "pure"
+    },
+    "garments": {
+        "has characteristic": [
+            "red",
+            "surface"
+        ]
+    },
+    "textile": {
+        "has characteristic": "red"
+    },
+    "creature": {
+        "symbolizes": "death",
+        "has characteristic": "shadowy"
+    },
+    "spoils": {
+        "has characteristic": "rich"
+    },
+    "door": {
+        "symbolizes": "hell",
+        "has characteristic": [
+            "closed",
+            "open"
+        ]
+    },
+    "two guards": {
+        "symbolizes": [
+            "death",
+            "sin"
+        ]
+    },
+    "earth": {
+        "contains": "spoils"
+    },
+    "Satan und Tod, von der Sünde getrennt": {
+        "depicts": [
+            "door",
+            "Satan",
+            "two guards"
+        ],
+        "instance of": "painting"
+    },
+    "gate": {
+        "has characteristic": "opened"
+    },
+    "Campagne": {
+        "has characteristic": [
+            "countryside",
+            "drought"
+        ]
+    },
+    "countryside": {
+        "has characteristic": "vast"
+    },
+    "drought": {
+        "has characteristic": "summer"
+    },
+    "dust": {
+        "has characteristic": "swirling"
+    },
+    "Schäfer in der römischen Campagna": {
+        "has characteristic": [
+            "staffage",
+            "Campagne"
+        ],
+        "instance of": "painting",
+        "created in": "1837",
+        "created by": "Bürkel"
+    },
+    "air": {
+        "has characteristic": [
+            "heavy",
+            "bleached"
+        ]
+    },
+    "staffage": {
+        "has characteristic": "colourful"
+    },
+    "atmospheric mood": {
+        "symbolizes": [
+            "air",
+            "dust"
+        ]
+    },
+    "Self-Portrait with Shaded Eyes": {
+        "depicts": [
+            "aded by ",
+            "ed. \nO",
+            "thus be",
+            "pt l",
+            "gs an",
+            " commun",
+            "With eyes g",
+            "ed yo"
+        ],
+        "symbolizes": "brandt’s character and artistic ",
+        "influenced by": [
+            "ly out at t",
+            "g as he"
+        ],
+        "instance of": "ndt van Rijn, ",
+        "created by": "f the you",
+        "created in": "romis"
+    },
+    "pt l": {
+        "has characteristic": [
+            "stic ",
+            "nality he k"
+        ]
+    },
+    "gs an": {
+        "has characteristic": " drawi",
+        "contains": [
+            "ainti",
+            " his"
+        ]
+    },
+    "thus be": {
+        "has characteristic": [
+            "stare ",
+            "ack, and"
+        ]
+    },
+    "aded by ": {
+        "has characteristic": "tly s"
+    },
+    "s extraordina": {
+        "has characteristic": [
+            "ssion of h",
+            "elible "
+        ]
+    },
+    "pres": {
+        "has characteristic": "t’s e"
+    },
+    "stic ": {
+        "has characteristic": "eems so character"
+    },
+    "s eas": {
+        "has characteristic": " that it "
+    },
+    "Rem": {
+        "has characteristic": "e viewer and"
+    },
+    "With eyes g": {
+        "has characteristic": "rgotten. "
+    },
+    "from the": {
+        "symbolizes": "s eas"
+    },
+    "s. \n": {
+        "has characteristic": "begi"
+    },
+    "ed. \nO": {
+        "has characteristic": "cannot hel"
+    },
+    "brandt’s character and artistic ": {
+        "symbolizes": "s extraordina"
+    },
+    " commun": {
+        "has characteristic": "ed in silen"
+    },
+    "aits or ": {
+        "has characteristic": "s models for h"
+    },
+    "Self-portrait with Tousled Hair": {
+        "depicts": [
+            "later",
+            ", while o"
+        ],
+        "instance of": "for vari",
+        "created in": "ecommen",
+        "fabrication method": "t from studying your own emotions, namely in front of a m",
+        "has characteristic": " and",
+        "created by": "s studies"
+    },
+    "later": {
+        "has characteristic": "aits or ",
+        "symbolizes": " Amsterdam drawing, t"
+    },
+    ", while o": {
+        "has characteristic": [
+            "r sty",
+            "ortr",
+            "first sk"
+        ]
+    },
+    "tween l": {
+        "influenced by": "also occurs i"
+    },
+    "also occurs i": {
+        "instance of": "works",
+        "created in": "few ",
+        "fabrication method": "hnique"
+    },
+    "first sk": {
+        "has characteristic": "ad was"
+    },
+    "r sty": {
+        "symbolizes": "tes stri",
+        "has characteristic": "eir simil"
+    },
+    "ortr": {
+        "has characteristic": [
+            "riod draw",
+            "no. Gg"
+        ]
+    },
+    "exercises in the repre": {
+        "instance of": "mbrandt ",
+        "created by": "hese were n"
+    },
+    " and": {
+        "symbolizes": "d up with"
+    },
+    "or figures in ": {
+        "instance of": "mbrandt ",
+        "created by": "hese were n"
+    },
+    "no. Gg": {
+        "has characteristic": "inv."
+    },
+    "hese were n": {
+        "influenced by": "lf-portra"
+    },
+    " revealed t": {
+        "has characteristic": " her t",
+        "contains": [
+            "ing praise ",
+            "rst ",
+            "prophe"
+        ]
+    },
+    " Jewis": {
+        "contains": [
+            "to Jerus",
+            "oseph "
+        ]
+    },
+    "anked God with ": {
+        "contains": [
+            " foll",
+            "ok him in his arms, a"
+        ]
+    },
+    "oseph ": {
+        "has characteristic": [
+            "ho, acco",
+            " the Lord” ",
+            "ry and "
+        ]
+    },
+    "Simeon in the Temple": {
+        "contains": [
+            "resent him t",
+            "ok him in his arms, a",
+            " disclose",
+            "he ",
+            "rst ",
+            "prophe",
+            "imeon kneeling ",
+            "oseph "
+        ],
+        "depicts": [
+            "to Jerus",
+            "t tho",
+            "d van",
+            " Jewis",
+            " foll"
+        ],
+        "created by": "The Gospel of Luke (2:22–"
+    },
+    "to Jerus": {
+        "contains": "ght t",
+        "has characteristic": "irst-born son"
+    },
+    "2:26)": {
+        "contains": [
+            "Simeo",
+            "he i"
+        ]
+    },
+    "ate of ": {
+        "has characteristic": "’s c",
+        "contains": "d van"
+    },
+    "ing praise ": {
+        "contains": [
+            "After gi",
+            " Mary an"
+        ]
+    },
+    " foll": {
+        "contains": "t tho"
+    },
+    " Mary an": {
+        "has characteristic": "Simeon blesse"
+    },
+    "imeon kneeling ": {
+        "has characteristic": [
+            "s the bear",
+            " temp"
+        ]
+    },
+    "t tho": {
+        "has characteristic": [
+            "ette",
+            "ord, now "
+        ]
+    },
+    "osition sho": {
+        "contains": "imeon kneeling "
+    },
+    "ould n": {
+        "has characteristic": "hat he s"
+    },
+    "ke 2:22). \nIn the": {
+        "symbolizes": " Simeon, a dev"
+    },
+    "d van": {
+        "has characteristic": "er son. \nGerbra"
+    },
+    "ervant depa": {
+        "has characteristic": "according t"
+    },
+    " temp": {
+        "has characteristic": "e next"
+    },
+    "he i": {
+        "has characteristic": "ized "
+    },
+    "t in peace,": {
+        "contains": "ervant depa"
+    },
+    " disclose": {
+        "has characteristic": [
+            "ould n",
+            "st ha"
+        ]
+    },
+    "rst ": {
+        "has characteristic": "After gi"
+    },
+    " the Lord” ": {
+        "contains": "resent him t"
+    },
+    " law, brought t": {
+        "contains": "oseph "
+    },
+    "’s c": {
+        "has characteristic": "khou"
+    },
+    "e next": {
+        "symbolizes": "a chai"
+    },
+    "prophe": {
+        "has characteristic": [
+            "ate of ",
+            "After gi"
+        ]
+    },
+    "he Holy Gh": {
+        "contains": " disclose"
+    },
+    "nt as the Savior": {
+        "contains": "ok him in his arms, a"
+    },
+    "according t": {
+        "has characteristic": " thy w"
+    },
+    "over the river": {
+        "contains": "group of bystanders"
+    },
+    "South Bank": {
+        "created by": "William Townsend",
+        "depicts": [
+            "view",
+            "group of bystanders"
+        ],
+        "influenced by": "Bathers and the Ile de la Grand Jatte",
+        "created in": "1948",
+        "instance of": "painting"
+    },
+    "Bathers and the Ile de la Grand Jatte": {
+        "created by": "Seurat's"
+    },
+    "group of bystanders": {
+        "has characteristic": "gazing out"
+    },
+    "South Bank of the Thames": {
+        "has characteristic": "undeveloped"
+    },
+    "William Townsend": {
+        "influenced by": [
+            "Euston Road School",
+            "Henry Tonks"
+        ]
+    },
+    "ball": {
+        "has characteristic": "lively"
+    },
+    "jester": {
+        "has characteristic": "solemn"
+    },
+    "Still Life": {
+        "has characteristic": "ch lavish banq",
+        "depicts": [
+            "ustom",
+            "colo",
+            "n Beyer",
+            " \nThe R",
+            "m int",
+            "as pr",
+            "nd Am",
+            "al format f",
+            "ks of ",
+            "play o",
+            "xury goods – often"
+        ],
+        "influenced by": " a similar painting by",
+        "created in": "ts ‘w",
+        "created by": "nderfully d"
+    },
+    "s, whi": {
+        "contains": "t piec"
+    },
+    "play o": {
+        "has characteristic": "ful di"
+    },
+    "monumental se": {
+        "contains": "xury goods – often"
+    },
+    "ustom": {
+        "contains": " \nThe R"
+    },
+    "ks of ": {
+        "has characteristic": "me wo"
+    },
+    "as pr": {
+        "has characteristic": "bably the first to"
+    },
+    "al format f": {
+        "has characteristic": [
+            " verti",
+            "s, whi"
+        ]
+    },
+    "rily built up alo": {
+        "contains": "ustom"
+    },
+    "ch lavish banq": {
+        "has characteristic": "ers of s"
+    },
+    "t piec": {
+        "has characteristic": "banqu"
+    },
+    " \nThe R": {
+        "has characteristic": "agonal lines.\n1"
+    },
+    "Straße an der Elbe, mit verfallenem Torbogen": {
+        "created by": "s, which, a",
+        "contains": "igures to the le",
+        "depicts": [
+            "torb",
+            "is a free",
+            "e le"
+        ],
+        "created in": "um 1799"
+    },
+    "t of the mi": {
+        "contains": "e le"
+    },
+    "is a free": {
+        "has characteristic": "t of the mi"
+    },
+    "f the Elbto": {
+        "contains": "h st"
+    },
+    " Pirna in the western part of the city.\nThe arch": {
+        "has characteristic": "torb"
+    },
+    "subst": {
+        "contains": "post office column above the"
+    },
+    "earing": {
+        "has characteristic": [
+            "r br",
+            "ch ap"
+        ]
+    },
+    "res, erected ": {
+        "has characteristic": [
+            " tre",
+            "subst"
+        ]
+    },
+    "t of the go": {
+        "contains": "igures to the le"
+    },
+    "t by t": {
+        "has characteristic": "f the Elbto"
+    },
+    " about wh": {
+        "has characteristic": "t of the go"
+    },
+    "r, seen from the b": {
+        "contains": "k, play"
+    },
+    "street musicians": {
+        "has characteristic": [
+            "female",
+            "k, play",
+            "ne play",
+            "Two",
+            "itinerant"
+        ],
+        "symbolizes": "\ntorio"
+    },
+    "Street Musicians": {
+        "influenced by": "e 'abbreviated', ryakuga, st",
+        "depicts": [
+            "street musicians",
+            " a shop emplo",
+            "he ko",
+            "he shami"
+        ],
+        "created by": "gh Ishikawa Toyon"
+    },
+    "ed t": {
+        "has characteristic": " a lacque",
+        "contains": "th swe"
+    },
+    " a shop emplo": {
+        "has characteristic": "ee carry"
+    },
+    "ne play": {
+        "contains": "he shami"
+    },
+    "w ha": {
+        "has characteristic": [
+            "h simp",
+            "e str"
+        ]
+    },
+    "ee carry": {
+        "contains": "ed t"
+    },
+    "k, play": {
+        "contains": "he ko"
+    },
+    ". \nTo the l": {
+        "contains": " a shop emplo"
+    },
+    "TARQUINIO UND LUCREZIA": {
+        "symbolizes": [
+            " Alessandro V",
+            "89-1576) num"
+        ],
+        "created in": "ly the subj",
+        "depicts": [
+            "The pain",
+            "themselves to this subject. ",
+            "lose-up detail, with the dram"
+        ],
+        "made from material": "tic aspect in",
+        "instance of": "pressor,",
+        "created by": "the moment sh",
+        "influenced by": "n the opinion of Em"
+    },
+    "The pain": {
+        "has characteristic": [
+            "an wom",
+            "ntation by P",
+            "egro i"
+        ]
+    },
+    "lar subject": {
+        "has characteristic": " moral m"
+    },
+    "ntation by P": {
+        "has characteristic": "a visual docum"
+    },
+    "lose-up detail, with the dram": {
+        "has characteristic": "g, which"
+    },
+    "ziano Vece": {
+        "has characteristic": "89-1576) num"
+    },
+    "The Country Road": {
+        "depicts": [
+            "of tr",
+            " a few hunt",
+            "ic Dutch landsc",
+            "nd villag",
+            "ow hori",
+            "he peasant cotta",
+            "hrome p",
+            "monogram"
+        ],
+        "influenced by": [
+            " like Esaias van de",
+            "he pri",
+            "nd Jan van de Ve",
+            "of Claes Jansz Vissc"
+        ],
+        "created by": "ch De Hondecoe",
+        "has genre": [
+            "he Flem",
+            "ic Du"
+        ],
+        "created in": "early",
+        "instance of": "\nThis pa"
+    },
+    "hrome p": {
+        "has characteristic": " \nThe mono"
+    },
+    "he cent": {
+        "contains": "of tr"
+    },
+    "ow hori": {
+        "has characteristic": "he "
+    },
+    "ic Dutch landsc": {
+        "has characteristic": "he naturalis"
+    },
+    "The Incredulity of St Thomas": {
+        "created in": [
+            " \nIn",
+            "1981"
+        ],
+        "influenced by": [
+            ", Slatkes claimed that t",
+            "is secured"
+        ],
+        "instance of": " affinit",
+        "depicts": [
+            "e artist r",
+            " in 1689.9 It should be p",
+            "here i",
+            "dence ",
+            " Petrus Purmerent c"
+        ],
+        "created by": "elis va"
+    },
+    "he Virg": {
+        "has characteristic": "d Assumption of "
+    },
+    "wn.\n8 ": {
+        "has characteristic": "eren"
+    },
+    "dence ": {
+        "has characteristic": "t Cra"
+    },
+    "cob Ca": {
+        "has characteristic": "ouda, J"
+    },
+    "elis va": {
+        "influenced by": " Recent exami"
+    },
+    ", Slatkes claimed that t": {
+        "created by": "sque Movem"
+    },
+    "sors i": {
+        "has characteristic": "cob Ca"
+    },
+    "e artist r": {
+        "contains": "he Virg",
+        "has characteristic": "which t"
+    },
+    "recht o": {
+        "has characteristic": "or Utr"
+    },
+    "here i": {
+        "has characteristic": [
+            ", moreover, no ev",
+            "worked "
+        ]
+    },
+    " Petrus Purmerent c": {
+        "has characteristic": " the "
+    },
+    "eren": {
+        "has characteristic": [
+            "uggeste",
+            "f Pur"
+        ]
+    },
+    "The Little Bridge": {
+        "created by": "Gillis Rombouts",
+        "instance of": "landscape painting",
+        "contains": [
+            "over a canal",
+            "ducks"
+        ],
+        "depicts": "bridge"
+    },
+    "over a canal": {
+        "contains": "bridge"
+    },
+    "The letter": {
+        "depicts": [
+            " of the Yarra River near Dareb",
+            "alongside a stream",
+            "letter"
+        ],
+        "contains": "woman"
+    },
+    "The letter (McCubbin)": {
+        "fabrication method": "up from en plein air ",
+        "created in": "1884",
+        "created by": "Frederick McCubbin",
+        "instance of": "painting"
+    },
+    "alongside a stream": {
+        "contains": "woman"
+    },
+    "viewpoint": {
+        "has characteristic": "elevated"
+    },
+    "beam": {
+        "has characteristic": "thin"
+    },
+    "colors": {
+        "has characteristic": "bright"
+    },
+    "humanizing trend": {
+        "symbolizes": "anthropomorphic view of seating furniture"
+    },
+    "Verbrecher 6": {
+        "depicts": "copies of the bowwood chairs",
+        "influenced by": "portrait photography",
+        "instance of": "series of photographs",
+        "created by": "Kerstin von Gabain"
+    },
+    "copies of the bowwood chairs": {
+        "symbolizes": "humanizing trend",
+        "has characteristic": "virtuosic"
+    },
+    "chairs": {
+        "has characteristic": "bowwood"
+    },
+    "portrait photography": {
+        "created in": "19th century"
+    },
+    "monastery": {
+        "has characteristic": "towers"
+    },
+    "View of Ghent": {
+        "instance of": "drawing",
+        "depicts": "outskirts of the city",
+        "created by": "artist"
+    },
+    "Vorbereitung zum Fest": {
+        "depicts": [
+            "In the vicinity of a wine cellar",
+            "On the wood floor",
+            "couple",
+            "boy",
+            "ceiling bars",
+            "wall",
+            "Through the open door"
+        ]
+    },
+    "plays": {
+        "contains": "violin"
+    },
+    "Through the open door": {
+        "contains": "in the background"
+    },
+    "children": {
+        "has characteristic": "two"
+    },
+    "On the wood floor": {
+        "contains": [
+            "girl",
+            "children"
+        ]
+    },
+    "wall": {
+        "has characteristic": "crumbling"
+    },
+    "ceiling bars": {
+        "contains": "spoon"
+    },
+    "In the vicinity of a wine cellar": {
+        "has characteristic": "farmer"
+    },
+    "silhouette": {
+        "has characteristic": "pale"
+    },
+    "castle": {
+        "has characteristic": "old"
+    },
+    "Leopoldsberg": {
+        "has characteristic": "prominent"
+    },
+    "ould see ": {
+        "symbolizes": "rizontal",
+        "has characteristic": "e as Fei"
+    },
+    "Windmühle mit Dorf": {
+        "created by": " sheet is",
+        "instance of": "of outd"
+    },
+    "the": {
+        "contains": [
+            "mills.\nThis drawin",
+            "e as Fei"
+        ],
+        "has characteristic": " the so-call"
+    },
+    " police.\n": {
+        "contains": "ission\nFor",
+        "has characteristic": "o th"
+    },
+    "e Lyonel": {
+        "symbolizes": "ill is one of the buildings o"
+    },
+    "scene": {
+        "contains": "garden",
+        "has characteristic": "relaxed"
+    },
+    "„Wirtsgarten in München“": {
+        "has genre": "impressionist",
+        "depicts": [
+            "gardens",
+            "Wirtsgarten",
+            "Munich",
+            "nlight f",
+            "der tall trees. ",
+            "scene"
+        ],
+        "created by": "Otto Pippel"
+    },
+    "visitors": {
+        "has characteristic": "sit outside"
+    },
+    "Munich": {
+        "has characteristic": [
+            "city life",
+            "gardens"
+        ]
+    },
+    "Wirtsgarten": {
+        "has characteristic": "outdoor"
+    },
+    "garden": {
+        "has characteristic": "shady"
+    },
+    "der tall trees. ": {
+        "contains": "visitors"
+    },
+    "ees a": {
+        "has characteristic": "aves o"
+    },
+    "ees. ": {
+        "has characteristic": "ll t"
+    },
+    "silhouette ": {
+        "has characteristic": [
+            "hows the s",
+            "ated"
+        ]
+    },
+    "ated": {
+        "has characteristic": "ifferent"
+    },
+    "ide of ": {
+        "contains": "irgin"
+    },
+    " a long robe, the bab": {
+        "contains": ", holding "
+    },
+    "Thronende Muttergottes": {
+        "depicts": [
+            "od .\nI",
+            "hows the s",
+            ", holding "
+        ],
+        "made from material": "ry \nT",
+        "created in": "Well , I guess .\nNorthern Fran"
+    },
+    ", holding ": {
+        "has characteristic": [
+            "tone",
+            "ide of "
+        ]
+    },
+    "ident": {
+        "has characteristic": "arly e"
+    },
+    "hows the s": {
+        "contains": "ilted"
+    },
+    "tone": {
+        "has characteristic": "n a "
+    },
+    "od .\nI": {
+        "has characteristic": "ory,"
+    },
+    "ilted": {
+        "has characteristic": "htly "
+    },
+    "arin": {
+        "has characteristic": "and w"
+    },
+    "A pair of Bow figures of a huntsman and his companion": {
+        "depicts": [
+            "dog",
+            "tree trunk",
+            "huntsman",
+            "lady companion"
+        ],
+        "influenced by": "tion\n\nThese fi",
+        "created in": "1752",
+        "fabrication method": "fig.193 for a similar "
+    },
+    "huntsman": {
+        "has characteristic": "holding"
+    },
+    "at his side": {
+        "contains": "dog"
+    },
+    "arm": {
+        "has characteristic": "resting"
+    },
+    "by J": {
+        "has characteristic": "he b"
+    },
+    "d, h": {
+        "has characteristic": "ght arm "
+    },
+    "e up": {
+        "has characteristic": "d, is"
+    },
+    "eft": {
+        "has characteristic": "d of the figu"
+    },
+    "d, is": {
+        "has characteristic": "er ha"
+    },
+    "s belte": {
+        "has characteristic": "igh,"
+    },
+    "oth,": {
+        "has characteristic": [
+            " the ",
+            " right arm",
+            "erwa",
+            "ry i",
+            "d women"
+        ]
+    },
+    ". \nThe": {
+        "has characteristic": " of the "
+    },
+    "the vi": {
+        "has characteristic": ", th"
+    },
+    "own. \nThe ": {
+        "has characteristic": [
+            "eft",
+            " dress",
+            "s belte"
+        ]
+    },
+    "Height:": {
+        "instance of": "Commis",
+        "has characteristic": [
+            " is ",
+            "own. \nThe "
+        ],
+        "has genre": [
+            "hion. \nThe",
+            "t, the"
+        ],
+        "depicts": [
+            "oth,",
+            ". \nThe"
+        ]
+    },
+    "wit": {
+        "has characteristic": [
+            "rpost",
+            "y represen"
+        ]
+    },
+    "ght arm ": {
+        "symbolizes": "ng her "
+    },
+    "the sleeve is bl": {
+        "has characteristic": [
+            "igh,",
+            "s belte"
+        ]
+    },
+    ". Pa": {
+        "has characteristic": "ent.\nS"
+    },
+    "ry i": {
+        "has characteristic": "lds "
+    },
+    "dit": {
+        "has characteristic": [
+            " of the ",
+            "f val"
+        ]
+    },
+    "head framed by l": {
+        "contains": "own. \nThe "
+    },
+    " already de": {
+        "contains": ". \nThe"
+    },
+    "d women": {
+        "has characteristic": "marri"
+    },
+    "by l": {
+        "has characteristic": "amed"
+    },
+    " is ": {
+        "has characteristic": [
+            "by J",
+            "ear "
+        ]
+    },
+    "left ha": {
+        "has characteristic": "d, h"
+    },
+    "lds ": {
+        "has characteristic": "ormed. \nMary h"
+    },
+    "rved": {
+        "has characteristic": [
+            "danc",
+            "p of "
+        ]
+    },
+    " right arm": {
+        "has characteristic": "es"
+    },
+    "t style, w": {
+        "has characteristic": "ograde form"
+    },
+    " hip": {
+        "has characteristic": "y to the rig"
+    },
+    "danc": {
+        "has characteristic": "w, in acco"
+    },
+    "musical instruments": {
+        "has characteristic": [
+            "notes",
+            "cello",
+            "strings"
+        ]
+    },
+    "In the center": {
+        "contains": "group of musicians"
+    },
+    "arms": {
+        "has characteristic": "raised"
+    },
+    "group of musicians": {
+        "has characteristic": [
+            "flute player",
+            "singer",
+            "lady at the choir",
+            "cellist"
+        ]
+    },
+    "oriental carpet": {
+        "symbolizes": "table covering"
+    },
+    "palace architecture": {
+        "has characteristic": [
+            "bastions",
+            "pillars",
+            "balustrades"
+        ]
+    },
+    "cellist": {
+        "has characteristic": "arms"
+    },
+    "In the background": {
+        "contains": "fish"
+    }
+}
