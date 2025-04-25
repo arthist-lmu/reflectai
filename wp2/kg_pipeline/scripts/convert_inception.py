@@ -24,11 +24,75 @@ def parse_args():
     return args
 
 
-def extrext_text(data):
-    pass
+def parse_xmi_file(root, tripplets):
+    mapping = {}
+    unique = set()
+
+    text = load_text(root)
+    for elem in root.iter():
+        if 'ContentType' in elem.attrib.keys() or 'EntityType' in elem.attrib.keys():
+            begin = int(elem.attrib['begin']) #- 1
+            end = int(elem.attrib['end']) #+ 1 #because sometimes the object is not always fully grabbed
+            if text is None:
+                continue
+            value = text[begin:end]
+            key = elem.attrib['{http://www.omg.org/XMI}id']
+            mapping.update({key: value})
+        elif ('Dependent' in elem.attrib.keys() and 'Governor' in elem.attrib.keys() and
+              'Relationship' in elem.attrib.keys()):
+            s_code = elem.attrib['Governor']
+            o_code = elem.attrib['Dependent']
+            p = elem.attrib['Relationship']
+            s = mapping.get(s_code)
+            o = mapping.get(o_code)
+            if p is not None and s is not None and o is not None:
+                unique.add((s, p, o))
+
+    for unique_tripplet in unique:
+        tripplets = xmi_parse_helper(tripplets, unique_tripplet)
+
+    return tripplets
 
 
-def extrext_annotation(zip_file_object):
+
+def xmi_parse_helper(tripplets, tripplet):
+
+    if tripplet[0] not in tripplets.keys():
+        # add whole triplet
+        entry = {tripplet[0]:{tripplet[1]: tripplet[2]}}
+        tripplets.update(entry)
+    else:
+        if tripplet[1] not in tripplets[tripplet[0]]:
+            # only add the predicate object pair for relevant subject
+            tripplets[tripplet[0]].update({tripplet[1]: tripplet[2]})
+
+        elif tripplet[2] not in tripplets[tripplet[0]][tripplet[1]]:
+            # only add object to relevant predicate if not already present
+            contents = tripplets[tripplet[0]][tripplet[1]]
+            if type(contents) == list:
+                contents.append(tripplet[2])
+            else:
+                contents = [contents, tripplet[2]]
+
+            tripplets[tripplet[0]].update({tripplet[1]: contents})
+
+    return tripplets
+
+
+def load_text(root, annotations_path='./annotation'):
+    for elem in root.iter():
+        if 'documentTitle' in elem.attrib.keys():
+            for annotation_texts in os.listdir(annotations_path):
+                for annotation_text in os.listdir(annotations_path + '/' + annotation_texts):
+                    if elem.attrib["documentTitle"] == annotation_text:
+                        with open(annotations_path +'/' + annotation_texts +  f'/{annotation_text}', encoding='utf-8') as fp:
+                            text = fp.read()
+
+                        return text
+                    
+
+
+def extrext_annotation(zip_file_object, tripplets):
     data = None
     with ZipFile(zip_file_object) as zip_file:
         for x in zip_file.infolist():
@@ -37,52 +101,46 @@ def extrext_annotation(zip_file_object):
                     data = f.read()
 
     root = ET.fromstring(data)
-    for elem in root.iter():
-        print(elem.tag)
 
-    # print("####")
-    # for elem in root.findall(
-    #     ".//de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence/"
-    # ):
-    #     for x in elem:
-    #         if x.tag == "webanno.custom.Namedentity":
-    #             data = {
-    #                 "begin": x.attrib.get("begin"),
-    #                 "end": x.attrib.get("end"),
-    #                 "type": x.attrib.get("EntityType"),
-    #             }
-    #             print(data)
-
-    #         if x.tag == "custom.Span":
-    #             print("+++++++++++++++++++++++++++++++++++++++")
-    #         if x.tag == "custom.Relation":
-    #             print("+++++++++++++++++++++++++++++++++++++++")
+    return parse_xmi_file(root, tripplets)
 
 
-def main():
+
+def annotationxmi_to_annotationjson():
+    # transform annotation xmi file into annotation json file
     args = parse_args()
-
     with ZipFile(args.input_path) as zip_file:
-
+        trips = {}
         for x in zip_file.infolist():
-            should_read = False
             if args.user:
                 # print(r"annotation/*/" + args.user + "\.xml")
                 if re.match(r"annotation/.*/" + args.user + "\.zip", x.filename):
-                    should_read = True
+
+                    #with open('./annotated_texts.txt', 'a', encoding='utf-8') as fp:
+                    #    fp.write(x.filename[11:-14] + '\n')
+
                     with zip_file.open(x.filename) as f:
-                        extrext_annotation(BytesIO(f.read()))
+                        trips = extrext_annotation(BytesIO(f.read()), trips)
+    """
+    # ---------------------------------
+    # this part only for individual xmi files
+    trips = {}
+    with open('tzischkin.xmi', 'r', encoding='utf-8') as fp:
+        root = ET.fromstring(fp.read())
+        trips = parse_xmi_file(root, trips)
+    # ---------------------------------
+    """
 
-            if should_read:
-                print(x)
-                # with zip_file.open(x.filename) as f:
-                #     print("#############################################")
-                #     print(x.filename)
-                #     print("#############################################")
-                #     print(extrext_annotation(f.read()))
-                # exit()
+    if args.output_path:
+        with open(args.output_path, 'w', encoding='utf-8') as fp:
+            json.dump(trips, fp, indent=4, ensure_ascii=False)
 
-            # print(x)
+
+
+def main():
+    annotationxmi_to_annotationjson()
+
+        
     return 0
 
 

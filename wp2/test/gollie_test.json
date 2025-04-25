@@ -1,0 +1,1098 @@
+{
+    "The painting": {
+        "movement": "Impressionists",
+        "depicts": [
+            "Themse",
+            "Syon House"
+        ]
+    },
+    "Wirtsgarten": {
+        "movement": "impressionist"
+    },
+    "Throne of the Mother of God": {
+        "shown with features": "Ivory"
+    },
+    "BRUNNENANLAGE": {
+        "depicts": [
+            "hill",
+            "wells",
+            "railway",
+            "pool",
+            "trees"
+        ]
+    },
+    "hill": {
+        "instance of": "landmark"
+    },
+    "wells": {
+        "instance of": "landmark"
+    },
+    "railway": {
+        "instance of": "landmark"
+    },
+    "pool": {
+        "instance of": "landmark"
+    },
+    "trees": {
+        "instance of": "landmark"
+    },
+    "SCHLAFENDER HIRTENJUNGE": {
+        "depicts": [
+            "boy",
+            "dog",
+            "shepherd"
+        ],
+        "genre": "portraiture"
+    },
+    "boy": {
+        "instance of": "human",
+        "wears": [
+            "beige",
+            "red"
+        ],
+        "expression, gesture or body pose": "lying"
+    },
+    "dog": {
+        "instance of": "landmark"
+    },
+    "shepherd": {
+        "instance of": "human"
+    },
+    "FANTASY Landscape WITH ANTIQUE FIGURAL STAFFAGE": {
+        "depicts person": "Venus",
+        "made from material": "OIL"
+    },
+    "FANTASY Landscape WITH ANTIQUE FIGURAL STAFFAGEOIL": {
+        "creator": "Gillis Aegidius Neyts",
+        "inception": "1623"
+    },
+    "this": {
+        "made from material": "Oil on canvas",
+        "depicts": [
+            "musicians",
+            "lady",
+            "flute player",
+            "singer",
+            "cellist",
+            "maid",
+            "child",
+            "tree",
+            "path",
+            "horizon",
+            "outcrop",
+            "hill",
+            "church",
+            "mill"
+        ]
+    },
+    "musicians": {
+        "instance of": "human"
+    },
+    "lady": {
+        "instance of": "human",
+        "expression, gesture or body pose": "seated"
+    },
+    "flute player": {
+        "instance of": "human"
+    },
+    "singer": {
+        "instance of": "human"
+    },
+    "cellist": {
+        "instance of": "human"
+    },
+    "maid": {
+        "instance of": "human"
+    },
+    "child": {
+        "instance of": "human"
+    },
+    "Oil on canvas": {
+        "made from material": "Oil on canvas"
+    },
+    "NUDO ALLO SPECCHIO, 1951": {
+        "made from material": [
+            "Oil",
+            "Oil on canvas"
+        ],
+        "depicts": "Cesare Monti"
+    },
+    "Cesare Monti": {
+        "instance of": "human",
+        "expression, gesture or body pose": "sitting"
+    },
+    "NUDO ALLO SPECCHIO": {
+        "genre": "nude"
+    },
+    "TARQUIN AND LUCRETIA": {
+        "located in": "Venice",
+        "genre": "Renaissance",
+        "made from material": "OIL on canvas"
+    },
+    "TARQUINIO UND LUCREZIA": {
+        "main subject": [
+            "Lucrezia",
+            "Tarquinio"
+        ]
+    },
+    "The Old Testament scene of the finding of the baby Moses suspended in the water by the daughter of Pharaoh": {
+        "depicts person": "Moses"
+    },
+    "this painting": {
+        "main subject": "The Old Testament",
+        "depicts": [
+            "daughter of Pharaoh",
+            "the king's daughter"
+        ]
+    },
+    "daughter of Pharaoh": {
+        "instance of": "human",
+        "wears": "a tight coat with pointed white sleeves",
+        "expression, gesture or body pose": "kneeling"
+    },
+    "the king's daughter": {
+        "instance of": "human",
+        "wears": "a tight coat with pointed white sleeves",
+        "expression, gesture or body pose": "kneeling"
+    },
+    "Eisacklandschaft": {
+        "located in": "Museum of New Art",
+        "main subject": "Klausen",
+        "genre": "landscape",
+        "inception": "1911"
+    },
+    "PORTRAIT EINER DAME": {
+        "depicts": [
+            "The lady in the armchair at the table reading",
+            "The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew",
+            "green pillow"
+        ],
+        "genre": "portrait",
+        "made from material": "Oil on canvas"
+    },
+    "The lady in the armchair at the table reading": {
+        "instance of": "human",
+        "expression, gesture or body pose": "reading"
+    },
+    "The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew": {
+        "instance of": "human",
+        "wears": [
+            "red dress",
+            "silver silk underwear"
+        ]
+    },
+    "green pillow": {
+        "instance of": "landmark"
+    },
+    "BERGLANDSCHAFT": {
+        "depicts": [
+            "watercourse",
+            "cascade",
+            "hillside",
+            "ledge"
+        ]
+    },
+    "watercourse": {
+        "instance of": "landmark"
+    },
+    "cascade": {
+        "instance of": "landmark"
+    },
+    "hillside": {
+        "instance of": "landmark"
+    },
+    "ledge": {
+        "instance of": "landmark"
+    },
+    "ABRAHAM BEWIRTET DIE DREI ENGEL": {
+        "depicts person": "Abraham"
+    },
+    "The Sick Child": {
+        "shown with features": "pillow",
+        "depicts": "pillows",
+        "genre": "lithograph",
+        "made from material": "lithograph",
+        "creator": "Edvard Munch",
+        "inception": "1896"
+    },
+    "pillows": {
+        "instance of": "landmark"
+    },
+    "portrait of Olga": {
+        "depicts": "Olga"
+    },
+    "Olga": {
+        "instance of": "human",
+        "creator": "Corinth"
+    },
+    "potato counters": {
+        "located in": [
+            "Museum of Modern Art",
+            "Museum for Applied Art"
+        ],
+        "creator": "Thomas Bayrle"
+    },
+    "Beautiful woman in red dress": {
+        "located in": "Musée National"
+    },
+    "Our chest portrait": {
+        "depicts": "woman"
+    },
+    "woman": {
+        "instance of": "human",
+        "wears": "dress",
+        "expression, gesture or body pose": "almost facing the viewer"
+    },
+    "Kleiner Reisealtar": {
+        "depicts person": "St. Francis"
+    },
+    "The Commission": {
+        "depicts person": [
+            "Clio",
+            "Euterpe",
+            "Terpsichore"
+        ]
+    },
+    "portrait": {
+        "located in": [
+            "Whitney Museum",
+            "private English ownership",
+            "Oost-Indisch Huis"
+        ],
+        "depicts": "Hartmut Stöcker"
+    },
+    "Hartmut Stöcker": {
+        "instance of": "human",
+        "genre": "portrait"
+    },
+    "VILLAGE IN RIVERSCAPE": {
+        "located in": "Sotheby's",
+        "depicts": "river",
+        "genre": "landscape",
+        "made from material": "oil on panel"
+    },
+    "river": {
+        "instance of": "landmark"
+    },
+    "VILLAGE IN RIVERSCAPE with figure staff and well": {
+        "inception": "1620"
+    },
+    "MunichEQUESTRIAN, GREY HORSE AND DOG": {
+        "made from material": "Oil"
+    },
+    "MunichEQUESTRIAN, GREY HORSE AND DOG in front of a house by a pond in Emming, CA.": {
+        "made from material": "Oil on canvas"
+    },
+    "La caduta del angelo": {
+        "located in": "Pinakothek der Moderne"
+    },
+    "La caduta dell’angelo": {
+        "movement": "Renaissance"
+    },
+    "A pair of Bow figures": {
+        "inception": "1752"
+    },
+    "Giuseppe Bernardino Bison,1762 Palmanova  1844 Milan, attributed to the Church of Santa Maria di Nazareth": {
+        "located in": ""
+    },
+    "painting": {
+        "inception": "1901",
+        "depicts": [
+            "forest",
+            "coast",
+            "sea",
+            "Pontine marshes",
+            "Monte Circeo",
+            "Ponza Islands",
+            "Tyrrhenian Sea",
+            "Via Appia"
+        ]
+    },
+    "The Adoration of the Magi": {
+        "genre": "Tempera"
+    },
+    "tree": {
+        "instance of": "landmark"
+    },
+    "path": {
+        "instance of": "landmark"
+    },
+    "horizon": {
+        "instance of": "landmark"
+    },
+    "outcrop": {
+        "instance of": "landmark"
+    },
+    "church": {
+        "instance of": "landmark"
+    },
+    "mill": {
+        "instance of": "landmark"
+    },
+    "BUST OF A YOUNG GIRL TITLED SUZON": {
+        "located in": "Meudon",
+        "depicts": "YOUNG GIRL",
+        "genre": "bust",
+        "made from material": "bronze"
+    },
+    "YOUNG GIRL": {
+        "instance of": "human"
+    },
+    "PORTRAIT OF A YOUNG Female ARISTOCRAT, Possibly Maria Beatrice di Modena, Duchess of York": {
+        "depicts": "Maria Beatrice di Modena"
+    },
+    "Maria Beatrice di Modena": {
+        "instance of": "human"
+    },
+    "Benedetto Gennari, 1633 Cento - 1715 Bologna, attributedPORTRAIT OF A YOUNG Female ARISTOCRAT, Possibly Maria Beatrice di Modena, Duchess of York": {
+        "genre": "portrait"
+    },
+    "PORTRAIT OF A YOUNG Female ARISTOCRAT": {
+        "made from material": "canvas"
+    },
+    "Bill E III (Caretera)": {
+        "genre": "abstract"
+    },
+    "JUGEND UND ALTER": {
+        "depicts person": "Venus",
+        "depicts": [
+            "girl",
+            "old woman",
+            "Venus"
+        ]
+    },
+    "girl": {
+        "instance of": "human",
+        "wears": "dress",
+        "expression, gesture or body pose": "sits at a well"
+    },
+    "old woman": {
+        "instance of": "human",
+        "expression, gesture or body pose": "talking to the girl"
+    },
+    "Venus": {
+        "instance of": "human"
+    },
+    "Pain Forgotten": {
+        "creator": "Max"
+    },
+    "Saint Catherine": {
+        "located in": "Milan",
+        "genre": "close-up",
+        "made from material": "Oil on canvas"
+    },
+    "Cebe": {
+        "creator": "Georg Baselitz",
+        "inception": "1993"
+    },
+    "Mary": {
+        "depicts person": [
+            "Mary",
+            "Jesus"
+        ]
+    },
+    "altarpiece": {
+        "located in": [
+            "Frankfurt Kunstverein",
+            "Helbing"
+        ]
+    },
+    "B-B Town": {
+        "located in": "Whitney Museum of American Art",
+        "made from material": [
+            "painting",
+            "canvas"
+        ],
+        "genre": "nightly urban landscape",
+        "inception": "1946"
+    },
+    "Die Ernte": {
+        "creator": "Koller-Pinell"
+    },
+    "vedutes": {
+        "inception": "1826"
+    },
+    "Portrait of a man": {
+        "located in": "Auste",
+        "genre": "portrait"
+    },
+    "Landscape with Runestone": {
+        "located in": "",
+        "made from material": [
+            "painting",
+            "oil"
+        ],
+        "genre": "landscape"
+    },
+    "Portrait of Anne Hathaway": {
+        "located in": "Colgate University Libraries, Special Collections and University Archives",
+        "genre": "portrait"
+    },
+    "Satan und Tod": {
+        "depicts person": [
+            "Satan",
+            "Tod"
+        ],
+        "creator": "Füssli",
+        "inception": "1799"
+    },
+    "Stańczyk": {
+        "located in": "Warsaw National Museum",
+        "language": "Stańczyk w czasie balu na dworze królowej Bony wobec straconego "
+    },
+    "Madonna mit der Nelke": {
+        "depicts person": "Madonna"
+    },
+    "Based on a view of Vienna from the Prater": {
+        "inception": "1781"
+    },
+    "The Little Bridge": {
+        "located in": "Musée des Beaux-Arts",
+        "genre": "landscape"
+    },
+    "Little Bridge": {
+        "depicts": [
+            "canal",
+            "ducks"
+        ]
+    },
+    "canal": {
+        "instance of": "landmark"
+    },
+    "ducks": {
+        "instance of": "animal"
+    },
+    "Boy Offering Grapes to a Woman": {
+        "genre": "genre",
+        "made from material": "canvas"
+    },
+    "Portrait of a Man": {
+        "shown with features": "walking stick",
+        "made from material": "oil on canvas"
+    },
+    "Portrait of a Gentleman with a Walking Stick": {
+        "depicts": "Gerrit Dou",
+        "genre": "portrait"
+    },
+    "Gerrit Dou": {
+        "instance of": "human",
+        "wears": [
+            "burgundy-plum woolen suit",
+            "cloak"
+        ]
+    },
+    "Conversion of Mary Magdalene": {
+        "located in": "Leiden Collection",
+        "depicts": [
+            "lamp",
+            "skull",
+            "Holy Scripture",
+            "oil lamp",
+            "angels",
+            "Holy Family",
+            "John the Baptist",
+            "Elizabeth"
+        ],
+        "genre": "portrait",
+        "made from material": "canvas"
+    },
+    "lamp": {
+        "instance of": "landmark"
+    },
+    "skull": {
+        "instance of": "landmark"
+    },
+    "Holy Scripture": {
+        "instance of": "landmark"
+    },
+    "oil lamp": {
+        "instance of": "landmark"
+    },
+    "angels": {
+        "instance of": "landmark"
+    },
+    "Holy Family": {
+        "instance of": "landmark"
+    },
+    "John the Baptist": {
+        "instance of": "landmark"
+    },
+    "Elizabeth": {
+        "instance of": "landmark"
+    },
+    "The 1855 picture": {
+        "creator": "Millet"
+    },
+    "The Rommel Pot Player": {
+        "shown with features": "rommel pot",
+        "genre": "portrait",
+        "made from material": "copper",
+        "creator": "Frans Hals",
+        "inception": "1679"
+    },
+    "Alp kitchen": {
+        "located in": "Thyssen-Bornemisza Museum",
+        "alias": "Alpküche",
+        "made from material": [
+            "kitchen",
+            "painting"
+        ],
+        "genre": "kitchen"
+    },
+    "Kozarčanka": {
+        "alias": "Woman from Kozara",
+        "depicts": "Milja Marin"
+    },
+    "Milja Marin": {
+        "instance of": "human",
+        "expression, gesture or body pose": "None"
+    },
+    "Old Man with a White Beard": {
+        "located in": "Leiden Collection",
+        "depicts": "old man",
+        "genre": "tronie",
+        "made from material": "canvas"
+    },
+    "old man": {
+        "instance of": "human",
+        "wears": [
+            "brown garment",
+            "soft hat"
+        ],
+        "expression, gesture or body pose": "standing"
+    },
+    "Parable of the Lost Piece of Silver": {
+        "made from material": "canvas",
+        "genre": "history"
+    },
+    "Grotto Landscape with a Hermitage": {
+        "alias": "The Reading Hermit",
+        "made from material": [
+            "oil",
+            "oil on canvas"
+        ],
+        "main subject": "hermit",
+        "depicts": [
+            "dogs",
+            "birds"
+        ],
+        "genre": "landscape"
+    },
+    "Grotto Landscape with a Hermitage, also called The Reading Hermit": {
+        "made from material": "canvas"
+    },
+    "dogs": {
+        "instance of": "animal"
+    },
+    "birds": {
+        "instance of": "animal"
+    },
+    "6 criminals": {
+        "located in": "Museum of Applied Art"
+    },
+    "Tivoli": {
+        "made from material": "oil on paper",
+        "creator": "Dillis"
+    },
+    "Fisherman and His Wife in an Interior": {
+        "depicts": [
+            "fisherman",
+            "wife"
+        ],
+        "genre": "domestic",
+        "made from material": "canvas"
+    },
+    "fisherman": {
+        "instance of": "human"
+    },
+    "wife": {
+        "instance of": "human"
+    },
+    "Italian Fisherman's Child": {
+        "genre": "genre painting"
+    },
+    "Still Life with Dead Hammer": {
+        "movement": "Austrian Expressionism"
+    },
+    "Doctor’s Visit": {
+        "located in": "Leiden",
+        "language": "Arztbesuch",
+        "depicts": [
+            "canopy bed",
+            "table",
+            "carpet"
+        ],
+        "genre": "doctor’s visit",
+        "made from material": "oil",
+        "creator": "Toorenvliet"
+    },
+    "canopy bed": {
+        "instance of": "landmark"
+    },
+    "table": {
+        "instance of": "landmark"
+    },
+    "carpet": {
+        "instance of": "landmark"
+    },
+    "Self-portrait": {
+        "located in": "British Museum",
+        "depicts": "mirror",
+        "made from material": "drawing"
+    },
+    "mirror": {
+        "instance of": "landmark"
+    },
+    "Self-portrait with Tousled Hair": {
+        "genre": "Self-portrait"
+    },
+    "Self-portrait drawings": {
+        "genre": "Self-portrait"
+    },
+    "Self-portrait of 1629": {
+        "genre": "Self-portrait"
+    },
+    "Portrait of a Boy with a Miniature Three-Master": {
+        "alias": "Portrait of a boy playing with a miniature three-master",
+        "depicts": "three-master",
+        "genre": "Portrait",
+        "made from material": "canvas",
+        "creator": "Pieter van der Werff",
+        "inception": "1696"
+    },
+    "three-master": {
+        "instance of": "landmark"
+    },
+    "Nature morte au géranium": {
+        "language": "Naturtot",
+        "main subject": "Nature morte",
+        "genre": "still life"
+    },
+    "Enco – Conway, Texas": {
+        "located in": "ARTIST ROOMS",
+        "genre": "black and white",
+        "inception": "1962"
+    },
+    "Enco - Conway, Texas": {
+        "genre": "black and white",
+        "inception": "1962"
+    },
+    "Mobil – Shamrock, Texas 1962": {
+        "inception": "1962"
+    },
+    "Fina – Groom, Texas 1962": {
+        "inception": "1962"
+    },
+    "Hudson – Amarillo, Texas 1962": {
+        "inception": "1962"
+    },
+    "Landscape with Sandy Path beside a River": {
+        "depicts": "River",
+        "genre": "landscape",
+        "inception": "1652"
+    },
+    "River": {
+        "instance of": "landmark"
+    },
+    "Still Life": {
+        "located in": "Rijksmuseum",
+        "made from material": [
+            "white napkin",
+            "canvas"
+        ],
+        "depicts": [
+            "roses",
+            "crab",
+            "silver dishes",
+            "porcelain bowl",
+            "glasses",
+            "tazza",
+            "Buckelpokal",
+            "façon de Venise glasses"
+        ],
+        "genre": "still life",
+        "creator": "Van Beyeren"
+    },
+    "roses": {
+        "instance of": "landmark"
+    },
+    "crab": {
+        "instance of": "landmark"
+    },
+    "silver dishes": {
+        "instance of": "landmark"
+    },
+    "porcelain bowl": {
+        "instance of": "landmark"
+    },
+    "glasses": {
+        "instance of": "landmark"
+    },
+    "tazza": {
+        "instance of": "landmark"
+    },
+    "Buckelpokal": {
+        "instance of": "landmark"
+    },
+    "façon de Venise glasses": {
+        "instance of": "landmark"
+    },
+    "Lady with Parrot on the Window": {
+        "located in": "National Gallery of Art in Washington",
+        "alias": "Dame at the Window",
+        "made from material": [
+            "oil",
+            "oil on canvas"
+        ]
+    },
+    "Portrait of a Lady": {
+        "shown with features": "books",
+        "located in": "National Gallery",
+        "alias": "Portrait of a Woman",
+        "genre": "portrait",
+        "made from material": "oil on canvas"
+    },
+    "Portrait of a Lady, Seated with a Music Book on Her Lap": {
+        "depicts": "lady"
+    },
+    "Portrait of a Woman with a Fan of ca. 1640 in the National Gallery, London": {
+        "depicts": "Agatha Bas"
+    },
+    "Agatha Bas": {
+        "instance of": "human",
+        "wears": "dress",
+        "expression, gesture or body pose": "seated"
+    },
+    "George Washington": {
+        "made from material": "oil",
+        "genre": "full-length",
+        "creator": "John Trumbull",
+        "inception": "1790"
+    },
+    "Washington at Verplanck's Point": {
+        "creator": "Trumbull",
+        "inception": "1790"
+    },
+    "Portrait of a Man of 1663": {
+        "located in": "Galleria degli Uffizi",
+        "genre": "portrait",
+        "made from material": "oil on canvas"
+    },
+    "Portrait of Florentius Schuyl of 1666": {
+        "located in": "Royal Picture Gallery Mauritshuis",
+        "genre": "portrait",
+        "made from material": "oil on canvas"
+    },
+    "Portrait of a Fifty-Two Year Old Man": {
+        "depicts": "Sylvius"
+    },
+    "Sylvius": {
+        "instance of": "human"
+    },
+    "Der Tod der Ophelia": {
+        "depicts": "Ophelia",
+        "genre": "death"
+    },
+    "Ophelia": {
+        "instance of": "human",
+        "expression, gesture or body pose": "floating in the water"
+    },
+    "Arche de Cosel": {
+        "located in": "Baroque battle cycles",
+        "genre": "battle",
+        "inception": "1808"
+    },
+    "Battle of Bar-sur-Aube": {
+        "located in": "Baroque battle cycles",
+        "genre": "battle",
+        "inception": "1817"
+    },
+    "Themse": {
+        "instance of": "landmark"
+    },
+    "Syon House": {
+        "instance of": "landmark"
+    },
+    "Interior with Women Thrashing a Man": {
+        "shown with features": "broom",
+        "alias": "Peasants Fighting",
+        "genre": "Interior",
+        "made from material": "canvas"
+    },
+    "Struggle for the Breeches": {
+        "located in": "Rijksmuseum"
+    },
+    "Interior with Women Thrashing a Man (“Peasants Fighting”)": {
+        "depicts": [
+            "women",
+            "man",
+            "woman",
+            "child"
+        ]
+    },
+    "women": {
+        "instance of": "human"
+    },
+    "man": {
+        "instance of": "human"
+    },
+    "Smadriba fall": {
+        "alias": "Der Schmadribachfall",
+        "depicts": [
+            "waterfall",
+            "mountain",
+            "stream",
+            "forest"
+        ],
+        "movement": "landscape",
+        "creator": "Koch"
+    },
+    "waterfall": {
+        "instance of": "landmark"
+    },
+    "mountain": {
+        "instance of": "landmark"
+    },
+    "stream": {
+        "instance of": "landmark"
+    },
+    "forest": {
+        "instance of": "landmark"
+    },
+    "The letter": {
+        "located in": "Art Gallery of Ballarat",
+        "main subject": "a young woman reading a letter",
+        "depicts": [
+            "stream",
+            "bush",
+            "Harriet McCubbin",
+            "Yarra River",
+            "Darebin Creek"
+        ],
+        "genre": "letter",
+        "inception": "1884",
+        "creator": "Frederick McCubbin"
+    },
+    "bush": {
+        "instance of": "landmark"
+    },
+    "Harriet McCubbin": {
+        "instance of": "human"
+    },
+    "Yarra River": {
+        "instance of": "landmark"
+    },
+    "Darebin Creek": {
+        "instance of": "landmark"
+    },
+    "Le Moulin de la Galette": {
+        "genre": "portrait"
+    },
+    "this picture": {
+        "depicts": "South Bank"
+    },
+    "South Bank": {
+        "instance of": "landmark"
+    },
+    "Fortuna": {
+        "shown with features": "globe",
+        "located in": "Rijksmuseum",
+        "depicts": "globe"
+    },
+    "globe": {
+        "instance of": "landmark"
+    },
+    "coast": {
+        "instance of": "landmark"
+    },
+    "sea": {
+        "instance of": "landmark"
+    },
+    "Pontine marshes": {
+        "instance of": "landmark"
+    },
+    "Monte Circeo": {
+        "instance of": "landmark"
+    },
+    "Ponza Islands": {
+        "instance of": "landmark"
+    },
+    "Tyrrhenian Sea": {
+        "instance of": "landmark"
+    },
+    "Via Appia": {
+        "instance of": "landmark"
+    },
+    "Aussicht von Ariccia gegen das Meer": {
+        "genre": "landscape"
+    },
+    "Schäfer in der römischen Campagna": {
+        "inception": "1837"
+    },
+    "Vedute": {
+        "located in": "Dresden",
+        "made from material": "unfinished"
+    },
+    "Straße an der Elbe": {
+        "depicts": [
+            "Elbufer",
+            "Elbtor"
+        ]
+    },
+    "Elbufer": {
+        "instance of": "landmark"
+    },
+    "Elbtor": {
+        "instance of": "landmark"
+    },
+    "The most beautiful views from Saxony": {
+        "depicts": [
+            "Elbufer",
+            "Elbtor"
+        ]
+    },
+    "Nebuchadnezzar": {
+        "located in": [
+            "Tate Britain",
+            "Museum of Fine Arts",
+            "Minneapolis Institute of Art"
+        ],
+        "genre": "monotype print",
+        "made from material": "monotype print",
+        "creator": "Blake"
+    },
+    "Dead End 3": {
+        "shown with features": "signs",
+        "located in": "Tate",
+        "alias": [
+            "Dead End 1",
+            "Dead End 2"
+        ],
+        "genre": "mixografia",
+        "made from material": "ink",
+        "creator": "Ed Ruscha"
+    },
+    "Moonlight": {
+        "located in": "Musée des Beaux-Arts",
+        "genre": "nocturne"
+    },
+    "Cat Crouching on the Ledge of an Artist’s Atelier": {
+        "depicts person": "cat",
+        "located in": "Leiden Collection",
+        "alias": "Katzen auf dem Rand des Ateliers eines Künstlers",
+        "language": "Katzen auf dem Rand des Ateliers eines Künstlers",
+        "made from material": "canvas",
+        "depicts": "cat",
+        "genre": "niche"
+    },
+    "cat": {
+        "instance of": "animal"
+    },
+    "Portrait Medallion of Johan van Oldenbarnevelt": {
+        "located in": "Rijksmuseum",
+        "depicts": "Johan van Oldenbarnevelt",
+        "genre": "portrait",
+        "made from material": "ivory"
+    },
+    "Johan van Oldenbarnevelt": {
+        "instance of": "human",
+        "expression, gesture or body pose": "profile"
+    },
+    "Portrait Medallion of Hugo Grotius": {
+        "made from material": "ivory"
+    },
+    "Simeon in the Temple": {
+        "depicts person": "Simeon",
+        "depicts": [
+            "Simeon",
+            "Jesus"
+        ],
+        "genre": "Presentation",
+        "made from material": "oil on canvas"
+    },
+    "The Presentation in the Temple": {
+        "located in": "Leiden"
+    },
+    "Simeon": {
+        "instance of": "human"
+    },
+    "Jesus": {
+        "instance of": "human"
+    },
+    "Self-Portrait with Shaded Eyes": {
+        "shown with features": "beret",
+        "located in": "Leiden",
+        "depicts": "Rembrandt",
+        "genre": "self-portrait",
+        "made from material": "canvas"
+    },
+    "Rembrandt": {
+        "instance of": "human"
+    },
+    "Composition with Two Ovals": {
+        "genre": "abstract",
+        "made from material": "canvas"
+    },
+    "Public Notary": {
+        "depicts person": "Pharisee",
+        "located in": "Louvre",
+        "depicts": "notary",
+        "genre": "genre",
+        "made from material": "panel",
+        "creator": "Gabriel Metsu"
+    },
+    "notary": {
+        "instance of": "human",
+        "wears": "red cloak",
+        "expression, gesture or body pose": "leans out of an arched window"
+    },
+    "Man with a Book": {
+        "alias": "Scholar Interrupted at His Writing",
+        "genre": "scholarly portrait",
+        "made from material": "canvas",
+        "creator": "Ferdinand Bol"
+    },
+    "Heroische Landschaft mit dem hl. Georg": {
+        "depicts": "",
+        "movement": "Renaissance"
+    },
+    "": {
+        "instance of": "landmark"
+    },
+    "Incredulity of St Thomas": {
+        "main subject": "Incredulity",
+        "genre": "Caravaggesque"
+    },
+    "Portrait of a Man in a Red Coat": {
+        "shown with features": "red coat",
+        "located in": "RR",
+        "made from material": "oak",
+        "genre": "portrait"
+    },
+    "Kakiemon elephants": {
+        "located in": "British Museum"
+    },
+    "Hunter Getting Dressed after Bathing": {
+        "located in": "Sp",
+        "genre": "genre",
+        "made from material": "canvas"
+    },
+    "In Thee Rejoiceth": {
+        "located in": "Hellenic Institute of Byzantine and Post-Byzantine Studies Museum",
+        "alias": "Epi Si Harri",
+        "made from material": [
+            "tempera",
+            "tempera and gold leaf"
+        ],
+        "genre": "tempera and gold leaf painting"
+    },
+    "Diana": {
+        "depicts person": "goddess of the hunt"
+    },
+    "Diana, Goddess of the Hunt": {
+        "located in": "",
+        "alias": "Artemis",
+        "genre": "portrait historié",
+        "made from material": "oil"
+    }
+}

@@ -1,0 +1,977 @@
+Joseph_Beuys_-_Ich_k_baf94a40f03d5d209f5166e7fbfd4fce.txt
+De_chirugica_institu_80d172b0304e57b2973075c9add37598.txt
+Auf_dem_Fischmarkt_128982b4743357608dccb25c842f6a8f.txt
+	 painting;  inception;  1901
+Two_Immortals,_1926_dba4e48d79015a83b1bf2608ed9e573c.txt
+	 Two Immortals;  shown with features;  scroll
+	 Two Immortals;  alias;  Two Immortals
+	 Two Immortals;  language;  Zwei Immortals
+	 Two Immortals, 1926;  depicts;  Wang Zhen
+	 Wang Zhen;  instance of;  human
+	 Two Immortals, 1926;  depicts;  Wang Zhen
+	 Wang Zhen;  instance of;  human
+	 Two Immortals;  movement;  Wang Zhen
+	 Two Immortals;  movement;  Wang Zhen
+	 Two Immortals;  made from material;  ink and colour on paper
+	 Two Immortals;  creator;  Wang Zhen
+	 Two Immortals;  inception;  1926
+GMT_Master,_Ref:_167_d69189e8608e54d7bc1cce2faf4233b5.txt
+	 GMT Master;  inception;  1979
+Anbetung_der_Knige_2ad1a11af65959238f53bae2bc58f1a5.txt
+	 Anbetung der Könige;  depicts person;  Jesus
+TANZENDE_UND_RAUFEND_895e7439ad495579bd1e2454375a0b81.txt
+	 Bacchanal;  located in;  Sotheby's
+	 painting;  located in;  Kunsthistorisches Museum
+	 painting;  depicts;  tree-lined hilltop
+	 tree-lined hilltop;  instance of;  landmark
+	 painting;  depicts;  hilly countryside
+	 hilly countryside;  instance of;  landmark
+	 painting;  depicts;  farmer
+	 farmer;  instance of;  human
+	 farmer;  expression, gesture or body pose;  dancing
+	 painting;  depicts;  player
+	 player;  instance of;  human
+	 player;  expression, gesture or body pose;  dancing
+	 painting;  depicts;  couple
+	 couple;  instance of;  human
+	 couple;  expression, gesture or body pose;  in dispute
+Barraud,_41_Cornhill_b6538ea8ff6c5fdca2e0a627d414ee2d.txt
+various_makers_and_d_8e2426e5507c57859311bac9d3f03feb.txt
+Los_140_|_Eugen_von__a8b03c03857b5bfeaffd5c36c5530333.txt
+	 Sicilian landscape with a monastery in an olive grove.;  located in;  National Gallery of Victoria
+	 Sicilian landscape with a monastery in an olive grove.;  made from material;  oil
+	 Sicilian landscape with a monastery in an olive grove.;  genre;  landscape
+	 Sicilian landscape with a monastery in an olive grove.;  made from material;  oil on canvas
+	 Sicilian landscape with a monastery in an olive grove.;  creator;  Eugen von Guérard
+	 Sicilian landscape with a monastery in an olive grove.;  inception;  1846
+HEILIGE_DES_KARMELIT_7c22256dfcc256c1aefeb07051382b58.txt
+Los_19_|_Karl_Fred_D_5ebe8d3629175a84884ae44673264b61.txt
+	 Landscape with hair split;  located in;  VAN HAM Art Estate
+	 Landscape with hair split;  genre;  object boxes
+Seltener_und_frher_D_e0d339b1394e578887f1f7cab82a7c35.txt
+Bildnis_des_Boxers_M_c3e483bfbb7a51e7aa06e8ebe42f33b6.txt
+	 Bildnis des Boxers Max Schmeling;  made from material;  Oil
+	 PORTRAIT OF THE BOXER MAX SCHMELING;  genre;  Oil on canvas
+	 PORTRAIT OF THE BOXER MAX SCHMELING;  made from material;  Oil
+ANBETUNG_DER_HEILIGE_b2bc0a83d70755c3b30de69a0684c806.txt
+	 The Adoration of the Magi;  genre;  Tempera
+Chiemsee._14cfe53c0a405193a6b940f912fdc01c.txt
+bonhams.jsonl_b636d696dd595661881bd8c44994eb4e.txt
+	 A Meissen Hausmaler cream pot and cover;  inception;  1725
+	 The scroll handle and three paw feet embellished in gilding;  inception;  1745
+BERFALL_MIT_REITERGE_32635e0e8d5b50598337eac841d857f5.txt
+	 this;  depicts;  tree
+	 tree;  instance of;  landmark
+	 this;  depicts;  path
+	 path;  instance of;  landmark
+	 this;  depicts;  horizon
+	 horizon;  instance of;  landmark
+	 this;  depicts;  outcrop
+	 outcrop;  instance of;  landmark
+	 this;  depicts;  hill
+	 hill;  instance of;  landmark
+	 this;  depicts;  church
+	 church;  instance of;  landmark
+	 this;  depicts;  mill
+	 mill;  instance of;  landmark
+bonhams.jsonl_a3febde748c3551494aa823dcc849149.txt
+	 skillet;  inception;  1350
+	 skillet;  inception;  1830
+Los_421_|_Dimitrij_A_b168332bc4cf53408b1f752f08c3b0ce.txt
+bonhams.jsonl_bf557a27fb2a5254a37fc56ee2660713.txt
+Bedeutender_Hamburge_309f96a7a7265a729e29256555b69c66.txt
+Zwei_Reiter_im_Tierg_29deb1869b5e5a24a7d95e5f13855088.txt
+	 Zwei Reiter im Tiergarten;  depicts;  trees
+	 trees;  instance of;  landmark
+	 Zwei Reiter im Tiergarten;  depicts;  trees
+	 trees;  instance of;  landmark
+Asta_Nielsen_9e7c1725d69558a7aa25497d849adb20.txt
+Pariser_Empire-Messg_05dee69b45235f1f950d2d07e648584c.txt
+Pablo_Picasso_-_Le_T_b8ed9e1f6abb5d85863bbf134aa5039f.txt
+Bayern_um1510_1520_-_5bf0aa9418eb5674851bc9eaff05ef13.txt
+	 The Last Supper;  depicts person;  Anna
+Seltene_Schraubmedai_fe6193a1706751d1b48ebb2032f5da2d.txt
+BSTE_EINES_JUNGEN_MD_05d0b904b77f5dba8afd5792b9268342.txt
+	 BUST OF A YOUNG GIRL TITLED SUZON;  located in;  Meudon
+	 BUST OF A YOUNG GIRL TITLED SUZON;  depicts;  YOUNG GIRL
+	 YOUNG GIRL;  instance of;  human
+	 BUST OF A YOUNG GIRL TITLED SUZON;  genre;  bust
+	 BUST OF A YOUNG GIRL TITLED SUZON;  made from material;  bronze
+bonhams.jsonl_da3f5ef613075f5e92db587e34009d82.txt
+Schraubmedaille_auf__13add86f41ee5ea19c5660ae0afb37d9.txt
+Sehr_groer_Augsburge_012c684238aa512aa7ea31eddb9f04a1.txt
+bonhams.jsonl_85b4bb4d215c5db4a9e27f33f6159985.txt
+Los_51_|_Amedeo_Modi_c27e18b2eb28557dadb18915aa4e3356.txt
+	 Tête de jeune fille à la frange;  made from material;  Bronze
+Imperial,_Beijing_Pa_36d1e6c8aa9f5be2a132e87310dd3c3d.txt
+	 a double-gourd glass snuff bottle;  located in;  
+Photograph_Signed_("_96f6b73662e5580a882672839608de21.txt
+	 Photograph;  located in;  Aimé Dupont Studio
+	 A striking and elegant portrait of the Australian-born pianist and composer Grainger;  genre;  portrait
+Wohl_Mitteldeutsch_E_01efb3851beb5cbdbc73f4dc3556bef7.txt
+Ye_Zhongsan_Signed_a_6e7384f35f2f5dd3bc8cebde55cd6a32.txt
+	 Hung Lou Meng;  main subject;  Pioyu and his female cousins
+	 Hung Lou Meng;  inception;  1928
+Herkules_im_Kampf_mi_8177e7b644755ba9a55a6f0e32caa97a.txt
+Art_Dco-Doppel-Clip__4c1fa5d9026150f6af5dce4b9ba5a4ad.txt
+	 Éventail;  creator;  Suzanne Belperron
+	 Éventail;  inception;  1935
+Los_81_|_Friedrich_K_344c1e3312b75eeaa8563b71767169c9.txt
+	 The first snow;  located in;  The Commission
+	 In the harbor;  located in;  The Commission
+	 Dutch farmer;  located in;  The Commission
+	 Italian shipowners;  located in;  The Commission
+799_98_(Frhes_Rot_b__e427e921d6c85f9cae231a4e0873f3d2.txt
+Los_10_|_Andreas_Gur_19a6ecf77fd7524e9f4bf416b8483212.txt
+The_seven_dwarfs._de94e2e70d42565dbd6c983ecd8ed3e3.txt
+	 The seven dwarfs;  depicts;  Grosz
+	 Grosz;  instance of;  human
+	 The seven dwarfs;  depicts;  Seven Dwarfs
+	 Seven Dwarfs;  instance of;  human
+	 The seven dwarfs;  depicts;  mountains
+	 mountains;  instance of;  landmark
+Los_108_|_Dieter_Rot_018e466164ae5be6bc386c8f7c9dd50a.txt
+WALDSTILLLEBEN_MIT_F_fe8083dad33f51148871aceba6224e8f.txt
+Los_14_|_Joseph_Beuy_11e8eda1dbb1590695cc60159a2ccf6b.txt
+	 A stone's time;  creator;  Joseph Beuys
+	 A stone's time;  inception;  1984
+Harlekin._a279a293493d5d75967a31099e94a53a.txt
+	 Harlekin;  creator;  Hofer
+VANITAS-STILLLEBEN_M_168de5d3e3a05a61bcab290e13f46614.txt
+	 Vanitas Still Life with musical instruments;  depicts;  gentleman
+	 gentleman;  instance of;  human
+	 gentleman;  wears;  brown robe
+	 gentleman;  expression, gesture or body pose;  holding
+	 Suffer;  creator;  Vanitas
+Schfer_im_sonnigen_O_0b3dbb36a5c65d0fa3775370fa9749df.txt
+KAFFEEHAUS-SZENE_c29a7cd1f15952bab8ff1e3b3ac947c9.txt
+Art_Dco-Demiparure_m_79fc9f3890855d2db3d45a9592040bbb.txt
+	 Art Déco-Demiparure;  movement;  Art Deco
+Los_1121_|_Eugne_Ver_9e4a3e5351895e189d3d24cf01dca327.txt
+	 A break after a successful hunt.;  made from material;  Oil on wood
+	 A break after a successful hunt;  made from material;  Oil on wood
+Los_28_|_Penny_Monog_4d89fec13ce35ce49da86facdadae8bd.txt
+	 Frieze of Parthenon;  made from material;  oil on canvas
+Adam_und_Eva_(Der_Sn_a188d2101fb558d88e88490f6f62d2a3.txt
+bonhams.jsonl_4cc4eccd44a45a8a941f619df26587cc.txt
+Neapolitanische_Fisc_9206cb0d4a6b5280acc4f55c5a025aa5.txt
+	 small painting;  depicts;  basket
+	 basket;  instance of;  landmark
+	 small painting;  depicts;  rocks
+	 rocks;  instance of;  landmark
+	 small painting;  depicts;  child
+	 child;  instance of;  landmark
+	 small painting;  depicts;  hut
+	 hut;  instance of;  landmark
+	 small painting;  depicts;  Vesuvius
+	 Vesuvius;  instance of;  landmark
+	 small painting;  depicts;  hut
+	 hut;  instance of;  landmark
+	 small painting;  depicts;  Vesuvius
+	 Vesuvius;  instance of;  landmark
+	 small painting;  depicts;  hut
+	 hut;  instance of;  landmark
+	 small painting;  depicts;  Vesuvius
+	 Vesuvius;  instance of;  landmark
+	 Catel;  genre;  romantic Italian image
+	 small painting;  creator;  Catel
+H.A.P_Grieshaber_-_C_c2f0812d09115c938856de02696a3876.txt
+Die_Anbetung_der_Kni_4c421579831f58f2bc799bbc44bb6088.txt
+bonhams.jsonl_ba31fd7e56a75da899b65c87e29c4baf.txt
+Los_9_|_Thomas_Baumg_96955094ad3154f08db939303d6dfcbe.txt
+ALGERISCHE_JDIN_-_JU_80655cbe18e0528ca830b095c6bd6fc8.txt
+	 bust;  located in;  Metropolitan Museum of Art
+bonhams.jsonl_6e7c0bef32b8586696181cabea239b49.txt
+Der_Spaziergnger._0911aa65907454378fbb74042c717117.txt
+	 Der Spaziergänger;  creator;  Barlach
+Mappenwerk_-_Klner_K_e878d382288059ae8fd5cf143276f6d1.txt
+	 H. Mack and E. Hauser;  located in;  Cologne
+Printemps_2f8f3ffe8c3651ae9f89e68279d7716f.txt
+	 Printemps;  made from material;  oil
+	 Printemps;  made from material;  oil
+	 Printemps n. 2;  inception;  1954
+Los_9_|_Francis_Bott_5ff6d1328d3c5bcea599bc884a75b9a2.txt
+Teltow_I._73a7d44739db59ffbb8c80161124daee.txt
+	 Teltow I;  creator;  Feininger
+	 Teltow I;  inception;  1912
+Los_72_|_Henrik_Plen_bf58a1f32b0051b7ba47606a975f851f.txt
+LANDSCHAFT_MIT_REHEN_2393e13837d95637a1f294b91990fc4e.txt
+	 LANDSCHAFT MIT REHEN;  made from material;  canvas
+	 LANDSCHAFT MIT REHEN;  genre;  landscape
+	 LANDSCHAFT MIT REHEN;  made from material;  oil on canvas
+Los_1194_|_Julius_Us_aa292d1cd82d5457a8908e9365ccd8dc.txt
+	 Hagar and Ishmael;  located in;  Commission
+	 Hagar and Ishmael;  made from material;  oil on canvas
+	 Hagar and Ishmael;  depicts;  cloth bag
+	 cloth bag;  instance of;  landmark
+	 Hagar and Ishmael;  genre;  oil on canvas
+	 Hagar and Ishmael;  made from material;  oil on canvas
+BILDNIS_EINER_JUNGEN_14ab7451133a5cb68779a6ffd13e7736.txt
+	 portrait;  located in;  private English ownership
+	 portrait;  located in;  private English ownership
+	 PORTRAIT OF A YOUNG Female ARISTOCRAT, Possibly Maria Beatrice di Modena, Duchess of York;  depicts;  Maria Beatrice di Modena
+	 Maria Beatrice di Modena;  instance of;  human
+	 Benedetto Gennari, 1633 Cento - 1715 Bologna, attributedPORTRAIT OF A YOUNG Female ARISTOCRAT, Possibly Maria Beatrice di Modena, Duchess of York;  genre;  portrait
+	 PORTRAIT OF A YOUNG Female ARISTOCRAT;  made from material;  canvas
+bonhams.jsonl_a8f49372ba7656238d993d9328648873.txt
+	 GOLD AND DIAMOND VANITY CASE;  located in;  Cartier
+	 GOLD AND DIAMOND VANITY CASE;  inception;  1955
+Winterlandschaft._370c5caeb4595551a13e009886072fa8.txt
+	 Winterlandschaft;  depicts;  tree
+	 tree;  instance of;  landmark
+	 Winterlandschaft;  depicts;  walls
+	 walls;  instance of;  landmark
+	 Winterlandschaft;  depicts;  house
+	 house;  instance of;  landmark
+	 Winterlandschaft;  genre;  landscapes
+Horloge_Louis_XV_fc5a44f28c3b5f95a7581ab9f308c3c5.txt
+PORTRAIT_EINER_JUNGE_ad7ca892010e5a4cac4889e22e8b27d6.txt
+	 PORTRAIT EINER JUNGEN DAME ALS „FLORA“;  depicts;  flora
+	 flora;  instance of;  human
+	 PORTRAIT EINER JUNGEN DAME ALS „FLORA“;  genre;  Portrait
+Dryad:_Vine_23_x_25__d3e48c320cd1518f95b4ef9809f411d5.txt
+	 Dryad: Vine;  located in;  Newlyn Art Gallery
+	 Dryad: Vine;  alias;  Vine
+	 Dryad: Vine;  made from material;  watercolour and ball-point pen
+	 Dryad: Vine;  genre;  watercolour and ball-point pen
+	 Dryad: Vine;  made from material;  watercolour and ball-point pen
+	 Dryad: Vine;  creator;  Ithell Colquhoun
+	 Dryad: Vine;  inception;  1971
+MUTMASSUNGEN_-_IGUAN_d5e0467c3e775bfc9e7c5c65557a2769.txt
+	 MUTMASSUNGEN;  depicts;  coastal landscape
+	 coastal landscape;  instance of;  landmark
+	 MUTMASSUNGEN;  depicts;  leguan
+	 leguan;  instance of;  animal
+	 MUTMASSUNGEN;  depicts;  bay
+	 bay;  instance of;  landmark
+	 MUTMASSUNGEN;  depicts;  headland
+	 headland;  instance of;  landmark
+	 MUTMASSUNGEN;  depicts;  Mountains
+	 Mountains;  instance of;  landmark
+PHILOSOPH_HERAKLIT_V_293aeb132cea50d4bc67af1475f27fdb.txt
+	 Heraklite;  located in;  Musei Civici
+	 white marble bust depicting the pre-Socratic philosopher Heraclitus;  depicts;  Heraclitus
+	 Heraclitus;  instance of;  human
+Desert_Night_with_Mo_2d84d12dc02b522085e13089488a65d9.txt
+	 Desert Night with Moon;  made from material;  oil on canvas
+	 Desert Night with Moon;  genre;  oil on canvas
+	 Desert Night with Moon;  made from material;  oil on canvas
+	 Desert Night with Moon;  creator;  Coburn
+Parure_mit_Madeira-C_004909b047b153f3af8626bbf66fd24a.txt
+KLEINE_SITZENDE,_192_2bf4728db24452ba9a9dcd799389f496.txt
+	 KLEINE SITZENDE;  alias;  Small Seating
+	 KLEINE SITZENDE;  genre;  small seated nude
+	 KLEINE SITZENDE, 1923;  creator;  Kolbe
+	 KLEINE SITZENDE, 1923;  inception;  1923
+	 BERLINSMALL SEATED NUDE, 1923;  creator;  Kolbe
+	 BERLINSMALL SEATED NUDE, 1923;  inception;  1923
+Los_116_|_Jaeger_LeC_f63f002740b15086a46ccbf0d205da24.txt
+bonhams.jsonl_d72a4b952b8e5dc7ae8697bf31038a9d.txt
+Gerd_Arntz_-_Viehwag_6d64f96dbb6a5e96a1063dfddd98a83f.txt
+GESELLSCHAFT_BEIM_KA_15617aee9aa25faeae2cf64e371bfbae.txt
+	 His paintings;  located in;  Musée du Louvre
+	 His paintings;  located in;  National Gallery
+	 His paintings;  located in;  Rijksmuseum
+Die_Friedhofkatze._4d9263d3e28d50d69f7abca832ec8745.txt
+	 Die Friedhofkatze;  movement;  cubism
+	 Die Friedhofkatze;  inception;  1912
+Los_76_|_Sergey_Shab_af059f5c41cc5c6db95ae8128c4752ab.txt
+	 Evening;  made from material;  Oil on painted cloth
+	 The Night;  inception;  1976
+Flmisch_Mitte_16._Ja_6c993140015b548cad1340b3f53a450d.txt
+Limoges_2._Hlfte_13._40bbb754e4ea5343b06b8de96b415a22.txt
+FLUSSLANDSCHAFT_MIT__fca3de18842a503e99fd4b3506bb5992.txt
+	 RIVERSCAPE;  depicts;  riverbank
+	 riverbank;  instance of;  landmark
+	 RIVERSCAPE;  depicts;  tree
+	 tree;  instance of;  landmark
+	 RIVERSCAPE;  depicts;  trees
+	 trees;  instance of;  landmark
+	 RIVERSCAPE;  depicts;  shrubs
+	 shrubs;  instance of;  landmark
+	 RIVERSCAPE;  depicts;  duct
+	 duct;  instance of;  landmark
+Los_112_|_Mel_Ramos__52eae9c6f63b50408d738905fb66fe32.txt
+	 Contour of 4 printed graphics;  located in;  Commission
+Life_Class_78d9ae7ee770543f920ab76883fee995.txt
+Griechische_Landscha_badd95f952f25bc49bb75df320697cfa.txt
+	 Griechische Landschaft;  depicts;  hill
+	 hill;  instance of;  landmark
+	 Griechische Landschaft;  depicts;  Nauplia
+	 Nauplia;  instance of;  landmark
+AENEAS_UND_SEINE_FAM_d80b18259de0516ab4c58b6b7770718c.txt
+	 circle of Aeneas and his family FLEEING TROY;  made from material;  Oil
+bonhams.jsonl_85e92e546da65b3097e8c72b9a4fa8f4.txt
+Los_99_|_Andreas_Gur_b01a6e04c2f15c7d8d47ad5a4ecda10c.txt
+	 The Centre Georges Pompidou;  located in;  Centre Georges Pompidou
+	 Los 99;  creator;  Andreas Gursky
+Survival_series:_Sav_0141568b41b75d7985a6c6b7b9b40811.txt
+	 Survival series;  located in;  Peggy Guggenheim Museum
+Die_Allegorie_auf_de_205b0899802959eead6fcec581684de9.txt
+hampel_auctions.json_78cc3a75163250b7b9ebab5cb0860880.txt
+	 Oil on canvas;  made from material;  canvas
+FIGUR_1000,_1987_ab459d3385f1599dabf02a318256b308.txt
+Amagnetic,_Ref:3417,_95c4e431702a59199270c755790145f3.txt
+	 Amagnetic;  located in;  Patek Philippe
+Schwertlilien_in_bla_352f2ed877555189bd5ad757d302f023.txt
+	 Schwertlilien in blauer Vase;  genre;  still life
+CORIOLANUS_WIRD_VON__ab8d69c60a4456d79cd7f133dd5b353a.txt
+Das_Meerwunder_9e61511d2d4158fba774b2a2a0c13599.txt
+A_Treatise_of_Wounds_abaa58c6d43f50b389fb58ba62ea7b7b.txt
+Los_538_|_Sam_Franci_01dbebef813355ad9b702d94a7046e6d.txt
+	 Ohne Titel;  movement;  abstract expressionism
+	 Ohne Titel;  made from material;  gouache and watercolor
+	 Ohne Titel;  creator;  Sam Francis
+	 Ohne Titel;  inception;  1953
+Stillleben_mit_Apfel_8ebe890e49245869a5de824a0bf24f73.txt
+	 Stillleben mit Apfel;  depicts;  apple
+	 apple;  instance of;  landmark
+	 Stillleben mit Apfel;  genre;  still lifes
+	 Stillleben mit Apfel;  movement;  New Objectivity
+	 Stillleben mit Apfel;  creator;  Kanoldt
+	 Stillleben mit Apfel;  inception;  1916
+Artus_Quellinus_d._J_70cc9cbca6f85565ba897998c546e87b.txt
+	 Madonna Immaculata;  located in;  Musée Royaux d'Art et d'Histoire
+	 Madonna Immaculata;  depicts;  Virgin Mary
+	 Virgin Mary;  instance of;  human
+	 Virgin Mary;  expression, gesture or body pose;  standing
+	 Madonna Immaculata;  creator;  Artus Quellinus d.J.
+Bild_E_III_(Caretera_f65eb9a0a71c50b7b86c6a618e8f3c21.txt
+	 Bill E III (Caretera);  genre;  abstract
+URTEIL_DES_PARIS_0c886401d20558aebbeb4f884a231a12.txt
+	 URTEIL DES PARIS;  depicts person;  Aphrodite
+	 URTEIL DES PARIS;  depicts person;  Athena
+	 URTEIL DES PARIS;  depicts person;  Hera
+	 URTEIL DES PARIS;  depicts person;  Hermes
+	 Hans von Aachen;  located in;  National Museum
+	 Aphrodite, Athena and Hera;  made from material;  Oil
+	 Hans von Aachen;  made from material;  Oil
+	 Hans von Aachen;  made from material;  Oil on panel
+	 Hans von Aachen;  creator;  Hans von Aachen
+	 Hans von Aachen;  inception;  1552
+Waldboden._94aed1a111e45af293cae444a1474e01.txt
+	 Waldboden;  main subject;  forest
+	 Waldboden;  movement;  impressionism
+	 Waldboden;  creator;  Gustav Klimt
+Mutter_und_Kind_2187a0ffcda351f288e4ee03633a139d.txt
+	 Mutter und Kind;  main subject;  mother-child
+	 Mutter und Kind;  genre;  representations of mother-child
+	 Mutter und Kind;  creator;  Ewald
+Sehr_umfangreiches_B_a146a14d15e75f58b107d45127cf4dcc.txt
+"La_vie_en_ville"_05600cba7f5e557b9fd6ae7a4ab6e149.txt
+Die_Friedhofskatze_124d9a6bf5c35516bc50a75cdb238048.txt
+	 Die Friedhofskatze;  movement;  cubism
+	 Die Friedhofskatze;  inception;  1912
+Kleinkind_mit_weiem__e6c2d581e09d56cfb4ff7cb748712ade.txt
+	 Kleinkind mit weißem Kopftuch;  depicts;  child
+	 child;  instance of;  human
+	 child;  wears;  white
+	 child;  expression, gesture or body pose;  looking up
+Folge_von_vier_Hinte_4a780a5a66fd52ef855e251164682af9.txt
+JUGEND_UND_ALTER_57cc4068c5045b8b898f88d399702ead.txt
+	 JUGEND UND ALTER;  depicts person;  Venus
+	 JUGEND UND ALTER;  depicts;  girl
+	 girl;  instance of;  human
+	 girl;  wears;  dress
+	 girl;  expression, gesture or body pose;  sits at a well
+	 JUGEND UND ALTER;  depicts;  old woman
+	 old woman;  instance of;  human
+	 old woman;  expression, gesture or body pose;  talking to the girl
+	 JUGEND UND ALTER;  depicts;  Venus
+	 Venus;  instance of;  human
+Utagawa_Hiroshige_b3248c973d485065ad229c5b29f4c101.txt
+An_album_of_approxim_5de455acd6f65380b04bfa232d1a54d3.txt
+Limoges_1._Hlfte_13._bc8aea0b2e0356d7a069a1ffc3ffcf3b.txt
+	 candle lamp;  located in;  Kunstgewerbemeuseum
+	 lamps;  located in;  Louvre
+Los_112_|_Pablo_Pica_4aed62c3eaa95c049bc5466fda4b7793.txt
+ANSICHT_DES_KOLOSSEU_a0ffe8b2d63752d88f72090f113c6ad5.txt
+bonhams.jsonl_73a17cc19d9d55d29aa5f907b4fd3b3d.txt
+Wohl_Maasland_Ende_1_5244d4d0b21554eaab15b58afe266047.txt
+	 Madonna with child;  depicts person;  Virgin Mary
+	 Madonna with child;  made from material;  Wood
+	 Madonna with child;  depicts;  Mary
+	 Mary;  instance of;  human
+	 Mary;  wears;  blue cape
+	 Mary;  expression, gesture or body pose;  Standing
+	 Madonna with child;  depicts;  baby
+	 baby;  instance of;  human
+	 baby;  wears;  red dress
+	 baby;  expression, gesture or body pose;  Standing
+	 Madonna with child;  genre;  Madonna
+bonhams.jsonl_6e86aa8eec5e52f69459b46713607d44.txt
+Weier_Flieder_in_ein_84a27def40ea569f93604e2c453001d9.txt
+	 White Flied;  inception;  1920
+PFERDEGRUPPE_VOR_KAN_7da6780f274a5b80a290906f4e99b4b8.txt
+Fischer_beim_Einhole_3345bce7badf5c8ba3e017b282fd6d95.txt
+	 Pechstein;  creator;  artist
+	 Luckstein;  creator;  Luckystone
+Junge_Frau_mit_volle_9b4aee7c05be57919105ad6e221bb2b6.txt
+	 Junge Frau mit vollem Haar, am Tisch Kaffee einschenkend;  depicts;  Junge Frau
+	 Junge Frau;  instance of;  human
+	 Junge Frau mit vollem Haar, am Tisch Kaffee einschenkend;  depicts;  Doris Grosse
+	 Doris Grosse;  instance of;  human
+	 Junge Frau mit vollem Haar, am Tisch Kaffee einschenkend;  depicts;  She
+	 She;  instance of;  human
+	 She;  wears;  dress
+	 Junge Frau mit vollem Haar, am Tisch Kaffee einschenkend;  creator;  Kirchner
+	 Junge Frau mit vollem Haar, am Tisch Kaffee einschenkend;  inception;  1909
+Los_147_|_Ernst_Ludw_aef644ef608c5cdc8437eb7d0b519ab7.txt
+	 Man's head.;  made from material;  black chalk
+	 Man's head.;  genre;  black chalk on light yellow paper.
+	 Man's head;  made from material;  black chalk
+	 Man's head.;  creator;  Kirchner
+Caf._2ce1220609bf57c3bf8a85968b205576.txt
+	 Café;  located in;  Hirshhorn Museum
+	 Café;  made from material;  oil
+	 Café;  made from material;  oil
+	 Café;  inception;  1915
+	 Café;  inception;  1915
+Tsukioka_Yoshitoshi__a1c635550b1f5d52b8f50498ff47298c.txt
+Fnf_fencai-Schalen_m_116fc0f05fbb563687a1c42d75ec8616.txt
+Ethiopian_Geometry_6d11043c9e8f5d7ab2134e4f4ea19b06.txt
+	 Ethiopian Geometry;  made from material;  acrylic on canvas
+Schraubmedaille_auf__56cb3b03f7e254819aee8d35f95ce300.txt
+bonhams.jsonl_f7ee651f232950d98f4656f963655226.txt
+Anonym._18._Jh._0ecedf9c8f0a5dc4a97368688d8eba88.txt
+Los_46_|_Heinz_Mack__faca60edb8a35a8f9bebcb3e23e14f77.txt
+Besinnung_(Affe_vor__e4b6a374ca0e51399ffad34800db8a5d.txt
+	 Pain Forgotten;  creator;  Max
+Los_54_|_Karl_Hofer__5e670f97f7f457a286fd90ef845c46d1.txt
+	 In the bathroom;  made from material;  oil on canvas
+hampel_auctions.json_f331c8cc1a9153d48175664efe221ab3.txt
+	 Landscape with a central tree, under which lies a white cow, and a standing ox, surrounded by donkeys, sheep, goats and lambs.;  made from material;  Oil on canvas
+	 Landscape with a central tree, under which lies a white cow, and a standing ox, surrounded by donkeys, sheep, goats and lambs.;  genre;  Landscape
+	 Landscape with a central tree, under which lies a white cow, and a standing ox, surrounded by donkeys, sheep, goats and lambs.;  made from material;  Oil on canvas
+Edo_period_(1615-186_d62af831d8f955d89302acaa443d64bb.txt
+Mandala_einer_tantri_aff01ada76355767b4716976ac94fd36.txt
+DIE_SCHLACHT_BEI_ISS_481953c753da5bffa6be4595d4697c68.txt
+	 The Battle Near Issos;  depicts person;  Alexander
+	 THE BATTLE NEAR ISSOS;  located in;  Capitoline Museums
+	 this painting;  main subject;  the battle
+	 THE BATTLE NEAR ISSOS;  movement;  Cortona
+	 THE BATTLE NEAR ISSOS;  made from material;  Oil
+Los_1226_|_Adriaen_v_235b7aeeeaf159a1b7392c827d2cd41d.txt
+	 Hercules between virtue and vice;  alias;  Hercules
+	 Hercules between virtue and vice;  depicts;  wood
+	 wood;  instance of;  landmark
+	 Hercules between virtue and vice;  genre;  genre
+	 Hercules between virtue and vice;  made from material;  oil on wood
+Wandel-Halsschmuck_ceffa618ea0b5f4ba12a9d5fc346168c.txt
+bonhams.jsonl_12f6fa7a152e5f22a4bf9ca541e3063a.txt
+INTERIEUR_MIT_FAMILI_38407742ef1e5aa3bfb317306ccda2d1.txt
+	 INTERIEUR;  made from material;  oil on panel
+	 A FAMILY SAYING GRACE IN AN INTERIOROil on panel.;  made from material;  
+	 INTERIEUR MIT FAMILIE BEIM TISCHGEBET;  creator;  CH Venneman
+	 INTERIEUR MIT FAMILIE BEIM TISCHGEBET;  inception;  1843
+GALANTE_BADESZENE_31032a9b50285200b8547e00aeaa2905.txt
+	 GALANTE BADESZENE;  main subject;  Venus in the bath
+	 GALANTE BADESZENE;  depicts;  Venus
+	 Venus;  instance of;  human
+	 GALANTE BADESZENE;  depicts;  beauty
+	 beauty;  instance of;  human
+	 GALANTE BADESZENE;  movement;  rococo
+Groe_baltische_Decke_0ce527a125a859839ad9e087e0c7728a.txt
+Mz_465_Abendschnheit_3fd19ec0c8435a86b7072aa9a33766d8.txt
+KSTENSTCK_IN_ISTANBU_67ad6081f066541397409645ebacb4f5.txt
+	 COASTAL SCENE IN ISTANBULO;  movement;  Impressionism
+BILDNIS_DER_SCHAUSPI_c7a32abd958e5a699e7183ab76b6075d.txt
+	 BILDNIS DER SCHAUSPIELERIN  MADEMOISELLE OLIVIER;  depicts;  MADEMOISELLE OLIVIER
+	 MADEMOISELLE OLIVIER;  instance of;  human
+	 MADEMOISELLE OLIVIER;  wears;  gray-brown dress
+	 MADEMOISELLE OLIVIER;  expression, gesture or body pose;  graceful
+Los_185_|_Fernando_B_01312a0cd8955c8e88729e7757cb1650.txt
+	 Le Matin;  located in;  The Foundation of Veranneman
+	 Le Matin;  alias;  Diana of Ephesus
+	 Le Matin;  made from material;  Bronze
+	 Le Matin;  genre;  sculpture
+	 Le Matin;  made from material;  Bronze
+	 Le Matin;  creator;  Fernando Botero
+Joseon_dynasty_(1392_4bc373884c0a59aab7ffa54f10c12aad.txt
+Los_54_|
+____________0db204e11f485dd99f155354ce3cf76b.txt
+Ulm_um_1500_-_Hl._Se_176a17f2895c543683dfbc72b17f461e.txt
+The_Cerebral_Palsies_a1226524bad65084badb62b944486a9b.txt
+Selbstbildnis_mit_la_0cc37a9decc45a0cbae0c1a4c10da9ca.txt
+	 Self-image;  located in;  New Tretyakov Gallery
+ARCHITEKTUR-CAPRICCI_7f632f35c8e55f3789c63924b7fdb17f.txt
+Im_Bordell._b4ad117abb855dbb8a05d2d76483115e.txt
+NEPAL,_CIRCA_17TH_CE_ec4a9393694d5bfa967e6a05498c7f34.txt
+	 Mahapratisara;  located in;  Ashmolean Museum
+	 Mahapratisara;  located in;  Rubin Museum of Art
+	 大隨求佛母;  alias;  大隨求佛母
+	 大隨求佛母;  movement;  Buddhist
+	 大隨求佛母;  made from material;  銀
+DUNKLES_INTERIEUR_MI_fd41e1a95f9b5cbe8067b7e44d1e512a.txt
+	 DARK INTERIOR WITH GROUP LYING ON THE GROUND;  genre;  Baroque
+	 DARK INTERIOR WITH GROUP LYING ON THE GROUND;  made from material;  oil
+Signed_Wang_Jian,_cy_74878668c9225b2bb630aa3d885467aa.txt
+	 A literatus with a young servant carrying a
+qin
+;  shown with features;  qin
+	 A literatus with a young servant carrying a
+qin
+;  shown with features;  qin
+	 A literatus with a young servant carrying a
+qin
+;  shown with features;  qin
+	 A literatus with a young servant carrying a
+qin
+;  alias;  A literatus
+	 A literatus with a young servant carrying a
+qin
+;  language;  A literatus
+	 A literatus with a young servant carrying a
+qin
+;  genre;  bamboo carving
+	 bamboo brushpot;  made from material;  wood
+	 bamboo brushpot;  made from material;  wood
+	 bamboo brushpot;  made from material;  wood
+	 bamboo brushpot;  made from material;  wood
+bonhams.jsonl_325277a24309550d8fab1b6f8e7264a7.txt
+	 A Sèvres blue-ground cup and saucer;  inception;  1775
+Sitzender_Akt_nach_l_23b8334afcde5231a96dbb427635516c.txt
+	 water snakes;  depicts;  woman
+	 woman;  instance of;  human
+	 woman;  expression, gesture or body pose;  sitting
+	 water snakes;  creator;  Klimt
+Los_235_|_Stephan_Ba_ab13f2d3151b5d979e504ff6630dced5.txt
+	 Little woman in an orange dress;  located in;  Fritzlar
+	 Little woman in an orange dress.;  depicts;  woman
+	 woman;  instance of;  human
+	 woman;  wears;  orange dress
+	 Little woman in an orange dress;  genre;  sculpture
+	 Little woman in an orange dress;  made from material;  Wawa wood
+Sehr_umfangreiches_P_ad504c9279a750adb71e2dc27ea4e610.txt
+PYTHAGORAS_1b0f92867a6a5cc0bac2df92ed613aff.txt
+	 PYTHAGORAS;  depicts person;  Pythagoras
+	 PYTHAGORAS;  depicts person;  Demosthenes
+	 PYTHAGORAS and DEMOSTHENES;  located in;  Venice
+	 PYTHAGORAS and DEMOSTHENES;  depicts;  Pythagoras
+	 Pythagoras;  instance of;  human
+	 PYTHAGORAS and DEMOSTHENES;  depicts;  Demosthenes
+	 Demosthenes;  instance of;  human
+	 PYTHAGORAS;  genre;  portraits
+	 DEMOSTHENES;  genre;  portraits
+	 PYTHAGORAS;  made from material;  Oil on canvas
+	 DEMOSTHENES;  made from material;  Oil on canvas
+	 PYTHAGORAS;  creator;  Tiepolo
+	 DEMOSTHENES;  creator;  Tiepolo
+Los_1180_|_Barry_X_B_306cf085859552b6906e6fe1ea9e67d1.txt
+	 The akra tapeinosis;  shown with features;  lance
+	 The akra tapeinosis;  located in;  The Commission
+	 The akra tapeinosis;  made from material;  onyx
+	 The akra tapeinosis;  genre;  portrait
+	 The akra tapeinosis;  made from material;  onyx
+	 The akra tapeinosis;  creator;  Barry X Ball
+Am_Golf_von_Sorrent_fb2282002d7358dd83aa6dba2485b1d6.txt
+	 Götzloff's small, picturesque oil study;  depicts;  mountain
+	 mountain;  instance of;  landmark
+	 Götzloff's small, picturesque oil study;  depicts;  coastline
+	 coastline;  instance of;  landmark
+	 Götzloff's small, picturesque oil study;  depicts;  Sorrento
+	 Sorrento;  instance of;  landmark
+	 Götzloff's small, picturesque oil study;  depicts;  Sorrent Plateau
+	 Sorrent Plateau;  instance of;  landmark
+	 Götzloff's small, picturesque oil study;  depicts;  Gulf of Sorrent
+	 Gulf of Sorrent;  instance of;  landmark
+	 His large-format view of Sorrent;  inception;  1822
+Los_1060_|_Flmischer_4a802b9d39825a6384866918f8eb31df.txt
+	 Jesus and the Apostle John;  depicts person;  Jesus
+	 Jesus and the Apostle John.;  made from material;  oil on canvas
+	 Jesus and the Apostle John;  made from material;  oil on canvas
+bonhams.jsonl_d296194336515168b3d274c4b0c73ef8.txt
+	 Castor and Pollux;  depicts person;  Castor
+Felsige_Flusslandsch_8b291b73ba025858a8df06ed8eddc083.txt
+Embryo_Seeking_Consc_380dcc424267500f960ed1751776db1c.txt
+	 Embryo Seeking Consciousness;  located in;  Schmidt Bingham Gallery
+	 Embryo Seeking Consciousness;  made from material;  tempera
+	 Embryo Seeking Consciousness;  made from material;  tempera
+	 Embryo Seeking Consciousness;  creator;  Morris Graves
+	 Embryo Seeking Consciousness;  inception;  1964
+Los_1002_|_Luca_Sign_7cf05195369a59938292e27c9d28572b.txt
+	 Saint Nicholas of Bari, Bishop of Myra;  depicts person;  Saint
+	 Saint Nicholas of Bari;  located in;  Church of San Niccolò
+	 Saint Nicholas of Bari saves three knights from execution;  alias;  The Heilige Nikolaus von Bari rettet drei Ritter vor der Hinrichtung
+	 Der Heilige Nikolaus von Bari rettet drei Ritter vor der Hinrichtung;  genre;  altarpiece
+	 Saint Nicholas of Bari;  genre;  altarpiece
+	 Saint Nicholas;  genre;  altarpiece
+	 Saint Nicholas;  genre;  altarpiece
+	 Saint Nicholas of Bari;  made from material;  oil
+	 Saint Nicholas of Bari;  creator;  Luca Signorelli
+Das_Martyrium_der_He_5b2542b34c355f8abc6b02352c91bf5c.txt
+	 Saint Catherine;  located in;  Milan
+	 Saint Catherine;  genre;  close-up
+	 Saint Catherine;  made from material;  Oil on canvas
+Possendorf_72e69e3193db53ffb3d1d87334a4ea5c.txt
+	 Los 550;  inception;  1919
+Schatulle_mit_Susann_97ac5f3ea4fd578abc0af09c3d41022f.txt
+SCHIFFFAHRT_DER_HEIL_187289ca623b5176b466aea96b795a8e.txt
+	 SEA VOYAGE OF SAINT URSULA OF COLOGNE;  located in;  
+	 SEA VOYAGE OF SAINT URSULA OF COLOGNE;  genre;  Oil on softwood
+	 SEA VOYAGE OF SAINT URSULA OF COLOGNE;  made from material;  Oil
+bonhams.jsonl_971bddc2294457f8932a5cbe0172d14b.txt
+	 Dan Female Figure;  located in;  The Metropolitan Museum of Art
+	 Dan;  made from material;  Wood
+	 Dan Female Figure;  creator;  Zlan
+Goldemailtabatire_b911dddda8c257db815161f9d11543ce.txt
+Kitagawa_Utamaro_(17_47e75ff458325327b92a4fb779a89cc8.txt
+CAREW_(RICHARD)_The__11fc3ca240ee5d58a18fed7cb9a7423d.txt
+BILDHAUER_BEI_DER_AR_94349616f2ec572cae6de3651d56b166.txt
+Cebe_33ae1868d4bf556c9ccad7032f773f40.txt
+	 Cebe;  creator;  Georg Baselitz
+	 Cebe;  inception;  1993
+Utagawa_Hiroshige_(1_f9e587525d475750a098933077fa15ca.txt
+	 Tôto meisho.;  creator;  Ôju Ichiryûsai Hiroshige
+	 Fukagawa Tomigaoka Hachiman Keidai Zenzu;  creator;  Ôju Ichiryûsai Hiroshige
+bonhams.jsonl_6ff11bb8418754e1b0f80414915aa738.txt
+Roter_und_gelber_Moh_297a7eb0dc3f5470b29617c120de5097.txt
+Los_377_|_Peter_Zimm_500cdb5306d75651b47bd9eb5063aa90.txt
+	 Liquid;  located in;  Private collection
+	 Liquid;  made from material;  epoxy resin
+	 Liquid;  genre;  carpenter's epoxy-hard work
+	 Liquid;  made from material;  epoxy resin on canvas
+	 Liquid;  creator;  Peter Zimmermann
+	 Liquid;  inception;  2001
+Winter_in_Tirol_63ac476dc40c5a68b9eb08c0fd5c852a.txt
+RAUB_DER_SABINERINNE_5334b23fb17c5f269798f656dd7fe4aa.txt
+	 RAUB DER SABINERINNEN;  made from material;  Oil
+	 RAUB DER SABINERINNEN;  made from material;  Oil on panel.
+Seltene_signierte_Em_7e612575acff55fc9317720cfbf9bb34.txt
+Sptgotisches_Medaill_dea757eb2b4f51228705e6ad7572598a.txt
+	 Color painting;  made from material;  copper plate
+Knigliches_Reisemund_8a7d6a84b0765002b60cbb71e3ec1bcb.txt
+	 The cup;  inception;  1853
+	 The cup;  inception;  1927
+	 The Commission;  inception;  1848
+bonhams.jsonl_d2ae5276ca505465912d682add8a8653.txt
+	 Pair Of Scottish;  located in;  Sotheby's
+Am_Hgel_(Staffelsee)_19c93cb71f5c52439205b424839fbce5.txt
+	 On the hill overlooking the Staffalsee;  depicts;  lake
+	 lake;  instance of;  landmark
+	 On the hill overlooking the Staffalsee;  inception;  1908
+Niederlndische_Kommo_de1bb120c30255a1a40966498bab7fca.txt
+Vieille_Route,__Auve_97ec8eca5bcd57a48c6088344e9d642e.txt
+	 Vieille Route;  depicts;  landscape
+	 landscape;  instance of;  landmark
+	 Vieille Route;  depicts;  trees
+	 trees;  instance of;  landmark
+	 Vieille Route;  depicts;  field
+	 field;  instance of;  landmark
+	 Vieille Route;  depicts;  valleys
+	 valleys;  instance of;  landmark
+	 Vieille Route;  movement;  Impressionism
+	 Vieille Route;  creator;  Daubigny
+La_capanna_sulla_spi_0d7671cf036053bdb3c72cdc2dd7f34e.txt
+	 La capanna sulla spiaggia;  movement;  futurism
+Mappenwerk_-_Staatli_ebf0c4a21cb25e02b3e53bf1f7c068d9.txt
+Bhmen_um_1470_-_Thro_791fe2ce8db05371b5d3cecfcd71c253.txt
+	 Throne of the Mother of God;  depicts person;  Mother
+	 Throne of the Mother of God;  depicts;  The Mother of God
+	 The Mother of God;  instance of;  human
+	 The Mother of God;  expression, gesture or body pose;  sitting
+	 Throne of the Mother of God;  depicts;  Jesus
+	 Jesus;  instance of;  human
+	 Jesus;  expression, gesture or body pose;  naked
+	 Throne of the Mother of God;  depicts;  Maria
+	 Maria;  instance of;  human
+	 Maria;  wears;  dress
+	 Maria;  wears;  coat
+	 Maria;  expression, gesture or body pose;  sitting
+	 Throne of the Mother of God;  inception;  1470
+und_andere_Photograp_3412fc6605a354ea979a90513b6b9cc8.txt
+The_estuary_from_the_a5998fb7bfb5561ba59f32780db65a4c.txt
+	 The Estuary from the Drive;  main subject;  drive
+	 The Estuary from the Drive;  genre;  minimalist
+	 The Estuary from the Drive;  made from material;  canvas
+Schraubmedaille_auf__b2ccef70796c52a3b18cc1a523fc2339.txt
+	 Schraubmedaille;  inception;  1732
+CAPRICCIO_MIT_TEMPEL_e1dc59c9e7c3556285c99a162078eb8d.txt
+	 CAPRICCIO;  located in;  Private Collection Rome
+	 CAPRICCIO;  depicts;  obelisk
+	 obelisk;  instance of;  landmark
+	 CAPRICCIO;  depicts;  temple
+	 temple;  instance of;  landmark
+	 CAPRICCIO;  depicts;  Colosseum
+	 Colosseum;  instance of;  landmark
+	 CAPRICCIO;  made from material;  OIL on canvas
+	 CAPRICCIO;  creator;  Giovanni Paolo Panini
+PREMA,_2000_b4d2b2d4a564593595e1870a239eb01a.txt
+	 PREMA;  creator;  Dompè
+Los_44_|_Olav_Christ_ac19d3b8b8c95a1987ea272a8cc03c76.txt
+Los_13_|_Bernd_Berne_5b369f3b1d545333bb27a901152db54f.txt
+	 Flat room;  made from material;  Oil and acrylic
+	 Flat room;  made from material;  Oil and acrylic on canvas
+	 Flat room;  creator;  Bernd Berner
+	 Flat room;  inception;  1988
+Englischer_Schiffsch_213691f84e7f51b6a366eb3c827593c0.txt
+Days_and_Nights_of_S_d9ba53d7151553d3b4c46c272e4597fe.txt
+BEWEINUNG_CHRISTI_DU_a869720403ea578db280ff5592b3efe3.txt
+	 Followers of the Lamentation of Christ by Mary Magdalene;  made from material;  Oil
+Die_Gebckte._6e8b2453a9b759c3aa6ea094582a0975.txt
+hampel_auctions.json_6aeef0695b415c57896ff7d56db2f207.txt
+	 Mary;  depicts person;  Mary
+	 Mary;  depicts person;  Jesus
+	 altarpiece;  located in;  Frankfurt Kunstverein
+	 altarpiece;  located in;  Helbing
+Mdchen_mit_Hut_(Gerd_06026bacdc8e584f8382f9eb813531a4.txt
+	 Mädchen mit Hut;  depicts;  Gerda
+	 Gerda;  instance of;  human
+	 Mädchen mit Hut;  depicts;  Gerda Schilling
+	 Gerda Schilling;  instance of;  human
+	 Mädchen mit Hut;  genre;  Portrait painting
+	 Mädchen mit Hut (Gerda);  inception;  1912
+PORTRAITBILDNIS_DER__028db6b457c250e59c58057f91e0a7d2.txt
+	 PORTRAITBILDNIS DER MADAME MARBON;  depicts;  MARBON
+	 MARBON;  instance of;  human
+	 MARBON;  expression, gesture or body pose;  sitting
+	 PORTRAITBILDNIS DER MADAME MARBON;  genre;  Empire
+Los_69_|_Brigitte_un_d55808c4f7445242ab991931f466bea7.txt
+Badende_d3603d4b8b395c48b9efb548eb565369.txt
+Nottingham_Mitte_15._a1a4ca3d7f6a57ea8a4bcced2e3e193f.txt
+	 Verkündigung;  depicts person;  Mary
+Cosmographey,_oder_b_ab9cc12569a253dc959cab84a369a086.txt
+Vanitas-Stillleben_m_0c6c46d7004755268343c624511f25e4.txt
+	 Vanitas-Stillleben mit Blumenstrauß, Totenschädel und;  inception;  1650
+bonhams.jsonl_801f16b095865476aa046e83c7050c11.txt
+DER_BACINO_DI_SAN_MA_62097843944d54fb8bf560dcce41c5e2.txt
+	 The BACINO DI SAN MARCO with San Giorgio Maggiore and the PUNTA DELLA DOGANA;  depicts;  San Giorgio Maggiore
+	 San Giorgio Maggiore;  instance of;  landmark
+	 The BACINO DI SAN MARCO with San Giorgio Maggiore and the PUNTA DELLA DOGANA;  made from material;  Oil on canvas
+Los_106_|_Friedrich__af23cd709d1059978b74b73ace1bd27f.txt
+	 Los 106;  creator;  Friedrich Gräsel
+Teller_mit_Schwnen_i_3985331ede385635be2a8a9cd231bbed.txt
+Empire-Tabatire_mit__fec5d4d631045fca9a77dedc206f5c9b.txt
+bonhams.jsonl_cbac09f1ff1c59869648348f81091a2c.txt
+Brabant_um_1470_1480_a7ab918c07e95bd4887d0ae8a24fe3c8.txt
+Paar_mit_Spindel_und_4607720f323c5c518b4da58d0db0e6d6.txt
+	 COUPLE WITH SPINDLE AND HEN;  made from material;  Oil
+	 COUPLE WITH SPINDLE AND HEN;  made from material;  Oil on panel
+Kette_mit_etruskisch_7580ca253cc256548d880a8a1c7bc7c3.txt
+DAS_ABENDMAHL_IN_EMM_8ed4f98e1f195227800b3e6f2758b411.txt
+	 Supper at Emmausoil;  depicts person;  Jesus
+	 Supper at Emmausoil on canvas;  made from material;  canvas
+Tang_dynasty_d3a3c43937a353d4ab85a5cdd52ea3b1.txt
+	 this funerary figure;  located in;  Asian Art Museum
+Los_43_|_Heinz_Mack__01e922ffa7b55489aea842c749009de3.txt
+EBENE_IN_GRIECHENLAN_524390d90d3859e18c6091e3dc403b02.txt
+Los_1144_|_Johann_Ja_afda988ced0a59bea33ad260c5b8237c.txt
+	 Peterhof Castle near St. Petersburg;  made from material;  watercolor
+	 Los 1144;  creator;  Johann Jakob Meyer
+	 Los 1144;  inception;  1844
+DIE_ANBETUNG_DER_DRE_4549ef0279f054b4b12481d8c5bfcfdf.txt
+	 Worship of the Three Kings;  located in;  Brussels
+	 Worship of the Three Kings;  movement;  Renaissance
+	 DIE ANBETUNG DER DREI KÖNIGE;  inception;  1540
+attributed_to_Raffae_ac628ec6d7c558aa88274e1d58891581.txt
+Flmisch_um_1600_-_Hl_ed786f47bbb2535ab0e372e92ebf8933.txt
+Kaiserlicher_Schreib_cc295d84c9ef5b9fb8e5174b10fb3e3d.txt
+Tibet,_circa_15th_ce_97fad7f4846a56f4acd986927e0bf285.txt
+	 Buddha;  located in;  British Museum
+Stillleben_mit_Relie_c7a8fd51a06b5b789c0b456bb0aa7dc1.txt
+	 Anemon still life with antique relief;  genre;  still life
+bonhams.jsonl_f8d403905bda53dd8d9efcd764c787fa.txt
+Elfenbein-Deckelhump_b9d817feb47a5fedbcbf7600975d466f.txt
+Collier_mit_Farbstei_0ea9f68d455752faa6de2c7302a86041.txt
+Los_36_|_Ansgar_Nier_0a2336817a375179a6baad40220f6374.txt
+Autograph_Manuscript_56a0c9e519a55f52b7197d20ebb1aee5.txt
+	 Military Minds;  creator;  Tupac
+LE_CHALE_INDIEN_07c77c12cc3b5f37afee55974d109aac.txt
+	 LE CHALE INDIEN;  depicts;  woman
+	 woman;  instance of;  human
+	 woman;  wears;  blouse
+	 woman;  wears;  flowers
+	 woman;  wears;  leaves
+	 LE CHALE INDIEN;  depicts;  flowers
+	 flowers;  instance of;  landmark
+	 LE CHALE INDIEN;  depicts;  leaves
+	 leaves;  instance of;  landmark
+	 LE CHALE INDIEN;  made from material;  OIL on canvas
+	 LE CHALE INDIEN;  creator;  Jean-Pierre Cassigneul
+JEUNE_FILLE_ASSISE_D_5f3dd3a5675e5e9dbaa0c4083b3df128.txt
+	 JEUNE FILLE ASSISE DANS UN PARC, UM 1905;  depicts;  JEUNE FILLE
+	 JEUNE FILLE;  instance of;  human
+	 JEUNE FILLE;  expression, gesture or body pose;  ASSISE
+	 JEUNE FILLE ASSISE DANS UN PARC, UM 1905;  depicts;  PARC
+	 PARC;  instance of;  landmark
+	 JEUNE FILLE ASSISE DANS UN PARC;  inception;  1905
+Los_105_|_Verschiede_5eb186bb79ab55ddadcd88c6b3c77f2d.txt
+Museales_Augsburger__6f21778aa27455d8a0890d65b658dedf.txt
+Hafenszene_(Scne_de__01130636123850a2adf946393e94486f.txt
+	 Hafenszene (Scène de port);  depicts;  young woman
+	 young woman;  instance of;  human
+	 Hafenszene (Scène de port);  depicts;  her child
+	 her child;  instance of;  human
+	 Hafenszene (Scène de port);  depicts;  young woman
+	 young woman;  instance of;  human
+	 Hafenszene (Scène de port);  depicts;  Loup de mer
+	 Loup de mer;  instance of;  animal
+	 Hafenszene;  genre;  Scène de port
+	 Hafenszene (Scène de port);  inception;  1754
+Los_1044_|_Jakob_Phi_e800ea7ce602554ea7693a2f80c33216.txt
+	 Two pine trees at Albano;  shown with features;  two women
+	 drawing;  located in;  Rome
+	 Two pine trees at Albano;  depicts;  pine
+	 pine;  instance of;  landmark
+	 Two pine trees at Albano;  genre;  tree portraiture
+RARE_TYPE_2_CREW-SIG_5d640ee0e3515a9585462618a4140166.txt
+BILDNIS_DER_MARIE_PA_956a6455e565501d9a5f916864a1d12f.txt
+	 BILDNIS DER MARIE PAULINE BONAPARTE;  depicts;  Marie Pauline BONAPARTE
+	 Marie Pauline BONAPARTE;  instance of;  human
+Los_86_|_Breguet_|_S_5e7c017a37175456a22764582f495b8b.txt
+	 two museum clocks;  located in;  Commission
+	 Souscriptions-Uhren;  inception;  1794
+	 subscription watch;  inception;  1794
+	 Lepine;  inception;  1791
+	 historic Lepine;  inception;  1791
+	 historic watch;  inception;  1791
+	 modern version;  inception;  1991
+Los_172_|_Rune_Mield_f8e3ef774acf5d9e9f645c7e55a86ee4.txt
+	 The Battle of San Remo;  located in;  Uffizi
+	 The Battle of San Remo;  made from material;  oil on canvas
+	 The Battle of San Remo;  made from material;  oil on canvas
+	 The Battle of San Remo;  inception;  1440
+Los_41_|_BEZA_|_"Fid_d265785984c25e50aa19b279fa95491f.txt
+	 Fidolino;  made from material;  Acrylic
+	 Fido;  made from material;  Acrylic
+	 Religious scene;  made from material;  Ink
+	 Person with hat;  made from material;  Coal
+	 Fidolino;  made from material;  Acrylic on lightweight cardboard
+	 Fido;  made from material;  Coal on paper
+	 Religious scene;  made from material;  Ink on paper
+	 Person with hat;  made from material;  Coal on paper
+	 Fidolino;  creator;  Beza
+	 Fido;  creator;  Beza
+	 Religious scene;  creator;  Beza
+	 Person with hat;  creator;  Beza
+bonhams.jsonl_204a8ab3b6525f24971018259e0736c9.txt
+Orbis_eruditi_Judici_3dca7a190bb859e0b3707347db111621.txt
+	 Orbis eruditi Judicium;  inception;  1741
+Los_260_|_Zhen_Xu_(M_217a90d248ee562a967c2a9740dbf84a.txt
+Los_82_|_Ernst_Wilhe_2137b401bfc257b9b6c75a2c2ff3e468.txt
+	 Mutter und Kind;  made from material;  Graphite
+	 Mother and Child;  made from material;  Graphite
+	 Mutter und Kind;  inception;  1943
+Los_38_|_Franz_Rouba_a8893f9f24755a7483f023bb4b921f0a.txt
+	 Franz Roubaud;  creator;  Franz Roubaud
+	 Franz Roubaud;  inception;  1856
+Los_56_|_Gustav_Klug_686ca603ec1451a9b3902e899ac634b8.txt
+	 Alpha Portrait;  located in;  Gallery of living machines
+	 Alpha Portrait;  made from material;  Oil
+Los_95_|_Eva_Kot'tko_f1c374ad50a15078b33c834200007f76.txt
+	 Work of nature;  located in;  Kunstverein Braunschweig
+	 Work of nature;  made from material;  collage and painting on velvet
+ALLEGORIE_DER_BILDHA_5681b48cdeaa580c812a2f37521bc998.txt
+	 ALLEGORIE DER BILDHAUEREI;  made from material;  Oil
+	 ALLEGORIE DER BILDHAUEREI;  depicts;  Young, female, allegorical figure
+	 Young, female, allegorical figure;  instance of;  human
+	 Young, female, allegorical figure;  wears;  white linen dress
+	 Young, female, allegorical figure;  wears;  turban
+	 Young, female, allegorical figure;  expression, gesture or body pose;  sliding down
+	 ALLEGORIE DER BILDHAUEREI;  made from material;  Oil
+LANDSCHAFT_MIT_FLUCH_2f102375b7835acf8d10c0362442284d.txt
+	 The first painting;  depicts person;  Holy Family
+FANTASTISCHE_HAFENVE_f41d2b6659d5528cba241fb3400fa79b.txt
+PORTRAIT_EINES_EDELM_2b62b0e6821c5c498130394a892a74b6.txt
+	 PORTRAIT EINES EDELMANNES;  depicts;  man
+	 man;  instance of;  human
+	 man;  wears;  garment
+	 man;  expression, gesture or body pose;  three-quarters portrait
+	 PORTRAIT EINES EDELMANNES;  genre;  portrait
+bonhams.jsonl_cafccefee60358bda0df93710f86faf1.txt
+	 Oeuf;  located in;  Musée et Manufacture nationaux de Sèvres
+	 Oeuf;  located in;  Musée d'Orsay
+	 Oeuf;  inception;  1871
+	 Oeuf;  inception;  1874
+Kleiner_Lackkaste,_m_bb3d6284c7965d618bcb98d20455cb8d.txt
+DIE_MYSTISCHE_HOCHZE_2dc136d03f575b7bb07f82e6ab1cc550.txt
+	 Correggio;  located in;  Museo del Capodimonte
+	 DIE MYSTISCHE HOCHZEIT DER HEILIGEN KATHARINA VON ALEXANDRIEN;  creator;  Correggio
+	 DIE MYSTISCHE HOCHZEIT DER HEILIGEN KATHARINA VON ALEXANDRIEN;  inception;  1520
+Los_1159_|_Carl_Gott_c02e4953321452559ab6adc439eed2dd.txt
+	 The Holy Family at rest;  depicts person;  Family
+	 The Holy Family at rest;  made from material;  watercolor
+	 The Holy Family at rest;  genre;  watercolor
+	 The Holy Family at rest;  made from material;  watercolor
+bonhams.jsonl_bccb941639145cfb9996c2f02d4b0c7e.txt
+	 Castor assis en grès;  depicts;  beaver
+	 beaver;  instance of;  landmark
+	 Castor assis en grès;  creator;  Böttger
+	 A Meissen 
+Böttger stoneware model of a seated beaver;  creator;  August Gaul
+Los_72_|_Friedensrei_36d58c5c5ec455138537c7649b926b67.txt
+B-B_Town_32084a1f1f9655d0bf715133d89bc999.txt
+	 B-B Town;  located in;  Whitney Museum of American Art
+	 B-B Town;  made from material;  painting
+	 B-B Town;  genre;  nightly urban landscape
+	 B-B Town;  made from material;  canvas
+	 B-B Town;  inception;  1946
+Los_136_|_Baume_&_Me_8da8a6c4f7d057fdb41e0fe46294c190.txt
+Los_46_|_Salvador_Da_36455be853635f35bb65d11de4f05ba6.txt
+Bildnis_Martin_Luthe_7d501286bd185fb0b2f02ea3e269e895.txt
+Los_67_|_Jonathan_Me_d12c339dad8355e8bd0fe51fe64b28c9.txt
+	 The daughter of Sau (the dictator of art);  language;  Kindfrau de Sau (Diktatyr der Kunst)
+	 The daughter of Sau;  made from material;  Acrylic
+	 The daughter of Sau;  made from material;  Acrylic
+Antonio_Rossellino,__b5c88f8fc6ee5ac1972c1e602bbae0a7.txt
+	 Madonna with child;  depicts person;  Mother of God
+Los_32_|_Gnther_Frg__206b8230e09b5e8c81490a10ea6b657e.txt
+Die_Heilige_Familie__e8381441a2605c8d8ce0a0ab92b0442b.txt
+bonhams.jsonl_5fc513e6d316538988887313a1ec96bf.txt
+Los_990_|_Jaeger_LeC_37682ce250435eb5b10ddaf48d5a73e8.txt
+Bildnis_der_Jeanne-A_48c8b7243c8b5628a2bc7bc94293313a.txt
+	 Bildnis der Jeanne-Agnès Berthelot de Pléneuf;  depicts;  Jeanne-Agnès Berthelot de Pléneuf
+	 Jeanne-Agnès Berthelot de Pléneuf;  instance of;  human
+	 Bildnis der Jeanne-Agnès Berthelot de Pléneuf;  creator;  Jean-Baptiste van Loos
+Los_33_|_Friedensrei_8802dfdd76b856be9d8c31a2afd2251c.txt
+Los_395_|_Jonas_Burg_515705bd469956ba9951a73780a6f553.txt
+	 Pulse spur stop;  creator;  Jonas Burgert
+Circa_1900_4428e581bb7c52878e5ef7cb19af74ce.txt
+	 The God of Wealth;  depicts person;  toad
+Wohl_Ulm_um_1500_-_A_af53a8663ab65ff49dbada4f699a9dd5.txt
+	 Large-scale sculpture;  depicts person;  Saint Anne
+DIE_ZEICHENSTUNDE_91c7309ab5de51cba7655bfa5bda25fb.txt
+Ansicht_der_Klosterr_cd12c77cfab95a6b8ce9a1bf9646b64b.txt
+	 The building complex;  located in;  San Lorenzo de El Escorial
+Drocourt,_No._7374_72100a4791f153a4a840ceead39299e1.txt
+Fnf_Figuren_(Ghostie_77704baa029653c78e8ae84cef876ef6.txt
+	 Fünf Figuren (Ghosties);  located in;  Museum of Modern Art
+bonhams.jsonl_c1cba036b30f5940acb20184003dbbca.txt
+Desesperacin_959a32725e2556acba8fba0039061de9.txt
+	 Desesperación;  alias;  Despair
+	 Desesperación;  made from material;  acrylic on panel
+	 Desesperación;  genre;  cárcel preventive
+	 Desesperación;  made from material;  acrylic on panel
+	 Desesperación;  creator;  David Alfaro Siqueiros
+bonhams.jsonl_5f5af0a48979547589eeaf17eab8ecca.txt
+	 Hummingbirds;  creator;  Peter Mueller
+Los_479_|_Zao_Wou-ki_e8647b7eead75b3b8acb72078a54bea0.txt
+	 No title.;  made from material;  watercolor
+	 No title;  creator;  Zao Wou-ki
+	 No title;  inception;  1959
+Los_139_|_Sarah_Luca_59bf2c49d13456a29ad3a8b6ad215bbb.txt
+	 Lion Heart;  located in;  Tate Britain
+Blumenbild_mit_weier_24cf6edd78fa5e78a6a61ee66aff8198.txt
+	 Blumenbild mit weißer Rose;  located in;  Lenbachhaus
+	 Blumenbild mit weißer Rose;  made from material;  cardboard
+	 Blumenbild mit weißer Rose;  genre;  flowers
+PAAR_GROSSE_BLUMENST_84287b1dd75251998bcdafe1284c8086.txt
+DORFANSICHT_MIT_FIGU_f83bca2c25a459c499fd91afce66cb53.txt
+Schwaben_um_1500_-_H_c01cf04d565a50c18cefc7cff81e5707.txt
+	 Holy Florian;  shown with features;  water bucket
+	 Holy Florian;  located in;  Hugo Helbing
+	 Holy Florian;  depicts;  water bucket
+	 water bucket;  instance of;  landmark
+ANSICHT_DER_FRANZSIS_b928338362ba53a3b5dca165698b15f1.txt
+	 ANSICHT DER FRANZÖSISCHEN KÜSTE;  depicts;  bay
+	 bay;  instance of;  landmark
+	 ANSICHT DER FRANZÖSISCHEN KÜSTE;  depicts;  mountain
+	 mountain;  instance of;  landmark
+	 ANSICHT DER FRANZÖSISCHEN KÜSTE;  depicts;  shore
+	 shore;  instance of;  landmark
+	 ANSICHT DER FRANZÖSISCHEN KÜSTE;  depicts;  mountain
+	 mountain;  instance of;  landmark
+	 ANSICHT DER FRANZÖSISCHEN KÜSTE;  depicts;  river
+	 river;  instance of;  landmark
+	 ANSICHT DER FRANZÖSISCHEN KÜSTE;  depicts;  mountain
+	 mountain;  instance of;  landmark

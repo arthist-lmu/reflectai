@@ -19,13 +19,15 @@ class TripletsPrinterPlugin(
         results = []
 
         for entry in text_entries:
-            print(entry["id"])
+            with open('../test/gollie_testset/resultset.txt', 'a') as fp:
+                print(entry["id"])
+                fp.write(entry["id"] + '\n')
 
-            for triplets in entry.get("triplets", []):
-                for triplet in triplets["content"]:
-                    print(
-                        f"\t {triplet['subject']['label']},{triplet['relation']['label']},{triplet['object']['label']}"
-                    )
-
+                for triplets in entry.get("triplets", []):      
+                    for triplet in triplets["content"]:
+                        print(
+                            f"\t {triplet['subject']['label']},{triplet['relation']['label']},{triplet['object']['label']}"
+                        )
+                        fp.write(f"\t {triplet['subject']['label']};  {triplet['relation']['label']};  {triplet['object']['label']}\n")
             yield entry
 

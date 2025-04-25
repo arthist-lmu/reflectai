@@ -1,0 +1,192 @@
+PORTRAIT_EINER_DAME_7b3e32b129ac52a3892fd717ad389356.txt
+	 PORTRAIT EINER DAME;  depicts;  The lady in the armchair at the table reading
+	 The lady in the armchair at the table reading;  instance of;  human
+	 The lady in the armchair at the table reading;  expression, gesture or body pose;  reading
+	 PORTRAIT EINER DAME;  depicts;  The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew
+	 The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew;  instance of;  human
+	 The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew;  wears;  red dress
+	 The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew;  wears;  silver silk underwear
+	 PORTRAIT EINER DAME;  depicts;  green pillow
+	 green pillow;  instance of;  landmark
+	 PORTRAIT EINER DAME;  genre;  portrait
+	 PORTRAIT EINER DAME;  made from material;  Oil on canvas
+PORTRAIT_EINER_DAME_7b3e32b129ac52a3892fd717ad389356.txt
+	 PORTRAIT EINER DAME;  depicts;  The lady in the armchair at the table reading
+	 The lady in the armchair at the table reading;  instance of;  human
+	 The lady in the armchair at the table reading;  expression, gesture or body pose;  reading
+	 PORTRAIT EINER DAME;  depicts;  The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew
+	 The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew;  instance of;  human
+	 The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew;  wears;  red dress
+	 The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew;  wears;  silver silk underwear
+	 PORTRAIT EINER DAME;  depicts;  green pillow
+	 green pillow;  instance of;  landmark
+	 PORTRAIT EINER DAME;  genre;  portrait
+	 PORTRAIT EINER DAME;  made from material;  Oil on canvas
+PORTRAIT_EINER_DAME_7b3e32b129ac52a3892fd717ad389356.txt
+	 PORTRAIT EINER DAME;  depicts;  The lady in the armchair at the table reading
+	 The lady in the armchair at the table reading;  instance of;  human
+	 The lady in the armchair at the table reading;  expression, gesture or body pose;  reading
+	 PORTRAIT EINER DAME;  depicts;  The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew
+	 The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew;  instance of;  human
+	 The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew;  wears;  red dress
+	 The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew;  wears;  silver silk underwear
+	 PORTRAIT EINER DAME;  depicts;  green pillow
+	 green pillow;  instance of;  landmark
+	 PORTRAIT EINER DAME;  genre;  portrait
+	 PORTRAIT EINER DAME;  made from material;  Oil on canvas
+PORTRAIT_EINER_DAME_7b3e32b129ac52a3892fd717ad389356.txt
+	 PORTRAIT EINER DAME;  depicts;  The lady in the armchair at the table reading
+	 The lady in the armchair at the table reading;  instance of;  human
+	 The lady in the armchair at the table reading;  expression, gesture or body pose;  reading
+	 PORTRAIT EINER DAME;  depicts;  The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew
+	 The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew;  instance of;  human
+	 The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew;  wears;  red dress
+	 The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew;  wears;  silver silk underwear
+	 PORTRAIT EINER DAME;  depicts;  green pillow
+	 green pillow;  instance of;  landmark
+	 PORTRAIT EINER DAME;  genre;  portrait
+	 PORTRAIT EINER DAME;  made from material;  Oil on canvas
+PORTRAIT_EINER_DAME_7b3e32b129ac52a3892fd717ad389356.txt
+	 PORTRAIT EINER DAME;  depicts;  The lady in the armchair at the table reading
+	 The lady in the armchair at the table reading;  instance of;  human
+	 The lady in the armchair at the table reading;  expression, gesture or body pose;  reading
+	 PORTRAIT EINER DAME;  depicts;  The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew
+	 The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew;  instance of;  human
+	 The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew;  wears;  red dress
+	 The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew;  wears;  silver silk underwear
+	 PORTRAIT EINER DAME;  depicts;  green pillow
+	 green pillow;  instance of;  landmark
+	 PORTRAIT EINER DAME;  genre;  portrait
+	 PORTRAIT EINER DAME;  made from material;  Oil on canvas
+PORTRAIT_EINER_DAME_7b3e32b129ac52a3892fd717ad389356.txt
+	 PORTRAIT EINER DAME;  depicts;  The lady in the armchair at the table reading
+	 The lady in the armchair at the table reading;  instance of;  human
+	 The lady in the armchair at the table reading;  expression, gesture or body pose;  reading
+	 PORTRAIT EINER DAME;  depicts;  The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew
+	 The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew;  instance of;  human
+	 The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew;  wears;  red dress
+	 The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew;  wears;  silver silk underwear
+	 PORTRAIT EINER DAME;  depicts;  green pillow
+	 green pillow;  instance of;  landmark
+	 PORTRAIT EINER DAME;  genre;  portrait
+	 PORTRAIT EINER DAME;  made from material;  Oil on canvas
+PORTRAIT_EINER_DAME_7b3e32b129ac52a3892fd717ad389356.txt
+	 PORTRAIT EINER DAME;  depicts;  The lady in the armchair at the table reading
+	 The lady in the armchair at the table reading;  instance of;  human
+	 The lady in the armchair at the table reading;  expression, gesture or body pose;  reading
+	 PORTRAIT EINER DAME;  depicts;  The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew
+	 The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew;  instance of;  human
+	 The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew;  wears;  red dress
+	 The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew;  wears;  silver silk underwear
+	 PORTRAIT EINER DAME;  depicts;  green pillow
+	 green pillow;  instance of;  landmark
+	 PORTRAIT EINER DAME;  genre;  portrait
+	 PORTRAIT EINER DAME;  made from material;  Oil on canvas
+PORTRAIT_EINER_DAME_7b3e32b129ac52a3892fd717ad389356.txt
+	 PORTRAIT EINER DAME;  depicts;  The lady in the armchair at the table reading
+	 The lady in the armchair at the table reading;  instance of;  human
+	 The lady in the armchair at the table reading;  expression, gesture or body pose;  reading
+	 PORTRAIT EINER DAME;  depicts;  The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew
+	 The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew;  instance of;  human
+	 The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew;  wears;  red dress
+	 The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew;  wears;  silver silk underwear
+	 PORTRAIT EINER DAME;  depicts;  green pillow
+	 green pillow;  instance of;  landmark
+	 PORTRAIT EINER DAME;  genre;  portrait
+	 PORTRAIT EINER DAME;  made from material;  Oil on canvas
+PORTRAIT_EINER_DAME_7b3e32b129ac52a3892fd717ad389356.txt
+	 PORTRAIT EINER DAME;  depicts;  The lady in the armchair at the table reading
+	 The lady in the armchair at the table reading;  instance of;  human
+	 The lady in the armchair at the table reading;  expression, gesture or body pose;  reading
+	 PORTRAIT EINER DAME;  depicts;  The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew
+	 The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew;  instance of;  human
+	 The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew;  wears;  red dress
+	 The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew;  wears;  silver silk underwear
+	 PORTRAIT EINER DAME;  depicts;  green pillow
+	 green pillow;  instance of;  landmark
+	 PORTRAIT EINER DAME;  genre;  portrait
+	 PORTRAIT EINER DAME;  made from material;  Oil on canvas
+PORTRAIT_EINER_DAME_7b3e32b129ac52a3892fd717ad389356.txt
+	 PORTRAIT EINER DAME;  depicts;  The lady in the armchair at the table reading
+	 The lady in the armchair at the table reading;  instance of;  human
+	 The lady in the armchair at the table reading;  expression, gesture or body pose;  reading
+	 PORTRAIT EINER DAME;  depicts;  The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew
+	 The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew;  instance of;  human
+	 The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew;  wears;  red dress
+	 The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew;  wears;  silver silk underwear
+	 PORTRAIT EINER DAME;  depicts;  green pillow
+	 green pillow;  instance of;  landmark
+	 PORTRAIT EINER DAME;  genre;  portrait
+	 PORTRAIT EINER DAME;  made from material;  Oil on canvas
+PORTRAIT_EINER_DAME_7b3e32b129ac52a3892fd717ad389356.txt
+	 PORTRAIT EINER DAME;  depicts;  The lady in the armchair at the table reading
+	 The lady in the armchair at the table reading;  instance of;  human
+	 The lady in the armchair at the table reading;  expression, gesture or body pose;  reading
+	 PORTRAIT EINER DAME;  depicts;  The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew
+	 The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew;  instance of;  human
+	 The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew;  wears;  red dress
+	 The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew;  wears;  silver silk underwear
+	 PORTRAIT EINER DAME;  depicts;  green pillow
+	 green pillow;  instance of;  landmark
+	 PORTRAIT EINER DAME;  genre;  portrait
+	 PORTRAIT EINER DAME;  made from material;  Oil on canvas
+PORTRAIT_EINER_DAME_7b3e32b129ac52a3892fd717ad389356.txt
+	 PORTRAIT EINER DAME;  depicts;  The lady in the armchair at the table reading
+	 The lady in the armchair at the table reading;  instance of;  human
+	 The lady in the armchair at the table reading;  expression, gesture or body pose;  reading
+	 PORTRAIT EINER DAME;  depicts;  The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew
+	 The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew;  instance of;  human
+	 The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew;  wears;  red dress
+	 The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew;  wears;  silver silk underwear
+	 PORTRAIT EINER DAME;  depicts;  green pillow
+	 green pillow;  instance of;  landmark
+	 PORTRAIT EINER DAME;  genre;  portrait
+	 PORTRAIT EINER DAME;  made from material;  Oil on canvas
+PORTRAIT_EINER_DAME_7b3e32b129ac52a3892fd717ad389356.txt
+	 PORTRAIT EINER DAME;  depicts;  The lady in the armchair at the table reading
+	 The lady in the armchair at the table reading;  instance of;  human
+	 The lady in the armchair at the table reading;  expression, gesture or body pose;  reading
+	 PORTRAIT EINER DAME;  depicts;  The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew
+	 The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew;  instance of;  human
+	 The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew;  wears;  red dress
+	 The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew;  wears;  silver silk underwear
+	 PORTRAIT EINER DAME;  depicts;  green pillow
+	 green pillow;  instance of;  landmark
+	 PORTRAIT EINER DAME;  genre;  portrait
+	 PORTRAIT EINER DAME;  made from material;  Oil on canvas
+PORTRAIT_EINER_DAME_7b3e32b129ac52a3892fd717ad389356.txt
+	 PORTRAIT EINER DAME;  depicts;  The lady in the armchair at the table reading
+	 The lady in the armchair at the table reading;  instance of;  human
+	 The lady in the armchair at the table reading;  expression, gesture or body pose;  reading
+	 PORTRAIT EINER DAME;  depicts;  The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew
+	 The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew;  instance of;  human
+	 The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew;  wears;  red dress
+	 The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew;  wears;  silver silk underwear
+	 PORTRAIT EINER DAME;  depicts;  green pillow
+	 green pillow;  instance of;  landmark
+	 PORTRAIT EINER DAME;  genre;  portrait
+	 PORTRAIT EINER DAME;  made from material;  Oil on canvas
+PORTRAIT_EINER_DAME_7b3e32b129ac52a3892fd717ad389356.txt
+	 PORTRAIT EINER DAME;  depicts;  The lady in the armchair at the table reading
+	 The lady in the armchair at the table reading;  instance of;  human
+	 The lady in the armchair at the table reading;  expression, gesture or body pose;  reading
+	 PORTRAIT EINER DAME;  depicts;  The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew
+	 The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew;  instance of;  human
+	 The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew;  wears;  red dress
+	 The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew;  wears;  silver silk underwear
+	 PORTRAIT EINER DAME;  depicts;  green pillow
+	 green pillow;  instance of;  landmark
+	 PORTRAIT EINER DAME;  genre;  portrait
+	 PORTRAIT EINER DAME;  made from material;  Oil on canvas
+PORTRAIT_EINER_DAME_7b3e32b129ac52a3892fd717ad389356.txt
+	 PORTRAIT EINER DAME;  depicts;  The lady in the armchair at the table reading
+	 The lady in the armchair at the table reading;  instance of;  human
+	 The lady in the armchair at the table reading;  expression, gesture or body pose;  reading
+	 PORTRAIT EINER DAME;  depicts;  The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew
+	 The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew;  instance of;  human
+	 The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew;  wears;  red dress
+	 The lady in a red dress with silver silk underwear, bound by four stone-occurring agraphs, with top collars and top crew;  wears;  silver silk underwear
+	 PORTRAIT EINER DAME;  depicts;  green pillow
+	 green pillow;  instance of;  landmark
+	 PORTRAIT EINER DAME;  genre;  portrait
+	 PORTRAIT EINER DAME;  made from material;  Oil on canvas
