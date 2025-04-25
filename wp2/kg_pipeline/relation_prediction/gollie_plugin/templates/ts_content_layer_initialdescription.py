@@ -294,38 +294,6 @@ ENTITY_DEFINITIONS: List[Template] = [
 ]
 
 
-def ArtisticTheme_relation_to_triplet(package: ArtisticTheme):
-    triplets = [
-        {
-            "subject": {
-                "label": package.work,
-            },
-            "relation": {
-                "label": "depict",
-                "wikidata_id": "wdt:P180",
-            },
-            "object": {
-                "label": package.theme,
-            },
-        },
-        {
-            "subject": {
-                "label": package.theme,
-            },
-            "relation": {
-                "label": "instance of",
-                "wikidata_id": "wdt:P31",
-            },
-            "object": {
-                "label": "artistic theme",
-                "wikidata_id": "wd:Q1406161",
-            },
-        },
-    ]
-
-    return triplets
-
-
 def Composition_relation_to_triplet(package: Composition):
     triplets = [
         {
