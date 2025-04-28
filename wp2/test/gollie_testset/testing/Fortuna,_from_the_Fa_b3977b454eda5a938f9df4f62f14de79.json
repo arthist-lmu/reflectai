@@ -1,0 +1,44 @@
+{
+    "Lady Fortuna": {
+        "has characteristic": [
+            "stands on",
+            "holding"
+        ]
+    },
+    "Fortuna, from the Facade of the Arminiushuis in Oudewater": {
+        "depicts": [
+            "Lady Fortuna",
+            "frame",
+            "sail"
+        ],
+        "instance of": "statue",
+        "has characteristic": "globe",
+        "made from material": "sandstone"
+    },
+    "frame": {
+        "has characteristic": "arched",
+        "contains": [
+            "ornamentation",
+            "corbel"
+        ]
+    },
+    "arches high above": {
+        "contains": "head"
+    },
+    "sail": {
+        "has characteristic": [
+            "wind-blown",
+            "full",
+            "arches high above"
+        ]
+    },
+    "holding": {
+        "has characteristic": "sail"
+    },
+    "ornamentation": {
+        "has characteristic": "renaissance"
+    },
+    "stands on": {
+        "contains": "globe"
+    }
+}

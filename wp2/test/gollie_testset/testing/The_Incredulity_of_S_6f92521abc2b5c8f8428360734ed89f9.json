@@ -1,0 +1,65 @@
+{
+    "apostle": {
+        "has characteristic": "finger"
+    },
+    "Christ": {
+        "has characteristic": [
+            "thrusts",
+            "hand",
+            "forcefully clasps"
+        ]
+    },
+    "The Incredulity of St Thomas": {
+        "depicts": [
+            "11 post-betrayal apostles",
+            "John the Evangelist",
+            "background",
+            "Christ",
+            "Thomas"
+        ],
+        "created in": [
+            "1626",
+            "1630"
+        ],
+        "influenced by": [
+            "Incredulity of St Thomas",
+            "Caravaggio"
+        ],
+        "created by": "Crabeth",
+        "instance of": "painting"
+    },
+    "Incredulity of St Thomas": {
+        "created by": "Caravaggio"
+    },
+    "John the Evangelist": {
+        "has characteristic": "hands"
+    },
+    "Thomas": {
+        "has characteristic": [
+            "wrist",
+            "finger"
+        ]
+    },
+    "hand": {
+        "has characteristic": [
+            "fingers",
+            "other"
+        ]
+    },
+    "hands": {
+        "has characteristic": "together"
+    },
+    "figures": {
+        "has characteristic": "dramatically lit"
+    },
+    "background": {
+        "has characteristic": "neutral",
+        "contains": "figures"
+    },
+    "Crabeth": {
+        "influenced by": "Ter Brugghen’"
+    },
+    "finger": {
+        "has characteristic": "probing"
+    }
+}

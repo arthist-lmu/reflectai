@@ -1,0 +1,73 @@
+{
+    "Parable of the Lost Piece of Silver": {
+        "instance of": "painting",
+        "depicts": [
+            "at the far left",
+            "piece of silver",
+            "interior",
+            "scene"
+        ],
+        "fabrication method": "supple brushwork",
+        "symbolizes": "positive quintessence of the story",
+        "created by": "Schalcken",
+        "contains": [
+            "friends and neighbors",
+            "man"
+        ],
+        "influenced by": "engraving",
+        "created in": "early 1680s",
+        "made from material": [
+            "canvas",
+            "small format"
+        ]
+    },
+    "girl": {
+        "has characteristic": "dress"
+    },
+    "dress": {
+        "has characteristic": "green"
+    },
+    "face": {
+        "has characteristic": "top half"
+    },
+    "scene": {
+        "has characteristic": [
+            "nocturnal",
+            "palette"
+        ],
+        "contains": "at the lower right"
+    },
+    "painting": {
+        "instance of": "small format"
+    },
+    "concealed in shadow": {
+        "has characteristic": "face"
+    },
+    "at the far left": {
+        "contains": [
+            "concealed in shadow",
+            "man"
+        ]
+    },
+    "palette": {
+        "has characteristic": "light"
+    },
+    "piece of silver": {
+        "symbolizes": "recovery"
+    },
+    "green": {
+        "has characteristic": "light"
+    },
+    "man": {
+        "has characteristic": [
+            "resembles the painter",
+            "looks at the viewer"
+        ]
+    },
+    "at the lower right": {
+        "contains": "girl"
+    },
+    "interior": {
+        "has characteristic": "richly appointed"
+    }
+}

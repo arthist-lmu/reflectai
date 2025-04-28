@@ -1,0 +1,80 @@
+{
+    "costume": {
+        "has characteristic": "imaginative"
+    },
+    "dress": {
+        "has characteristic": "sixteenth-century"
+    },
+    "effects": {
+        "has characteristic": [
+            "lighting",
+            "strong"
+        ]
+    },
+    "ruff": {
+        "has characteristic": "flat"
+    },
+    "Self-Portrait with Shaded Eyes": {
+        "depicts": [
+            "artist",
+            "robe",
+            "expressions",
+            "costumes",
+            "effects",
+            "costume",
+            "beret",
+            "areas"
+        ],
+        "symbolizes": "scholarly and artistic tradition",
+        "created by": "Rembrandt",
+        "created in": "1620s",
+        "influenced by": [
+            "Jan Lievens",
+            "tronies"
+        ],
+        "instance of": "self-portraits"
+    },
+    "coat": {
+        "has characteristic": "black"
+    },
+    "hat": {
+        "has characteristic": "wide-brimmed"
+    },
+    "cloak": {
+        "has characteristic": "fur-lined"
+    },
+    "robe": {
+        "has characteristic": [
+            "dress",
+            "fur-trimmed"
+        ]
+    },
+    "areas": {
+        "contains": [
+            "eyes",
+            "light"
+        ],
+        "has characteristic": "shaded"
+    },
+    "scholarly and artistic tradition": {
+        "symbolizes": "artist-suitor"
+    },
+    "tabbaard": {
+        "symbolizes": "cloak"
+    },
+    "artist-suitor": {
+        "has characteristic": [
+            "legitimate",
+            "sincere"
+        ]
+    },
+    "costumes": {
+        "has characteristic": "fancy"
+    },
+    "expressions": {
+        "has characteristic": "emotional"
+    },
+    "artist": {
+        "has characteristic": "expression"
+    }
+}

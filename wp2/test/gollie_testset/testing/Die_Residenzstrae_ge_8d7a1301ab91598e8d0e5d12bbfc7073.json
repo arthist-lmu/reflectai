@@ -1,0 +1,38 @@
+{
+    "town houses": {
+        "has characteristic": "small"
+    },
+    "sections": {
+        "has characteristic": "older southwestern"
+    },
+    "On the left": {
+        "contains": "residence"
+    },
+    "Die Residenzstraße gegen den Max-Joseph-Platz im Jahr 1826": {
+        "created by": "Domenico Quaglio",
+        "depicts": [
+            "view",
+            "On the right",
+            "Palais Toerring",
+            "vedutes",
+            "Munich"
+        ],
+        "instance of": "painting",
+        "contains": "On the left"
+    },
+    "residence": {
+        "has characteristic": [
+            "Munich",
+            "sections"
+        ]
+    },
+    "On the right": {
+        "contains": "town houses"
+    },
+    "Palais Toerring": {
+        "has characteristic": "late-baroque"
+    },
+    "view": {
+        "contains": "residential street towards Max-Joseph Square"
+    }
+}

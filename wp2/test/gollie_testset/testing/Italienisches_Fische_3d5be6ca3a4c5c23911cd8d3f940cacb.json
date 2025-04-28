@@ -1,0 +1,23 @@
+{
+    "green": {
+        "has characteristic": "deep"
+    },
+    "blue": {
+        "has characteristic": "deep"
+    },
+    "vision": {
+        "has characteristic": "momentary"
+    },
+    "sea": {
+        "has characteristic": [
+            "blue",
+            "green"
+        ]
+    },
+    "surface": {
+        "has characteristic": "sparkling"
+    },
+    "unrest": {
+        "has characteristic": "expressive charged"
+    }
+}

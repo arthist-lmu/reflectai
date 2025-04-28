@@ -1,0 +1,64 @@
+{
+    "features": {
+        "has characteristic": "robust"
+    },
+    "clasps": {
+        "has characteristic": "horizontal braided"
+    },
+    "Portrait of a Man in a Red Coat": {
+        "depicts": [
+            "doublet",
+            "clasps",
+            "collar"
+        ],
+        "created by": "Rembrandt",
+        "contains": [
+            "man",
+            "person"
+        ]
+    },
+    "eyebrows": {
+        "has characteristic": "arched"
+    },
+    "man": {
+        "has characteristic": [
+            "looks directly out at the viewer",
+            "twirling",
+            "face"
+        ]
+    },
+    "red": {
+        "has characteristic": "bold"
+    },
+    "body": {
+        "has characteristic": "ample"
+    },
+    "person": {
+        "has characteristic": [
+            "body",
+            "features"
+        ],
+        "symbolizes": "enjoys the fullness of life"
+    },
+    "doublet": {
+        "has characteristic": "red"
+    },
+    "collar": {
+        "has characteristic": [
+            "starched",
+            "white"
+        ]
+    },
+    "twirling": {
+        "has characteristic": "moustache"
+    },
+    "face": {
+        "has characteristic": [
+            "crinkles",
+            "eyebrows"
+        ]
+    },
+    "eyes": {
+        "has characteristic": "crinkles"
+    }
+}

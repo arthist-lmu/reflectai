@@ -1,0 +1,21 @@
+{
+    "BILDNIS EINER JUNGEN ADLIGEN, MÖGLICHERWEISE MARIA BEATRICE VON MODENA, HERZOGIN VON YORK": {
+        "instance of": [
+            "paintings",
+            "portrait"
+        ],
+        "depicts": "Maria Beatrice di Modena",
+        "influenced by": [
+            "Pierre Mignard",
+            "Sir Peter Lely"
+        ],
+        "created in": "1680",
+        "created by": "Benedetto Gennari"
+    },
+    "Maria Beatrice di Modena": {
+        "has characteristic": "young"
+    },
+    "Benedetto Gennari": {
+        "influenced by": "Giovanni Francesco Barbieris"
+    }
+}

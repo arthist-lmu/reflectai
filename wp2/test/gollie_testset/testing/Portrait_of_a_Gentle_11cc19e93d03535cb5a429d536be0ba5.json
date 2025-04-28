@@ -1,0 +1,90 @@
+{
+    "Portrait of a Gentleman with a Walking Stick": {
+        "depicts": [
+            "suit",
+            "rapier",
+            "draped over his shoulder",
+            "pose"
+        ],
+        "instance of": [
+            "painting",
+            "portrait"
+        ],
+        "contains": [
+            "man",
+            "officer"
+        ],
+        "created by": "Gerrit Dou",
+        "influenced by": "Salomon Savery"
+    },
+    "near his hip": {
+        "contains": "rapier"
+    },
+    "gaze": {
+        "has characteristic": "penetrating"
+    },
+    "suit": {
+        "has characteristic": [
+            "burgundy-plum",
+            "woolen"
+        ]
+    },
+    "hand": {
+        "has characteristic": "on a cane"
+    },
+    "hanger": {
+        "has characteristic": [
+            "rapier",
+            "embroidered"
+        ]
+    },
+    "Gerrit Dou": {
+        "created by": "Portrait of a Woman",
+        "influenced by": [
+            "Salomon Savery",
+            "Thomas de Keyser"
+        ]
+    },
+    "woman": {
+        "has characteristic": "resting on"
+    },
+    "arm": {
+        "has characteristic": "right"
+    },
+    "Standing Officer with Walking Stick": {
+        "instance of": "engraving",
+        "created by": "Salomon Savery"
+    },
+    "pose": {
+        "has characteristic": [
+            "stately",
+            "resting on his hip",
+            "on a cane"
+        ]
+    },
+    "draped over his shoulder": {
+        "contains": "cloak"
+    },
+    "expression": {
+        "has characteristic": "austere, unsmiling"
+    },
+    "man": {
+        "has characteristic": [
+            "gaze",
+            "dignified",
+            "expression"
+        ]
+    },
+    "lady": {
+        "has characteristic": "dignified"
+    },
+    "crossing over his gorget": {
+        "contains": "hanger"
+    },
+    "the other": {
+        "has characteristic": "resting on his hip"
+    },
+    "engraving": {
+        "instance of": "prints"
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "book": {
+        "has characteristic": "illustrated"
+    },
+    "painter": {
+        "has characteristic": "highly regarded"
+    },
+    "ambiance": {
+        "has characteristic": "private"
+    }
+}

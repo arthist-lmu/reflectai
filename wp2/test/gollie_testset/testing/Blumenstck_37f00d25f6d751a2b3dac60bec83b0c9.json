@@ -1,0 +1,53 @@
+{
+    "flowers": {
+        "has characteristic": [
+            "Smaller",
+            "light",
+            "beautiful",
+            "shade"
+        ]
+    },
+    "fallen from": {
+        "contains": [
+            "vase",
+            "Flowers"
+        ]
+    },
+    "Blumenstück": {
+        "depicts": [
+            "over the edge of the table or the plate",
+            "flowers",
+            "bouquet",
+            "strawberry",
+            "Flowers"
+        ],
+        "instance of": "paintings",
+        "has genre": "Biedermeier"
+    },
+    "light": {
+        "has characteristic": "most"
+    },
+    "fruits": {
+        "has characteristic": [
+            "Native",
+            "exotic"
+        ]
+    },
+    "placed": {
+        "contains": "vase",
+        "depicts": "over the edge of the table or the plate"
+    },
+    "background": {
+        "contains": "bouquet",
+        "has characteristic": "neutral"
+    },
+    "in the center": {
+        "contains": "flowers"
+    },
+    "edge": {
+        "contains": "flowers"
+    },
+    "oval": {
+        "contains": "bouquet"
+    }
+}

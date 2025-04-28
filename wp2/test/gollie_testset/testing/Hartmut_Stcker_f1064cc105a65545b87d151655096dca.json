@@ -1,0 +1,46 @@
+{
+    "eyes": {
+        "has characteristic": [
+            "looking openly",
+            "watchful",
+            "attentive",
+            "dark"
+        ]
+    },
+    "hair": {
+        "has characteristic": "dark"
+    },
+    "blue": {
+        "has characteristic": [
+            "bright",
+            "soft"
+        ]
+    },
+    "Hartmut Stöcker": {
+        "depicts": [
+            "in contrast and in clear lines",
+            "in the background"
+        ],
+        "contains": [
+            "eyes",
+            "hair",
+            "person"
+        ],
+        "has genre": [
+            "advertising",
+            "portraiture"
+        ],
+        "created by": "Andy Warhol",
+        "fabrication method": "flat-plate painting style"
+    },
+    "person": {
+        "has characteristic": [
+            "relaxed",
+            "is facing us",
+            "looking openly"
+        ]
+    },
+    "in the background": {
+        "has characteristic": "blue"
+    }
+}

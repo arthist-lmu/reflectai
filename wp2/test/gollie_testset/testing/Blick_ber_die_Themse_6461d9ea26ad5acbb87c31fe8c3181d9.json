@@ -1,0 +1,31 @@
+{
+    "Blick über die Themse bei Richmond Gardens auf Syon House": {
+        "symbolizes": [
+            "landscape mood",
+            "nature"
+        ],
+        "depicts": [
+            "sunlight",
+            "on the right of the bank",
+            "mist",
+            "river landscape"
+        ],
+        "created in": [
+            "1761",
+            "1776"
+        ],
+        "contains": "people",
+        "created by": "Wilson",
+        "instance of": "painting",
+        "influenced by": "Claude Lorrain, Joseph Vernet and Canaletto"
+    },
+    "mist": {
+        "has characteristic": "gentle"
+    },
+    "on the right of the bank": {
+        "depicts": "Syon House"
+    },
+    "nature": {
+        "has characteristic": "real"
+    }
+}

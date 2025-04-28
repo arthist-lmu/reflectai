@@ -1,0 +1,20 @@
+{
+    "cut": {
+        "has characteristic": "bold"
+    },
+    "Junge Dame in Schwarz": {
+        "instance of": "portrait",
+        "created by": "Renoir",
+        "depicts": [
+            "woman",
+            "dress"
+        ],
+        "influenced by": "bourgeois girls"
+    },
+    "smile": {
+        "has characteristic": "flirtatious"
+    },
+    "dress": {
+        "has characteristic": "black"
+    }
+}

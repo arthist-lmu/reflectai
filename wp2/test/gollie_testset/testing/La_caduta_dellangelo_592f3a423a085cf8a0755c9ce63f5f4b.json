@@ -1,0 +1,37 @@
+{
+    "being": {
+        "has characteristic": "higher, yellow-winged"
+    },
+    "La caduta dell’angelo": {
+        "fabrication method": [
+            "bold, free gesture",
+            "without prefixing or contouring",
+            "open, experimental painting process"
+        ],
+        "depicts": [
+            "angel",
+            "fall of angels"
+        ],
+        "instance of": "picture",
+        "has characteristic": [
+            "colorfulness",
+            "picturesque expression"
+        ],
+        "created by": "Hödicke",
+        "has genre": "contemporary art"
+    },
+    "center of the picture": {
+        "contains": "angel"
+    },
+    "colorfulness": {
+        "has characteristic": [
+            "blue",
+            "bright-expressive",
+            "yellow",
+            "red"
+        ]
+    },
+    "angel": {
+        "has characteristic": "fallen"
+    }
+}

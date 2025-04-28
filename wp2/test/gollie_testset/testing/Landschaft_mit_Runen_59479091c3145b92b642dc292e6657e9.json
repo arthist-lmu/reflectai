@@ -1,0 +1,50 @@
+{
+    "Landschaft mit Runenstein": {
+        "depicts": [
+            "nature",
+            "wanderer",
+            "runestone",
+            "horizon",
+            "two thirds"
+        ],
+        "created in": "1839",
+        "instance of": "landscape painting",
+        "influenced by": [
+            "17th-century Dutch",
+            "Carl Gustav Carus",
+            "pre-Romantic",
+            "Caspar David Friedrich"
+        ],
+        "created by": "Achenbach's",
+        "has genre": "Romantic",
+        "symbolizes": "smallness"
+    },
+    "monuments": {
+        "has characteristic": "natural"
+    },
+    "nature": {
+        "has characteristic": "harsh, repulsive"
+    },
+    "man": {
+        "has characteristic": "individual",
+        "symbolizes": "smallness"
+    },
+    "wanderer": {
+        "has characteristic": "lonely"
+    },
+    "ruins": {
+        "has characteristic": "medieval"
+    },
+    "horizon": {
+        "has characteristic": "low-lying"
+    },
+    "remains": {
+        "has characteristic": "prehistoric"
+    },
+    "sky": {
+        "has characteristic": "moving"
+    },
+    "two thirds": {
+        "contains": "sky"
+    }
+}

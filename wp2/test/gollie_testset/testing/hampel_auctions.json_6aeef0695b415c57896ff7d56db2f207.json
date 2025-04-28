@@ -1,0 +1,134 @@
+{
+    "Unknown": {
+        "has characteristic": [
+            "Anna",
+            "baby Jesus"
+        ],
+        "instance of": "statue",
+        "has genre": [
+            "Gothic",
+            "soft style"
+        ],
+        "depicts": [
+            "Mary",
+            "Paul's"
+        ]
+    },
+    "Mary": {
+        "has characteristic": [
+            "both hands",
+            "gaze",
+            "armrest",
+            "dress",
+            "head"
+        ]
+    },
+    "counterpost": {
+        "contains": "Paul's"
+    },
+    "in his left hand": {
+        "has characteristic": [
+            "pear",
+            "holding"
+        ]
+    },
+    "baby Jesus": {
+        "has characteristic": [
+            "seated",
+            "holding",
+            "arm"
+        ]
+    },
+    "leg": {
+        "has characteristic": [
+            "right",
+            "protruding",
+            "standing"
+        ]
+    },
+    "holding": {
+        "has characteristic": "pear"
+    },
+    "hair": {
+        "has characteristic": "laterally wavy"
+    },
+    "body": {
+        "has characteristic": [
+            "S-bow",
+            "form"
+        ]
+    },
+    "head": {
+        "has characteristic": [
+            "hair",
+            "to the right"
+        ]
+    },
+    "dress": {
+        "has characteristic": [
+            "belted high",
+            "sleeve",
+            "gold"
+        ]
+    },
+    "lawn": {
+        "has characteristic": "carved"
+    },
+    "In the left hand": {
+        "contains": "baby Jesus"
+    },
+    "hand": {
+        "has characteristic": "left"
+    },
+    "X-shaped": {
+        "symbolizes": "royalty"
+    },
+    "armrest": {
+        "has characteristic": "right"
+    },
+    "veil": {
+        "has characteristic": "head"
+    },
+    "child's": {
+        "has characteristic": "legs"
+    },
+    "both hands": {
+        "has characteristic": "up"
+    },
+    "arm": {
+        "has characteristic": [
+            "right",
+            "inserted into"
+        ]
+    },
+    "upper body": {
+        "has characteristic": "to the left"
+    },
+    "Anna": {
+        "has characteristic": [
+            "neck",
+            "veil"
+        ]
+    },
+    "Paul's": {
+        "has characteristic": "standing"
+    },
+    "legs": {
+        "has characteristic": "X-shaped"
+    },
+    "face": {
+        "has characteristic": "cloth"
+    },
+    "form": {
+        "has characteristic": "retrograde"
+    },
+    "sleeve": {
+        "has characteristic": "blue"
+    },
+    "hip": {
+        "has characteristic": "to the right"
+    },
+    "cloth": {
+        "has characteristic": "white"
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "Nandina (Nandina domestica)": {
+        "fabrication method": "outlines with graphite",
+        "made from material": [
+            "opaque watercolour",
+            "graphite"
+        ],
+        "created by": "Withoos",
+        "instance of": "flower drawings"
+    },
+    "Nandina (Nandina domestica": {
+        "depicts": [
+            "flower",
+            "leaves",
+            "at the centre",
+            "single species"
+        ]
+    },
+    "leaves": {
+        "has characteristic": [
+            "white",
+            "two-dimensional",
+            "darker"
+        ]
+    },
+    "at the centre": {
+        "contains": "single species"
+    },
+    "single species": {
+        "has characteristic": "various stages of bloom"
+    },
+    "sheet": {
+        "contains": "at the centre",
+        "has characteristic": "empty"
+    }
+}

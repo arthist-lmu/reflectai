@@ -1,0 +1,50 @@
+{
+    "hand": {
+        "has characteristic": "right"
+    },
+    "dress": {
+        "has characteristic": "belted"
+    },
+    "Thronende Muttergottes": {
+        "created in": "First half of the 14th century",
+        "depicts": [
+            "baby Jesus",
+            "sitting on",
+            "Mary's"
+        ],
+        "made from material": "Ivory"
+    },
+    "Virgin Mary": {
+        "has characteristic": [
+            "sitting on",
+            "coat"
+        ]
+    },
+    "baby Jesus": {
+        "has characteristic": [
+            "robe",
+            "holding"
+        ]
+    },
+    "holding": {
+        "contains": "globe"
+    },
+    "coat": {
+        "has characteristic": "wrinkled"
+    },
+    "bench": {
+        "has characteristic": "stone"
+    },
+    "sitting on": {
+        "contains": "bench"
+    },
+    "Mary's": {
+        "has characteristic": "coat"
+    },
+    "robe": {
+        "has characteristic": "long"
+    },
+    "sideways over her hip": {
+        "contains": "baby Jesus"
+    }
+}

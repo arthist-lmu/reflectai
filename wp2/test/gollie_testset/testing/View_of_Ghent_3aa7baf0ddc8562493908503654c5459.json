@@ -1,0 +1,13 @@
+{
+    "View of Ghent": {
+        "created by": "artist",
+        "instance of": "drawing",
+        "depicts": "outskirts of the city"
+    },
+    "church": {
+        "has characteristic": "towers"
+    },
+    "monastery": {
+        "has characteristic": "towers"
+    }
+}

@@ -1,0 +1,55 @@
+{
+    "In the center": {
+        "contains": "group of musicians"
+    },
+    "background": {
+        "has characteristic": "frames",
+        "contains": "palace architecture"
+    },
+    "in the center": {
+        "contains": "musical instruments"
+    },
+    "oriental carpet": {
+        "symbolizes": "table covering"
+    },
+    "group of musicians": {
+        "has characteristic": [
+            "lady at the choir",
+            "singer",
+            "cellist",
+            "flute player"
+        ]
+    },
+    "in front of": {
+        "contains": [
+            "oriental carpet",
+            "in the center"
+        ]
+    },
+    "musical instruments": {
+        "has characteristic": [
+            "notes",
+            "strings",
+            "cello"
+        ]
+    },
+    "palace architecture": {
+        "has characteristic": [
+            "bastions",
+            "balustrades",
+            "pillars"
+        ]
+    },
+    "arms": {
+        "has characteristic": "raised"
+    },
+    "cellist": {
+        "has characteristic": "arms"
+    },
+    "In the background": {
+        "contains": "fish"
+    },
+    "in the foreground": {
+        "contains": "child"
+    }
+}

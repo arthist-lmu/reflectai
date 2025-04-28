@@ -1,0 +1,83 @@
+{
+    "grabbing": {
+        "contains": [
+            "elbows",
+            "hand"
+        ]
+    },
+    "On the right": {
+        "contains": "piece"
+    },
+    "boy": {
+        "has characteristic": [
+            "grabbing",
+            "clothes",
+            "leaning",
+            "lying"
+        ]
+    },
+    "sky": {
+        "has characteristic": "open"
+    },
+    "In a far-off landscape": {
+        "contains": "in front of a tree trunk"
+    },
+    "attached": {
+        "contains": "handle"
+    },
+    "dog": {
+        "has characteristic": "lying"
+    },
+    "clothes": {
+        "has characteristic": [
+            "beige",
+            "red"
+        ]
+    },
+    "behind which": {
+        "contains": [
+            "sky",
+            "stag tree"
+        ]
+    },
+    "pasture basket": {
+        "has characteristic": "handle"
+    },
+    "hand": {
+        "has characteristic": "left"
+    },
+    "piece": {
+        "has characteristic": "attached",
+        "symbolizes": "shepherd's"
+    },
+    "SCHLAFENDER HIRTENJUNGE": {
+        "depicts": [
+            "behind which",
+            "next to him",
+            "boy",
+            "In a far-off landscape",
+            "dog",
+            "On the right"
+        ],
+        "created by": "artist",
+        "instance of": "painting"
+    },
+    "leaning": {
+        "contains": [
+            "head",
+            "hand"
+        ]
+    },
+    "elbow": {
+        "has characteristic": [
+            "hand",
+            "right"
+        ]
+    },
+    "in front of a tree trunk": {
+        "contains": "boy"
+    },
+    "next to him": {
+        "contains": "dog"
+    }
+}

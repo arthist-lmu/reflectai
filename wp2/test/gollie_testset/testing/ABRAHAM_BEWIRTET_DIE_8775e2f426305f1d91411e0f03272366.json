@@ -1,0 +1,83 @@
+{
+    "ABRAHAM BEWIRTET DIE DREI ENGEL": {
+        "depicts": [
+            "On the tablecloth",
+            "Abraham",
+            "angels"
+        ],
+        "created by": "Alonso il Sordillo del Arco",
+        "made from material": "Oil on Canvas",
+        "instance of": "painting",
+        "contains": [
+            "On the right",
+            "background",
+            "door frame"
+        ]
+    },
+    "angels": {
+        "has characteristic": [
+            "white",
+            "holding",
+            "sitting"
+        ]
+    },
+    "to the right": {
+        "contains": "tree trunk"
+    },
+    "on the left": {
+        "contains": [
+            "Abraham",
+            "door frame"
+        ]
+    },
+    "door frame": {
+        "contains": "Sarah",
+        "has characteristic": "darkened"
+    },
+    "table": {
+        "has characteristic": "covered"
+    },
+    "holding": {
+        "has characteristic": "hands"
+    },
+    "tree trunk": {
+        "has characteristic": [
+            "leaves",
+            "robust",
+            "shady"
+        ]
+    },
+    "tinplate": {
+        "contains": [
+            "ribs",
+            "frying pan"
+        ]
+    },
+    "background": {
+        "contains": [
+            "to the right",
+            "landscape"
+        ]
+    },
+    "landscape": {
+        "has characteristic": [
+            "hilly",
+            "populated"
+        ]
+    },
+    "On the right": {
+        "contains": "two other teenage figures"
+    },
+    "in the center": {
+        "contains": [
+            "across the covered table",
+            "angels"
+        ]
+    },
+    "On the tablecloth": {
+        "contains": "tinplate"
+    },
+    "leaves": {
+        "has characteristic": "move across"
+    }
+}

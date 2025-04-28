@@ -1,0 +1,37 @@
+{
+    "posture": {
+        "has characteristic": [
+            "forward-leaning",
+            "head"
+        ]
+    },
+    "Halbakt einer jungen Frau, den Kopf mit der linken Hand gestützt": {
+        "depicts": [
+            "posture",
+            "staffle",
+            "woman",
+            "room",
+            "model"
+        ],
+        "instance of": [
+            "paintings",
+            "portrait"
+        ],
+        "created by": "Corinth"
+    },
+    "behind the model": {
+        "contains": "on the right"
+    },
+    "room": {
+        "has characteristic": "dark"
+    },
+    "head": {
+        "has characteristic": "up"
+    },
+    "woman": {
+        "has characteristic": "young"
+    },
+    "on the right": {
+        "contains": "staffle"
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "Kleine Hermeneutik des Diskurses": {
+        "depicts": [
+            "writing fields",
+            "arrangement"
+        ],
+        "created by": "Thomas Locher's",
+        "made from material": "aluminium",
+        "instance of": "installations",
+        "fabrication method": "engraved"
+    },
+    "arrangement": {
+        "has characteristic": "symmetrical",
+        "contains": [
+            "chairs",
+            "tables"
+        ]
+    },
+    "symmetrical": {
+        "has characteristic": "geometrically"
+    }
+}

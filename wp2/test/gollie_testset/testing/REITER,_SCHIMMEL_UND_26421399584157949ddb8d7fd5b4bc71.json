@@ -1,0 +1,37 @@
+{
+    "REITER, SCHIMMEL UND HUND VOR DEM WEIHERHAUS BEI EMMING, UM 1852": {
+        "depicts": [
+            "hound",
+            "gelding"
+        ],
+        "instance of": "paintings",
+        "contains": "monogram",
+        "created by": "Kobell",
+        "symbolizes": "memorial"
+    },
+    "in the foreground to the right": {
+        "contains": "hound"
+    },
+    "in the lower right corner": {
+        "contains": "monogram"
+    },
+    "horses": {
+        "has characteristic": "favorite"
+    },
+    "sits": {
+        "depicts": "hound"
+    },
+    "saddle": {
+        "has characteristic": "modern English"
+    },
+    "riding dress": {
+        "has characteristic": "fashionable"
+    },
+    "gelding": {
+        "depicts": "from the back",
+        "has characteristic": "white"
+    },
+    "gelding's": {
+        "has characteristic": "fur"
+    }
+}

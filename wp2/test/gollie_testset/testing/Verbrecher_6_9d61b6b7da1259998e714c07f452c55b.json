@@ -1,0 +1,21 @@
+{
+    "Verbrecher 6": {
+        "created by": "Kerstin von Gabain",
+        "depicts": "copies of the bowwood chairs",
+        "influenced by": "portrait photography",
+        "instance of": "series of photographs"
+    },
+    "copies of the bowwood chairs": {
+        "has characteristic": "virtuosic",
+        "symbolizes": "humanizing trend"
+    },
+    "humanizing trend": {
+        "symbolizes": "anthropomorphic view of seating furniture"
+    },
+    "portrait photography": {
+        "created in": "19th century"
+    },
+    "chairs": {
+        "has characteristic": "bowwood"
+    }
+}

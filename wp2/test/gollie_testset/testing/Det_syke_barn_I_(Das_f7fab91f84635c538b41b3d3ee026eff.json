@@ -1,0 +1,45 @@
+{
+    "Det syke barn I": {
+        "created by": "Edvard Munch",
+        "has genre": "expressionism",
+        "depicts": [
+            "child",
+            "girl's",
+            "background"
+        ],
+        "created in": "1896",
+        "instance of": "lithograph"
+    },
+    "pillow": {
+        "has characteristic": [
+            "white",
+            "supporting"
+        ]
+    },
+    "girl's": {
+        "has characteristic": [
+            "expression",
+            "head",
+            "gaze"
+        ]
+    },
+    "head": {
+        "has characteristic": "side-faced"
+    },
+    "gaze": {
+        "has characteristic": "empty"
+    },
+    "expression": {
+        "has characteristic": [
+            "powerful",
+            "visual"
+        ]
+    },
+    "background": {
+        "contains": "pillow",
+        "has characteristic": "entire"
+    },
+    "child": {
+        "has characteristic": "sick"
+    }
+}

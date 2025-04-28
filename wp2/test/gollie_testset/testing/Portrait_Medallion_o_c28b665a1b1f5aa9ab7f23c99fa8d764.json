@@ -1,0 +1,46 @@
+{
+    "Johan van Oldenbarnevelt": {
+        "has characteristic": [
+            "seventy years of age",
+            "Grand Pensionary",
+            "in profile"
+        ]
+    },
+    "painting": {
+        "created by": "Michiel Jansz van Mierevelt",
+        "created in": "1616"
+    },
+    "in profile": {
+        "contains": "facing right"
+    },
+    "Portrait Medallion of Johan van Oldenbarnevelt (1547-1619)": {
+        "instance of": "medallion",
+        "influenced by": "engraving",
+        "made from material": "ivory"
+    },
+    "neck": {
+        "has characteristic": "collar"
+    },
+    "engraving": {
+        "created by": "Willem Jacobsz van Delff",
+        "influenced by": "painting",
+        "created in": "1617"
+    },
+    "Portrait Medallion of Johan van Oldenbarnevelt (1547-1619": {
+        "depicts": [
+            "tabard",
+            "Johan van Oldenbarnevelt",
+            "collar",
+            "doublet"
+        ]
+    },
+    "collar": {
+        "has characteristic": "ruff"
+    },
+    "tabard": {
+        "has characteristic": "fur-edged"
+    },
+    "doublet": {
+        "has characteristic": "buttoned"
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "The Little Bridge": {
+        "contains": [
+            "ducks",
+            "over a canal"
+        ],
+        "depicts": "bridge",
+        "instance of": "landscape painting",
+        "created by": "Gillis Rombouts"
+    },
+    "canal": {
+        "contains": "ducks"
+    },
+    "bridge": {
+        "has characteristic": [
+            "wooden",
+            "little"
+        ]
+    },
+    "over a canal": {
+        "contains": "bridge"
+    }
+}

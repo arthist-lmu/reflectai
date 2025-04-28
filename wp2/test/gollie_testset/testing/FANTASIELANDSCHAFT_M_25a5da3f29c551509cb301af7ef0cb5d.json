@@ -1,0 +1,47 @@
+{
+    "FANTASIELANDSCHAFT MIT ANTIKER FIGURENSTAFFAGE": {
+        "contains": [
+            "figures",
+            "tree groups and mountainous heights",
+            "Venus",
+            "valley",
+            "Adonis",
+            "swans",
+            "carriage"
+        ],
+        "depicts": "landscape",
+        "instance of": "painting",
+        "influenced by": "Lucas van Uden"
+    },
+    "in the foreground": {
+        "contains": [
+            "man",
+            "couple",
+            "Venus"
+        ]
+    },
+    "in the distance": {
+        "contains": "city"
+    },
+    "valley": {
+        "contains": "city"
+    },
+    "Venus": {
+        "has characteristic": [
+            "embracing",
+            "poorly dressed"
+        ]
+    },
+    "figures": {
+        "has characteristic": "antique mythological"
+    },
+    "man": {
+        "has characteristic": "young"
+    },
+    "couple": {
+        "has characteristic": "young"
+    },
+    "view": {
+        "contains": "tree groups and mountainous heights"
+    }
+}

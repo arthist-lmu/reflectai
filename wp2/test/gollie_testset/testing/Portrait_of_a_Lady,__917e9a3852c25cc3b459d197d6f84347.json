@@ -1,0 +1,126 @@
+{
+    "hair": {
+        "has characteristic": [
+            "tied back",
+            "headdress"
+        ]
+    },
+    "attire": {
+        "contains": [
+            "stomacher",
+            "skirt",
+            "collar",
+            "around her shoulders"
+        ],
+        "symbolizes": "conservative taste",
+        "has characteristic": "elegant"
+    },
+    "stomacher": {
+        "contains": "bow",
+        "has characteristic": [
+            "black",
+            "ornamental"
+        ]
+    },
+    "linen neckerchief": {
+        "contains": [
+            "cuffs",
+            "sleeves",
+            "trim"
+        ],
+        "has characteristic": [
+            "white",
+            "three-tiered"
+        ]
+    },
+    "outer gown": {
+        "has characteristic": "black"
+    },
+    "collar": {
+        "has characteristic": [
+            "high-necked",
+            "white"
+        ],
+        "contains": "beading"
+    },
+    "lady": {
+        "has characteristic": [
+            "well-to-do",
+            "young"
+        ]
+    },
+    "cuffs": {
+        "has characteristic": [
+            "matching",
+            "lace"
+        ]
+    },
+    "Portrait of a Lady, Seated with a Music Book on Her Lap": {
+        "contains": "outer gown",
+        "depicts": [
+            "attire",
+            "music book",
+            "lady",
+            "young",
+            "hair",
+            "jewelry"
+        ],
+        "created by": "Gerrit Dou",
+        "instance of": "portrait",
+        "created in": "early 1640s"
+    },
+    "skirt": {
+        "has characteristic": [
+            "amber-colored",
+            "satin"
+        ],
+        "contains": "embroidery"
+    },
+    "headdress": {
+        "has characteristic": [
+            "covers",
+            "extends to the sides",
+            "matching",
+            "lace"
+        ]
+    },
+    "beading": {
+        "has characteristic": [
+            "gold",
+            "thin"
+        ]
+    },
+    "embroidery": {
+        "has characteristic": "gold"
+    },
+    "sleeves": {
+        "has characteristic": "bracelet-length"
+    },
+    "pearl": {
+        "has characteristic": [
+            "black",
+            "single"
+        ]
+    },
+    "in her lap": {
+        "contains": "music book"
+    },
+    "music book": {
+        "has characteristic": "open"
+    },
+    "covers": {
+        "contains": "ears"
+    },
+    "bow": {
+        "contains": "pearl"
+    },
+    "extends to the sides": {
+        "contains": "face"
+    },
+    "trim": {
+        "has characteristic": "lace"
+    },
+    "around her shoulders": {
+        "contains": "linen neckerchief"
+    }
+}

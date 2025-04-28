@@ -1,0 +1,25 @@
+{
+    "Portrait of Anne Hathaway": {
+        "instance of": [
+            "portrait",
+            "line-drawing"
+        ],
+        "depicts": [
+            "ruff",
+            "woman",
+            "cap"
+        ],
+        "influenced by": "Elizabethan original",
+        "created in": "1708",
+        "created by": "Sir Nathaniel Curzon"
+    },
+    "woman": {
+        "has characteristic": "young"
+    },
+    "ruff": {
+        "has characteristic": "16th-century"
+    },
+    "cap": {
+        "has characteristic": "16th-century"
+    }
+}

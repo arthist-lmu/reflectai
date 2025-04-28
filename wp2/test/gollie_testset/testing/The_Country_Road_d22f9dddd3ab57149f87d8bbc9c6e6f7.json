@@ -1,0 +1,39 @@
+{
+    "The Country Road": {
+        "has genre": [
+            "Dutch",
+            "Flemish"
+        ],
+        "depicts": [
+            "trees",
+            "monogram",
+            "horizon",
+            "villagers",
+            "Dutch landscape",
+            "few hunters",
+            "palette",
+            "peasant cottages"
+        ],
+        "influenced by": [
+            "Claes Jansz Visscher",
+            "prints",
+            "Esaias van de Velde",
+            "Jan van de Velde"
+        ],
+        "created by": "De Hondecoeter",
+        "created in": "1620s",
+        "instance of": "painting"
+    },
+    "central": {
+        "contains": "trees"
+    },
+    "palette": {
+        "has characteristic": "monochrome"
+    },
+    "Dutch landscape": {
+        "has characteristic": "naturalistic"
+    },
+    "horizon": {
+        "has characteristic": "low"
+    }
+}

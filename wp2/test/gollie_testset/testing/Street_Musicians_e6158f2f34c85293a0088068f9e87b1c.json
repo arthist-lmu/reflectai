@@ -1,0 +1,49 @@
+{
+    "tray": {
+        "contains": "sweets",
+        "has characteristic": "lacquered"
+    },
+    "carrying": {
+        "contains": "tray"
+    },
+    "Street Musicians": {
+        "depicts": [
+            "shamisen",
+            "street musicians",
+            "shop employee",
+            "kokyū"
+        ],
+        "influenced by": "abbreviated', ryakuga, style",
+        "created by": "Ishikawa Toyonobu"
+    },
+    "shop employee": {
+        "has characteristic": "carrying"
+    },
+    "seen from the back": {
+        "contains": "playing"
+    },
+    "street musicians": {
+        "symbolizes": "torioi",
+        "has characteristic": [
+            "Two",
+            "itinerant",
+            "playing",
+            "female"
+        ]
+    },
+    "playing": {
+        "contains": [
+            "kokyū",
+            "shamisen"
+        ]
+    },
+    "hats": {
+        "has characteristic": [
+            "simple",
+            "straw"
+        ]
+    },
+    "To the left": {
+        "contains": "shop employee"
+    }
+}

@@ -1,0 +1,91 @@
+{
+    "sheets of paper": {
+        "has characteristic": [
+            "number of",
+            "loose"
+        ]
+    },
+    "inscription": {
+        "symbolizes": "openbaer Notarus"
+    },
+    "window": {
+        "has characteristic": "arched",
+        "contains": "leans out"
+    },
+    "Public Notary": {
+        "influenced by": "Christ and the Woman Taken in Adultery",
+        "depicts": [
+            "man",
+            "official document with attached wax seals",
+            "sign",
+            "colors",
+            "folio",
+            "window"
+        ],
+        "created by": "Gabriel Metsu",
+        "has characteristic": "areas",
+        "created in": "1653",
+        "made from material": "panel",
+        "instance of": "painting"
+    },
+    "areas": {
+        "has characteristic": [
+            "red",
+            "white"
+        ]
+    },
+    "man": {
+        "has characteristic": [
+            "old",
+            "leans out",
+            "cloak",
+            "beard",
+            "stares"
+        ]
+    },
+    "cloak": {
+        "has characteristic": "red"
+    },
+    "building": {
+        "has characteristic": [
+            "brownish-gray",
+            "window",
+            "stone"
+        ]
+    },
+    "sign": {
+        "has characteristic": [
+            "year",
+            "wooden",
+            "inscription"
+        ]
+    },
+    "hold open": {
+        "contains": [
+            "folio",
+            "official document with attached wax seals"
+        ]
+    },
+    "hands": {
+        "has characteristic": [
+            "large",
+            "boney",
+            "hold open"
+        ]
+    },
+    "below the open shutter": {
+        "contains": "sign"
+    },
+    "beard": {
+        "has characteristic": [
+            "gray",
+            "full"
+        ]
+    },
+    "folio": {
+        "contains": "sheets of paper"
+    },
+    "colors": {
+        "has characteristic": "brownish-gray"
+    }
+}

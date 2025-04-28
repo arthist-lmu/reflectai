@@ -1,0 +1,65 @@
+{
+    "mouth": {
+        "has characteristic": "half-open",
+        "symbolizes": "speaking"
+    },
+    "drawing": {
+        "influenced by": "Self-portrait"
+    },
+    "Jan Lievens": {
+        "influenced by": "Rembrandt"
+    },
+    "Self-portrait with Tousled Hair": {
+        "depicts": [
+            "Rembrandt",
+            "cloak"
+        ],
+        "has characteristic": "gaze",
+        "created in": "1628-29",
+        "created by": "Rembrandt",
+        "instance of": "drawings",
+        "fabrication method": "thin pen lines, then worked up with a brush and grey wash"
+    },
+    "face": {
+        "has characteristic": [
+            "left half",
+            "shadow"
+        ]
+    },
+    "Foot Operation": {
+        "created by": "Jan Lievens",
+        "instance of": "drawings"
+    },
+    "Self-portrait": {
+        "instance of": "study",
+        "created in": "1629",
+        "fabrication method": "etched"
+    },
+    "Trumpeter on Horseback": {
+        "created by": "Jan Lievens",
+        "instance of": "drawings"
+    },
+    "Rembrandt": {
+        "has characteristic": [
+            "mouth",
+            "eyebrows",
+            "face"
+        ]
+    },
+    "cloak": {
+        "symbolizes": "military associations",
+        "has characteristic": "frogging"
+    },
+    "gaze": {
+        "symbolizes": "intensity"
+    },
+    "eyebrows": {
+        "has characteristic": "raised"
+    },
+    "frogging": {
+        "has characteristic": "down the front"
+    },
+    "shadow": {
+        "has characteristic": "deep"
+    }
+}

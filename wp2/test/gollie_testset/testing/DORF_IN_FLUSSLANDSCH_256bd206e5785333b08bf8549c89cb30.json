@@ -1,0 +1,103 @@
+{
+    "bank": {
+        "has characteristic": "green",
+        "contains": "tree plantations"
+    },
+    "child": {
+        "has characteristic": "walking"
+    },
+    "On the left": {
+        "contains": "couple"
+    },
+    "DORF IN FLUSSLANDSCHAFT MIT FIGURENSTAFFAGE UND BRUNNEN": {
+        "depicts": [
+            "path",
+            "boats",
+            "to the right",
+            "dog",
+            "sailing boat",
+            "farmhouse",
+            "man",
+            "church",
+            "couple",
+            "towards the shore",
+            "elevated viewpoint",
+            "surrounded"
+        ],
+        "has characteristic": "well"
+    },
+    "boats": {
+        "has characteristic": "two other"
+    },
+    "on the way up": {
+        "has characteristic": "man"
+    },
+    "well": {
+        "has characteristic": [
+            "stone",
+            "old"
+        ]
+    },
+    "couple": {
+        "has characteristic": "talking"
+    },
+    "sailing boat": {
+        "contains": "two figures",
+        "has characteristic": "small"
+    },
+    "to the right": {
+        "contains": "river"
+    },
+    "skies": {
+        "contains": "top",
+        "has characteristic": "yellowish-gray"
+    },
+    "tree plantations": {
+        "has characteristic": "rich"
+    },
+    "river": {
+        "has characteristic": "flowing"
+    },
+    "on the water": {
+        "contains": "sailing boat"
+    },
+    "To the left": {
+        "contains": "from the shore"
+    },
+    "towards the shore": {
+        "contains": [
+            "woman",
+            "child"
+        ]
+    },
+    "dog": {
+        "has characteristic": "black and white"
+    },
+    "woman": {
+        "has characteristic": "walking"
+    },
+    "farmhouse": {
+        "has characteristic": "old"
+    },
+    "up a hill": {
+        "contains": "path"
+    },
+    "church": {
+        "has characteristic": "top"
+    },
+    "surrounded": {
+        "contains": "bank"
+    },
+    "man": {
+        "has characteristic": "young"
+    },
+    "from the shore": {
+        "contains": "path"
+    },
+    "To the right": {
+        "contains": "farmhouse"
+    },
+    "on the shore": {
+        "contains": "boats"
+    }
+}

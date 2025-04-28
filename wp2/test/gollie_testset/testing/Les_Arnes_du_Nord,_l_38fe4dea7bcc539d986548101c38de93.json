@@ -1,0 +1,17 @@
+{
+    "Kirmes": {
+        "contains": [
+            "price-shooting",
+            "acrobats",
+            "belly dancer",
+            "wild mouse",
+            "horse-riding business"
+        ],
+        "symbolizes": "kermesse"
+    },
+    "Les Arènes du Nord, la kermesse": {
+        "created by": "Marcel Stobbaerts",
+        "depicts": "Kirmes",
+        "instance of": "painting"
+    }
+}

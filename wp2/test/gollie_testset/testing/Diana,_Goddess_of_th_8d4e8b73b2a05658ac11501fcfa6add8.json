@@ -1,0 +1,61 @@
+{
+    "ostrich": {
+        "has characteristic": "feathers"
+    },
+    "landscape": {
+        "contains": [
+            "wooded",
+            "hilly"
+        ]
+    },
+    "Diana, Goddess of the Hunt": {
+        "created in": "1686",
+        "influenced by": "Frans van Mieris the Elder",
+        "symbolizes": "Arcadian landscape",
+        "depicts": [
+            "ruins",
+            "window",
+            "landscape",
+            "mountain",
+            "woman"
+        ],
+        "created by": "Willem van Mieris"
+    },
+    "feathers": {
+        "has characteristic": [
+            "white",
+            "blue"
+        ]
+    },
+    "hair": {
+        "has characteristic": "feathers"
+    },
+    "woman": {
+        "has characteristic": [
+            "hair",
+            "scarf",
+            "robe"
+        ]
+    },
+    "robe": {
+        "has characteristic": [
+            "gold-colored",
+            "sash"
+        ]
+    },
+    "framing devices": {
+        "contains": "window"
+    },
+    "scarf": {
+        "has characteristic": "blue"
+    },
+    "mountain": {
+        "has characteristic": "distant"
+    },
+    "blue": {
+        "has characteristic": "shimmering"
+    },
+    "sash": {
+        "has characteristic": "red"
+    }
+}

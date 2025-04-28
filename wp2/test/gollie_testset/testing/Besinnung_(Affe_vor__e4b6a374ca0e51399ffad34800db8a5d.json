@@ -1,0 +1,34 @@
+{
+    "Besinnung (Affe vor blauem Grund)": {
+        "depicts": "background",
+        "symbolizes": [
+            "existence",
+            "humanity",
+            "visual proof of Darwin's theory of evolution",
+            "figure of existence"
+        ],
+        "created by": "Gabriel von Max",
+        "instance of": "paintings",
+        "influenced by": [
+            "Charles Darwin",
+            "Pain Forgotten"
+        ],
+        "has characteristic": [
+            "emotionally charged",
+            "monkey paintings"
+        ],
+        "contains": "monkey"
+    },
+    "gaze": {
+        "has characteristic": "gentle"
+    },
+    "monkey": {
+        "has characteristic": "gaze"
+    },
+    "in the distance": {
+        "has characteristic": "gaze"
+    },
+    "background": {
+        "has characteristic": "blue"
+    }
+}

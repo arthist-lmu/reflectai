@@ -1,0 +1,20 @@
+{
+    "window": {
+        "has characteristic": "open"
+    },
+    "pitcher": {
+        "has characteristic": "earthenware"
+    },
+    "pail": {
+        "contains": "herring"
+    },
+    "floor": {
+        "has characteristic": "earthenware"
+    },
+    "light": {
+        "has characteristic": "Illuminated"
+    },
+    "eyes": {
+        "has characteristic": "watchful"
+    }
+}

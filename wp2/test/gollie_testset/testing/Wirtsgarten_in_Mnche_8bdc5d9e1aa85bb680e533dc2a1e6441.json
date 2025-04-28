@@ -1,0 +1,42 @@
+{
+    "„Wirtsgarten in München“": {
+        "depicts": [
+            "scene",
+            "sunlight",
+            "Munich",
+            "under tall trees",
+            "gardens",
+            "Wirtsgarten"
+        ],
+        "has genre": "impressionist",
+        "created by": "Otto Pippel"
+    },
+    "Wirtsgarten": {
+        "has characteristic": "outdoor"
+    },
+    "trees": {
+        "has characteristic": [
+            "leaves",
+            "tall"
+        ]
+    },
+    "scene": {
+        "contains": "garden",
+        "has characteristic": "relaxed"
+    },
+    "under tall trees": {
+        "contains": "visitors"
+    },
+    "visitors": {
+        "has characteristic": "sit outside"
+    },
+    "Munich": {
+        "has characteristic": [
+            "city life",
+            "gardens"
+        ]
+    },
+    "garden": {
+        "has characteristic": "shady"
+    }
+}

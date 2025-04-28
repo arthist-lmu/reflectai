@@ -1,0 +1,53 @@
+{
+    "garments": {
+        "has characteristic": [
+            "surface",
+            "red"
+        ]
+    },
+    "SCHÖNHEIT IN ROTEM KLEID": {
+        "instance of": [
+            "chest portrait",
+            "small-format painting"
+        ],
+        "influenced by": [
+            "Correggio",
+            "Tiziano Vecellio"
+        ],
+        "created by": "Jean Jacques Henner",
+        "depicts": [
+            "garments",
+            "background",
+            "woman"
+        ],
+        "symbolizes": "sensuality"
+    },
+    "woman": {
+        "has characteristic": [
+            "young",
+            "dress"
+        ]
+    },
+    "background": {
+        "has characteristic": "dark",
+        "contains": "hair"
+    },
+    "surface": {
+        "has characteristic": "homogeneous color"
+    },
+    "dress": {
+        "has characteristic": [
+            "red",
+            "almost shoulderless"
+        ]
+    },
+    "hair": {
+        "has characteristic": "red"
+    },
+    "textile": {
+        "has characteristic": "red"
+    },
+    "red": {
+        "has characteristic": "pure"
+    }
+}

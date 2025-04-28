@@ -1,0 +1,23 @@
+{
+    "Kakiemon elephants": {
+        "created in": [
+            "1660",
+            "1690",
+            "17th century"
+        ],
+        "made from material": [
+            "enamelled",
+            "porcelain"
+        ],
+        "depicts": "elephants",
+        "instance of": "figures",
+        "has genre": "Kakiemon",
+        "created by": "Kakiemon potteries"
+    },
+    "porcelain": {
+        "instance of": "enamelled"
+    },
+    "figures": {
+        "instance of": "porcelain"
+    }
+}

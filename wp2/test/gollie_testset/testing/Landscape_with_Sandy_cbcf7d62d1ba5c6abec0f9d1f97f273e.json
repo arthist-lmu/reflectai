@@ -1,0 +1,59 @@
+{
+    "Landscape with Sandy Path beside a River": {
+        "depicts": [
+            "panoramas",
+            "many figures",
+            "in the distance",
+            "landscape",
+            "divided into two halves"
+        ],
+        "influenced by": [
+            "Jan Both",
+            "Jan Asselijn"
+        ],
+        "has characteristic": [
+            "cool palette",
+            "scene"
+        ],
+        "instance of": "painting",
+        "contains": "monogram",
+        "created in": "mid-1650s",
+        "created by": "Wouwerman"
+    },
+    "on the left": {
+        "contains": [
+            "sandy path",
+            "dune area"
+        ]
+    },
+    "scene": {
+        "has characteristic": "composed in the studio"
+    },
+    "many figures": {
+        "has characteristic": "scattered"
+    },
+    "on the right": {
+        "contains": "watery zone"
+    },
+    "panoramas": {
+        "has characteristic": "southern European look"
+    },
+    "watery zone": {
+        "contains": "rocks"
+    },
+    "divided into two halves": {
+        "contains": [
+            "on the left",
+            "on the right"
+        ]
+    },
+    "landscape": {
+        "has characteristic": "river scene"
+    },
+    "cool palette": {
+        "has characteristic": "grey and blue tints"
+    },
+    "in the distance": {
+        "contains": "hills"
+    }
+}

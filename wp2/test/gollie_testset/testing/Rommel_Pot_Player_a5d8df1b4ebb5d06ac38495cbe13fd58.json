@@ -1,0 +1,56 @@
+{
+    "hat": {
+        "has characteristic": [
+            "brim",
+            "wide-brimmed"
+        ]
+    },
+    "model": {
+        "has characteristic": [
+            "similar",
+            "bearded"
+        ]
+    },
+    "musical instrument": {
+        "has characteristic": "crude"
+    },
+    "shadows": {
+        "has characteristic": "subtle"
+    },
+    "face": {
+        "has characteristic": "wrinkled"
+    },
+    "clothing": {
+        "has characteristic": "tattered"
+    },
+    "man": {
+        "has characteristic": "old"
+    },
+    "festivities": {
+        "has characteristic": "joyful"
+    },
+    "beard": {
+        "has characteristic": "gray"
+    },
+    "depiction": {
+        "has characteristic": "lifelike"
+    },
+    "musician": {
+        "has characteristic": "old"
+    },
+    "patchwork": {
+        "has characteristic": "visible"
+    },
+    "half-length depictions": {
+        "has characteristic": "comparable"
+    },
+    "instrument": {
+        "has characteristic": "handmade"
+    },
+    "celebration": {
+        "has characteristic": "energetic"
+    },
+    "shoulder": {
+        "has characteristic": "left"
+    }
+}

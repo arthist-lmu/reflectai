@@ -1,0 +1,59 @@
+{
+    "groups of trees": {
+        "has characteristic": [
+            "blue",
+            "green"
+        ]
+    },
+    "grain": {
+        "has characteristic": [
+            "brown",
+            "white",
+            "oak",
+            "yellow"
+        ]
+    },
+    "in the foreground": {
+        "contains": "grain"
+    },
+    "in the front": {
+        "contains": "grain heaps"
+    },
+    "blue": {
+        "has characteristic": "pale"
+    },
+    "Getreideernte": {
+        "depicts": [
+            "in the front",
+            "five workers",
+            "harvest",
+            "divides the fields",
+            "in the foreground"
+        ],
+        "fabrication method": "targeted linearity",
+        "created in": "1930",
+        "created by": "Max Pechsteins"
+    },
+    "At the horizon": {
+        "contains": [
+            "groups of trees",
+            "sky"
+        ]
+    },
+    "divides the fields": {
+        "symbolizes": "spatial depth",
+        "contains": "individual stripes"
+    },
+    "harvest": {
+        "has characteristic": "grain"
+    },
+    "sky": {
+        "has characteristic": [
+            "blue",
+            "lightly curved"
+        ]
+    },
+    "grain heaps": {
+        "has characteristic": "interlocking"
+    }
+}

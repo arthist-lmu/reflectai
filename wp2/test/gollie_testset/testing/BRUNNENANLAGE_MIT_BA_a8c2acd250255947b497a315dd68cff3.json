@@ -1,0 +1,59 @@
+{
+    "In the foreground": {
+        "contains": "woman"
+    },
+    "cloak": {
+        "has characteristic": "red"
+    },
+    "woman": {
+        "has characteristic": [
+            "young",
+            "cloth",
+            "sitting"
+        ]
+    },
+    "In the trees above the well": {
+        "contains": "parrot",
+        "depicts": "birds"
+    },
+    "In front of her": {
+        "contains": [
+            "vase",
+            "mirror",
+            "shoes"
+        ]
+    },
+    "lady": {
+        "has characteristic": "cloak"
+    },
+    "dog": {
+        "has characteristic": [
+            "sitting",
+            "little"
+        ]
+    },
+    "beside her": {
+        "contains": "dog"
+    },
+    "At the edge": {
+        "contains": [
+            "pool",
+            "in the middle"
+        ]
+    },
+    "BRUNNENANLAGE MIT BADENDEN FRAUEN": {
+        "depicts": [
+            "In the trees above the well",
+            "At the edge",
+            "In front of her",
+            "In the foreground"
+        ],
+        "instance of": "sculpture"
+    },
+    "vase": {
+        "has characteristic": "glass"
+    },
+    "shoes": {
+        "has characteristic": "red"
+    }
+}

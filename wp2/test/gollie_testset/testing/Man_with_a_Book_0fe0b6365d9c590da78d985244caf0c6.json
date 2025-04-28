@@ -1,0 +1,98 @@
+{
+    "interior": {
+        "contains": [
+            "at a table",
+            "elegantly dressed"
+        ],
+        "has characteristic": [
+            "bare",
+            "darkened"
+        ]
+    },
+    "beret": {
+        "has characteristic": [
+            "black",
+            "plush"
+        ]
+    },
+    "costume": {
+        "has characteristic": "historicizing"
+    },
+    "hair": {
+        "has characteristic": [
+            "long",
+            "beret",
+            "soft"
+        ]
+    },
+    "book": {
+        "has characteristic": [
+            "open",
+            "pages"
+        ]
+    },
+    "Man with a Book": {
+        "has characteristic": "intellectual contemplation",
+        "fabrication method": "careful contrasts of light and dark",
+        "depicts": [
+            "interior",
+            "man",
+            "tabard",
+            "background"
+        ],
+        "symbolizes": "scholar in his study",
+        "created by": "Bol",
+        "created in": "seventeenth century"
+    },
+    "background": {
+        "has characteristic": [
+            "deep",
+            "brown"
+        ]
+    },
+    "at a table": {
+        "contains": [
+            "book",
+            "man"
+        ]
+    },
+    "sleeve": {
+        "has characteristic": "right"
+    },
+    "between his fingers": {
+        "has characteristic": "cord"
+    },
+    "hand": {
+        "has characteristic": [
+            "left",
+            "rests"
+        ]
+    },
+    "wall": {
+        "has characteristic": "back"
+    },
+    "left side": {
+        "symbolizes": "shadow",
+        "has characteristic": "face"
+    },
+    "tabard": {
+        "has characteristic": [
+            "fur trimmed",
+            "sleeve",
+            "buttons"
+        ]
+    },
+    "face": {
+        "has characteristic": "slightly blushed"
+    },
+    "collar": {
+        "has characteristic": "cord"
+    },
+    "man": {
+        "has characteristic": [
+            "sits",
+            "elegantly dressed",
+            "features"
+        ]
+    }
+}

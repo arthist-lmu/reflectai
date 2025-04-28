@@ -1,0 +1,63 @@
+{
+    "Der sogenannte Verzweifelnde": {
+        "depicts": [
+            "half-figure",
+            "figures",
+            "in front of",
+            "lighting",
+            "scales",
+            "border",
+            "figure"
+        ],
+        "instance of": [
+            "study paper",
+            "print"
+        ],
+        "created in": [
+            "1518",
+            "1515"
+        ],
+        "created by": "Dürer",
+        "fabrication method": "etching"
+    },
+    "on the left": {
+        "contains": "half-figure"
+    },
+    "lighting": {
+        "has characteristic": "uneven"
+    },
+    "half-figure": {
+        "has characteristic": [
+            "in the profile",
+            "male"
+        ]
+    },
+    "figure": {
+        "has characteristic": [
+            "nude",
+            "resting",
+            "female"
+        ]
+    },
+    "scales": {
+        "has characteristic": "Divergent"
+    },
+    "nymph": {
+        "has characteristic": "sleeping"
+    },
+    "in front of": {
+        "contains": [
+            "landscape",
+            "figures"
+        ]
+    },
+    "landscape": {
+        "has characteristic": "rocky"
+    },
+    "figures": {
+        "has characteristic": "five"
+    },
+    "border": {
+        "has characteristic": "narrow"
+    }
+}

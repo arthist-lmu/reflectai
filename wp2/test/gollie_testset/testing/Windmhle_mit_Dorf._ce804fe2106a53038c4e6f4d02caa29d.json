@@ -1,0 +1,23 @@
+{
+    "sky": {
+        "contains": [
+            "horizontal stripes",
+            "diagonal"
+        ]
+    },
+    "Windmühle mit Dorf": {
+        "created by": "Feininger",
+        "instance of": "drawing"
+    },
+    "landscape": {
+        "contains": "Baltic Sea",
+        "has characteristic": "open"
+    },
+    "mill wing": {
+        "has characteristic": "diagonal",
+        "symbolizes": "rotation"
+    },
+    "windmill": {
+        "symbolizes": "symbol of outdated technology"
+    }
+}

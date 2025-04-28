@@ -1,0 +1,99 @@
+{
+    "silk bodice": {
+        "has characteristic": [
+            "trimming",
+            "agraphs",
+            "silver",
+            "collars"
+        ]
+    },
+    "trimming": {
+        "has characteristic": "lace"
+    },
+    "PORTRAIT EINER DAME": {
+        "depicts": [
+            "supported",
+            "at the table",
+            "on the right",
+            "gaze",
+            "holds",
+            "armchair"
+        ],
+        "created by": "Johann Heinrich Tischbein the Elder",
+        "contains": [
+            "column",
+            "lady"
+        ],
+        "made from material": "Oil on canvas, relined"
+    },
+    "in the armchair": {
+        "contains": "lady"
+    },
+    "supported": {
+        "contains": [
+            "elbow",
+            "pillow"
+        ]
+    },
+    "placed": {
+        "contains": [
+            "index finger",
+            "booklet"
+        ]
+    },
+    "on her lap": {
+        "contains": "booklet"
+    },
+    "on the right": {
+        "contains": [
+            "velum",
+            "column"
+        ]
+    },
+    "elbow": {
+        "has characteristic": "left"
+    },
+    "holds": {
+        "contains": [
+            "booklet",
+            "hand"
+        ]
+    },
+    "velum": {
+        "has characteristic": "green"
+    },
+    "dress": {
+        "has characteristic": "red"
+    },
+    "lady": {
+        "has characteristic": [
+            "silk bodice",
+            "dress",
+            "reading"
+        ]
+    },
+    "at the table": {
+        "contains": "lady"
+    },
+    "brocade edges": {
+        "has characteristic": "gold"
+    },
+    "pillow": {
+        "has characteristic": [
+            "green",
+            "brocade edges"
+        ]
+    },
+    "hand": {
+        "has characteristic": "right"
+    },
+    "Three-quarters image": {
+        "contains": "lady"
+    },
+    "collars": {
+        "has characteristic": "lace"
+    },
+    "column": {
+        "has characteristic": "round"
+    }
+}

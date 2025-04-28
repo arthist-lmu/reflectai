@@ -1,0 +1,48 @@
+{
+    "Madonna mit der Nelke": {
+        "fabrication method": "consistent use of light and dark",
+        "symbolizes": [
+            "death",
+            "love"
+        ],
+        "contains": [
+            "child",
+            "mother"
+        ],
+        "has characteristic": [
+            "vitality",
+            "emotion"
+        ],
+        "instance of": "painting",
+        "influenced by": "Andrea del Verrocchio",
+        "depicts": "clove",
+        "created by": "Leonardo da Vinci"
+    },
+    "clove": {
+        "symbolizes": [
+            "death",
+            "love"
+        ]
+    },
+    "seizes": {
+        "has characteristic": "clove"
+    },
+    "Leonardo da Vinci": {
+        "influenced by": "Andrea del Verrocchio"
+    },
+    "gestures": {
+        "has characteristic": "concentrated"
+    },
+    "emotion": {
+        "has characteristic": "deep"
+    },
+    "Christ child": {
+        "has characteristic": "seizes"
+    },
+    "love": {
+        "has characteristic": "divine"
+    },
+    "death": {
+        "has characteristic": "sacrificial"
+    }
+}

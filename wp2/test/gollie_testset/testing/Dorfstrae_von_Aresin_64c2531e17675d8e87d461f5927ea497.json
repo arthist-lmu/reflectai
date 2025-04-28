@@ -1,0 +1,28 @@
+{
+    "Dorfstraße von Aresing": {
+        "created in": "1856",
+        "symbolizes": "paysage intime",
+        "created by": "Franz Lenbach's",
+        "depicts": [
+            "outdoor light",
+            "in the foreground",
+            "Aresing"
+        ],
+        "instance of": "landscape painting"
+    },
+    "farmer's": {
+        "has characteristic": "shadow"
+    },
+    "village street": {
+        "symbolizes": "Aresing"
+    },
+    "paysage intime": {
+        "has characteristic": "outdoor light"
+    },
+    "in the foreground": {
+        "contains": "farmer's"
+    },
+    "shadow": {
+        "has characteristic": "short"
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "B-B Town": {
+        "created by": "Feininger",
+        "depicts": [
+            "sky",
+            "star",
+            "landscape"
+        ],
+        "instance of": "painting",
+        "created in": "1946"
+    },
+    "blue": {
+        "has characteristic": "deep"
+    },
+    "star": {
+        "has characteristic": [
+            "single",
+            "bright"
+        ]
+    },
+    "landscape": {
+        "has characteristic": [
+            "nightly",
+            "urban"
+        ]
+    },
+    "sky": {
+        "has characteristic": [
+            "illuminated",
+            "blue"
+        ]
+    },
+    "illuminated": {
+        "contains": "star"
+    }
+}

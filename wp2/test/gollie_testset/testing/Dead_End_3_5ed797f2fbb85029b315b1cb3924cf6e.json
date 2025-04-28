@@ -1,0 +1,35 @@
+{
+    "coloured inks": {
+        "has characteristic": "different"
+    },
+    "effects": {
+        "symbolizes": "metal"
+    },
+    "Dead End 3": {
+        "symbolizes": [
+            "warning notices",
+            "sales promotions"
+        ],
+        "created in": [
+            "2015",
+            "2011"
+        ],
+        "depicts": "coloured inks",
+        "fabrication method": "mixografia",
+        "instance of": [
+            "prints",
+            "paper"
+        ],
+        "created by": "Ed Ruscha"
+    },
+    "warning notices": {
+        "has characteristic": "dilapidated"
+    },
+    "metal": {
+        "symbolizes": [
+            "warning notices",
+            "sales promotions"
+        ],
+        "has characteristic": "weathered"
+    }
+}

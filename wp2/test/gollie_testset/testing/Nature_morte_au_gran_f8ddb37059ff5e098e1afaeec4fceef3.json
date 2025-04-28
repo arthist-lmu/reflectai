@@ -1,0 +1,29 @@
+{
+    "fabric": {
+        "has characteristic": "draped"
+    },
+    "surface": {
+        "has characteristic": "two-dimensional"
+    },
+    "light source": {
+        "has characteristic": "lack of a clearly identifiable"
+    },
+    "colour": {
+        "has characteristic": "individual"
+    },
+    "ceramic tile": {
+        "has characteristic": "colourful"
+    },
+    "surfaces": {
+        "has characteristic": "colour"
+    },
+    "lighting": {
+        "has characteristic": "uniform but not illusory"
+    },
+    "ornamental": {
+        "has characteristic": "fabric"
+    },
+    "patterning": {
+        "has characteristic": "independent"
+    }
+}

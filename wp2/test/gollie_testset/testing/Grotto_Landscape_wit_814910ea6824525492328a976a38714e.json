@@ -1,0 +1,30 @@
+{
+    "Grotto Landscape with a Hermitage": {
+        "contains": [
+            "various animals",
+            "several pilgrims",
+            "hermit"
+        ],
+        "created in": "around 1625",
+        "created by": [
+            "Joos de Momper",
+            "Jan Brueghel the Younger"
+        ],
+        "depicts": "grotto",
+        "made from material": "oil on canvas",
+        "instance of": "painting"
+    },
+    "various animals": {
+        "contains": [
+            "birds",
+            "dogs"
+        ]
+    },
+    "grotto": {
+        "has characteristic": "monumental",
+        "contains": "hermit"
+    },
+    "hermit": {
+        "has characteristic": "reading"
+    }
+}

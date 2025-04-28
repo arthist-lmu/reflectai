@@ -1,0 +1,26 @@
+{
+    "Bibles": {
+        "has characteristic": [
+            "red",
+            "Mao"
+        ]
+    },
+    "hands": {
+        "has characteristic": "Bibles"
+    },
+    "figures": {
+        "has characteristic": "hands"
+    },
+    "„Kartoffelzähler“": {
+        "symbolizes": "dualism of mass and individual",
+        "instance of": "motif",
+        "contains": [
+            "Chinese workers",
+            "Bibles"
+        ],
+        "created by": "Thomas Bayrle"
+    },
+    "Chinese workers": {
+        "has characteristic": "multiply"
+    }
+}

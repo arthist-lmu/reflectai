@@ -1,0 +1,53 @@
+{
+    "Eisacklandschaft (Klausen).": {
+        "created in": "1911",
+        "instance of": "painting",
+        "depicts": [
+            "trees",
+            "town",
+            "structure",
+            "Saber Klosterberg",
+            "valley",
+            "Klausen in South Tyrol",
+            "sky",
+            "mountainous landscape"
+        ],
+        "fabrication method": "wide brush strokes",
+        "created by": "Kanoldt"
+    },
+    "upper half of the image": {
+        "contains": "area"
+    },
+    "structure": {
+        "has characteristic": [
+            "shapes",
+            "monumental"
+        ]
+    },
+    "trees": {
+        "has characteristic": "mighty"
+    },
+    "surround them on three sides": {
+        "contains": [
+            "buildings",
+            "trees"
+        ]
+    },
+    "area": {
+        "has characteristic": "small",
+        "symbolizes": "sky"
+    },
+    "buildings": {
+        "symbolizes": "Saber Klosterberg",
+        "has characteristic": "raised"
+    },
+    "town": {
+        "has characteristic": "medieval"
+    },
+    "center of the picture": {
+        "contains": "buildings"
+    },
+    "shapes": {
+        "has characteristic": "simplified, almost cubic"
+    }
+}

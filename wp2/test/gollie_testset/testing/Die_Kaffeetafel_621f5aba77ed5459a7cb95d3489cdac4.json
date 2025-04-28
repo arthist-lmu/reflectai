@@ -1,0 +1,18 @@
+{
+    "coffee table": {
+        "has characteristic": "outdoor"
+    },
+    "colors": {
+        "has characteristic": "shine"
+    },
+    "Die Kaffeetafel": {
+        "instance of": "painting",
+        "created by": "Franck",
+        "depicts": "coffee table",
+        "has characteristic": [
+            "colors",
+            "lighting"
+        ],
+        "influenced by": "French Impressionists"
+    }
+}

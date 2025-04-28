@@ -1,0 +1,39 @@
+{
+    "costumes": {
+        "has characteristic": "fanciful"
+    },
+    "garment": {
+        "has characteristic": "brown"
+    },
+    "models": {
+        "has characteristic": [
+            "living",
+            "young",
+            "old"
+        ]
+    },
+    "beard": {
+        "has characteristic": "white"
+    },
+    "mouth": {
+        "has characteristic": "opened"
+    },
+    "man": {
+        "has characteristic": [
+            "old",
+            "bearded"
+        ]
+    },
+    "facial expressions": {
+        "has characteristic": "lively"
+    },
+    "eyebrows": {
+        "has characteristic": "raised"
+    },
+    "hat": {
+        "has characteristic": "soft"
+    },
+    "figure": {
+        "has characteristic": "bust-length"
+    }
+}

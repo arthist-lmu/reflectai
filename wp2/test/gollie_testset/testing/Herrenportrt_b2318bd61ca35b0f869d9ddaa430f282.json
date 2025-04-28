@@ -1,0 +1,20 @@
+{
+    "subject": {
+        "has characteristic": "character"
+    },
+    "look": {
+        "has characteristic": "lateral"
+    },
+    "man": {
+        "has characteristic": "young"
+    },
+    "posture": {
+        "has characteristic": "rigid"
+    },
+    "person": {
+        "has characteristic": "identity"
+    },
+    "landscape": {
+        "has characteristic": "lit"
+    }
+}

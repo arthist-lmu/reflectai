@@ -1,0 +1,37 @@
+{
+    "in the middle": {
+        "contains": "figure"
+    },
+    "figure": {
+        "has characteristic": [
+            "on the head",
+            "standing on his head"
+        ]
+    },
+    "background": {
+        "has characteristic": [
+            "red",
+            "multi-layered"
+        ]
+    },
+    "blue": {
+        "has characteristic": "deep"
+    },
+    "Cebe": {
+        "created by": "Georg Baselitz",
+        "depicts": [
+            "lines and dots",
+            "background",
+            "in the middle"
+        ],
+        "fabrication method": "pasto-like linear and doted finish",
+        "instance of": "painting",
+        "created in": "1990s"
+    },
+    "lines and dots": {
+        "has characteristic": [
+            "blue",
+            "pastose"
+        ]
+    }
+}

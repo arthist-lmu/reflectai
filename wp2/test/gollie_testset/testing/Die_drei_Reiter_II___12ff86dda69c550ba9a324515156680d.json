@@ -1,0 +1,35 @@
+{
+    "horse": {
+        "has characteristic": [
+            "heavy",
+            "brown"
+        ]
+    },
+    "fur": {
+        "has characteristic": "shiny"
+    },
+    "pace": {
+        "has characteristic": "slow"
+    },
+    "discharge": {
+        "has characteristic": "intense"
+    },
+    "movement": {
+        "has characteristic": "gentle"
+    },
+    "closure": {
+        "has characteristic": "Left-wing"
+    },
+    "blue": {
+        "has characteristic": [
+            "metallic",
+            "bright"
+        ]
+    },
+    "breast": {
+        "has characteristic": "white"
+    },
+    "force": {
+        "has characteristic": "accumulated"
+    }
+}

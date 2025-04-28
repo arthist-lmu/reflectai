@@ -1,0 +1,41 @@
+{
+    "palette": {
+        "has characteristic": [
+            "red",
+            "black",
+            "yellow",
+            "green",
+            "white"
+        ]
+    },
+    "Composition with Two Ovals": {
+        "depicts": [
+            "palette",
+            "forms",
+            "centre"
+        ],
+        "instance of": "painting",
+        "fabrication method": [
+            "primary colours",
+            "system of bold geometric forms",
+            "curved, closed forms, geometry of line, repetition of modules and formally tight compositions"
+        ],
+        "has genre": "abstract",
+        "created in": "1951",
+        "created by": "Choucair",
+        "made from material": "canvas"
+    },
+    "forms": {
+        "has characteristic": [
+            "disappear",
+            "ovoid"
+        ],
+        "symbolizes": "motion"
+    },
+    "centre": {
+        "has characteristic": "void"
+    },
+    "void": {
+        "has characteristic": "dark"
+    }
+}

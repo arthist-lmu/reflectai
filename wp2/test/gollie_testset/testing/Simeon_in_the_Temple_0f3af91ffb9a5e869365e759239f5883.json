@@ -1,0 +1,150 @@
+{
+    "Simeon in the Temple": {
+        "contains": [
+            "group of five scribes",
+            "prophetess Anna",
+            "boy",
+            "Mary",
+            "Simeon",
+            "three men",
+            "infant Jesus",
+            "Joseph"
+        ],
+        "created by": "Gerbrand van den Eeckhout",
+        "depicts": [
+            "platform",
+            "doves",
+            "books",
+            "table",
+            "temple"
+        ]
+    },
+    "Joseph": {
+        "has characteristic": [
+            "Kneeling",
+            "holding"
+        ]
+    },
+    "At the far right": {
+        "contains": "group of five scribes"
+    },
+    "two scribes": {
+        "has characteristic": "turn toward"
+    },
+    "turn toward": {
+        "has characteristic": "Simeon"
+    },
+    "Simeon": {
+        "has characteristic": [
+            "in his arms",
+            "kneeling",
+            "bearded"
+        ]
+    },
+    "holding": {
+        "contains": "doves",
+        "has characteristic": "hand"
+    },
+    "table": {
+        "contains": "books"
+    },
+    "books": {
+        "has characteristic": [
+            "open",
+            "number of"
+        ]
+    },
+    "gathered around": {
+        "contains": [
+            "table",
+            "group of five scribes"
+        ]
+    },
+    "boy": {
+        "has characteristic": [
+            "holds",
+            "red"
+        ]
+    },
+    "platform": {
+        "contains": "chair",
+        "has characteristic": "raised wooden"
+    },
+    "on the left": {
+        "contains": "two scribes"
+    },
+    "three men": {
+        "has characteristic": [
+            "stand",
+            "attire"
+        ]
+    },
+    "temple": {
+        "contains": [
+            "Simeon",
+            "platform"
+        ]
+    },
+    "hand": {
+        "has characteristic": [
+            "left",
+            "right"
+        ]
+    },
+    "holds": {
+        "contains": [
+            "staff",
+            "hand"
+        ]
+    },
+    "across from": {
+        "has characteristic": "Simeon",
+        "contains": [
+            "Mary",
+            "at the edge",
+            "Joseph"
+        ]
+    },
+    "prophetess Anna": {
+        "has characteristic": [
+            "approaches",
+            "hands"
+        ]
+    },
+    "Behind them": {
+        "contains": "prophetess Anna"
+    },
+    "Mary": {
+        "has characteristic": "Kneeling"
+    },
+    "attire": {
+        "has characteristic": "oriental"
+    },
+    "folded": {
+        "symbolizes": "prayer"
+    },
+    "Behind him": {
+        "contains": "three men"
+    },
+    "hands": {
+        "has characteristic": "folded"
+    },
+    "at the edge": {
+        "contains": [
+            "platform",
+            "Kneeling"
+        ]
+    },
+    "in his arms": {
+        "contains": "infant Jesus"
+    },
+    "doves": {
+        "has characteristic": "two sacrificial"
+    },
+    "next to a chair": {
+        "contains": "Simeon"
+    },
+    "Gazing heavenward": {
+        "symbolizes": "song of praise"
+    }
+}

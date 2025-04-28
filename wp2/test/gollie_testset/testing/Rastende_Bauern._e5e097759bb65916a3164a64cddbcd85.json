@@ -1,0 +1,57 @@
+{
+    "peasants": {
+        "has characteristic": [
+            "resting",
+            "smoking",
+            "blowing pipes"
+        ]
+    },
+    "two farmers": {
+        "has characteristic": "bodies"
+    },
+    "on the left": {
+        "contains": "two farmers"
+    },
+    "Rastende Bauern": {
+        "depicts": [
+            "on the right",
+            "four farmers",
+            "peasants",
+            "underground",
+            "on the left",
+            "angular shapes"
+        ],
+        "created in": [
+            "1921",
+            "1923"
+        ],
+        "created by": "Kirchner"
+    },
+    "underground": {
+        "has characteristic": "blue"
+    },
+    "bodies": {
+        "has characteristic": "white"
+    },
+    "angular shapes": {
+        "contains": [
+            "elbows",
+            "knees"
+        ]
+    },
+    "counterparts": {
+        "has characteristic": "green"
+    },
+    "farmer": {
+        "has characteristic": "lying down"
+    },
+    "blue": {
+        "has characteristic": "deep"
+    },
+    "on the right": {
+        "contains": "counterparts"
+    },
+    "to the left": {
+        "contains": "four farmers"
+    }
+}

@@ -1,0 +1,78 @@
+{
+    "Two cars": {
+        "has characteristic": [
+            "black",
+            "pale"
+        ]
+    },
+    "Enco – Conway, Texas": {
+        "depicts": [
+            "form",
+            "stand next to the automobiles",
+            "on the façade of the building",
+            "seen from across a road",
+            "protrudes into the frame from the photograph’s upper edge",
+            "signs and advertisements",
+            "parked in front of the station",
+            "sign",
+            "Two cars",
+            "gasoline station",
+            "utility pole"
+        ],
+        "instance of": [
+            "black and white photograph",
+            "Five Views"
+        ],
+        "created by": "Ed Ruscha",
+        "created in": "1962, printed 2007",
+        "contains": "Ruscha"
+    },
+    "form": {
+        "symbolizes": "visor or wind-deflector",
+        "has characteristic": "blurred"
+    },
+    "car": {
+        "contains": "Ruscha",
+        "has characteristic": "window"
+    },
+    "stand next to the automobiles": {
+        "contains": [
+            "utility pole",
+            "sign"
+        ]
+    },
+    "protrudes into the frame from the photograph’s upper edge": {
+        "contains": "form"
+    },
+    "parked in front of the station": {
+        "contains": "Two cars"
+    },
+    "on the façade of the building": {
+        "contains": "signs and advertisements"
+    },
+    "Ruscha": {
+        "has characteristic": "sat in"
+    },
+    "partially block the view of the building": {
+        "has characteristic": "Two cars"
+    },
+    "sign": {
+        "contains": "company name: Enco",
+        "has characteristic": "large circular"
+    },
+    "station": {
+        "symbolizes": "company name: Enco"
+    },
+    "seen from across a road": {
+        "contains": "gasoline station"
+    },
+    "on the window of a car": {
+        "contains": "visor or wind-deflector"
+    },
+    "Five Views": {
+        "instance of": "Panhandle Series"
+    },
+    "signs and advertisements": {
+        "has characteristic": "Smaller"
+    }
+}

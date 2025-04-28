@@ -1,0 +1,56 @@
+{
+    "napkin": {
+        "has characteristic": "white"
+    },
+    "Still Life": {
+        "depicts": [
+            "crab",
+            "glasses",
+            "roses",
+            "tazza",
+            "niche",
+            "porcelain bowl set",
+            "fruit",
+            "Buckelpokal",
+            "dishes",
+            "napkin"
+        ],
+        "has characteristic": "diagonal lines",
+        "created by": "Van Beyeren",
+        "influenced by": "by Jan Davidsz de Heem",
+        "created in": "1650s"
+    },
+    "niche": {
+        "contains": "glasses"
+    },
+    "Buckelpokal": {
+        "has characteristic": [
+            "golden",
+            "on top"
+        ]
+    },
+    "dishes": {
+        "has characteristic": "silver"
+    },
+    "tazza": {
+        "has characteristic": "turned on its side"
+    },
+    "wicker basket": {
+        "contains": "porcelain bowl set"
+    },
+    "glasses": {
+        "has characteristic": "façon de Venise"
+    },
+    "on top": {
+        "contains": "figure"
+    },
+    "in the background": {
+        "contains": "niche"
+    },
+    "diagonal lines": {
+        "has characteristic": "dramatic"
+    },
+    "figure": {
+        "has characteristic": "armed"
+    }
+}

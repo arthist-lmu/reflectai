@@ -1,0 +1,51 @@
+{
+    "hand": {
+        "has characteristic": [
+            "clinges",
+            "left"
+        ]
+    },
+    "Ophelia": {
+        "has characteristic": [
+            "dying",
+            "floating",
+            "clinges",
+            "drowns herself.",
+            "insane"
+        ]
+    },
+    "Der Tod der Ophelia": {
+        "depicts": [
+            "woodland",
+            "water"
+        ],
+        "contains": "Ophelia",
+        "created by": "Delacroix",
+        "symbolizes": "death"
+    },
+    "woodland": {
+        "has characteristic": [
+            "green",
+            "brown",
+            "lit"
+        ]
+    },
+    "water": {
+        "contains": [
+            "floating",
+            "Ophelia"
+        ]
+    },
+    "lit": {
+        "has characteristic": "mysteriously"
+    },
+    "green": {
+        "has characteristic": "dark"
+    },
+    "hair": {
+        "has characteristic": "loose"
+    },
+    "garment": {
+        "has characteristic": "wrinkles"
+    }
+}

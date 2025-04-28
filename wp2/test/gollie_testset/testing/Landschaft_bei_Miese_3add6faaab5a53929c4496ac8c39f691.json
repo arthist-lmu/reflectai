@@ -1,0 +1,14 @@
+{
+    "Landschaft bei Miesenbach": {
+        "created by": "Gauermann",
+        "instance of": "landscape painting",
+        "influenced by": "Jakob Gauermann",
+        "depicts": [
+            "landscape",
+            "Miesenbach"
+        ]
+    },
+    "landscape": {
+        "has characteristic": "dethimized"
+    }
+}

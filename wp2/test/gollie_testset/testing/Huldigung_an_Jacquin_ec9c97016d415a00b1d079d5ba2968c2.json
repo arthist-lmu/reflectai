@@ -1,0 +1,39 @@
+{
+    "Huldigung an Jacquin (\"Jacquins Denkmal\")": {
+        "influenced by": [
+            "Nicholas Joseph von Jacquin",
+            "Carl von Linné"
+        ],
+        "created by": "Knapp",
+        "depicts": [
+            "plants",
+            "urn",
+            "monkey",
+            "cockatoo",
+            "diversity of the plant kingdom"
+        ],
+        "instance of": "picture"
+    },
+    "plants": {
+        "symbolizes": [
+            "Linnaea borealis",
+            "Jacquinia mucronata"
+        ]
+    },
+    "cockatoo": {
+        "has characteristic": "learned"
+    },
+    "base of the bust": {
+        "has characteristic": "swallowed up",
+        "depicts": "Nicholas Joseph von Jacquin"
+    },
+    "swallowed up": {
+        "contains": "plants"
+    },
+    "urn": {
+        "symbolizes": "Carl von Linné"
+    },
+    "monkey": {
+        "has characteristic": "unskilled"
+    }
+}

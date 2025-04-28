@@ -1,0 +1,69 @@
+{
+    "women": {
+        "has characteristic": "jars"
+    },
+    "Aussicht von Ariccia gegen das Meer": {
+        "created by": "Catel",
+        "depicts": [
+            "mountains",
+            "foreground",
+            "In the distance",
+            "skies",
+            "landscape",
+            "in the background",
+            "town of Ariccia",
+            "To the left"
+        ],
+        "influenced by": "painted studies in the open air",
+        "instance of": "painting"
+    },
+    "church": {
+        "has characteristic": [
+            "Bernini's",
+            "town of Ariccia"
+        ]
+    },
+    "To the left": {
+        "contains": [
+            "women",
+            "well"
+        ]
+    },
+    "Pontine marshes": {
+        "has characteristic": "plain"
+    },
+    "town of Ariccia": {
+        "has characteristic": "small"
+    },
+    "Via Appia": {
+        "contains": "group of peasants"
+    },
+    "foreground": {
+        "has characteristic": "shadowy"
+    },
+    "In the distance": {
+        "contains": [
+            "Pontine marshes",
+            "Monte Circeo",
+            "Ponza Islands in the Tyrrhenian Sea"
+        ]
+    },
+    "in the background": {
+        "contains": "coast and sea"
+    },
+    "landscape": {
+        "contains": "group of peasants"
+    },
+    "mountains": {
+        "has characteristic": "forest"
+    },
+    "On the right": {
+        "contains": "town of Ariccia"
+    },
+    "skies": {
+        "has characteristic": "lit"
+    },
+    "Maria dell'Assunzione": {
+        "has characteristic": "church"
+    }
+}

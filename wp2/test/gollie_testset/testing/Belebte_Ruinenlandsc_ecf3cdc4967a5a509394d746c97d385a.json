@@ -1,0 +1,120 @@
+{
+    "ruins": {
+        "has characteristic": [
+            "large",
+            "sky-high"
+        ]
+    },
+    "on the right side": {
+        "has characteristic": [
+            "cloud formations",
+            "light"
+        ]
+    },
+    "sky": {
+        "has characteristic": [
+            "cloud formations",
+            "high",
+            "blue"
+        ]
+    },
+    "ruin": {
+        "has characteristic": [
+            "large",
+            "aisles",
+            "windows"
+        ]
+    },
+    "In front": {
+        "contains": [
+            "ruin",
+            "variety of figures"
+        ]
+    },
+    "man": {
+        "has characteristic": [
+            "looking back",
+            "horse",
+            "bow",
+            "standard"
+        ]
+    },
+    "men": {
+        "has characteristic": [
+            "several",
+            "conversation",
+            "turbans"
+        ]
+    },
+    "figures": {
+        "has characteristic": "colourful"
+    },
+    "Belebte Ruinenlandschaft am Meeresufer": {
+        "depicts": [
+            "On the left bank",
+            "sky",
+            "ruin",
+            "In the foreground on the right",
+            "In front"
+        ],
+        "contains": [
+            "man",
+            "variety of figures"
+        ],
+        "instance of": "painting",
+        "fabrication method": "small-figure staffing"
+    },
+    "windows": {
+        "has characteristic": [
+            "arched",
+            "round"
+        ]
+    },
+    "variety of figures": {
+        "has characteristic": "clothing",
+        "contains": "men"
+    },
+    "sun": {
+        "has characteristic": "setting",
+        "symbolizes": "light"
+    },
+    "groups of figures": {
+        "has characteristic": [
+            "numerous",
+            "surrounded"
+        ]
+    },
+    "standard": {
+        "has characteristic": "sky-high"
+    },
+    "On the left bank": {
+        "contains": [
+            "man",
+            "groups of figures"
+        ]
+    },
+    "cloud formations": {
+        "has characteristic": "numerous"
+    },
+    "aisles": {
+        "has characteristic": "numerous"
+    },
+    "light": {
+        "has characteristic": "reddish-brown"
+    },
+    "clothing": {
+        "has characteristic": "colourful"
+    },
+    "In the foreground on the right": {
+        "contains": [
+            "two tents",
+            "mothers",
+            "men",
+            "children"
+        ]
+    },
+    "river": {
+        "has characteristic": "bank",
+        "contains": "ship"
+    }
+}

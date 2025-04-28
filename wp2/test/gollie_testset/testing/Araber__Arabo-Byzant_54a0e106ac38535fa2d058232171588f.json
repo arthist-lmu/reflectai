@@ -1,0 +1,44 @@
+{
+    "In the back": {
+        "contains": [
+            "between the thighs of the M",
+            "value mark M",
+            "Left",
+            "above"
+        ]
+    },
+    "between the thighs of the M": {
+        "contains": "letters CI"
+    },
+    "Araber: Arabo-Byzantiner": {
+        "depicts": [
+            "Byzantine emperor",
+            "In the back",
+            "Front page"
+        ],
+        "made from material": "coins",
+        "influenced by": "Byzantine"
+    },
+    "Front page": {
+        "contains": "Byzantine emperor"
+    },
+    "above": {
+        "contains": "cross"
+    },
+    "Byzantine emperor": {
+        "has characteristic": [
+            "diadem",
+            "Standing",
+            "in his left hand"
+        ]
+    },
+    "Left": {
+        "contains": "ANO"
+    },
+    "right": {
+        "contains": "X/Γ/II"
+    },
+    "in his left hand": {
+        "has characteristic": "staff cross"
+    }
+}

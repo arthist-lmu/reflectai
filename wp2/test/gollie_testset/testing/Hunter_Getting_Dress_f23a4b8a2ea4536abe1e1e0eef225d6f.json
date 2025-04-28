@@ -1,0 +1,67 @@
+{
+    "walking along": {
+        "contains": [
+            "road",
+            "bridge",
+            "couple"
+        ]
+    },
+    "Hunter Getting Dressed after Bathing": {
+        "has genre": "Dutch art",
+        "instance of": "paintings",
+        "depicts": [
+            "dog",
+            "tree branch",
+            "Gabriel Metsu",
+            "couple",
+            "figures",
+            "bather",
+            "powder horn",
+            "hare",
+            "water",
+            "rifle"
+        ],
+        "created by": "Gabriel Metsu"
+    },
+    "on the ground": {
+        "contains": [
+            "powder horn",
+            "rifle"
+        ]
+    },
+    "bather": {
+        "depicts": "putting on",
+        "has characteristic": [
+            "smiles at",
+            "seated nude",
+            "nude"
+        ]
+    },
+    "in the background": {
+        "contains": "figures"
+    },
+    "man": {
+        "has characteristic": "stands"
+    },
+    "hanging": {
+        "contains": "hare"
+    },
+    "bridge": {
+        "contains": "man"
+    },
+    "hare": {
+        "has characteristic": "dead"
+    },
+    "dog": {
+        "has characteristic": "Standing"
+    },
+    "figures": {
+        "has characteristic": "smaller"
+    },
+    "putting on": {
+        "depicts": "shirt"
+    },
+    "by his side": {
+        "contains": "dog"
+    }
+}

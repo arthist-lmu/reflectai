@@ -1,0 +1,51 @@
+{
+    "wings": {
+        "contains": [
+            "Anthony",
+            "outer sides",
+            "Helena",
+            "Andrew",
+            "Vitus",
+            "Franciscan"
+        ]
+    },
+    "Pre-Lennine": {
+        "contains": "Christ"
+    },
+    "Bayern 1549 - Kleiner Reisealtar": {
+        "depicts": [
+            "In its open state, the central depiction",
+            "wings",
+            "Pre-Lennine"
+        ],
+        "instance of": [
+            "altar",
+            "relief",
+            "painting",
+            "reliefs"
+        ],
+        "made from material": "Wood",
+        "created in": "1549"
+    },
+    "outer sides": {
+        "depicts": [
+            "gender of those of Brennberg from the Regensburg district",
+            "coats of arms of the Augsburg Patrizier Langenmantel"
+        ]
+    },
+    "Christ": {
+        "has characteristic": "crucifixion"
+    },
+    "right": {
+        "depicts": "gender of those of Brennberg from the Regensburg district"
+    },
+    "left": {
+        "depicts": "coats of arms of the Augsburg Patrizier Langenmantel"
+    },
+    "In its open state, the central depiction": {
+        "contains": "Francis"
+    },
+    "Francis": {
+        "has characteristic": "stigmatization"
+    }
+}

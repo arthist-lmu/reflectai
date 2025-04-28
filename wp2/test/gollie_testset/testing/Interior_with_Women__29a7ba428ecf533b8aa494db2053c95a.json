@@ -1,0 +1,26 @@
+{
+    "spoon": {
+        "has characteristic": "wooden"
+    },
+    "hand": {
+        "has characteristic": "right"
+    },
+    "broom": {
+        "has characteristic": "short"
+    },
+    "hair": {
+        "has characteristic": [
+            "red",
+            "closely cropped"
+        ]
+    },
+    "woman": {
+        "has characteristic": "seated"
+    },
+    "lies": {
+        "symbolizes": "helpless"
+    },
+    "interior": {
+        "has characteristic": "simple"
+    }
+}

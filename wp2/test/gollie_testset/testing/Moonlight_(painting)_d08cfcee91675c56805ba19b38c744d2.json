@@ -1,0 +1,30 @@
+{
+    "Moonlight": {
+        "made from material": "canvas",
+        "depicts": [
+            "water",
+            "animal",
+            "shadows",
+            "sources of light"
+        ],
+        "created by": "Philip James de Loutherbourg",
+        "symbolizes": "nocturne",
+        "instance of": "painting",
+        "created in": "1777"
+    },
+    "skin": {
+        "has characteristic": "animal"
+    },
+    "shadows": {
+        "contains": [
+            "moonlight",
+            "fire"
+        ]
+    },
+    "sources of light": {
+        "contains": [
+            "fire",
+            "moonlight"
+        ]
+    }
+}

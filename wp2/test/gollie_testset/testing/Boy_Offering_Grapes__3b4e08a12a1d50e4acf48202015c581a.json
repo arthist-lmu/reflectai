@@ -1,0 +1,29 @@
+{
+    "hand": {
+        "has characteristic": [
+            "right",
+            "left"
+        ]
+    },
+    "background": {
+        "has characteristic": "right"
+    },
+    "dress": {
+        "has characteristic": "sumptuous"
+    },
+    "woman": {
+        "has characteristic": "young"
+    },
+    "wicker basket": {
+        "has characteristic": "large"
+    },
+    "sky": {
+        "has characteristic": "blue"
+    },
+    "curtain": {
+        "has characteristic": "red"
+    },
+    "mountains": {
+        "has characteristic": "high"
+    }
+}

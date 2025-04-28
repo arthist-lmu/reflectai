@@ -1,0 +1,41 @@
+{
+    "atmospheric mood": {
+        "symbolizes": [
+            "air",
+            "dust"
+        ]
+    },
+    "staffage": {
+        "has characteristic": "colourful"
+    },
+    "Schäfer in der römischen Campagna": {
+        "has characteristic": [
+            "staffage",
+            "Campagne"
+        ],
+        "created by": "Bürkel",
+        "instance of": "painting",
+        "created in": "1837"
+    },
+    "air": {
+        "has characteristic": [
+            "bleached",
+            "heavy"
+        ]
+    },
+    "Campagne": {
+        "has characteristic": [
+            "countryside",
+            "drought"
+        ]
+    },
+    "countryside": {
+        "has characteristic": "vast"
+    },
+    "drought": {
+        "has characteristic": "summer"
+    },
+    "dust": {
+        "has characteristic": "swirling"
+    }
+}

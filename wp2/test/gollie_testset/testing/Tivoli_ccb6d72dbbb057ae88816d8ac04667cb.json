@@ -1,0 +1,14 @@
+{
+    "beam": {
+        "has characteristic": "thin"
+    },
+    "viewpoint": {
+        "has characteristic": "elevated"
+    },
+    "view": {
+        "has characteristic": "local"
+    },
+    "colors": {
+        "has characteristic": "bright"
+    }
+}

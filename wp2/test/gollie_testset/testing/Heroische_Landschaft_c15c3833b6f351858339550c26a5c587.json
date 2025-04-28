@@ -1,0 +1,71 @@
+{
+    "Heroische Landschaft": {
+        "created by": "painter",
+        "contains": [
+            "monster",
+            "princess",
+            "George"
+        ],
+        "has genre": "Renaissance painting",
+        "influenced by": [
+            "Raphael",
+            "Paolo Uccello"
+        ],
+        "depicts": [
+            "grand panorama",
+            "Roman campagna at Subiaco in the Sabine Mountains"
+        ]
+    },
+    "Roman campagna at Subiaco in the Sabine Mountains": {
+        "contains": "George"
+    },
+    "martyr": {
+        "has characteristic": [
+            "fighting",
+            "armor"
+        ]
+    },
+    "princess": {
+        "has characteristic": [
+            "raising",
+            "praying",
+            "kneeling"
+        ]
+    },
+    "grand panorama": {
+        "contains": [
+            "sections",
+            "staging area"
+        ]
+    },
+    "in the foreground": {
+        "contains": [
+            "martyr",
+            "monster"
+        ]
+    },
+    "praying": {
+        "symbolizes": "victory"
+    },
+    "savior's": {
+        "has characteristic": "victory"
+    },
+    "sections": {
+        "has characteristic": [
+            "bright, rocky",
+            "Dark, wooded"
+        ]
+    },
+    "left": {
+        "contains": "princess"
+    },
+    "hands": {
+        "has characteristic": "raising"
+    },
+    "staging area": {
+        "contains": "figures"
+    },
+    "raising": {
+        "symbolizes": "heaven"
+    }
+}

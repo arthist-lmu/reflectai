@@ -1,0 +1,47 @@
+{
+    "view": {
+        "contains": [
+            "South Bank of the Thames",
+            "in the distance",
+            "on the left",
+            "in the foreground"
+        ]
+    },
+    "South Bank": {
+        "depicts": [
+            "group of bystanders",
+            "view"
+        ],
+        "created in": "1948",
+        "influenced by": "Bathers and the Ile de la Grand Jatte",
+        "created by": "William Townsend",
+        "instance of": "painting"
+    },
+    "William Townsend": {
+        "influenced by": [
+            "Henry Tonks",
+            "Euston Road School"
+        ]
+    },
+    "in the foreground": {
+        "contains": "Victoria Embankment"
+    },
+    "over the river": {
+        "contains": "group of bystanders"
+    },
+    "Bathers and the Ile de la Grand Jatte": {
+        "created by": "Seurat's"
+    },
+    "South Bank of the Thames": {
+        "has characteristic": "undeveloped"
+    },
+    "group of bystanders": {
+        "has characteristic": "gazing out"
+    },
+    "on the left": {
+        "contains": "Hungerford and Waterloo bridges"
+    },
+    "in the distance": {
+        "contains": "St Paul's Cathedral"
+    }
+}

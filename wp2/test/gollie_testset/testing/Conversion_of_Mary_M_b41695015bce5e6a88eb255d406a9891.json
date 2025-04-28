@@ -1,0 +1,71 @@
+{
+    "illumination": {
+        "has characteristic": "supernatural"
+    },
+    "crown": {
+        "has characteristic": "imperial"
+    },
+    "pieces of cloth": {
+        "has characteristic": "two costly"
+    },
+    "plates": {
+        "has characteristic": [
+            "silver",
+            "gold"
+        ]
+    },
+    "book": {
+        "has characteristic": "thick"
+    },
+    "medal": {
+        "has characteristic": "gold"
+    },
+    "light": {
+        "has characteristic": "heavenly"
+    },
+    "oil lamp": {
+        "has characteristic": "burning"
+    },
+    "ribbon": {
+        "has characteristic": "blue"
+    },
+    "drapery": {
+        "has characteristic": [
+            "red",
+            "large"
+        ]
+    },
+    "scepter": {
+        "has characteristic": "gold"
+    },
+    "sea": {
+        "has characteristic": "rough"
+    },
+    "view": {
+        "has characteristic": "nocturnal"
+    },
+    "base": {
+        "contains": "high"
+    },
+    "ships": {
+        "has characteristic": "several"
+    },
+    "objects": {
+        "has characteristic": "precious"
+    },
+    "column": {
+        "has characteristic": "round"
+    },
+    "pearl necklace": {
+        "has characteristic": "broken"
+    },
+    "power": {
+        "has characteristic": "worldly"
+    },
+    "bosom": {
+        "has characteristic": "naked"
+    },
+    "angels": {
+        "contains": "number of"
+    }
+}

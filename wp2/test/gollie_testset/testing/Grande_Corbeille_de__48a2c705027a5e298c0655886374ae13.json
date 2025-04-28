@@ -1,0 +1,53 @@
+{
+    "basket": {
+        "has characteristic": "braided",
+        "contains": "bouquet"
+    },
+    "Grande Corbeille de Fleurs": {
+        "created in": "1973",
+        "depicts": [
+            "window",
+            "bouquet",
+            "goat",
+            "couple of lovers",
+            "basket"
+        ],
+        "has characteristic": [
+            "lovers and flower trustees",
+            "colorful"
+        ],
+        "instance of": "paintings",
+        "created by": "Marc Chagall"
+    },
+    "On the left": {
+        "contains": "couple of lovers"
+    },
+    "window": {
+        "depicts": "hill panorama"
+    },
+    "couple of lovers": {
+        "symbolizes": "eternal love for his wife Bella",
+        "has characteristic": "floats"
+    },
+    "goat": {
+        "has characteristic": "yellow"
+    },
+    "bouquet": {
+        "has characteristic": [
+            "flowers",
+            "lush"
+        ]
+    },
+    "central": {
+        "contains": "bouquet"
+    },
+    "in the background": {
+        "contains": "window"
+    },
+    "on the right": {
+        "contains": "goat"
+    },
+    "hill panorama": {
+        "symbolizes": "Saint-Paul-de-Vence"
+    }
+}

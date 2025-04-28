@@ -1,0 +1,128 @@
+{
+    "eyes": {
+        "has characteristic": "full of tears"
+    },
+    "Das Martyrium der Heiligen Katharina": {
+        "depicts": [
+            "wheel",
+            "palm branch",
+            "wreath"
+        ],
+        "contains": [
+            "Catherine",
+            "angel",
+            "torturer"
+        ],
+        "instance of": "painting",
+        "symbolizes": "martyrdom",
+        "fabrication method": "light-dark staging"
+    },
+    "in his outstretched left hand": {
+        "has characteristic": "wreath"
+    },
+    "tool of martyrdom": {
+        "has characteristic": "destroyed"
+    },
+    "palm branch": {
+        "symbolizes": "martyrdom"
+    },
+    "sky": {
+        "contains": "floating"
+    },
+    "lined with": {
+        "has characteristic": [
+            "iron nails",
+            "pointed saws"
+        ]
+    },
+    "angel": {
+        "has characteristic": [
+            "holding",
+            "floating"
+        ]
+    },
+    "pulling": {
+        "symbolizes": [
+            "out of fear",
+            "hair"
+        ]
+    },
+    "Catherine": {
+        "has characteristic": "prayer",
+        "symbolizes": "virgin"
+    },
+    "divine help": {
+        "has characteristic": "angels"
+    },
+    "holding": {
+        "has characteristic": "wreath"
+    },
+    "wheel": {
+        "has characteristic": [
+            "lined with",
+            "destroyed"
+        ],
+        "symbolizes": [
+            "martyrdom",
+            "tool of martyrdom"
+        ]
+    },
+    "virgin": {
+        "symbolizes": "Christ"
+    },
+    "on the left edge": {
+        "contains": "torturer"
+    },
+    "Saint Catherine": {
+        "has characteristic": [
+            "head",
+            "robe",
+            "wrists",
+            "eyes",
+            "chest"
+        ]
+    },
+    "head": {
+        "has characteristic": [
+            "slightly lowered",
+            "looking down"
+        ]
+    },
+    "looks at her": {
+        "symbolizes": "amazement"
+    },
+    "robe": {
+        "has characteristic": [
+            "red-blue",
+            "close-up"
+        ]
+    },
+    "touches": {
+        "contains": [
+            "palm branch",
+            "wheel"
+        ],
+        "has characteristic": "hand"
+    },
+    "wrists": {
+        "has characteristic": "tied"
+    },
+    "hand": {
+        "has characteristic": "right"
+    },
+    "torturer": {
+        "has characteristic": [
+            "pulling",
+            "looks at her"
+        ]
+    },
+    "chest": {
+        "has characteristic": "free"
+    },
+    "on the upper left edge": {
+        "contains": "angel"
+    },
+    "tool of torture": {
+        "symbolizes": "martyrdom"
+    }
+}

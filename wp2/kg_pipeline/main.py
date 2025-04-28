@@ -43,10 +43,11 @@ def read_dataset(path: str) -> List[Dict]:
                     original_file=path,
                     text=text,
                     language=data['text'][0].get("language", None),
-                    triplets=data.get('triplets', [])
+                    triplets=data.get('triplets', []),
+                    annotations=data.get('annotations', {})
                 )
             )
-
+    print(results[0].keys())
     return results
 
 

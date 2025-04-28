@@ -1,0 +1,40 @@
+{
+    "Bild E III (Caretera)": {
+        "created by": "Rupprecht Geiger's",
+        "depicts": [
+            "forms",
+            "geometric abstraction",
+            "modulation",
+            "strictly defined surface",
+            "strip"
+        ],
+        "fabrication method": [
+            "colour processes",
+            "colour modulations"
+        ],
+        "has genre": "abstract",
+        "instance of": "painting"
+    },
+    "strip": {
+        "has characteristic": "rectangular longitudinal",
+        "contains": "color pattern"
+    },
+    "modulation": {
+        "has characteristic": "blue"
+    },
+    "blue": {
+        "has characteristic": "from indigo to azure"
+    },
+    "upper half of the image": {
+        "contains": "modulation"
+    },
+    "on the left edge": {
+        "contains": "strip"
+    },
+    "forms": {
+        "has characteristic": "free, non-object"
+    },
+    "color pattern": {
+        "has characteristic": "black to dark red"
+    }
+}

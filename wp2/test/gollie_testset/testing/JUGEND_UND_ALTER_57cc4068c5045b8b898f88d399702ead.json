@@ -1,0 +1,83 @@
+{
+    "JUGEND UND ALTER": {
+        "instance of": "painting",
+        "depicts": [
+            "pool",
+            "On the ground",
+            "in front of",
+            "On the left, in the background of the wells",
+            "well"
+        ],
+        "contains": [
+            "girl",
+            "statue",
+            "woman"
+        ],
+        "symbolizes": "vanity"
+    },
+    "dress": {
+        "has characteristic": [
+            "silk",
+            "pink"
+        ]
+    },
+    "hair": {
+        "has characteristic": [
+            "wreath",
+            "brown"
+        ]
+    },
+    "girl": {
+        "has characteristic": [
+            "dress",
+            "Young",
+            "pretty",
+            "wreath",
+            "sits"
+        ]
+    },
+    "sleeve": {
+        "has characteristic": "silk"
+    },
+    "on the right": {
+        "contains": "distillate"
+    },
+    "On the ground": {
+        "contains": [
+            "pumpkins",
+            "fruit"
+        ],
+        "depicts": "on the right"
+    },
+    "silk": {
+        "has characteristic": [
+            "white",
+            "black"
+        ]
+    },
+    "well": {
+        "contains": "sits"
+    },
+    "statue": {
+        "symbolizes": "Venus"
+    },
+    "woman": {
+        "has characteristic": [
+            "old",
+            "talking",
+            "bent, stick-leaning"
+        ]
+    },
+    "in front of": {
+        "contains": "woman"
+    },
+    "vanity": {
+        "symbolizes": "transience of beauty"
+    },
+    "Venus": {
+        "has characteristic": "breasts"
+    },
+    "On the left, in the background of the wells": {
+        "contains": "statue"
+    }
+}

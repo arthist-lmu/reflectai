@@ -1,0 +1,90 @@
+{
+    "woman": {
+        "has characteristic": [
+            "neck",
+            "turned her head sideways",
+            "young",
+            "naked",
+            "lips",
+            "hair",
+            "sitting on"
+        ]
+    },
+    "console": {
+        "contains": [
+            "flower",
+            "utensils"
+        ],
+        "has characteristic": "small"
+    },
+    "NUDO ALLO SPECCHIO": {
+        "depicts": [
+            "woman",
+            "mirror",
+            "In a reddish-brown interior",
+            "bedspread"
+        ],
+        "created by": "Cesare Monti",
+        "created in": "1951",
+        "made from material": "Oil on canvas",
+        "contains": "console"
+    },
+    "thigh": {
+        "has characteristic": "right"
+    },
+    "upper arm": {
+        "has characteristic": "right"
+    },
+    "flower": {
+        "has characteristic": "red"
+    },
+    "utensils": {
+        "has characteristic": "pink"
+    },
+    "band": {
+        "has characteristic": [
+            "thin",
+            "black"
+        ]
+    },
+    "mirror": {
+        "depicts": [
+            "upper body",
+            "upper arm"
+        ],
+        "has characteristic": "oval"
+    },
+    "bedspread": {
+        "has characteristic": "turquoise"
+    },
+    "hair": {
+        "has characteristic": "brown"
+    },
+    "lips": {
+        "has characteristic": "red"
+    },
+    "neck": {
+        "has characteristic": "band"
+    },
+    "foot": {
+        "has characteristic": "left"
+    },
+    "In a reddish-brown interior": {
+        "contains": "woman"
+    },
+    "interior": {
+        "has characteristic": "reddish-brown"
+    },
+    "Behind her left": {
+        "contains": "mirror"
+    },
+    "Under the mirror": {
+        "contains": "console"
+    },
+    "sitting on": {
+        "symbolizes": "sitting half on her right thigh"
+    },
+    "floor": {
+        "contains": "foot"
+    }
+}

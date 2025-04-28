@@ -1,0 +1,76 @@
+{
+    "ribbon": {
+        "has characteristic": "reddish orange"
+    },
+    "lion": {
+        "has characteristic": "golden"
+    },
+    "feathers": {
+        "has characteristic": "white"
+    },
+    "flag": {
+        "has characteristic": [
+            "white",
+            "red",
+            "blue",
+            "orange"
+        ]
+    },
+    "three-master": {
+        "has characteristic": [
+            "small",
+            "miniature"
+        ]
+    },
+    "suit": {
+        "has characteristic": [
+            "striped",
+            "yellow-and-gray"
+        ]
+    },
+    "cuffs": {
+        "has characteristic": "lace"
+    },
+    "collar": {
+        "has characteristic": "lace"
+    },
+    "woodcarving": {
+        "has characteristic": "ornate"
+    },
+    "frame": {
+        "has characteristic": "oval"
+    },
+    "braid": {
+        "has characteristic": "gold"
+    },
+    "sword": {
+        "has characteristic": "raised"
+    },
+    "shoulder": {
+        "has characteristic": "left"
+    },
+    "background": {
+        "has characteristic": "parklike"
+    },
+    "hand": {
+        "has characteristic": "right"
+    },
+    "clothing": {
+        "has characteristic": "sumptuous"
+    },
+    "boy": {
+        "has characteristic": "blond-haired"
+    },
+    "beret": {
+        "has characteristic": [
+            "red",
+            "velvet"
+        ]
+    },
+    "stone basin": {
+        "has characteristic": "rectangular"
+    },
+    "shawl": {
+        "has characteristic": "blue"
+    }
+}

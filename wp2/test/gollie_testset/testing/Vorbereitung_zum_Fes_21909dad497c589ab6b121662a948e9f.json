@@ -1,0 +1,65 @@
+{
+    "Vorbereitung zum Fest": {
+        "depicts": [
+            "On the wood floor",
+            "couple",
+            "boy",
+            "ceiling bars",
+            "wall",
+            "Through the open door",
+            "In the vicinity of a wine cellar"
+        ]
+    },
+    "spoon": {
+        "has characteristic": "attach"
+    },
+    "wall": {
+        "has characteristic": "crumbling"
+    },
+    "boy": {
+        "has characteristic": "plays"
+    },
+    "door": {
+        "has characteristic": "open"
+    },
+    "children": {
+        "has characteristic": "two"
+    },
+    "couple": {
+        "has characteristic": [
+            "dance",
+            "young"
+        ]
+    },
+    "in the background": {
+        "contains": "woman",
+        "has characteristic": "children"
+    },
+    "farmer": {
+        "has characteristic": "young"
+    },
+    "floor": {
+        "has characteristic": "wood"
+    },
+    "ceiling bars": {
+        "contains": "spoon"
+    },
+    "Through the open door": {
+        "contains": "in the background"
+    },
+    "In the vicinity of a wine cellar": {
+        "has characteristic": "farmer"
+    },
+    "plays": {
+        "contains": "violin"
+    },
+    "girl": {
+        "has characteristic": "young"
+    },
+    "On the wood floor": {
+        "contains": [
+            "children",
+            "girl"
+        ]
+    }
+}

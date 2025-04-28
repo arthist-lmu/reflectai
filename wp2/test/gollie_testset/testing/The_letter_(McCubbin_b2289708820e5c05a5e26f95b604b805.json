@@ -1,0 +1,27 @@
+{
+    "alongside a stream": {
+        "contains": "woman"
+    },
+    "The letter": {
+        "depicts": [
+            "Yarra River near Darebin Creek",
+            "alongside a stream",
+            "letter"
+        ],
+        "contains": "woman"
+    },
+    "woman": {
+        "has characteristic": [
+            "walking in the bush",
+            "young",
+            "reading a letter"
+        ],
+        "symbolizes": "Harriet McCubbin"
+    },
+    "The letter (McCubbin)": {
+        "fabrication method": "en plein air sketches",
+        "created in": "1884",
+        "created by": "Frederick McCubbin",
+        "instance of": "painting"
+    }
+}

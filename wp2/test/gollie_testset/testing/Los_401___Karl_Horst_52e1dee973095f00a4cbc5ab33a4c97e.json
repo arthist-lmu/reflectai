@@ -1,0 +1,24 @@
+{
+    "In front of": {
+        "contains": "façade"
+    },
+    "Ohne Titel (Zeitgeist mit Springer)": {
+        "depicts": [
+            "Berlin metropolitan area",
+            "mountain of sand and debris",
+            "sky",
+            "Gropiusbau"
+        ],
+        "created in": "1986",
+        "created by": "Karl Horst Hödicke"
+    },
+    "mountain of sand and debris": {
+        "symbolizes": "dystopian"
+    },
+    "Gropiusbau": {
+        "has characteristic": "façade"
+    },
+    "sky": {
+        "has characteristic": "red"
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "TARQUINIO UND LUCREZIA": {
+        "depicts": [
+            "king's son Sextus Tarquinius",
+            "moment she is being oppressed",
+            "Lucrezia"
+        ],
+        "created in": "Renaissance",
+        "instance of": "painting",
+        "created by": "Pietro Liberi",
+        "made from material": "OIL on canvas",
+        "symbolizes": [
+            "erotic aspect",
+            "perseverance"
+        ],
+        "influenced by": "Alessandro Varotari"
+    },
+    "Lucrezia": {
+        "has characteristic": [
+            "virtue",
+            "beauty",
+            "Roman period"
+        ]
+    },
+    "two figures": {
+        "has characteristic": "close-up"
+    },
+    "Lucrezia's": {
+        "has characteristic": "perseverance"
+    },
+    "Roman period": {
+        "has characteristic": "mythical early"
+    },
+    "moment she is being oppressed": {
+        "has characteristic": "dramatic"
+    }
+}

@@ -1,0 +1,50 @@
+{
+    "KIRCHEN SANTA MARIA DI NAZARETH": {
+        "depicts": [
+            "in the foreground",
+            "On the left",
+            "Sestiere Santa Croce",
+            "façades",
+            "View into the canal"
+        ],
+        "influenced by": "Girolamo Romanino Romani",
+        "instance of": "painting",
+        "has genre": "Classicism",
+        "created by": "Bison"
+    },
+    "Church of St": {
+        "has characteristic": [
+            "gills",
+            "pillars",
+            "façade"
+        ]
+    },
+    "dome": {
+        "has characteristic": "copper-covered"
+    },
+    "On the left": {
+        "contains": "San Simeone Piccolo"
+    },
+    "in the foreground": {
+        "contains": "façade"
+    },
+    "San Simeone Piccolo": {
+        "has characteristic": [
+            "dome",
+            "stairway",
+            "portico"
+        ]
+    },
+    "canal": {
+        "contains": "façades"
+    },
+    "portico": {
+        "has characteristic": "columns"
+    },
+    "houses": {
+        "has characteristic": "façades"
+    },
+    "palaces": {
+        "has characteristic": "façades"
+    }
+}

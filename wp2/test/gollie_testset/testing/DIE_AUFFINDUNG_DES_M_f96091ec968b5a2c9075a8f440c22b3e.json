@@ -1,0 +1,116 @@
+{
+    "bank": {
+        "has characteristic": "right"
+    },
+    "coat": {
+        "has characteristic": [
+            "tight",
+            "waist",
+            "robe",
+            "sleeves"
+        ]
+    },
+    "robe": {
+        "has characteristic": [
+            "reddish-glowing",
+            "gold",
+            "precious"
+        ]
+    },
+    "On the right bank": {
+        "contains": [
+            "two maidens",
+            "infant"
+        ]
+    },
+    "finding of": {
+        "contains": [
+            "daughter of Pharaoh",
+            "baby Moses"
+        ],
+        "depicts": "water"
+    },
+    "two servants": {
+        "has characteristic": [
+            "holds",
+            "over her head"
+        ]
+    },
+    "two maidens": {
+        "has characteristic": "took"
+    },
+    "DIE AUFFINDUNG DES MOSES": {
+        "depicts": [
+            "water",
+            "finding of",
+            "in the distance",
+            "Behind her",
+            "On the right bank",
+            "To the left"
+        ],
+        "contains": [
+            "two maidens",
+            "daughter of Pharaoh",
+            "mother of Moses",
+            "baby Moses",
+            "two servants"
+        ],
+        "instance of": "painting"
+    },
+    "cloak": {
+        "has characteristic": "blue"
+    },
+    "king's daughter": {
+        "has characteristic": "turns to"
+    },
+    "To the left": {
+        "contains": "daughter of Pharaoh"
+    },
+    "umbrella": {
+        "has characteristic": "red"
+    },
+    "standing by the water": {
+        "depicts": "water",
+        "contains": "basket"
+    },
+    "in the distance": {
+        "contains": "silhouette of a city",
+        "has characteristic": "night sky"
+    },
+    "sleeves": {
+        "has characteristic": [
+            "white",
+            "pointed"
+        ]
+    },
+    "over her head": {
+        "has characteristic": "umbrella"
+    },
+    "holds": {
+        "has characteristic": "cloak"
+    },
+    "dress": {
+        "has characteristic": "coat"
+    },
+    "silhouette of a city": {
+        "has characteristic": "bright"
+    },
+    "mother of Moses": {
+        "has characteristic": "kneeling"
+    },
+    "infant": {
+        "has characteristic": "naked"
+    },
+    "daughter of Pharaoh": {
+        "has characteristic": "dress"
+    },
+    "waist": {
+        "has characteristic": "narrow"
+    },
+    "blue": {
+        "has characteristic": "dark"
+    },
+    "Behind her": {
+        "contains": "two servants"
+    }
+}

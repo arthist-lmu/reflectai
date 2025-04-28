@@ -1,0 +1,56 @@
+{
+    "hair": {
+        "has characteristic": "less curly"
+    },
+    "cloak": {
+        "has characteristic": [
+            "rich",
+            "black"
+        ]
+    },
+    "gesture": {
+        "has characteristic": "elegant"
+    },
+    "sitter": {
+        "has characteristic": [
+            "grandeur",
+            "cloak"
+        ]
+    },
+    "man": {
+        "has characteristic": "burgher"
+    },
+    "backdrop": {
+        "contains": [
+            "architecture",
+            "sky",
+            "classical ambience"
+        ],
+        "symbolizes": "grandeur"
+    },
+    "burgher": {
+        "has characteristic": [
+            "Leiden",
+            "well-to-do"
+        ]
+    },
+    "face": {
+        "has characteristic": "narrower"
+    },
+    "sky": {
+        "has characteristic": "cloudy"
+    },
+    "Portrait of a Fifty-Two Year Old Man": {
+        "depicts": [
+            "gesture",
+            "backdrop"
+        ],
+        "instance of": [
+            "paintings",
+            "portraits"
+        ],
+        "created by": "Van Mieris",
+        "contains": "sitter",
+        "influenced by": "Anthony van Dyck"
+    }
+}

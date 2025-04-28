@@ -1,0 +1,20 @@
+{
+    "quote": {
+        "has characteristic": "direct"
+    },
+    "composition": {
+        "has characteristic": "effective"
+    },
+    "basis": {
+        "has characteristic": "oak-coloured"
+    },
+    "battle": {
+        "has characteristic": "dramatic"
+    },
+    "pattern": {
+        "has characteristic": "monochrome"
+    },
+    "horse's": {
+        "contains": "anatomy"
+    }
+}

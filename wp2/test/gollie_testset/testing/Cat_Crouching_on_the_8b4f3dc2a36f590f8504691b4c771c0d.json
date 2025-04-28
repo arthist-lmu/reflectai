@@ -1,0 +1,48 @@
+{
+    "cat": {
+        "has characteristic": [
+            "tail",
+            "grey-and-white-striped",
+            "fur",
+            "crouching in profile"
+        ]
+    },
+    "front of the niche": {
+        "symbolizes": "light source",
+        "has characteristic": "upper left"
+    },
+    "fur": {
+        "has characteristic": "plush"
+    },
+    "Cat Crouching on the Ledge of an Artist’s Atelier": {
+        "depicts": [
+            "stone",
+            "front of the niche",
+            "on a stone niche opening into an artist’s studio",
+            "fur",
+            "opening of a niche",
+            "cat"
+        ],
+        "created by": "Gerrit Dou",
+        "instance of": "painting",
+        "fabrication method": [
+            "illusionism",
+            "minuscule strokes of multicolored paint"
+        ]
+    },
+    "front of the picture plane": {
+        "contains": "opening of a niche"
+    },
+    "opening of a niche": {
+        "symbolizes": [
+            "framing device",
+            "illusionistic construct"
+        ]
+    },
+    "on a stone niche opening into an artist’s studio": {
+        "contains": "cat"
+    },
+    "niche": {
+        "has characteristic": "stone"
+    }
+}

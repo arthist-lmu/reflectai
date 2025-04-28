@@ -1,0 +1,85 @@
+{
+    "tapestry": {
+        "has characteristic": "luxurious"
+    },
+    "room": {
+        "contains": [
+            "ceiling",
+            "canopy bed",
+            "chair",
+            "table"
+        ]
+    },
+    "Doctor’s Visit": {
+        "depicts": [
+            "maid",
+            "boy",
+            "room",
+            "doctor",
+            "background",
+            "patient"
+        ],
+        "created in": "1660s",
+        "fabrication method": "enamel-like finish",
+        "instance of": "picture",
+        "created by": "Jacob Toorenvliet"
+    },
+    "woman": {
+        "has characteristic": [
+            "weak",
+            "elegantly dressed",
+            "exchanges meaningful gazes",
+            "pulse"
+        ],
+        "symbolizes": "patient"
+    },
+    "maid": {
+        "has characteristic": "exchanges meaningful gazes"
+    },
+    "basket": {
+        "contains": "flask",
+        "has characteristic": "cylinder-shaped"
+    },
+    "background": {
+        "has characteristic": "dark"
+    },
+    "figures": {
+        "has characteristic": "brightly-lit"
+    },
+    "boy": {
+        "has characteristic": [
+            "held",
+            "handsomely dressed"
+        ]
+    },
+    "flask": {
+        "contains": "urine"
+    },
+    "table": {
+        "has characteristic": "tapestry"
+    },
+    "reds": {
+        "has characteristic": "bright"
+    },
+    "fabric": {
+        "has characteristic": "red"
+    },
+    "doctor": {
+        "has characteristic": "gray-bearded"
+    },
+    "curtain": {
+        "has characteristic": "fringed"
+    },
+    "whites": {
+        "has characteristic": "bright"
+    },
+    "ceiling": {
+        "has characteristic": "coffered"
+    },
+    "canopy bed": {
+        "has characteristic": "curtain"
+    },
+    "chair": {
+        "has characteristic": "fabric"
+    }
+}

@@ -1,0 +1,136 @@
+{
+    "NÄCHTLICHER GEMÜSEMARKT BEI KERZENLICHT": {
+        "depicts": [
+            "figures",
+            "woman",
+            "shopkeeper",
+            "cotton",
+            "melons",
+            "maid",
+            "man",
+            "houses",
+            "moon",
+            "market table",
+            "basket"
+        ],
+        "instance of": "picture"
+    },
+    "maid": {
+        "has characteristic": [
+            "young",
+            "hood"
+        ]
+    },
+    "light sources": {
+        "has characteristic": "two artificial"
+    },
+    "light": {
+        "has characteristic": [
+            "soft",
+            "reddish"
+        ]
+    },
+    "lady": {
+        "has characteristic": [
+            "pretty",
+            "young"
+        ]
+    },
+    "on the right": {
+        "contains": [
+            "moon",
+            "clouds"
+        ]
+    },
+    "figures": {
+        "has characteristic": [
+            "blurred",
+            "female"
+        ]
+    },
+    "her left arm": {
+        "has characteristic": "basket"
+    },
+    "on the left": {
+        "contains": "woman"
+    },
+    "woman": {
+        "has characteristic": [
+            "hood",
+            "coat",
+            "seated",
+            "elderly"
+        ]
+    },
+    "houses": {
+        "has characteristic": [
+            "tiles and roofs",
+            "facade",
+            "windows"
+        ]
+    },
+    "moon": {
+        "has characteristic": "light"
+    },
+    "foreground": {
+        "has characteristic": "light sources",
+        "contains": "group"
+    },
+    "shopkeeper": {
+        "has characteristic": [
+            "holding",
+            "young",
+            "well-dressed"
+        ]
+    },
+    "coat": {
+        "has characteristic": "woolly"
+    },
+    "man": {
+        "has characteristic": [
+            "shoulder basket",
+            "young",
+            "looks"
+        ]
+    },
+    "basket": {
+        "has characteristic": [
+            "large",
+            "potato"
+        ]
+    },
+    "candle": {
+        "symbolizes": "light",
+        "has characteristic": "burning"
+    },
+    "tiles and roofs": {
+        "has characteristic": "decorative"
+    },
+    "on the table": {
+        "contains": "candle-stack"
+    },
+    "candle-stack": {
+        "contains": "candle"
+    },
+    "In the foreground": {
+        "contains": [
+            "on the left",
+            "market table"
+        ]
+    },
+    "hood": {
+        "has characteristic": "hair"
+    },
+    "hand": {
+        "has characteristic": "right"
+    },
+    "clouds": {
+        "has characteristic": "dark"
+    },
+    "in the dark": {
+        "contains": "figures"
+    },
+    "On the basket": {
+        "contains": "maid"
+    }
+}

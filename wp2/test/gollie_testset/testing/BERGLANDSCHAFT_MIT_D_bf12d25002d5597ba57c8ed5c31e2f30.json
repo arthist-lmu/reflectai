@@ -1,0 +1,49 @@
+{
+    "rider": {
+        "has characteristic": "red-clad"
+    },
+    "hillside": {
+        "contains": "three riders"
+    },
+    "behind a rocky ledge": {
+        "contains": [
+            "dog",
+            "rider",
+            "horse"
+        ]
+    },
+    "BERGLANDSCHAFT MIT DREI REITERN  AN EINER FURT": {
+        "depicts": [
+            "horse",
+            "three riders",
+            "sky",
+            "watercourse",
+            "to the right",
+            "dog",
+            "from the back left",
+            "rider",
+            "behind a rocky ledge"
+        ]
+    },
+    "from the back left": {
+        "contains": "cascade"
+    },
+    "horse": {
+        "has characteristic": "fox-colored"
+    },
+    "watercourse": {
+        "has characteristic": [
+            "hilly",
+            "rocky"
+        ]
+    },
+    "sky": {
+        "has characteristic": "vividly clouded"
+    },
+    "to the right": {
+        "contains": "mould"
+    },
+    "dog": {
+        "has characteristic": "hunting"
+    }
+}

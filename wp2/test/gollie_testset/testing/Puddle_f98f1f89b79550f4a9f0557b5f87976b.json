@@ -1,0 +1,39 @@
+{
+    "sculptures": {
+        "symbolizes": "raincoats",
+        "has characteristic": "flat"
+    },
+    "Puddle": {
+        "symbolizes": "existential abyss of urban and suburban slums",
+        "made from material": [
+            "artificial resin",
+            "sand",
+            "thrown",
+            "stones"
+        ],
+        "instance of": "sculptures",
+        "depicts": [
+            "exhibition space",
+            "floor",
+            "pieces of garbage",
+            "surfaces",
+            "sculptures"
+        ],
+        "created by": "Marlie Mul's"
+    },
+    "exhibition space": {
+        "has characteristic": [
+            "clean",
+            "white"
+        ]
+    },
+    "floor": {
+        "has characteristic": "muddy"
+    },
+    "surfaces": {
+        "has characteristic": "shiny"
+    },
+    "pieces of garbage": {
+        "has characteristic": "small"
+    }
+}

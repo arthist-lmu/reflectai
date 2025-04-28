@@ -1,0 +1,106 @@
+{
+    "ruin": {
+        "has characteristic": [
+            "palace-like",
+            "ancient"
+        ],
+        "contains": "Corinthian columns"
+    },
+    "clothing": {
+        "has characteristic": [
+            "red",
+            "partly gold-plated",
+            "turquoise"
+        ]
+    },
+    "BILDHAUER BEI DER ARBEIT, IN WEITER LANDSCHAFT MIT ANTIKEN RUINEN": {
+        "depicts": [
+            "under high skies",
+            "dog",
+            "Sabine robbery",
+            "sculptor",
+            "river",
+            "girl",
+            "Under an ancient palace-like ruin",
+            "sculpture",
+            "On the right side of the high stone arch",
+            "boy",
+            "husar"
+        ]
+    },
+    "coat": {
+        "has characteristic": "red"
+    },
+    "Corinthian columns": {
+        "has characteristic": [
+            "high",
+            "canalised"
+        ]
+    },
+    "figures": {
+        "has characteristic": [
+            "large group",
+            "shiny",
+            "pottery"
+        ],
+        "symbolizes": "Sabine robbery"
+    },
+    "breasts": {
+        "has characteristic": "different"
+    },
+    "into the distance": {
+        "contains": "river"
+    },
+    "under high skies": {
+        "contains": "river"
+    },
+    "husser": {
+        "has characteristic": [
+            "coat",
+            "looks carefully out of the picture"
+        ]
+    },
+    "sculptor's": {
+        "has characteristic": "work"
+    },
+    "arch": {
+        "has characteristic": [
+            "stone",
+            "high"
+        ]
+    },
+    "Under the sculpture": {
+        "has characteristic": "in front of the sole"
+    },
+    "On the right side of the high stone arch": {
+        "contains": "figures"
+    },
+    "cloud formations": {
+        "has characteristic": [
+            "white",
+            "large"
+        ]
+    },
+    "dog": {
+        "has characteristic": "little"
+    },
+    "sculpture": {
+        "has characteristic": "marble"
+    },
+    "skies": {
+        "has characteristic": "high",
+        "contains": "cloud formations"
+    },
+    "husar": {
+        "has characteristic": "observes"
+    },
+    "girl": {
+        "has characteristic": [
+            "sits",
+            "little"
+        ]
+    },
+    "On the left": {
+        "depicts": "into the distance"
+    }
+}

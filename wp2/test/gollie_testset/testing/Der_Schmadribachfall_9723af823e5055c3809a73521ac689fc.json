@@ -1,0 +1,48 @@
+{
+    "above": {
+        "contains": "pine forest"
+    },
+    "at the foot": {
+        "contains": [
+            "deadwood",
+            "stream",
+            "shepherd"
+        ]
+    },
+    "landscape": {
+        "has characteristic": "heroic"
+    },
+    "Der Schmadribachfall": {
+        "depicts": [
+            "at the foot",
+            "mountain range",
+            "waterfall",
+            "mountain massif",
+            "pine forest"
+        ],
+        "contains": "shepherd",
+        "symbolizes": [
+            "landscape",
+            "nature"
+        ],
+        "created by": "Koch's"
+    },
+    "mountain": {
+        "has characteristic": "at the foot"
+    },
+    "stream": {
+        "has characteristic": "wild"
+    },
+    "pine forest": {
+        "has characteristic": [
+            "green",
+            "dense"
+        ]
+    },
+    "green": {
+        "has characteristic": "dark"
+    },
+    "nature": {
+        "has characteristic": "impoverished"
+    }
+}

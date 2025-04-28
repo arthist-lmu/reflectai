@@ -1,0 +1,34 @@
+{
+    "BÜSTE EINES JUNGEN MÄDCHENS „SUZON“": {
+        "instance of": "bust",
+        "depicts": [
+            "head",
+            "sole",
+            "bust",
+            "hair"
+        ],
+        "influenced by": "late 18th century plastic,",
+        "made from material": [
+            "golden-yellow bronze",
+            "bronze cast iron"
+        ],
+        "created in": "1872/73",
+        "fabrication method": "cold-worked",
+        "created by": "Rodin's"
+    },
+    "sole": {
+        "has characteristic": "round, curved"
+    },
+    "forehead": {
+        "has characteristic": "hair"
+    },
+    "head": {
+        "has characteristic": "to the left"
+    },
+    "attached": {
+        "contains": "sole"
+    },
+    "bust": {
+        "has characteristic": "female"
+    }
+}

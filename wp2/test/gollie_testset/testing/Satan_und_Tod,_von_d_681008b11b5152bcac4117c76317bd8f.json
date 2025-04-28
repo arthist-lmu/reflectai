@@ -1,0 +1,39 @@
+{
+    "door": {
+        "has characteristic": "closed",
+        "symbolizes": "hell"
+    },
+    "Satan und Tod, von der Sünde getrennt": {
+        "depicts": [
+            "two guards",
+            "door",
+            "Satan"
+        ],
+        "instance of": "painting"
+    },
+    "two guards": {
+        "symbolizes": [
+            "death",
+            "sin"
+        ]
+    },
+    "spoils": {
+        "has characteristic": "rich"
+    },
+    "woman": {
+        "has characteristic": [
+            "shadow",
+            "beautiful"
+        ]
+    },
+    "creature": {
+        "has characteristic": "shadowy",
+        "symbolizes": "death"
+    },
+    "earth": {
+        "contains": "spoils"
+    },
+    "gate": {
+        "has characteristic": "opened"
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "CLIO, EUTERPE UND TERPSICHORE": {
+        "depicts": [
+            "Pyramidal composition",
+            "muses Clio (history), Euterpe (lyrics) and Terpsichore (dance)",
+            "spiral circle formed"
+        ],
+        "instance of": "painting",
+        "created by": "Franchi",
+        "created in": "from 1674"
+    },
+    "attributes": {
+        "has characteristic": "identifying"
+    },
+    "limbs": {
+        "has characteristic": "concentrically arranged"
+    },
+    "muses Clio (history), Euterpe (lyrics) and Terpsichore (dance)": {
+        "contains": "attributes"
+    },
+    "spiral circle formed": {
+        "contains": "limbs"
+    },
+    "Pyramidal composition": {
+        "contains": "three female figures"
+    }
+}
