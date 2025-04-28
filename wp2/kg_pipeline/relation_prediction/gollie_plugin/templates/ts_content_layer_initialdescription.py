@@ -108,7 +108,7 @@ class Person(Template):
     """
     Person is a human figure.
     """
-
+    
     TypeOfPerson: (
         str  # Napoleon, Julius Caesar, Marie Antoinette, Cleopatra, Queen Elizabeth I
     )
@@ -770,7 +770,7 @@ def Plant_relation_to_triplet(package: Plant):
 
 
 ENTITY_PARSER = {
-    ArtisticTheme.__name__: ArtisticTheme_relation_to_triplet,
+    #ArtisticTheme.__name__: ArtisticTheme_relation_to_triplet,
     Composition.__name__: Composition_relation_to_triplet,
     WorkOfArt.__name__: WorkOfArt_relation_to_triplet,
     Concept.__name__: Concept_relation_to_triplet,

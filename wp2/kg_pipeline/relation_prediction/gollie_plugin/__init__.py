@@ -7,9 +7,15 @@ from kg_pipeline.manager import Manager
 
 default_config = {
     "model": "HiTZ/GoLLIE-13B",
-    "template": ["iconography","museum_mentions","painting_alias",
-                 "painting_content","painting_genre","painting_material",
-                 "painting_metadata"]
+    #"template": ["iconography","museum_mentions","painting_alias",
+    #             "painting_content","painting_genre","painting_material",
+    #             "painting_metadata"]
+    # "template": ["a_ts_content_layer_initialdescription", "ts_content_layer_initialdescription", 
+    #              "ts_content_layer_llmeasylanguage", "ts_content_layer_wikidata", 
+    #              "ts_metadata_layer_wikidata copy", "ts_metadata_layer_wikidata_initialdescription copy", 
+    #              "ts_metadata_layer_wikidata_llmeasylanguage" ]
+
+    "template": ["a_ts_content_layer_initialdescription", "ts_content_layer_initialdescription"]
 }
 default_parameters = {}
 
