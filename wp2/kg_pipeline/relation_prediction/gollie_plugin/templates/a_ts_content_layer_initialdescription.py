@@ -1,12 +1,403 @@
 from typing import List
-
 from ..utils_typing import Relation, dataclass
 from ..utils_typing import Generic as Template
 
 """
-Relation definitions
+Relation definitions  # ignoring most if not all the meta data relations
 """
 
+
+###------ meta classes --------###
+@dataclass
+class ArtGenre(Template):
+    """
+    Form of art in terms of a medium, format, or theme
+    """
+    work: str # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+    ArtGenre: str # pre-impressionistic, 19th-century style
+
+
+def ArtGenre_relation_to_triplet(package: ArtGenre):
+    triplets = [
+        {
+            "subject": {
+                "label": package.work,
+            },
+            "relation": {
+                "label": "has genre",
+                "wikidata_id": "wdt:P921" # rather than "wdt:P136",
+            },
+            "object": {
+                "label": package.ArtGenre,
+            },
+        },
+        {
+            "subject": {
+                "label": package.ArtGenre,
+            },
+            "relation": {
+                "label": "instance of",
+                "wikidata_id": "wdt:P31",
+            },
+            "object": {
+                "label": "art genre",
+                "wikidata_id": "wd:Q1792379",
+            },
+        },
+    ]
+
+    return triplets
+
+
+@dataclass
+class ArtMovement(Template):
+    """
+    tendency or style in art with a specific common philosophy or goal, possibly associated with a specific historical period
+    """
+    work: str # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+    movement: str # Cubism
+
+
+def ArtMovement_relation_to_triplet(package: ArtMovement):
+    triplets = [
+        {
+            "subject": {
+                "label": package.work,
+            },
+            "relation": {
+                "label": "has movement",
+                "wikidata_id": "wdt:P135" #closest I could find
+            },
+            "object": {
+                "label": package.movement,
+            },
+        },
+        {
+            "subject": {
+                "label": package.movement,
+            },
+            "relation": {
+                "label": "instance of",
+                "wikidata_id": "wdt:P31",
+            },
+            "object": {
+                "label": "art movement",
+                "wikidata_id": "wd:Q968159",
+            },
+        },
+    ]
+
+    return triplets
+
+@dataclass
+class ArtMaterial(Template):
+    """
+    substance, raw ingredient, or tool that is utilized by an artist to create a work of art
+    """
+    work: str # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+    material: str # oil on canvas
+
+
+def ArtMaterial_relation_to_triplet(package: ArtMaterial):
+    triplets = [
+        {
+            "subject": {
+                "label": package.work,
+            },
+            "relation": {
+                "label": "made from material",
+                "wikidata_id": "wdt:P186"
+            },
+            "object": {
+                "label": package.material,
+            },
+        },
+        {
+            "subject": {
+                "label": package.material,
+            },
+            "relation": {
+                "label": "instance of",
+                "wikidata_id": "wdt:P31",
+            },
+            "object": {
+                "label": "art material",
+                "wikidata_id": "wd:Q15303351",
+            },
+        },
+    ]
+
+    return triplets
+
+
+@dataclass
+class ArtisticTechnique(Template):
+    """
+    method by which art is produced
+    """
+    work: str # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+    fabricated: str # wet paint, 
+
+
+def ArtisticTechnique_relation_to_triplet(package: ArtisticTechnique):
+    triplets = [
+        {
+            "subject": {
+                "label": package.work,
+            },
+            "relation": {
+                "label": "fabricated by",
+                #"wikidata_id": "wdt:P186" has no obvious relation
+            },
+            "object": {
+                "label": package.fabricated,
+            },
+        },
+        {
+            "subject": {
+                "label": package.fabricated,
+            },
+            "relation": {
+                "label": "instance of",
+                "wikidata_id": "wdt:P31",
+            },
+            "object": {
+                "label": "art material",
+                "wikidata_id": "wd:Q11177771",
+            },
+        },
+    ]
+
+    return triplets
+
+
+@dataclass
+class TypeOfWorkOfArt(Template):
+    """
+    type of art work based on shared characteristics, functions, or stylistic features
+    """
+    work: str # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+    instance: str # engraving
+
+def TypeOfWorkOfArt_relation_to_triplet(package: TypeOfWorkOfArt):
+    triplets = [
+        {
+            "subject": {
+                "label": package.work,
+            },
+            "relation": {
+                "label": "instance of", ### HERE THIS MIGHT NOT BE THE RELATION THAT WE WANT 
+                "wikidata_id": "wdt:P31",
+            },
+            "object": {
+                "label": package.instance,
+            },
+        },
+        {
+            "subject": {
+                "label": package.instance,
+            },
+            "relation": {
+                "label": "instance of",  ### OR HERE WE NEED TO USE SUBCLASS INSTEAD
+                "wikidata_id": "wdt:P31",
+            },
+            "object": {
+                "label": "type of work of art",
+                "wikidata_id": "wd:Q116474095",
+            },
+        },
+    ]
+
+    return triplets
+
+
+@dataclass
+class PointInTime(Template):
+    """
+    position of a particular instant in time
+    """
+    work: str # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+    time: str # 1502, 1370, 2010, 1875
+
+def PointInTime_relation_to_triplet(package: PointInTime):
+    triplets = [
+        {
+            "subject": {
+                "label": package.work,
+            },
+            "relation": {
+                "label": "created in",  ### or inception 
+                "wikidata_id": "wdt:P571",
+            },
+            "object": {
+                "label": package.time,
+            },
+        },
+        {
+            "subject": {
+                "label": package.time,
+            },
+            "relation": {
+                "label": "instance of",  
+                "wikidata_id": "wdt:P31",
+            },
+            "object": {
+                "label": "point in time",
+                "wikidata_id": "wd:Q186408",
+            },
+        },
+    ]
+
+    return triplets
+
+
+@dataclass
+class StartTime(Template):
+    """
+    infimum of a temporal interval
+    """
+    work: str # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+    time: str # 1502, 1370, 2010, 1875
+
+def StartTime_relation_to_triplet(package: StartTime):
+    triplets = [
+        {
+            "subject": {
+                "label": package.work,
+            },
+            "relation": {
+                "label": "created in",  ### or inception 
+                "wikidata_id": "wdt:P571",
+            },
+            "object": {
+                "label": package.time,
+            },
+        },
+        {
+            "subject": {
+                "label": package.time,
+            },
+            "relation": {
+                "label": "instance of",  
+                "wikidata_id": "wdt:P31",
+            },
+            "object": {
+                "label": "start time",
+                "wikidata_id": "wd:Q24575110",
+            },
+        },
+    ]
+
+    return triplets
+
+
+@dataclass
+class EndTime(Template):
+    """
+    time that some temporal entity ceases to exist
+    """
+    work: str # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+    time: str # 1502, 1370, 2010, 1875
+
+def EndTime_relation_to_triplet(package: EndTime):
+    triplets = [
+        {
+            "subject": {
+                "label": package.work,
+            },
+            "relation": {
+                "label": "created in",  ### or inception 
+                "wikidata_id": "wdt:P571",
+            },
+            "object": {
+                "label": package.time,
+            },
+        },
+        {
+            "subject": {
+                "label": package.time,
+            },
+            "relation": {
+                "label": "instance of",  
+                "wikidata_id": "wdt:P31",
+            },
+            "object": {
+                "label": "end time",
+                "wikidata_id": "wd:Q24575125",
+            },
+        },
+    ]
+
+    return triplets
+
+
+@dataclass
+class Person(Template):
+    """
+    being that has certain capacities or attributes constituting personhood
+    """
+    work: str # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+    person: str # Massys, sitter, Karl Wittgenstein
+    influenced: str # Massys, sitter, Karl Wittgenstein
+
+def Person_relation_to_triplet(package: Person):
+    ### should we rather split those up?
+    triplets = [
+        {
+            "subject": {
+                "label": package.work,
+            },
+            "relation": {
+                "label": "created by",  
+                "wikidata_id": "wdt:P170",
+            },
+            "object": {
+                "label": package.person,
+            },
+        },
+        {
+            "subject": {
+                "label": package.person,
+            },
+            "relation": {
+                "label": "instance of",  
+                "wikidata_id": "wdt:P31",
+            },
+            "object": {
+                "label": "person", # or human
+                "wikidata_id": "wd:Q5" # instead of "wd:Q215627", since that is what wikidata says
+            },
+        },
+        {
+            "subject": {
+                "label": package.work,
+            },
+            "relation": {
+                "label": "influenced by",  
+                "wikidata_id": "wdt:P737",
+            },
+            "object": {
+                "label": package.influenced,
+            },
+        },
+          {
+            "subject": {
+                "label": package.influenced,
+            },
+            "relation": {
+                "label": "instance of",  
+                "wikidata_id": "wdt:P31",
+            },
+            "object": {
+                "label": "person", # or human
+                "wikidata_id": "wd:Q5" # instead of "wd:Q215627", since that is what wikidata says
+            },
+        },
+    ]
+
+    return triplets
+
+####-------------------------------------------------------------------------###
 
 @dataclass
 class ArtisticTheme(Template):
@@ -18,6 +409,7 @@ class ArtisticTheme(Template):
     theme: str  # Adoration, Vanitas, Last Supper, Annunciation, Judgment Day, Triumph of Death
 
 
+
 def ArtisticTheme_relation_to_triplet(package: ArtisticTheme):
     triplets = [
         {
@@ -25,7 +417,7 @@ def ArtisticTheme_relation_to_triplet(package: ArtisticTheme):
                 "label": package.work,
             },
             "relation": {
-                "label": "depict",
+                "label": "depicts",
                 "wikidata_id": "wdt:P180",
             },
             "object": {
@@ -58,6 +450,7 @@ class Composition(Template):
 
     work: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
     CompositionOfArtwork: str  # Diagonal lines, symmetry, central figure, perspective grid, foreshortening, overlapping planes
+    contains: str ###---- item or substance loacted within this item but not part of it. e.g. person ----###
 
 
 def Composition_relation_to_triplet(package: Composition):
@@ -67,7 +460,7 @@ def Composition_relation_to_triplet(package: Composition):
                 "label": package.work,
             },
             "relation": {
-                "label": "depict",
+                "label": "depicts",
                 "wikidata_id": "wdt:P180",
             },
             "object": {
@@ -84,13 +477,24 @@ def Composition_relation_to_triplet(package: Composition):
             },
             "object": {
                 "label": "compositional technique",
-                "wikidata_id": "wdt:Q462437",
+                "wikidata_id": "wd:Q462437",
             },
         },
+        # {
+        #     "subject": {
+        #         "label": package.work,
+        #     },
+        #     "relation": {
+        #         "label": "contains",
+        #         "wikidata_id": "wdt:P4330",
+        #     },
+        #     "object": {
+        #         "label": package.contains,
+        #     },
+        # },
     ]
 
     return triplets
-
 
 @dataclass
 class WorkOfArt(Template):
@@ -108,30 +512,17 @@ def WorkOfArt_relation_to_triplet(package: WorkOfArt):
                 "label": package.work,
             },
             "relation": {
-                "label": "depict",
-                "wikidata_id": "wdt:P180",
-            },
-            "object": {
-                "label": package.work,
-            },
-        },
-        {
-            "subject": {
-                "label": package.work,
-            },
-            "relation": {
                 "label": "instance of",
                 "wikidata_id": "wdt:P31",
             },
             "object": {
                 "label": "work of art",
-                "wikidata_id": "wdt:Q838948",
+                "wikidata_id": "wd:Q838948",
             },
         },
     ]
 
     return triplets
-
 
 @dataclass
 class Concept(Template):
@@ -141,7 +532,7 @@ class Concept(Template):
 
     work: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
     ConceptOfArtwork: str  # Harmony, man, nature, balance, duality, chaos, order
-
+    symbolize: str ###---- A specific person that is given in the text, but not necessarily in the depicted in the picture ----###
 
 def Concept_relation_to_triplet(package: Concept):
     triplets = [
@@ -150,7 +541,7 @@ def Concept_relation_to_triplet(package: Concept):
                 "label": package.work,
             },
             "relation": {
-                "label": "depict",
+                "label": "depicts",
                 "wikidata_id": "wdt:P180",
             },
             "object": {
@@ -167,9 +558,21 @@ def Concept_relation_to_triplet(package: Concept):
             },
             "object": {
                 "label": "concept",
-                "wikidata_id": "wdt:Q151885",
+                "wikidata_id": "wd:Q151885",
             },
         },
+        # {
+        #     "subject": {
+        #         "label": package.work,
+        #     },
+        #     "relation": {
+        #         "label": "symbolizes",
+        #         #"wikidata_id": "wdt:P180",
+        #     },
+        #     "object": {
+        #         "label": package.ConceptOfArtwork,
+        #     },
+        # },
     ]
 
     return triplets
@@ -183,6 +586,7 @@ class RhetoricalDevice(Template):
 
     work: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
     device: str  # Irony, allegory, sarcasm, metaphor, symbolism, hyperbole
+    symbolize: str ###---- A specific concept that is given in the text, but not necessarily in the depicted in the picture ----###
 
 
 def RhetoricalDevice_relation_to_triplet(package: RhetoricalDevice):
@@ -192,7 +596,7 @@ def RhetoricalDevice_relation_to_triplet(package: RhetoricalDevice):
                 "label": package.work,
             },
             "relation": {
-                "label": "depict",
+                "label": "depicts",
                 "wikidata_id": "wdt:P180",
             },
             "object": {
@@ -209,9 +613,21 @@ def RhetoricalDevice_relation_to_triplet(package: RhetoricalDevice):
             },
             "object": {
                 "label": "rhetorical device",
-                "wikidata_id": "wdt:Q1762471",
+                "wikidata_id": "wd:Q1762471",
             },
         },
+        # {
+        #     "subject": {
+        #         "label": package.work,
+        #     },
+        #     "relation": {
+        #         "label": "symbolizes",
+        #         #"wikidata_id": "wdt:P180",
+        #     },
+        #     "object": {
+        #         "label": package.device,
+        #     },
+        # },
     ]
 
     return triplets
@@ -236,7 +652,7 @@ def Emotion_relation_to_triplet(package: Emotion):
                 "label": package.work,
             },
             "relation": {
-                "label": "depict",
+                "label": "depicts",
                 "wikidata_id": "wdt:P180",
             },
             "object": {
@@ -278,8 +694,8 @@ def Quality_relation_to_triplet(package: Quality):
                 "label": package.work,
             },
             "relation": {
-                "label": "depict",
-                "wikidata_id": "wdt:P180",
+                "label": "has characteristic",
+                "wikidata_id": "wdt:P1552",
             },
             "object": {
                 "label": package.TypeOfQuality,
@@ -295,7 +711,7 @@ def Quality_relation_to_triplet(package: Quality):
             },
             "object": {
                 "label": "quality",
-                "wikidata_id": "wd:Q185957",
+                "wikidata_id": "wd:Q1207505",  # distinguishing feature rather than Q185957
             },
         },
     ]
@@ -322,7 +738,7 @@ def Color_relation_to_triplet(package: Color):
                 "label": package.work,
             },
             "relation": {
-                "label": "depict",
+                "label": "depicts",
                 "wikidata_id": "wdt:P180",
             },
             "object": {
@@ -364,7 +780,7 @@ def PointInTime_relation_to_triplet(package: PointInTime):
                 "label": package.work,
             },
             "relation": {
-                "label": "depict",
+                "label": "depicts",
                 "wikidata_id": "wdt:P180",
             },
             "object": {
@@ -392,7 +808,7 @@ def PointInTime_relation_to_triplet(package: PointInTime):
 @dataclass
 class Season(Template):
     """
-    Season is a time of year—Spring, Summer, Fall, or Winter—depicted visually.
+    Season is a time of year—Spring, Summer, Fall, or Winter—depictsed visually.
     """
 
     work: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
@@ -406,7 +822,7 @@ def Season_relation_to_triplet(package: Season):
                 "label": package.work,
             },
             "relation": {
-                "label": "depict",
+                "label": "depicts",
                 "wikidata_id": "wdt:P180",
             },
             "object": {
@@ -450,7 +866,7 @@ def Person_relation_to_triplet(package: Person):
                 "label": package.work,
             },
             "relation": {
-                "label": "depict",
+                "label": "depicts",
                 "wikidata_id": "wdt:P180",
             },
             "object": {
@@ -466,8 +882,8 @@ def Person_relation_to_triplet(package: Person):
                 "wikidata_id": "wdt:P31",
             },
             "object": {
-                "label": "person",
-                "wikidata_id": "wd:Q215627",
+                "label": "human",
+                "wikidata_id": "wd:Q5", # instead of q215627 as it is recommende by wikidata
             },
         },
     ]
@@ -494,7 +910,7 @@ def MythicalCharacter_relation_to_triplet(package: MythicalCharacter):
                 "label": package.work,
             },
             "relation": {
-                "label": "depict",
+                "label": "depicts",
                 "wikidata_id": "wdt:P180",
             },
             "object": {
@@ -511,7 +927,7 @@ def MythicalCharacter_relation_to_triplet(package: MythicalCharacter):
             },
             "object": {
                 "label": "mythical character",
-                "wikidata_id": "wd:Q215627",
+                "wikidata_id": "wd:Q4271324",
             },
         },
     ]
@@ -538,7 +954,7 @@ def ReligiousCharacter_relation_to_triplet(package: ReligiousCharacter):
                 "label": package.work,
             },
             "relation": {
-                "label": "depict",
+                "label": "depicts",
                 "wikidata_id": "wdt:P180",
             },
             "object": {
@@ -582,7 +998,7 @@ def AnatomicalStructure_relation_to_triplet(package: AnatomicalStructure):
                 "label": package.work,
             },
             "relation": {
-                "label": "depict",
+                "label": "depicts",
                 "wikidata_id": "wdt:P180",
             },
             "object": {
@@ -624,7 +1040,7 @@ def Occupation_relation_to_triplet(package: Occupation):
                 "label": package.work,
             },
             "relation": {
-                "label": "depict",
+                "label": "depicts",
                 "wikidata_id": "wdt:P180",
             },
             "object": {
@@ -654,7 +1070,7 @@ class Posture(Template):
     """
     Posture is the pose or stance of a figure.
     """
-
+    person: str # a depicted person ###-------        
     work: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
     TypeOfPosture: str  # Reclining, head tilted, moving, sitting, standing, kneeling, running, gesturing
 
@@ -666,7 +1082,7 @@ def Posture_relation_to_triplet(package: Posture):
                 "label": package.work,
             },
             "relation": {
-                "label": "depict",
+                "label": "depicts",
                 "wikidata_id": "wdt:P180",
             },
             "object": {
@@ -686,6 +1102,18 @@ def Posture_relation_to_triplet(package: Posture):
                 "wikidata_id": "wd:Q8514257",
             },
         },
+        # {
+        #     "subject": {
+        #         "label": package.person,
+        #     },
+        #     "relation": {
+        #         "label": "has characteristic",
+        #         "wikidata_id": "wdt:P1552",
+        #     },
+        #     "object": {
+        #         "label": package.TypeOfQuality,
+        #     },
+        # },
     ]
 
     return triplets
@@ -708,7 +1136,7 @@ def ArchitecturalStructure_relation_to_triplet(package: ArchitecturalStructure):
                 "label": package.work,
             },
             "relation": {
-                "label": "depict",
+                "label": "depicts",
                 "wikidata_id": "wdt:P180",
             },
             "object": {
@@ -752,7 +1180,7 @@ def GeographicalFeature_relation_to_triplet(package: GeographicalFeature):
                 "label": package.work,
             },
             "relation": {
-                "label": "depict",
+                "label": "depicts",
                 "wikidata_id": "wdt:P180",
             },
             "object": {
@@ -796,7 +1224,7 @@ def MythicalLocation_relation_to_triplet(package: MythicalLocation):
                 "label": package.work,
             },
             "relation": {
-                "label": "depict",
+                "label": "depicts",
                 "wikidata_id": "wdt:P180",
             },
             "object": {
@@ -820,6 +1248,8 @@ def MythicalLocation_relation_to_triplet(package: MythicalLocation):
 
     return triplets
 
+####### THIS IS MISSING THE RELIGIOUS LOCATION!!!########
+
 
 @dataclass
 class PhysicalLocation(Template):
@@ -838,7 +1268,7 @@ def PhysicalLocation_relation_to_triplet(package: PhysicalLocation):
                 "label": package.work,
             },
             "relation": {
-                "label": "depict",
+                "label": "depicts",
                 "wikidata_id": "wdt:P180",
             },
             "object": {
@@ -880,7 +1310,7 @@ def PhysicalSurface_relation_to_triplet(package: PhysicalSurface):
                 "label": package.work,
             },
             "relation": {
-                "label": "depict",
+                "label": "depicts",
                 "wikidata_id": "wdt:P180",
             },
             "object": {
@@ -922,7 +1352,7 @@ def Animal_relation_to_triplet(package: Animal):
                 "label": package.work,
             },
             "relation": {
-                "label": "depict",
+                "label": "depicts",
                 "wikidata_id": "wdt:P180",
             },
             "object": {
@@ -966,7 +1396,7 @@ def MythicalAnimal_relation_to_triplet(package: MythicalAnimal):
                 "label": package.work,
             },
             "relation": {
-                "label": "depict",
+                "label": "depicts",
                 "wikidata_id": "wdt:P180",
             },
             "object": {
@@ -1008,7 +1438,7 @@ def Food_relation_to_triplet(package: Food):
                 "label": package.work,
             },
             "relation": {
-                "label": "depict",
+                "label": "depicts",
                 "wikidata_id": "wdt:P180",
             },
             "object": {
@@ -1052,7 +1482,7 @@ def PhysicalObject_relation_to_triplet(package: PhysicalObject):
                 "label": package.work,
             },
             "relation": {
-                "label": "depict",
+                "label": "depicts",
                 "wikidata_id": "wdt:P180",
             },
             "object": {
@@ -1094,7 +1524,7 @@ def Plant_relation_to_triplet(package: Plant):
                 "label": package.work,
             },
             "relation": {
-                "label": "depict",
+                "label": "depicts",
                 "wikidata_id": "wdt:P180",
             },
             "object": {
@@ -1139,6 +1569,7 @@ ENTITY_DEFINITIONS: List[Template] = [
     ArchitecturalStructure,
     GeographicalFeature,
     MythicalLocation,
+    #ReligiousLocation,
     PhysicalLocation,
     PhysicalSurface,
     Animal,
@@ -1146,6 +1577,15 @@ ENTITY_DEFINITIONS: List[Template] = [
     Food,
     PhysicalObject,
     Plant,
+    # ArtGenre,
+    # ArtMovement,
+    # ArtMaterial,
+    # ArtisticTechnique,
+    # TypeOfWorkOfArt,
+    # PointInTime,
+    # StartTime,
+    # EndTime,
+    # Person
 ]
 
 ENTITY_PARSER = {
@@ -1168,6 +1608,7 @@ ENTITY_PARSER = {
     "ArchitecturalStructure": ArchitecturalStructure_relation_to_triplet,
     "GeographicalFeature": GeographicalFeature_relation_to_triplet,
     "MythicalLocation": MythicalLocation_relation_to_triplet,  # wire to the right function
+    #"ReligiousLocation": ReligiousLocation_relation_to_triplet,
     "PhysicalLocation": PhysicalLocation_relation_to_triplet,
     "PhysicalSurface": PhysicalSurface_relation_to_triplet,  # now correct
     "Animal": Animal_relation_to_triplet,
@@ -1175,4 +1616,13 @@ ENTITY_PARSER = {
     "Food": Food_relation_to_triplet,
     "PhysicalObject": PhysicalObject_relation_to_triplet,
     "Plant": Plant_relation_to_triplet,
+    "ArtGenre": ArtGenre_relation_to_triplet,
+    "ArtMovement": ArtMovement_relation_to_triplet,
+    "ArtMaterial": ArtMaterial_relation_to_triplet,
+    "ArtisticTechnique": ArtisticTechnique_relation_to_triplet,
+    "TypeOfWorkOfArt": TypeOfWorkOfArt_relation_to_triplet, 
+    "PointInTime": PointInTime_relation_to_triplet, 
+    "StartTime": StartTime_relation_to_triplet,
+    "EndTime": EndTime_relation_to_triplet,
+    "Person": Person_relation_to_triplet
 }
