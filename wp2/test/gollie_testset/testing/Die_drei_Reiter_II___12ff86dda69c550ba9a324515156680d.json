@@ -1,35 +1,95 @@
 {
     "horse": {
         "has characteristic": [
-            "heavy",
-            "brown"
-        ]
-    },
-    "fur": {
-        "has characteristic": "shiny"
-    },
-    "pace": {
-        "has characteristic": "slow"
-    },
-    "discharge": {
-        "has characteristic": "intense"
-    },
-    "movement": {
-        "has characteristic": "gentle"
-    },
-    "closure": {
-        "has characteristic": "Left-wing"
+            [
+                "heavy",
+                "brown"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "Animal"
     },
     "blue": {
         "has characteristic": [
-            "metallic",
-            "bright"
-        ]
+            [
+                "bright",
+                "metallic"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "Color"
     },
-    "breast": {
-        "has characteristic": "white"
+    "fur": {
+        "has characteristic": [
+            "shiny",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalSurface"
     },
     "force": {
-        "has characteristic": "accumulated"
+        "has characteristic": [
+            "accumulated",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Concept"
+    },
+    "discharge": {
+        "has characteristic": [
+            "intense",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Concept"
+    },
+    "pace": {
+        "has characteristic": [
+            "slow",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Posture"
+    },
+    "movement": {
+        "has characteristic": [
+            "gentle",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "closure": {
+        "has characteristic": [
+            "Left-wing",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "breast": {
+        "has characteristic": [
+            "white",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
     }
 }

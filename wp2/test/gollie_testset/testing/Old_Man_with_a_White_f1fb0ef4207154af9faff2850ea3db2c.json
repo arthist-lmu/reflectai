@@ -1,39 +1,106 @@
 {
-    "costumes": {
-        "has characteristic": "fanciful"
+    "hat": {
+        "has characteristic": [
+            "soft",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
     "garment": {
-        "has characteristic": "brown"
+        "has characteristic": [
+            "brown",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "eyebrows": {
+        "has characteristic": [
+            "raised",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
+    },
+    "beard": {
+        "has characteristic": [
+            "white",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
+    },
+    "figure": {
+        "has characteristic": [
+            "bust-length",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "models": {
         "has characteristic": [
-            "living",
-            "young",
-            "old"
-        ]
-    },
-    "beard": {
-        "has characteristic": "white"
+            [
+                "living",
+                "young",
+                "old"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Quality",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "Person"
     },
     "mouth": {
-        "has characteristic": "opened"
+        "has characteristic": [
+            "opened",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
+    },
+    "facial expressions": {
+        "has characteristic": [
+            "lively",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Posture"
     },
     "man": {
         "has characteristic": [
-            "old",
-            "bearded"
-        ]
+            [
+                "bearded",
+                "old"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "Person"
     },
-    "facial expressions": {
-        "has characteristic": "lively"
-    },
-    "eyebrows": {
-        "has characteristic": "raised"
-    },
-    "hat": {
-        "has characteristic": "soft"
-    },
-    "figure": {
-        "has characteristic": "bust-length"
+    "costumes": {
+        "has characteristic": [
+            "fanciful",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     }
 }

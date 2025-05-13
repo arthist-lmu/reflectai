@@ -1,49 +1,139 @@
 {
-    "tray": {
-        "contains": "sweets",
-        "has characteristic": "lacquered"
-    },
     "carrying": {
-        "contains": "tray"
+        "contains": [
+            "tray",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "Posture"
+    },
+    "street musicians": {
+        "has characteristic": [
+            [
+                "playing",
+                "itinerant",
+                "female",
+                "Two"
+            ],
+            {
+                "o_class_name": [
+                    "Posture",
+                    "Quality",
+                    "Quality",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "Occupation",
+        "symbolizes": [
+            "torioi",
+            {
+                "o_class_name": "Occupation"
+            }
+        ]
     },
     "Street Musicians": {
         "depicts": [
-            "shamisen",
-            "street musicians",
-            "shop employee",
-            "kokyū"
+            [
+                "shamisen",
+                "kokyū",
+                "street musicians",
+                "shop employee"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalObject",
+                    "PhysicalObject",
+                    "Occupation",
+                    "Occupation"
+                ]
+            }
         ],
-        "influenced by": "abbreviated', ryakuga, style",
-        "created by": "Ishikawa Toyonobu"
-    },
-    "shop employee": {
-        "has characteristic": "carrying"
-    },
-    "seen from the back": {
-        "contains": "playing"
-    },
-    "street musicians": {
-        "symbolizes": "torioi",
-        "has characteristic": [
-            "Two",
-            "itinerant",
-            "playing",
-            "female"
-        ]
-    },
-    "playing": {
-        "contains": [
-            "kokyū",
-            "shamisen"
+        "s_class_name": "WorkOfArt",
+        "created by": [
+            "Ishikawa Toyonobu",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "influenced by": [
+            "abbreviated', ryakuga, style",
+            {
+                "o_class_name": "ArtGenre"
+            }
         ]
     },
     "hats": {
         "has characteristic": [
-            "simple",
-            "straw"
+            [
+                "straw",
+                "simple"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalSurface",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "tray": {
+        "has characteristic": [
+            "lacquered",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalObject",
+        "contains": [
+            "sweets",
+            {
+                "o_class_name": "Food"
+            }
         ]
     },
+    "seen from the back": {
+        "contains": [
+            "playing",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "playing": {
+        "contains": [
+            [
+                "shamisen",
+                "kokyū"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalObject",
+                    "PhysicalObject"
+                ]
+            }
+        ],
+        "s_class_name": "Posture"
+    },
     "To the left": {
-        "contains": "shop employee"
+        "contains": [
+            "shop employee",
+            {
+                "o_class_name": "Occupation"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "shop employee": {
+        "has characteristic": [
+            "carrying",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "Occupation"
     }
 }

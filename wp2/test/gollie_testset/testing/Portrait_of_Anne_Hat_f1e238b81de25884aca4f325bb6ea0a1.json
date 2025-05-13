@@ -1,25 +1,76 @@
 {
     "Portrait of Anne Hathaway": {
         "instance of": [
-            "portrait",
-            "line-drawing"
+            [
+                "line-drawing",
+                "portrait"
+            ],
+            {
+                "o_class_name": [
+                    "TypeOfWorkOfArt",
+                    "TypeOfWorkOfArt"
+                ]
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "created by": [
+            "Sir Nathaniel Curzon",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "created in": [
+            "1708",
+            {
+                "o_class_name": "PointInTime"
+            }
         ],
         "depicts": [
-            "ruff",
-            "woman",
-            "cap"
+            [
+                "woman",
+                "cap",
+                "ruff"
+            ],
+            {
+                "o_class_name": [
+                    "Person",
+                    "PhysicalObject",
+                    "PhysicalObject"
+                ]
+            }
         ],
-        "influenced by": "Elizabethan original",
-        "created in": "1708",
-        "created by": "Sir Nathaniel Curzon"
+        "influenced by": [
+            "Elizabethan original",
+            {
+                "o_class_name": "WorkOfArt"
+            }
+        ]
     },
     "woman": {
-        "has characteristic": "young"
+        "has characteristic": [
+            "young",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Person"
     },
     "ruff": {
-        "has characteristic": "16th-century"
+        "has characteristic": [
+            "16th-century",
+            {
+                "o_class_name": "PointInTime"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
     "cap": {
-        "has characteristic": "16th-century"
+        "has characteristic": [
+            "16th-century",
+            {
+                "o_class_name": "PointInTime"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     }
 }

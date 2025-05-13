@@ -1,36 +1,106 @@
 {
-    "Nandina (Nandina domestica)": {
-        "fabrication method": "outlines with graphite",
-        "made from material": [
-            "opaque watercolour",
-            "graphite"
+    "single species": {
+        "has characteristic": [
+            "various stages of bloom",
+            {
+                "o_class_name": "Concept"
+            }
         ],
-        "created by": "Withoos",
-        "instance of": "flower drawings"
+        "s_class_name": "Plant"
+    },
+    "Nandina (Nandina domestica)": {
+        "fabrication method": [
+            "outlines with graphite",
+            {
+                "o_class_name": "ArtisticTechnique"
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "made from material": [
+            [
+                "graphite",
+                "opaque watercolour",
+                "watercolour"
+            ],
+            {
+                "o_class_name": [
+                    "ArtMaterial",
+                    "ArtMaterial",
+                    "ArtMaterial"
+                ]
+            }
+        ],
+        "created by": [
+            "Withoos",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "instance of": [
+            "flower drawings",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ]
     },
     "Nandina (Nandina domestica": {
         "depicts": [
-            "flower",
-            "leaves",
-            "at the centre",
-            "single species"
-        ]
+            [
+                "leaves",
+                "at the centre",
+                "flower",
+                "single species"
+            ],
+            {
+                "o_class_name": [
+                    "Plant",
+                    "Composition",
+                    "Plant",
+                    "Plant"
+                ]
+            }
+        ],
+        "s_class_name": "WorkOfArt"
     },
     "leaves": {
         "has characteristic": [
-            "white",
-            "two-dimensional",
-            "darker"
+            [
+                "darker",
+                "two-dimensional",
+                "white"
+            ],
+            {
+                "o_class_name": [
+                    "Color",
+                    "Quality",
+                    "Color"
+                ]
+            }
+        ],
+        "s_class_name": "Plant"
+    },
+    "sheet": {
+        "has characteristic": [
+            "empty",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Composition",
+        "contains": [
+            "at the centre",
+            {
+                "o_class_name": "Composition"
+            }
         ]
     },
     "at the centre": {
-        "contains": "single species"
-    },
-    "single species": {
-        "has characteristic": "various stages of bloom"
-    },
-    "sheet": {
-        "contains": "at the centre",
-        "has characteristic": "empty"
+        "contains": [
+            "single species",
+            {
+                "o_class_name": "Plant"
+            }
+        ],
+        "s_class_name": "Composition"
     }
 }

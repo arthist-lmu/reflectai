@@ -1,11 +1,29 @@
 {
+    "Leopoldsberg": {
+        "has characteristic": [
+            "prominent",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalLocation"
+    },
     "castle": {
-        "has characteristic": "old"
+        "has characteristic": [
+            "old",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
     },
     "silhouette": {
-        "has characteristic": "pale"
-    },
-    "Leopoldsberg": {
-        "has characteristic": "prominent"
+        "has characteristic": [
+            "pale",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Concept"
     }
 }

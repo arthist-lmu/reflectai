@@ -1,73 +1,222 @@
 {
     "Parable of the Lost Piece of Silver": {
-        "instance of": "painting",
-        "depicts": [
-            "at the far left",
-            "piece of silver",
-            "interior",
-            "scene"
+        "fabrication method": [
+            "supple brushwork",
+            {
+                "o_class_name": "ArtisticTechnique"
+            }
         ],
-        "fabrication method": "supple brushwork",
-        "symbolizes": "positive quintessence of the story",
-        "created by": "Schalcken",
+        "s_class_name": "WorkOfArt",
+        "created in": [
+            "early 1680s",
+            {
+                "o_class_name": "PointInTime"
+            }
+        ],
         "contains": [
-            "friends and neighbors",
-            "man"
+            [
+                "friends and neighbors",
+                "man"
+            ],
+            {
+                "o_class_name": [
+                    "Person",
+                    "Person"
+                ]
+            }
         ],
-        "influenced by": "engraving",
-        "created in": "early 1680s",
+        "depicts": [
+            [
+                "scene",
+                "at the far left",
+                "piece of silver",
+                "interior"
+            ],
+            {
+                "o_class_name": [
+                    "Composition",
+                    "Composition",
+                    "PhysicalObject",
+                    "ArchitecturalStructure"
+                ]
+            }
+        ],
+        "instance of": [
+            "painting",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ],
+        "symbolizes": [
+            "positive quintessence of the story",
+            {
+                "o_class_name": "Concept"
+            }
+        ],
+        "influenced by": [
+            "engraving",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ],
         "made from material": [
-            "canvas",
-            "small format"
-        ]
-    },
-    "girl": {
-        "has characteristic": "dress"
-    },
-    "dress": {
-        "has characteristic": "green"
-    },
-    "face": {
-        "has characteristic": "top half"
-    },
-    "scene": {
-        "has characteristic": [
-            "nocturnal",
-            "palette"
+            [
+                "small format",
+                "canvas"
+            ],
+            {
+                "o_class_name": [
+                    "ArtMaterial",
+                    "ArtMaterial"
+                ]
+            }
         ],
-        "contains": "at the lower right"
-    },
-    "painting": {
-        "instance of": "small format"
-    },
-    "concealed in shadow": {
-        "has characteristic": "face"
+        "created by": [
+            "Schalcken",
+            {
+                "o_class_name": "Person"
+            }
+        ]
     },
     "at the far left": {
         "contains": [
-            "concealed in shadow",
-            "man"
-        ]
+            [
+                "concealed in shadow",
+                "man"
+            ],
+            {
+                "o_class_name": [
+                    "Composition",
+                    "Person"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "face": {
+        "has characteristic": [
+            "top half",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
     },
     "palette": {
-        "has characteristic": "light"
+        "has characteristic": [
+            "light",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Color"
     },
-    "piece of silver": {
-        "symbolizes": "recovery"
+    "scene": {
+        "contains": [
+            "at the lower right",
+            {
+                "o_class_name": "Composition"
+            }
+        ],
+        "s_class_name": "Composition",
+        "has characteristic": [
+            [
+                "palette",
+                "nocturnal"
+            ],
+            {
+                "o_class_name": [
+                    "Color",
+                    "Quality"
+                ]
+            }
+        ]
     },
-    "green": {
-        "has characteristic": "light"
+    "dress": {
+        "has characteristic": [
+            "green",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
     "man": {
         "has characteristic": [
-            "resembles the painter",
-            "looks at the viewer"
-        ]
+            [
+                "resembles the painter",
+                "looks at the viewer"
+            ],
+            {
+                "o_class_name": [
+                    "Concept",
+                    "Posture"
+                ]
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "painting": {
+        "instance of": [
+            "small format",
+            {
+                "o_class_name": "ArtMaterial"
+            }
+        ],
+        "s_class_name": "TypeOfWorkOfArt"
+    },
+    "green": {
+        "has characteristic": [
+            "light",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Color"
+    },
+    "concealed in shadow": {
+        "has characteristic": [
+            "face",
+            {
+                "o_class_name": "AnatomicalStructure"
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "at the lower right": {
-        "contains": "girl"
+        "contains": [
+            "girl",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "piece of silver": {
+        "symbolizes": [
+            "recovery",
+            {
+                "o_class_name": "Concept"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "girl": {
+        "has characteristic": [
+            "dress",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "Person"
     },
     "interior": {
-        "has characteristic": "richly appointed"
+        "has characteristic": [
+            "richly appointed",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
     }
 }

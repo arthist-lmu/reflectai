@@ -1,48 +1,133 @@
 {
-    "above": {
-        "contains": "pine forest"
-    },
-    "at the foot": {
-        "contains": [
-            "deadwood",
-            "stream",
-            "shepherd"
-        ]
-    },
     "landscape": {
-        "has characteristic": "heroic"
+        "has characteristic": [
+            "heroic",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Concept"
     },
     "Der Schmadribachfall": {
         "depicts": [
-            "at the foot",
-            "mountain range",
-            "waterfall",
-            "mountain massif",
-            "pine forest"
+            [
+                "pine forest",
+                "waterfall",
+                "at the foot",
+                "mountain massif",
+                "mountain range"
+            ],
+            {
+                "o_class_name": [
+                    "GeographicalFeature",
+                    "GeographicalFeature",
+                    "Composition",
+                    "GeographicalFeature",
+                    "GeographicalFeature"
+                ]
+            }
         ],
-        "contains": "shepherd",
+        "s_class_name": "WorkOfArt",
+        "created by": [
+            "Koch's",
+            {
+                "o_class_name": "Person"
+            }
+        ],
         "symbolizes": [
-            "landscape",
-            "nature"
+            [
+                "nature",
+                "landscape"
+            ],
+            {
+                "o_class_name": [
+                    "Concept",
+                    "Concept"
+                ]
+            }
         ],
-        "created by": "Koch's"
+        "contains": [
+            "shepherd",
+            {
+                "o_class_name": "Person"
+            }
+        ]
     },
-    "mountain": {
-        "has characteristic": "at the foot"
-    },
-    "stream": {
-        "has characteristic": "wild"
+    "at the foot": {
+        "contains": [
+            [
+                "shepherd",
+                "stream",
+                "deadwood"
+            ],
+            {
+                "o_class_name": [
+                    "Occupation",
+                    "GeographicalFeature",
+                    "PhysicalObject"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "pine forest": {
         "has characteristic": [
-            "green",
-            "dense"
-        ]
+            [
+                "green",
+                "dense"
+            ],
+            {
+                "o_class_name": [
+                    "Color",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "GeographicalFeature"
+    },
+    "above": {
+        "contains": [
+            "pine forest",
+            {
+                "o_class_name": "GeographicalFeature"
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "green": {
-        "has characteristic": "dark"
+        "has characteristic": [
+            "dark",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Color"
+    },
+    "stream": {
+        "has characteristic": [
+            "wild",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "GeographicalFeature"
     },
     "nature": {
-        "has characteristic": "impoverished"
+        "has characteristic": [
+            "impoverished",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Concept"
+    },
+    "mountain": {
+        "has characteristic": [
+            "at the foot",
+            {
+                "o_class_name": "Composition"
+            }
+        ],
+        "s_class_name": "GeographicalFeature"
     }
 }

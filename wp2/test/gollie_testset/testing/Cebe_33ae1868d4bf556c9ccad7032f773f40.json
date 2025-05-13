@@ -1,37 +1,106 @@
 {
-    "in the middle": {
-        "contains": "figure"
-    },
-    "figure": {
-        "has characteristic": [
-            "on the head",
-            "standing on his head"
-        ]
-    },
     "background": {
         "has characteristic": [
-            "red",
-            "multi-layered"
+            [
+                "red",
+                "multi-layered"
+            ],
+            {
+                "o_class_name": [
+                    "Color",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "Cebe": {
+        "fabrication method": [
+            "pasto-like linear and doted finish",
+            {
+                "o_class_name": "ArtisticTechnique"
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "depicts": [
+            [
+                "background",
+                "in the middle",
+                "lines and dots"
+            ],
+            {
+                "o_class_name": [
+                    "Composition",
+                    "Composition",
+                    "Composition"
+                ]
+            }
+        ],
+        "created in": [
+            "1990s",
+            {
+                "o_class_name": "PointInTime"
+            }
+        ],
+        "instance of": [
+            "painting",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ],
+        "created by": [
+            "Georg Baselitz",
+            {
+                "o_class_name": "Person"
+            }
         ]
     },
     "blue": {
-        "has characteristic": "deep"
-    },
-    "Cebe": {
-        "created by": "Georg Baselitz",
-        "depicts": [
-            "lines and dots",
-            "background",
-            "in the middle"
+        "has characteristic": [
+            "deep",
+            {
+                "o_class_name": "Quality"
+            }
         ],
-        "fabrication method": "pasto-like linear and doted finish",
-        "instance of": "painting",
-        "created in": "1990s"
+        "s_class_name": "Color"
+    },
+    "in the middle": {
+        "contains": [
+            "figure",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "figure": {
+        "has characteristic": [
+            [
+                "on the head",
+                "standing on his head"
+            ],
+            {
+                "o_class_name": [
+                    "Posture",
+                    "Posture"
+                ]
+            }
+        ],
+        "s_class_name": "Person"
     },
     "lines and dots": {
         "has characteristic": [
-            "blue",
-            "pastose"
-        ]
+            [
+                "pastose",
+                "blue"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Color"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
     }
 }

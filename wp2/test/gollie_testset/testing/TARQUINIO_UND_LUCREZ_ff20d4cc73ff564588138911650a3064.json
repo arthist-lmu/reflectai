@@ -1,37 +1,114 @@
 {
     "TARQUINIO UND LUCREZIA": {
+        "created in": [
+            "Renaissance",
+            {
+                "o_class_name": "PointInTime"
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "made from material": [
+            "OIL on canvas",
+            {
+                "o_class_name": "ArtMaterial"
+            }
+        ],
+        "instance of": [
+            "painting",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ],
         "depicts": [
-            "king's son Sextus Tarquinius",
-            "moment she is being oppressed",
-            "Lucrezia"
+            [
+                "Lucrezia",
+                "king's son Sextus Tarquinius",
+                "moment she is being oppressed"
+            ],
+            {
+                "o_class_name": [
+                    "Person",
+                    "Person",
+                    "Composition"
+                ]
+            }
         ],
-        "created in": "Renaissance",
-        "instance of": "painting",
-        "created by": "Pietro Liberi",
-        "made from material": "OIL on canvas",
+        "created by": [
+            "Pietro Liberi",
+            {
+                "o_class_name": "Person"
+            }
+        ],
         "symbolizes": [
-            "erotic aspect",
-            "perseverance"
+            [
+                "perseverance",
+                "erotic aspect"
+            ],
+            {
+                "o_class_name": [
+                    "Concept",
+                    "Concept"
+                ]
+            }
         ],
-        "influenced by": "Alessandro Varotari"
+        "influenced by": [
+            "Alessandro Varotari",
+            {
+                "o_class_name": "Person"
+            }
+        ]
     },
     "Lucrezia": {
         "has characteristic": [
-            "virtue",
-            "beauty",
-            "Roman period"
-        ]
+            [
+                "Roman period",
+                "virtue",
+                "beauty"
+            ],
+            {
+                "o_class_name": [
+                    "PointInTime",
+                    "Concept",
+                    "Concept"
+                ]
+            }
+        ],
+        "s_class_name": "Person"
     },
     "two figures": {
-        "has characteristic": "close-up"
-    },
-    "Lucrezia's": {
-        "has characteristic": "perseverance"
-    },
-    "Roman period": {
-        "has characteristic": "mythical early"
+        "has characteristic": [
+            "close-up",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Person"
     },
     "moment she is being oppressed": {
-        "has characteristic": "dramatic"
+        "has characteristic": [
+            "dramatic",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "Lucrezia's": {
+        "has characteristic": [
+            "perseverance",
+            {
+                "o_class_name": "Concept"
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "Roman period": {
+        "has characteristic": [
+            "mythical early",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PointInTime"
     }
 }

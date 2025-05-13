@@ -1,14 +1,38 @@
 {
-    "beam": {
-        "has characteristic": "thin"
-    },
     "viewpoint": {
-        "has characteristic": "elevated"
-    },
-    "view": {
-        "has characteristic": "local"
+        "has characteristic": [
+            "elevated",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "colors": {
-        "has characteristic": "bright"
+        "has characteristic": [
+            "bright",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Color"
+    },
+    "beam": {
+        "has characteristic": [
+            "thin",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "view": {
+        "has characteristic": [
+            "local",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Composition"
     }
 }

@@ -1,34 +1,108 @@
 {
     "BÜSTE EINES JUNGEN MÄDCHENS „SUZON“": {
-        "instance of": "bust",
         "depicts": [
-            "head",
-            "sole",
+            [
+                "head",
+                "bust",
+                "sole",
+                "hair"
+            ],
+            {
+                "o_class_name": [
+                    "AnatomicalStructure",
+                    "WorkOfArt",
+                    "ArchitecturalStructure",
+                    "AnatomicalStructure"
+                ]
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "created by": [
+            "Rodin's",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "instance of": [
             "bust",
-            "hair"
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
         ],
-        "influenced by": "late 18th century plastic,",
         "made from material": [
-            "golden-yellow bronze",
-            "bronze cast iron"
+            [
+                "golden-yellow bronze",
+                "bronze cast iron"
+            ],
+            {
+                "o_class_name": [
+                    "ArtMaterial",
+                    "ArtMaterial"
+                ]
+            }
         ],
-        "created in": "1872/73",
-        "fabrication method": "cold-worked",
-        "created by": "Rodin's"
-    },
-    "sole": {
-        "has characteristic": "round, curved"
-    },
-    "forehead": {
-        "has characteristic": "hair"
-    },
-    "head": {
-        "has characteristic": "to the left"
+        "created in": [
+            "1872/73",
+            {
+                "o_class_name": "PointInTime"
+            }
+        ],
+        "influenced by": [
+            "late 18th century plastic,",
+            {
+                "o_class_name": "ArtGenre"
+            }
+        ],
+        "fabrication method": [
+            "cold-worked",
+            {
+                "o_class_name": "ArtisticTechnique"
+            }
+        ]
     },
     "attached": {
-        "contains": "sole"
+        "contains": [
+            "sole",
+            {
+                "o_class_name": "ArchitecturalStructure"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "sole": {
+        "has characteristic": [
+            "round, curved",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
+    },
+    "head": {
+        "has characteristic": [
+            "to the left",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
     },
     "bust": {
-        "has characteristic": "female"
+        "has characteristic": [
+            "female",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "WorkOfArt"
+    },
+    "forehead": {
+        "has characteristic": [
+            "hair",
+            {
+                "o_class_name": "AnatomicalStructure"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
     }
 }

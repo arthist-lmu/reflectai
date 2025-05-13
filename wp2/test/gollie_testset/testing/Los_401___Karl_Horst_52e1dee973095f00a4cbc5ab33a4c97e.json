@@ -1,24 +1,69 @@
 {
-    "In front of": {
-        "contains": "façade"
-    },
-    "Ohne Titel (Zeitgeist mit Springer)": {
-        "depicts": [
-            "Berlin metropolitan area",
-            "mountain of sand and debris",
-            "sky",
-            "Gropiusbau"
-        ],
-        "created in": "1986",
-        "created by": "Karl Horst Hödicke"
-    },
-    "mountain of sand and debris": {
-        "symbolizes": "dystopian"
-    },
     "Gropiusbau": {
-        "has characteristic": "façade"
+        "has characteristic": [
+            "façade",
+            {
+                "o_class_name": "PhysicalSurface"
+            }
+        ],
+        "s_class_name": "PhysicalLocation"
     },
     "sky": {
-        "has characteristic": "red"
+        "has characteristic": [
+            "red",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "Ohne Titel (Zeitgeist mit Springer)": {
+        "created in": [
+            "1986",
+            {
+                "o_class_name": "PointInTime"
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "depicts": [
+            [
+                "sky",
+                "Berlin metropolitan area",
+                "mountain of sand and debris",
+                "Gropiusbau"
+            ],
+            {
+                "o_class_name": [
+                    "Composition",
+                    "PhysicalLocation",
+                    "GeographicalFeature",
+                    "PhysicalLocation"
+                ]
+            }
+        ],
+        "created by": [
+            "Karl Horst Hödicke",
+            {
+                "o_class_name": "Person"
+            }
+        ]
+    },
+    "mountain of sand and debris": {
+        "symbolizes": [
+            "dystopian",
+            {
+                "o_class_name": "Concept"
+            }
+        ],
+        "s_class_name": "GeographicalFeature"
+    },
+    "In front of": {
+        "contains": [
+            "façade",
+            {
+                "o_class_name": "PhysicalSurface"
+            }
+        ],
+        "s_class_name": "Composition"
     }
 }

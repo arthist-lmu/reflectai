@@ -1,56 +1,158 @@
 {
-    "hat": {
-        "has characteristic": [
-            "brim",
-            "wide-brimmed"
-        ]
-    },
     "model": {
         "has characteristic": [
-            "similar",
-            "bearded"
-        ]
-    },
-    "musical instrument": {
-        "has characteristic": "crude"
-    },
-    "shadows": {
-        "has characteristic": "subtle"
-    },
-    "face": {
-        "has characteristic": "wrinkled"
-    },
-    "clothing": {
-        "has characteristic": "tattered"
-    },
-    "man": {
-        "has characteristic": "old"
-    },
-    "festivities": {
-        "has characteristic": "joyful"
-    },
-    "beard": {
-        "has characteristic": "gray"
-    },
-    "depiction": {
-        "has characteristic": "lifelike"
-    },
-    "musician": {
-        "has characteristic": "old"
+            [
+                "bearded",
+                "similar"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "Person"
     },
     "patchwork": {
-        "has characteristic": "visible"
+        "has characteristic": [
+            "visible",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalSurface"
+    },
+    "face": {
+        "has characteristic": [
+            "wrinkled",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
+    },
+    "hat": {
+        "has characteristic": [
+            [
+                "wide-brimmed",
+                "brim"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "PhysicalSurface"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
     "half-length depictions": {
-        "has characteristic": "comparable"
+        "has characteristic": [
+            "comparable",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Composition"
     },
-    "instrument": {
-        "has characteristic": "handmade"
+    "musical instrument": {
+        "has characteristic": [
+            "crude",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
     "celebration": {
-        "has characteristic": "energetic"
+        "has characteristic": [
+            "energetic",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Concept"
+    },
+    "shadows": {
+        "has characteristic": [
+            "subtle",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Concept"
+    },
+    "beard": {
+        "has characteristic": [
+            "gray",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
+    },
+    "clothing": {
+        "has characteristic": [
+            "tattered",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "depiction": {
+        "has characteristic": [
+            "lifelike",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Concept"
     },
     "shoulder": {
-        "has characteristic": "left"
+        "has characteristic": [
+            "left",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
+    },
+    "festivities": {
+        "has characteristic": [
+            "joyful",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Concept"
+    },
+    "instrument": {
+        "has characteristic": [
+            "handmade",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "musician": {
+        "has characteristic": [
+            "old",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Occupation"
+    },
+    "man": {
+        "has characteristic": [
+            "old",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Person"
     }
 }

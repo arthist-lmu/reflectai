@@ -1,56 +1,160 @@
 {
-    "hair": {
-        "has characteristic": "less curly"
-    },
     "cloak": {
         "has characteristic": [
-            "rich",
-            "black"
-        ]
-    },
-    "gesture": {
-        "has characteristic": "elegant"
-    },
-    "sitter": {
-        "has characteristic": [
-            "grandeur",
-            "cloak"
-        ]
-    },
-    "man": {
-        "has characteristic": "burgher"
+            [
+                "black",
+                "rich"
+            ],
+            {
+                "o_class_name": [
+                    "Color",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
     "backdrop": {
         "contains": [
-            "architecture",
-            "sky",
-            "classical ambience"
+            [
+                "classical ambience",
+                "architecture",
+                "sky"
+            ],
+            {
+                "o_class_name": [
+                    "Concept",
+                    "ArchitecturalStructure",
+                    "GeographicalFeature"
+                ]
+            }
         ],
-        "symbolizes": "grandeur"
+        "s_class_name": "Composition",
+        "symbolizes": [
+            "grandeur",
+            {
+                "o_class_name": "Concept"
+            }
+        ]
+    },
+    "sitter": {
+        "has characteristic": [
+            [
+                "grandeur",
+                "cloak"
+            ],
+            {
+                "o_class_name": [
+                    "Concept",
+                    "PhysicalObject"
+                ]
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "Portrait of a Fifty-Two Year Old Man": {
+        "created by": [
+            "Van Mieris",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "influenced by": [
+            "Anthony van Dyck",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "depicts": [
+            [
+                "backdrop",
+                "gesture"
+            ],
+            {
+                "o_class_name": [
+                    "Composition",
+                    "Posture"
+                ]
+            }
+        ],
+        "instance of": [
+            [
+                "portraits",
+                "paintings"
+            ],
+            {
+                "o_class_name": [
+                    "TypeOfWorkOfArt",
+                    "TypeOfWorkOfArt"
+                ]
+            }
+        ],
+        "contains": [
+            "sitter",
+            {
+                "o_class_name": "Person"
+            }
+        ]
     },
     "burgher": {
         "has characteristic": [
-            "Leiden",
-            "well-to-do"
-        ]
+            [
+                "Leiden",
+                "well-to-do"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalLocation",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "Occupation"
     },
-    "face": {
-        "has characteristic": "narrower"
+    "gesture": {
+        "has characteristic": [
+            "elegant",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Posture"
+    },
+    "man": {
+        "has characteristic": [
+            "burgher",
+            {
+                "o_class_name": "Occupation"
+            }
+        ],
+        "s_class_name": "Person"
     },
     "sky": {
-        "has characteristic": "cloudy"
+        "has characteristic": [
+            "cloudy",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "GeographicalFeature"
     },
-    "Portrait of a Fifty-Two Year Old Man": {
-        "depicts": [
-            "gesture",
-            "backdrop"
+    "face": {
+        "has characteristic": [
+            "narrower",
+            {
+                "o_class_name": "Quality"
+            }
         ],
-        "instance of": [
-            "paintings",
-            "portraits"
+        "s_class_name": "AnatomicalStructure"
+    },
+    "hair": {
+        "has characteristic": [
+            "less curly",
+            {
+                "o_class_name": "Quality"
+            }
         ],
-        "created by": "Van Mieris",
-        "contains": "sitter",
-        "influenced by": "Anthony van Dyck"
+        "s_class_name": "AnatomicalStructure"
     }
 }

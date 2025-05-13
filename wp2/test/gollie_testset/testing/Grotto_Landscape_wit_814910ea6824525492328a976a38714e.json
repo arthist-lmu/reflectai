@@ -1,30 +1,94 @@
 {
     "Grotto Landscape with a Hermitage": {
-        "contains": [
-            "various animals",
-            "several pilgrims",
-            "hermit"
-        ],
-        "created in": "around 1625",
         "created by": [
-            "Joos de Momper",
-            "Jan Brueghel the Younger"
+            [
+                "Jan Brueghel the Younger",
+                "Joos de Momper"
+            ],
+            {
+                "o_class_name": [
+                    "Person",
+                    "Person"
+                ]
+            }
         ],
-        "depicts": "grotto",
-        "made from material": "oil on canvas",
-        "instance of": "painting"
+        "s_class_name": "WorkOfArt",
+        "depicts": [
+            "grotto",
+            {
+                "o_class_name": "GeographicalFeature"
+            }
+        ],
+        "contains": [
+            [
+                "various animals",
+                "hermit",
+                "several pilgrims"
+            ],
+            {
+                "o_class_name": [
+                    "Animal",
+                    "Person",
+                    "Person"
+                ]
+            }
+        ],
+        "created in": [
+            "around 1625",
+            {
+                "o_class_name": "PointInTime"
+            }
+        ],
+        "made from material": [
+            "oil on canvas",
+            {
+                "o_class_name": "ArtMaterial"
+            }
+        ],
+        "instance of": [
+            "painting",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ]
     },
     "various animals": {
         "contains": [
-            "birds",
-            "dogs"
-        ]
+            [
+                "birds",
+                "dogs"
+            ],
+            {
+                "o_class_name": [
+                    "Animal",
+                    "Animal"
+                ]
+            }
+        ],
+        "s_class_name": "Animal"
     },
     "grotto": {
-        "has characteristic": "monumental",
-        "contains": "hermit"
+        "has characteristic": [
+            "monumental",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "GeographicalFeature",
+        "contains": [
+            "hermit",
+            {
+                "o_class_name": "Person"
+            }
+        ]
     },
     "hermit": {
-        "has characteristic": "reading"
+        "has characteristic": [
+            "reading",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Person"
     }
 }

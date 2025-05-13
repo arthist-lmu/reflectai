@@ -24,29 +24,38 @@ def parse_args():
     return args
 
 
-def parse_xmi_file(root, tripplets):
+def parse_xmi_file(root, tripplets, args):
     mapping = {}
     unique = set()
 
-    text = load_text(root)
+    #text = load_text(root)
+    text = load_text2(root, args)
     for elem in root.iter():
         if 'ContentType' in elem.attrib.keys() or 'EntityType' in elem.attrib.keys():
+            class_name = elem.attrib[list(elem.attrib.keys())[-1]]
+            class_name = ''.join(x for x in class_name.title() if not x.isspace())
             begin = int(elem.attrib['begin']) #- 1
             end = int(elem.attrib['end']) #+ 1 #because sometimes the object is not always fully grabbed
             if text is None:
                 continue
             value = text[begin:end]
             key = elem.attrib['{http://www.omg.org/XMI}id']
-            mapping.update({key: value})
+                
+            mapping.update({key: [value, class_name]})
         elif ('Dependent' in elem.attrib.keys() and 'Governor' in elem.attrib.keys() and
               'Relationship' in elem.attrib.keys()):
             s_code = elem.attrib['Governor']
             o_code = elem.attrib['Dependent']
             p = elem.attrib['Relationship']
-            s = mapping.get(s_code)
-            o = mapping.get(o_code)
-            if p is not None and s is not None and o is not None:
-                unique.add((s, p, o))
+            s_ = mapping.get(s_code)
+            o_ = mapping.get(o_code)
+            
+            if p is not None and s_ is not None and o_ is not None:
+                s = s_[0]
+                o = o_[0]
+                s_class_name = s_[1]
+                o_class_name = o_[1]
+                unique.add((s, p, o, s_class_name, o_class_name))
 
     for unique_tripplet in unique:
         tripplets = xmi_parse_helper(tripplets, unique_tripplet)
@@ -54,32 +63,37 @@ def parse_xmi_file(root, tripplets):
     return tripplets
 
 
-
 def xmi_parse_helper(tripplets, tripplet):
-
     if tripplet[0] not in tripplets.keys():
-        # add whole triplet
-        entry = {tripplet[0]:{tripplet[1]: tripplet[2]}}
+        # add whole triplet. Also include class names of subject and object
+        entry = {tripplet[0]:{tripplet[1]: [tripplet[2], {'o_class_name':tripplet[4]}], 's_class_name':tripplet[3]}}
         tripplets.update(entry)
     else:
         if tripplet[1] not in tripplets[tripplet[0]]:
-            # only add the predicate object pair for relevant subject
-            tripplets[tripplet[0]].update({tripplet[1]: tripplet[2]})
+            # only add the predicate object pair for relevant subject. THe object class names need to be properly included
+            tripplets[tripplet[0]].update({tripplet[1]: [tripplet[2], {'o_class_name':tripplet[4]}]})
 
         elif tripplet[2] not in tripplets[tripplet[0]][tripplet[1]]:
-            # only add object to relevant predicate if not already present
-            contents = tripplets[tripplet[0]][tripplet[1]]
+            # only add object to relevant predicate if not already present. once again the object class names need to be included
+            contents = tripplets[tripplet[0]][tripplet[1]][0]
             if type(contents) == list:
                 contents.append(tripplet[2])
             else:
                 contents = [contents, tripplet[2]]
 
-            tripplets[tripplet[0]].update({tripplet[1]: contents})
+            o_class_names =  tripplets[tripplet[0]][tripplet[1]][1]['o_class_name']
+            if type(o_class_names) == list:
+                o_class_names.append(tripplet[4])
+            else:
+                o_class_names = [o_class_names, tripplet[4]]
+
+            tripplets[tripplet[0]].update({tripplet[1]: [contents, {'o_class_name':o_class_names}]})
+
 
     return tripplets
 
 
-def load_text(root, annotations_path='./annotation'):
+def load_text(root, annotations_path='/nfs/data/reflectai/data/annotation'):
     for elem in root.iter():
         if 'documentTitle' in elem.attrib.keys():
             for annotation_texts in os.listdir(annotations_path):
@@ -91,8 +105,19 @@ def load_text(root, annotations_path='./annotation'):
                         return text
                     
 
+def load_text2(root, args, annotations_path='/nfs/data/reflectai/data/annotation/txt/'):
+    for elem in root.iter():
+        if 'documentTitle' in elem.attrib.keys():
+            for annotation_texts in os.listdir(annotations_path):
+                if annotation_texts == elem.attrib["documentTitle"]:
+                    with open(f'{annotations_path}/{annotation_texts}/{args.user}.txt', 'r', encoding='utf-8') as fp:
+                        text = fp.read()
 
-def extrext_annotation(zip_file_object, tripplets):
+                    return text
+
+
+
+def extrext_annotation(zip_file_object, tripplets, args):
     data = None
     with ZipFile(zip_file_object) as zip_file:
         for x in zip_file.infolist():
@@ -102,12 +127,13 @@ def extrext_annotation(zip_file_object, tripplets):
 
     root = ET.fromstring(data)
 
-    return parse_xmi_file(root, tripplets)
+    return parse_xmi_file(root, tripplets, args)
 
 
 
-def annotationxmi_to_annotationjson():
+def annotationxmi_to_annotationjson(save_individually):
     # transform annotation xmi file into annotation json file
+
     args = parse_args()
     with ZipFile(args.input_path) as zip_file:
         trips = {}
@@ -120,25 +146,34 @@ def annotationxmi_to_annotationjson():
                     #    fp.write(x.filename[11:-14] + '\n')
 
                     with zip_file.open(x.filename) as f:
-                        trips = extrext_annotation(BytesIO(f.read()), trips)
+                        trips = extrext_annotation(BytesIO(f.read()), trips, args)
+                        #with open(f'./eval_test/testing/missing_txt.txt', 'a', encoding='utf-8') as fp:
+                        #    if len(trips) == 0:
+                        #        fp.write(f'No file found: {x.filename[11:]}\n')
+                        if save_individually:
+                            end = re.search('.*\.txt/', x.filename).span()[1]
+                            with open(f'../../test/gollie_testset/testing/{x.filename[11:(end - 5)]}.json', 'w', encoding='utf-8') as fp:
+                                json.dump(trips, fp, indent=4, ensure_ascii=False)
+                            trips = {}
     """
     # ---------------------------------
     # this part only for individual xmi files
     trips = {}
-    with open('tzischkin.xmi', 'r', encoding='utf-8') as fp:
+    with open('Conversion.xmi', 'r', encoding='utf-8') as fp:
         root = ET.fromstring(fp.read())
-        trips = parse_xmi_file(root, trips)
+        trips = parse_xmi_file(root, trips, args)
     # ---------------------------------
     """
-
-    if args.output_path:
-        with open(args.output_path, 'w', encoding='utf-8') as fp:
+    if not save_individually:
+        with open(f'./annotated_tripplets_of_{args.user}.json', 'w', encoding='utf-8') as fp:
             json.dump(trips, fp, indent=4, ensure_ascii=False)
 
 
 
 def main():
-    annotationxmi_to_annotationjson()
+    # toggle True to False if you want to gather all the annotations into one big json file rather than 
+    # many individual ones for each painting
+    annotationxmi_to_annotationjson(True)
 
         
     return 0

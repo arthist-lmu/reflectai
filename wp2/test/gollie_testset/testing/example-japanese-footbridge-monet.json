@@ -1,20 +1,60 @@
 {
     "The Japanese Footbridge": {
-        "depicts": [
-            " garden.\nAmo",
-            "en he ",
-            "e and ",
-            "pe that a"
+        "created by": [
+            " pain",
+            {
+                "o_class_name": "Person"
+            }
         ],
-        "created by": " pain",
-        "has characteristic": "e vantage point, foc",
-        "contains": " effects of light and color, had in",
-        "has movement": "onists had esp"
+        "s_class_name": "WorkOfArt",
+        "contains": [
+            " effects of light and color, had in",
+            {
+                "o_class_name": "Concept"
+            }
+        ],
+        "depicts": [
+            [
+                " garden.\nAmo",
+                "pe that a",
+                "en he ",
+                "e and "
+            ],
+            {
+                "o_class_name": [
+                    "ArchitecturalStructure",
+                    "Concept",
+                    "ArchitecturalStructure",
+                    "ArchitecturalStructure"
+                ]
+            }
+        ],
+        "has characteristic": [
+            "e vantage point, foc",
+            {
+                "o_class_name": "Composition"
+            }
+        ],
+        "has movement": [
+            "onists had esp",
+            {
+                "o_class_name": "ArtMovement"
+            }
+        ]
     },
     "d it": {
         "contains": [
-            "ilies and ot",
-            "gs.\nThe a"
-        ]
+            [
+                "gs.\nThe a",
+                "ilies and ot"
+            ],
+            {
+                "o_class_name": [
+                    "Plant",
+                    "Plant"
+                ]
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
     }
 }

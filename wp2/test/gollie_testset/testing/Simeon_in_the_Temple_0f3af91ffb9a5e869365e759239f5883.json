@@ -1,150 +1,408 @@
 {
-    "Simeon in the Temple": {
-        "contains": [
-            "group of five scribes",
-            "prophetess Anna",
-            "boy",
-            "Mary",
-            "Simeon",
-            "three men",
-            "infant Jesus",
-            "Joseph"
-        ],
-        "created by": "Gerbrand van den Eeckhout",
-        "depicts": [
-            "platform",
-            "doves",
-            "books",
-            "table",
-            "temple"
-        ]
-    },
-    "Joseph": {
+    "platform": {
         "has characteristic": [
-            "Kneeling",
-            "holding"
+            "raised wooden",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure",
+        "contains": [
+            "chair",
+            {
+                "o_class_name": "PhysicalObject"
+            }
         ]
-    },
-    "At the far right": {
-        "contains": "group of five scribes"
     },
     "two scribes": {
-        "has characteristic": "turn toward"
-    },
-    "turn toward": {
-        "has characteristic": "Simeon"
-    },
-    "Simeon": {
         "has characteristic": [
-            "in his arms",
-            "kneeling",
-            "bearded"
+            "turn toward",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "doves": {
+        "has characteristic": [
+            "two sacrificial",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Animal"
+    },
+    "Simeon in the Temple": {
+        "depicts": [
+            [
+                "platform",
+                "table",
+                "temple",
+                "doves",
+                "books"
+            ],
+            {
+                "o_class_name": [
+                    "ArchitecturalStructure",
+                    "PhysicalObject",
+                    "ArchitecturalStructure",
+                    "Animal",
+                    "PhysicalObject"
+                ]
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "contains": [
+            [
+                "boy",
+                "group of five scribes",
+                "prophetess Anna",
+                "infant Jesus",
+                "Simeon",
+                "three men",
+                "Joseph",
+                "Mary"
+            ],
+            {
+                "o_class_name": [
+                    "Person",
+                    "Person",
+                    "ReligiousCharacter",
+                    "ReligiousCharacter",
+                    "ReligiousCharacter",
+                    "Person",
+                    "ReligiousCharacter",
+                    "ReligiousCharacter"
+                ]
+            }
+        ],
+        "created by": [
+            "Gerbrand van den Eeckhout",
+            {
+                "o_class_name": "Person"
+            }
         ]
     },
     "holding": {
-        "contains": "doves",
-        "has characteristic": "hand"
-    },
-    "table": {
-        "contains": "books"
-    },
-    "books": {
-        "has characteristic": [
-            "open",
-            "number of"
-        ]
-    },
-    "gathered around": {
         "contains": [
-            "table",
-            "group of five scribes"
+            "doves",
+            {
+                "o_class_name": "Animal"
+            }
+        ],
+        "s_class_name": "Posture",
+        "has characteristic": [
+            "hand",
+            {
+                "o_class_name": "AnatomicalStructure"
+            }
         ]
+    },
+    "folded": {
+        "symbolizes": [
+            "prayer",
+            {
+                "o_class_name": "Concept"
+            }
+        ],
+        "s_class_name": "Posture"
     },
     "boy": {
         "has characteristic": [
-            "holds",
-            "red"
-        ]
+            [
+                "holds",
+                "red"
+            ],
+            {
+                "o_class_name": [
+                    "Posture",
+                    "Color"
+                ]
+            }
+        ],
+        "s_class_name": "Person"
     },
-    "platform": {
-        "contains": "chair",
-        "has characteristic": "raised wooden"
-    },
-    "on the left": {
-        "contains": "two scribes"
-    },
-    "three men": {
-        "has characteristic": [
-            "stand",
-            "attire"
-        ]
-    },
-    "temple": {
+    "table": {
         "contains": [
+            "books",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "across from": {
+        "contains": [
+            [
+                "Joseph",
+                "at the edge",
+                "Mary"
+            ],
+            {
+                "o_class_name": [
+                    "ReligiousCharacter",
+                    "Composition",
+                    "ReligiousCharacter"
+                ]
+            }
+        ],
+        "s_class_name": "Composition",
+        "has characteristic": [
             "Simeon",
-            "platform"
+            {
+                "o_class_name": "ReligiousCharacter"
+            }
         ]
     },
     "hand": {
         "has characteristic": [
-            "left",
-            "right"
-        ]
+            [
+                "left",
+                "right"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
+    },
+    "books": {
+        "has characteristic": [
+            [
+                "open",
+                "number of"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
     "holds": {
         "contains": [
-            "staff",
-            "hand"
-        ]
+            [
+                "hand",
+                "staff"
+            ],
+            {
+                "o_class_name": [
+                    "AnatomicalStructure",
+                    "PhysicalObject"
+                ]
+            }
+        ],
+        "s_class_name": "Posture"
     },
-    "across from": {
-        "has characteristic": "Simeon",
+    "Joseph": {
+        "has characteristic": [
+            [
+                "holding",
+                "Kneeling"
+            ],
+            {
+                "o_class_name": [
+                    "Posture",
+                    "Posture"
+                ]
+            }
+        ],
+        "s_class_name": "ReligiousCharacter"
+    },
+    "Behind him": {
         "contains": [
-            "Mary",
-            "at the edge",
-            "Joseph"
-        ]
+            "three men",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "Behind them": {
+        "contains": [
+            "prophetess Anna",
+            {
+                "o_class_name": "ReligiousCharacter"
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "prophetess Anna": {
         "has characteristic": [
-            "approaches",
-            "hands"
-        ]
+            [
+                "hands",
+                "approaches"
+            ],
+            {
+                "o_class_name": [
+                    "AnatomicalStructure",
+                    "Posture"
+                ]
+            }
+        ],
+        "s_class_name": "ReligiousCharacter"
     },
-    "Behind them": {
-        "contains": "prophetess Anna"
+    "Simeon": {
+        "has characteristic": [
+            [
+                "kneeling",
+                "bearded",
+                "in his arms"
+            ],
+            {
+                "o_class_name": [
+                    "Posture",
+                    "Quality",
+                    "Posture"
+                ]
+            }
+        ],
+        "s_class_name": "ReligiousCharacter"
     },
-    "Mary": {
-        "has characteristic": "Kneeling"
+    "in his arms": {
+        "contains": [
+            "infant Jesus",
+            {
+                "o_class_name": "ReligiousCharacter"
+            }
+        ],
+        "s_class_name": "Posture"
     },
-    "attire": {
-        "has characteristic": "oriental"
+    "three men": {
+        "has characteristic": [
+            [
+                "attire",
+                "stand"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalSurface",
+                    "Posture"
+                ]
+            }
+        ],
+        "s_class_name": "Person"
     },
-    "folded": {
-        "symbolizes": "prayer"
+    "gathered around": {
+        "contains": [
+            [
+                "table",
+                "group of five scribes"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalObject",
+                    "Person"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
     },
-    "Behind him": {
-        "contains": "three men"
+    "At the far right": {
+        "contains": [
+            "group of five scribes",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "on the left": {
+        "contains": [
+            "two scribes",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "temple": {
+        "contains": [
+            [
+                "platform",
+                "Simeon"
+            ],
+            {
+                "o_class_name": [
+                    "ArchitecturalStructure",
+                    "ReligiousCharacter"
+                ]
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
     },
     "hands": {
-        "has characteristic": "folded"
+        "has characteristic": [
+            "folded",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
     },
     "at the edge": {
         "contains": [
-            "platform",
-            "Kneeling"
-        ]
-    },
-    "in his arms": {
-        "contains": "infant Jesus"
-    },
-    "doves": {
-        "has characteristic": "two sacrificial"
-    },
-    "next to a chair": {
-        "contains": "Simeon"
+            [
+                "Kneeling",
+                "platform"
+            ],
+            {
+                "o_class_name": [
+                    "Posture",
+                    "ArchitecturalStructure"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "Gazing heavenward": {
-        "symbolizes": "song of praise"
+        "symbolizes": [
+            "song of praise",
+            {
+                "o_class_name": "Concept"
+            }
+        ],
+        "s_class_name": "Posture"
+    },
+    "turn toward": {
+        "has characteristic": [
+            "Simeon",
+            {
+                "o_class_name": "ReligiousCharacter"
+            }
+        ],
+        "s_class_name": "Posture"
+    },
+    "next to a chair": {
+        "contains": [
+            "Simeon",
+            {
+                "o_class_name": "ReligiousCharacter"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "Mary": {
+        "has characteristic": [
+            "Kneeling",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "ReligiousCharacter"
+    },
+    "attire": {
+        "has characteristic": [
+            "oriental",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalSurface"
     }
 }

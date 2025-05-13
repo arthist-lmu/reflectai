@@ -1,20 +1,62 @@
 {
-    "cut": {
-        "has characteristic": "bold"
-    },
     "Junge Dame in Schwarz": {
-        "instance of": "portrait",
-        "created by": "Renoir",
         "depicts": [
-            "woman",
-            "dress"
+            [
+                "woman",
+                "dress"
+            ],
+            {
+                "o_class_name": [
+                    "Person",
+                    "PhysicalObject"
+                ]
+            }
         ],
-        "influenced by": "bourgeois girls"
+        "s_class_name": "WorkOfArt",
+        "influenced by": [
+            "bourgeois girls",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "instance of": [
+            "portrait",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ],
+        "created by": [
+            "Renoir",
+            {
+                "o_class_name": "Person"
+            }
+        ]
     },
     "smile": {
-        "has characteristic": "flirtatious"
+        "has characteristic": [
+            "flirtatious",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Posture"
+    },
+    "cut": {
+        "has characteristic": [
+            "bold",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalSurface"
     },
     "dress": {
-        "has characteristic": "black"
+        "has characteristic": [
+            "black",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     }
 }

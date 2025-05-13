@@ -1,65 +1,214 @@
 {
-    "mouth": {
-        "has characteristic": "half-open",
-        "symbolizes": "speaking"
-    },
-    "drawing": {
-        "influenced by": "Self-portrait"
-    },
-    "Jan Lievens": {
-        "influenced by": "Rembrandt"
-    },
-    "Self-portrait with Tousled Hair": {
-        "depicts": [
-            "Rembrandt",
-            "cloak"
+    "eyebrows": {
+        "has characteristic": [
+            "raised",
+            {
+                "o_class_name": "Quality"
+            }
         ],
-        "has characteristic": "gaze",
-        "created in": "1628-29",
-        "created by": "Rembrandt",
-        "instance of": "drawings",
-        "fabrication method": "thin pen lines, then worked up with a brush and grey wash"
+        "s_class_name": "AnatomicalStructure"
+    },
+    "Self-portrait": {
+        "instance of": [
+            "study",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "created in": [
+            "1629",
+            {
+                "o_class_name": "PointInTime"
+            }
+        ],
+        "fabrication method": [
+            "etched",
+            {
+                "o_class_name": "ArtisticTechnique"
+            }
+        ]
+    },
+    "Trumpeter on Horseback": {
+        "instance of": [
+            "drawings",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "created by": [
+            "Jan Lievens",
+            {
+                "o_class_name": "Person"
+            }
+        ]
+    },
+    "shadow": {
+        "has characteristic": [
+            "deep",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Concept"
     },
     "face": {
         "has characteristic": [
-            "left half",
-            "shadow"
-        ]
-    },
-    "Foot Operation": {
-        "created by": "Jan Lievens",
-        "instance of": "drawings"
-    },
-    "Self-portrait": {
-        "instance of": "study",
-        "created in": "1629",
-        "fabrication method": "etched"
-    },
-    "Trumpeter on Horseback": {
-        "created by": "Jan Lievens",
-        "instance of": "drawings"
+            [
+                "shadow",
+                "left half"
+            ],
+            {
+                "o_class_name": [
+                    "Concept",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
     },
     "Rembrandt": {
         "has characteristic": [
-            "mouth",
-            "eyebrows",
-            "face"
+            [
+                "eyebrows",
+                "face",
+                "mouth"
+            ],
+            {
+                "o_class_name": [
+                    "AnatomicalStructure",
+                    "AnatomicalStructure",
+                    "AnatomicalStructure"
+                ]
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "Self-portrait with Tousled Hair": {
+        "instance of": [
+            "drawings",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "depicts": [
+            [
+                "Rembrandt",
+                "cloak"
+            ],
+            {
+                "o_class_name": [
+                    "Person",
+                    "PhysicalObject"
+                ]
+            }
+        ],
+        "has characteristic": [
+            "gaze",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "created in": [
+            "1628-29",
+            {
+                "o_class_name": "PointInTime"
+            }
+        ],
+        "fabrication method": [
+            "thin pen lines, then worked up with a brush and grey wash",
+            {
+                "o_class_name": "ArtisticTechnique"
+            }
+        ],
+        "created by": [
+            "Rembrandt",
+            {
+                "o_class_name": "Person"
+            }
         ]
     },
-    "cloak": {
-        "symbolizes": "military associations",
-        "has characteristic": "frogging"
+    "drawing": {
+        "influenced by": [
+            "Self-portrait",
+            {
+                "o_class_name": "WorkOfArt"
+            }
+        ],
+        "s_class_name": "TypeOfWorkOfArt"
     },
-    "gaze": {
-        "symbolizes": "intensity"
+    "mouth": {
+        "symbolizes": [
+            "speaking",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure",
+        "has characteristic": [
+            "half-open",
+            {
+                "o_class_name": "Quality"
+            }
+        ]
     },
-    "eyebrows": {
-        "has characteristic": "raised"
+    "Foot Operation": {
+        "instance of": [
+            "drawings",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "created by": [
+            "Jan Lievens",
+            {
+                "o_class_name": "Person"
+            }
+        ]
     },
     "frogging": {
-        "has characteristic": "down the front"
+        "has characteristic": [
+            "down the front",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalSurface"
     },
-    "shadow": {
-        "has characteristic": "deep"
+    "cloak": {
+        "has characteristic": [
+            "frogging",
+            {
+                "o_class_name": "PhysicalSurface"
+            }
+        ],
+        "s_class_name": "PhysicalObject",
+        "symbolizes": [
+            "military associations",
+            {
+                "o_class_name": "Concept"
+            }
+        ]
+    },
+    "Jan Lievens": {
+        "influenced by": [
+            "Rembrandt",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "gaze": {
+        "symbolizes": [
+            "intensity",
+            {
+                "o_class_name": "Concept"
+            }
+        ],
+        "s_class_name": "Posture"
     }
 }

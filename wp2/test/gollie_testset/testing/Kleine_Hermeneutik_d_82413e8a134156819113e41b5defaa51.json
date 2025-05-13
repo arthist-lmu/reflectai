@@ -1,22 +1,71 @@
 {
-    "Kleine Hermeneutik des Diskurses": {
-        "depicts": [
-            "writing fields",
-            "arrangement"
-        ],
-        "created by": "Thomas Locher's",
-        "made from material": "aluminium",
-        "instance of": "installations",
-        "fabrication method": "engraved"
-    },
     "arrangement": {
-        "has characteristic": "symmetrical",
         "contains": [
-            "chairs",
-            "tables"
+            [
+                "tables",
+                "chairs"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalObject",
+                    "PhysicalObject"
+                ]
+            }
+        ],
+        "s_class_name": "Composition",
+        "has characteristic": [
+            "symmetrical",
+            {
+                "o_class_name": "Quality"
+            }
         ]
     },
     "symmetrical": {
-        "has characteristic": "geometrically"
+        "has characteristic": [
+            "geometrically",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Quality"
+    },
+    "Kleine Hermeneutik des Diskurses": {
+        "made from material": [
+            "aluminium",
+            {
+                "o_class_name": "ArtMaterial"
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "created by": [
+            "Thomas Locher's",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "depicts": [
+            [
+                "arrangement",
+                "writing fields"
+            ],
+            {
+                "o_class_name": [
+                    "Composition",
+                    "Concept"
+                ]
+            }
+        ],
+        "fabrication method": [
+            "engraved",
+            {
+                "o_class_name": "ArtisticTechnique"
+            }
+        ],
+        "instance of": [
+            "installations",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ]
     }
 }

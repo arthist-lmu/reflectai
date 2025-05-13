@@ -1,30 +1,84 @@
 {
     "Adam and Eve": {
-        "created by": "nz von Stuck.\nI",
-        "depicts": [
-            " and",
-            "nt writ",
-            "ste",
-            "ll of Man d"
+        "created by": [
+            "nz von Stuck.\nI",
+            {
+                "o_class_name": "Person"
+            }
         ],
-        "instance of": "ting.\nTh"
-    },
-    " and": {
-        "has characteristic": "rapposto, th"
-    },
-    "ground of ": {
-        "contains": [
-            "ste",
-            " and"
+        "s_class_name": "WorkOfArt",
+        "depicts": [
+            [
+                "ll of Man d",
+                "nt writ",
+                " and",
+                "ste"
+            ],
+            {
+                "o_class_name": [
+                    "ArtisticTheme",
+                    "Animal",
+                    "ReligiousCharacter",
+                    "ReligiousCharacter"
+                ]
+            }
+        ],
+        "instance of": [
+            "ting.\nTh",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
         ]
     },
     "nt writ": {
-        "has characteristic": "es arou"
+        "has characteristic": [
+            "es arou",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "Animal"
     },
-    "ste": {
-        "has characteristic": "rapposto, th"
+    "ground of ": {
+        "contains": [
+            [
+                " and",
+                "ste"
+            ],
+            {
+                "o_class_name": [
+                    "ReligiousCharacter",
+                    "ReligiousCharacter"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "rapposto, th": {
-        "has characteristic": "ly arching con"
+        "has characteristic": [
+            "ly arching con",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Posture"
+    },
+    " and": {
+        "has characteristic": [
+            "rapposto, th",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "ReligiousCharacter"
+    },
+    "ste": {
+        "has characteristic": [
+            "rapposto, th",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "ReligiousCharacter"
     }
 }

@@ -1,63 +1,175 @@
 {
-    " right.\nThe ": {
-        "contains": "n th"
-    },
-    "tion are ch": {
-        "has characteristic": "lar compos"
-    },
-    "e and pos": {
-        "has characteristic": "ndsca"
+    " in str": {
+        "depicts": [
+            "ct symmetry as wel",
+            {
+                "o_class_name": "Composition"
+            }
+        ],
+        "s_class_name": "Person",
+        "has characteristic": [
+            "ed figure",
+            {
+                "o_class_name": "Posture"
+            }
+        ]
     },
     " people moving ": {
-        "has characteristic": "oup o"
+        "has characteristic": [
+            "oup o",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Person"
     },
     "rist i": {
-        "has characteristic": "ucified C"
-    },
-    "ssion cross.\n": {
-        "has characteristic": "ongated p"
-    },
-    "ses.\nJe": {
-        "has characteristic": "ed cro"
-    },
-    " in str": {
-        "depicts": "ct symmetry as wel",
-        "has characteristic": "ed figure"
+        "has characteristic": [
+            "ucified C",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "ReligiousCharacter"
     },
     "Crucifixion": {
         "depicts": [
-            "ssion cross.\n",
-            "ses.\nJe",
-            "rist i",
-            "mas an",
-            "ct symmetry as wel",
-            "mas.\nT",
-            "n th",
-            "tion are ch"
+            [
+                "mas an",
+                "ct symmetry as wel",
+                "tion are ch",
+                "rist i",
+                "mas.\nT",
+                "ses.\nJe",
+                "ssion cross.\n",
+                "n th"
+            ],
+            {
+                "o_class_name": [
+                    "ReligiousCharacter",
+                    "Composition",
+                    "Composition",
+                    "ReligiousCharacter",
+                    "ReligiousCharacter",
+                    "ArchitecturalStructure",
+                    "ArchitecturalStructure",
+                    "ReligiousCharacter"
+                ]
+            }
         ],
+        "s_class_name": "WorkOfArt",
         "influenced by": [
-            "(Giovann",
-            "ndish art.\nThe br",
-            "style, which h"
+            [
+                "(Giovann",
+                "ndish art.\nThe br",
+                "style, which h"
+            ],
+            {
+                "o_class_name": [
+                    "Person",
+                    "ArtGenre",
+                    "ArtGenre"
+                ]
+            }
         ],
-        "created by": "lo's painti"
-    },
-    "e behind ": {
-        "has characteristic": "he main action is desi"
+        "created by": [
+            "lo's painti",
+            {
+                "o_class_name": "Person"
+            }
+        ]
     },
     "of the p": {
         "has characteristic": [
-            "ting",
-            "iry li"
-        ]
+            [
+                "ting",
+                "iry li"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "Concept"
+    },
+    "ssion cross.\n": {
+        "has characteristic": [
+            "ongated p",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
     },
     "n th": {
         "has characteristic": [
-            "ng and p",
-            "g figur"
-        ]
+            [
+                "g figur",
+                "ng and p"
+            ],
+            {
+                "o_class_name": [
+                    "Posture",
+                    "Emotion"
+                ]
+            }
+        ],
+        "s_class_name": "ReligiousCharacter"
+    },
+    "e and pos": {
+        "has characteristic": [
+            "ndsca",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Concept"
+    },
+    " right.\nThe ": {
+        "contains": [
+            "n th",
+            {
+                "o_class_name": "ReligiousCharacter"
+            }
+        ],
+        "s_class_name": "Composition"
     },
     " left and h": {
-        "contains": "n th"
+        "contains": [
+            "n th",
+            {
+                "o_class_name": "ReligiousCharacter"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "e behind ": {
+        "has characteristic": [
+            "he main action is desi",
+            {
+                "o_class_name": "Composition"
+            }
+        ],
+        "s_class_name": "Concept"
+    },
+    "ses.\nJe": {
+        "has characteristic": [
+            "ed cro",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
+    },
+    "tion are ch": {
+        "has characteristic": [
+            "lar compos",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Composition"
     }
 }

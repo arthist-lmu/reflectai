@@ -1,90 +1,262 @@
 {
-    "woman": {
+    "console": {
         "has characteristic": [
-            "neck",
-            "turned her head sideways",
-            "young",
-            "naked",
-            "lips",
-            "hair",
-            "sitting on"
+            "small",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure",
+        "contains": [
+            [
+                "flower",
+                "utensils"
+            ],
+            {
+                "o_class_name": [
+                    "Plant",
+                    "PhysicalObject"
+                ]
+            }
         ]
     },
-    "console": {
-        "contains": [
-            "flower",
-            "utensils"
-        ],
-        "has characteristic": "small"
-    },
     "NUDO ALLO SPECCHIO": {
-        "depicts": [
-            "woman",
-            "mirror",
-            "In a reddish-brown interior",
-            "bedspread"
+        "created in": [
+            "1951",
+            {
+                "o_class_name": "PointInTime"
+            }
         ],
-        "created by": "Cesare Monti",
-        "created in": "1951",
-        "made from material": "Oil on canvas",
-        "contains": "console"
+        "s_class_name": "WorkOfArt",
+        "created by": [
+            "Cesare Monti",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "contains": [
+            "console",
+            {
+                "o_class_name": "ArchitecturalStructure"
+            }
+        ],
+        "depicts": [
+            [
+                "woman",
+                "In a reddish-brown interior",
+                "mirror",
+                "bedspread"
+            ],
+            {
+                "o_class_name": [
+                    "Person",
+                    "Composition",
+                    "PhysicalObject",
+                    "PhysicalSurface"
+                ]
+            }
+        ],
+        "made from material": [
+            "Oil on canvas",
+            {
+                "o_class_name": "ArtMaterial"
+            }
+        ]
     },
-    "thigh": {
-        "has characteristic": "right"
+    "floor": {
+        "contains": [
+            "foot",
+            {
+                "o_class_name": "AnatomicalStructure"
+            }
+        ],
+        "s_class_name": "PhysicalSurface"
     },
-    "upper arm": {
-        "has characteristic": "right"
-    },
-    "flower": {
-        "has characteristic": "red"
+    "foot": {
+        "has characteristic": [
+            "left",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
     },
     "utensils": {
-        "has characteristic": "pink"
+        "has characteristic": [
+            "pink",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "woman": {
+        "has characteristic": [
+            [
+                "lips",
+                "neck",
+                "young",
+                "naked",
+                "turned her head sideways",
+                "hair",
+                "sitting on"
+            ],
+            {
+                "o_class_name": [
+                    "AnatomicalStructure",
+                    "AnatomicalStructure",
+                    "Quality",
+                    "Quality",
+                    "Posture",
+                    "AnatomicalStructure",
+                    "Posture"
+                ]
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "Behind her left": {
+        "contains": [
+            "mirror",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "thigh": {
+        "has characteristic": [
+            "right",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
+    },
+    "sitting on": {
+        "symbolizes": [
+            "sitting half on her right thigh",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "Posture"
+    },
+    "hair": {
+        "has characteristic": [
+            "brown",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
     },
     "band": {
         "has characteristic": [
-            "thin",
-            "black"
-        ]
+            [
+                "thin",
+                "black"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Color"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
     "mirror": {
-        "depicts": [
-            "upper body",
-            "upper arm"
+        "has characteristic": [
+            "oval",
+            {
+                "o_class_name": "Quality"
+            }
         ],
-        "has characteristic": "oval"
-    },
-    "bedspread": {
-        "has characteristic": "turquoise"
-    },
-    "hair": {
-        "has characteristic": "brown"
-    },
-    "lips": {
-        "has characteristic": "red"
+        "s_class_name": "PhysicalObject",
+        "depicts": [
+            [
+                "upper body",
+                "upper arm"
+            ],
+            {
+                "o_class_name": [
+                    "AnatomicalStructure",
+                    "AnatomicalStructure"
+                ]
+            }
+        ]
     },
     "neck": {
-        "has characteristic": "band"
-    },
-    "foot": {
-        "has characteristic": "left"
-    },
-    "In a reddish-brown interior": {
-        "contains": "woman"
+        "has characteristic": [
+            "band",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
     },
     "interior": {
-        "has characteristic": "reddish-brown"
+        "has characteristic": [
+            "reddish-brown",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
     },
-    "Behind her left": {
-        "contains": "mirror"
+    "flower": {
+        "has characteristic": [
+            "red",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "Plant"
     },
     "Under the mirror": {
-        "contains": "console"
+        "contains": [
+            "console",
+            {
+                "o_class_name": "ArchitecturalStructure"
+            }
+        ],
+        "s_class_name": "Composition"
     },
-    "sitting on": {
-        "symbolizes": "sitting half on her right thigh"
+    "upper arm": {
+        "has characteristic": [
+            "right",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
     },
-    "floor": {
-        "contains": "foot"
+    "bedspread": {
+        "has characteristic": [
+            "turquoise",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "PhysicalSurface"
+    },
+    "lips": {
+        "has characteristic": [
+            "red",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
+    },
+    "In a reddish-brown interior": {
+        "contains": [
+            "woman",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "Composition"
     }
 }

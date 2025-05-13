@@ -1,11 +1,29 @@
 {
     "book": {
-        "has characteristic": "illustrated"
-    },
-    "painter": {
-        "has characteristic": "highly regarded"
+        "has characteristic": [
+            "illustrated",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
     "ambiance": {
-        "has characteristic": "private"
+        "has characteristic": [
+            "private",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Concept"
+    },
+    "painter": {
+        "has characteristic": [
+            "highly regarded",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Person"
     }
 }

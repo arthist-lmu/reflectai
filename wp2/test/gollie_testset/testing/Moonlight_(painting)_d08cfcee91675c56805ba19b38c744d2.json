@@ -1,30 +1,90 @@
 {
     "Moonlight": {
-        "made from material": "canvas",
         "depicts": [
-            "water",
-            "animal",
-            "shadows",
-            "sources of light"
+            [
+                "animal",
+                "sources of light",
+                "shadows",
+                "water"
+            ],
+            {
+                "o_class_name": [
+                    "Animal",
+                    "Concept",
+                    "Concept",
+                    "GeographicalFeature"
+                ]
+            }
         ],
-        "created by": "Philip James de Loutherbourg",
-        "symbolizes": "nocturne",
-        "instance of": "painting",
-        "created in": "1777"
+        "s_class_name": "WorkOfArt",
+        "created by": [
+            "Philip James de Loutherbourg",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "symbolizes": [
+            "nocturne",
+            {
+                "o_class_name": "ArtisticTheme"
+            }
+        ],
+        "instance of": [
+            "painting",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ],
+        "created in": [
+            "1777",
+            {
+                "o_class_name": "PointInTime"
+            }
+        ],
+        "made from material": [
+            "canvas",
+            {
+                "o_class_name": "ArtMaterial"
+            }
+        ]
     },
     "skin": {
-        "has characteristic": "animal"
-    },
-    "shadows": {
-        "contains": [
-            "moonlight",
-            "fire"
-        ]
+        "has characteristic": [
+            "animal",
+            {
+                "o_class_name": "Animal"
+            }
+        ],
+        "s_class_name": "PhysicalSurface"
     },
     "sources of light": {
         "contains": [
-            "fire",
-            "moonlight"
-        ]
+            [
+                "moonlight",
+                "fire"
+            ],
+            {
+                "o_class_name": [
+                    "Concept",
+                    "Concept"
+                ]
+            }
+        ],
+        "s_class_name": "Concept"
+    },
+    "shadows": {
+        "contains": [
+            [
+                "moonlight",
+                "fire"
+            ],
+            {
+                "o_class_name": [
+                    "Concept",
+                    "Concept"
+                ]
+            }
+        ],
+        "s_class_name": "Concept"
     }
 }

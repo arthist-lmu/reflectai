@@ -1,63 +1,173 @@
 {
-    "Der sogenannte Verzweifelnde": {
-        "depicts": [
-            "half-figure",
-            "figures",
-            "in front of",
-            "lighting",
-            "scales",
-            "border",
-            "figure"
-        ],
-        "instance of": [
-            "study paper",
-            "print"
-        ],
-        "created in": [
-            "1518",
-            "1515"
-        ],
-        "created by": "Dürer",
-        "fabrication method": "etching"
-    },
-    "on the left": {
-        "contains": "half-figure"
-    },
-    "lighting": {
-        "has characteristic": "uneven"
-    },
-    "half-figure": {
+    "nymph": {
         "has characteristic": [
-            "in the profile",
-            "male"
-        ]
-    },
-    "figure": {
-        "has characteristic": [
-            "nude",
-            "resting",
-            "female"
-        ]
+            "sleeping",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "MythicalCharacter"
     },
     "scales": {
-        "has characteristic": "Divergent"
+        "has characteristic": [
+            "Divergent",
+            {
+                "o_class_name": "WorkOfArt"
+            }
+        ],
+        "s_class_name": "Composition"
     },
-    "nymph": {
-        "has characteristic": "sleeping"
+    "Der sogenannte Verzweifelnde": {
+        "depicts": [
+            [
+                "lighting",
+                "in front of",
+                "figure",
+                "border",
+                "figures",
+                "scales",
+                "half-figure"
+            ],
+            {
+                "o_class_name": [
+                    "Concept",
+                    "Composition",
+                    "Person",
+                    "Composition",
+                    "Person",
+                    "Composition",
+                    "Person"
+                ]
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "created by": [
+            "Dürer",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "instance of": [
+            [
+                "print",
+                "study paper"
+            ],
+            {
+                "o_class_name": [
+                    "TypeOfWorkOfArt",
+                    "TypeOfWorkOfArt"
+                ]
+            }
+        ],
+        "fabrication method": [
+            "etching",
+            {
+                "o_class_name": "ArtisticTechnique"
+            }
+        ],
+        "created in": [
+            [
+                "1518",
+                "1515"
+            ],
+            {
+                "o_class_name": [
+                    "EndTime",
+                    "StartTime"
+                ]
+            }
+        ]
     },
     "in front of": {
         "contains": [
-            "landscape",
-            "figures"
-        ]
+            [
+                "figures",
+                "landscape"
+            ],
+            {
+                "o_class_name": [
+                    "Person",
+                    "Concept"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
     },
-    "landscape": {
-        "has characteristic": "rocky"
+    "figure": {
+        "has characteristic": [
+            [
+                "resting",
+                "nude",
+                "female"
+            ],
+            {
+                "o_class_name": [
+                    "Posture",
+                    "Quality",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "Person"
     },
-    "figures": {
-        "has characteristic": "five"
+    "on the left": {
+        "contains": [
+            "half-figure",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "half-figure": {
+        "has characteristic": [
+            [
+                "in the profile",
+                "male"
+            ],
+            {
+                "o_class_name": [
+                    "Posture",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "lighting": {
+        "has characteristic": [
+            "uneven",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Concept"
     },
     "border": {
-        "has characteristic": "narrow"
+        "has characteristic": [
+            "narrow",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "landscape": {
+        "has characteristic": [
+            "rocky",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Concept"
+    },
+    "figures": {
+        "has characteristic": [
+            "five",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Person"
     }
 }

@@ -1,8 +1,20 @@
 {
     "basic mood": {
-        "has characteristic": "melancholic"
+        "has characteristic": [
+            "melancholic",
+            {
+                "o_class_name": "Emotion"
+            }
+        ],
+        "s_class_name": "Concept"
     },
     "field of grain": {
-        "has characteristic": "dry"
+        "has characteristic": [
+            "dry",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "GeographicalFeature"
     }
 }

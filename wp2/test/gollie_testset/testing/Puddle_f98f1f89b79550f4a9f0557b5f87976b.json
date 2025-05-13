@@ -1,39 +1,114 @@
 {
-    "sculptures": {
-        "symbolizes": "raincoats",
-        "has characteristic": "flat"
-    },
     "Puddle": {
-        "symbolizes": "existential abyss of urban and suburban slums",
-        "made from material": [
-            "artificial resin",
-            "sand",
-            "thrown",
-            "stones"
+        "created by": [
+            "Marlie Mul's",
+            {
+                "o_class_name": "Person"
+            }
         ],
-        "instance of": "sculptures",
+        "s_class_name": "WorkOfArt",
         "depicts": [
-            "exhibition space",
-            "floor",
-            "pieces of garbage",
-            "surfaces",
-            "sculptures"
+            [
+                "pieces of garbage",
+                "surfaces",
+                "exhibition space",
+                "floor",
+                "sculptures"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalObject",
+                    "PhysicalSurface",
+                    "ArchitecturalStructure",
+                    "PhysicalSurface",
+                    "Composition"
+                ]
+            }
         ],
-        "created by": "Marlie Mul's"
+        "made from material": [
+            [
+                "stones",
+                "sand",
+                "thrown",
+                "artificial resin"
+            ],
+            {
+                "o_class_name": [
+                    "ArtMaterial",
+                    "ArtMaterial",
+                    "ArtMaterial",
+                    "ArtMaterial"
+                ]
+            }
+        ],
+        "symbolizes": [
+            "existential abyss of urban and suburban slums",
+            {
+                "o_class_name": "Concept"
+            }
+        ],
+        "instance of": [
+            "sculptures",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ]
     },
-    "exhibition space": {
+    "surfaces": {
         "has characteristic": [
-            "clean",
-            "white"
+            "shiny",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalSurface"
+    },
+    "sculptures": {
+        "symbolizes": [
+            "raincoats",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "Composition",
+        "has characteristic": [
+            "flat",
+            {
+                "o_class_name": "Quality"
+            }
         ]
     },
     "floor": {
-        "has characteristic": "muddy"
+        "has characteristic": [
+            "muddy",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalSurface"
     },
-    "surfaces": {
-        "has characteristic": "shiny"
+    "exhibition space": {
+        "has characteristic": [
+            [
+                "clean",
+                "white"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Color"
+                ]
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
     },
     "pieces of garbage": {
-        "has characteristic": "small"
+        "has characteristic": [
+            "small",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     }
 }

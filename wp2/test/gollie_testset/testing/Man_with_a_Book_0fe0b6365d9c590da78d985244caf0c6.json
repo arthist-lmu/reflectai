@@ -1,98 +1,273 @@
 {
-    "interior": {
-        "contains": [
-            "at a table",
-            "elegantly dressed"
+    "left side": {
+        "symbolizes": [
+            "shadow",
+            {
+                "o_class_name": "Concept"
+            }
         ],
+        "s_class_name": "Composition",
         "has characteristic": [
-            "bare",
-            "darkened"
-        ]
-    },
-    "beret": {
-        "has characteristic": [
-            "black",
-            "plush"
-        ]
-    },
-    "costume": {
-        "has characteristic": "historicizing"
-    },
-    "hair": {
-        "has characteristic": [
-            "long",
-            "beret",
-            "soft"
+            "face",
+            {
+                "o_class_name": "AnatomicalStructure"
+            }
         ]
     },
     "book": {
         "has characteristic": [
-            "open",
-            "pages"
-        ]
-    },
-    "Man with a Book": {
-        "has characteristic": "intellectual contemplation",
-        "fabrication method": "careful contrasts of light and dark",
-        "depicts": [
-            "interior",
-            "man",
-            "tabard",
-            "background"
+            [
+                "pages",
+                "open"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalSurface",
+                    "Quality"
+                ]
+            }
         ],
-        "symbolizes": "scholar in his study",
-        "created by": "Bol",
-        "created in": "seventeenth century"
-    },
-    "background": {
-        "has characteristic": [
-            "deep",
-            "brown"
-        ]
-    },
-    "at a table": {
-        "contains": [
-            "book",
-            "man"
-        ]
-    },
-    "sleeve": {
-        "has characteristic": "right"
-    },
-    "between his fingers": {
-        "has characteristic": "cord"
-    },
-    "hand": {
-        "has characteristic": [
-            "left",
-            "rests"
-        ]
-    },
-    "wall": {
-        "has characteristic": "back"
-    },
-    "left side": {
-        "symbolizes": "shadow",
-        "has characteristic": "face"
+        "s_class_name": "PhysicalObject"
     },
     "tabard": {
         "has characteristic": [
-            "fur trimmed",
-            "sleeve",
-            "buttons"
+            [
+                "buttons",
+                "fur trimmed",
+                "sleeve"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalObject",
+                    "PhysicalSurface",
+                    "AnatomicalStructure"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "Man with a Book": {
+        "fabrication method": [
+            "careful contrasts of light and dark",
+            {
+                "o_class_name": "ArtisticTechnique"
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "depicts": [
+            [
+                "man",
+                "interior",
+                "tabard",
+                "background"
+            ],
+            {
+                "o_class_name": [
+                    "Person",
+                    "ArchitecturalStructure",
+                    "PhysicalObject",
+                    "Composition"
+                ]
+            }
+        ],
+        "created by": [
+            "Bol",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "has characteristic": [
+            "intellectual contemplation",
+            {
+                "o_class_name": "Concept"
+            }
+        ],
+        "created in": [
+            "seventeenth century",
+            {
+                "o_class_name": "PointInTime"
+            }
+        ],
+        "symbolizes": [
+            "scholar in his study",
+            {
+                "o_class_name": "ArtisticTheme"
+            }
         ]
     },
-    "face": {
-        "has characteristic": "slightly blushed"
+    "interior": {
+        "contains": [
+            [
+                "elegantly dressed",
+                "at a table"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Composition"
+                ]
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure",
+        "has characteristic": [
+            [
+                "bare",
+                "darkened"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Quality"
+                ]
+            }
+        ]
     },
-    "collar": {
-        "has characteristic": "cord"
+    "beret": {
+        "has characteristic": [
+            [
+                "plush",
+                "black"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Color"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "hand": {
+        "has characteristic": [
+            [
+                "left",
+                "rests"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Posture"
+                ]
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
+    },
+    "hair": {
+        "has characteristic": [
+            [
+                "soft",
+                "long",
+                "beret"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Quality",
+                    "PhysicalObject"
+                ]
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
     },
     "man": {
         "has characteristic": [
-            "sits",
-            "elegantly dressed",
-            "features"
-        ]
+            [
+                "features",
+                "sits",
+                "elegantly dressed"
+            ],
+            {
+                "o_class_name": [
+                    "AnatomicalStructure",
+                    "Posture",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "background": {
+        "has characteristic": [
+            [
+                "brown",
+                "deep"
+            ],
+            {
+                "o_class_name": [
+                    "Color",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "at a table": {
+        "contains": [
+            [
+                "book",
+                "man"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalObject",
+                    "Person"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "wall": {
+        "has characteristic": [
+            "back",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
+    },
+    "sleeve": {
+        "has characteristic": [
+            "right",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
+    },
+    "costume": {
+        "has characteristic": [
+            "historicizing",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "between his fingers": {
+        "has characteristic": [
+            "cord",
+            {
+                "o_class_name": "PhysicalSurface"
+            }
+        ],
+        "s_class_name": "Posture"
+    },
+    "face": {
+        "has characteristic": [
+            "slightly blushed",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
+    },
+    "collar": {
+        "has characteristic": [
+            "cord",
+            {
+                "o_class_name": "PhysicalSurface"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     }
 }

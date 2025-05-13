@@ -1,39 +1,109 @@
 {
+    "among the rocks": {
+        "contains": [
+            "king",
+            {
+                "o_class_name": "Occupation"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "beard": {
+        "has characteristic": [
+            [
+                "tangled",
+                "golden"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Color"
+                ]
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
+    },
     "king": {
         "has characteristic": [
-            "mad",
-            "crawling",
-            "beard"
+            [
+                "beard",
+                "crawling",
+                "mad"
+            ],
+            {
+                "o_class_name": [
+                    "AnatomicalStructure",
+                    "Posture",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "Occupation"
+    },
+    "Nebuchadnezzar (Blake)": {
+        "created by": [
+            "William Blake",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "made from material": [
+            "additions in ink and watercolour",
+            {
+                "o_class_name": "ArtMaterial"
+            }
+        ],
+        "depicts": [
+            [
+                "rocks",
+                "Old Testament Babylonian king Nebuchadnezzar II"
+            ],
+            {
+                "o_class_name": [
+                    "GeographicalFeature",
+                    "ReligiousCharacter"
+                ]
+            }
+        ],
+        "instance of": [
+            "colour monotype print",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
         ]
     },
     "eyes": {
         "has characteristic": [
-            "wild",
-            "terror"
-        ]
-    },
-    "Nebuchadnezzar (Blake)": {
-        "depicts": [
-            "Old Testament Babylonian king Nebuchadnezzar II",
-            "rocks"
+            [
+                "wild",
+                "terror"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Emotion"
+                ]
+            }
         ],
-        "instance of": "colour monotype print",
-        "created by": "William Blake",
-        "made from material": "additions in ink and watercolour"
+        "s_class_name": "AnatomicalStructure"
     },
     "Old Testament Babylonian king Nebuchadnezzar II": {
-        "has characteristic": "ruler"
-    },
-    "among the rocks": {
-        "contains": "king"
-    },
-    "beard": {
         "has characteristic": [
-            "golden",
-            "tangled"
-        ]
+            "ruler",
+            {
+                "o_class_name": "Occupation"
+            }
+        ],
+        "s_class_name": "ReligiousCharacter"
     },
     "terror": {
-        "has characteristic": "sullen"
+        "has characteristic": [
+            "sullen",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Emotion"
     }
 }

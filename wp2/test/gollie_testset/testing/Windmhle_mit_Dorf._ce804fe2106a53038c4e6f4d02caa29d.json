@@ -1,23 +1,71 @@
 {
-    "sky": {
-        "contains": [
-            "horizontal stripes",
-            "diagonal"
+    "Windmühle mit Dorf": {
+        "created by": [
+            "Feininger",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "instance of": [
+            "drawing",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
         ]
     },
-    "Windmühle mit Dorf": {
-        "created by": "Feininger",
-        "instance of": "drawing"
-    },
     "landscape": {
-        "contains": "Baltic Sea",
-        "has characteristic": "open"
+        "contains": [
+            "Baltic Sea",
+            {
+                "o_class_name": "PhysicalLocation"
+            }
+        ],
+        "s_class_name": "Composition",
+        "has characteristic": [
+            "open",
+            {
+                "o_class_name": "Quality"
+            }
+        ]
     },
     "mill wing": {
-        "has characteristic": "diagonal",
-        "symbolizes": "rotation"
+        "symbolizes": [
+            "rotation",
+            {
+                "o_class_name": "Concept"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure",
+        "has characteristic": [
+            "diagonal",
+            {
+                "o_class_name": "Composition"
+            }
+        ]
+    },
+    "sky": {
+        "contains": [
+            [
+                "horizontal stripes",
+                "diagonal"
+            ],
+            {
+                "o_class_name": [
+                    "Composition",
+                    "Composition"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "windmill": {
-        "symbolizes": "symbol of outdated technology"
+        "symbolizes": [
+            "symbol of outdated technology",
+            {
+                "o_class_name": "Concept"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
     }
 }

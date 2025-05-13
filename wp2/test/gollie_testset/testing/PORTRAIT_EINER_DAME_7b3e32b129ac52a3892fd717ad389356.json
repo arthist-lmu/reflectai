@@ -1,99 +1,268 @@
 {
-    "silk bodice": {
-        "has characteristic": [
-            "trimming",
-            "agraphs",
-            "silver",
-            "collars"
-        ]
-    },
-    "trimming": {
-        "has characteristic": "lace"
+    "at the table": {
+        "contains": [
+            "lady",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "PORTRAIT EINER DAME": {
+        "contains": [
+            [
+                "lady",
+                "column"
+            ],
+            {
+                "o_class_name": [
+                    "Person",
+                    "ArchitecturalStructure"
+                ]
+            }
+        ],
+        "s_class_name": "WorkOfArt",
         "depicts": [
-            "supported",
-            "at the table",
-            "on the right",
-            "gaze",
-            "holds",
-            "armchair"
+            [
+                "at the table",
+                "gaze",
+                "armchair",
+                "on the right",
+                "supported",
+                "holds"
+            ],
+            {
+                "o_class_name": [
+                    "Composition",
+                    "Posture",
+                    "PhysicalObject",
+                    "Composition",
+                    "Posture",
+                    "Posture"
+                ]
+            }
         ],
-        "created by": "Johann Heinrich Tischbein the Elder",
-        "contains": [
-            "column",
-            "lady"
+        "created by": [
+            "Johann Heinrich Tischbein the Elder",
+            {
+                "o_class_name": "Person"
+            }
         ],
-        "made from material": "Oil on canvas, relined"
-    },
-    "in the armchair": {
-        "contains": "lady"
-    },
-    "supported": {
-        "contains": [
-            "elbow",
-            "pillow"
+        "made from material": [
+            "Oil on canvas, relined",
+            {
+                "o_class_name": "ArtMaterial"
+            }
         ]
-    },
-    "placed": {
-        "contains": [
-            "index finger",
-            "booklet"
-        ]
-    },
-    "on her lap": {
-        "contains": "booklet"
-    },
-    "on the right": {
-        "contains": [
-            "velum",
-            "column"
-        ]
-    },
-    "elbow": {
-        "has characteristic": "left"
-    },
-    "holds": {
-        "contains": [
-            "booklet",
-            "hand"
-        ]
-    },
-    "velum": {
-        "has characteristic": "green"
     },
     "dress": {
-        "has characteristic": "red"
-    },
-    "lady": {
         "has characteristic": [
-            "silk bodice",
-            "dress",
-            "reading"
-        ]
-    },
-    "at the table": {
-        "contains": "lady"
-    },
-    "brocade edges": {
-        "has characteristic": "gold"
+            "red",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
     "pillow": {
         "has characteristic": [
-            "green",
-            "brocade edges"
-        ]
+            [
+                "brocade edges",
+                "green"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalSurface",
+                    "Color"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
     "hand": {
-        "has characteristic": "right"
+        "has characteristic": [
+            "right",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
     },
-    "Three-quarters image": {
-        "contains": "lady"
+    "brocade edges": {
+        "has characteristic": [
+            "gold",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "PhysicalSurface"
     },
-    "collars": {
-        "has characteristic": "lace"
+    "on the right": {
+        "contains": [
+            [
+                "column",
+                "velum"
+            ],
+            {
+                "o_class_name": [
+                    "ArchitecturalStructure",
+                    "PhysicalSurface"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "holds": {
+        "contains": [
+            [
+                "hand",
+                "booklet"
+            ],
+            {
+                "o_class_name": [
+                    "AnatomicalStructure",
+                    "PhysicalObject"
+                ]
+            }
+        ],
+        "s_class_name": "Posture"
+    },
+    "placed": {
+        "contains": [
+            [
+                "index finger",
+                "booklet"
+            ],
+            {
+                "o_class_name": [
+                    "AnatomicalStructure",
+                    "PhysicalObject"
+                ]
+            }
+        ],
+        "s_class_name": "Posture"
+    },
+    "silk bodice": {
+        "has characteristic": [
+            [
+                "collars",
+                "silver",
+                "trimming",
+                "agraphs"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalObject",
+                    "Color",
+                    "PhysicalSurface",
+                    "PhysicalObject"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalSurface"
+    },
+    "on her lap": {
+        "contains": [
+            "booklet",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "lady": {
+        "has characteristic": [
+            [
+                "dress",
+                "reading",
+                "silk bodice"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalObject",
+                    "Posture",
+                    "PhysicalSurface"
+                ]
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "trimming": {
+        "has characteristic": [
+            "lace",
+            {
+                "o_class_name": "PhysicalSurface"
+            }
+        ],
+        "s_class_name": "PhysicalSurface"
+    },
+    "supported": {
+        "contains": [
+            [
+                "pillow",
+                "elbow"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalObject",
+                    "AnatomicalStructure"
+                ]
+            }
+        ],
+        "s_class_name": "Posture"
+    },
+    "in the armchair": {
+        "contains": [
+            "lady",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "Posture"
     },
     "column": {
-        "has characteristic": "round"
+        "has characteristic": [
+            "round",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
+    },
+    "Three-quarters image": {
+        "contains": [
+            "lady",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "collars": {
+        "has characteristic": [
+            "lace",
+            {
+                "o_class_name": "PhysicalSurface"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "velum": {
+        "has characteristic": [
+            "green",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "PhysicalSurface"
+    },
+    "elbow": {
+        "has characteristic": [
+            "left",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
     }
 }

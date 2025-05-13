@@ -1,8 +1,17 @@
 {
     "suit": {
         "has characteristic": [
-            "buttonless",
-            "wide-cut"
-        ]
+            [
+                "wide-cut",
+                "buttonless"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     }
 }

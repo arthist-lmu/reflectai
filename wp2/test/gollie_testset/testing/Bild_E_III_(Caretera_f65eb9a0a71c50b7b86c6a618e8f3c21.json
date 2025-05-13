@@ -1,40 +1,122 @@
 {
+    "strip": {
+        "contains": [
+            "color pattern",
+            {
+                "o_class_name": "Concept"
+            }
+        ],
+        "s_class_name": "Concept",
+        "has characteristic": [
+            "rectangular longitudinal",
+            {
+                "o_class_name": "Quality"
+            }
+        ]
+    },
     "Bild E III (Caretera)": {
-        "created by": "Rupprecht Geiger's",
         "depicts": [
-            "forms",
-            "geometric abstraction",
-            "modulation",
-            "strictly defined surface",
-            "strip"
+            [
+                "strictly defined surface",
+                "forms",
+                "modulation",
+                "geometric abstraction",
+                "strip"
+            ],
+            {
+                "o_class_name": [
+                    "Composition",
+                    "Concept",
+                    "Concept",
+                    "Composition",
+                    "Concept"
+                ]
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "instance of": [
+            "painting",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ],
+        "created by": [
+            "Rupprecht Geiger's",
+            {
+                "o_class_name": "Person"
+            }
         ],
         "fabrication method": [
-            "colour processes",
-            "colour modulations"
+            [
+                "colour processes",
+                "colour modulations"
+            ],
+            {
+                "o_class_name": [
+                    "ArtisticTechnique",
+                    "ArtisticTechnique"
+                ]
+            }
         ],
-        "has genre": "abstract",
-        "instance of": "painting"
-    },
-    "strip": {
-        "has characteristic": "rectangular longitudinal",
-        "contains": "color pattern"
-    },
-    "modulation": {
-        "has characteristic": "blue"
-    },
-    "blue": {
-        "has characteristic": "from indigo to azure"
+        "has genre": [
+            "abstract",
+            {
+                "o_class_name": "ArtGenre"
+            }
+        ]
     },
     "upper half of the image": {
-        "contains": "modulation"
+        "contains": [
+            "modulation",
+            {
+                "o_class_name": "Concept"
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "on the left edge": {
-        "contains": "strip"
-    },
-    "forms": {
-        "has characteristic": "free, non-object"
+        "contains": [
+            "strip",
+            {
+                "o_class_name": "Concept"
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "color pattern": {
-        "has characteristic": "black to dark red"
+        "has characteristic": [
+            "black to dark red",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "Concept"
+    },
+    "modulation": {
+        "has characteristic": [
+            "blue",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "Concept"
+    },
+    "forms": {
+        "has characteristic": [
+            "free, non-object",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Concept"
+    },
+    "blue": {
+        "has characteristic": [
+            "from indigo to azure",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "Color"
     }
 }

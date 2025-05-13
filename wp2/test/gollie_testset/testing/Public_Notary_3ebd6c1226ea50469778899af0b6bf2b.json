@@ -1,91 +1,253 @@
 {
-    "sheets of paper": {
-        "has characteristic": [
-            "number of",
-            "loose"
-        ]
-    },
-    "inscription": {
-        "symbolizes": "openbaer Notarus"
-    },
-    "window": {
-        "has characteristic": "arched",
-        "contains": "leans out"
-    },
-    "Public Notary": {
-        "influenced by": "Christ and the Woman Taken in Adultery",
-        "depicts": [
-            "man",
-            "official document with attached wax seals",
+    "below the open shutter": {
+        "contains": [
             "sign",
-            "colors",
-            "folio",
-            "window"
+            {
+                "o_class_name": "PhysicalObject"
+            }
         ],
-        "created by": "Gabriel Metsu",
-        "has characteristic": "areas",
-        "created in": "1653",
-        "made from material": "panel",
-        "instance of": "painting"
-    },
-    "areas": {
-        "has characteristic": [
-            "red",
-            "white"
-        ]
+        "s_class_name": "Composition"
     },
     "man": {
         "has characteristic": [
-            "old",
-            "leans out",
-            "cloak",
-            "beard",
-            "stares"
-        ]
-    },
-    "cloak": {
-        "has characteristic": "red"
+            [
+                "leans out",
+                "stares",
+                "old",
+                "beard",
+                "cloak"
+            ],
+            {
+                "o_class_name": [
+                    "Posture",
+                    "Posture",
+                    "Quality",
+                    "AnatomicalStructure",
+                    "PhysicalObject"
+                ]
+            }
+        ],
+        "s_class_name": "Person"
     },
     "building": {
         "has characteristic": [
-            "brownish-gray",
-            "window",
-            "stone"
+            [
+                "brownish-gray",
+                "stone",
+                "window"
+            ],
+            {
+                "o_class_name": [
+                    "Color",
+                    "PhysicalSurface",
+                    "ArchitecturalStructure"
+                ]
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
+    },
+    "Public Notary": {
+        "depicts": [
+            [
+                "sign",
+                "official document with attached wax seals",
+                "colors",
+                "folio",
+                "man",
+                "window"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalObject",
+                    "PhysicalObject",
+                    "Color",
+                    "PhysicalObject",
+                    "Person",
+                    "ArchitecturalStructure"
+                ]
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "instance of": [
+            "painting",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ],
+        "made from material": [
+            "panel",
+            {
+                "o_class_name": "ArtMaterial"
+            }
+        ],
+        "created by": [
+            "Gabriel Metsu",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "influenced by": [
+            "Christ and the Woman Taken in Adultery",
+            {
+                "o_class_name": "WorkOfArt"
+            }
+        ],
+        "has characteristic": [
+            "areas",
+            {
+                "o_class_name": "Composition"
+            }
+        ],
+        "created in": [
+            "1653",
+            {
+                "o_class_name": "PointInTime"
+            }
         ]
+    },
+    "sheets of paper": {
+        "has characteristic": [
+            [
+                "loose",
+                "number of"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
     "sign": {
         "has characteristic": [
-            "year",
-            "wooden",
-            "inscription"
-        ]
+            [
+                "year",
+                "wooden",
+                "inscription"
+            ],
+            {
+                "o_class_name": [
+                    "Concept",
+                    "Quality",
+                    "Concept"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "inscription": {
+        "symbolizes": [
+            "openbaer Notarus",
+            {
+                "o_class_name": "Concept"
+            }
+        ],
+        "s_class_name": "Concept"
     },
     "hold open": {
         "contains": [
-            "folio",
-            "official document with attached wax seals"
-        ]
+            [
+                "folio",
+                "official document with attached wax seals"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalObject",
+                    "PhysicalObject"
+                ]
+            }
+        ],
+        "s_class_name": "Posture"
     },
     "hands": {
         "has characteristic": [
-            "large",
-            "boney",
-            "hold open"
-        ]
+            [
+                "hold open",
+                "boney",
+                "large"
+            ],
+            {
+                "o_class_name": [
+                    "Posture",
+                    "Quality",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
     },
-    "below the open shutter": {
-        "contains": "sign"
+    "folio": {
+        "contains": [
+            "sheets of paper",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
     "beard": {
         "has characteristic": [
-            "gray",
-            "full"
-        ]
+            [
+                "full",
+                "gray"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Color"
+                ]
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
     },
-    "folio": {
-        "contains": "sheets of paper"
+    "cloak": {
+        "has characteristic": [
+            "red",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "areas": {
+        "has characteristic": [
+            [
+                "red",
+                "white"
+            ],
+            {
+                "o_class_name": [
+                    "Color",
+                    "Color"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "colors": {
-        "has characteristic": "brownish-gray"
+        "has characteristic": [
+            "brownish-gray",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "Color"
+    },
+    "window": {
+        "has characteristic": [
+            "arched",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure",
+        "contains": [
+            "leans out",
+            {
+                "o_class_name": "Posture"
+            }
+        ]
     }
 }

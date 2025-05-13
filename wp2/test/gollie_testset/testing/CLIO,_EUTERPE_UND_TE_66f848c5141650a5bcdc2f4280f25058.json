@@ -1,27 +1,82 @@
 {
     "CLIO, EUTERPE UND TERPSICHORE": {
         "depicts": [
-            "Pyramidal composition",
-            "muses Clio (history), Euterpe (lyrics) and Terpsichore (dance)",
-            "spiral circle formed"
+            [
+                "muses Clio (history), Euterpe (lyrics) and Terpsichore (dance)",
+                "Pyramidal composition",
+                "spiral circle formed"
+            ],
+            {
+                "o_class_name": [
+                    "MythicalCharacter",
+                    "Composition",
+                    "Composition"
+                ]
+            }
         ],
-        "instance of": "painting",
-        "created by": "Franchi",
-        "created in": "from 1674"
-    },
-    "attributes": {
-        "has characteristic": "identifying"
+        "s_class_name": "WorkOfArt",
+        "created by": [
+            "Franchi",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "instance of": [
+            "painting",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ],
+        "created in": [
+            "from 1674",
+            {
+                "o_class_name": "StartTime"
+            }
+        ]
     },
     "limbs": {
-        "has characteristic": "concentrically arranged"
+        "has characteristic": [
+            "concentrically arranged",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
     },
     "muses Clio (history), Euterpe (lyrics) and Terpsichore (dance)": {
-        "contains": "attributes"
-    },
-    "spiral circle formed": {
-        "contains": "limbs"
+        "contains": [
+            "attributes",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "MythicalCharacter"
     },
     "Pyramidal composition": {
-        "contains": "three female figures"
+        "contains": [
+            "three female figures",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "attributes": {
+        "has characteristic": [
+            "identifying",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "spiral circle formed": {
+        "contains": [
+            "limbs",
+            {
+                "o_class_name": "AnatomicalStructure"
+            }
+        ],
+        "s_class_name": "Composition"
     }
 }

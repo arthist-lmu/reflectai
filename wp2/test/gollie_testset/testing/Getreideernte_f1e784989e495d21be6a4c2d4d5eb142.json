@@ -1,59 +1,165 @@
 {
-    "groups of trees": {
-        "has characteristic": [
-            "blue",
-            "green"
-        ]
-    },
     "grain": {
         "has characteristic": [
-            "brown",
-            "white",
-            "oak",
-            "yellow"
-        ]
-    },
-    "in the foreground": {
-        "contains": "grain"
-    },
-    "in the front": {
-        "contains": "grain heaps"
-    },
-    "blue": {
-        "has characteristic": "pale"
+            [
+                "yellow",
+                "white",
+                "oak",
+                "brown"
+            ],
+            {
+                "o_class_name": [
+                    "Color",
+                    "Color",
+                    "Color",
+                    "Color"
+                ]
+            }
+        ],
+        "s_class_name": "Plant"
     },
     "Getreideernte": {
         "depicts": [
-            "in the front",
-            "five workers",
-            "harvest",
-            "divides the fields",
-            "in the foreground"
+            [
+                "divides the fields",
+                "in the foreground",
+                "in the front",
+                "harvest",
+                "five workers"
+            ],
+            {
+                "o_class_name": [
+                    "Composition",
+                    "Composition",
+                    "Composition",
+                    "Season",
+                    "Person"
+                ]
+            }
         ],
-        "fabrication method": "targeted linearity",
-        "created in": "1930",
-        "created by": "Max Pechsteins"
+        "s_class_name": "WorkOfArt",
+        "created in": [
+            "1930",
+            {
+                "o_class_name": "PointInTime"
+            }
+        ],
+        "fabrication method": [
+            "targeted linearity",
+            {
+                "o_class_name": "ArtisticTechnique"
+            }
+        ],
+        "created by": [
+            "Max Pechsteins",
+            {
+                "o_class_name": "Person"
+            }
+        ]
+    },
+    "harvest": {
+        "has characteristic": [
+            "grain",
+            {
+                "o_class_name": "Plant"
+            }
+        ],
+        "s_class_name": "Season"
+    },
+    "grain heaps": {
+        "has characteristic": [
+            "interlocking",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Plant"
+    },
+    "divides the fields": {
+        "contains": [
+            "individual stripes",
+            {
+                "o_class_name": "Composition"
+            }
+        ],
+        "s_class_name": "Composition",
+        "symbolizes": [
+            "spatial depth",
+            {
+                "o_class_name": "Composition"
+            }
+        ]
     },
     "At the horizon": {
         "contains": [
-            "groups of trees",
-            "sky"
-        ]
-    },
-    "divides the fields": {
-        "symbolizes": "spatial depth",
-        "contains": "individual stripes"
-    },
-    "harvest": {
-        "has characteristic": "grain"
+            [
+                "sky",
+                "groups of trees"
+            ],
+            {
+                "o_class_name": [
+                    "GeographicalFeature",
+                    "GeographicalFeature"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "sky": {
         "has characteristic": [
-            "blue",
-            "lightly curved"
-        ]
+            [
+                "blue",
+                "lightly curved"
+            ],
+            {
+                "o_class_name": [
+                    "Color",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "GeographicalFeature"
     },
-    "grain heaps": {
-        "has characteristic": "interlocking"
+    "in the foreground": {
+        "contains": [
+            "grain",
+            {
+                "o_class_name": "Plant"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "in the front": {
+        "contains": [
+            "grain heaps",
+            {
+                "o_class_name": "Plant"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "groups of trees": {
+        "has characteristic": [
+            [
+                "blue",
+                "green"
+            ],
+            {
+                "o_class_name": [
+                    "Color",
+                    "Color"
+                ]
+            }
+        ],
+        "s_class_name": "GeographicalFeature"
+    },
+    "blue": {
+        "has characteristic": [
+            "pale",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Color"
     }
 }

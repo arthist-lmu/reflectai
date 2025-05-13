@@ -1,64 +1,177 @@
 {
+    "twirling": {
+        "has characteristic": [
+            "moustache",
+            {
+                "o_class_name": "AnatomicalStructure"
+            }
+        ],
+        "s_class_name": "Posture"
+    },
     "features": {
-        "has characteristic": "robust"
+        "has characteristic": [
+            "robust",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
     },
     "clasps": {
-        "has characteristic": "horizontal braided"
-    },
-    "Portrait of a Man in a Red Coat": {
-        "depicts": [
-            "doublet",
-            "clasps",
-            "collar"
+        "has characteristic": [
+            "horizontal braided",
+            {
+                "o_class_name": "Quality"
+            }
         ],
-        "created by": "Rembrandt",
-        "contains": [
-            "man",
-            "person"
-        ]
+        "s_class_name": "PhysicalSurface"
     },
     "eyebrows": {
-        "has characteristic": "arched"
-    },
-    "man": {
         "has characteristic": [
-            "looks directly out at the viewer",
-            "twirling",
-            "face"
-        ]
-    },
-    "red": {
-        "has characteristic": "bold"
-    },
-    "body": {
-        "has characteristic": "ample"
-    },
-    "person": {
-        "has characteristic": [
-            "body",
-            "features"
+            "arched",
+            {
+                "o_class_name": "Quality"
+            }
         ],
-        "symbolizes": "enjoys the fullness of life"
-    },
-    "doublet": {
-        "has characteristic": "red"
-    },
-    "collar": {
-        "has characteristic": [
-            "starched",
-            "white"
-        ]
-    },
-    "twirling": {
-        "has characteristic": "moustache"
+        "s_class_name": "AnatomicalStructure"
     },
     "face": {
         "has characteristic": [
-            "crinkles",
-            "eyebrows"
+            [
+                "eyebrows",
+                "crinkles"
+            ],
+            {
+                "o_class_name": [
+                    "AnatomicalStructure",
+                    "PhysicalSurface"
+                ]
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
+    },
+    "collar": {
+        "has characteristic": [
+            [
+                "starched",
+                "white"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Color"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "red": {
+        "has characteristic": [
+            "bold",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Color"
+    },
+    "person": {
+        "has characteristic": [
+            [
+                "body",
+                "features"
+            ],
+            {
+                "o_class_name": [
+                    "AnatomicalStructure",
+                    "AnatomicalStructure"
+                ]
+            }
+        ],
+        "s_class_name": "Person",
+        "symbolizes": [
+            "enjoys the fullness of life",
+            {
+                "o_class_name": "Concept"
+            }
         ]
     },
+    "Portrait of a Man in a Red Coat": {
+        "created by": [
+            "Rembrandt",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "depicts": [
+            [
+                "collar",
+                "clasps",
+                "doublet"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalObject",
+                    "PhysicalSurface",
+                    "PhysicalObject"
+                ]
+            }
+        ],
+        "contains": [
+            [
+                "person",
+                "man"
+            ],
+            {
+                "o_class_name": [
+                    "Person",
+                    "Person"
+                ]
+            }
+        ]
+    },
+    "man": {
+        "has characteristic": [
+            [
+                "face",
+                "twirling",
+                "looks directly out at the viewer"
+            ],
+            {
+                "o_class_name": [
+                    "AnatomicalStructure",
+                    "Posture",
+                    "Posture"
+                ]
+            }
+        ],
+        "s_class_name": "Person"
+    },
     "eyes": {
-        "has characteristic": "crinkles"
+        "has characteristic": [
+            "crinkles",
+            {
+                "o_class_name": "PhysicalSurface"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
+    },
+    "body": {
+        "has characteristic": [
+            "ample",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
+    },
+    "doublet": {
+        "has characteristic": [
+            "red",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     }
 }

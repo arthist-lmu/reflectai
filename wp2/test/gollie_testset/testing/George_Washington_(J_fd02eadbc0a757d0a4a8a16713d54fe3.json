@@ -1,11 +1,29 @@
 {
-    "vision": {
-        "has characteristic": "idealized"
-    },
     "legs": {
-        "has characteristic": "horse's"
+        "has characteristic": [
+            "horse's",
+            {
+                "o_class_name": "Animal"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
     },
     "background": {
-        "has characteristic": "middle"
+        "has characteristic": [
+            "middle",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "vision": {
+        "has characteristic": [
+            "idealized",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Concept"
     }
 }

@@ -1,49 +1,126 @@
 {
-    "rider": {
-        "has characteristic": "red-clad"
+    "BERGLANDSCHAFT MIT DREI REITERN  AN EINER FURT": {
+        "depicts": [
+            [
+                "to the right",
+                "three riders",
+                "horse",
+                "sky",
+                "watercourse",
+                "dog",
+                "behind a rocky ledge",
+                "rider",
+                "from the back left"
+            ],
+            {
+                "o_class_name": [
+                    "Composition",
+                    "Person",
+                    "Animal",
+                    "GeographicalFeature",
+                    "GeographicalFeature",
+                    "Animal",
+                    "Composition",
+                    "Person",
+                    "Composition"
+                ]
+            }
+        ],
+        "s_class_name": "WorkOfArt"
     },
-    "hillside": {
-        "contains": "three riders"
+    "from the back left": {
+        "contains": [
+            "cascade",
+            {
+                "o_class_name": "GeographicalFeature"
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "behind a rocky ledge": {
         "contains": [
-            "dog",
-            "rider",
-            "horse"
-        ]
+            [
+                "rider",
+                "horse",
+                "dog"
+            ],
+            {
+                "o_class_name": [
+                    "Person",
+                    "Animal",
+                    "Animal"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
     },
-    "BERGLANDSCHAFT MIT DREI REITERN  AN EINER FURT": {
-        "depicts": [
-            "horse",
-            "three riders",
-            "sky",
-            "watercourse",
-            "to the right",
-            "dog",
-            "from the back left",
-            "rider",
-            "behind a rocky ledge"
-        ]
-    },
-    "from the back left": {
-        "contains": "cascade"
+    "dog": {
+        "has characteristic": [
+            "hunting",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Animal"
     },
     "horse": {
-        "has characteristic": "fox-colored"
+        "has characteristic": [
+            "fox-colored",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "Animal"
+    },
+    "to the right": {
+        "contains": [
+            "mould",
+            {
+                "o_class_name": "GeographicalFeature"
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "watercourse": {
         "has characteristic": [
-            "hilly",
-            "rocky"
-        ]
+            [
+                "hilly",
+                "rocky"
+            ],
+            {
+                "o_class_name": [
+                    "GeographicalFeature",
+                    "GeographicalFeature"
+                ]
+            }
+        ],
+        "s_class_name": "GeographicalFeature"
+    },
+    "hillside": {
+        "contains": [
+            "three riders",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "GeographicalFeature"
+    },
+    "rider": {
+        "has characteristic": [
+            "red-clad",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "Person"
     },
     "sky": {
-        "has characteristic": "vividly clouded"
-    },
-    "to the right": {
-        "contains": "mould"
-    },
-    "dog": {
-        "has characteristic": "hunting"
+        "has characteristic": [
+            "vividly clouded",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "GeographicalFeature"
     }
 }

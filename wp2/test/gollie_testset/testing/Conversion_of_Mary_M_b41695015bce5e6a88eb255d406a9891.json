@@ -1,71 +1,203 @@
 {
-    "illumination": {
-        "has characteristic": "supernatural"
+    "view": {
+        "has characteristic": [
+            "nocturnal",
+            {
+                "o_class_name": "Concept"
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "crown": {
-        "has characteristic": "imperial"
-    },
-    "pieces of cloth": {
-        "has characteristic": "two costly"
-    },
-    "plates": {
         "has characteristic": [
-            "silver",
-            "gold"
-        ]
-    },
-    "book": {
-        "has characteristic": "thick"
+            "imperial",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
     "medal": {
-        "has characteristic": "gold"
+        "has characteristic": [
+            "gold",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
     "light": {
-        "has characteristic": "heavenly"
+        "has characteristic": [
+            "heavenly",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Concept"
     },
-    "oil lamp": {
-        "has characteristic": "burning"
+    "pearl necklace": {
+        "has characteristic": [
+            "broken",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
-    "ribbon": {
-        "has characteristic": "blue"
+    "ships": {
+        "has characteristic": [
+            "several",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
     "drapery": {
         "has characteristic": [
-            "red",
-            "large"
-        ]
-    },
-    "scepter": {
-        "has characteristic": "gold"
-    },
-    "sea": {
-        "has characteristic": "rough"
-    },
-    "view": {
-        "has characteristic": "nocturnal"
-    },
-    "base": {
-        "contains": "high"
-    },
-    "ships": {
-        "has characteristic": "several"
-    },
-    "objects": {
-        "has characteristic": "precious"
-    },
-    "column": {
-        "has characteristic": "round"
-    },
-    "pearl necklace": {
-        "has characteristic": "broken"
+            [
+                "large",
+                "red"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Color"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalSurface"
     },
     "power": {
-        "has characteristic": "worldly"
+        "has characteristic": [
+            "worldly",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Concept"
+    },
+    "illumination": {
+        "has characteristic": [
+            "supernatural",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Concept"
+    },
+    "objects": {
+        "has characteristic": [
+            "precious",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "plates": {
+        "has characteristic": [
+            [
+                "gold",
+                "silver"
+            ],
+            {
+                "o_class_name": [
+                    "Color",
+                    "Color"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "column": {
+        "has characteristic": [
+            "round",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
     },
     "bosom": {
-        "has characteristic": "naked"
+        "has characteristic": [
+            "naked",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
+    },
+    "scepter": {
+        "has characteristic": [
+            "gold",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "ribbon": {
+        "has characteristic": [
+            "blue",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "base": {
+        "contains": [
+            "high",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
+    },
+    "book": {
+        "has characteristic": [
+            "thick",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "oil lamp": {
+        "has characteristic": [
+            "burning",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "pieces of cloth": {
+        "has characteristic": [
+            "two costly",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
     "angels": {
-        "contains": "number of"
+        "contains": [
+            "number of",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "sea": {
+        "has characteristic": [
+            "rough",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "GeographicalFeature"
     }
 }

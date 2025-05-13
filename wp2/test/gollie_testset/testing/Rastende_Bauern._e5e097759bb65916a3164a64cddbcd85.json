@@ -1,57 +1,156 @@
 {
+    "on the right": {
+        "contains": [
+            "counterparts",
+            {
+                "o_class_name": "Occupation"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
     "peasants": {
         "has characteristic": [
-            "resting",
-            "smoking",
-            "blowing pipes"
-        ]
-    },
-    "two farmers": {
-        "has characteristic": "bodies"
-    },
-    "on the left": {
-        "contains": "two farmers"
+            [
+                "blowing pipes",
+                "smoking",
+                "resting"
+            ],
+            {
+                "o_class_name": [
+                    "Posture",
+                    "Posture",
+                    "Posture"
+                ]
+            }
+        ],
+        "s_class_name": "Occupation"
     },
     "Rastende Bauern": {
         "depicts": [
-            "on the right",
-            "four farmers",
-            "peasants",
-            "underground",
-            "on the left",
-            "angular shapes"
+            [
+                "angular shapes",
+                "peasants",
+                "four farmers",
+                "on the left",
+                "underground",
+                "on the right"
+            ],
+            {
+                "o_class_name": [
+                    "Composition",
+                    "Occupation",
+                    "Occupation",
+                    "Composition",
+                    "Composition",
+                    "Composition"
+                ]
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "created by": [
+            "Kirchner",
+            {
+                "o_class_name": "Person"
+            }
         ],
         "created in": [
-            "1921",
-            "1923"
+            [
+                "1921",
+                "1923"
+            ],
+            {
+                "o_class_name": [
+                    "StartTime",
+                    "EndTime"
+                ]
+            }
+        ]
+    },
+    "farmer": {
+        "has characteristic": [
+            "lying down",
+            {
+                "o_class_name": "Posture"
+            }
         ],
-        "created by": "Kirchner"
+        "s_class_name": "Occupation"
+    },
+    "on the left": {
+        "contains": [
+            "two farmers",
+            {
+                "o_class_name": "Occupation"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "two farmers": {
+        "has characteristic": [
+            "bodies",
+            {
+                "o_class_name": "AnatomicalStructure"
+            }
+        ],
+        "s_class_name": "Occupation"
     },
     "underground": {
-        "has characteristic": "blue"
+        "has characteristic": [
+            "blue",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "Composition"
     },
-    "bodies": {
-        "has characteristic": "white"
+    "blue": {
+        "has characteristic": [
+            "deep",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Color"
+    },
+    "to the left": {
+        "contains": [
+            "four farmers",
+            {
+                "o_class_name": "Occupation"
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "angular shapes": {
         "contains": [
-            "elbows",
-            "knees"
-        ]
+            [
+                "knees",
+                "elbows"
+            ],
+            {
+                "o_class_name": [
+                    "AnatomicalStructure",
+                    "AnatomicalStructure"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "counterparts": {
-        "has characteristic": "green"
+        "has characteristic": [
+            "green",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "Occupation"
     },
-    "farmer": {
-        "has characteristic": "lying down"
-    },
-    "blue": {
-        "has characteristic": "deep"
-    },
-    "on the right": {
-        "contains": "counterparts"
-    },
-    "to the left": {
-        "contains": "four farmers"
+    "bodies": {
+        "has characteristic": [
+            "white",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
     }
 }

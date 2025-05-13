@@ -1,18 +1,59 @@
 {
+    "Die Kaffeetafel": {
+        "instance of": [
+            "painting",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "influenced by": [
+            "French Impressionists",
+            {
+                "o_class_name": "ArtGenre"
+            }
+        ],
+        "has characteristic": [
+            [
+                "lighting",
+                "colors"
+            ],
+            {
+                "o_class_name": [
+                    "Concept",
+                    "Color"
+                ]
+            }
+        ],
+        "depicts": [
+            "coffee table",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "created by": [
+            "Franck",
+            {
+                "o_class_name": "Person"
+            }
+        ]
+    },
     "coffee table": {
-        "has characteristic": "outdoor"
+        "has characteristic": [
+            "outdoor",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
     "colors": {
-        "has characteristic": "shine"
-    },
-    "Die Kaffeetafel": {
-        "instance of": "painting",
-        "created by": "Franck",
-        "depicts": "coffee table",
         "has characteristic": [
-            "colors",
-            "lighting"
+            "shine",
+            {
+                "o_class_name": "Quality"
+            }
         ],
-        "influenced by": "French Impressionists"
+        "s_class_name": "Color"
     }
 }

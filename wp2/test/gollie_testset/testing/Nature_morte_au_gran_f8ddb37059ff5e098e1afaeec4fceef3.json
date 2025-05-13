@@ -1,29 +1,83 @@
 {
-    "fabric": {
-        "has characteristic": "draped"
-    },
-    "surface": {
-        "has characteristic": "two-dimensional"
-    },
-    "light source": {
-        "has characteristic": "lack of a clearly identifiable"
-    },
-    "colour": {
-        "has characteristic": "individual"
+    "lighting": {
+        "has characteristic": [
+            "uniform but not illusory",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "ceramic tile": {
-        "has characteristic": "colourful"
+        "has characteristic": [
+            "colourful",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "PhysicalSurface"
+    },
+    "surface": {
+        "has characteristic": [
+            "two-dimensional",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "light source": {
+        "has characteristic": [
+            "lack of a clearly identifiable",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "colour": {
+        "has characteristic": [
+            "individual",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Color"
     },
     "surfaces": {
-        "has characteristic": "colour"
-    },
-    "lighting": {
-        "has characteristic": "uniform but not illusory"
-    },
-    "ornamental": {
-        "has characteristic": "fabric"
+        "has characteristic": [
+            "colour",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "PhysicalSurface"
     },
     "patterning": {
-        "has characteristic": "independent"
+        "has characteristic": [
+            "independent",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalSurface"
+    },
+    "ornamental": {
+        "has characteristic": [
+            "fabric",
+            {
+                "o_class_name": "PhysicalSurface"
+            }
+        ],
+        "s_class_name": "Quality"
+    },
+    "fabric": {
+        "has characteristic": [
+            "draped",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalSurface"
     }
 }

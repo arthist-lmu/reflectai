@@ -1,34 +1,105 @@
 {
     "Besinnung (Affe vor blauem Grund)": {
-        "depicts": "background",
         "symbolizes": [
-            "existence",
-            "humanity",
-            "visual proof of Darwin's theory of evolution",
-            "figure of existence"
+            [
+                "humanity",
+                "existence",
+                "visual proof of Darwin's theory of evolution",
+                "figure of existence"
+            ],
+            {
+                "o_class_name": [
+                    "Concept",
+                    "Concept",
+                    "Concept",
+                    "Concept"
+                ]
+            }
         ],
-        "created by": "Gabriel von Max",
-        "instance of": "paintings",
-        "influenced by": [
-            "Charles Darwin",
-            "Pain Forgotten"
+        "s_class_name": "WorkOfArt",
+        "contains": [
+            "monkey",
+            {
+                "o_class_name": "Animal"
+            }
         ],
         "has characteristic": [
-            "emotionally charged",
-            "monkey paintings"
+            [
+                "emotionally charged",
+                "monkey paintings"
+            ],
+            {
+                "o_class_name": [
+                    "Emotion",
+                    "ArtisticTheme"
+                ]
+            }
         ],
-        "contains": "monkey"
-    },
-    "gaze": {
-        "has characteristic": "gentle"
-    },
-    "monkey": {
-        "has characteristic": "gaze"
-    },
-    "in the distance": {
-        "has characteristic": "gaze"
+        "depicts": [
+            "background",
+            {
+                "o_class_name": "Composition"
+            }
+        ],
+        "influenced by": [
+            [
+                "Pain Forgotten",
+                "Charles Darwin"
+            ],
+            {
+                "o_class_name": [
+                    "WorkOfArt",
+                    "Person"
+                ]
+            }
+        ],
+        "created by": [
+            "Gabriel von Max",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "instance of": [
+            "paintings",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ]
     },
     "background": {
-        "has characteristic": "blue"
+        "has characteristic": [
+            "blue",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "in the distance": {
+        "has characteristic": [
+            "gaze",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "gaze": {
+        "has characteristic": [
+            "gentle",
+            {
+                "o_class_name": "Emotion"
+            }
+        ],
+        "s_class_name": "Posture"
+    },
+    "monkey": {
+        "has characteristic": [
+            "gaze",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "Animal"
     }
 }

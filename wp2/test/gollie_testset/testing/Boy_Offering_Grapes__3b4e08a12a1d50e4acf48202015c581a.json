@@ -1,29 +1,80 @@
 {
-    "hand": {
+    "background": {
         "has characteristic": [
             "right",
-            "left"
-        ]
-    },
-    "background": {
-        "has characteristic": "right"
-    },
-    "dress": {
-        "has characteristic": "sumptuous"
-    },
-    "woman": {
-        "has characteristic": "young"
-    },
-    "wicker basket": {
-        "has characteristic": "large"
-    },
-    "sky": {
-        "has characteristic": "blue"
+            {
+                "o_class_name": "Composition"
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "curtain": {
-        "has characteristic": "red"
+        "has characteristic": [
+            "red",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
     "mountains": {
-        "has characteristic": "high"
+        "has characteristic": [
+            "high",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "GeographicalFeature"
+    },
+    "hand": {
+        "has characteristic": [
+            [
+                "left",
+                "right"
+            ],
+            {
+                "o_class_name": [
+                    "Composition",
+                    "Composition"
+                ]
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
+    },
+    "woman": {
+        "has characteristic": [
+            "young",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "dress": {
+        "has characteristic": [
+            "sumptuous",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "wicker basket": {
+        "has characteristic": [
+            "large",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "sky": {
+        "has characteristic": [
+            "blue",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "Composition"
     }
 }

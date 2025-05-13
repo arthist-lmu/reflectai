@@ -1,56 +1,162 @@
 {
-    "napkin": {
-        "has characteristic": "white"
-    },
     "Still Life": {
         "depicts": [
-            "crab",
-            "glasses",
-            "roses",
-            "tazza",
-            "niche",
-            "porcelain bowl set",
-            "fruit",
-            "Buckelpokal",
-            "dishes",
-            "napkin"
+            [
+                "roses",
+                "niche",
+                "glasses",
+                "napkin",
+                "tazza",
+                "fruit",
+                "porcelain bowl set",
+                "crab",
+                "Buckelpokal",
+                "dishes"
+            ],
+            {
+                "o_class_name": [
+                    "Plant",
+                    "ArchitecturalStructure",
+                    "PhysicalObject",
+                    "PhysicalObject",
+                    "PhysicalObject",
+                    "Food",
+                    "PhysicalObject",
+                    "Animal",
+                    "PhysicalObject",
+                    "PhysicalObject"
+                ]
+            }
         ],
-        "has characteristic": "diagonal lines",
-        "created by": "Van Beyeren",
-        "influenced by": "by Jan Davidsz de Heem",
-        "created in": "1650s"
+        "s_class_name": "WorkOfArt",
+        "created in": [
+            "1650s",
+            {
+                "o_class_name": "PointInTime"
+            }
+        ],
+        "influenced by": [
+            "by Jan Davidsz de Heem",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "created by": [
+            "Van Beyeren",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "has characteristic": [
+            "diagonal lines",
+            {
+                "o_class_name": "Composition"
+            }
+        ]
+    },
+    "on top": {
+        "contains": [
+            "figure",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "wicker basket": {
+        "contains": [
+            "porcelain bowl set",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "diagonal lines": {
+        "has characteristic": [
+            "dramatic",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "in the background": {
+        "contains": [
+            "niche",
+            {
+                "o_class_name": "ArchitecturalStructure"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "glasses": {
+        "has characteristic": [
+            "façon de Venise",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "tazza": {
+        "has characteristic": [
+            "turned on its side",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
     "niche": {
-        "contains": "glasses"
+        "contains": [
+            "glasses",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
+    },
+    "napkin": {
+        "has characteristic": [
+            "white",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
     "Buckelpokal": {
         "has characteristic": [
-            "golden",
-            "on top"
-        ]
-    },
-    "dishes": {
-        "has characteristic": "silver"
-    },
-    "tazza": {
-        "has characteristic": "turned on its side"
-    },
-    "wicker basket": {
-        "contains": "porcelain bowl set"
-    },
-    "glasses": {
-        "has characteristic": "façon de Venise"
-    },
-    "on top": {
-        "contains": "figure"
-    },
-    "in the background": {
-        "contains": "niche"
-    },
-    "diagonal lines": {
-        "has characteristic": "dramatic"
+            [
+                "golden",
+                "on top"
+            ],
+            {
+                "o_class_name": [
+                    "Color",
+                    "Composition"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
     "figure": {
-        "has characteristic": "armed"
+        "has characteristic": [
+            "armed",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "dishes": {
+        "has characteristic": [
+            "silver",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     }
 }

@@ -1,37 +1,119 @@
 {
     "REITER, SCHIMMEL UND HUND VOR DEM WEIHERHAUS BEI EMMING, UM 1852": {
-        "depicts": [
-            "hound",
-            "gelding"
+        "contains": [
+            "monogram",
+            {
+                "o_class_name": "Concept"
+            }
         ],
-        "instance of": "paintings",
-        "contains": "monogram",
-        "created by": "Kobell",
-        "symbolizes": "memorial"
-    },
-    "in the foreground to the right": {
-        "contains": "hound"
-    },
-    "in the lower right corner": {
-        "contains": "monogram"
-    },
-    "horses": {
-        "has characteristic": "favorite"
-    },
-    "sits": {
-        "depicts": "hound"
-    },
-    "saddle": {
-        "has characteristic": "modern English"
-    },
-    "riding dress": {
-        "has characteristic": "fashionable"
+        "s_class_name": "WorkOfArt",
+        "symbolizes": [
+            "memorial",
+            {
+                "o_class_name": "Concept"
+            }
+        ],
+        "depicts": [
+            [
+                "hound",
+                "gelding"
+            ],
+            {
+                "o_class_name": [
+                    "Animal",
+                    "Animal"
+                ]
+            }
+        ],
+        "created by": [
+            "Kobell",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "instance of": [
+            "paintings",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ]
     },
     "gelding": {
-        "depicts": "from the back",
-        "has characteristic": "white"
+        "depicts": [
+            "from the back",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "Animal",
+        "has characteristic": [
+            "white",
+            {
+                "o_class_name": "Color"
+            }
+        ]
+    },
+    "sits": {
+        "depicts": [
+            "hound",
+            {
+                "o_class_name": "Animal"
+            }
+        ],
+        "s_class_name": "Posture"
+    },
+    "riding dress": {
+        "has characteristic": [
+            "fashionable",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "horses": {
+        "has characteristic": [
+            "favorite",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Animal"
+    },
+    "in the foreground to the right": {
+        "contains": [
+            "hound",
+            {
+                "o_class_name": "Animal"
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "gelding's": {
-        "has characteristic": "fur"
+        "has characteristic": [
+            "fur",
+            {
+                "o_class_name": "PhysicalSurface"
+            }
+        ],
+        "s_class_name": "Animal"
+    },
+    "saddle": {
+        "has characteristic": [
+            "modern English",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "in the lower right corner": {
+        "contains": [
+            "monogram",
+            {
+                "o_class_name": "Concept"
+            }
+        ],
+        "s_class_name": "Composition"
     }
 }

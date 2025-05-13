@@ -1,50 +1,142 @@
 {
-    "hand": {
-        "has characteristic": "right"
+    "Thronende Muttergottes": {
+        "made from material": [
+            "Ivory",
+            {
+                "o_class_name": "ArtMaterial"
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "created in": [
+            "First half of the 14th century",
+            {
+                "o_class_name": "PointInTime"
+            }
+        ],
+        "depicts": [
+            [
+                "sitting on",
+                "baby Jesus",
+                "Mary's"
+            ],
+            {
+                "o_class_name": [
+                    "Posture",
+                    "ReligiousCharacter",
+                    "ReligiousCharacter"
+                ]
+            }
+        ]
+    },
+    "sitting on": {
+        "contains": [
+            "bench",
+            {
+                "o_class_name": "ArchitecturalStructure"
+            }
+        ],
+        "s_class_name": "Posture"
     },
     "dress": {
-        "has characteristic": "belted"
-    },
-    "Thronende Muttergottes": {
-        "created in": "First half of the 14th century",
-        "depicts": [
-            "baby Jesus",
-            "sitting on",
-            "Mary's"
+        "has characteristic": [
+            "belted",
+            {
+                "o_class_name": "Quality"
+            }
         ],
-        "made from material": "Ivory"
+        "s_class_name": "PhysicalObject"
+    },
+    "robe": {
+        "has characteristic": [
+            "long",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "coat": {
+        "has characteristic": [
+            "wrinkled",
+            {
+                "o_class_name": "PhysicalSurface"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
     "Virgin Mary": {
         "has characteristic": [
-            "sitting on",
-            "coat"
-        ]
+            [
+                "coat",
+                "sitting on"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalObject",
+                    "Posture"
+                ]
+            }
+        ],
+        "s_class_name": "ReligiousCharacter"
+    },
+    "Mary's": {
+        "has characteristic": [
+            "coat",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "ReligiousCharacter"
     },
     "baby Jesus": {
         "has characteristic": [
-            "robe",
-            "holding"
-        ]
-    },
-    "holding": {
-        "contains": "globe"
-    },
-    "coat": {
-        "has characteristic": "wrinkled"
-    },
-    "bench": {
-        "has characteristic": "stone"
-    },
-    "sitting on": {
-        "contains": "bench"
-    },
-    "Mary's": {
-        "has characteristic": "coat"
-    },
-    "robe": {
-        "has characteristic": "long"
+            [
+                "robe",
+                "holding"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalObject",
+                    "Posture"
+                ]
+            }
+        ],
+        "s_class_name": "ReligiousCharacter"
     },
     "sideways over her hip": {
-        "contains": "baby Jesus"
+        "contains": [
+            "baby Jesus",
+            {
+                "o_class_name": "ReligiousCharacter"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "bench": {
+        "has characteristic": [
+            "stone",
+            {
+                "o_class_name": "PhysicalSurface"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
+    },
+    "hand": {
+        "has characteristic": [
+            "right",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
+    },
+    "holding": {
+        "contains": [
+            "globe",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "Posture"
     }
 }

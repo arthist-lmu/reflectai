@@ -1,80 +1,230 @@
 {
-    "costume": {
-        "has characteristic": "imaginative"
-    },
-    "dress": {
-        "has characteristic": "sixteenth-century"
-    },
-    "effects": {
-        "has characteristic": [
-            "lighting",
-            "strong"
-        ]
-    },
-    "ruff": {
-        "has characteristic": "flat"
-    },
     "Self-Portrait with Shaded Eyes": {
+        "created by": [
+            "Rembrandt",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "WorkOfArt",
         "depicts": [
-            "artist",
-            "robe",
-            "expressions",
-            "costumes",
-            "effects",
-            "costume",
-            "beret",
-            "areas"
+            [
+                "beret",
+                "costumes",
+                "effects",
+                "costume",
+                "areas",
+                "expressions",
+                "robe",
+                "artist"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalObject",
+                    "PhysicalObject",
+                    "Concept",
+                    "PhysicalObject",
+                    "Composition",
+                    "Posture",
+                    "PhysicalObject",
+                    "Person"
+                ]
+            }
         ],
-        "symbolizes": "scholarly and artistic tradition",
-        "created by": "Rembrandt",
-        "created in": "1620s",
         "influenced by": [
-            "Jan Lievens",
-            "tronies"
+            [
+                "Jan Lievens",
+                "tronies"
+            ],
+            {
+                "o_class_name": [
+                    "Person",
+                    "TypeOfWorkOfArt"
+                ]
+            }
         ],
-        "instance of": "self-portraits"
-    },
-    "coat": {
-        "has characteristic": "black"
-    },
-    "hat": {
-        "has characteristic": "wide-brimmed"
-    },
-    "cloak": {
-        "has characteristic": "fur-lined"
-    },
-    "robe": {
-        "has characteristic": [
-            "dress",
-            "fur-trimmed"
+        "instance of": [
+            "self-portraits",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ],
+        "created in": [
+            "1620s",
+            {
+                "o_class_name": "PointInTime"
+            }
+        ],
+        "symbolizes": [
+            "scholarly and artistic tradition",
+            {
+                "o_class_name": "Concept"
+            }
         ]
-    },
-    "areas": {
-        "contains": [
-            "eyes",
-            "light"
-        ],
-        "has characteristic": "shaded"
     },
     "scholarly and artistic tradition": {
-        "symbolizes": "artist-suitor"
-    },
-    "tabbaard": {
-        "symbolizes": "cloak"
+        "symbolizes": [
+            "artist-suitor",
+            {
+                "o_class_name": "Concept"
+            }
+        ],
+        "s_class_name": "Concept"
     },
     "artist-suitor": {
         "has characteristic": [
-            "legitimate",
-            "sincere"
-        ]
-    },
-    "costumes": {
-        "has characteristic": "fancy"
+            [
+                "legitimate",
+                "sincere"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "Concept"
     },
     "expressions": {
-        "has characteristic": "emotional"
+        "has characteristic": [
+            "emotional",
+            {
+                "o_class_name": "Emotion"
+            }
+        ],
+        "s_class_name": "Posture"
+    },
+    "cloak": {
+        "has characteristic": [
+            "fur-lined",
+            {
+                "o_class_name": "PhysicalSurface"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "coat": {
+        "has characteristic": [
+            "black",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "tabbaard": {
+        "symbolizes": [
+            "cloak",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "robe": {
+        "has characteristic": [
+            [
+                "dress",
+                "fur-trimmed"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalObject",
+                    "PhysicalSurface"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "costume": {
+        "has characteristic": [
+            "imaginative",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "areas": {
+        "contains": [
+            [
+                "light",
+                "eyes"
+            ],
+            {
+                "o_class_name": [
+                    "Concept",
+                    "AnatomicalStructure"
+                ]
+            }
+        ],
+        "s_class_name": "Composition",
+        "has characteristic": [
+            "shaded",
+            {
+                "o_class_name": "Quality"
+            }
+        ]
+    },
+    "effects": {
+        "has characteristic": [
+            [
+                "lighting",
+                "strong"
+            ],
+            {
+                "o_class_name": [
+                    "Concept",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "Concept"
+    },
+    "hat": {
+        "has characteristic": [
+            "wide-brimmed",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "costumes": {
+        "has characteristic": [
+            "fancy",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "ruff": {
+        "has characteristic": [
+            "flat",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "dress": {
+        "has characteristic": [
+            "sixteenth-century",
+            {
+                "o_class_name": "PointInTime"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
     "artist": {
-        "has characteristic": "expression"
+        "has characteristic": [
+            "expression",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "Person"
     }
 }

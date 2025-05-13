@@ -1,5 +1,11 @@
 {
     "work": {
-        "has characteristic": "foliate"
+        "has characteristic": [
+            "foliate",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalSurface"
     }
 }

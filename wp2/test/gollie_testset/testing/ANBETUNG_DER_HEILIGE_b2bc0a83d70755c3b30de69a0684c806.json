@@ -1,47 +1,141 @@
 {
-    "middle": {
-        "contains": [
-            "Holy Family",
-            "donkeys",
-            "oxen"
-        ],
-        "depicts": "in the cave"
-    },
     "ANBETUNG DER HEILIGEN DREI KÖNIGE": {
         "influenced by": [
-            "Giotto",
-            "Paolo Veneziano",
-            "Byzantine influence",
-            "Gothic"
+            [
+                "Giotto",
+                "Gothic",
+                "Byzantine influence",
+                "Paolo Veneziano"
+            ],
+            {
+                "o_class_name": [
+                    "ArtGenre",
+                    "ArtGenre",
+                    "ArtGenre",
+                    "Person"
+                ]
+            }
         ],
-        "has genre": "Venetian painting",
+        "s_class_name": "WorkOfArt",
+        "instance of": [
+            "painting",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ],
         "contains": [
-            "Holy Three Kings",
-            "angels",
-            "Holy Family"
+            [
+                "angels",
+                "Holy Family",
+                "Holy Three Kings"
+            ],
+            {
+                "o_class_name": [
+                    "ReligiousCharacter",
+                    "ReligiousCharacter",
+                    "ReligiousCharacter"
+                ]
+            }
         ],
-        "created in": "14th century",
-        "depicts": "three spatial sections",
-        "instance of": "painting"
+        "depicts": [
+            "three spatial sections",
+            {
+                "o_class_name": "Composition"
+            }
+        ],
+        "created in": [
+            "14th century",
+            {
+                "o_class_name": "PointInTime"
+            }
+        ],
+        "has genre": [
+            "Venetian painting",
+            {
+                "o_class_name": "ArtGenre"
+            }
+        ]
     },
     "upper part": {
-        "contains": "angels",
-        "depicts": "cometary beam of light"
-    },
-    "lower section": {
-        "contains": "Holy Three Kings"
-    },
-    "three spatial sections": {
         "contains": [
-            "lower section",
-            "middle",
-            "upper part"
+            "angels",
+            {
+                "o_class_name": "ReligiousCharacter"
+            }
+        ],
+        "s_class_name": "Composition",
+        "depicts": [
+            "cometary beam of light",
+            {
+                "o_class_name": "Concept"
+            }
+        ]
+    },
+    "middle": {
+        "depicts": [
+            "in the cave",
+            {
+                "o_class_name": "GeographicalFeature"
+            }
+        ],
+        "s_class_name": "Composition",
+        "contains": [
+            [
+                "oxen",
+                "donkeys",
+                "Holy Family"
+            ],
+            {
+                "o_class_name": [
+                    "Animal",
+                    "Animal",
+                    "ReligiousCharacter"
+                ]
+            }
         ]
     },
     "background": {
-        "contains": "hill"
+        "contains": [
+            "hill",
+            {
+                "o_class_name": "GeographicalFeature"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "three spatial sections": {
+        "contains": [
+            [
+                "upper part",
+                "lower section",
+                "middle"
+            ],
+            {
+                "o_class_name": [
+                    "Composition",
+                    "Composition",
+                    "Composition"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "lower section": {
+        "contains": [
+            "Holy Three Kings",
+            {
+                "o_class_name": "ReligiousCharacter"
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "hill": {
-        "has characteristic": "fairy-like"
+        "has characteristic": [
+            "fairy-like",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "GeographicalFeature"
     }
 }

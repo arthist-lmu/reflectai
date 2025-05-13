@@ -1,13 +1,41 @@
 {
-    "View of Ghent": {
-        "created by": "artist",
-        "instance of": "drawing",
-        "depicts": "outskirts of the city"
+    "monastery": {
+        "has characteristic": [
+            "towers",
+            {
+                "o_class_name": "ArchitecturalStructure"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
     },
     "church": {
-        "has characteristic": "towers"
+        "has characteristic": [
+            "towers",
+            {
+                "o_class_name": "ArchitecturalStructure"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
     },
-    "monastery": {
-        "has characteristic": "towers"
+    "View of Ghent": {
+        "created by": [
+            "artist",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "depicts": [
+            "outskirts of the city",
+            {
+                "o_class_name": "ArchitecturalStructure"
+            }
+        ],
+        "instance of": [
+            "drawing",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ]
     }
 }

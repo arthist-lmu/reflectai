@@ -1,69 +1,193 @@
 {
-    "women": {
-        "has characteristic": "jars"
-    },
-    "Aussicht von Ariccia gegen das Meer": {
-        "created by": "Catel",
-        "depicts": [
-            "mountains",
-            "foreground",
-            "In the distance",
-            "skies",
-            "landscape",
-            "in the background",
-            "town of Ariccia",
-            "To the left"
+    "foreground": {
+        "has characteristic": [
+            "shadowy",
+            {
+                "o_class_name": "Quality"
+            }
         ],
-        "influenced by": "painted studies in the open air",
-        "instance of": "painting"
+        "s_class_name": "Composition"
     },
     "church": {
         "has characteristic": [
-            "Bernini's",
-            "town of Ariccia"
+            [
+                "Bernini's",
+                "town of Ariccia"
+            ],
+            {
+                "o_class_name": [
+                    "Person",
+                    "PhysicalLocation"
+                ]
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
+    },
+    "Aussicht von Ariccia gegen das Meer": {
+        "depicts": [
+            [
+                "To the left",
+                "mountains",
+                "landscape",
+                "In the distance",
+                "skies",
+                "foreground",
+                "town of Ariccia",
+                "in the background"
+            ],
+            {
+                "o_class_name": [
+                    "Composition",
+                    "GeographicalFeature",
+                    "Concept",
+                    "Composition",
+                    "Composition",
+                    "Composition",
+                    "PhysicalLocation",
+                    "Composition"
+                ]
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "instance of": [
+            "painting",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ],
+        "created by": [
+            "Catel",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "influenced by": [
+            "painted studies in the open air",
+            {
+                "o_class_name": "ArtisticTechnique"
+            }
         ]
-    },
-    "To the left": {
-        "contains": [
-            "women",
-            "well"
-        ]
-    },
-    "Pontine marshes": {
-        "has characteristic": "plain"
-    },
-    "town of Ariccia": {
-        "has characteristic": "small"
-    },
-    "Via Appia": {
-        "contains": "group of peasants"
-    },
-    "foreground": {
-        "has characteristic": "shadowy"
     },
     "In the distance": {
         "contains": [
-            "Pontine marshes",
-            "Monte Circeo",
-            "Ponza Islands in the Tyrrhenian Sea"
-        ]
+            [
+                "Ponza Islands in the Tyrrhenian Sea",
+                "Pontine marshes",
+                "Monte Circeo"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalLocation",
+                    "PhysicalLocation",
+                    "PhysicalLocation"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
     },
-    "in the background": {
-        "contains": "coast and sea"
-    },
-    "landscape": {
-        "contains": "group of peasants"
-    },
-    "mountains": {
-        "has characteristic": "forest"
-    },
-    "On the right": {
-        "contains": "town of Ariccia"
-    },
-    "skies": {
-        "has characteristic": "lit"
+    "town of Ariccia": {
+        "has characteristic": [
+            "small",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalLocation"
     },
     "Maria dell'Assunzione": {
-        "has characteristic": "church"
+        "has characteristic": [
+            "church",
+            {
+                "o_class_name": "ArchitecturalStructure"
+            }
+        ],
+        "s_class_name": "PhysicalLocation"
+    },
+    "landscape": {
+        "contains": [
+            "group of peasants",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "Concept"
+    },
+    "To the left": {
+        "contains": [
+            [
+                "well",
+                "women"
+            ],
+            {
+                "o_class_name": [
+                    "ArchitecturalStructure",
+                    "Person"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "Via Appia": {
+        "contains": [
+            "group of peasants",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "PhysicalLocation"
+    },
+    "women": {
+        "has characteristic": [
+            "jars",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "Pontine marshes": {
+        "has characteristic": [
+            "plain",
+            {
+                "o_class_name": "GeographicalFeature"
+            }
+        ],
+        "s_class_name": "PhysicalLocation"
+    },
+    "in the background": {
+        "contains": [
+            "coast and sea",
+            {
+                "o_class_name": "GeographicalFeature"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "mountains": {
+        "has characteristic": [
+            "forest",
+            {
+                "o_class_name": "GeographicalFeature"
+            }
+        ],
+        "s_class_name": "GeographicalFeature"
+    },
+    "On the right": {
+        "contains": [
+            "town of Ariccia",
+            {
+                "o_class_name": "PhysicalLocation"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "skies": {
+        "has characteristic": [
+            "lit",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Composition"
     }
 }

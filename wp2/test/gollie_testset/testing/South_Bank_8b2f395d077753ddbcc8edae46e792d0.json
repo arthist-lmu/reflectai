@@ -1,47 +1,138 @@
 {
-    "view": {
-        "contains": [
-            "South Bank of the Thames",
-            "in the distance",
-            "on the left",
-            "in the foreground"
-        ]
-    },
-    "South Bank": {
-        "depicts": [
-            "group of bystanders",
-            "view"
-        ],
-        "created in": "1948",
-        "influenced by": "Bathers and the Ile de la Grand Jatte",
-        "created by": "William Townsend",
-        "instance of": "painting"
-    },
     "William Townsend": {
         "influenced by": [
-            "Henry Tonks",
-            "Euston Road School"
-        ]
+            [
+                "Euston Road School",
+                "Henry Tonks"
+            ],
+            {
+                "o_class_name": [
+                    "ArtMovement",
+                    "Person"
+                ]
+            }
+        ],
+        "s_class_name": "Person"
     },
-    "in the foreground": {
-        "contains": "Victoria Embankment"
-    },
-    "over the river": {
-        "contains": "group of bystanders"
-    },
-    "Bathers and the Ile de la Grand Jatte": {
-        "created by": "Seurat's"
+    "view": {
+        "contains": [
+            [
+                "in the foreground",
+                "in the distance",
+                "on the left",
+                "South Bank of the Thames"
+            ],
+            {
+                "o_class_name": [
+                    "Composition",
+                    "Composition",
+                    "Composition",
+                    "PhysicalLocation"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "South Bank of the Thames": {
-        "has characteristic": "undeveloped"
+        "has characteristic": [
+            "undeveloped",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalLocation"
     },
-    "group of bystanders": {
-        "has characteristic": "gazing out"
-    },
-    "on the left": {
-        "contains": "Hungerford and Waterloo bridges"
+    "South Bank": {
+        "created by": [
+            "William Townsend",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "instance of": [
+            "painting",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ],
+        "depicts": [
+            [
+                "view",
+                "group of bystanders"
+            ],
+            {
+                "o_class_name": [
+                    "Composition",
+                    "Person"
+                ]
+            }
+        ],
+        "created in": [
+            "1948",
+            {
+                "o_class_name": "PointInTime"
+            }
+        ],
+        "influenced by": [
+            "Bathers and the Ile de la Grand Jatte",
+            {
+                "o_class_name": "WorkOfArt"
+            }
+        ]
     },
     "in the distance": {
-        "contains": "St Paul's Cathedral"
+        "contains": [
+            "St Paul's Cathedral",
+            {
+                "o_class_name": "PhysicalLocation"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "on the left": {
+        "contains": [
+            "Hungerford and Waterloo bridges",
+            {
+                "o_class_name": "PhysicalLocation"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "in the foreground": {
+        "contains": [
+            "Victoria Embankment",
+            {
+                "o_class_name": "PhysicalLocation"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "group of bystanders": {
+        "has characteristic": [
+            "gazing out",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "over the river": {
+        "contains": [
+            "group of bystanders",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "Bathers and the Ile de la Grand Jatte": {
+        "created by": [
+            "Seurat's",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "WorkOfArt"
     }
 }

@@ -1,46 +1,140 @@
 {
+    "neck": {
+        "has characteristic": [
+            "collar",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
+    },
     "Johan van Oldenbarnevelt": {
         "has characteristic": [
-            "seventy years of age",
-            "Grand Pensionary",
-            "in profile"
-        ]
-    },
-    "painting": {
-        "created by": "Michiel Jansz van Mierevelt",
-        "created in": "1616"
-    },
-    "in profile": {
-        "contains": "facing right"
+            [
+                "seventy years of age",
+                "in profile",
+                "Grand Pensionary"
+            ],
+            {
+                "o_class_name": [
+                    "PointInTime",
+                    "Composition",
+                    "Occupation"
+                ]
+            }
+        ],
+        "s_class_name": "Person"
     },
     "Portrait Medallion of Johan van Oldenbarnevelt (1547-1619)": {
-        "instance of": "medallion",
-        "influenced by": "engraving",
-        "made from material": "ivory"
-    },
-    "neck": {
-        "has characteristic": "collar"
+        "instance of": [
+            "medallion",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "influenced by": [
+            "engraving",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ],
+        "made from material": [
+            "ivory",
+            {
+                "o_class_name": "ArtMaterial"
+            }
+        ]
     },
     "engraving": {
-        "created by": "Willem Jacobsz van Delff",
-        "influenced by": "painting",
-        "created in": "1617"
+        "influenced by": [
+            "painting",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ],
+        "s_class_name": "TypeOfWorkOfArt",
+        "created by": [
+            "Willem Jacobsz van Delff",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "created in": [
+            "1617",
+            {
+                "o_class_name": "PointInTime"
+            }
+        ]
     },
     "Portrait Medallion of Johan van Oldenbarnevelt (1547-1619": {
         "depicts": [
-            "tabard",
-            "Johan van Oldenbarnevelt",
-            "collar",
-            "doublet"
-        ]
+            [
+                "collar",
+                "Johan van Oldenbarnevelt",
+                "doublet",
+                "tabard"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalObject",
+                    "Person",
+                    "PhysicalObject",
+                    "PhysicalObject"
+                ]
+            }
+        ],
+        "s_class_name": "WorkOfArt"
     },
     "collar": {
-        "has characteristic": "ruff"
-    },
-    "tabard": {
-        "has characteristic": "fur-edged"
+        "has characteristic": [
+            "ruff",
+            {
+                "o_class_name": "PhysicalSurface"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
     "doublet": {
-        "has characteristic": "buttoned"
+        "has characteristic": [
+            "buttoned",
+            {
+                "o_class_name": "PhysicalSurface"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "in profile": {
+        "contains": [
+            "facing right",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "painting": {
+        "created in": [
+            "1616",
+            {
+                "o_class_name": "PointInTime"
+            }
+        ],
+        "s_class_name": "TypeOfWorkOfArt",
+        "created by": [
+            "Michiel Jansz van Mierevelt",
+            {
+                "o_class_name": "Person"
+            }
+        ]
+    },
+    "tabard": {
+        "has characteristic": [
+            "fur-edged",
+            {
+                "o_class_name": "PhysicalSurface"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     }
 }

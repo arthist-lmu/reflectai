@@ -1,46 +1,124 @@
 {
-    "eyes": {
-        "has characteristic": [
-            "looking openly",
-            "watchful",
-            "attentive",
-            "dark"
-        ]
-    },
-    "hair": {
-        "has characteristic": "dark"
-    },
     "blue": {
         "has characteristic": [
-            "bright",
-            "soft"
-        ]
+            [
+                "bright",
+                "soft"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "Color"
     },
     "Hartmut Stöcker": {
-        "depicts": [
-            "in contrast and in clear lines",
-            "in the background"
+        "has genre": [
+            [
+                "portraiture",
+                "advertising"
+            ],
+            {
+                "o_class_name": [
+                    "ArtGenre",
+                    "ArtGenre"
+                ]
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "fabrication method": [
+            "flat-plate painting style",
+            {
+                "o_class_name": "ArtisticTechnique"
+            }
         ],
         "contains": [
-            "eyes",
-            "hair",
-            "person"
+            [
+                "eyes",
+                "person",
+                "hair"
+            ],
+            {
+                "o_class_name": [
+                    "AnatomicalStructure",
+                    "Person",
+                    "AnatomicalStructure"
+                ]
+            }
         ],
-        "has genre": [
-            "advertising",
-            "portraiture"
+        "depicts": [
+            [
+                "in contrast and in clear lines",
+                "in the background"
+            ],
+            {
+                "o_class_name": [
+                    "Composition",
+                    "Composition"
+                ]
+            }
         ],
-        "created by": "Andy Warhol",
-        "fabrication method": "flat-plate painting style"
+        "created by": [
+            "Andy Warhol",
+            {
+                "o_class_name": "Person"
+            }
+        ]
+    },
+    "eyes": {
+        "has characteristic": [
+            [
+                "dark",
+                "looking openly",
+                "attentive",
+                "watchful"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Posture",
+                    "Quality",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
     },
     "person": {
         "has characteristic": [
-            "relaxed",
-            "is facing us",
-            "looking openly"
-        ]
+            [
+                "looking openly",
+                "relaxed",
+                "is facing us"
+            ],
+            {
+                "o_class_name": [
+                    "Posture",
+                    "Emotion",
+                    "Posture"
+                ]
+            }
+        ],
+        "s_class_name": "Person"
     },
     "in the background": {
-        "has characteristic": "blue"
+        "has characteristic": [
+            "blue",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "hair": {
+        "has characteristic": [
+            "dark",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
     }
 }

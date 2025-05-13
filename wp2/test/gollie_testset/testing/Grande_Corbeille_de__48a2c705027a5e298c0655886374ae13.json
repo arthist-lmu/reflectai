@@ -1,53 +1,161 @@
 {
-    "basket": {
-        "has characteristic": "braided",
-        "contains": "bouquet"
+    "On the left": {
+        "contains": [
+            "couple of lovers",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "Grande Corbeille de Fleurs": {
-        "created in": "1973",
         "depicts": [
-            "window",
-            "bouquet",
-            "goat",
-            "couple of lovers",
-            "basket"
+            [
+                "bouquet",
+                "basket",
+                "goat",
+                "window",
+                "couple of lovers"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalObject",
+                    "PhysicalObject",
+                    "Animal",
+                    "ArchitecturalStructure",
+                    "Person"
+                ]
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "created in": [
+            "1973",
+            {
+                "o_class_name": "PointInTime"
+            }
+        ],
+        "created by": [
+            "Marc Chagall",
+            {
+                "o_class_name": "Person"
+            }
         ],
         "has characteristic": [
-            "lovers and flower trustees",
-            "colorful"
+            [
+                "lovers and flower trustees",
+                "colorful"
+            ],
+            {
+                "o_class_name": [
+                    "ArtisticTheme",
+                    "Quality"
+                ]
+            }
         ],
-        "instance of": "paintings",
-        "created by": "Marc Chagall"
-    },
-    "On the left": {
-        "contains": "couple of lovers"
-    },
-    "window": {
-        "depicts": "hill panorama"
-    },
-    "couple of lovers": {
-        "symbolizes": "eternal love for his wife Bella",
-        "has characteristic": "floats"
-    },
-    "goat": {
-        "has characteristic": "yellow"
-    },
-    "bouquet": {
-        "has characteristic": [
-            "flowers",
-            "lush"
+        "instance of": [
+            "paintings",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
         ]
     },
     "central": {
-        "contains": "bouquet"
+        "contains": [
+            "bouquet",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "Composition"
     },
-    "in the background": {
-        "contains": "window"
+    "window": {
+        "depicts": [
+            "hill panorama",
+            {
+                "o_class_name": "GeographicalFeature"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
     },
     "on the right": {
-        "contains": "goat"
+        "contains": [
+            "goat",
+            {
+                "o_class_name": "Animal"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "couple of lovers": {
+        "symbolizes": [
+            "eternal love for his wife Bella",
+            {
+                "o_class_name": "Concept"
+            }
+        ],
+        "s_class_name": "Person",
+        "has characteristic": [
+            "floats",
+            {
+                "o_class_name": "Posture"
+            }
+        ]
+    },
+    "in the background": {
+        "contains": [
+            "window",
+            {
+                "o_class_name": "ArchitecturalStructure"
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "hill panorama": {
-        "symbolizes": "Saint-Paul-de-Vence"
+        "symbolizes": [
+            "Saint-Paul-de-Vence",
+            {
+                "o_class_name": "PhysicalLocation"
+            }
+        ],
+        "s_class_name": "GeographicalFeature"
+    },
+    "goat": {
+        "has characteristic": [
+            "yellow",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "Animal"
+    },
+    "bouquet": {
+        "has characteristic": [
+            [
+                "lush",
+                "flowers"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Plant"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "basket": {
+        "has characteristic": [
+            "braided",
+            {
+                "o_class_name": "PhysicalSurface"
+            }
+        ],
+        "s_class_name": "PhysicalObject",
+        "contains": [
+            "bouquet",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ]
     }
 }

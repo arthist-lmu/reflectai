@@ -1,41 +1,123 @@
 {
-    "palette": {
+    "forms": {
+        "symbolizes": [
+            "motion",
+            {
+                "o_class_name": "Concept"
+            }
+        ],
+        "s_class_name": "Composition",
         "has characteristic": [
-            "red",
-            "black",
-            "yellow",
-            "green",
-            "white"
+            [
+                "ovoid",
+                "disappear"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Quality"
+                ]
+            }
         ]
     },
-    "Composition with Two Ovals": {
-        "depicts": [
-            "palette",
-            "forms",
-            "centre"
-        ],
-        "instance of": "painting",
-        "fabrication method": [
-            "primary colours",
-            "system of bold geometric forms",
-            "curved, closed forms, geometry of line, repetition of modules and formally tight compositions"
-        ],
-        "has genre": "abstract",
-        "created in": "1951",
-        "created by": "Choucair",
-        "made from material": "canvas"
-    },
-    "forms": {
+    "palette": {
         "has characteristic": [
-            "disappear",
-            "ovoid"
+            [
+                "yellow",
+                "red",
+                "green",
+                "black",
+                "white"
+            ],
+            {
+                "o_class_name": [
+                    "Color",
+                    "Color",
+                    "Color",
+                    "Color",
+                    "Color"
+                ]
+            }
         ],
-        "symbolizes": "motion"
-    },
-    "centre": {
-        "has characteristic": "void"
+        "s_class_name": "Concept"
     },
     "void": {
-        "has characteristic": "dark"
+        "has characteristic": [
+            "dark",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Concept"
+    },
+    "centre": {
+        "has characteristic": [
+            "void",
+            {
+                "o_class_name": "Concept"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "Composition with Two Ovals": {
+        "made from material": [
+            "canvas",
+            {
+                "o_class_name": "ArtMaterial"
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "created by": [
+            "Choucair",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "depicts": [
+            [
+                "forms",
+                "centre",
+                "palette"
+            ],
+            {
+                "o_class_name": [
+                    "Composition",
+                    "Composition",
+                    "Concept"
+                ]
+            }
+        ],
+        "has genre": [
+            "abstract",
+            {
+                "o_class_name": "ArtGenre"
+            }
+        ],
+        "fabrication method": [
+            [
+                "primary colours",
+                "system of bold geometric forms",
+                "curved, closed forms, geometry of line, repetition of modules and formally tight compositions"
+            ],
+            {
+                "o_class_name": [
+                    "ArtisticTechnique",
+                    "ArtisticTechnique",
+                    "ArtisticTechnique"
+                ]
+            }
+        ],
+        "instance of": [
+            "painting",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ],
+        "created in": [
+            "1951",
+            {
+                "o_class_name": "PointInTime"
+            }
+        ]
     }
 }

@@ -1,20 +1,56 @@
 {
-    "window": {
-        "has characteristic": "open"
+    "floor": {
+        "has characteristic": [
+            "earthenware",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalSurface"
     },
     "pitcher": {
-        "has characteristic": "earthenware"
-    },
-    "pail": {
-        "contains": "herring"
-    },
-    "floor": {
-        "has characteristic": "earthenware"
+        "has characteristic": [
+            "earthenware",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
     "light": {
-        "has characteristic": "Illuminated"
+        "has characteristic": [
+            "Illuminated",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Concept"
+    },
+    "pail": {
+        "contains": [
+            "herring",
+            {
+                "o_class_name": "Animal"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "window": {
+        "has characteristic": [
+            "open",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
     },
     "eyes": {
-        "has characteristic": "watchful"
+        "has characteristic": [
+            "watchful",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Posture"
     }
 }

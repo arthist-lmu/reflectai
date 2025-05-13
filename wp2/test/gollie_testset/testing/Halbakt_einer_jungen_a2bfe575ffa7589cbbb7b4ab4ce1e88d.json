@@ -1,37 +1,101 @@
 {
-    "posture": {
-        "has characteristic": [
-            "forward-leaning",
-            "head"
-        ]
-    },
     "Halbakt einer jungen Frau, den Kopf mit der linken Hand gestützt": {
         "depicts": [
-            "posture",
-            "staffle",
-            "woman",
-            "room",
-            "model"
+            [
+                "posture",
+                "model",
+                "staffle",
+                "woman",
+                "room"
+            ],
+            {
+                "o_class_name": [
+                    "Posture",
+                    "Person",
+                    "PhysicalObject",
+                    "Person",
+                    "ArchitecturalStructure"
+                ]
+            }
         ],
+        "s_class_name": "WorkOfArt",
         "instance of": [
-            "paintings",
-            "portrait"
+            [
+                "portrait",
+                "paintings"
+            ],
+            {
+                "o_class_name": [
+                    "TypeOfWorkOfArt",
+                    "TypeOfWorkOfArt"
+                ]
+            }
         ],
-        "created by": "Corinth"
+        "created by": [
+            "Corinth",
+            {
+                "o_class_name": "Person"
+            }
+        ]
     },
     "behind the model": {
-        "contains": "on the right"
+        "contains": [
+            "on the right",
+            {
+                "o_class_name": "Composition"
+            }
+        ],
+        "s_class_name": "Composition"
     },
-    "room": {
-        "has characteristic": "dark"
-    },
-    "head": {
-        "has characteristic": "up"
+    "posture": {
+        "has characteristic": [
+            [
+                "head",
+                "forward-leaning"
+            ],
+            {
+                "o_class_name": [
+                    "AnatomicalStructure",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "Posture"
     },
     "woman": {
-        "has characteristic": "young"
+        "has characteristic": [
+            "young",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "room": {
+        "has characteristic": [
+            "dark",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
     },
     "on the right": {
-        "contains": "staffle"
+        "contains": [
+            "staffle",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "head": {
+        "has characteristic": [
+            "up",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
     }
 }

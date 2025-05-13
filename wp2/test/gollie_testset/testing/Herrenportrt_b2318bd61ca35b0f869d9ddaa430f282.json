@@ -1,20 +1,56 @@
 {
-    "subject": {
-        "has characteristic": "character"
-    },
-    "look": {
-        "has characteristic": "lateral"
-    },
-    "man": {
-        "has characteristic": "young"
+    "landscape": {
+        "has characteristic": [
+            "lit",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Concept"
     },
     "posture": {
-        "has characteristic": "rigid"
+        "has characteristic": [
+            "rigid",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Posture"
+    },
+    "man": {
+        "has characteristic": [
+            "young",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "look": {
+        "has characteristic": [
+            "lateral",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Posture"
     },
     "person": {
-        "has characteristic": "identity"
+        "has characteristic": [
+            "identity",
+            {
+                "o_class_name": "Concept"
+            }
+        ],
+        "s_class_name": "Person"
     },
-    "landscape": {
-        "has characteristic": "lit"
+    "subject": {
+        "has characteristic": [
+            "character",
+            {
+                "o_class_name": "Concept"
+            }
+        ],
+        "s_class_name": "Person"
     }
 }

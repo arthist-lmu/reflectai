@@ -1,128 +1,360 @@
 {
-    "eyes": {
-        "has characteristic": "full of tears"
-    },
-    "Das Martyrium der Heiligen Katharina": {
-        "depicts": [
-            "wheel",
-            "palm branch",
-            "wreath"
-        ],
-        "contains": [
-            "Catherine",
-            "angel",
-            "torturer"
-        ],
-        "instance of": "painting",
-        "symbolizes": "martyrdom",
-        "fabrication method": "light-dark staging"
-    },
-    "in his outstretched left hand": {
-        "has characteristic": "wreath"
-    },
-    "tool of martyrdom": {
-        "has characteristic": "destroyed"
-    },
-    "palm branch": {
-        "symbolizes": "martyrdom"
-    },
-    "sky": {
-        "contains": "floating"
-    },
     "lined with": {
         "has characteristic": [
-            "iron nails",
-            "pointed saws"
+            [
+                "pointed saws",
+                "iron nails"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalObject",
+                    "PhysicalObject"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "Das Martyrium der Heiligen Katharina": {
+        "contains": [
+            [
+                "angel",
+                "Catherine",
+                "torturer"
+            ],
+            {
+                "o_class_name": [
+                    "ReligiousCharacter",
+                    "ReligiousCharacter",
+                    "Person"
+                ]
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "depicts": [
+            [
+                "wheel",
+                "wreath",
+                "palm branch"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalObject",
+                    "PhysicalObject",
+                    "PhysicalObject"
+                ]
+            }
+        ],
+        "fabrication method": [
+            "light-dark staging",
+            {
+                "o_class_name": "ArtisticTechnique"
+            }
+        ],
+        "instance of": [
+            "painting",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ],
+        "symbolizes": [
+            "martyrdom",
+            {
+                "o_class_name": "Concept"
+            }
         ]
     },
     "angel": {
         "has characteristic": [
-            "holding",
-            "floating"
-        ]
-    },
-    "pulling": {
-        "symbolizes": [
-            "out of fear",
-            "hair"
-        ]
-    },
-    "Catherine": {
-        "has characteristic": "prayer",
-        "symbolizes": "virgin"
-    },
-    "divine help": {
-        "has characteristic": "angels"
-    },
-    "holding": {
-        "has characteristic": "wreath"
-    },
-    "wheel": {
-        "has characteristic": [
-            "lined with",
-            "destroyed"
+            [
+                "holding",
+                "floating"
+            ],
+            {
+                "o_class_name": [
+                    "Posture",
+                    "Posture"
+                ]
+            }
         ],
+        "s_class_name": "ReligiousCharacter"
+    },
+    "tool of torture": {
         "symbolizes": [
             "martyrdom",
-            "tool of martyrdom"
-        ]
+            {
+                "o_class_name": "Concept"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
     "virgin": {
-        "symbolizes": "Christ"
+        "symbolizes": [
+            "Christ",
+            {
+                "o_class_name": "ReligiousCharacter"
+            }
+        ],
+        "s_class_name": "Concept"
+    },
+    "palm branch": {
+        "symbolizes": [
+            "martyrdom",
+            {
+                "o_class_name": "Concept"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
     "on the left edge": {
-        "contains": "torturer"
+        "contains": [
+            "torturer",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "Composition"
     },
-    "Saint Catherine": {
+    "divine help": {
         "has characteristic": [
-            "head",
-            "robe",
-            "wrists",
-            "eyes",
-            "chest"
-        ]
-    },
-    "head": {
-        "has characteristic": [
-            "slightly lowered",
-            "looking down"
-        ]
-    },
-    "looks at her": {
-        "symbolizes": "amazement"
-    },
-    "robe": {
-        "has characteristic": [
-            "red-blue",
-            "close-up"
-        ]
+            "angels",
+            {
+                "o_class_name": "ReligiousCharacter"
+            }
+        ],
+        "s_class_name": "Concept"
     },
     "touches": {
         "contains": [
-            "palm branch",
-            "wheel"
+            [
+                "wheel",
+                "palm branch"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalObject",
+                    "PhysicalObject"
+                ]
+            }
         ],
-        "has characteristic": "hand"
-    },
-    "wrists": {
-        "has characteristic": "tied"
+        "s_class_name": "Posture",
+        "has characteristic": [
+            "hand",
+            {
+                "o_class_name": "AnatomicalStructure"
+            }
+        ]
     },
     "hand": {
-        "has characteristic": "right"
+        "has characteristic": [
+            "right",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
+    },
+    "wrists": {
+        "has characteristic": [
+            "tied",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
+    },
+    "Saint Catherine": {
+        "has characteristic": [
+            [
+                "robe",
+                "chest",
+                "wrists",
+                "eyes",
+                "head"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalObject",
+                    "AnatomicalStructure",
+                    "AnatomicalStructure",
+                    "AnatomicalStructure",
+                    "AnatomicalStructure"
+                ]
+            }
+        ],
+        "s_class_name": "ReligiousCharacter"
+    },
+    "eyes": {
+        "has characteristic": [
+            "full of tears",
+            {
+                "o_class_name": "Emotion"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
+    },
+    "holding": {
+        "has characteristic": [
+            "wreath",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "Posture"
+    },
+    "in his outstretched left hand": {
+        "has characteristic": [
+            "wreath",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "Posture"
+    },
+    "sky": {
+        "contains": [
+            "floating",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "GeographicalFeature"
+    },
+    "Catherine": {
+        "has characteristic": [
+            "prayer",
+            {
+                "o_class_name": "Concept"
+            }
+        ],
+        "s_class_name": "ReligiousCharacter",
+        "symbolizes": [
+            "virgin",
+            {
+                "o_class_name": "Concept"
+            }
+        ]
+    },
+    "tool of martyrdom": {
+        "has characteristic": [
+            "destroyed",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "on the upper left edge": {
+        "contains": [
+            "angel",
+            {
+                "o_class_name": "ReligiousCharacter"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "wheel": {
+        "symbolizes": [
+            [
+                "martyrdom",
+                "tool of martyrdom"
+            ],
+            {
+                "o_class_name": [
+                    "Concept",
+                    "PhysicalObject"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalObject",
+        "has characteristic": [
+            [
+                "lined with",
+                "destroyed"
+            ],
+            {
+                "o_class_name": [
+                    "Composition",
+                    "Quality"
+                ]
+            }
+        ]
+    },
+    "robe": {
+        "has characteristic": [
+            [
+                "close-up",
+                "red-blue"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Color"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
     "torturer": {
         "has characteristic": [
-            "pulling",
-            "looks at her"
-        ]
+            [
+                "pulling",
+                "looks at her"
+            ],
+            {
+                "o_class_name": [
+                    "Posture",
+                    "Posture"
+                ]
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "pulling": {
+        "symbolizes": [
+            [
+                "out of fear",
+                "hair"
+            ],
+            {
+                "o_class_name": [
+                    "Emotion",
+                    "AnatomicalStructure"
+                ]
+            }
+        ],
+        "s_class_name": "Posture"
+    },
+    "head": {
+        "has characteristic": [
+            [
+                "looking down",
+                "slightly lowered"
+            ],
+            {
+                "o_class_name": [
+                    "Posture",
+                    "Posture"
+                ]
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
     },
     "chest": {
-        "has characteristic": "free"
+        "has characteristic": [
+            "free",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
     },
-    "on the upper left edge": {
-        "contains": "angel"
-    },
-    "tool of torture": {
-        "symbolizes": "martyrdom"
+    "looks at her": {
+        "symbolizes": [
+            "amazement",
+            {
+                "o_class_name": "Emotion"
+            }
+        ],
+        "s_class_name": "Posture"
     }
 }

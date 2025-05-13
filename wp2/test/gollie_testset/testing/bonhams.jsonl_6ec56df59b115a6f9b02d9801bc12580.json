@@ -1,31 +1,90 @@
 {
-    "dog": {
+    "arm": {
         "has characteristic": [
-            "smaller",
-            "standing on its hind quarters"
-        ]
+            "resting",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
     },
     "A pair of Bow figures of a huntsman and his companion": {
-        "depicts": [
-            "dog",
-            "lady companion",
-            "tree trunk",
-            "huntsman"
+        "fabrication method": [
+            "hand modelling typical",
+            {
+                "o_class_name": "ArtisticTechnique"
+            }
         ],
-        "fabrication method": "hand modelling typical",
-        "influenced by": "Muses Modeller",
-        "created in": "1752"
-    },
-    "at his side": {
-        "contains": "dog"
-    },
-    "arm": {
-        "has characteristic": "resting"
+        "s_class_name": "WorkOfArt",
+        "depicts": [
+            [
+                "tree trunk",
+                "huntsman",
+                "dog",
+                "lady companion"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalObject",
+                    "Occupation",
+                    "Animal",
+                    "Person"
+                ]
+            }
+        ],
+        "influenced by": [
+            "Muses Modeller",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "created in": [
+            "1752",
+            {
+                "o_class_name": "PointInTime"
+            }
+        ]
     },
     "huntsman": {
-        "has characteristic": "holding"
+        "has characteristic": [
+            "holding",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "Occupation"
+    },
+    "dog": {
+        "has characteristic": [
+            [
+                "smaller",
+                "standing on its hind quarters"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Posture"
+                ]
+            }
+        ],
+        "s_class_name": "Animal"
+    },
+    "at his side": {
+        "contains": [
+            "dog",
+            {
+                "o_class_name": "Animal"
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "holding": {
-        "has characteristic": "gun"
+        "has characteristic": [
+            "gun",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "Posture"
     }
 }

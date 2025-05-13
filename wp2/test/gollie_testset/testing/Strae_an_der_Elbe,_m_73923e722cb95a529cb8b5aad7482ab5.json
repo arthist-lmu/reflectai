@@ -1,48 +1,136 @@
 {
-    "in front of": {
-        "contains": "arch"
+    "to the left": {
+        "contains": [
+            [
+                "group of figures",
+                "tree"
+            ],
+            {
+                "o_class_name": [
+                    "Person",
+                    "Plant"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "Straße an der Elbe, mit verfallenem Torbogen": {
+        "depicts": [
+            [
+                "tree",
+                "milestone",
+                "arch"
+            ],
+            {
+                "o_class_name": [
+                    "Plant",
+                    "ArchitecturalStructure",
+                    "ArchitecturalStructure"
+                ]
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "created by": [
+            "Friedrich's",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "contains": [
+            "group of figures",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "created in": [
+            "um 1799",
+            {
+                "o_class_name": "PointInTime"
+            }
+        ]
+    },
+    "Elbufer in Pirna in the western part of the city": {
+        "has characteristic": [
+            "arch",
+            {
+                "o_class_name": "ArchitecturalStructure"
+            }
+        ],
+        "s_class_name": "PhysicalLocation"
+    },
+    "goal arch": {
+        "has characteristic": [
+            "to the left",
+            {
+                "o_class_name": "Composition"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
     },
     "substructures": {
         "has characteristic": [
-            "1729",
-            "above"
-        ]
+            [
+                "1729",
+                "above"
+            ],
+            {
+                "o_class_name": [
+                    "PointInTime",
+                    "Composition"
+                ]
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
     },
-    "Elbtor": {
-        "has characteristic": "in front of"
+    "above": {
+        "contains": [
+            "Corsacian post office column",
+            {
+                "o_class_name": "ArchitecturalStructure"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "milestone": {
+        "has characteristic": [
+            "to the left",
+            {
+                "o_class_name": "Composition"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
     },
     "branch": {
         "has characteristic": [
-            "lower",
-            "left"
-        ]
-    },
-    "Straße an der Elbe, mit verfallenem Torbogen": {
-        "contains": "group of figures",
-        "created in": "um 1799",
-        "depicts": [
-            "tree",
-            "milestone",
-            "arch"
+            [
+                "left",
+                "lower"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Quality"
+                ]
+            }
         ],
-        "created by": "Friedrich's"
+        "s_class_name": "AnatomicalStructure"
     },
-    "goal arch": {
-        "has characteristic": "to the left"
-    },
-    "to the left": {
+    "in front of": {
         "contains": [
-            "group of figures",
-            "tree"
-        ]
+            "arch",
+            {
+                "o_class_name": "ArchitecturalStructure"
+            }
+        ],
+        "s_class_name": "Composition"
     },
-    "above": {
-        "contains": "Corsacian post office column"
-    },
-    "milestone": {
-        "has characteristic": "to the left"
-    },
-    "Elbufer in Pirna in the western part of the city": {
-        "has characteristic": "arch"
+    "Elbtor": {
+        "has characteristic": [
+            "in front of",
+            {
+                "o_class_name": "Composition"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
     }
 }

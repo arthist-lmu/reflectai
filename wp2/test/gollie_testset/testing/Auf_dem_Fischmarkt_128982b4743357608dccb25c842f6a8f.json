@@ -1,15 +1,43 @@
 {
     "Auf dem Fischmarkt": {
-        "influenced by": [
-            "Ukiyo-e",
-            "Japanese style"
-        ],
         "depicts": [
-            "child",
-            "fish market",
-            "Britonese woman"
+            [
+                "fish market",
+                "child",
+                "Britonese woman"
+            ],
+            {
+                "o_class_name": [
+                    "ArchitecturalStructure",
+                    "Person",
+                    "Person"
+                ]
+            }
         ],
-        "instance of": "painting",
-        "created by": "Carl Moser"
+        "s_class_name": "WorkOfArt",
+        "influenced by": [
+            [
+                "Japanese style",
+                "Ukiyo-e"
+            ],
+            {
+                "o_class_name": [
+                    "ArtGenre",
+                    "TypeOfWorkOfArt"
+                ]
+            }
+        ],
+        "created by": [
+            "Carl Moser",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "instance of": [
+            "painting",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ]
     }
 }

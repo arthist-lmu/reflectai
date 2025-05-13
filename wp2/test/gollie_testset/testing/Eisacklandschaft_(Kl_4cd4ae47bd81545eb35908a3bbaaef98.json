@@ -1,53 +1,158 @@
 {
-    "Eisacklandschaft (Klausen).": {
-        "created in": "1911",
-        "instance of": "painting",
-        "depicts": [
-            "trees",
-            "town",
-            "structure",
-            "Saber Klosterberg",
-            "valley",
-            "Klausen in South Tyrol",
-            "sky",
-            "mountainous landscape"
+    "shapes": {
+        "has characteristic": [
+            "simplified, almost cubic",
+            {
+                "o_class_name": "Quality"
+            }
         ],
-        "fabrication method": "wide brush strokes",
-        "created by": "Kanoldt"
+        "s_class_name": "Concept"
     },
-    "upper half of the image": {
-        "contains": "area"
+    "Eisacklandschaft (Klausen).": {
+        "depicts": [
+            [
+                "sky",
+                "valley",
+                "mountainous landscape",
+                "trees",
+                "town",
+                "structure",
+                "Saber Klosterberg",
+                "Klausen in South Tyrol"
+            ],
+            {
+                "o_class_name": [
+                    "Composition",
+                    "GeographicalFeature",
+                    "GeographicalFeature",
+                    "GeographicalFeature",
+                    "ArchitecturalStructure",
+                    "ArchitecturalStructure",
+                    "PhysicalLocation",
+                    "PhysicalLocation"
+                ]
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "fabrication method": [
+            "wide brush strokes",
+            {
+                "o_class_name": "ArtisticTechnique"
+            }
+        ],
+        "created by": [
+            "Kanoldt",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "instance of": [
+            "painting",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ],
+        "created in": [
+            "1911",
+            {
+                "o_class_name": "PointInTime"
+            }
+        ]
     },
     "structure": {
         "has characteristic": [
-            "shapes",
-            "monumental"
-        ]
+            [
+                "shapes",
+                "monumental"
+            ],
+            {
+                "o_class_name": [
+                    "Concept",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
     },
-    "trees": {
-        "has characteristic": "mighty"
-    },
-    "surround them on three sides": {
-        "contains": [
-            "buildings",
-            "trees"
+    "buildings": {
+        "symbolizes": [
+            "Saber Klosterberg",
+            {
+                "o_class_name": "PhysicalLocation"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure",
+        "has characteristic": [
+            "raised",
+            {
+                "o_class_name": "Quality"
+            }
         ]
     },
     "area": {
-        "has characteristic": "small",
-        "symbolizes": "sky"
-    },
-    "buildings": {
-        "symbolizes": "Saber Klosterberg",
-        "has characteristic": "raised"
-    },
-    "town": {
-        "has characteristic": "medieval"
+        "symbolizes": [
+            "sky",
+            {
+                "o_class_name": "Composition"
+            }
+        ],
+        "s_class_name": "Composition",
+        "has characteristic": [
+            "small",
+            {
+                "o_class_name": "Quality"
+            }
+        ]
     },
     "center of the picture": {
-        "contains": "buildings"
+        "contains": [
+            "buildings",
+            {
+                "o_class_name": "ArchitecturalStructure"
+            }
+        ],
+        "s_class_name": "Composition"
     },
-    "shapes": {
-        "has characteristic": "simplified, almost cubic"
+    "trees": {
+        "has characteristic": [
+            "mighty",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "GeographicalFeature"
+    },
+    "town": {
+        "has characteristic": [
+            "medieval",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
+    },
+    "upper half of the image": {
+        "contains": [
+            "area",
+            {
+                "o_class_name": "Composition"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "surround them on three sides": {
+        "contains": [
+            [
+                "buildings",
+                "trees"
+            ],
+            {
+                "o_class_name": [
+                    "ArchitecturalStructure",
+                    "GeographicalFeature"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
     }
 }

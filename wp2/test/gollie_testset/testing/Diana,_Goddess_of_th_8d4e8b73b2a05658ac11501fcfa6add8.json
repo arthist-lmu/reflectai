@@ -1,61 +1,172 @@
 {
-    "ostrich": {
-        "has characteristic": "feathers"
+    "sash": {
+        "has characteristic": [
+            "red",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
-    "landscape": {
-        "contains": [
-            "wooded",
-            "hilly"
-        ]
+    "blue": {
+        "has characteristic": [
+            "shimmering",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Color"
     },
     "Diana, Goddess of the Hunt": {
-        "created in": "1686",
-        "influenced by": "Frans van Mieris the Elder",
-        "symbolizes": "Arcadian landscape",
         "depicts": [
-            "ruins",
-            "window",
-            "landscape",
-            "mountain",
-            "woman"
+            [
+                "ruins",
+                "window",
+                "landscape",
+                "mountain",
+                "woman"
+            ],
+            {
+                "o_class_name": [
+                    "ArchitecturalStructure",
+                    "ArchitecturalStructure",
+                    "Composition",
+                    "GeographicalFeature",
+                    "Person"
+                ]
+            }
         ],
-        "created by": "Willem van Mieris"
-    },
-    "feathers": {
-        "has characteristic": [
-            "white",
-            "blue"
+        "s_class_name": "WorkOfArt",
+        "created by": [
+            "Willem van Mieris",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "symbolizes": [
+            "Arcadian landscape",
+            {
+                "o_class_name": "Concept"
+            }
+        ],
+        "created in": [
+            "1686",
+            {
+                "o_class_name": "PointInTime"
+            }
+        ],
+        "influenced by": [
+            "Frans van Mieris the Elder",
+            {
+                "o_class_name": "Person"
+            }
         ]
     },
-    "hair": {
-        "has characteristic": "feathers"
-    },
-    "woman": {
+    "scarf": {
         "has characteristic": [
-            "hair",
-            "scarf",
-            "robe"
-        ]
+            "blue",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
     "robe": {
         "has characteristic": [
-            "gold-colored",
-            "sash"
-        ]
+            [
+                "gold-colored",
+                "sash"
+            ],
+            {
+                "o_class_name": [
+                    "Color",
+                    "PhysicalObject"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
-    "framing devices": {
-        "contains": "window"
+    "landscape": {
+        "contains": [
+            [
+                "hilly",
+                "wooded"
+            ],
+            {
+                "o_class_name": [
+                    "GeographicalFeature",
+                    "GeographicalFeature"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
     },
-    "scarf": {
-        "has characteristic": "blue"
+    "woman": {
+        "has characteristic": [
+            [
+                "robe",
+                "hair",
+                "scarf"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalObject",
+                    "AnatomicalStructure",
+                    "PhysicalObject"
+                ]
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "feathers": {
+        "has characteristic": [
+            [
+                "white",
+                "blue"
+            ],
+            {
+                "o_class_name": [
+                    "Color",
+                    "Color"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
     "mountain": {
-        "has characteristic": "distant"
+        "has characteristic": [
+            "distant",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "GeographicalFeature"
     },
-    "blue": {
-        "has characteristic": "shimmering"
+    "framing devices": {
+        "contains": [
+            "window",
+            {
+                "o_class_name": "ArchitecturalStructure"
+            }
+        ],
+        "s_class_name": "Composition"
     },
-    "sash": {
-        "has characteristic": "red"
+    "ostrich": {
+        "has characteristic": [
+            "feathers",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "Animal"
+    },
+    "hair": {
+        "has characteristic": [
+            "feathers",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
     }
 }

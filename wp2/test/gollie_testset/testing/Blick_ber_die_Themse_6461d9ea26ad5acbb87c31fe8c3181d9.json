@@ -1,31 +1,96 @@
 {
     "Blick über die Themse bei Richmond Gardens auf Syon House": {
-        "symbolizes": [
-            "landscape mood",
-            "nature"
-        ],
         "depicts": [
-            "sunlight",
-            "on the right of the bank",
-            "mist",
-            "river landscape"
+            [
+                "sunlight",
+                "on the right of the bank",
+                "river landscape",
+                "mist"
+            ],
+            {
+                "o_class_name": [
+                    "Concept",
+                    "Composition",
+                    "Concept",
+                    "Concept"
+                ]
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "contains": [
+            "people",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "instance of": [
+            "painting",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ],
+        "symbolizes": [
+            [
+                "landscape mood",
+                "nature"
+            ],
+            {
+                "o_class_name": [
+                    "Concept",
+                    "Concept"
+                ]
+            }
+        ],
+        "influenced by": [
+            "Claude Lorrain, Joseph Vernet and Canaletto",
+            {
+                "o_class_name": "Person"
+            }
         ],
         "created in": [
-            "1761",
-            "1776"
+            [
+                "1761",
+                "1776"
+            ],
+            {
+                "o_class_name": [
+                    "StartTime",
+                    "EndTime"
+                ]
+            }
         ],
-        "contains": "people",
-        "created by": "Wilson",
-        "instance of": "painting",
-        "influenced by": "Claude Lorrain, Joseph Vernet and Canaletto"
-    },
-    "mist": {
-        "has characteristic": "gentle"
+        "created by": [
+            "Wilson",
+            {
+                "o_class_name": "Person"
+            }
+        ]
     },
     "on the right of the bank": {
-        "depicts": "Syon House"
+        "depicts": [
+            "Syon House",
+            {
+                "o_class_name": "PhysicalLocation"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "mist": {
+        "has characteristic": [
+            "gentle",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Concept"
     },
     "nature": {
-        "has characteristic": "real"
+        "has characteristic": [
+            "real",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Concept"
     }
 }

@@ -1,59 +1,160 @@
 {
     "In the foreground": {
-        "contains": "woman"
-    },
-    "cloak": {
-        "has characteristic": "red"
-    },
-    "woman": {
-        "has characteristic": [
-            "young",
-            "cloth",
-            "sitting"
-        ]
-    },
-    "In the trees above the well": {
-        "contains": "parrot",
-        "depicts": "birds"
-    },
-    "In front of her": {
         "contains": [
-            "vase",
-            "mirror",
-            "shoes"
-        ]
-    },
-    "lady": {
-        "has characteristic": "cloak"
-    },
-    "dog": {
-        "has characteristic": [
-            "sitting",
-            "little"
-        ]
-    },
-    "beside her": {
-        "contains": "dog"
-    },
-    "At the edge": {
-        "contains": [
-            "pool",
-            "in the middle"
-        ]
+            "woman",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "BRUNNENANLAGE MIT BADENDEN FRAUEN": {
         "depicts": [
-            "In the trees above the well",
-            "At the edge",
-            "In front of her",
-            "In the foreground"
+            [
+                "In front of her",
+                "In the foreground",
+                "In the trees above the well",
+                "At the edge"
+            ],
+            {
+                "o_class_name": [
+                    "Composition",
+                    "Composition",
+                    "Composition",
+                    "Composition"
+                ]
+            }
         ],
-        "instance of": "sculpture"
+        "s_class_name": "WorkOfArt",
+        "instance of": [
+            "sculpture",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ]
+    },
+    "lady": {
+        "has characteristic": [
+            "cloak",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "In the trees above the well": {
+        "contains": [
+            "parrot",
+            {
+                "o_class_name": "Animal"
+            }
+        ],
+        "s_class_name": "Composition",
+        "depicts": [
+            "birds",
+            {
+                "o_class_name": "Animal"
+            }
+        ]
+    },
+    "In front of her": {
+        "contains": [
+            [
+                "vase",
+                "mirror",
+                "shoes"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalObject",
+                    "PhysicalObject",
+                    "PhysicalObject"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "beside her": {
+        "contains": [
+            "dog",
+            {
+                "o_class_name": "Animal"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "woman": {
+        "has characteristic": [
+            [
+                "cloth",
+                "young",
+                "sitting"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalObject",
+                    "Quality",
+                    "Posture"
+                ]
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "dog": {
+        "has characteristic": [
+            [
+                "sitting",
+                "little"
+            ],
+            {
+                "o_class_name": [
+                    "Posture",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "Animal"
+    },
+    "cloak": {
+        "has characteristic": [
+            "red",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
     "vase": {
-        "has characteristic": "glass"
+        "has characteristic": [
+            "glass",
+            {
+                "o_class_name": "PhysicalSurface"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "At the edge": {
+        "contains": [
+            [
+                "pool",
+                "in the middle"
+            ],
+            {
+                "o_class_name": [
+                    "ArchitecturalStructure",
+                    "Composition"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "shoes": {
-        "has characteristic": "red"
+        "has characteristic": [
+            "red",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     }
 }

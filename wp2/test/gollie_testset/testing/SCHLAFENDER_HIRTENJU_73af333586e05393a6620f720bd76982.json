@@ -1,83 +1,227 @@
 {
-    "grabbing": {
-        "contains": [
-            "elbows",
-            "hand"
-        ]
-    },
-    "On the right": {
-        "contains": "piece"
+    "elbow": {
+        "has characteristic": [
+            [
+                "right",
+                "hand"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "AnatomicalStructure"
+                ]
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
     },
     "boy": {
         "has characteristic": [
-            "grabbing",
-            "clothes",
-            "leaning",
-            "lying"
-        ]
-    },
-    "sky": {
-        "has characteristic": "open"
-    },
-    "In a far-off landscape": {
-        "contains": "in front of a tree trunk"
-    },
-    "attached": {
-        "contains": "handle"
-    },
-    "dog": {
-        "has characteristic": "lying"
-    },
-    "clothes": {
-        "has characteristic": [
-            "beige",
-            "red"
-        ]
-    },
-    "behind which": {
-        "contains": [
-            "sky",
-            "stag tree"
-        ]
-    },
-    "pasture basket": {
-        "has characteristic": "handle"
-    },
-    "hand": {
-        "has characteristic": "left"
-    },
-    "piece": {
-        "has characteristic": "attached",
-        "symbolizes": "shepherd's"
+            [
+                "lying",
+                "leaning",
+                "grabbing",
+                "clothes"
+            ],
+            {
+                "o_class_name": [
+                    "Posture",
+                    "Posture",
+                    "Posture",
+                    "PhysicalObject"
+                ]
+            }
+        ],
+        "s_class_name": "Person"
     },
     "SCHLAFENDER HIRTENJUNGE": {
         "depicts": [
-            "behind which",
-            "next to him",
-            "boy",
-            "In a far-off landscape",
-            "dog",
-            "On the right"
+            [
+                "next to him",
+                "dog",
+                "On the right",
+                "boy",
+                "In a far-off landscape",
+                "behind which"
+            ],
+            {
+                "o_class_name": [
+                    "Composition",
+                    "Animal",
+                    "Composition",
+                    "Person",
+                    "Composition",
+                    "Composition"
+                ]
+            }
         ],
-        "created by": "artist",
-        "instance of": "painting"
+        "s_class_name": "WorkOfArt",
+        "created by": [
+            "artist",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "instance of": [
+            "painting",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ]
     },
     "leaning": {
         "contains": [
-            "head",
-            "hand"
-        ]
+            [
+                "head",
+                "hand"
+            ],
+            {
+                "o_class_name": [
+                    "AnatomicalStructure",
+                    "AnatomicalStructure"
+                ]
+            }
+        ],
+        "s_class_name": "Posture"
     },
-    "elbow": {
+    "grabbing": {
+        "contains": [
+            [
+                "elbows",
+                "hand"
+            ],
+            {
+                "o_class_name": [
+                    "AnatomicalStructure",
+                    "AnatomicalStructure"
+                ]
+            }
+        ],
+        "s_class_name": "Posture"
+    },
+    "hand": {
         "has characteristic": [
-            "hand",
-            "right"
-        ]
+            "left",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
+    },
+    "In a far-off landscape": {
+        "contains": [
+            "in front of a tree trunk",
+            {
+                "o_class_name": "Composition"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "behind which": {
+        "contains": [
+            [
+                "stag tree",
+                "sky"
+            ],
+            {
+                "o_class_name": [
+                    "Plant",
+                    "GeographicalFeature"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "pasture basket": {
+        "has characteristic": [
+            "handle",
+            {
+                "o_class_name": "PhysicalSurface"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
     "in front of a tree trunk": {
-        "contains": "boy"
+        "contains": [
+            "boy",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "clothes": {
+        "has characteristic": [
+            [
+                "beige",
+                "red"
+            ],
+            {
+                "o_class_name": [
+                    "Color",
+                    "Color"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "attached": {
+        "contains": [
+            "handle",
+            {
+                "o_class_name": "PhysicalSurface"
+            }
+        ],
+        "s_class_name": "Posture"
     },
     "next to him": {
-        "contains": "dog"
+        "contains": [
+            "dog",
+            {
+                "o_class_name": "Animal"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "On the right": {
+        "contains": [
+            "piece",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "piece": {
+        "symbolizes": [
+            "shepherd's",
+            {
+                "o_class_name": "Occupation"
+            }
+        ],
+        "s_class_name": "PhysicalObject",
+        "has characteristic": [
+            "attached",
+            {
+                "o_class_name": "Posture"
+            }
+        ]
+    },
+    "dog": {
+        "has characteristic": [
+            "lying",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "Animal"
+    },
+    "sky": {
+        "has characteristic": [
+            "open",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "GeographicalFeature"
     }
 }

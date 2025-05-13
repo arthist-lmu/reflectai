@@ -1,44 +1,126 @@
 {
-    "Lady Fortuna": {
-        "has characteristic": [
-            "stands on",
-            "holding"
-        ]
-    },
     "Fortuna, from the Facade of the Arminiushuis in Oudewater": {
-        "depicts": [
-            "Lady Fortuna",
-            "frame",
-            "sail"
+        "made from material": [
+            "sandstone",
+            {
+                "o_class_name": "ArtMaterial"
+            }
         ],
-        "instance of": "statue",
-        "has characteristic": "globe",
-        "made from material": "sandstone"
-    },
-    "frame": {
-        "has characteristic": "arched",
-        "contains": [
-            "ornamentation",
-            "corbel"
+        "s_class_name": "WorkOfArt",
+        "has characteristic": [
+            "globe",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "depicts": [
+            [
+                "sail",
+                "frame",
+                "Lady Fortuna"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalObject",
+                    "Composition",
+                    "MythicalCharacter"
+                ]
+            }
+        ],
+        "instance of": [
+            "statue",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
         ]
     },
     "arches high above": {
-        "contains": "head"
+        "contains": [
+            "head",
+            {
+                "o_class_name": "AnatomicalStructure"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "holding": {
+        "has characteristic": [
+            "sail",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "Posture"
+    },
+    "ornamentation": {
+        "has characteristic": [
+            "renaissance",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalSurface"
+    },
+    "Lady Fortuna": {
+        "has characteristic": [
+            [
+                "stands on",
+                "holding"
+            ],
+            {
+                "o_class_name": [
+                    "Posture",
+                    "Posture"
+                ]
+            }
+        ],
+        "s_class_name": "MythicalCharacter"
+    },
+    "stands on": {
+        "contains": [
+            "globe",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "Posture"
     },
     "sail": {
         "has characteristic": [
-            "wind-blown",
-            "full",
-            "arches high above"
+            [
+                "full",
+                "wind-blown",
+                "arches high above"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Quality",
+                    "Composition"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "frame": {
+        "has characteristic": [
+            "arched",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Composition",
+        "contains": [
+            [
+                "ornamentation",
+                "corbel"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalSurface",
+                    "ArchitecturalStructure"
+                ]
+            }
         ]
-    },
-    "holding": {
-        "has characteristic": "sail"
-    },
-    "ornamentation": {
-        "has characteristic": "renaissance"
-    },
-    "stands on": {
-        "contains": "globe"
     }
 }

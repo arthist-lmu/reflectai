@@ -26,11 +26,13 @@ def parse_args():
     parser.add_argument(
         "-t", "--tmp_path", help="save single step results in a tmp folder"
     )
+    parser.add_argument("-k", "--class_name", action='store_true', help='Whether to include the class name in the triplets or not', default=False)
+
     args = parser.parse_args()
     return args
 
 
-def read_dataset(path: str) -> List[Dict]:
+def read_dataset(path: str, with_class_name=False) -> List[Dict]:
     results = []
     with open(path, "r") as file:
         for i, line in enumerate(file):
@@ -44,10 +46,11 @@ def read_dataset(path: str) -> List[Dict]:
                     text=text,
                     language=data['text'][0].get("language", None),
                     triplets=data.get('triplets', []),
-                    annotations=data.get('annotations', {})
+                    annotations=data.get('annotations', {}),
+                    with_class_name=with_class_name
                 )
             )
-    print(results[0].keys())
+
     return results
 
 
@@ -56,7 +59,8 @@ def main():
 
     datasets = []
     for path in args.input_paths:
-        datasets.extend(read_dataset(path))
+        datasets.extend(read_dataset(path, args.class_name))
+
 
     pipeline_definition = json.loads(args.pipeline)
 

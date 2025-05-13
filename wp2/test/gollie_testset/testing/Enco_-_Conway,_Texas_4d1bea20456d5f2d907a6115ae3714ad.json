@@ -1,78 +1,230 @@
 {
-    "Two cars": {
-        "has characteristic": [
-            "black",
-            "pale"
-        ]
+    "Five Views": {
+        "instance of": [
+            "Panhandle Series",
+            {
+                "o_class_name": "WorkOfArt"
+            }
+        ],
+        "s_class_name": "WorkOfArt"
     },
     "Enco – Conway, Texas": {
         "depicts": [
-            "form",
-            "stand next to the automobiles",
-            "on the façade of the building",
-            "seen from across a road",
-            "protrudes into the frame from the photograph’s upper edge",
-            "signs and advertisements",
-            "parked in front of the station",
-            "sign",
-            "Two cars",
-            "gasoline station",
-            "utility pole"
+            [
+                "seen from across a road",
+                "protrudes into the frame from the photograph’s upper edge",
+                "gasoline station",
+                "utility pole",
+                "on the façade of the building",
+                "parked in front of the station",
+                "sign",
+                "signs and advertisements",
+                "Two cars",
+                "stand next to the automobiles",
+                "form"
+            ],
+            {
+                "o_class_name": [
+                    "Composition",
+                    "Composition",
+                    "ArchitecturalStructure",
+                    "PhysicalObject",
+                    "Composition",
+                    "Composition",
+                    "PhysicalObject",
+                    "PhysicalSurface",
+                    "PhysicalObject",
+                    "Composition",
+                    "PhysicalObject"
+                ]
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "contains": [
+            "Ruscha",
+            {
+                "o_class_name": "Person"
+            }
         ],
         "instance of": [
-            "black and white photograph",
-            "Five Views"
+            [
+                "black and white photograph",
+                "Five Views"
+            ],
+            {
+                "o_class_name": [
+                    "TypeOfWorkOfArt",
+                    "WorkOfArt"
+                ]
+            }
         ],
-        "created by": "Ed Ruscha",
-        "created in": "1962, printed 2007",
-        "contains": "Ruscha"
+        "created in": [
+            "1962, printed 2007",
+            {
+                "o_class_name": "PointInTime"
+            }
+        ],
+        "created by": [
+            "Ed Ruscha",
+            {
+                "o_class_name": "Person"
+            }
+        ]
     },
-    "form": {
-        "symbolizes": "visor or wind-deflector",
-        "has characteristic": "blurred"
+    "station": {
+        "symbolizes": [
+            "company name: Enco",
+            {
+                "o_class_name": "Concept"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
+    },
+    "sign": {
+        "has characteristic": [
+            "large circular",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalObject",
+        "contains": [
+            "company name: Enco",
+            {
+                "o_class_name": "Concept"
+            }
+        ]
     },
     "car": {
-        "contains": "Ruscha",
-        "has characteristic": "window"
+        "contains": [
+            "Ruscha",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "PhysicalObject",
+        "has characteristic": [
+            "window",
+            {
+                "o_class_name": "ArchitecturalStructure"
+            }
+        ]
     },
     "stand next to the automobiles": {
         "contains": [
-            "utility pole",
-            "sign"
-        ]
-    },
-    "protrudes into the frame from the photograph’s upper edge": {
-        "contains": "form"
+            [
+                "sign",
+                "utility pole"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalObject",
+                    "PhysicalObject"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "parked in front of the station": {
-        "contains": "Two cars"
+        "contains": [
+            "Two cars",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "Two cars": {
+        "has characteristic": [
+            [
+                "pale",
+                "black"
+            ],
+            {
+                "o_class_name": [
+                    "Color",
+                    "Color"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
     "on the façade of the building": {
-        "contains": "signs and advertisements"
+        "contains": [
+            "signs and advertisements",
+            {
+                "o_class_name": "PhysicalSurface"
+            }
+        ],
+        "s_class_name": "Composition"
     },
-    "Ruscha": {
-        "has characteristic": "sat in"
+    "form": {
+        "symbolizes": [
+            "visor or wind-deflector",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "PhysicalObject",
+        "has characteristic": [
+            "blurred",
+            {
+                "o_class_name": "Quality"
+            }
+        ]
     },
     "partially block the view of the building": {
-        "has characteristic": "Two cars"
+        "has characteristic": [
+            "Two cars",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "Composition"
     },
-    "sign": {
-        "contains": "company name: Enco",
-        "has characteristic": "large circular"
-    },
-    "station": {
-        "symbolizes": "company name: Enco"
-    },
-    "seen from across a road": {
-        "contains": "gasoline station"
+    "protrudes into the frame from the photograph’s upper edge": {
+        "contains": [
+            "form",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "on the window of a car": {
-        "contains": "visor or wind-deflector"
-    },
-    "Five Views": {
-        "instance of": "Panhandle Series"
+        "contains": [
+            "visor or wind-deflector",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "signs and advertisements": {
-        "has characteristic": "Smaller"
+        "has characteristic": [
+            "Smaller",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalSurface"
+    },
+    "Ruscha": {
+        "has characteristic": [
+            "sat in",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "seen from across a road": {
+        "contains": [
+            "gasoline station",
+            {
+                "o_class_name": "ArchitecturalStructure"
+            }
+        ],
+        "s_class_name": "Composition"
     }
 }

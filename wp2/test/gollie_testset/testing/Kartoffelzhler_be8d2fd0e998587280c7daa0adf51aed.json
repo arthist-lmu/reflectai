@@ -1,26 +1,77 @@
 {
     "Bibles": {
         "has characteristic": [
-            "red",
-            "Mao"
-        ]
-    },
-    "hands": {
-        "has characteristic": "Bibles"
-    },
-    "figures": {
-        "has characteristic": "hands"
+            [
+                "red",
+                "Mao"
+            ],
+            {
+                "o_class_name": [
+                    "Color",
+                    "Person"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
     "„Kartoffelzähler“": {
-        "symbolizes": "dualism of mass and individual",
-        "instance of": "motif",
-        "contains": [
-            "Chinese workers",
-            "Bibles"
+        "instance of": [
+            "motif",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
         ],
-        "created by": "Thomas Bayrle"
+        "s_class_name": "WorkOfArt",
+        "contains": [
+            [
+                "Bibles",
+                "Chinese workers"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalObject",
+                    "Person"
+                ]
+            }
+        ],
+        "created by": [
+            "Thomas Bayrle",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "symbolizes": [
+            "dualism of mass and individual",
+            {
+                "o_class_name": "Concept"
+            }
+        ]
+    },
+    "figures": {
+        "has characteristic": [
+            "hands",
+            {
+                "o_class_name": "AnatomicalStructure"
+            }
+        ],
+        "s_class_name": "Person"
     },
     "Chinese workers": {
-        "has characteristic": "multiply"
+        "has characteristic": [
+            "multiply",
+            {
+                "o_class_name": "Concept"
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "hands": {
+        "has characteristic": [
+            "Bibles",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
     }
 }

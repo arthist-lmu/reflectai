@@ -1,53 +1,150 @@
 {
-    "flowers": {
-        "has characteristic": [
-            "Smaller",
-            "light",
-            "beautiful",
-            "shade"
-        ]
-    },
-    "fallen from": {
+    "placed": {
         "contains": [
             "vase",
-            "Flowers"
-        ]
-    },
-    "Blumenstück": {
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "Composition",
         "depicts": [
             "over the edge of the table or the plate",
-            "flowers",
-            "bouquet",
-            "strawberry",
-            "Flowers"
-        ],
-        "instance of": "paintings",
-        "has genre": "Biedermeier"
+            {
+                "o_class_name": "Composition"
+            }
+        ]
     },
-    "light": {
-        "has characteristic": "most"
+    "flowers": {
+        "has characteristic": [
+            [
+                "beautiful",
+                "Smaller",
+                "shade",
+                "light"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Quality",
+                    "Concept",
+                    "Concept"
+                ]
+            }
+        ],
+        "s_class_name": "Plant"
+    },
+    "Blumenstück": {
+        "has genre": [
+            "Biedermeier",
+            {
+                "o_class_name": "ArtGenre"
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "depicts": [
+            [
+                "bouquet",
+                "Flowers",
+                "over the edge of the table or the plate",
+                "strawberry",
+                "flowers"
+            ],
+            {
+                "o_class_name": [
+                    "Plant",
+                    "Plant",
+                    "Composition",
+                    "Food",
+                    "Plant"
+                ]
+            }
+        ],
+        "instance of": [
+            "paintings",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ]
     },
     "fruits": {
         "has characteristic": [
-            "Native",
-            "exotic"
-        ]
+            [
+                "exotic",
+                "Native"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "Food"
     },
-    "placed": {
-        "contains": "vase",
-        "depicts": "over the edge of the table or the plate"
+    "fallen from": {
+        "contains": [
+            [
+                "vase",
+                "Flowers"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalObject",
+                    "Plant"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "background": {
-        "contains": "bouquet",
-        "has characteristic": "neutral"
+        "contains": [
+            "bouquet",
+            {
+                "o_class_name": "Plant"
+            }
+        ],
+        "s_class_name": "Composition",
+        "has characteristic": [
+            "neutral",
+            {
+                "o_class_name": "Quality"
+            }
+        ]
     },
-    "in the center": {
-        "contains": "flowers"
-    },
-    "edge": {
-        "contains": "flowers"
+    "light": {
+        "has characteristic": [
+            "most",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Concept"
     },
     "oval": {
-        "contains": "bouquet"
+        "contains": [
+            "bouquet",
+            {
+                "o_class_name": "Plant"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "edge": {
+        "contains": [
+            "flowers",
+            {
+                "o_class_name": "Plant"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "in the center": {
+        "contains": [
+            "flowers",
+            {
+                "o_class_name": "Plant"
+            }
+        ],
+        "s_class_name": "Composition"
     }
 }

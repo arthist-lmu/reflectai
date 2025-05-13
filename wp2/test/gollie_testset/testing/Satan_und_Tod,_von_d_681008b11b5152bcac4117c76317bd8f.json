@@ -1,39 +1,112 @@
 {
     "door": {
-        "has characteristic": "closed",
-        "symbolizes": "hell"
-    },
-    "Satan und Tod, von der Sünde getrennt": {
-        "depicts": [
-            "two guards",
-            "door",
-            "Satan"
+        "has characteristic": [
+            "closed",
+            {
+                "o_class_name": "Quality"
+            }
         ],
-        "instance of": "painting"
-    },
-    "two guards": {
+        "s_class_name": "ArchitecturalStructure",
         "symbolizes": [
-            "death",
-            "sin"
+            "hell",
+            {
+                "o_class_name": "Concept"
+            }
         ]
-    },
-    "spoils": {
-        "has characteristic": "rich"
     },
     "woman": {
         "has characteristic": [
-            "shadow",
-            "beautiful"
+            [
+                "beautiful",
+                "shadow"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Concept"
+                ]
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "Satan und Tod, von der Sünde getrennt": {
+        "depicts": [
+            [
+                "door",
+                "two guards",
+                "Satan"
+            ],
+            {
+                "o_class_name": [
+                    "ArchitecturalStructure",
+                    "Person",
+                    "ReligiousCharacter"
+                ]
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "instance of": [
+            "painting",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
         ]
     },
     "creature": {
-        "has characteristic": "shadowy",
-        "symbolizes": "death"
-    },
-    "earth": {
-        "contains": "spoils"
+        "has characteristic": [
+            "shadowy",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Person",
+        "symbolizes": [
+            "death",
+            {
+                "o_class_name": "Concept"
+            }
+        ]
     },
     "gate": {
-        "has characteristic": "opened"
+        "has characteristic": [
+            "opened",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
+    },
+    "two guards": {
+        "symbolizes": [
+            [
+                "sin",
+                "death"
+            ],
+            {
+                "o_class_name": [
+                    "Concept",
+                    "Concept"
+                ]
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "earth": {
+        "contains": [
+            "spoils",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "PhysicalLocation"
+    },
+    "spoils": {
+        "has characteristic": [
+            "rich",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     }
 }

@@ -1,39 +1,111 @@
 {
+    "horizon": {
+        "has characteristic": [
+            "low",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
     "The Country Road": {
-        "has genre": [
-            "Dutch",
-            "Flemish"
+        "created in": [
+            "1620s",
+            {
+                "o_class_name": "PointInTime"
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "created by": [
+            "De Hondecoeter",
+            {
+                "o_class_name": "Person"
+            }
         ],
         "depicts": [
-            "trees",
-            "monogram",
-            "horizon",
-            "villagers",
-            "Dutch landscape",
-            "few hunters",
-            "palette",
-            "peasant cottages"
+            [
+                "trees",
+                "peasant cottages",
+                "monogram",
+                "villagers",
+                "Dutch landscape",
+                "horizon",
+                "palette",
+                "few hunters"
+            ],
+            {
+                "o_class_name": [
+                    "GeographicalFeature",
+                    "ArchitecturalStructure",
+                    "Concept",
+                    "Person",
+                    "Concept",
+                    "Composition",
+                    "Color",
+                    "Person"
+                ]
+            }
+        ],
+        "instance of": [
+            "painting",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ],
+        "has genre": [
+            [
+                "Flemish",
+                "Dutch"
+            ],
+            {
+                "o_class_name": [
+                    "ArtGenre",
+                    "ArtGenre"
+                ]
+            }
         ],
         "influenced by": [
-            "Claes Jansz Visscher",
-            "prints",
-            "Esaias van de Velde",
-            "Jan van de Velde"
-        ],
-        "created by": "De Hondecoeter",
-        "created in": "1620s",
-        "instance of": "painting"
-    },
-    "central": {
-        "contains": "trees"
+            [
+                "Esaias van de Velde",
+                "Claes Jansz Visscher",
+                "Jan van de Velde",
+                "prints"
+            ],
+            {
+                "o_class_name": [
+                    "Person",
+                    "Person",
+                    "Person",
+                    "TypeOfWorkOfArt"
+                ]
+            }
+        ]
     },
     "palette": {
-        "has characteristic": "monochrome"
+        "has characteristic": [
+            "monochrome",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "Color"
     },
     "Dutch landscape": {
-        "has characteristic": "naturalistic"
+        "has characteristic": [
+            "naturalistic",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Concept"
     },
-    "horizon": {
-        "has characteristic": "low"
+    "central": {
+        "contains": [
+            "trees",
+            {
+                "o_class_name": "GeographicalFeature"
+            }
+        ],
+        "s_class_name": "Composition"
     }
 }

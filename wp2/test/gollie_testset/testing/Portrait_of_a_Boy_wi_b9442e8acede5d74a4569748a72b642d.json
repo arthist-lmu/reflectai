@@ -1,76 +1,210 @@
 {
-    "ribbon": {
-        "has characteristic": "reddish orange"
-    },
-    "lion": {
-        "has characteristic": "golden"
-    },
-    "feathers": {
-        "has characteristic": "white"
-    },
     "flag": {
         "has characteristic": [
-            "white",
-            "red",
-            "blue",
-            "orange"
-        ]
-    },
-    "three-master": {
-        "has characteristic": [
-            "small",
-            "miniature"
-        ]
+            [
+                "white",
+                "orange",
+                "red",
+                "blue"
+            ],
+            {
+                "o_class_name": [
+                    "Color",
+                    "Color",
+                    "Color",
+                    "Color"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
     "suit": {
         "has characteristic": [
-            "striped",
-            "yellow-and-gray"
-        ]
-    },
-    "cuffs": {
-        "has characteristic": "lace"
-    },
-    "collar": {
-        "has characteristic": "lace"
-    },
-    "woodcarving": {
-        "has characteristic": "ornate"
-    },
-    "frame": {
-        "has characteristic": "oval"
-    },
-    "braid": {
-        "has characteristic": "gold"
+            [
+                "striped",
+                "yellow-and-gray"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Color"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
     "sword": {
-        "has characteristic": "raised"
+        "has characteristic": [
+            "raised",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
-    "shoulder": {
-        "has characteristic": "left"
+    "collar": {
+        "has characteristic": [
+            "lace",
+            {
+                "o_class_name": "PhysicalSurface"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
-    "background": {
-        "has characteristic": "parklike"
+    "frame": {
+        "has characteristic": [
+            "oval",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "hand": {
-        "has characteristic": "right"
-    },
-    "clothing": {
-        "has characteristic": "sumptuous"
+        "has characteristic": [
+            "right",
+            {
+                "o_class_name": "Composition"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
     },
     "boy": {
-        "has characteristic": "blond-haired"
+        "has characteristic": [
+            "blond-haired",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Person"
     },
     "beret": {
         "has characteristic": [
-            "red",
-            "velvet"
-        ]
+            [
+                "red",
+                "velvet"
+            ],
+            {
+                "o_class_name": [
+                    "Color",
+                    "PhysicalSurface"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
-    "stone basin": {
-        "has characteristic": "rectangular"
+    "braid": {
+        "has characteristic": [
+            "gold",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "PhysicalSurface"
     },
     "shawl": {
-        "has characteristic": "blue"
+        "has characteristic": [
+            "blue",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "woodcarving": {
+        "has characteristic": [
+            "ornate",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalSurface"
+    },
+    "three-master": {
+        "has characteristic": [
+            [
+                "miniature",
+                "small"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "stone basin": {
+        "has characteristic": [
+            "rectangular",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "feathers": {
+        "has characteristic": [
+            "white",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "lion": {
+        "has characteristic": [
+            "golden",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "Animal"
+    },
+    "shoulder": {
+        "has characteristic": [
+            "left",
+            {
+                "o_class_name": "Composition"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
+    },
+    "background": {
+        "has characteristic": [
+            "parklike",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "ribbon": {
+        "has characteristic": [
+            "reddish orange",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "clothing": {
+        "has characteristic": [
+            "sumptuous",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "cuffs": {
+        "has characteristic": [
+            "lace",
+            {
+                "o_class_name": "PhysicalSurface"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     }
 }

@@ -1,53 +1,153 @@
 {
-    "garments": {
-        "has characteristic": [
-            "surface",
-            "red"
-        ]
-    },
     "SCHÖNHEIT IN ROTEM KLEID": {
-        "instance of": [
-            "chest portrait",
-            "small-format painting"
-        ],
         "influenced by": [
-            "Correggio",
-            "Tiziano Vecellio"
+            [
+                "Correggio",
+                "Tiziano Vecellio"
+            ],
+            {
+                "o_class_name": [
+                    "Person",
+                    "Person"
+                ]
+            }
         ],
-        "created by": "Jean Jacques Henner",
+        "s_class_name": "WorkOfArt",
+        "instance of": [
+            [
+                "chest portrait",
+                "portrait",
+                "small-format painting"
+            ],
+            {
+                "o_class_name": [
+                    "TypeOfWorkOfArt",
+                    "TypeOfWorkOfArt",
+                    "TypeOfWorkOfArt"
+                ]
+            }
+        ],
         "depicts": [
-            "garments",
-            "background",
-            "woman"
+            [
+                "garments",
+                "woman",
+                "background"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalObject",
+                    "Person",
+                    "Composition"
+                ]
+            }
         ],
-        "symbolizes": "sensuality"
-    },
-    "woman": {
-        "has characteristic": [
-            "young",
-            "dress"
+        "created by": [
+            "Jean Jacques Henner",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "symbolizes": [
+            "sensuality",
+            {
+                "o_class_name": "Concept"
+            }
         ]
-    },
-    "background": {
-        "has characteristic": "dark",
-        "contains": "hair"
-    },
-    "surface": {
-        "has characteristic": "homogeneous color"
     },
     "dress": {
         "has characteristic": [
-            "red",
-            "almost shoulderless"
-        ]
-    },
-    "hair": {
-        "has characteristic": "red"
-    },
-    "textile": {
-        "has characteristic": "red"
+            [
+                "red",
+                "almost shoulderless"
+            ],
+            {
+                "o_class_name": [
+                    "Color",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
     "red": {
-        "has characteristic": "pure"
+        "has characteristic": [
+            "pure",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Color"
+    },
+    "woman": {
+        "has characteristic": [
+            [
+                "dress",
+                "young"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalObject",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "surface": {
+        "has characteristic": [
+            "homogeneous color",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "PhysicalSurface"
+    },
+    "background": {
+        "has characteristic": [
+            "dark",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Composition",
+        "contains": [
+            "hair",
+            {
+                "o_class_name": "AnatomicalStructure"
+            }
+        ]
+    },
+    "textile": {
+        "has characteristic": [
+            "red",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "PhysicalSurface"
+    },
+    "garments": {
+        "has characteristic": [
+            [
+                "surface",
+                "red"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalSurface",
+                    "Color"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "hair": {
+        "has characteristic": [
+            "red",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
     }
 }

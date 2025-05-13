@@ -1,71 +1,195 @@
 {
     "Heroische Landschaft": {
-        "created by": "painter",
-        "contains": [
-            "monster",
-            "princess",
-            "George"
+        "created by": [
+            "painter",
+            {
+                "o_class_name": "Person"
+            }
         ],
-        "has genre": "Renaissance painting",
-        "influenced by": [
-            "Raphael",
-            "Paolo Uccello"
+        "s_class_name": "WorkOfArt",
+        "contains": [
+            [
+                "princess",
+                "George",
+                "monster"
+            ],
+            {
+                "o_class_name": [
+                    "Person",
+                    "ReligiousCharacter",
+                    "MythicalAnimal"
+                ]
+            }
+        ],
+        "has genre": [
+            "Renaissance painting",
+            {
+                "o_class_name": "ArtGenre"
+            }
         ],
         "depicts": [
-            "grand panorama",
-            "Roman campagna at Subiaco in the Sabine Mountains"
+            [
+                "grand panorama",
+                "Roman campagna at Subiaco in the Sabine Mountains"
+            ],
+            {
+                "o_class_name": [
+                    "Composition",
+                    "PhysicalLocation"
+                ]
+            }
+        ],
+        "influenced by": [
+            [
+                "Paolo Uccello",
+                "Raphael"
+            ],
+            {
+                "o_class_name": [
+                    "Person",
+                    "Person"
+                ]
+            }
         ]
-    },
-    "Roman campagna at Subiaco in the Sabine Mountains": {
-        "contains": "George"
-    },
-    "martyr": {
-        "has characteristic": [
-            "fighting",
-            "armor"
-        ]
-    },
-    "princess": {
-        "has characteristic": [
-            "raising",
-            "praying",
-            "kneeling"
-        ]
-    },
-    "grand panorama": {
-        "contains": [
-            "sections",
-            "staging area"
-        ]
-    },
-    "in the foreground": {
-        "contains": [
-            "martyr",
-            "monster"
-        ]
-    },
-    "praying": {
-        "symbolizes": "victory"
-    },
-    "savior's": {
-        "has characteristic": "victory"
     },
     "sections": {
         "has characteristic": [
-            "bright, rocky",
-            "Dark, wooded"
-        ]
+            [
+                "Dark, wooded",
+                "bright, rocky"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
     },
-    "left": {
-        "contains": "princess"
-    },
-    "hands": {
-        "has characteristic": "raising"
-    },
-    "staging area": {
-        "contains": "figures"
+    "savior's": {
+        "has characteristic": [
+            "victory",
+            {
+                "o_class_name": "Concept"
+            }
+        ],
+        "s_class_name": "Person"
     },
     "raising": {
-        "symbolizes": "heaven"
+        "symbolizes": [
+            "heaven",
+            {
+                "o_class_name": "Concept"
+            }
+        ],
+        "s_class_name": "Posture"
+    },
+    "grand panorama": {
+        "contains": [
+            [
+                "sections",
+                "staging area"
+            ],
+            {
+                "o_class_name": [
+                    "Composition",
+                    "Composition"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "left": {
+        "contains": [
+            "princess",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "praying": {
+        "symbolizes": [
+            "victory",
+            {
+                "o_class_name": "Concept"
+            }
+        ],
+        "s_class_name": "Posture"
+    },
+    "princess": {
+        "has characteristic": [
+            [
+                "praying",
+                "raising",
+                "kneeling"
+            ],
+            {
+                "o_class_name": [
+                    "Posture",
+                    "Posture",
+                    "Posture"
+                ]
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "Roman campagna at Subiaco in the Sabine Mountains": {
+        "contains": [
+            "George",
+            {
+                "o_class_name": "ReligiousCharacter"
+            }
+        ],
+        "s_class_name": "PhysicalLocation"
+    },
+    "in the foreground": {
+        "contains": [
+            [
+                "martyr",
+                "monster"
+            ],
+            {
+                "o_class_name": [
+                    "ReligiousCharacter",
+                    "MythicalAnimal"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "hands": {
+        "has characteristic": [
+            "raising",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
+    },
+    "martyr": {
+        "has characteristic": [
+            [
+                "fighting",
+                "armor"
+            ],
+            {
+                "o_class_name": [
+                    "Posture",
+                    "PhysicalObject"
+                ]
+            }
+        ],
+        "s_class_name": "ReligiousCharacter"
+    },
+    "staging area": {
+        "contains": [
+            "figures",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "Composition"
     }
 }

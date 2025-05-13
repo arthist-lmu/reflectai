@@ -2,6 +2,8 @@ import os
 import json
 from convert_inception import xmi_parse_helper
 
+# Transforms the output of the TripletsPrinter into a json file
+
 def triplettxt_totripletjson():
     # transform txt triplet file into a json triplet file
     with open('./gollie_results_of_the annotated_texts.txt', 'r', encoding='utf-8') as fp:

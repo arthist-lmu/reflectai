@@ -1,14 +1,44 @@
 {
     "Landschaft bei Miesenbach": {
-        "created by": "Gauermann",
-        "instance of": "landscape painting",
-        "influenced by": "Jakob Gauermann",
         "depicts": [
-            "landscape",
-            "Miesenbach"
+            [
+                "landscape",
+                "Miesenbach"
+            ],
+            {
+                "o_class_name": [
+                    "Concept",
+                    "PhysicalLocation"
+                ]
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "influenced by": [
+            "Jakob Gauermann",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "created by": [
+            "Gauermann",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "instance of": [
+            "landscape painting",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
         ]
     },
     "landscape": {
-        "has characteristic": "dethimized"
+        "has characteristic": [
+            "dethimized",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Concept"
     }
 }

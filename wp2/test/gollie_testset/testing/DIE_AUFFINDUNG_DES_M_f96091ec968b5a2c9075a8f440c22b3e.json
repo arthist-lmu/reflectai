@@ -1,116 +1,325 @@
 {
-    "bank": {
-        "has characteristic": "right"
-    },
-    "coat": {
-        "has characteristic": [
-            "tight",
-            "waist",
-            "robe",
-            "sleeves"
+    "DIE AUFFINDUNG DES MOSES": {
+        "contains": [
+            [
+                "baby Moses",
+                "two servants",
+                "daughter of Pharaoh",
+                "mother of Moses",
+                "two maidens"
+            ],
+            {
+                "o_class_name": [
+                    "Person",
+                    "Person",
+                    "Person",
+                    "Person",
+                    "Person"
+                ]
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "depicts": [
+            [
+                "in the distance",
+                "finding of",
+                "water",
+                "To the left",
+                "Behind her",
+                "On the right bank"
+            ],
+            {
+                "o_class_name": [
+                    "Composition",
+                    "Composition",
+                    "GeographicalFeature",
+                    "Composition",
+                    "Composition",
+                    "Composition"
+                ]
+            }
+        ],
+        "instance of": [
+            "painting",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
         ]
     },
     "robe": {
         "has characteristic": [
-            "reddish-glowing",
-            "gold",
-            "precious"
-        ]
-    },
-    "On the right bank": {
-        "contains": [
-            "two maidens",
-            "infant"
-        ]
+            [
+                "reddish-glowing",
+                "precious",
+                "gold"
+            ],
+            {
+                "o_class_name": [
+                    "Color",
+                    "Quality",
+                    "Color"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
     "finding of": {
         "contains": [
-            "daughter of Pharaoh",
-            "baby Moses"
+            [
+                "daughter of Pharaoh",
+                "baby Moses"
+            ],
+            {
+                "o_class_name": [
+                    "Person",
+                    "Person"
+                ]
+            }
         ],
-        "depicts": "water"
-    },
-    "two servants": {
-        "has characteristic": [
-            "holds",
-            "over her head"
-        ]
-    },
-    "two maidens": {
-        "has characteristic": "took"
-    },
-    "DIE AUFFINDUNG DES MOSES": {
+        "s_class_name": "Composition",
         "depicts": [
             "water",
-            "finding of",
-            "in the distance",
-            "Behind her",
-            "On the right bank",
-            "To the left"
-        ],
-        "contains": [
-            "two maidens",
-            "daughter of Pharaoh",
-            "mother of Moses",
-            "baby Moses",
-            "two servants"
-        ],
-        "instance of": "painting"
-    },
-    "cloak": {
-        "has characteristic": "blue"
-    },
-    "king's daughter": {
-        "has characteristic": "turns to"
-    },
-    "To the left": {
-        "contains": "daughter of Pharaoh"
-    },
-    "umbrella": {
-        "has characteristic": "red"
-    },
-    "standing by the water": {
-        "depicts": "water",
-        "contains": "basket"
-    },
-    "in the distance": {
-        "contains": "silhouette of a city",
-        "has characteristic": "night sky"
-    },
-    "sleeves": {
-        "has characteristic": [
-            "white",
-            "pointed"
+            {
+                "o_class_name": "GeographicalFeature"
+            }
         ]
     },
     "over her head": {
-        "has characteristic": "umbrella"
+        "has characteristic": [
+            "umbrella",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "Posture"
     },
-    "holds": {
-        "has characteristic": "cloak"
-    },
-    "dress": {
-        "has characteristic": "coat"
-    },
-    "silhouette of a city": {
-        "has characteristic": "bright"
-    },
-    "mother of Moses": {
-        "has characteristic": "kneeling"
-    },
-    "infant": {
-        "has characteristic": "naked"
-    },
-    "daughter of Pharaoh": {
-        "has characteristic": "dress"
+    "coat": {
+        "has characteristic": [
+            [
+                "robe",
+                "sleeves",
+                "waist",
+                "tight"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalObject",
+                    "PhysicalSurface",
+                    "PhysicalSurface",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
     "waist": {
-        "has characteristic": "narrow"
+        "has characteristic": [
+            "narrow",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalSurface"
     },
-    "blue": {
-        "has characteristic": "dark"
+    "king's daughter": {
+        "has characteristic": [
+            "turns to",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "two maidens": {
+        "has characteristic": [
+            "took",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "umbrella": {
+        "has characteristic": [
+            "red",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "infant": {
+        "has characteristic": [
+            "naked",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "silhouette of a city": {
+        "has characteristic": [
+            "bright",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
+    },
+    "To the left": {
+        "contains": [
+            "daughter of Pharaoh",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "standing by the water": {
+        "depicts": [
+            "water",
+            {
+                "o_class_name": "GeographicalFeature"
+            }
+        ],
+        "s_class_name": "Composition",
+        "contains": [
+            "basket",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ]
+    },
+    "holds": {
+        "has characteristic": [
+            "cloak",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "Posture"
+    },
+    "mother of Moses": {
+        "has characteristic": [
+            "kneeling",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "sleeves": {
+        "has characteristic": [
+            [
+                "pointed",
+                "white"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Color"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalSurface"
+    },
+    "daughter of Pharaoh": {
+        "has characteristic": [
+            "dress",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "two servants": {
+        "has characteristic": [
+            [
+                "over her head",
+                "holds"
+            ],
+            {
+                "o_class_name": [
+                    "Posture",
+                    "Posture"
+                ]
+            }
+        ],
+        "s_class_name": "Person"
     },
     "Behind her": {
-        "contains": "two servants"
+        "contains": [
+            "two servants",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "dress": {
+        "has characteristic": [
+            "coat",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "On the right bank": {
+        "contains": [
+            [
+                "two maidens",
+                "infant"
+            ],
+            {
+                "o_class_name": [
+                    "Person",
+                    "Person"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "blue": {
+        "has characteristic": [
+            "dark",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Color"
+    },
+    "bank": {
+        "has characteristic": [
+            "right",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "GeographicalFeature"
+    },
+    "cloak": {
+        "has characteristic": [
+            "blue",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "in the distance": {
+        "has characteristic": [
+            "night sky",
+            {
+                "o_class_name": "GeographicalFeature"
+            }
+        ],
+        "s_class_name": "Composition",
+        "contains": [
+            "silhouette of a city",
+            {
+                "o_class_name": "ArchitecturalStructure"
+            }
+        ]
     }
 }

@@ -1,65 +1,180 @@
 {
-    "Vorbereitung zum Fest": {
-        "depicts": [
-            "On the wood floor",
-            "couple",
-            "boy",
-            "ceiling bars",
-            "wall",
-            "Through the open door",
-            "In the vicinity of a wine cellar"
+    "in the background": {
+        "has characteristic": [
+            "children",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "Composition",
+        "contains": [
+            "woman",
+            {
+                "o_class_name": "Person"
+            }
         ]
     },
-    "spoon": {
-        "has characteristic": "attach"
+    "Vorbereitung zum Fest": {
+        "depicts": [
+            [
+                "couple",
+                "In the vicinity of a wine cellar",
+                "On the wood floor",
+                "boy",
+                "wall",
+                "Through the open door",
+                "ceiling bars"
+            ],
+            {
+                "o_class_name": [
+                    "Person",
+                    "Composition",
+                    "Composition",
+                    "Person",
+                    "ArchitecturalStructure",
+                    "Composition",
+                    "ArchitecturalStructure"
+                ]
+            }
+        ],
+        "s_class_name": "WorkOfArt"
     },
-    "wall": {
-        "has characteristic": "crumbling"
-    },
-    "boy": {
-        "has characteristic": "plays"
-    },
-    "door": {
-        "has characteristic": "open"
-    },
-    "children": {
-        "has characteristic": "two"
+    "floor": {
+        "has characteristic": [
+            "wood",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalSurface"
     },
     "couple": {
         "has characteristic": [
-            "dance",
-            "young"
-        ]
-    },
-    "in the background": {
-        "contains": "woman",
-        "has characteristic": "children"
-    },
-    "farmer": {
-        "has characteristic": "young"
-    },
-    "floor": {
-        "has characteristic": "wood"
-    },
-    "ceiling bars": {
-        "contains": "spoon"
-    },
-    "Through the open door": {
-        "contains": "in the background"
-    },
-    "In the vicinity of a wine cellar": {
-        "has characteristic": "farmer"
-    },
-    "plays": {
-        "contains": "violin"
-    },
-    "girl": {
-        "has characteristic": "young"
+            [
+                "young",
+                "dance"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Posture"
+                ]
+            }
+        ],
+        "s_class_name": "Person"
     },
     "On the wood floor": {
         "contains": [
-            "children",
-            "girl"
-        ]
+            [
+                "girl",
+                "children"
+            ],
+            {
+                "o_class_name": [
+                    "Person",
+                    "Person"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "boy": {
+        "has characteristic": [
+            "plays",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "farmer": {
+        "has characteristic": [
+            "young",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Occupation"
+    },
+    "spoon": {
+        "has characteristic": [
+            "attach",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "wall": {
+        "has characteristic": [
+            "crumbling",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
+    },
+    "children": {
+        "has characteristic": [
+            "two",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "In the vicinity of a wine cellar": {
+        "has characteristic": [
+            "farmer",
+            {
+                "o_class_name": "Occupation"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "plays": {
+        "contains": [
+            "violin",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "Posture"
+    },
+    "girl": {
+        "has characteristic": [
+            "young",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "door": {
+        "has characteristic": [
+            "open",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
+    },
+    "ceiling bars": {
+        "contains": [
+            "spoon",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
+    },
+    "Through the open door": {
+        "contains": [
+            "in the background",
+            {
+                "o_class_name": "Composition"
+            }
+        ],
+        "s_class_name": "Composition"
     }
 }

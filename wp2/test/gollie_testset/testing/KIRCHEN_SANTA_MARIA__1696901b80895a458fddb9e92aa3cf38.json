@@ -1,50 +1,144 @@
 {
-    "KIRCHEN SANTA MARIA DI NAZARETH": {
-        "depicts": [
-            "in the foreground",
-            "On the left",
-            "Sestiere Santa Croce",
-            "façades",
-            "View into the canal"
-        ],
-        "influenced by": "Girolamo Romanino Romani",
-        "instance of": "painting",
-        "has genre": "Classicism",
-        "created by": "Bison"
-    },
-    "Church of St": {
-        "has characteristic": [
-            "gills",
-            "pillars",
-            "façade"
-        ]
-    },
-    "dome": {
-        "has characteristic": "copper-covered"
-    },
-    "On the left": {
-        "contains": "San Simeone Piccolo"
-    },
     "in the foreground": {
-        "contains": "façade"
+        "contains": [
+            "façade",
+            {
+                "o_class_name": "PhysicalSurface"
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "San Simeone Piccolo": {
         "has characteristic": [
-            "dome",
-            "stairway",
-            "portico"
-        ]
-    },
-    "canal": {
-        "contains": "façades"
-    },
-    "portico": {
-        "has characteristic": "columns"
+            [
+                "dome",
+                "stairway",
+                "portico"
+            ],
+            {
+                "o_class_name": [
+                    "ArchitecturalStructure",
+                    "ArchitecturalStructure",
+                    "ArchitecturalStructure"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalLocation"
     },
     "houses": {
-        "has characteristic": "façades"
+        "has characteristic": [
+            "façades",
+            {
+                "o_class_name": "PhysicalSurface"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
+    },
+    "KIRCHEN SANTA MARIA DI NAZARETH": {
+        "has genre": [
+            "Classicism",
+            {
+                "o_class_name": "ArtGenre"
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "depicts": [
+            [
+                "View into the canal",
+                "On the left",
+                "Sestiere Santa Croce",
+                "in the foreground",
+                "façades"
+            ],
+            {
+                "o_class_name": [
+                    "Composition",
+                    "Composition",
+                    "PhysicalLocation",
+                    "Composition",
+                    "PhysicalSurface"
+                ]
+            }
+        ],
+        "instance of": [
+            "painting",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ],
+        "created by": [
+            "Bison",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "influenced by": [
+            "Girolamo Romanino Romani",
+            {
+                "o_class_name": "Person"
+            }
+        ]
+    },
+    "dome": {
+        "has characteristic": [
+            "copper-covered",
+            {
+                "o_class_name": "PhysicalSurface"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
+    },
+    "Church of St": {
+        "has characteristic": [
+            [
+                "façade",
+                "pillars",
+                "gills"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalSurface",
+                    "ArchitecturalStructure",
+                    "ArchitecturalStructure"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalLocation"
+    },
+    "canal": {
+        "contains": [
+            "façades",
+            {
+                "o_class_name": "PhysicalSurface"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
+    },
+    "On the left": {
+        "contains": [
+            "San Simeone Piccolo",
+            {
+                "o_class_name": "PhysicalLocation"
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "palaces": {
-        "has characteristic": "façades"
+        "has characteristic": [
+            "façades",
+            {
+                "o_class_name": "PhysicalSurface"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
+    },
+    "portico": {
+        "has characteristic": [
+            "columns",
+            {
+                "o_class_name": "ArchitecturalStructure"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
     }
 }

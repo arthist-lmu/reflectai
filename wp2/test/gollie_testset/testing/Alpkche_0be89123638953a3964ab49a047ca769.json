@@ -1,5 +1,11 @@
 {
     "kitchen": {
-        "has characteristic": "small"
+        "has characteristic": [
+            "small",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalLocation"
     }
 }

@@ -1,83 +1,225 @@
 {
-    "JUGEND UND ALTER": {
-        "instance of": "painting",
-        "depicts": [
-            "pool",
-            "On the ground",
-            "in front of",
-            "On the left, in the background of the wells",
-            "well"
+    "girl": {
+        "has characteristic": [
+            [
+                "sits",
+                "Young",
+                "pretty",
+                "wreath",
+                "dress"
+            ],
+            {
+                "o_class_name": [
+                    "Posture",
+                    "Quality",
+                    "Quality",
+                    "PhysicalObject",
+                    "PhysicalObject"
+                ]
+            }
         ],
+        "s_class_name": "Person"
+    },
+    "on the right": {
         "contains": [
-            "girl",
-            "statue",
-            "woman"
+            "distillate",
+            {
+                "o_class_name": "Food"
+            }
         ],
-        "symbolizes": "vanity"
+        "s_class_name": "Composition"
+    },
+    "JUGEND UND ALTER": {
+        "depicts": [
+            [
+                "well",
+                "pool",
+                "On the left, in the background of the wells",
+                "in front of",
+                "On the ground"
+            ],
+            {
+                "o_class_name": [
+                    "ArchitecturalStructure",
+                    "ArchitecturalStructure",
+                    "Composition",
+                    "Composition",
+                    "Composition"
+                ]
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "contains": [
+            [
+                "statue",
+                "woman",
+                "girl"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalObject",
+                    "Person",
+                    "Person"
+                ]
+            }
+        ],
+        "instance of": [
+            "painting",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ],
+        "symbolizes": [
+            "vanity",
+            {
+                "o_class_name": "ArtisticTheme"
+            }
+        ]
     },
     "dress": {
         "has characteristic": [
-            "silk",
-            "pink"
-        ]
+            [
+                "pink",
+                "silk"
+            ],
+            {
+                "o_class_name": [
+                    "Color",
+                    "PhysicalSurface"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
     "hair": {
         "has characteristic": [
-            "wreath",
-            "brown"
-        ]
-    },
-    "girl": {
-        "has characteristic": [
-            "dress",
-            "Young",
-            "pretty",
-            "wreath",
-            "sits"
-        ]
-    },
-    "sleeve": {
-        "has characteristic": "silk"
-    },
-    "on the right": {
-        "contains": "distillate"
-    },
-    "On the ground": {
-        "contains": [
-            "pumpkins",
-            "fruit"
+            [
+                "wreath",
+                "brown"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalObject",
+                    "Color"
+                ]
+            }
         ],
-        "depicts": "on the right"
-    },
-    "silk": {
-        "has characteristic": [
-            "white",
-            "black"
-        ]
+        "s_class_name": "AnatomicalStructure"
     },
     "well": {
-        "contains": "sits"
+        "contains": [
+            "sits",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
     },
-    "statue": {
-        "symbolizes": "Venus"
+    "On the ground": {
+        "depicts": [
+            "on the right",
+            {
+                "o_class_name": "Composition"
+            }
+        ],
+        "s_class_name": "Composition",
+        "contains": [
+            [
+                "pumpkins",
+                "fruit"
+            ],
+            {
+                "o_class_name": [
+                    "Food",
+                    "Food"
+                ]
+            }
+        ]
     },
     "woman": {
         "has characteristic": [
-            "old",
-            "talking",
-            "bent, stick-leaning"
-        ]
+            [
+                "talking",
+                "bent, stick-leaning",
+                "old"
+            ],
+            {
+                "o_class_name": [
+                    "Posture",
+                    "Quality",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "Person"
     },
-    "in front of": {
-        "contains": "woman"
-    },
-    "vanity": {
-        "symbolizes": "transience of beauty"
-    },
-    "Venus": {
-        "has characteristic": "breasts"
+    "silk": {
+        "has characteristic": [
+            [
+                "white",
+                "black"
+            ],
+            {
+                "o_class_name": [
+                    "Color",
+                    "Color"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalSurface"
     },
     "On the left, in the background of the wells": {
-        "contains": "statue"
+        "contains": [
+            "statue",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "sleeve": {
+        "has characteristic": [
+            "silk",
+            {
+                "o_class_name": "PhysicalSurface"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
+    },
+    "Venus": {
+        "has characteristic": [
+            "breasts",
+            {
+                "o_class_name": "AnatomicalStructure"
+            }
+        ],
+        "s_class_name": "MythicalCharacter"
+    },
+    "statue": {
+        "symbolizes": [
+            "Venus",
+            {
+                "o_class_name": "MythicalCharacter"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "vanity": {
+        "symbolizes": [
+            "transience of beauty",
+            {
+                "o_class_name": "Concept"
+            }
+        ],
+        "s_class_name": "ArtisticTheme"
+    },
+    "in front of": {
+        "contains": [
+            "woman",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "Composition"
     }
 }

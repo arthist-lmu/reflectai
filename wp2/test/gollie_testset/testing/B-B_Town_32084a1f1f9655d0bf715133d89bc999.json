@@ -1,36 +1,100 @@
 {
-    "B-B Town": {
-        "created by": "Feininger",
-        "depicts": [
-            "sky",
-            "star",
-            "landscape"
+    "sky": {
+        "has characteristic": [
+            [
+                "blue",
+                "illuminated"
+            ],
+            {
+                "o_class_name": [
+                    "Color",
+                    "Concept"
+                ]
+            }
         ],
-        "instance of": "painting",
-        "created in": "1946"
+        "s_class_name": "GeographicalFeature"
     },
-    "blue": {
-        "has characteristic": "deep"
+    "B-B Town": {
+        "depicts": [
+            [
+                "landscape",
+                "star",
+                "sky"
+            ],
+            {
+                "o_class_name": [
+                    "Concept",
+                    "GeographicalFeature",
+                    "GeographicalFeature"
+                ]
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "created in": [
+            "1946",
+            {
+                "o_class_name": "PointInTime"
+            }
+        ],
+        "created by": [
+            "Feininger",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "instance of": [
+            "painting",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ]
     },
     "star": {
         "has characteristic": [
-            "single",
-            "bright"
-        ]
+            [
+                "single",
+                "bright"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "GeographicalFeature"
+    },
+    "illuminated": {
+        "contains": [
+            "star",
+            {
+                "o_class_name": "GeographicalFeature"
+            }
+        ],
+        "s_class_name": "Concept"
     },
     "landscape": {
         "has characteristic": [
-            "nightly",
-            "urban"
-        ]
+            [
+                "urban",
+                "nightly"
+            ],
+            {
+                "o_class_name": [
+                    "ArchitecturalStructure",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "Concept"
     },
-    "sky": {
+    "blue": {
         "has characteristic": [
-            "illuminated",
-            "blue"
-        ]
-    },
-    "illuminated": {
-        "contains": "star"
+            "deep",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Color"
     }
 }

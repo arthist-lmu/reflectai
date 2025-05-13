@@ -1,48 +1,149 @@
 {
     "Madonna mit der Nelke": {
-        "fabrication method": "consistent use of light and dark",
-        "symbolizes": [
-            "death",
-            "love"
+        "created by": [
+            "Leonardo da Vinci",
+            {
+                "o_class_name": "Person"
+            }
         ],
-        "contains": [
-            "child",
-            "mother"
+        "s_class_name": "WorkOfArt",
+        "influenced by": [
+            "Andrea del Verrocchio",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "instance of": [
+            "painting",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ],
+        "fabrication method": [
+            "consistent use of light and dark",
+            {
+                "o_class_name": "ArtisticTechnique"
+            }
+        ],
+        "depicts": [
+            "clove",
+            {
+                "o_class_name": "Plant"
+            }
         ],
         "has characteristic": [
-            "vitality",
-            "emotion"
+            [
+                "emotion",
+                "vitality"
+            ],
+            {
+                "o_class_name": [
+                    "Emotion",
+                    "Concept"
+                ]
+            }
         ],
-        "instance of": "painting",
-        "influenced by": "Andrea del Verrocchio",
-        "depicts": "clove",
-        "created by": "Leonardo da Vinci"
+        "symbolizes": [
+            [
+                "love",
+                "death"
+            ],
+            {
+                "o_class_name": [
+                    "Emotion",
+                    "Concept"
+                ]
+            }
+        ],
+        "contains": [
+            [
+                "child",
+                "mother"
+            ],
+            {
+                "o_class_name": [
+                    "ReligiousCharacter",
+                    "ReligiousCharacter"
+                ]
+            }
+        ]
+    },
+    "gestures": {
+        "has characteristic": [
+            "concentrated",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Posture"
+    },
+    "seizes": {
+        "has characteristic": [
+            "clove",
+            {
+                "o_class_name": "Plant"
+            }
+        ],
+        "s_class_name": "Posture"
+    },
+    "Leonardo da Vinci": {
+        "influenced by": [
+            "Andrea del Verrocchio",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "emotion": {
+        "has characteristic": [
+            "deep",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Emotion"
     },
     "clove": {
         "symbolizes": [
-            "death",
-            "love"
-        ]
-    },
-    "seizes": {
-        "has characteristic": "clove"
-    },
-    "Leonardo da Vinci": {
-        "influenced by": "Andrea del Verrocchio"
-    },
-    "gestures": {
-        "has characteristic": "concentrated"
-    },
-    "emotion": {
-        "has characteristic": "deep"
-    },
-    "Christ child": {
-        "has characteristic": "seizes"
-    },
-    "love": {
-        "has characteristic": "divine"
+            [
+                "death",
+                "love"
+            ],
+            {
+                "o_class_name": [
+                    "Concept",
+                    "Emotion"
+                ]
+            }
+        ],
+        "s_class_name": "Plant"
     },
     "death": {
-        "has characteristic": "sacrificial"
+        "has characteristic": [
+            "sacrificial",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Concept"
+    },
+    "love": {
+        "has characteristic": [
+            "divine",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Emotion"
+    },
+    "Christ child": {
+        "has characteristic": [
+            "seizes",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "ReligiousCharacter"
     }
 }

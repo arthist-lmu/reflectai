@@ -1,126 +1,356 @@
 {
-    "hair": {
+    "linen neckerchief": {
+        "contains": [
+            [
+                "cuffs",
+                "trim",
+                "sleeves"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalObject",
+                    "PhysicalObject",
+                    "PhysicalObject"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalObject",
         "has characteristic": [
-            "tied back",
-            "headdress"
+            [
+                "three-tiered",
+                "white"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Color"
+                ]
+            }
+        ]
+    },
+    "skirt": {
+        "has characteristic": [
+            [
+                "satin",
+                "amber-colored"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalSurface",
+                    "Color"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalObject",
+        "contains": [
+            "embroidery",
+            {
+                "o_class_name": "PhysicalSurface"
+            }
+        ]
+    },
+    "Portrait of a Lady, Seated with a Music Book on Her Lap": {
+        "depicts": [
+            [
+                "hair",
+                "music book",
+                "young",
+                "jewelry",
+                "attire",
+                "lady"
+            ],
+            {
+                "o_class_name": [
+                    "AnatomicalStructure",
+                    "PhysicalObject",
+                    "Quality",
+                    "PhysicalObject",
+                    "PhysicalSurface",
+                    "Person"
+                ]
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "created by": [
+            "Gerrit Dou",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "instance of": [
+            "portrait",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ],
+        "created in": [
+            "early 1640s",
+            {
+                "o_class_name": "PointInTime"
+            }
+        ],
+        "contains": [
+            "outer gown",
+            {
+                "o_class_name": "PhysicalObject"
+            }
         ]
     },
     "attire": {
         "contains": [
-            "stomacher",
-            "skirt",
-            "collar",
-            "around her shoulders"
+            [
+                "around her shoulders",
+                "skirt",
+                "stomacher",
+                "collar"
+            ],
+            {
+                "o_class_name": [
+                    "Composition",
+                    "PhysicalObject",
+                    "PhysicalObject",
+                    "PhysicalObject"
+                ]
+            }
         ],
-        "symbolizes": "conservative taste",
-        "has characteristic": "elegant"
-    },
-    "stomacher": {
-        "contains": "bow",
+        "s_class_name": "PhysicalSurface",
         "has characteristic": [
-            "black",
-            "ornamental"
+            "elegant",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "symbolizes": [
+            "conservative taste",
+            {
+                "o_class_name": "Concept"
+            }
         ]
     },
-    "linen neckerchief": {
+    "in her lap": {
         "contains": [
-            "cuffs",
-            "sleeves",
-            "trim"
+            "music book",
+            {
+                "o_class_name": "PhysicalObject"
+            }
         ],
-        "has characteristic": [
-            "white",
-            "three-tiered"
-        ]
+        "s_class_name": "Composition"
     },
-    "outer gown": {
-        "has characteristic": "black"
+    "pearl": {
+        "has characteristic": [
+            [
+                "single",
+                "black"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Color"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "sleeves": {
+        "has characteristic": [
+            "bracelet-length",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
     "collar": {
         "has characteristic": [
-            "high-necked",
-            "white"
+            [
+                "high-necked",
+                "white"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Color"
+                ]
+            }
         ],
-        "contains": "beading"
+        "s_class_name": "PhysicalObject",
+        "contains": [
+            "beading",
+            {
+                "o_class_name": "PhysicalSurface"
+            }
+        ]
     },
-    "lady": {
+    "bow": {
+        "contains": [
+            "pearl",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "outer gown": {
         "has characteristic": [
-            "well-to-do",
-            "young"
+            "black",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "headdress": {
+        "has characteristic": [
+            [
+                "matching",
+                "extends to the sides",
+                "covers",
+                "lace"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Posture",
+                    "Posture",
+                    "PhysicalSurface"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "stomacher": {
+        "contains": [
+            "bow",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "PhysicalObject",
+        "has characteristic": [
+            [
+                "black",
+                "ornamental"
+            ],
+            {
+                "o_class_name": [
+                    "Color",
+                    "Quality"
+                ]
+            }
         ]
     },
     "cuffs": {
         "has characteristic": [
-            "matching",
-            "lace"
-        ]
-    },
-    "Portrait of a Lady, Seated with a Music Book on Her Lap": {
-        "contains": "outer gown",
-        "depicts": [
-            "attire",
-            "music book",
-            "lady",
-            "young",
-            "hair",
-            "jewelry"
+            [
+                "matching",
+                "lace"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "PhysicalSurface"
+                ]
+            }
         ],
-        "created by": "Gerrit Dou",
-        "instance of": "portrait",
-        "created in": "early 1640s"
+        "s_class_name": "PhysicalObject"
     },
-    "skirt": {
+    "music book": {
         "has characteristic": [
-            "amber-colored",
-            "satin"
+            "open",
+            {
+                "o_class_name": "Quality"
+            }
         ],
-        "contains": "embroidery"
-    },
-    "headdress": {
-        "has characteristic": [
-            "covers",
-            "extends to the sides",
-            "matching",
-            "lace"
-        ]
+        "s_class_name": "PhysicalObject"
     },
     "beading": {
         "has characteristic": [
-            "gold",
-            "thin"
-        ]
-    },
-    "embroidery": {
-        "has characteristic": "gold"
-    },
-    "sleeves": {
-        "has characteristic": "bracelet-length"
-    },
-    "pearl": {
-        "has characteristic": [
-            "black",
-            "single"
-        ]
-    },
-    "in her lap": {
-        "contains": "music book"
-    },
-    "music book": {
-        "has characteristic": "open"
-    },
-    "covers": {
-        "contains": "ears"
-    },
-    "bow": {
-        "contains": "pearl"
-    },
-    "extends to the sides": {
-        "contains": "face"
-    },
-    "trim": {
-        "has characteristic": "lace"
+            [
+                "thin",
+                "gold"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Color"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalSurface"
     },
     "around her shoulders": {
-        "contains": "linen neckerchief"
+        "contains": [
+            "linen neckerchief",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "hair": {
+        "has characteristic": [
+            [
+                "headdress",
+                "tied back"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalObject",
+                    "Posture"
+                ]
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
+    },
+    "extends to the sides": {
+        "contains": [
+            "face",
+            {
+                "o_class_name": "AnatomicalStructure"
+            }
+        ],
+        "s_class_name": "Posture"
+    },
+    "lady": {
+        "has characteristic": [
+            [
+                "young",
+                "well-to-do"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "embroidery": {
+        "has characteristic": [
+            "gold",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "PhysicalSurface"
+    },
+    "trim": {
+        "has characteristic": [
+            "lace",
+            {
+                "o_class_name": "PhysicalSurface"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "covers": {
+        "contains": [
+            "ears",
+            {
+                "o_class_name": "AnatomicalStructure"
+            }
+        ],
+        "s_class_name": "Posture"
     }
 }

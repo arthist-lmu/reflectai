@@ -1,27 +1,84 @@
 {
-    "alongside a stream": {
-        "contains": "woman"
-    },
     "The letter": {
         "depicts": [
-            "Yarra River near Darebin Creek",
-            "alongside a stream",
-            "letter"
+            [
+                "letter",
+                "alongside a stream",
+                "Yarra River near Darebin Creek"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalObject",
+                    "Composition",
+                    "PhysicalLocation"
+                ]
+            }
         ],
-        "contains": "woman"
+        "s_class_name": "WorkOfArt",
+        "contains": [
+            "woman",
+            {
+                "o_class_name": "Person"
+            }
+        ]
     },
     "woman": {
         "has characteristic": [
-            "walking in the bush",
-            "young",
-            "reading a letter"
+            [
+                "walking in the bush",
+                "young",
+                "reading a letter"
+            ],
+            {
+                "o_class_name": [
+                    "Posture",
+                    "Quality",
+                    "Posture"
+                ]
+            }
         ],
-        "symbolizes": "Harriet McCubbin"
+        "s_class_name": "Person",
+        "symbolizes": [
+            "Harriet McCubbin",
+            {
+                "o_class_name": "Person"
+            }
+        ]
+    },
+    "alongside a stream": {
+        "contains": [
+            "woman",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "The letter (McCubbin)": {
-        "fabrication method": "en plein air sketches",
-        "created in": "1884",
-        "created by": "Frederick McCubbin",
-        "instance of": "painting"
+        "fabrication method": [
+            "en plein air sketches",
+            {
+                "o_class_name": "ArtisticTechnique"
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "instance of": [
+            "painting",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ],
+        "created in": [
+            "1884",
+            {
+                "o_class_name": "PointInTime"
+            }
+        ],
+        "created by": [
+            "Frederick McCubbin",
+            {
+                "o_class_name": "Person"
+            }
+        ]
     }
 }

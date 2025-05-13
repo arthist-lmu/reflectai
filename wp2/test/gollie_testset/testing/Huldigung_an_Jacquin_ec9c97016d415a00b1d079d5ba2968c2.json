@@ -1,39 +1,113 @@
 {
     "Huldigung an Jacquin (\"Jacquins Denkmal\")": {
-        "influenced by": [
-            "Nicholas Joseph von Jacquin",
-            "Carl von Linné"
+        "instance of": [
+            "picture",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
         ],
-        "created by": "Knapp",
+        "s_class_name": "WorkOfArt",
         "depicts": [
-            "plants",
-            "urn",
-            "monkey",
-            "cockatoo",
-            "diversity of the plant kingdom"
+            [
+                "diversity of the plant kingdom",
+                "plants",
+                "monkey",
+                "urn",
+                "cockatoo"
+            ],
+            {
+                "o_class_name": [
+                    "Concept",
+                    "Plant",
+                    "Animal",
+                    "PhysicalObject",
+                    "Animal"
+                ]
+            }
         ],
-        "instance of": "picture"
+        "influenced by": [
+            [
+                "Nicholas Joseph von Jacquin",
+                "Carl von Linné"
+            ],
+            {
+                "o_class_name": [
+                    "Person",
+                    "Person"
+                ]
+            }
+        ],
+        "created by": [
+            "Knapp",
+            {
+                "o_class_name": "Person"
+            }
+        ]
     },
     "plants": {
         "symbolizes": [
-            "Linnaea borealis",
-            "Jacquinia mucronata"
-        ]
-    },
-    "cockatoo": {
-        "has characteristic": "learned"
+            [
+                "Jacquinia mucronata",
+                "Linnaea borealis"
+            ],
+            {
+                "o_class_name": [
+                    "Plant",
+                    "Plant"
+                ]
+            }
+        ],
+        "s_class_name": "Plant"
     },
     "base of the bust": {
-        "has characteristic": "swallowed up",
-        "depicts": "Nicholas Joseph von Jacquin"
+        "depicts": [
+            "Nicholas Joseph von Jacquin",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "PhysicalObject",
+        "has characteristic": [
+            "swallowed up",
+            {
+                "o_class_name": "Composition"
+            }
+        ]
     },
     "swallowed up": {
-        "contains": "plants"
+        "contains": [
+            "plants",
+            {
+                "o_class_name": "Plant"
+            }
+        ],
+        "s_class_name": "Composition"
     },
-    "urn": {
-        "symbolizes": "Carl von Linné"
+    "cockatoo": {
+        "has characteristic": [
+            "learned",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Animal"
     },
     "monkey": {
-        "has characteristic": "unskilled"
+        "has characteristic": [
+            "unskilled",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Animal"
+    },
+    "urn": {
+        "symbolizes": [
+            "Carl von Linné",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     }
 }

@@ -1,21 +1,71 @@
 {
     "Verbrecher 6": {
-        "created by": "Kerstin von Gabain",
-        "depicts": "copies of the bowwood chairs",
-        "influenced by": "portrait photography",
-        "instance of": "series of photographs"
-    },
-    "copies of the bowwood chairs": {
-        "has characteristic": "virtuosic",
-        "symbolizes": "humanizing trend"
+        "influenced by": [
+            "portrait photography",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "created by": [
+            "Kerstin von Gabain",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "depicts": [
+            "copies of the bowwood chairs",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "instance of": [
+            "series of photographs",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ]
     },
     "humanizing trend": {
-        "symbolizes": "anthropomorphic view of seating furniture"
+        "symbolizes": [
+            "anthropomorphic view of seating furniture",
+            {
+                "o_class_name": "Concept"
+            }
+        ],
+        "s_class_name": "Concept"
     },
-    "portrait photography": {
-        "created in": "19th century"
+    "copies of the bowwood chairs": {
+        "symbolizes": [
+            "humanizing trend",
+            {
+                "o_class_name": "Concept"
+            }
+        ],
+        "s_class_name": "PhysicalObject",
+        "has characteristic": [
+            "virtuosic",
+            {
+                "o_class_name": "Quality"
+            }
+        ]
     },
     "chairs": {
-        "has characteristic": "bowwood"
+        "has characteristic": [
+            "bowwood",
+            {
+                "o_class_name": "PhysicalSurface"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "portrait photography": {
+        "created in": [
+            "19th century",
+            {
+                "o_class_name": "PointInTime"
+            }
+        ],
+        "s_class_name": "TypeOfWorkOfArt"
     }
 }

@@ -1,41 +1,116 @@
 {
-    "atmospheric mood": {
-        "symbolizes": [
-            "air",
-            "dust"
+    "Schäfer in der römischen Campagna": {
+        "created in": [
+            "1837",
+            {
+                "o_class_name": "PointInTime"
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "instance of": [
+            "painting",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ],
+        "created by": [
+            "Bürkel",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "has characteristic": [
+            [
+                "Campagne",
+                "staffage"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalLocation",
+                    "Person"
+                ]
+            }
         ]
     },
-    "staffage": {
-        "has characteristic": "colourful"
-    },
-    "Schäfer in der römischen Campagna": {
+    "drought": {
         "has characteristic": [
-            "staffage",
-            "Campagne"
+            "summer",
+            {
+                "o_class_name": "Season"
+            }
         ],
-        "created by": "Bürkel",
-        "instance of": "painting",
-        "created in": "1837"
+        "s_class_name": "Concept"
+    },
+    "atmospheric mood": {
+        "symbolizes": [
+            [
+                "air",
+                "dust"
+            ],
+            {
+                "o_class_name": [
+                    "Concept",
+                    "Concept"
+                ]
+            }
+        ],
+        "s_class_name": "Concept"
     },
     "air": {
         "has characteristic": [
-            "bleached",
-            "heavy"
-        ]
+            [
+                "bleached",
+                "heavy"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "Concept"
+    },
+    "dust": {
+        "has characteristic": [
+            "swirling",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Concept"
     },
     "Campagne": {
         "has characteristic": [
-            "countryside",
-            "drought"
-        ]
+            [
+                "drought",
+                "countryside"
+            ],
+            {
+                "o_class_name": [
+                    "Concept",
+                    "GeographicalFeature"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalLocation"
     },
     "countryside": {
-        "has characteristic": "vast"
+        "has characteristic": [
+            "vast",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "GeographicalFeature"
     },
-    "drought": {
-        "has characteristic": "summer"
-    },
-    "dust": {
-        "has characteristic": "swirling"
+    "staffage": {
+        "has characteristic": [
+            "colourful",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "Person"
     }
 }

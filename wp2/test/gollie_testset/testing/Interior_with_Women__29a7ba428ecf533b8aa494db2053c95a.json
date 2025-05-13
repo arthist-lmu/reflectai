@@ -1,26 +1,71 @@
 {
-    "spoon": {
-        "has characteristic": "wooden"
-    },
-    "hand": {
-        "has characteristic": "right"
-    },
-    "broom": {
-        "has characteristic": "short"
+    "interior": {
+        "has characteristic": [
+            "simple",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
     },
     "hair": {
         "has characteristic": [
-            "red",
-            "closely cropped"
-        ]
+            [
+                "red",
+                "closely cropped"
+            ],
+            {
+                "o_class_name": [
+                    "Color",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
+    },
+    "spoon": {
+        "has characteristic": [
+            "wooden",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "hand": {
+        "has characteristic": [
+            "right",
+            {
+                "o_class_name": "Composition"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
     },
     "woman": {
-        "has characteristic": "seated"
+        "has characteristic": [
+            "seated",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "broom": {
+        "has characteristic": [
+            "short",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
     "lies": {
-        "symbolizes": "helpless"
-    },
-    "interior": {
-        "has characteristic": "simple"
+        "symbolizes": [
+            "helpless",
+            {
+                "o_class_name": "Emotion"
+            }
+        ],
+        "s_class_name": "Posture"
     }
 }

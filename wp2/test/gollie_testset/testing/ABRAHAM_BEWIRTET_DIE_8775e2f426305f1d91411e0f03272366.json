@@ -1,83 +1,229 @@
 {
-    "ABRAHAM BEWIRTET DIE DREI ENGEL": {
-        "depicts": [
-            "On the tablecloth",
-            "Abraham",
-            "angels"
-        ],
-        "created by": "Alonso il Sordillo del Arco",
-        "made from material": "Oil on Canvas",
-        "instance of": "painting",
+    "On the tablecloth": {
         "contains": [
-            "On the right",
-            "background",
-            "door frame"
-        ]
+            "tinplate",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "angels": {
         "has characteristic": [
-            "white",
-            "holding",
-            "sitting"
-        ]
-    },
-    "to the right": {
-        "contains": "tree trunk"
-    },
-    "on the left": {
-        "contains": [
-            "Abraham",
-            "door frame"
-        ]
-    },
-    "door frame": {
-        "contains": "Sarah",
-        "has characteristic": "darkened"
+            [
+                "sitting",
+                "holding",
+                "white"
+            ],
+            {
+                "o_class_name": [
+                    "Posture",
+                    "Posture",
+                    "Color"
+                ]
+            }
+        ],
+        "s_class_name": "ReligiousCharacter"
     },
     "table": {
-        "has characteristic": "covered"
+        "has characteristic": [
+            "covered",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
-    "holding": {
-        "has characteristic": "hands"
+    "ABRAHAM BEWIRTET DIE DREI ENGEL": {
+        "made from material": [
+            "Oil on Canvas",
+            {
+                "o_class_name": "ArtMaterial"
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "contains": [
+            [
+                "On the right",
+                "background",
+                "door frame"
+            ],
+            {
+                "o_class_name": [
+                    "Composition",
+                    "Composition",
+                    "ArchitecturalStructure"
+                ]
+            }
+        ],
+        "depicts": [
+            [
+                "Abraham",
+                "angels",
+                "On the tablecloth"
+            ],
+            {
+                "o_class_name": [
+                    "ReligiousCharacter",
+                    "ReligiousCharacter",
+                    "Composition"
+                ]
+            }
+        ],
+        "instance of": [
+            "painting",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ],
+        "created by": [
+            "Alonso il Sordillo del Arco",
+            {
+                "o_class_name": "Person"
+            }
+        ]
     },
     "tree trunk": {
         "has characteristic": [
-            "leaves",
-            "robust",
-            "shady"
-        ]
-    },
-    "tinplate": {
-        "contains": [
-            "ribs",
-            "frying pan"
-        ]
+            [
+                "leaves",
+                "shady",
+                "robust"
+            ],
+            {
+                "o_class_name": [
+                    "Plant",
+                    "Quality",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "Plant"
     },
     "background": {
         "contains": [
-            "to the right",
-            "landscape"
+            [
+                "landscape",
+                "to the right"
+            ],
+            {
+                "o_class_name": [
+                    "Concept",
+                    "Composition"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "door frame": {
+        "has characteristic": [
+            "darkened",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure",
+        "contains": [
+            "Sarah",
+            {
+                "o_class_name": "ReligiousCharacter"
+            }
         ]
+    },
+    "holding": {
+        "has characteristic": [
+            "hands",
+            {
+                "o_class_name": "AnatomicalStructure"
+            }
+        ],
+        "s_class_name": "Posture"
+    },
+    "leaves": {
+        "has characteristic": [
+            "move across",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "Plant"
+    },
+    "tinplate": {
+        "contains": [
+            [
+                "frying pan",
+                "ribs"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalObject",
+                    "Food"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
     "landscape": {
         "has characteristic": [
-            "hilly",
-            "populated"
-        ]
+            [
+                "hilly",
+                "populated"
+            ],
+            {
+                "o_class_name": [
+                    "GeographicalFeature",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "Concept"
     },
-    "On the right": {
-        "contains": "two other teenage figures"
+    "on the left": {
+        "contains": [
+            [
+                "Abraham",
+                "door frame"
+            ],
+            {
+                "o_class_name": [
+                    "ReligiousCharacter",
+                    "ArchitecturalStructure"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "in the center": {
         "contains": [
-            "across the covered table",
-            "angels"
-        ]
+            [
+                "across the covered table",
+                "angels"
+            ],
+            {
+                "o_class_name": [
+                    "Composition",
+                    "ReligiousCharacter"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
     },
-    "On the tablecloth": {
-        "contains": "tinplate"
+    "On the right": {
+        "contains": [
+            "two other teenage figures",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "Composition"
     },
-    "leaves": {
-        "has characteristic": "move across"
+    "to the right": {
+        "contains": [
+            "tree trunk",
+            {
+                "o_class_name": "Plant"
+            }
+        ],
+        "s_class_name": "Composition"
     }
 }

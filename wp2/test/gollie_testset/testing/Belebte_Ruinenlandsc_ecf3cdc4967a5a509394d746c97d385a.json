@@ -1,120 +1,325 @@
 {
-    "ruins": {
+    "man": {
         "has characteristic": [
-            "large",
-            "sky-high"
+            [
+                "standard",
+                "horse",
+                "looking back",
+                "bow"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalObject",
+                    "Animal",
+                    "Posture",
+                    "PhysicalObject"
+                ]
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "Belebte Ruinenlandschaft am Meeresufer": {
+        "fabrication method": [
+            "small-figure staffing",
+            {
+                "o_class_name": "ArtisticTechnique"
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "depicts": [
+            [
+                "In the foreground on the right",
+                "On the left bank",
+                "sky",
+                "ruin",
+                "In front"
+            ],
+            {
+                "o_class_name": [
+                    "Composition",
+                    "Composition",
+                    "GeographicalFeature",
+                    "ArchitecturalStructure",
+                    "Composition"
+                ]
+            }
+        ],
+        "contains": [
+            [
+                "variety of figures",
+                "man"
+            ],
+            {
+                "o_class_name": [
+                    "Person",
+                    "Person"
+                ]
+            }
+        ],
+        "instance of": [
+            "painting",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
         ]
     },
     "on the right side": {
         "has characteristic": [
-            "cloud formations",
-            "light"
-        ]
-    },
-    "sky": {
-        "has characteristic": [
-            "cloud formations",
-            "high",
-            "blue"
-        ]
-    },
-    "ruin": {
-        "has characteristic": [
-            "large",
-            "aisles",
-            "windows"
-        ]
-    },
-    "In front": {
-        "contains": [
-            "ruin",
-            "variety of figures"
-        ]
-    },
-    "man": {
-        "has characteristic": [
-            "looking back",
-            "horse",
-            "bow",
-            "standard"
-        ]
-    },
-    "men": {
-        "has characteristic": [
-            "several",
-            "conversation",
-            "turbans"
-        ]
-    },
-    "figures": {
-        "has characteristic": "colourful"
-    },
-    "Belebte Ruinenlandschaft am Meeresufer": {
-        "depicts": [
-            "On the left bank",
-            "sky",
-            "ruin",
-            "In the foreground on the right",
-            "In front"
+            [
+                "light",
+                "cloud formations"
+            ],
+            {
+                "o_class_name": [
+                    "Concept",
+                    "GeographicalFeature"
+                ]
+            }
         ],
-        "contains": [
-            "man",
-            "variety of figures"
-        ],
-        "instance of": "painting",
-        "fabrication method": "small-figure staffing"
+        "s_class_name": "Composition"
     },
     "windows": {
         "has characteristic": [
-            "arched",
-            "round"
-        ]
+            [
+                "round",
+                "arched"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
     },
-    "variety of figures": {
-        "has characteristic": "clothing",
-        "contains": "men"
-    },
-    "sun": {
-        "has characteristic": "setting",
-        "symbolizes": "light"
-    },
-    "groups of figures": {
+    "ruin": {
         "has characteristic": [
-            "numerous",
-            "surrounded"
-        ]
-    },
-    "standard": {
-        "has characteristic": "sky-high"
-    },
-    "On the left bank": {
-        "contains": [
-            "man",
-            "groups of figures"
-        ]
-    },
-    "cloud formations": {
-        "has characteristic": "numerous"
-    },
-    "aisles": {
-        "has characteristic": "numerous"
-    },
-    "light": {
-        "has characteristic": "reddish-brown"
-    },
-    "clothing": {
-        "has characteristic": "colourful"
+            [
+                "large",
+                "windows",
+                "aisles"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "ArchitecturalStructure",
+                    "ArchitecturalStructure"
+                ]
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
     },
     "In the foreground on the right": {
         "contains": [
-            "two tents",
-            "mothers",
-            "men",
-            "children"
-        ]
+            [
+                "children",
+                "mothers",
+                "two tents",
+                "men"
+            ],
+            {
+                "o_class_name": [
+                    "Person",
+                    "Person",
+                    "ArchitecturalStructure",
+                    "Person"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "clothing": {
+        "has characteristic": [
+            "colourful",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "sky": {
+        "has characteristic": [
+            [
+                "blue",
+                "cloud formations",
+                "high"
+            ],
+            {
+                "o_class_name": [
+                    "Color",
+                    "GeographicalFeature",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "GeographicalFeature"
+    },
+    "men": {
+        "has characteristic": [
+            [
+                "conversation",
+                "turbans",
+                "several"
+            ],
+            {
+                "o_class_name": [
+                    "Posture",
+                    "PhysicalObject",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "In front": {
+        "contains": [
+            [
+                "ruin",
+                "variety of figures"
+            ],
+            {
+                "o_class_name": [
+                    "ArchitecturalStructure",
+                    "Person"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "ruins": {
+        "has characteristic": [
+            [
+                "large",
+                "sky-high"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
     },
     "river": {
-        "has characteristic": "bank",
-        "contains": "ship"
+        "has characteristic": [
+            "bank",
+            {
+                "o_class_name": "GeographicalFeature"
+            }
+        ],
+        "s_class_name": "GeographicalFeature",
+        "contains": [
+            "ship",
+            {
+                "o_class_name": "ArchitecturalStructure"
+            }
+        ]
+    },
+    "sun": {
+        "symbolizes": [
+            "light",
+            {
+                "o_class_name": "Concept"
+            }
+        ],
+        "s_class_name": "GeographicalFeature",
+        "has characteristic": [
+            "setting",
+            {
+                "o_class_name": "Quality"
+            }
+        ]
+    },
+    "groups of figures": {
+        "has characteristic": [
+            [
+                "numerous",
+                "surrounded"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Posture"
+                ]
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "cloud formations": {
+        "has characteristic": [
+            "numerous",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "GeographicalFeature"
+    },
+    "On the left bank": {
+        "contains": [
+            [
+                "man",
+                "groups of figures"
+            ],
+            {
+                "o_class_name": [
+                    "Person",
+                    "Person"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "light": {
+        "has characteristic": [
+            "reddish-brown",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "Concept"
+    },
+    "aisles": {
+        "has characteristic": [
+            "numerous",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
+    },
+    "standard": {
+        "has characteristic": [
+            "sky-high",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "variety of figures": {
+        "contains": [
+            "men",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "Person",
+        "has characteristic": [
+            "clothing",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ]
+    },
+    "figures": {
+        "has characteristic": [
+            "colourful",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "Person"
     }
 }

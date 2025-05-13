@@ -1,20 +1,56 @@
 {
-    "quote": {
-        "has characteristic": "direct"
-    },
     "composition": {
-        "has characteristic": "effective"
-    },
-    "basis": {
-        "has characteristic": "oak-coloured"
-    },
-    "battle": {
-        "has characteristic": "dramatic"
+        "has characteristic": [
+            "effective",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "pattern": {
-        "has characteristic": "monochrome"
+        "has characteristic": [
+            "monochrome",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "Concept"
+    },
+    "quote": {
+        "has characteristic": [
+            "direct",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Concept"
+    },
+    "basis": {
+        "has characteristic": [
+            "oak-coloured",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "Concept"
+    },
+    "battle": {
+        "has characteristic": [
+            "dramatic",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Concept"
     },
     "horse's": {
-        "contains": "anatomy"
+        "contains": [
+            "anatomy",
+            {
+                "o_class_name": "AnatomicalStructure"
+            }
+        ],
+        "s_class_name": "Animal"
     }
 }

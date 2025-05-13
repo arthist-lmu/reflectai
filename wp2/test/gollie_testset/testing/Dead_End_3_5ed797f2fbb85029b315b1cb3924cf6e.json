@@ -1,35 +1,107 @@
 {
-    "coloured inks": {
-        "has characteristic": "different"
-    },
-    "effects": {
-        "symbolizes": "metal"
-    },
     "Dead End 3": {
-        "symbolizes": [
-            "warning notices",
-            "sales promotions"
+        "fabrication method": [
+            "mixografia",
+            {
+                "o_class_name": "ArtisticTechnique"
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "instance of": [
+            [
+                "prints",
+                "paper"
+            ],
+            {
+                "o_class_name": [
+                    "TypeOfWorkOfArt",
+                    "TypeOfWorkOfArt"
+                ]
+            }
         ],
         "created in": [
-            "2015",
-            "2011"
+            [
+                "2015",
+                "2011"
+            ],
+            {
+                "o_class_name": [
+                    "EndTime",
+                    "StartTime"
+                ]
+            }
         ],
-        "depicts": "coloured inks",
-        "fabrication method": "mixografia",
-        "instance of": [
-            "prints",
-            "paper"
+        "created by": [
+            "Ed Ruscha",
+            {
+                "o_class_name": "Person"
+            }
         ],
-        "created by": "Ed Ruscha"
-    },
-    "warning notices": {
-        "has characteristic": "dilapidated"
+        "depicts": [
+            "coloured inks",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "symbolizes": [
+            [
+                "sales promotions",
+                "warning notices"
+            ],
+            {
+                "o_class_name": [
+                    "Concept",
+                    "Concept"
+                ]
+            }
+        ]
     },
     "metal": {
-        "symbolizes": [
-            "warning notices",
-            "sales promotions"
+        "has characteristic": [
+            "weathered",
+            {
+                "o_class_name": "Quality"
+            }
         ],
-        "has characteristic": "weathered"
+        "s_class_name": "PhysicalSurface",
+        "symbolizes": [
+            [
+                "warning notices",
+                "sales promotions"
+            ],
+            {
+                "o_class_name": [
+                    "Concept",
+                    "Concept"
+                ]
+            }
+        ]
+    },
+    "warning notices": {
+        "has characteristic": [
+            "dilapidated",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Concept"
+    },
+    "coloured inks": {
+        "has characteristic": [
+            "different",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Color"
+    },
+    "effects": {
+        "symbolizes": [
+            "metal",
+            {
+                "o_class_name": "PhysicalSurface"
+            }
+        ],
+        "s_class_name": "Concept"
     }
 }

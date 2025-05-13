@@ -1,55 +1,148 @@
 {
-    "In the center": {
-        "contains": "group of musicians"
-    },
-    "background": {
-        "has characteristic": "frames",
-        "contains": "palace architecture"
-    },
-    "in the center": {
-        "contains": "musical instruments"
-    },
-    "oriental carpet": {
-        "symbolizes": "table covering"
-    },
-    "group of musicians": {
-        "has characteristic": [
-            "lady at the choir",
-            "singer",
-            "cellist",
-            "flute player"
-        ]
-    },
-    "in front of": {
-        "contains": [
-            "oriental carpet",
-            "in the center"
-        ]
-    },
     "musical instruments": {
         "has characteristic": [
-            "notes",
-            "strings",
-            "cello"
-        ]
+            [
+                "notes",
+                "cello",
+                "strings"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalObject",
+                    "PhysicalObject",
+                    "PhysicalObject"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
     "palace architecture": {
         "has characteristic": [
-            "bastions",
-            "balustrades",
-            "pillars"
-        ]
+            [
+                "pillars",
+                "bastions",
+                "balustrades"
+            ],
+            {
+                "o_class_name": [
+                    "ArchitecturalStructure",
+                    "ArchitecturalStructure",
+                    "ArchitecturalStructure"
+                ]
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
     },
     "arms": {
-        "has characteristic": "raised"
+        "has characteristic": [
+            "raised",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
     },
-    "cellist": {
-        "has characteristic": "arms"
+    "in front of": {
+        "contains": [
+            [
+                "oriental carpet",
+                "in the center"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalObject",
+                    "Composition"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "group of musicians": {
+        "has characteristic": [
+            [
+                "lady at the choir",
+                "cellist",
+                "flute player",
+                "singer"
+            ],
+            {
+                "o_class_name": [
+                    "Occupation",
+                    "Occupation",
+                    "Occupation",
+                    "Occupation"
+                ]
+            }
+        ],
+        "s_class_name": "Person"
     },
     "In the background": {
-        "contains": "fish"
+        "contains": [
+            "fish",
+            {
+                "o_class_name": "Animal"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "background": {
+        "has characteristic": [
+            "frames",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Composition",
+        "contains": [
+            "palace architecture",
+            {
+                "o_class_name": "ArchitecturalStructure"
+            }
+        ]
+    },
+    "in the center": {
+        "contains": [
+            "musical instruments",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "In the center": {
+        "contains": [
+            "group of musicians",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "in the foreground": {
-        "contains": "child"
+        "contains": [
+            "child",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "cellist": {
+        "has characteristic": [
+            "arms",
+            {
+                "o_class_name": "AnatomicalStructure"
+            }
+        ],
+        "s_class_name": "Occupation"
+    },
+    "oriental carpet": {
+        "symbolizes": [
+            "table covering",
+            {
+                "o_class_name": "PhysicalSurface"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     }
 }

@@ -1,59 +1,173 @@
 {
+    "panoramas": {
+        "has characteristic": [
+            "southern European look",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
     "Landscape with Sandy Path beside a River": {
         "depicts": [
-            "panoramas",
-            "many figures",
-            "in the distance",
-            "landscape",
-            "divided into two halves"
+            [
+                "in the distance",
+                "many figures",
+                "landscape",
+                "panoramas",
+                "divided into two halves"
+            ],
+            {
+                "o_class_name": [
+                    "Composition",
+                    "Person",
+                    "Composition",
+                    "Composition",
+                    "Composition"
+                ]
+            }
         ],
+        "s_class_name": "WorkOfArt",
         "influenced by": [
-            "Jan Both",
-            "Jan Asselijn"
+            [
+                "Jan Both",
+                "Jan Asselijn"
+            ],
+            {
+                "o_class_name": [
+                    "Person",
+                    "Person"
+                ]
+            }
         ],
         "has characteristic": [
-            "cool palette",
-            "scene"
+            [
+                "cool palette",
+                "scene"
+            ],
+            {
+                "o_class_name": [
+                    "Color",
+                    "Composition"
+                ]
+            }
         ],
-        "instance of": "painting",
-        "contains": "monogram",
-        "created in": "mid-1650s",
-        "created by": "Wouwerman"
+        "instance of": [
+            "painting",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ],
+        "contains": [
+            "monogram",
+            {
+                "o_class_name": "Concept"
+            }
+        ],
+        "created in": [
+            "mid-1650s",
+            {
+                "o_class_name": "PointInTime"
+            }
+        ],
+        "created by": [
+            "Wouwerman",
+            {
+                "o_class_name": "Person"
+            }
+        ]
     },
     "on the left": {
         "contains": [
-            "sandy path",
-            "dune area"
-        ]
-    },
-    "scene": {
-        "has characteristic": "composed in the studio"
+            [
+                "sandy path",
+                "dune area"
+            ],
+            {
+                "o_class_name": [
+                    "GeographicalFeature",
+                    "GeographicalFeature"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "many figures": {
-        "has characteristic": "scattered"
-    },
-    "on the right": {
-        "contains": "watery zone"
-    },
-    "panoramas": {
-        "has characteristic": "southern European look"
-    },
-    "watery zone": {
-        "contains": "rocks"
+        "has characteristic": [
+            "scattered",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Person"
     },
     "divided into two halves": {
         "contains": [
-            "on the left",
-            "on the right"
-        ]
-    },
-    "landscape": {
-        "has characteristic": "river scene"
+            [
+                "on the left",
+                "on the right"
+            ],
+            {
+                "o_class_name": [
+                    "Composition",
+                    "Composition"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "cool palette": {
-        "has characteristic": "grey and blue tints"
+        "has characteristic": [
+            "grey and blue tints",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "Color"
+    },
+    "landscape": {
+        "has characteristic": [
+            "river scene",
+            {
+                "o_class_name": "Composition"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "watery zone": {
+        "contains": [
+            "rocks",
+            {
+                "o_class_name": "GeographicalFeature"
+            }
+        ],
+        "s_class_name": "GeographicalFeature"
+    },
+    "scene": {
+        "has characteristic": [
+            "composed in the studio",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "on the right": {
+        "contains": [
+            "watery zone",
+            {
+                "o_class_name": "GeographicalFeature"
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "in the distance": {
-        "contains": "hills"
+        "contains": [
+            "hills",
+            {
+                "o_class_name": "GeographicalFeature"
+            }
+        ],
+        "s_class_name": "Composition"
     }
 }

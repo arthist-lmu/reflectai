@@ -1,48 +1,134 @@
 {
-    "cat": {
-        "has characteristic": [
-            "tail",
-            "grey-and-white-striped",
-            "fur",
-            "crouching in profile"
-        ]
+    "opening of a niche": {
+        "symbolizes": [
+            [
+                "illusionistic construct",
+                "framing device"
+            ],
+            {
+                "o_class_name": [
+                    "Concept",
+                    "Concept"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "front of the niche": {
-        "symbolizes": "light source",
-        "has characteristic": "upper left"
-    },
-    "fur": {
-        "has characteristic": "plush"
+        "symbolizes": [
+            "light source",
+            {
+                "o_class_name": "Concept"
+            }
+        ],
+        "s_class_name": "Composition",
+        "has characteristic": [
+            "upper left",
+            {
+                "o_class_name": "Composition"
+            }
+        ]
     },
     "Cat Crouching on the Ledge of an Artist’s Atelier": {
         "depicts": [
-            "stone",
-            "front of the niche",
-            "on a stone niche opening into an artist’s studio",
-            "fur",
-            "opening of a niche",
-            "cat"
+            [
+                "cat",
+                "opening of a niche",
+                "on a stone niche opening into an artist’s studio",
+                "front of the niche",
+                "stone",
+                "fur"
+            ],
+            {
+                "o_class_name": [
+                    "Animal",
+                    "Composition",
+                    "Composition",
+                    "Composition",
+                    "PhysicalSurface",
+                    "PhysicalSurface"
+                ]
+            }
         ],
-        "created by": "Gerrit Dou",
-        "instance of": "painting",
+        "s_class_name": "WorkOfArt",
+        "created by": [
+            "Gerrit Dou",
+            {
+                "o_class_name": "Person"
+            }
+        ],
         "fabrication method": [
-            "illusionism",
-            "minuscule strokes of multicolored paint"
+            [
+                "illusionism",
+                "minuscule strokes of multicolored paint"
+            ],
+            {
+                "o_class_name": [
+                    "ArtisticTechnique",
+                    "ArtisticTechnique"
+                ]
+            }
+        ],
+        "instance of": [
+            "painting",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
         ]
     },
-    "front of the picture plane": {
-        "contains": "opening of a niche"
-    },
-    "opening of a niche": {
-        "symbolizes": [
-            "framing device",
-            "illusionistic construct"
-        ]
+    "cat": {
+        "has characteristic": [
+            [
+                "tail",
+                "grey-and-white-striped",
+                "fur",
+                "crouching in profile"
+            ],
+            {
+                "o_class_name": [
+                    "AnatomicalStructure",
+                    "Color",
+                    "PhysicalSurface",
+                    "Posture"
+                ]
+            }
+        ],
+        "s_class_name": "Animal"
     },
     "on a stone niche opening into an artist’s studio": {
-        "contains": "cat"
+        "contains": [
+            "cat",
+            {
+                "o_class_name": "Animal"
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "niche": {
-        "has characteristic": "stone"
+        "has characteristic": [
+            "stone",
+            {
+                "o_class_name": "PhysicalSurface"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
+    },
+    "fur": {
+        "has characteristic": [
+            "plush",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalSurface"
+    },
+    "front of the picture plane": {
+        "contains": [
+            "opening of a niche",
+            {
+                "o_class_name": "Composition"
+            }
+        ],
+        "s_class_name": "Composition"
     }
 }

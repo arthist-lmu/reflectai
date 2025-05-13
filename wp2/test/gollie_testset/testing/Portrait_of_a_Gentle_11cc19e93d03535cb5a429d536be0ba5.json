@@ -1,90 +1,256 @@
 {
-    "Portrait of a Gentleman with a Walking Stick": {
-        "depicts": [
-            "suit",
-            "rapier",
-            "draped over his shoulder",
-            "pose"
+    "pose": {
+        "has characteristic": [
+            [
+                "stately",
+                "on a cane",
+                "resting on his hip"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Posture",
+                    "Posture"
+                ]
+            }
         ],
-        "instance of": [
-            "painting",
-            "portrait"
-        ],
-        "contains": [
-            "man",
-            "officer"
-        ],
-        "created by": "Gerrit Dou",
-        "influenced by": "Salomon Savery"
+        "s_class_name": "Posture"
     },
-    "near his hip": {
-        "contains": "rapier"
-    },
-    "gaze": {
-        "has characteristic": "penetrating"
+    "the other": {
+        "has characteristic": [
+            "resting on his hip",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
     },
     "suit": {
         "has characteristic": [
-            "burgundy-plum",
-            "woolen"
-        ]
-    },
-    "hand": {
-        "has characteristic": "on a cane"
-    },
-    "hanger": {
-        "has characteristic": [
-            "rapier",
-            "embroidered"
-        ]
+            [
+                "burgundy-plum",
+                "woolen"
+            ],
+            {
+                "o_class_name": [
+                    "Color",
+                    "PhysicalSurface"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
     "Gerrit Dou": {
-        "created by": "Portrait of a Woman",
         "influenced by": [
-            "Salomon Savery",
-            "Thomas de Keyser"
+            [
+                "Thomas de Keyser",
+                "Salomon Savery"
+            ],
+            {
+                "o_class_name": [
+                    "Person",
+                    "Person"
+                ]
+            }
+        ],
+        "s_class_name": "Person",
+        "created by": [
+            "Portrait of a Woman",
+            {
+                "o_class_name": "WorkOfArt"
+            }
         ]
-    },
-    "woman": {
-        "has characteristic": "resting on"
-    },
-    "arm": {
-        "has characteristic": "right"
-    },
-    "Standing Officer with Walking Stick": {
-        "instance of": "engraving",
-        "created by": "Salomon Savery"
-    },
-    "pose": {
-        "has characteristic": [
-            "stately",
-            "resting on his hip",
-            "on a cane"
-        ]
-    },
-    "draped over his shoulder": {
-        "contains": "cloak"
-    },
-    "expression": {
-        "has characteristic": "austere, unsmiling"
     },
     "man": {
         "has characteristic": [
-            "gaze",
-            "dignified",
-            "expression"
+            [
+                "gaze",
+                "dignified",
+                "expression"
+            ],
+            {
+                "o_class_name": [
+                    "Posture",
+                    "Quality",
+                    "Posture"
+                ]
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "Standing Officer with Walking Stick": {
+        "instance of": [
+            "engraving",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "created by": [
+            "Salomon Savery",
+            {
+                "o_class_name": "Person"
+            }
         ]
     },
+    "woman": {
+        "has characteristic": [
+            "resting on",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "Portrait of a Gentleman with a Walking Stick": {
+        "contains": [
+            [
+                "man",
+                "officer"
+            ],
+            {
+                "o_class_name": [
+                    "Person",
+                    "Occupation"
+                ]
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "depicts": [
+            [
+                "pose",
+                "draped over his shoulder",
+                "suit",
+                "rapier"
+            ],
+            {
+                "o_class_name": [
+                    "Posture",
+                    "Composition",
+                    "PhysicalObject",
+                    "PhysicalObject"
+                ]
+            }
+        ],
+        "instance of": [
+            [
+                "painting",
+                "portrait"
+            ],
+            {
+                "o_class_name": [
+                    "TypeOfWorkOfArt",
+                    "TypeOfWorkOfArt"
+                ]
+            }
+        ],
+        "influenced by": [
+            "Salomon Savery",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "created by": [
+            "Gerrit Dou",
+            {
+                "o_class_name": "Person"
+            }
+        ]
+    },
+    "hanger": {
+        "has characteristic": [
+            [
+                "rapier",
+                "embroidered"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalObject",
+                    "PhysicalSurface"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "expression": {
+        "has characteristic": [
+            "austere, unsmiling",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Posture"
+    },
     "lady": {
-        "has characteristic": "dignified"
+        "has characteristic": [
+            "dignified",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "gaze": {
+        "has characteristic": [
+            "penetrating",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Posture"
+    },
+    "draped over his shoulder": {
+        "contains": [
+            "cloak",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "crossing over his gorget": {
-        "contains": "hanger"
+        "contains": [
+            "hanger",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "Composition"
     },
-    "the other": {
-        "has characteristic": "resting on his hip"
+    "arm": {
+        "has characteristic": [
+            "right",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
     },
     "engraving": {
-        "instance of": "prints"
+        "instance of": [
+            "prints",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ],
+        "s_class_name": "TypeOfWorkOfArt"
+    },
+    "near his hip": {
+        "contains": [
+            "rapier",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "hand": {
+        "has characteristic": [
+            "on a cane",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
     }
 }

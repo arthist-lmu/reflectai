@@ -1,67 +1,187 @@
 {
-    "walking along": {
-        "contains": [
-            "road",
-            "bridge",
-            "couple"
-        ]
-    },
     "Hunter Getting Dressed after Bathing": {
-        "has genre": "Dutch art",
-        "instance of": "paintings",
         "depicts": [
-            "dog",
-            "tree branch",
-            "Gabriel Metsu",
-            "couple",
-            "figures",
-            "bather",
-            "powder horn",
-            "hare",
-            "water",
-            "rifle"
+            [
+                "hare",
+                "rifle",
+                "Gabriel Metsu",
+                "powder horn",
+                "bather",
+                "water",
+                "tree branch",
+                "couple",
+                "figures",
+                "dog"
+            ],
+            {
+                "o_class_name": [
+                    "Animal",
+                    "PhysicalObject",
+                    "Person",
+                    "PhysicalObject",
+                    "Person",
+                    "GeographicalFeature",
+                    "Plant",
+                    "Person",
+                    "Person",
+                    "Animal"
+                ]
+            }
         ],
-        "created by": "Gabriel Metsu"
-    },
-    "on the ground": {
-        "contains": [
-            "powder horn",
-            "rifle"
+        "s_class_name": "WorkOfArt",
+        "created by": [
+            "Gabriel Metsu",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "instance of": [
+            "paintings",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ],
+        "has genre": [
+            "Dutch art",
+            {
+                "o_class_name": "ArtGenre"
+            }
         ]
     },
     "bather": {
-        "depicts": "putting on",
+        "depicts": [
+            "putting on",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "Person",
         "has characteristic": [
-            "smiles at",
-            "seated nude",
-            "nude"
+            [
+                "seated nude",
+                "smiles at",
+                "nude"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Posture",
+                    "Quality"
+                ]
+            }
         ]
     },
-    "in the background": {
-        "contains": "figures"
+    "by his side": {
+        "contains": [
+            "dog",
+            {
+                "o_class_name": "Animal"
+            }
+        ],
+        "s_class_name": "Composition"
     },
-    "man": {
-        "has characteristic": "stands"
-    },
-    "hanging": {
-        "contains": "hare"
-    },
-    "bridge": {
-        "contains": "man"
-    },
-    "hare": {
-        "has characteristic": "dead"
-    },
-    "dog": {
-        "has characteristic": "Standing"
-    },
-    "figures": {
-        "has characteristic": "smaller"
+    "walking along": {
+        "contains": [
+            [
+                "couple",
+                "bridge",
+                "road"
+            ],
+            {
+                "o_class_name": [
+                    "Person",
+                    "ArchitecturalStructure",
+                    "ArchitecturalStructure"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "putting on": {
-        "depicts": "shirt"
+        "depicts": [
+            "shirt",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "Posture"
     },
-    "by his side": {
-        "contains": "dog"
+    "figures": {
+        "has characteristic": [
+            "smaller",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "dog": {
+        "has characteristic": [
+            "Standing",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "Animal"
+    },
+    "in the background": {
+        "contains": [
+            "figures",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "hanging": {
+        "contains": [
+            "hare",
+            {
+                "o_class_name": "Animal"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "man": {
+        "has characteristic": [
+            "stands",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "on the ground": {
+        "contains": [
+            [
+                "powder horn",
+                "rifle"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalObject",
+                    "PhysicalObject"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "bridge": {
+        "contains": [
+            "man",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
+    },
+    "hare": {
+        "has characteristic": [
+            "dead",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Animal"
     }
 }

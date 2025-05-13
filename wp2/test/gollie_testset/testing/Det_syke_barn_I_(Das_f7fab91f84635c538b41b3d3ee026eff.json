@@ -1,45 +1,132 @@
 {
-    "Det syke barn I": {
-        "created by": "Edvard Munch",
-        "has genre": "expressionism",
-        "depicts": [
-            "child",
-            "girl's",
-            "background"
+    "background": {
+        "contains": [
+            "pillow",
+            {
+                "o_class_name": "PhysicalObject"
+            }
         ],
-        "created in": "1896",
-        "instance of": "lithograph"
+        "s_class_name": "Composition",
+        "has characteristic": [
+            "entire",
+            {
+                "o_class_name": "Quality"
+            }
+        ]
+    },
+    "Det syke barn I": {
+        "created in": [
+            "1896",
+            {
+                "o_class_name": "PointInTime"
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "depicts": [
+            [
+                "child",
+                "girl's",
+                "background"
+            ],
+            {
+                "o_class_name": [
+                    "Person",
+                    "Person",
+                    "Composition"
+                ]
+            }
+        ],
+        "created by": [
+            "Edvard Munch",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "has genre": [
+            "expressionism",
+            {
+                "o_class_name": "ArtGenre"
+            }
+        ],
+        "instance of": [
+            "lithograph",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ]
     },
     "pillow": {
         "has characteristic": [
-            "white",
-            "supporting"
-        ]
+            [
+                "white",
+                "supporting"
+            ],
+            {
+                "o_class_name": [
+                    "Color",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "head": {
+        "has characteristic": [
+            "side-faced",
+            {
+                "o_class_name": "Composition"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
+    },
+    "child": {
+        "has characteristic": [
+            "sick",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Person"
     },
     "girl's": {
         "has characteristic": [
-            "expression",
-            "head",
-            "gaze"
-        ]
-    },
-    "head": {
-        "has characteristic": "side-faced"
+            [
+                "gaze",
+                "expression",
+                "head"
+            ],
+            {
+                "o_class_name": [
+                    "Posture",
+                    "Posture",
+                    "AnatomicalStructure"
+                ]
+            }
+        ],
+        "s_class_name": "Person"
     },
     "gaze": {
-        "has characteristic": "empty"
+        "has characteristic": [
+            "empty",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Posture"
     },
     "expression": {
         "has characteristic": [
-            "powerful",
-            "visual"
-        ]
-    },
-    "background": {
-        "contains": "pillow",
-        "has characteristic": "entire"
-    },
-    "child": {
-        "has characteristic": "sick"
+            [
+                "visual",
+                "powerful"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "Posture"
     }
 }

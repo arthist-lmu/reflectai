@@ -1,85 +1,249 @@
 {
-    "tapestry": {
-        "has characteristic": "luxurious"
-    },
-    "room": {
-        "contains": [
-            "ceiling",
-            "canopy bed",
-            "chair",
-            "table"
-        ]
-    },
     "Doctor’s Visit": {
         "depicts": [
-            "maid",
-            "boy",
-            "room",
-            "doctor",
-            "background",
-            "patient"
+            [
+                "maid",
+                "boy",
+                "room",
+                "doctor",
+                "patient",
+                "background"
+            ],
+            {
+                "o_class_name": [
+                    "Occupation",
+                    "Person",
+                    "ArchitecturalStructure",
+                    "Occupation",
+                    "Person",
+                    "Composition"
+                ]
+            }
         ],
-        "created in": "1660s",
-        "fabrication method": "enamel-like finish",
-        "instance of": "picture",
-        "created by": "Jacob Toorenvliet"
+        "s_class_name": "WorkOfArt",
+        "fabrication method": [
+            "enamel-like finish",
+            {
+                "o_class_name": "ArtisticTechnique"
+            }
+        ],
+        "created by": [
+            "Jacob Toorenvliet",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "created in": [
+            "1660s",
+            {
+                "o_class_name": "PointInTime"
+            }
+        ],
+        "instance of": [
+            "picture",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ]
     },
-    "woman": {
+    "curtain": {
         "has characteristic": [
-            "weak",
-            "elegantly dressed",
-            "exchanges meaningful gazes",
-            "pulse"
+            "fringed",
+            {
+                "o_class_name": "Quality"
+            }
         ],
-        "symbolizes": "patient"
-    },
-    "maid": {
-        "has characteristic": "exchanges meaningful gazes"
+        "s_class_name": "PhysicalObject"
     },
     "basket": {
-        "contains": "flask",
-        "has characteristic": "cylinder-shaped"
-    },
-    "background": {
-        "has characteristic": "dark"
-    },
-    "figures": {
-        "has characteristic": "brightly-lit"
+        "has characteristic": [
+            "cylinder-shaped",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalObject",
+        "contains": [
+            "flask",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ]
     },
     "boy": {
         "has characteristic": [
-            "held",
-            "handsomely dressed"
-        ]
+            [
+                "held",
+                "handsomely dressed"
+            ],
+            {
+                "o_class_name": [
+                    "Posture",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "Person"
     },
-    "flask": {
-        "contains": "urine"
-    },
-    "table": {
-        "has characteristic": "tapestry"
-    },
-    "reds": {
-        "has characteristic": "bright"
-    },
-    "fabric": {
-        "has characteristic": "red"
-    },
-    "doctor": {
-        "has characteristic": "gray-bearded"
-    },
-    "curtain": {
-        "has characteristic": "fringed"
+    "tapestry": {
+        "has characteristic": [
+            "luxurious",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalSurface"
     },
     "whites": {
-        "has characteristic": "bright"
+        "has characteristic": [
+            "bright",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Color"
     },
-    "ceiling": {
-        "has characteristic": "coffered"
+    "reds": {
+        "has characteristic": [
+            "bright",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Color"
+    },
+    "table": {
+        "has characteristic": [
+            "tapestry",
+            {
+                "o_class_name": "PhysicalSurface"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "woman": {
+        "has characteristic": [
+            [
+                "exchanges meaningful gazes",
+                "pulse",
+                "elegantly dressed",
+                "weak"
+            ],
+            {
+                "o_class_name": [
+                    "Posture",
+                    "AnatomicalStructure",
+                    "Quality",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "Person",
+        "symbolizes": [
+            "patient",
+            {
+                "o_class_name": "Person"
+            }
+        ]
+    },
+    "room": {
+        "contains": [
+            [
+                "ceiling",
+                "canopy bed",
+                "table",
+                "chair"
+            ],
+            {
+                "o_class_name": [
+                    "ArchitecturalStructure",
+                    "ArchitecturalStructure",
+                    "PhysicalObject",
+                    "PhysicalObject"
+                ]
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
     },
     "canopy bed": {
-        "has characteristic": "curtain"
+        "has characteristic": [
+            "curtain",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
     },
     "chair": {
-        "has characteristic": "fabric"
+        "has characteristic": [
+            "fabric",
+            {
+                "o_class_name": "PhysicalSurface"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "background": {
+        "has characteristic": [
+            "dark",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "doctor": {
+        "has characteristic": [
+            "gray-bearded",
+            {
+                "o_class_name": "AnatomicalStructure"
+            }
+        ],
+        "s_class_name": "Occupation"
+    },
+    "flask": {
+        "contains": [
+            "urine",
+            {
+                "o_class_name": "AnatomicalStructure"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "maid": {
+        "has characteristic": [
+            "exchanges meaningful gazes",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "Occupation"
+    },
+    "figures": {
+        "has characteristic": [
+            "brightly-lit",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "fabric": {
+        "has characteristic": [
+            "red",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "PhysicalSurface"
+    },
+    "ceiling": {
+        "has characteristic": [
+            "coffered",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
     }
 }

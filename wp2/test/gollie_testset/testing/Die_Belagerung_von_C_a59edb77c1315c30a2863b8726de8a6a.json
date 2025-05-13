@@ -1,28 +1,85 @@
 {
-    "level below": {
-        "contains": "fighting",
-        "has characteristic": "shadowy"
-    },
-    "on the right side of the hill": {
-        "contains": "in the foreground"
-    },
-    "March 1807": {
-        "symbolizes": "Third Coalition War"
-    },
     "Die Belagerung von Cosel": {
         "depicts": [
-            "Bavarian army's staff",
-            "level below",
-            "Third Coalition War"
+            [
+                "Bavarian army's staff",
+                "Third Coalition War",
+                "level below"
+            ],
+            {
+                "o_class_name": [
+                    "Person",
+                    "PointInTime",
+                    "Composition"
+                ]
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "created in": [
+            "1808",
+            {
+                "o_class_name": "PointInTime"
+            }
+        ],
+        "created by": [
+            "Wilhelm Kobell",
+            {
+                "o_class_name": "Person"
+            }
         ],
         "instance of": [
-            "battle images",
-            "paintings"
+            [
+                "paintings",
+                "battle images"
+            ],
+            {
+                "o_class_name": [
+                    "TypeOfWorkOfArt",
+                    "TypeOfWorkOfArt"
+                ]
+            }
+        ]
+    },
+    "on the right side of the hill": {
+        "contains": [
+            "in the foreground",
+            {
+                "o_class_name": "Composition"
+            }
         ],
-        "created in": "1808",
-        "created by": "Wilhelm Kobell"
+        "s_class_name": "Composition"
+    },
+    "level below": {
+        "has characteristic": [
+            "shadowy",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Composition",
+        "contains": [
+            "fighting",
+            {
+                "o_class_name": "Posture"
+            }
+        ]
     },
     "in the foreground": {
-        "contains": "Bavarian army's staff"
+        "contains": [
+            "Bavarian army's staff",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "March 1807": {
+        "symbolizes": [
+            "Third Coalition War",
+            {
+                "o_class_name": "PointInTime"
+            }
+        ],
+        "s_class_name": "PointInTime"
     }
 }

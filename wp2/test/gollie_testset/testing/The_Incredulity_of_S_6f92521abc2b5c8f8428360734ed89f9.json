@@ -1,65 +1,184 @@
 {
-    "apostle": {
-        "has characteristic": "finger"
+    "Incredulity of St Thomas": {
+        "created by": [
+            "Caravaggio",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "WorkOfArt"
+    },
+    "finger": {
+        "has characteristic": [
+            "probing",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
     },
     "Christ": {
         "has characteristic": [
-            "thrusts",
-            "hand",
-            "forcefully clasps"
-        ]
+            [
+                "hand",
+                "thrusts",
+                "forcefully clasps"
+            ],
+            {
+                "o_class_name": [
+                    "AnatomicalStructure",
+                    "Posture",
+                    "Posture"
+                ]
+            }
+        ],
+        "s_class_name": "ReligiousCharacter"
+    },
+    "apostle": {
+        "has characteristic": [
+            "finger",
+            {
+                "o_class_name": "AnatomicalStructure"
+            }
+        ],
+        "s_class_name": "ReligiousCharacter"
     },
     "The Incredulity of St Thomas": {
+        "created by": [
+            "Crabeth",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "WorkOfArt",
         "depicts": [
-            "11 post-betrayal apostles",
-            "John the Evangelist",
-            "background",
-            "Christ",
-            "Thomas"
+            [
+                "11 post-betrayal apostles",
+                "background",
+                "Christ",
+                "John the Evangelist",
+                "Thomas"
+            ],
+            {
+                "o_class_name": [
+                    "ReligiousCharacter",
+                    "Composition",
+                    "ReligiousCharacter",
+                    "ReligiousCharacter",
+                    "ReligiousCharacter"
+                ]
+            }
         ],
         "created in": [
-            "1626",
-            "1630"
+            [
+                "1630",
+                "1626"
+            ],
+            {
+                "o_class_name": [
+                    "EndTime",
+                    "StartTime"
+                ]
+            }
+        ],
+        "instance of": [
+            "painting",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
         ],
         "influenced by": [
-            "Incredulity of St Thomas",
-            "Caravaggio"
-        ],
-        "created by": "Crabeth",
-        "instance of": "painting"
-    },
-    "Incredulity of St Thomas": {
-        "created by": "Caravaggio"
-    },
-    "John the Evangelist": {
-        "has characteristic": "hands"
-    },
-    "Thomas": {
-        "has characteristic": [
-            "wrist",
-            "finger"
-        ]
-    },
-    "hand": {
-        "has characteristic": [
-            "fingers",
-            "other"
+            [
+                "Incredulity of St Thomas",
+                "Caravaggio"
+            ],
+            {
+                "o_class_name": [
+                    "WorkOfArt",
+                    "Person"
+                ]
+            }
         ]
     },
     "hands": {
-        "has characteristic": "together"
+        "has characteristic": [
+            "together",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
     },
-    "figures": {
-        "has characteristic": "dramatically lit"
+    "Thomas": {
+        "has characteristic": [
+            [
+                "wrist",
+                "finger"
+            ],
+            {
+                "o_class_name": [
+                    "AnatomicalStructure",
+                    "AnatomicalStructure"
+                ]
+            }
+        ],
+        "s_class_name": "ReligiousCharacter"
     },
     "background": {
-        "has characteristic": "neutral",
-        "contains": "figures"
+        "contains": [
+            "figures",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "Composition",
+        "has characteristic": [
+            "neutral",
+            {
+                "o_class_name": "Quality"
+            }
+        ]
     },
     "Crabeth": {
-        "influenced by": "Ter Brugghen’"
+        "influenced by": [
+            "Ter Brugghen’",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "Person"
     },
-    "finger": {
-        "has characteristic": "probing"
+    "hand": {
+        "has characteristic": [
+            [
+                "fingers",
+                "other"
+            ],
+            {
+                "o_class_name": [
+                    "AnatomicalStructure",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
+    },
+    "John the Evangelist": {
+        "has characteristic": [
+            "hands",
+            {
+                "o_class_name": "AnatomicalStructure"
+            }
+        ],
+        "s_class_name": "ReligiousCharacter"
+    },
+    "figures": {
+        "has characteristic": [
+            "dramatically lit",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Person"
     }
 }

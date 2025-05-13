@@ -1,23 +1,73 @@
 {
     "Kakiemon elephants": {
         "created in": [
-            "1660",
-            "1690",
-            "17th century"
+            [
+                "1660",
+                "17th century",
+                "1690"
+            ],
+            {
+                "o_class_name": [
+                    "StartTime",
+                    "PointInTime",
+                    "EndTime"
+                ]
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "has genre": [
+            "Kakiemon",
+            {
+                "o_class_name": "ArtGenre"
+            }
         ],
         "made from material": [
-            "enamelled",
-            "porcelain"
+            [
+                "enamelled",
+                "porcelain"
+            ],
+            {
+                "o_class_name": [
+                    "ArtMaterial",
+                    "ArtMaterial"
+                ]
+            }
         ],
-        "depicts": "elephants",
-        "instance of": "figures",
-        "has genre": "Kakiemon",
-        "created by": "Kakiemon potteries"
+        "instance of": [
+            "figures",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ],
+        "depicts": [
+            "elephants",
+            {
+                "o_class_name": "Animal"
+            }
+        ],
+        "created by": [
+            "Kakiemon potteries",
+            {
+                "o_class_name": "Person"
+            }
+        ]
     },
     "porcelain": {
-        "instance of": "enamelled"
+        "instance of": [
+            "enamelled",
+            {
+                "o_class_name": "ArtMaterial"
+            }
+        ],
+        "s_class_name": "ArtMaterial"
     },
     "figures": {
-        "instance of": "porcelain"
+        "instance of": [
+            "porcelain",
+            {
+                "o_class_name": "ArtMaterial"
+            }
+        ],
+        "s_class_name": "TypeOfWorkOfArt"
     }
 }

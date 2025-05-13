@@ -1,8 +1,17 @@
 {
     "Partisan": {
         "has characteristic": [
-            "female",
-            "smiling"
-        ]
+            [
+                "female",
+                "smiling"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "Person"
     }
 }

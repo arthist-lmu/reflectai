@@ -1,17 +1,50 @@
 {
-    "Kirmes": {
-        "contains": [
-            "price-shooting",
-            "acrobats",
-            "belly dancer",
-            "wild mouse",
-            "horse-riding business"
-        ],
-        "symbolizes": "kermesse"
-    },
     "Les Arènes du Nord, la kermesse": {
-        "created by": "Marcel Stobbaerts",
-        "depicts": "Kirmes",
-        "instance of": "painting"
+        "created by": [
+            "Marcel Stobbaerts",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "instance of": [
+            "painting",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ],
+        "depicts": [
+            "Kirmes",
+            {
+                "o_class_name": "Concept"
+            }
+        ]
+    },
+    "Kirmes": {
+        "symbolizes": [
+            "kermesse",
+            {
+                "o_class_name": "Concept"
+            }
+        ],
+        "s_class_name": "Concept",
+        "contains": [
+            [
+                "price-shooting",
+                "belly dancer",
+                "horse-riding business",
+                "wild mouse",
+                "acrobats"
+            ],
+            {
+                "o_class_name": [
+                    "Composition",
+                    "Occupation",
+                    "Composition",
+                    "Composition",
+                    "Occupation"
+                ]
+            }
+        ]
     }
 }

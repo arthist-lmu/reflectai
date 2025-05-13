@@ -1,38 +1,110 @@
 {
-    "town houses": {
-        "has characteristic": "small"
-    },
-    "sections": {
-        "has characteristic": "older southwestern"
-    },
-    "On the left": {
-        "contains": "residence"
-    },
-    "Die Residenzstraße gegen den Max-Joseph-Platz im Jahr 1826": {
-        "created by": "Domenico Quaglio",
-        "depicts": [
-            "view",
-            "On the right",
-            "Palais Toerring",
-            "vedutes",
-            "Munich"
-        ],
-        "instance of": "painting",
-        "contains": "On the left"
-    },
     "residence": {
         "has characteristic": [
-            "Munich",
-            "sections"
+            [
+                "Munich",
+                "sections"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalLocation",
+                    "ArchitecturalStructure"
+                ]
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
+    },
+    "Die Residenzstraße gegen den Max-Joseph-Platz im Jahr 1826": {
+        "depicts": [
+            [
+                "view",
+                "On the right",
+                "vedutes",
+                "Munich",
+                "Palais Toerring"
+            ],
+            {
+                "o_class_name": [
+                    "Composition",
+                    "Composition",
+                    "ArchitecturalStructure",
+                    "PhysicalLocation",
+                    "PhysicalLocation"
+                ]
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "instance of": [
+            "painting",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ],
+        "contains": [
+            "On the left",
+            {
+                "o_class_name": "Composition"
+            }
+        ],
+        "created by": [
+            "Domenico Quaglio",
+            {
+                "o_class_name": "Person"
+            }
         ]
     },
+    "sections": {
+        "has characteristic": [
+            "older southwestern",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
+    },
     "On the right": {
-        "contains": "town houses"
+        "contains": [
+            "town houses",
+            {
+                "o_class_name": "ArchitecturalStructure"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "town houses": {
+        "has characteristic": [
+            "small",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
     },
     "Palais Toerring": {
-        "has characteristic": "late-baroque"
+        "has characteristic": [
+            "late-baroque",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalLocation"
     },
     "view": {
-        "contains": "residential street towards Max-Joseph Square"
+        "contains": [
+            "residential street towards Max-Joseph Square",
+            {
+                "o_class_name": "ArchitecturalStructure"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "On the left": {
+        "contains": [
+            "residence",
+            {
+                "o_class_name": "ArchitecturalStructure"
+            }
+        ],
+        "s_class_name": "Composition"
     }
 }

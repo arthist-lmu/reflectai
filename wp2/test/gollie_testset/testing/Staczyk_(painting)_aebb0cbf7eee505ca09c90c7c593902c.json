@@ -1,8 +1,20 @@
 {
     "jester": {
-        "has characteristic": "solemn"
+        "has characteristic": [
+            "solemn",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Person"
     },
     "ball": {
-        "has characteristic": "lively"
+        "has characteristic": [
+            "lively",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Concept"
     }
 }

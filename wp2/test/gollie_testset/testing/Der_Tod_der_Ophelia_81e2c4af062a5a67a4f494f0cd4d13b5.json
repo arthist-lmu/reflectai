@@ -1,51 +1,139 @@
 {
-    "hand": {
-        "has characteristic": [
-            "clinges",
-            "left"
-        ]
-    },
-    "Ophelia": {
-        "has characteristic": [
-            "dying",
-            "floating",
-            "clinges",
-            "drowns herself.",
-            "insane"
-        ]
-    },
     "Der Tod der Ophelia": {
-        "depicts": [
-            "woodland",
-            "water"
+        "created by": [
+            "Delacroix",
+            {
+                "o_class_name": "Person"
+            }
         ],
-        "contains": "Ophelia",
-        "created by": "Delacroix",
-        "symbolizes": "death"
+        "s_class_name": "WorkOfArt",
+        "depicts": [
+            [
+                "woodland",
+                "water"
+            ],
+            {
+                "o_class_name": [
+                    "GeographicalFeature",
+                    "GeographicalFeature"
+                ]
+            }
+        ],
+        "contains": [
+            "Ophelia",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "symbolizes": [
+            "death",
+            {
+                "o_class_name": "Concept"
+            }
+        ]
     },
     "woodland": {
         "has characteristic": [
-            "green",
-            "brown",
-            "lit"
-        ]
+            [
+                "brown",
+                "lit",
+                "green"
+            ],
+            {
+                "o_class_name": [
+                    "Color",
+                    "Quality",
+                    "Color"
+                ]
+            }
+        ],
+        "s_class_name": "GeographicalFeature"
     },
     "water": {
         "contains": [
-            "floating",
-            "Ophelia"
-        ]
+            [
+                "Ophelia",
+                "floating"
+            ],
+            {
+                "o_class_name": [
+                    "Person",
+                    "Posture"
+                ]
+            }
+        ],
+        "s_class_name": "GeographicalFeature"
+    },
+    "hand": {
+        "has characteristic": [
+            [
+                "left",
+                "clinges"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Posture"
+                ]
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
     },
     "lit": {
-        "has characteristic": "mysteriously"
-    },
-    "green": {
-        "has characteristic": "dark"
-    },
-    "hair": {
-        "has characteristic": "loose"
+        "has characteristic": [
+            "mysteriously",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Quality"
     },
     "garment": {
-        "has characteristic": "wrinkles"
+        "has characteristic": [
+            "wrinkles",
+            {
+                "o_class_name": "PhysicalSurface"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "Ophelia": {
+        "has characteristic": [
+            [
+                "dying",
+                "insane",
+                "floating",
+                "drowns herself.",
+                "clinges"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Emotion",
+                    "Posture",
+                    "Posture",
+                    "Posture"
+                ]
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "green": {
+        "has characteristic": [
+            "dark",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Color"
+    },
+    "hair": {
+        "has characteristic": [
+            "loose",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
     }
 }

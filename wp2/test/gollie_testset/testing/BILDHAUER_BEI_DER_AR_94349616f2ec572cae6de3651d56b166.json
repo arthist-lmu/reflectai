@@ -1,106 +1,285 @@
 {
-    "ruin": {
-        "has characteristic": [
-            "palace-like",
-            "ancient"
-        ],
-        "contains": "Corinthian columns"
-    },
     "clothing": {
         "has characteristic": [
-            "red",
-            "partly gold-plated",
-            "turquoise"
+            [
+                "partly gold-plated",
+                "turquoise",
+                "red"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalSurface",
+                    "Color",
+                    "Color"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "girl": {
+        "has characteristic": [
+            [
+                "sits",
+                "little"
+            ],
+            {
+                "o_class_name": [
+                    "Posture",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "breasts": {
+        "has characteristic": [
+            "different",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
+    },
+    "cloud formations": {
+        "has characteristic": [
+            [
+                "white",
+                "large"
+            ],
+            {
+                "o_class_name": [
+                    "Color",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "GeographicalFeature"
+    },
+    "figures": {
+        "has characteristic": [
+            [
+                "shiny",
+                "large group",
+                "pottery"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Quality",
+                    "PhysicalSurface"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalObject",
+        "symbolizes": [
+            "Sabine robbery",
+            {
+                "o_class_name": "ArtisticTheme"
+            }
+        ]
+    },
+    "skies": {
+        "has characteristic": [
+            "high",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "GeographicalFeature",
+        "contains": [
+            "cloud formations",
+            {
+                "o_class_name": "GeographicalFeature"
+            }
         ]
     },
     "BILDHAUER BEI DER ARBEIT, IN WEITER LANDSCHAFT MIT ANTIKEN RUINEN": {
         "depicts": [
-            "under high skies",
-            "dog",
-            "Sabine robbery",
-            "sculptor",
-            "river",
-            "girl",
-            "Under an ancient palace-like ruin",
-            "sculpture",
-            "On the right side of the high stone arch",
-            "boy",
-            "husar"
-        ]
-    },
-    "coat": {
-        "has characteristic": "red"
-    },
-    "Corinthian columns": {
-        "has characteristic": [
-            "high",
-            "canalised"
-        ]
-    },
-    "figures": {
-        "has characteristic": [
-            "large group",
-            "shiny",
-            "pottery"
+            [
+                "river",
+                "Sabine robbery",
+                "Under an ancient palace-like ruin",
+                "under high skies",
+                "boy",
+                "sculpture",
+                "sculptor",
+                "On the right side of the high stone arch",
+                "girl",
+                "dog",
+                "husar"
+            ],
+            {
+                "o_class_name": [
+                    "GeographicalFeature",
+                    "ArtisticTheme",
+                    "Composition",
+                    "Composition",
+                    "Person",
+                    "PhysicalObject",
+                    "Occupation",
+                    "Composition",
+                    "Person",
+                    "Animal",
+                    "Occupation"
+                ]
+            }
         ],
-        "symbolizes": "Sabine robbery"
+        "s_class_name": "WorkOfArt"
     },
-    "breasts": {
-        "has characteristic": "different"
-    },
-    "into the distance": {
-        "contains": "river"
-    },
-    "under high skies": {
-        "contains": "river"
-    },
-    "husser": {
-        "has characteristic": [
-            "coat",
-            "looks carefully out of the picture"
-        ]
-    },
-    "sculptor's": {
-        "has characteristic": "work"
+    "On the left": {
+        "depicts": [
+            "into the distance",
+            {
+                "o_class_name": "Composition"
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "arch": {
         "has characteristic": [
-            "stone",
-            "high"
-        ]
-    },
-    "Under the sculpture": {
-        "has characteristic": "in front of the sole"
-    },
-    "On the right side of the high stone arch": {
-        "contains": "figures"
-    },
-    "cloud formations": {
-        "has characteristic": [
-            "white",
-            "large"
-        ]
-    },
-    "dog": {
-        "has characteristic": "little"
-    },
-    "sculpture": {
-        "has characteristic": "marble"
-    },
-    "skies": {
-        "has characteristic": "high",
-        "contains": "cloud formations"
+            [
+                "stone",
+                "high"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalSurface",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
     },
     "husar": {
-        "has characteristic": "observes"
-    },
-    "girl": {
         "has characteristic": [
-            "sits",
-            "little"
+            "observes",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "Occupation"
+    },
+    "On the right side of the high stone arch": {
+        "contains": [
+            "figures",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "Corinthian columns": {
+        "has characteristic": [
+            [
+                "high",
+                "canalised"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
+    },
+    "into the distance": {
+        "contains": [
+            "river",
+            {
+                "o_class_name": "GeographicalFeature"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "ruin": {
+        "contains": [
+            "Corinthian columns",
+            {
+                "o_class_name": "ArchitecturalStructure"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure",
+        "has characteristic": [
+            [
+                "ancient",
+                "palace-like"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Quality"
+                ]
+            }
         ]
     },
-    "On the left": {
-        "depicts": "into the distance"
+    "coat": {
+        "has characteristic": [
+            "red",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "dog": {
+        "has characteristic": [
+            "little",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Animal"
+    },
+    "Under the sculpture": {
+        "has characteristic": [
+            "in front of the sole",
+            {
+                "o_class_name": "Composition"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "under high skies": {
+        "contains": [
+            "river",
+            {
+                "o_class_name": "GeographicalFeature"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "sculptor's": {
+        "has characteristic": [
+            "work",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "Occupation"
+    },
+    "husser": {
+        "has characteristic": [
+            [
+                "looks carefully out of the picture",
+                "coat"
+            ],
+            {
+                "o_class_name": [
+                    "Posture",
+                    "PhysicalObject"
+                ]
+            }
+        ],
+        "s_class_name": "Occupation"
+    },
+    "sculpture": {
+        "has characteristic": [
+            "marble",
+            {
+                "o_class_name": "PhysicalSurface"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     }
 }

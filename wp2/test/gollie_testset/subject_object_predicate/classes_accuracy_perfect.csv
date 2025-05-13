@@ -1,0 +1,13 @@
+,F1,precision,recall,N
+PhysicalLocation,0.0,0.0,0.0,122
+ArchitecturalStructure,0.0,0.0,0.0,4
+Plant,0.0,0.0,0.0,12
+PhysicalObject,0.011940298507462685,0.02666666666666667,0.007692307692307693,75
+Food,0.0,0.0,0.0,2
+Occupation,0.0,0.0,0.0,2
+WorkOfArt,0.0,0.0,0.0,9
+Animal,0.0,0.0,0.0,8
+Person,0.0,0.0,0.0,18
+Posture,0.0,0.0,0.0,2
+PhysicalSurface,0.0,0.0,0.0,17
+ReligiousCharacter,0.0,0.0,0.0,6

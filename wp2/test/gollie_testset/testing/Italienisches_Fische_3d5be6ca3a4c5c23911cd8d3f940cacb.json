@@ -1,23 +1,62 @@
 {
-    "green": {
-        "has characteristic": "deep"
+    "unrest": {
+        "has characteristic": [
+            "expressive charged",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Concept"
     },
-    "blue": {
-        "has characteristic": "deep"
-    },
-    "vision": {
-        "has characteristic": "momentary"
+    "surface": {
+        "has characteristic": [
+            "sparkling",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalSurface"
     },
     "sea": {
         "has characteristic": [
-            "blue",
-            "green"
-        ]
+            [
+                "blue",
+                "green"
+            ],
+            {
+                "o_class_name": [
+                    "Color",
+                    "Color"
+                ]
+            }
+        ],
+        "s_class_name": "GeographicalFeature"
     },
-    "surface": {
-        "has characteristic": "sparkling"
+    "green": {
+        "has characteristic": [
+            "deep",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Color"
     },
-    "unrest": {
-        "has characteristic": "expressive charged"
+    "vision": {
+        "has characteristic": [
+            "momentary",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Concept"
+    },
+    "blue": {
+        "has characteristic": [
+            "deep",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Color"
     }
 }

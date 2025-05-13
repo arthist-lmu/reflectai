@@ -5,7 +5,7 @@ import argparse
 
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="script to convert text inputs to jsonl files")
+    parser = argparse.ArgumentParser(description="script to convert text inputs to jsonl files. Optionally also includes the Ground Truth annotations as a json-dictionary.")
 
     parser.add_argument("-i", "--input_path",  help="path to input files", required=True)
     parser.add_argument("-o", "--output_path", help="path to the output file", required=True)
@@ -14,8 +14,6 @@ def parse_args():
 
     args = parser.parse_args()
     return args
-
-
 
 
 def create_jsonl_file():
@@ -28,7 +26,7 @@ def create_jsonl_file():
 
     for annotations_texts in os.listdir(args.input_path):
         ## ---------------------- This part only for initial testing ------------------------------
-        with open('/wp2/test/gollie_testset/annotated_texts_by_tzischkin', encoding='utf-8') as testing:
+        with open('../../test/gollie_testset/annotated_texts_by_tzischkin', encoding='utf-8') as testing:
             annotated_texts = testing.read()
             #print(annotated_texts)
 
@@ -44,7 +42,7 @@ def create_jsonl_file():
             
             read = fp.read()
             n = len(read) 
-            if n > 20000:
+            if n > 20000 and False:
                 while n > 20000:
                     k = 0
                     text = {'text': [{'content': read[k * 20000: (k+1) * 20000]}], 'id': annotations_texts, 'annotations':annotations}
@@ -59,7 +57,6 @@ def create_jsonl_file():
     jsonl.dump(collection, args.output_path)
             
             
-
 
 if __name__ == '__main__':
     create_jsonl_file()

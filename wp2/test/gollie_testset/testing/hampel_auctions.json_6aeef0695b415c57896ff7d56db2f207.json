@@ -1,134 +1,365 @@
 {
-    "Unknown": {
+    "body": {
         "has characteristic": [
-            "Anna",
-            "baby Jesus"
+            [
+                "S-bow",
+                "form"
+            ],
+            {
+                "o_class_name": [
+                    "Posture",
+                    "PhysicalObject"
+                ]
+            }
         ],
-        "instance of": "statue",
-        "has genre": [
-            "Gothic",
-            "soft style"
-        ],
-        "depicts": [
-            "Mary",
-            "Paul's"
-        ]
+        "s_class_name": "AnatomicalStructure"
     },
-    "Mary": {
-        "has characteristic": [
-            "both hands",
-            "gaze",
-            "armrest",
-            "dress",
-            "head"
-        ]
-    },
-    "counterpost": {
-        "contains": "Paul's"
-    },
-    "in his left hand": {
+    "holding": {
         "has characteristic": [
             "pear",
-            "holding"
-        ]
+            {
+                "o_class_name": "Food"
+            }
+        ],
+        "s_class_name": "Posture"
     },
-    "baby Jesus": {
+    "upper body": {
         "has characteristic": [
-            "seated",
-            "holding",
-            "arm"
-        ]
+            "to the left",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
     },
     "leg": {
         "has characteristic": [
-            "right",
-            "protruding",
-            "standing"
-        ]
+            [
+                "right",
+                "protruding",
+                "standing"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Posture",
+                    "Posture"
+                ]
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
     },
-    "holding": {
-        "has characteristic": "pear"
-    },
-    "hair": {
-        "has characteristic": "laterally wavy"
-    },
-    "body": {
+    "Mary": {
         "has characteristic": [
-            "S-bow",
-            "form"
+            [
+                "head",
+                "both hands",
+                "dress",
+                "armrest",
+                "gaze"
+            ],
+            {
+                "o_class_name": [
+                    "AnatomicalStructure",
+                    "AnatomicalStructure",
+                    "PhysicalObject",
+                    "ArchitecturalStructure",
+                    "Posture"
+                ]
+            }
+        ],
+        "s_class_name": "ReligiousCharacter"
+    },
+    "Unknown": {
+        "has characteristic": [
+            [
+                "Anna",
+                "baby Jesus"
+            ],
+            {
+                "o_class_name": [
+                    "ReligiousCharacter",
+                    "ReligiousCharacter"
+                ]
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "depicts": [
+            [
+                "Paul's",
+                "Mary"
+            ],
+            {
+                "o_class_name": [
+                    "ReligiousCharacter",
+                    "ReligiousCharacter"
+                ]
+            }
+        ],
+        "instance of": [
+            "statue",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ],
+        "has genre": [
+            [
+                "Gothic",
+                "soft style"
+            ],
+            {
+                "o_class_name": [
+                    "ArtGenre",
+                    "ArtGenre"
+                ]
+            }
         ]
     },
-    "head": {
+    "sleeve": {
         "has characteristic": [
-            "hair",
-            "to the right"
-        ]
+            "blue",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
+    },
+    "X-shaped": {
+        "symbolizes": [
+            "royalty",
+            {
+                "o_class_name": "Concept"
+            }
+        ],
+        "s_class_name": "Quality"
     },
     "dress": {
         "has characteristic": [
-            "belted high",
-            "sleeve",
-            "gold"
-        ]
-    },
-    "lawn": {
-        "has characteristic": "carved"
-    },
-    "In the left hand": {
-        "contains": "baby Jesus"
+            [
+                "gold",
+                "sleeve",
+                "belted high"
+            ],
+            {
+                "o_class_name": [
+                    "Color",
+                    "AnatomicalStructure",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
     "hand": {
-        "has characteristic": "left"
-    },
-    "X-shaped": {
-        "symbolizes": "royalty"
-    },
-    "armrest": {
-        "has characteristic": "right"
-    },
-    "veil": {
-        "has characteristic": "head"
-    },
-    "child's": {
-        "has characteristic": "legs"
-    },
-    "both hands": {
-        "has characteristic": "up"
-    },
-    "arm": {
         "has characteristic": [
-            "right",
-            "inserted into"
-        ]
-    },
-    "upper body": {
-        "has characteristic": "to the left"
+            "left",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
     },
     "Anna": {
         "has characteristic": [
-            "neck",
-            "veil"
-        ]
+            [
+                "veil",
+                "neck"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalSurface",
+                    "AnatomicalStructure"
+                ]
+            }
+        ],
+        "s_class_name": "ReligiousCharacter"
+    },
+    "counterpost": {
+        "contains": [
+            "Paul's",
+            {
+                "o_class_name": "ReligiousCharacter"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "child's": {
+        "has characteristic": [
+            "legs",
+            {
+                "o_class_name": "AnatomicalStructure"
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "lawn": {
+        "has characteristic": [
+            "carved",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalSurface"
+    },
+    "arm": {
+        "has characteristic": [
+            [
+                "inserted into",
+                "right"
+            ],
+            {
+                "o_class_name": [
+                    "Posture",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
+    },
+    "in his left hand": {
+        "has characteristic": [
+            [
+                "pear",
+                "holding"
+            ],
+            {
+                "o_class_name": [
+                    "Food",
+                    "Posture"
+                ]
+            }
+        ],
+        "s_class_name": "Posture"
+    },
+    "veil": {
+        "has characteristic": [
+            "head",
+            {
+                "o_class_name": "AnatomicalStructure"
+            }
+        ],
+        "s_class_name": "PhysicalSurface"
     },
     "Paul's": {
-        "has characteristic": "standing"
-    },
-    "legs": {
-        "has characteristic": "X-shaped"
-    },
-    "face": {
-        "has characteristic": "cloth"
-    },
-    "form": {
-        "has characteristic": "retrograde"
-    },
-    "sleeve": {
-        "has characteristic": "blue"
-    },
-    "hip": {
-        "has characteristic": "to the right"
+        "has characteristic": [
+            "standing",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "ReligiousCharacter"
     },
     "cloth": {
-        "has characteristic": "white"
+        "has characteristic": [
+            "white",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "PhysicalSurface"
+    },
+    "form": {
+        "has characteristic": [
+            "retrograde",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "baby Jesus": {
+        "has characteristic": [
+            [
+                "arm",
+                "seated",
+                "holding"
+            ],
+            {
+                "o_class_name": [
+                    "AnatomicalStructure",
+                    "Posture",
+                    "Posture"
+                ]
+            }
+        ],
+        "s_class_name": "ReligiousCharacter"
+    },
+    "legs": {
+        "has characteristic": [
+            "X-shaped",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
+    },
+    "hair": {
+        "has characteristic": [
+            "laterally wavy",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
+    },
+    "armrest": {
+        "has characteristic": [
+            "right",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
+    },
+    "In the left hand": {
+        "contains": [
+            "baby Jesus",
+            {
+                "o_class_name": "ReligiousCharacter"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "both hands": {
+        "has characteristic": [
+            "up",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
+    },
+    "face": {
+        "has characteristic": [
+            "cloth",
+            {
+                "o_class_name": "PhysicalSurface"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
+    },
+    "head": {
+        "has characteristic": [
+            [
+                "to the right",
+                "hair"
+            ],
+            {
+                "o_class_name": [
+                    "Posture",
+                    "AnatomicalStructure"
+                ]
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
+    },
+    "hip": {
+        "has characteristic": [
+            "to the right",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
     }
 }

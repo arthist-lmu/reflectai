@@ -1,23 +1,74 @@
 {
-    "The Little Bridge": {
-        "contains": [
-            "ducks",
-            "over a canal"
-        ],
-        "depicts": "bridge",
-        "instance of": "landscape painting",
-        "created by": "Gillis Rombouts"
-    },
-    "canal": {
-        "contains": "ducks"
-    },
     "bridge": {
         "has characteristic": [
-            "wooden",
-            "little"
+            [
+                "wooden",
+                "little"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
+    },
+    "The Little Bridge": {
+        "contains": [
+            [
+                "ducks",
+                "over a canal"
+            ],
+            {
+                "o_class_name": [
+                    "Animal",
+                    "Composition"
+                ]
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "instance of": [
+            [
+                "landscape painting",
+                "painting"
+            ],
+            {
+                "o_class_name": [
+                    "TypeOfWorkOfArt",
+                    "TypeOfWorkOfArt"
+                ]
+            }
+        ],
+        "created by": [
+            "Gillis Rombouts",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "depicts": [
+            "bridge",
+            {
+                "o_class_name": "ArchitecturalStructure"
+            }
         ]
     },
     "over a canal": {
-        "contains": "bridge"
+        "contains": [
+            "bridge",
+            {
+                "o_class_name": "ArchitecturalStructure"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "canal": {
+        "contains": [
+            "ducks",
+            {
+                "o_class_name": "Animal"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
     }
 }

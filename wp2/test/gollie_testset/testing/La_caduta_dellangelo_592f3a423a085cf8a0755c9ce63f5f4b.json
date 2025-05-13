@@ -1,37 +1,107 @@
 {
-    "being": {
-        "has characteristic": "higher, yellow-winged"
-    },
     "La caduta dell’angelo": {
-        "fabrication method": [
-            "bold, free gesture",
-            "without prefixing or contouring",
-            "open, experimental painting process"
-        ],
         "depicts": [
-            "angel",
-            "fall of angels"
+            [
+                "fall of angels",
+                "angel"
+            ],
+            {
+                "o_class_name": [
+                    "ArtisticTheme",
+                    "ReligiousCharacter"
+                ]
+            }
         ],
-        "instance of": "picture",
+        "s_class_name": "WorkOfArt",
+        "created by": [
+            "Hödicke",
+            {
+                "o_class_name": "Person"
+            }
+        ],
         "has characteristic": [
-            "colorfulness",
-            "picturesque expression"
+            [
+                "colorfulness",
+                "picturesque expression"
+            ],
+            {
+                "o_class_name": [
+                    "Color",
+                    "Concept"
+                ]
+            }
         ],
-        "created by": "Hödicke",
-        "has genre": "contemporary art"
-    },
-    "center of the picture": {
-        "contains": "angel"
+        "has genre": [
+            "contemporary art",
+            {
+                "o_class_name": "ArtGenre"
+            }
+        ],
+        "fabrication method": [
+            [
+                "without prefixing or contouring",
+                "bold, free gesture",
+                "open, experimental painting process"
+            ],
+            {
+                "o_class_name": [
+                    "ArtisticTechnique",
+                    "ArtisticTechnique",
+                    "ArtisticTechnique"
+                ]
+            }
+        ],
+        "instance of": [
+            "picture",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ]
     },
     "colorfulness": {
         "has characteristic": [
-            "blue",
-            "bright-expressive",
-            "yellow",
-            "red"
-        ]
+            [
+                "blue",
+                "red",
+                "yellow",
+                "bright-expressive"
+            ],
+            {
+                "o_class_name": [
+                    "Color",
+                    "Color",
+                    "Color",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "Color"
+    },
+    "being": {
+        "has characteristic": [
+            "higher, yellow-winged",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "center of the picture": {
+        "contains": [
+            "angel",
+            {
+                "o_class_name": "ReligiousCharacter"
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "angel": {
-        "has characteristic": "fallen"
+        "has characteristic": [
+            "fallen",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "ReligiousCharacter"
     }
 }

@@ -1,42 +1,118 @@
 {
     "„Wirtsgarten in München“": {
-        "depicts": [
-            "scene",
-            "sunlight",
-            "Munich",
-            "under tall trees",
-            "gardens",
-            "Wirtsgarten"
+        "created by": [
+            "Otto Pippel",
+            {
+                "o_class_name": "Person"
+            }
         ],
-        "has genre": "impressionist",
-        "created by": "Otto Pippel"
-    },
-    "Wirtsgarten": {
-        "has characteristic": "outdoor"
-    },
-    "trees": {
-        "has characteristic": [
-            "leaves",
-            "tall"
+        "s_class_name": "WorkOfArt",
+        "depicts": [
+            [
+                "scene",
+                "gardens",
+                "under tall trees",
+                "Wirtsgarten",
+                "sunlight",
+                "Munich"
+            ],
+            {
+                "o_class_name": [
+                    "Composition",
+                    "ArchitecturalStructure",
+                    "Composition",
+                    "ArchitecturalStructure",
+                    "Concept",
+                    "PhysicalLocation"
+                ]
+            }
+        ],
+        "has genre": [
+            "impressionist",
+            {
+                "o_class_name": "ArtGenre"
+            }
         ]
-    },
-    "scene": {
-        "contains": "garden",
-        "has characteristic": "relaxed"
-    },
-    "under tall trees": {
-        "contains": "visitors"
-    },
-    "visitors": {
-        "has characteristic": "sit outside"
     },
     "Munich": {
         "has characteristic": [
-            "city life",
-            "gardens"
+            [
+                "gardens",
+                "city life"
+            ],
+            {
+                "o_class_name": [
+                    "ArchitecturalStructure",
+                    "Concept"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalLocation"
+    },
+    "Wirtsgarten": {
+        "has characteristic": [
+            "outdoor",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
+    },
+    "visitors": {
+        "has characteristic": [
+            "sit outside",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "trees": {
+        "has characteristic": [
+            [
+                "tall",
+                "leaves"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Plant"
+                ]
+            }
+        ],
+        "s_class_name": "GeographicalFeature"
+    },
+    "scene": {
+        "contains": [
+            "garden",
+            {
+                "o_class_name": "ArchitecturalStructure"
+            }
+        ],
+        "s_class_name": "Composition",
+        "has characteristic": [
+            "relaxed",
+            {
+                "o_class_name": "Emotion"
+            }
         ]
     },
     "garden": {
-        "has characteristic": "shady"
+        "has characteristic": [
+            "shady",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
+    },
+    "under tall trees": {
+        "contains": [
+            "visitors",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "Composition"
     }
 }

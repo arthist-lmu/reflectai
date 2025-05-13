@@ -1,28 +1,88 @@
 {
-    "Dorfstraße von Aresing": {
-        "created in": "1856",
-        "symbolizes": "paysage intime",
-        "created by": "Franz Lenbach's",
-        "depicts": [
+    "paysage intime": {
+        "has characteristic": [
             "outdoor light",
-            "in the foreground",
-            "Aresing"
+            {
+                "o_class_name": "Concept"
+            }
         ],
-        "instance of": "landscape painting"
+        "s_class_name": "Concept"
     },
     "farmer's": {
-        "has characteristic": "shadow"
+        "has characteristic": [
+            "shadow",
+            {
+                "o_class_name": "Concept"
+            }
+        ],
+        "s_class_name": "Occupation"
     },
-    "village street": {
-        "symbolizes": "Aresing"
-    },
-    "paysage intime": {
-        "has characteristic": "outdoor light"
+    "Dorfstraße von Aresing": {
+        "depicts": [
+            [
+                "in the foreground",
+                "Aresing",
+                "outdoor light"
+            ],
+            {
+                "o_class_name": [
+                    "Composition",
+                    "PhysicalLocation",
+                    "Concept"
+                ]
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "symbolizes": [
+            "paysage intime",
+            {
+                "o_class_name": "Concept"
+            }
+        ],
+        "instance of": [
+            "landscape painting",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ],
+        "created in": [
+            "1856",
+            {
+                "o_class_name": "PointInTime"
+            }
+        ],
+        "created by": [
+            "Franz Lenbach's",
+            {
+                "o_class_name": "Person"
+            }
+        ]
     },
     "in the foreground": {
-        "contains": "farmer's"
+        "contains": [
+            "farmer's",
+            {
+                "o_class_name": "Occupation"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "village street": {
+        "symbolizes": [
+            "Aresing",
+            {
+                "o_class_name": "PhysicalLocation"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
     },
     "shadow": {
-        "has characteristic": "short"
+        "has characteristic": [
+            "short",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Concept"
     }
 }

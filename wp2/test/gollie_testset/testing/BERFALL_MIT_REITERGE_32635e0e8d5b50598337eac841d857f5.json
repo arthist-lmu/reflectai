@@ -1,109 +1,297 @@
 {
-    "approaches": {
-        "has characteristic": "horses"
-    },
     "ÜBERFALL MIT REITERGEFECHT": {
-        "influenced by": "Sebastian Vrancx",
-        "depicts": [
-            "hilly landscape",
-            "On the left side",
-            "path",
-            "combatant knights and infantry",
-            "In the middle of the background",
-            "On the right",
-            "flanked on the left and right",
-            "caravan of numerous figures"
-        ],
-        "has characteristic": "restrained colour"
-    },
-    "soldiers": {
         "has characteristic": [
-            "helmet",
-            "armor",
-            "holding"
-        ]
-    },
-    "On the right": {
-        "contains": [
-            "army",
-            "behind a rocky outcrop"
+            "restrained colour",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "depicts": [
+            [
+                "path",
+                "flanked on the left and right",
+                "caravan of numerous figures",
+                "On the right",
+                "combatant knights and infantry",
+                "hilly landscape",
+                "On the left side",
+                "In the middle of the background"
+            ],
+            {
+                "o_class_name": [
+                    "ArchitecturalStructure",
+                    "Composition",
+                    "Person",
+                    "Composition",
+                    "Person",
+                    "GeographicalFeature",
+                    "Composition",
+                    "Composition"
+                ]
+            }
+        ],
+        "influenced by": [
+            "Sebastian Vrancx",
+            {
+                "o_class_name": "Person"
+            }
         ]
     },
     "tree": {
-        "has characteristic": "tall"
+        "has characteristic": [
+            "tall",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Plant"
     },
     "combatant knights and infantry": {
         "has characteristic": [
-            "rifles",
-            "lances",
-            "daggers"
-        ]
-    },
-    "horizon": {
-        "contains": [
-            "path",
-            "caravan of numerous figures"
-        ]
-    },
-    "path": {
-        "has characteristic": [
-            "narrowing",
-            "wide"
-        ]
-    },
-    "army": {
-        "contains": "soldiers",
-        "has characteristic": [
-            "approaches",
-            "small"
-        ]
-    },
-    "men": {
-        "has characteristic": "fallen and lying"
-    },
-    "On the left side": {
-        "contains": [
-            "men",
-            "horse"
-        ]
-    },
-    "horses": {
-        "has characteristic": "white"
-    },
-    "figures": {
-        "has characteristic": "red"
-    },
-    "flanked on the left and right": {
-        "contains": "tree"
-    },
-    "in the middle": {
-        "contains": "church"
-    },
-    "mill": {
-        "has characteristic": "small"
-    },
-    "holding": {
-        "contains": "standards"
-    },
-    "standards": {
-        "has characteristic": "red-flagged"
+            [
+                "lances",
+                "daggers",
+                "rifles"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalObject",
+                    "PhysicalObject",
+                    "PhysicalObject"
+                ]
+            }
+        ],
+        "s_class_name": "Person"
     },
     "wooded hill": {
         "contains": [
-            "left side",
-            "in the middle"
+            [
+                "in the middle",
+                "left side"
+            ],
+            {
+                "o_class_name": [
+                    "Composition",
+                    "Composition"
+                ]
+            }
+        ],
+        "s_class_name": "GeographicalFeature"
+    },
+    "horses": {
+        "has characteristic": [
+            "white",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "Animal"
+    },
+    "army": {
+        "has characteristic": [
+            [
+                "small",
+                "approaches"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Posture"
+                ]
+            }
+        ],
+        "s_class_name": "Person",
+        "contains": [
+            "soldiers",
+            {
+                "o_class_name": "Person"
+            }
         ]
     },
-    "left side": {
-        "contains": "mill"
+    "in the middle": {
+        "contains": [
+            "church",
+            {
+                "o_class_name": "ArchitecturalStructure"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "soldiers": {
+        "has characteristic": [
+            [
+                "armor",
+                "helmet",
+                "holding"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalObject",
+                    "PhysicalObject",
+                    "Posture"
+                ]
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "path": {
+        "has characteristic": [
+            [
+                "narrowing",
+                "wide"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
+    },
+    "men": {
+        "has characteristic": [
+            "fallen and lying",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "mill": {
+        "has characteristic": [
+            "small",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
     },
     "In the middle of the background": {
-        "contains": "wooded hill"
+        "contains": [
+            "wooded hill",
+            {
+                "o_class_name": "GeographicalFeature"
+            }
+        ],
+        "s_class_name": "Composition"
     },
-    "horse": {
-        "has characteristic": "fallen to the ground"
+    "flanked on the left and right": {
+        "contains": [
+            "tree",
+            {
+                "o_class_name": "Plant"
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "church": {
-        "has characteristic": "small"
+        "has characteristic": [
+            "small",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
+    },
+    "On the right": {
+        "contains": [
+            [
+                "behind a rocky outcrop",
+                "army"
+            ],
+            {
+                "o_class_name": [
+                    "Composition",
+                    "Person"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "horizon": {
+        "contains": [
+            [
+                "path",
+                "caravan of numerous figures"
+            ],
+            {
+                "o_class_name": [
+                    "ArchitecturalStructure",
+                    "Person"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "approaches": {
+        "has characteristic": [
+            "horses",
+            {
+                "o_class_name": "Animal"
+            }
+        ],
+        "s_class_name": "Posture"
+    },
+    "left side": {
+        "contains": [
+            "mill",
+            {
+                "o_class_name": "ArchitecturalStructure"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "On the left side": {
+        "contains": [
+            [
+                "men",
+                "horse"
+            ],
+            {
+                "o_class_name": [
+                    "Person",
+                    "Animal"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "holding": {
+        "contains": [
+            "standards",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "Posture"
+    },
+    "horse": {
+        "has characteristic": [
+            "fallen to the ground",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "Animal"
+    },
+    "figures": {
+        "has characteristic": [
+            "red",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "standards": {
+        "has characteristic": [
+            "red-flagged",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     }
 }

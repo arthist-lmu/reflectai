@@ -1,21 +1,65 @@
 {
     "BILDNIS EINER JUNGEN ADLIGEN, MÖGLICHERWEISE MARIA BEATRICE VON MODENA, HERZOGIN VON YORK": {
         "instance of": [
-            "paintings",
-            "portrait"
+            [
+                "paintings",
+                "portrait"
+            ],
+            {
+                "o_class_name": [
+                    "TypeOfWorkOfArt",
+                    "TypeOfWorkOfArt"
+                ]
+            }
         ],
-        "depicts": "Maria Beatrice di Modena",
+        "s_class_name": "WorkOfArt",
+        "depicts": [
+            "Maria Beatrice di Modena",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "created in": [
+            "1680",
+            {
+                "o_class_name": "PointInTime"
+            }
+        ],
         "influenced by": [
-            "Pierre Mignard",
-            "Sir Peter Lely"
+            [
+                "Sir Peter Lely",
+                "Pierre Mignard"
+            ],
+            {
+                "o_class_name": [
+                    "Person",
+                    "Person"
+                ]
+            }
         ],
-        "created in": "1680",
-        "created by": "Benedetto Gennari"
-    },
-    "Maria Beatrice di Modena": {
-        "has characteristic": "young"
+        "created by": [
+            "Benedetto Gennari",
+            {
+                "o_class_name": "Person"
+            }
+        ]
     },
     "Benedetto Gennari": {
-        "influenced by": "Giovanni Francesco Barbieris"
+        "influenced by": [
+            "Giovanni Francesco Barbieris",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "Maria Beatrice di Modena": {
+        "has characteristic": [
+            "young",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Person"
     }
 }

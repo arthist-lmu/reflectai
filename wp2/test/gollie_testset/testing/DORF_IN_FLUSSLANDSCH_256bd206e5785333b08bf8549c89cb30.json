@@ -1,103 +1,298 @@
 {
-    "bank": {
-        "has characteristic": "green",
-        "contains": "tree plantations"
+    "from the shore": {
+        "contains": [
+            "path",
+            {
+                "o_class_name": "ArchitecturalStructure"
+            }
+        ],
+        "s_class_name": "Composition"
     },
-    "child": {
-        "has characteristic": "walking"
-    },
-    "On the left": {
-        "contains": "couple"
+    "surrounded": {
+        "contains": [
+            "bank",
+            {
+                "o_class_name": "GeographicalFeature"
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "DORF IN FLUSSLANDSCHAFT MIT FIGURENSTAFFAGE UND BRUNNEN": {
         "depicts": [
-            "path",
-            "boats",
-            "to the right",
-            "dog",
-            "sailing boat",
-            "farmhouse",
-            "man",
-            "church",
-            "couple",
-            "towards the shore",
-            "elevated viewpoint",
-            "surrounded"
+            [
+                "sailing boat",
+                "dog",
+                "elevated viewpoint",
+                "farmhouse",
+                "surrounded",
+                "man",
+                "church",
+                "boats",
+                "couple",
+                "to the right",
+                "path",
+                "towards the shore"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalObject",
+                    "Animal",
+                    "Composition",
+                    "ArchitecturalStructure",
+                    "Composition",
+                    "Person",
+                    "ArchitecturalStructure",
+                    "PhysicalObject",
+                    "Person",
+                    "Composition",
+                    "ArchitecturalStructure",
+                    "Composition"
+                ]
+            }
         ],
-        "has characteristic": "well"
+        "s_class_name": "WorkOfArt",
+        "has characteristic": [
+            "well",
+            {
+                "o_class_name": "ArchitecturalStructure"
+            }
+        ]
+    },
+    "skies": {
+        "contains": [
+            "top",
+            {
+                "o_class_name": "ArchitecturalStructure"
+            }
+        ],
+        "s_class_name": "Composition",
+        "has characteristic": [
+            "yellowish-gray",
+            {
+                "o_class_name": "Color"
+            }
+        ]
+    },
+    "church": {
+        "has characteristic": [
+            "top",
+            {
+                "o_class_name": "ArchitecturalStructure"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
+    },
+    "man": {
+        "has characteristic": [
+            "young",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "To the left": {
+        "contains": [
+            "from the shore",
+            {
+                "o_class_name": "Composition"
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "boats": {
-        "has characteristic": "two other"
+        "has characteristic": [
+            "two other",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
     },
-    "on the way up": {
-        "has characteristic": "man"
+    "sailing boat": {
+        "has characteristic": [
+            "small",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalObject",
+        "contains": [
+            "two figures",
+            {
+                "o_class_name": "Person"
+            }
+        ]
+    },
+    "bank": {
+        "contains": [
+            "tree plantations",
+            {
+                "o_class_name": "GeographicalFeature"
+            }
+        ],
+        "s_class_name": "GeographicalFeature",
+        "has characteristic": [
+            "green",
+            {
+                "o_class_name": "Color"
+            }
+        ]
+    },
+    "farmhouse": {
+        "has characteristic": [
+            "old",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
+    },
+    "On the left": {
+        "contains": [
+            "couple",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "dog": {
+        "has characteristic": [
+            "black and white",
+            {
+                "o_class_name": "Color"
+            }
+        ],
+        "s_class_name": "Animal"
     },
     "well": {
         "has characteristic": [
-            "stone",
-            "old"
-        ]
+            [
+                "stone",
+                "old"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalSurface",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
     },
-    "couple": {
-        "has characteristic": "talking"
-    },
-    "sailing boat": {
-        "contains": "two figures",
-        "has characteristic": "small"
-    },
-    "to the right": {
-        "contains": "river"
-    },
-    "skies": {
-        "contains": "top",
-        "has characteristic": "yellowish-gray"
-    },
-    "tree plantations": {
-        "has characteristic": "rich"
-    },
-    "river": {
-        "has characteristic": "flowing"
-    },
-    "on the water": {
-        "contains": "sailing boat"
-    },
-    "To the left": {
-        "contains": "from the shore"
+    "on the way up": {
+        "has characteristic": [
+            "man",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "towards the shore": {
         "contains": [
-            "woman",
-            "child"
-        ]
-    },
-    "dog": {
-        "has characteristic": "black and white"
+            [
+                "woman",
+                "child"
+            ],
+            {
+                "o_class_name": [
+                    "Person",
+                    "Person"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "woman": {
-        "has characteristic": "walking"
+        "has characteristic": [
+            "walking",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "Person"
     },
-    "farmhouse": {
-        "has characteristic": "old"
+    "to the right": {
+        "contains": [
+            "river",
+            {
+                "o_class_name": "GeographicalFeature"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "child": {
+        "has characteristic": [
+            "walking",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "Person"
     },
     "up a hill": {
-        "contains": "path"
+        "contains": [
+            "path",
+            {
+                "o_class_name": "ArchitecturalStructure"
+            }
+        ],
+        "s_class_name": "Composition"
     },
-    "church": {
-        "has characteristic": "top"
-    },
-    "surrounded": {
-        "contains": "bank"
-    },
-    "man": {
-        "has characteristic": "young"
-    },
-    "from the shore": {
-        "contains": "path"
+    "river": {
+        "has characteristic": [
+            "flowing",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "GeographicalFeature"
     },
     "To the right": {
-        "contains": "farmhouse"
+        "contains": [
+            "farmhouse",
+            {
+                "o_class_name": "ArchitecturalStructure"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "couple": {
+        "has characteristic": [
+            "talking",
+            {
+                "o_class_name": "Posture"
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "tree plantations": {
+        "has characteristic": [
+            "rich",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "GeographicalFeature"
     },
     "on the shore": {
-        "contains": "boats"
+        "contains": [
+            "boats",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "on the water": {
+        "contains": [
+            "sailing boat",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "Composition"
     }
 }

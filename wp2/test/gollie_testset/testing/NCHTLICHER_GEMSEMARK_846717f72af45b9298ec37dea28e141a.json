@@ -1,136 +1,363 @@
 {
-    "NÄCHTLICHER GEMÜSEMARKT BEI KERZENLICHT": {
-        "depicts": [
-            "figures",
-            "woman",
-            "shopkeeper",
-            "cotton",
-            "melons",
-            "maid",
-            "man",
-            "houses",
-            "moon",
-            "market table",
-            "basket"
+    "coat": {
+        "has characteristic": [
+            "woolly",
+            {
+                "o_class_name": "PhysicalSurface"
+            }
         ],
-        "instance of": "picture"
+        "s_class_name": "PhysicalObject"
+    },
+    "shopkeeper": {
+        "has characteristic": [
+            [
+                "well-dressed",
+                "young",
+                "holding"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Quality",
+                    "Posture"
+                ]
+            }
+        ],
+        "s_class_name": "Occupation"
+    },
+    "candle-stack": {
+        "contains": [
+            "candle",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "houses": {
+        "has characteristic": [
+            [
+                "windows",
+                "facade",
+                "tiles and roofs"
+            ],
+            {
+                "o_class_name": [
+                    "ArchitecturalStructure",
+                    "PhysicalSurface",
+                    "PhysicalSurface"
+                ]
+            }
+        ],
+        "s_class_name": "ArchitecturalStructure"
+    },
+    "man": {
+        "has characteristic": [
+            [
+                "young",
+                "shoulder basket",
+                "looks"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "PhysicalObject",
+                    "Posture"
+                ]
+            }
+        ],
+        "s_class_name": "Person"
     },
     "maid": {
         "has characteristic": [
-            "young",
-            "hood"
-        ]
+            [
+                "hood",
+                "young"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalObject",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "Occupation"
     },
-    "light sources": {
-        "has characteristic": "two artificial"
-    },
-    "light": {
-        "has characteristic": [
-            "soft",
-            "reddish"
-        ]
-    },
-    "lady": {
-        "has characteristic": [
-            "pretty",
-            "young"
+    "NÄCHTLICHER GEMÜSEMARKT BEI KERZENLICHT": {
+        "depicts": [
+            [
+                "cotton",
+                "melons",
+                "figures",
+                "basket",
+                "woman",
+                "market table",
+                "moon",
+                "maid",
+                "man",
+                "houses",
+                "shopkeeper"
+            ],
+            {
+                "o_class_name": [
+                    "PhysicalObject",
+                    "Food",
+                    "Person",
+                    "PhysicalObject",
+                    "Person",
+                    "PhysicalObject",
+                    "Concept",
+                    "Occupation",
+                    "Person",
+                    "ArchitecturalStructure",
+                    "Occupation"
+                ]
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "instance of": [
+            "picture",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
         ]
     },
     "on the right": {
         "contains": [
-            "moon",
-            "clouds"
-        ]
+            [
+                "clouds",
+                "moon"
+            ],
+            {
+                "o_class_name": [
+                    "Concept",
+                    "Concept"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
     },
-    "figures": {
+    "hand": {
         "has characteristic": [
-            "blurred",
-            "female"
-        ]
-    },
-    "her left arm": {
-        "has characteristic": "basket"
-    },
-    "on the left": {
-        "contains": "woman"
-    },
-    "woman": {
-        "has characteristic": [
-            "hood",
-            "coat",
-            "seated",
-            "elderly"
-        ]
-    },
-    "houses": {
-        "has characteristic": [
-            "tiles and roofs",
-            "facade",
-            "windows"
-        ]
-    },
-    "moon": {
-        "has characteristic": "light"
-    },
-    "foreground": {
-        "has characteristic": "light sources",
-        "contains": "group"
-    },
-    "shopkeeper": {
-        "has characteristic": [
-            "holding",
-            "young",
-            "well-dressed"
-        ]
-    },
-    "coat": {
-        "has characteristic": "woolly"
-    },
-    "man": {
-        "has characteristic": [
-            "shoulder basket",
-            "young",
-            "looks"
-        ]
-    },
-    "basket": {
-        "has characteristic": [
-            "large",
-            "potato"
-        ]
-    },
-    "candle": {
-        "symbolizes": "light",
-        "has characteristic": "burning"
-    },
-    "tiles and roofs": {
-        "has characteristic": "decorative"
-    },
-    "on the table": {
-        "contains": "candle-stack"
-    },
-    "candle-stack": {
-        "contains": "candle"
+            "right",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "AnatomicalStructure"
     },
     "In the foreground": {
         "contains": [
-            "on the left",
-            "market table"
-        ]
+            [
+                "on the left",
+                "market table"
+            ],
+            {
+                "o_class_name": [
+                    "Composition",
+                    "PhysicalObject"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
     },
-    "hood": {
-        "has characteristic": "hair"
+    "moon": {
+        "has characteristic": [
+            "light",
+            {
+                "o_class_name": "Concept"
+            }
+        ],
+        "s_class_name": "Concept"
     },
-    "hand": {
-        "has characteristic": "right"
+    "on the table": {
+        "contains": [
+            "candle-stack",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "light": {
+        "has characteristic": [
+            [
+                "reddish",
+                "soft"
+            ],
+            {
+                "o_class_name": [
+                    "Color",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "Concept"
+    },
+    "basket": {
+        "has characteristic": [
+            [
+                "potato",
+                "large"
+            ],
+            {
+                "o_class_name": [
+                    "Food",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "woman": {
+        "has characteristic": [
+            [
+                "elderly",
+                "coat",
+                "hood",
+                "seated"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "PhysicalObject",
+                    "PhysicalObject",
+                    "Posture"
+                ]
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "tiles and roofs": {
+        "has characteristic": [
+            "decorative",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalSurface"
     },
     "clouds": {
-        "has characteristic": "dark"
+        "has characteristic": [
+            "dark",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Concept"
     },
-    "in the dark": {
-        "contains": "figures"
+    "hood": {
+        "has characteristic": [
+            "hair",
+            {
+                "o_class_name": "AnatomicalStructure"
+            }
+        ],
+        "s_class_name": "PhysicalObject"
+    },
+    "figures": {
+        "has characteristic": [
+            [
+                "blurred",
+                "female"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "Person"
     },
     "On the basket": {
-        "contains": "maid"
+        "contains": [
+            "maid",
+            {
+                "o_class_name": "Occupation"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "foreground": {
+        "contains": [
+            "group",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "Composition",
+        "has characteristic": [
+            "light sources",
+            {
+                "o_class_name": "Concept"
+            }
+        ]
+    },
+    "lady": {
+        "has characteristic": [
+            [
+                "pretty",
+                "young"
+            ],
+            {
+                "o_class_name": [
+                    "Quality",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "on the left": {
+        "contains": [
+            "woman",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "candle": {
+        "has characteristic": [
+            "burning",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "PhysicalObject",
+        "symbolizes": [
+            "light",
+            {
+                "o_class_name": "Concept"
+            }
+        ]
+    },
+    "her left arm": {
+        "has characteristic": [
+            "basket",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "light sources": {
+        "has characteristic": [
+            "two artificial",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Concept"
+    },
+    "in the dark": {
+        "contains": [
+            "figures",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "Composition"
     }
 }

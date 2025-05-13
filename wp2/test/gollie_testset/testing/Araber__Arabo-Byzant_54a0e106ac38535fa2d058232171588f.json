@@ -1,44 +1,121 @@
 {
+    "between the thighs of the M": {
+        "contains": [
+            "letters CI",
+            {
+                "o_class_name": "Concept"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "in his left hand": {
+        "has characteristic": [
+            "staff cross",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "Posture"
+    },
     "In the back": {
         "contains": [
-            "between the thighs of the M",
-            "value mark M",
-            "Left",
-            "above"
-        ]
+            [
+                "value mark M",
+                "between the thighs of the M",
+                "Left",
+                "above"
+            ],
+            {
+                "o_class_name": [
+                    "Concept",
+                    "Composition",
+                    "Composition",
+                    "Composition"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
     },
-    "between the thighs of the M": {
-        "contains": "letters CI"
+    "right": {
+        "contains": [
+            "X/Γ/II",
+            {
+                "o_class_name": "Concept"
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "Araber: Arabo-Byzantiner": {
-        "depicts": [
-            "Byzantine emperor",
-            "In the back",
-            "Front page"
+        "influenced by": [
+            "Byzantine",
+            {
+                "o_class_name": "ArtGenre"
+            }
         ],
-        "made from material": "coins",
-        "influenced by": "Byzantine"
+        "s_class_name": "WorkOfArt",
+        "depicts": [
+            [
+                "Front page",
+                "In the back",
+                "Byzantine emperor"
+            ],
+            {
+                "o_class_name": [
+                    "Composition",
+                    "Composition",
+                    "Person"
+                ]
+            }
+        ],
+        "made from material": [
+            "coins",
+            {
+                "o_class_name": "ArtMaterial"
+            }
+        ]
     },
     "Front page": {
-        "contains": "Byzantine emperor"
-    },
-    "above": {
-        "contains": "cross"
+        "contains": [
+            "Byzantine emperor",
+            {
+                "o_class_name": "Person"
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "Byzantine emperor": {
         "has characteristic": [
-            "diadem",
-            "Standing",
-            "in his left hand"
-        ]
+            [
+                "in his left hand",
+                "diadem",
+                "Standing"
+            ],
+            {
+                "o_class_name": [
+                    "Posture",
+                    "PhysicalObject",
+                    "Posture"
+                ]
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "above": {
+        "contains": [
+            "cross",
+            {
+                "o_class_name": "PhysicalObject"
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "Left": {
-        "contains": "ANO"
-    },
-    "right": {
-        "contains": "X/Γ/II"
-    },
-    "in his left hand": {
-        "has characteristic": "staff cross"
+        "contains": [
+            "ANO",
+            {
+                "o_class_name": "Concept"
+            }
+        ],
+        "s_class_name": "Composition"
     }
 }

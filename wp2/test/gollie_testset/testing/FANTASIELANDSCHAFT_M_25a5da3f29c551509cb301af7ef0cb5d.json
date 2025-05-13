@@ -1,47 +1,131 @@
 {
-    "FANTASIELANDSCHAFT MIT ANTIKER FIGURENSTAFFAGE": {
-        "contains": [
-            "figures",
-            "tree groups and mountainous heights",
-            "Venus",
-            "valley",
-            "Adonis",
-            "swans",
-            "carriage"
-        ],
-        "depicts": "landscape",
-        "instance of": "painting",
-        "influenced by": "Lucas van Uden"
-    },
     "in the foreground": {
         "contains": [
-            "man",
-            "couple",
-            "Venus"
-        ]
-    },
-    "in the distance": {
-        "contains": "city"
-    },
-    "valley": {
-        "contains": "city"
+            [
+                "couple",
+                "man",
+                "Venus"
+            ],
+            {
+                "o_class_name": [
+                    "Person",
+                    "Person",
+                    "MythicalCharacter"
+                ]
+            }
+        ],
+        "s_class_name": "Composition"
     },
     "Venus": {
         "has characteristic": [
-            "embracing",
-            "poorly dressed"
+            [
+                "embracing",
+                "poorly dressed"
+            ],
+            {
+                "o_class_name": [
+                    "Posture",
+                    "Quality"
+                ]
+            }
+        ],
+        "s_class_name": "MythicalCharacter"
+    },
+    "man": {
+        "has characteristic": [
+            "young",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "couple": {
+        "has characteristic": [
+            "young",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Person"
+    },
+    "FANTASIELANDSCHAFT MIT ANTIKER FIGURENSTAFFAGE": {
+        "contains": [
+            [
+                "Adonis",
+                "carriage",
+                "swans",
+                "valley",
+                "figures",
+                "Venus",
+                "tree groups and mountainous heights"
+            ],
+            {
+                "o_class_name": [
+                    "MythicalCharacter",
+                    "PhysicalObject",
+                    "Animal",
+                    "GeographicalFeature",
+                    "Person",
+                    "MythicalCharacter",
+                    "GeographicalFeature"
+                ]
+            }
+        ],
+        "s_class_name": "WorkOfArt",
+        "depicts": [
+            "landscape",
+            {
+                "o_class_name": "Concept"
+            }
+        ],
+        "instance of": [
+            "painting",
+            {
+                "o_class_name": "TypeOfWorkOfArt"
+            }
+        ],
+        "influenced by": [
+            "Lucas van Uden",
+            {
+                "o_class_name": "Person"
+            }
         ]
     },
     "figures": {
-        "has characteristic": "antique mythological"
-    },
-    "man": {
-        "has characteristic": "young"
-    },
-    "couple": {
-        "has characteristic": "young"
+        "has characteristic": [
+            "antique mythological",
+            {
+                "o_class_name": "Quality"
+            }
+        ],
+        "s_class_name": "Person"
     },
     "view": {
-        "contains": "tree groups and mountainous heights"
+        "contains": [
+            "tree groups and mountainous heights",
+            {
+                "o_class_name": "GeographicalFeature"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "in the distance": {
+        "contains": [
+            "city",
+            {
+                "o_class_name": "ArchitecturalStructure"
+            }
+        ],
+        "s_class_name": "Composition"
+    },
+    "valley": {
+        "contains": [
+            "city",
+            {
+                "o_class_name": "ArchitecturalStructure"
+            }
+        ],
+        "s_class_name": "GeographicalFeature"
     }
 }

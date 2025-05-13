@@ -1,0 +1,4 @@
+,F1,precision,recall
+PhysicalLocation,-1.0,0.14,-1.0
+PhysicalObject,0.5,0.42857142857142855,0.6
+Person,0.0,0.0,0.0
