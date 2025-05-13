@@ -5,6 +5,7 @@ import json
 import argparse
 from typing import List, Dict
 from tqdm import tqdm
+import logging
 
 
 from kg_pipeline.manager import Manager
@@ -26,7 +27,13 @@ def parse_args():
     parser.add_argument(
         "-t", "--tmp_path", help="save single step results in a tmp folder"
     )
-    parser.add_argument("-k", "--class_name", action='store_true', help='Whether to include the class name in the triplets or not', default=False)
+    parser.add_argument(
+        "-k",
+        "--class_name",
+        action="store_true",
+        help="Whether to include the class name in the triplets or not",
+        default=False,
+    )
 
     args = parser.parse_args()
     return args
@@ -37,19 +44,29 @@ def read_dataset(path: str, with_class_name=False) -> List[Dict]:
     with open(path, "r") as file:
         for i, line in enumerate(file):
             data = json.loads(line)
-            text = '; '.join(text['content'] for text in data['text'])
+            text = "; ".join(text["content"] for text in data["text"])
             results.append(
                 dict(
                     id=data["id"],
                     document_index=i,
                     original_file=path,
                     text=text,
-                    language=data['text'][0].get("language", None),
-                    triplets=data.get('triplets', []),
-                    annotations=data.get('annotations', {}),
-                    with_class_name=with_class_name
+                    language=data["text"][0].get("language", None),
+                    triplets=data.get("triplets", []),
+                    annotations=data.get("annotations", {}),
+                    with_class_name=with_class_name,
                 )
             )
+
+    return results
+
+
+def read_pipeline_output(path: str) -> List[Dict]:
+    results = []
+    with open(path, "r") as file:
+        for i, line in enumerate(file):
+            data = json.loads(line)
+            results.append(data)
 
     return results
 
@@ -59,8 +76,11 @@ def main():
 
     datasets = []
     for path in args.input_paths:
-        datasets.extend(read_dataset(path, args.class_name))
-
+        try:
+            datasets.extend(read_dataset(path, args.class_name))
+        except:
+            logging.warning("Reading pipeline output")
+            datasets.extend(read_pipeline_output(path))
 
     pipeline_definition = json.loads(args.pipeline)
 
@@ -77,9 +97,8 @@ def main():
                 os.path.abspath(os.path.dirname(__file__)), "relation_prediction"
             ),
             os.path.join(os.path.abspath(os.path.dirname(__file__)), "translation"),
-            os.path.join(os.path.abspath(os.path.dirname(__file__)), "utils"),            
+            os.path.join(os.path.abspath(os.path.dirname(__file__)), "utils"),
             os.path.join(os.path.abspath(os.path.dirname(__file__)), "reconciliation"),
-
         ]
     )
 
@@ -99,11 +118,10 @@ def main():
             )
         new_datasets = []
         plugin_iterator = plugin(datasets)
-        
 
         for x in tqdm(plugin_iterator):
             new_datasets.append(x)
-            
+
         datasets = new_datasets
     return 0
 
