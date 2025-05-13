@@ -7,15 +7,16 @@ from kg_pipeline.manager import Manager
 
 default_config = {
     "model": "HiTZ/GoLLIE-13B",
-    #"template": ["iconography","museum_mentions","painting_alias",
+    # "template": ["iconography","museum_mentions","painting_alias",
     #             "painting_content","painting_genre","painting_material",
     #             "painting_metadata"]
+
     # "template": ["a_ts_content_layer_initialdescription", "ts_content_layer_initialdescription", 
     #              "ts_content_layer_llmeasylanguage", "ts_content_layer_wikidata", 
     #              "ts_metadata_layer_wikidata copy", "ts_metadata_layer_wikidata_initialdescription copy", 
     #              "ts_metadata_layer_wikidata_llmeasylanguage" ]
 
-    "template": ["a_ts_content_layer_initialdescription", "ts_content_layer_initialdescription"]
+    "template": ["a_ts_content_layer_initialdescription"]
 }
 default_parameters = {}
 
@@ -76,12 +77,15 @@ text = {{ text.__repr__() }}
         """
         self.template = Template(template_string)
 
-    def convert_to_triplets(self, gollie_outputs: list, entity_parser: dict) -> list[dict]:
+    def convert_to_triplets(self, gollie_outputs: list, entity_parser: dict, with_class_name=False) -> list[dict]:
         results = []
         for x in gollie_outputs:
             if x.__class__.__name__ in entity_parser:
                 try:
                     triplets = entity_parser[x.__class__.__name__](x)
+                    if with_class_name:
+                        for t in triplets:
+                            t.update({'class_name':x.__class__.__name__})
                 except Exception as e:
                     print('Error converting Gollie output to triplet', e)
                     continue
@@ -132,7 +136,7 @@ text = {{ text.__repr__() }}
                     continue
 
                 triplets.extend(
-                    self.convert_to_triplets(result, template['entity_parser'])
+                    self.convert_to_triplets(result, template['entity_parser'], entry['with_class_name'])
                 )
 
             entry['triplets'].append({"type": "gollie", "content": triplets})
