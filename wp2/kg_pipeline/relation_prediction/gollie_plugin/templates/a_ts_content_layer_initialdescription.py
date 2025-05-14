@@ -10,10 +10,10 @@ Relation definitions  # ignoring most if not all the meta data relations
 @dataclass
 class ArtisticTheme(Template):
     """
-    Artistic Theme is a subject, story, or idea in a work of art.
+    Artistic Theme is a subject, story, or idea in a artwork of art.
     """
 
-    work: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+    artwork: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
     theme: str  # Adoration, Vanitas, Last Supper, Annunciation, Judgment Day, Triumph of Death
 
 
@@ -21,7 +21,7 @@ def artistic_theme_relation_to_triplet(package: ArtisticTheme):
     triplets = [
         {
             "subject": {
-                "label": package.work,
+                "label": package.artwork,
             },
             "relation": {
                 "label": "depicts",
@@ -52,10 +52,10 @@ def artistic_theme_relation_to_triplet(package: ArtisticTheme):
 @dataclass
 class Composition(Template):
     """
-    Composition is the arrangement of visual elements to create balance, movement, or focus in a work of art.
+    Composition is the arrangement of visual elements to create balance, movement, or focus in a artwork of art.
     """
 
-    work: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+    artwork: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
     composition_of_artwork: str  # Diagonal lines, symmetry, central figure, perspective grid, foreshortening, overlapping planes
     contains: str  ###---- item or substance loacted within this item but not part of it. e.g. person ----###
 
@@ -64,7 +64,7 @@ def composition_relation_to_triplet(package: Composition):
     triplets = [
         {
             "subject": {
-                "label": package.work,
+                "label": package.artwork,
             },
             "relation": {
                 "label": "depicts",
@@ -89,7 +89,7 @@ def composition_relation_to_triplet(package: Composition):
         },
         # {
         #     "subject": {
-        #         "label": package.work,
+        #         "label": package.artwork,
         #     },
         #     "relation": {
         #         "label": "contains",
@@ -107,24 +107,24 @@ def composition_relation_to_triplet(package: Composition):
 @dataclass
 class WorkOfArt(Template):
     """
-    Work of Art is an artistic object, such as a painting, sculpture, or other artistic production.
+    artwork of Art is an artistic object, such as a painting, sculpture, or other artistic production.
     """
 
-    work: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+    artwork: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
 
 
 def work_of_art_relation_to_triplet(package: WorkOfArt):
     triplets = [
         {
             "subject": {
-                "label": package.work,
+                "label": package.artwork,
             },
             "relation": {
                 "label": "instance of",
                 "wikidata_id": "wdt:P31",
             },
             "object": {
-                "label": "work of art",
+                "label": "artwork of art",
                 "wikidata_id": "wd:Q838948",
             },
         },
@@ -139,7 +139,7 @@ class Concept(Template):
     Concept is an abstract idea, feeling, or message expressed through artistic means.
     """
 
-    work: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+    artwork: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
     concept_of_artwork: str  # Harmony, man, nature, balance, duality, chaos, order
     symbolize: str  ###---- A specific person that is given in the text, but not necessarily in the depicted in the picture ----###
 
@@ -148,7 +148,7 @@ def concept_relation_to_triplet(package: Concept):
     triplets = [
         {
             "subject": {
-                "label": package.work,
+                "label": package.artwork,
             },
             "relation": {
                 "label": "depicts",
@@ -173,7 +173,7 @@ def concept_relation_to_triplet(package: Concept):
         },
         # {
         #     "subject": {
-        #         "label": package.work,
+        #         "label": package.artwork,
         #     },
         #     "relation": {
         #         "label": "symbolizes",
@@ -194,7 +194,7 @@ class RhetoricalDevice(Template):
     Rhetorical Device is a technique in language or visuals to convey a deeper meaning.
     """
 
-    work: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+    artwork: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
     device: str  # Irony, allegory, sarcasm, metaphor, symbolism, hyperbole
     symbolize: str  ###---- A specific concept that is given in the text, but not necessarily in the depicted in the picture ----###
 
@@ -203,7 +203,7 @@ def rhetorical_device_relation_to_triplet(package: RhetoricalDevice):
     triplets = [
         {
             "subject": {
-                "label": package.work,
+                "label": package.artwork,
             },
             "relation": {
                 "label": "depicts",
@@ -228,7 +228,7 @@ def rhetorical_device_relation_to_triplet(package: RhetoricalDevice):
         },
         # {
         #     "subject": {
-        #         "label": package.work,
+        #         "label": package.artwork,
         #     },
         #     "relation": {
         #         "label": "symbolizes",
@@ -249,7 +249,7 @@ class Emotion(Template):
     Emotion is a feeling or mood.
     """
 
-    work: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+    artwork: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
     type_of_emotion: (
         str  # Sadness, melancholy, joy, despair, serenity, ecstasy, grief, awe
     )
@@ -259,7 +259,7 @@ def emotion_relation_to_triplet(package: Emotion):
     triplets = [
         {
             "subject": {
-                "label": package.work,
+                "label": package.artwork,
             },
             "relation": {
                 "label": "depicts",
@@ -293,7 +293,7 @@ class Quality(Template):
     Quality is a characteristic or feature that defines meaning or value.
     """
 
-    work: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+    artwork: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
     type_of_quality: str  # Vibrant, delicate, beautiful, impressive, rough, smooth, luminous, dark, ethereal
 
 
@@ -301,7 +301,7 @@ def quality_relation_to_triplet(package: Quality):
     triplets = [
         {
             "subject": {
-                "label": package.work,
+                "label": package.artwork,
             },
             "relation": {
                 "label": "has characteristic",
@@ -335,7 +335,7 @@ class Color(Template):
     Color is a visual characteristic, including different hues, shades, and tones.
     """
 
-    work: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+    artwork: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
     type_of_color: (
         str  # Gold, emerald green, pastel tones, ultramarine, vermilion, carmine, ochre
     )
@@ -345,7 +345,7 @@ def color_relation_to_triplet(package: Color):
     triplets = [
         {
             "subject": {
-                "label": package.work,
+                "label": package.artwork,
             },
             "relation": {
                 "label": "depicts",
@@ -379,7 +379,7 @@ class PointInTime(Template):
     Point in Time is a specific moment or historical reference.
     """
 
-    work: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+    artwork: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
     type_of_point_in_time: str  # 12 April 1450, circa 1890, mid-16th century, Renaissance period, 3rd century BCE
 
 
@@ -387,7 +387,7 @@ def point_in_time_relation_to_triplet(package: PointInTime):
     triplets = [
         {
             "subject": {
-                "label": package.work,
+                "label": package.artwork,
             },
             "relation": {
                 "label": "depicts",
@@ -421,7 +421,7 @@ class Season(Template):
     Season is a time of year—Spring, Summer, Fall, or Winter—depictsed visually.
     """
 
-    work: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+    artwork: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
     type_of_season: str  # Spring, summer, fall, winter, rainy season, dry season
 
 
@@ -429,7 +429,7 @@ def season_relation_to_triplet(package: Season):
     triplets = [
         {
             "subject": {
-                "label": package.work,
+                "label": package.artwork,
             },
             "relation": {
                 "label": "depicts",
@@ -463,7 +463,7 @@ class Person(Template):
     Person is a human figure.
     """
 
-    work: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+    artwork: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
     type_of_person: (
         str  # Napoleon, Julius Caesar, Marie Antoinette, Cleopatra, Queen Elizabeth I
     )
@@ -473,7 +473,7 @@ def person_relation_to_triplet(package: Person):
     triplets = [
         {
             "subject": {
-                "label": package.work,
+                "label": package.artwork,
             },
             "relation": {
                 "label": "depicts",
@@ -507,7 +507,7 @@ class MythicalCharacter(Template):
     Mythical Character is a person from myths or legends.
     """
 
-    work: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+    artwork: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
     type_of_mythical_character: (
         str  # Zeus, Venus, Poseidon, Muses, Medusa, Achilles, Odin, Thor
     )
@@ -517,7 +517,7 @@ def mythical_character_relation_to_triplet(package: MythicalCharacter):
     triplets = [
         {
             "subject": {
-                "label": package.work,
+                "label": package.artwork,
             },
             "relation": {
                 "label": "depicts",
@@ -551,7 +551,7 @@ class ReligiousCharacter(Template):
     Religious character is a person that alludes to religious and biblical stories.
     """
 
-    work: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+    artwork: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
     type_of_religious_character: (
         str  # Adam, Jesus, Apostles, Mary Magdalene, Saint Francis, Buddha, Krishna
     )
@@ -561,7 +561,7 @@ def religious_character_relation_to_triplet(package: ReligiousCharacter):
     triplets = [
         {
             "subject": {
-                "label": package.work,
+                "label": package.artwork,
             },
             "relation": {
                 "label": "depicts",
@@ -595,7 +595,7 @@ class AnatomicalStructure(Template):
     Anatomical Structure is a body or body part.
     """
 
-    work: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+    artwork: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
     type_of_anatomical_structure: (
         str  # Torso, arm, head, hands, legs, feet, ribcage, eye, fingers
     )
@@ -605,7 +605,7 @@ def anatomical_structure_relation_to_triplet(package: AnatomicalStructure):
     triplets = [
         {
             "subject": {
-                "label": package.work,
+                "label": package.artwork,
             },
             "relation": {
                 "label": "depicts",
@@ -639,7 +639,7 @@ class Occupation(Template):
     Occupation is a job, profession, or social role linked to a person.
     """
 
-    work: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+    artwork: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
     type_of_occupation: str  # Blacksmith, priest, mourning woman, soldier, merchant, noblewoman, peasant, scholar
 
 
@@ -647,7 +647,7 @@ def occupation_relation_to_triplet(package: Occupation):
     triplets = [
         {
             "subject": {
-                "label": package.work,
+                "label": package.artwork,
             },
             "relation": {
                 "label": "depicts",
@@ -682,7 +682,7 @@ class Posture(Template):
     """
 
     person: str  # a depicted person ###-------
-    work: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+    artwork: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
     type_of_posture: str  # Reclining, head tilted, moving, sitting, standing, kneeling, running, gesturing
 
 
@@ -690,7 +690,7 @@ def posture_relation_to_triplet(package: Posture):
     triplets = [
         {
             "subject": {
-                "label": package.work,
+                "label": package.artwork,
             },
             "relation": {
                 "label": "depicts",
@@ -736,7 +736,7 @@ class ArchitecturalStructure(Template):
     Architectural Structure is a building or constructed form.
     """
 
-    work: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+    artwork: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
     type_of_architectural_structure: str  # Palace, bridge, water garden, castle, cathedral, temple, tower, amphitheater
 
 
@@ -744,7 +744,7 @@ def architectural_structure_relation_to_triplet(package: ArchitecturalStructure)
     triplets = [
         {
             "subject": {
-                "label": package.work,
+                "label": package.artwork,
             },
             "relation": {
                 "label": "depicts",
@@ -778,7 +778,7 @@ class GeographicalFeature(Template):
     Geographical Feature is a naturally occurring landform.
     """
 
-    work: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+    artwork: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
     type_of_geographical_feature: (
         str  # Forest, fields, pathways, mountains, river, desert, coastline, cliffs
     )
@@ -788,7 +788,7 @@ def geographical_feature_relation_to_triplet(package: GeographicalFeature):
     triplets = [
         {
             "subject": {
-                "label": package.work,
+                "label": package.artwork,
             },
             "relation": {
                 "label": "depicts",
@@ -822,7 +822,7 @@ class MythicalLocation(Template):
     Mythical Location is a place from myths, legends, or folklore.
     """
 
-    work: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+    artwork: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
     type_of_mythical_location: (
         str  # Paradise, Hell, Elysium, Limbo, Avalon, Valhalla, Shangri-La, Atlantis
     )
@@ -832,7 +832,7 @@ def mythical_location_relation_to_triplet(package: MythicalLocation):
     triplets = [
         {
             "subject": {
-                "label": package.work,
+                "label": package.artwork,
             },
             "relation": {
                 "label": "depicts",
@@ -869,7 +869,7 @@ class PhysicalLocation(Template):
     Physical Location is a specific, real-world place.
     """
 
-    work: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+    artwork: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
     type_of_physical_location: str  # Camposanto, Paris, Mount Fuji, Eiffel Tower, Grand Canyon, Rome, Taj Mahal
 
 
@@ -877,7 +877,7 @@ def physical_location_relation_to_triplet(package: PhysicalLocation):
     triplets = [
         {
             "subject": {
-                "label": package.work,
+                "label": package.artwork,
             },
             "relation": {
                 "label": "depicts",
@@ -911,7 +911,7 @@ class PhysicalSurface(Template):
     Physical surface is a defined material area which has certain qualities.
     """
 
-    work: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+    artwork: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
     type_of_physical_surface: str  # Brick wall, marble floor, wood wall, rough stone, polished metal, woven fabric
 
 
@@ -919,7 +919,7 @@ def physical_surface_relation_to_triplet(package: PhysicalSurface):
     triplets = [
         {
             "subject": {
-                "label": package.work,
+                "label": package.artwork,
             },
             "relation": {
                 "label": "depicts",
@@ -953,7 +953,7 @@ class Animal(Template):
     Animal is a living creature.
     """
 
-    work: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+    artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
     type_of_animal: str  # Dog, giraffe, cat, horse, fish, elephant, lion, eagle
 
 
@@ -961,7 +961,7 @@ def animal_relation_to_triplet(package: Animal):
     triplets = [
         {
             "subject": {
-                "label": package.work,
+                "label": package.artwork,
             },
             "relation": {
                 "label": "depicts",
@@ -995,7 +995,7 @@ class MythicalAnimal(Template):
     Mythical Animal is a legendary or folkloric living creature.
     """
 
-    work: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+    artwork: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
     type_of_mythical_animal: (
         str  # Pegasus, Sphinx, Centaur, Griffin, Dragon, Phoenix, Chimera
     )
@@ -1005,7 +1005,7 @@ def mythical_animal_relation_to_triplet(package: MythicalAnimal):
     triplets = [
         {
             "subject": {
-                "label": package.work,
+                "label": package.artwork,
             },
             "relation": {
                 "label": "depicts",
@@ -1039,7 +1039,7 @@ class Food(Template):
     Food is an edible or drinkable item.
     """
 
-    work: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+    artwork: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
     type_of_food: str  # Bread, peach, plums, brioche, wine, grapes, pomegranate, figs
 
 
@@ -1047,7 +1047,7 @@ def food_relation_to_triplet(package: Food):
     triplets = [
         {
             "subject": {
-                "label": package.work,
+                "label": package.artwork,
             },
             "relation": {
                 "label": "depicts",
@@ -1081,7 +1081,7 @@ class PhysicalObject(Template):
     Physical object is a tangible item contributing to composition, narrative, or symbolism.
     """
 
-    work: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+    artwork: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
     type_of_physical_object: (
         str  # Viola da gamba, sword, chair, goblet, mirror, book, crown, candle
     )
@@ -1091,7 +1091,7 @@ def physical_object_relation_to_triplet(package: PhysicalObject):
     triplets = [
         {
             "subject": {
-                "label": package.work,
+                "label": package.artwork,
             },
             "relation": {
                 "label": "depicts",
@@ -1125,17 +1125,15 @@ class Plant(Template):
     Plant is a botanical element.
     """
 
-    work: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
-    type_of_plant: (
-        str  # Iris, tree, cactus, acanthus, laurel, olive branch, lotus, vine
-    )
+    artwork: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+    type_of_plant: str  # Examples of plants: Iris, tree, cactus, acanthus, laurel, olive branch, lotus, vine
 
 
 def plant_relation_to_triplet(package: Plant):
     triplets = [
         {
             "subject": {
-                "label": package.work,
+                "label": package.artwork,
             },
             "relation": {
                 "label": "depicts",
