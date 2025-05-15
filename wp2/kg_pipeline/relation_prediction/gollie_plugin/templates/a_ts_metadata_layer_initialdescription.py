@@ -14,7 +14,7 @@ class ArtGenre(Template):
     """
 
     artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
-    ArtGenre: str  # pre-impressionistic, 19th-century style
+    ArtGenre: str  # Art Genres such as Pre-Impressionism, 19th-century style, Romanticism, Symbolism, Futurism
 
 
 def ArtGenre_relation_to_triplet(package: ArtGenre):
@@ -56,7 +56,7 @@ class ArtMovement(Template):
     """
 
     artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
-    movement: str  # Cubism
+    movement: str  # Art movements such as Impressionism, Dadaism, Constructivism, Rococo, Suprematism
 
 
 def ArtMovement_relation_to_triplet(package: ArtMovement):
@@ -98,7 +98,7 @@ class ArtMaterial(Template):
     """
 
     artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
-    material: str  # oil on canvas
+    material: str  # Art materials such as Tempera on wood, ink on rice paper, watercolor on parchment, mixed media, acrylic on linen
 
 
 def ArtMaterial_relation_to_triplet(package: ArtMaterial):
@@ -137,7 +137,7 @@ class ArtisticTechnique(Template):
     """
 
     artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
-    fabricated: str  # wet paint,
+    fabricated: str  # Artistic technique such as Sfumato, drypoint engraving, mosaic inlay, glazing, fresco
 
 
 def ArtisticTechnique_relation_to_triplet(package: ArtisticTechnique):
@@ -179,7 +179,7 @@ class TypeOfWorkOfArt(Template):
     """
 
     artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
-    instance: str  # engraving
+    instance: str  # Types of work of art such as fresco, print, installation, performance art, tapestry
 
 
 def TypeOfWorkOfArt_relation_to_triplet(package: TypeOfWorkOfArt):
@@ -221,7 +221,7 @@ class PointInTime(Template):
     """
 
     artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
-    time: str  # 1502, 1370, 2010, 1875
+    time: str  # Points in time such as 1300s, 1874, the High Renaissance, 1920s (Bauhaus period), Medieval period
 
 
 def PointInTime_relation_to_triplet(package: PointInTime):
@@ -263,7 +263,7 @@ class StartTime(Template):
     """
 
     artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
-    time: str  # 1502, 1370, 2010, 1875
+    time: str  # Start time such as 1420, 1860, 1919 (Bauhaus founded), 1947 (Abstract Expressionism emerges), 1780
 
 
 def StartTime_relation_to_triplet(package: StartTime):
@@ -305,7 +305,7 @@ class EndTime(Template):
     """
 
     artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
-    time: str  # 1502, 1370, 2010, 1875
+    time: str  # End times such as 1527 (High Renaissance wanes), 1918 (end of Art Nouveau), 1970s, 1945, 1804
 
 
 def EndTime_relation_to_triplet(package: EndTime):
@@ -347,8 +347,8 @@ class Person(Template):
     """
 
     artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
-    person: str  # Massys, sitter, Karl Wittgenstein
-    influenced: str  # Massys, sitter, Karl Wittgenstein
+    person: str  # Persons such as Rembrandt van Rijn, Claude Monet, Kazimir Malevich, Cindy Sherman, Caravaggio
+    influenced: str  # Persons like Rembrandt van Rijn, Claude Monet, Kazimir Malevich, Cindy Sherman, Caravaggio
 
 
 def Person_relation_to_triplet(package: Person):

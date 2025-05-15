@@ -14,7 +14,7 @@ class ArtisticTheme(Template):
     """
 
     artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
-    theme: str  # Adoration, Vanitas, Last Supper, Annunciation, Judgment Day, Triumph of Death
+    theme: str  # Themes such as Adoration, Vanitas, Last Supper, Annunciation, Judgment Day, Triumph of Death
 
 
 def artistic_theme_relation_to_triplet(package: ArtisticTheme):
@@ -56,7 +56,7 @@ class Composition(Template):
     """
 
     artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
-    composition_of_artwork: str  # Diagonal lines, symmetry, central figure, perspective grid, foreshortening, overlapping planes
+    composition_of_artwork: str  # Compositions such as Diagonal lines, symmetry, central figure, perspective grid, foreshortening, overlapping planes
     contains: str  ###---- item or substance loacted within this item but not part of it. e.g. person ----###
 
 
@@ -140,7 +140,9 @@ class Concept(Template):
     """
 
     artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
-    concept_of_artwork: str  # Harmony, man, nature, balance, duality, chaos, order
+    concept_of_artwork: (
+        str  # Concepts such as Harmony, man, nature, balance, duality, chaos, order
+    )
     symbolize: str  ###---- A specific person that is given in the text, but not necessarily in the depicted in the picture ----###
 
 
@@ -195,7 +197,7 @@ class RhetoricalDevice(Template):
     """
 
     artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
-    device: str  # Irony, allegory, sarcasm, metaphor, symbolism, hyperbole
+    device: str  # Rhetorical Devices such as irony, allegory, sarcasm, metaphor, symbolism, hyperbole
     symbolize: str  ###---- A specific concept that is given in the text, but not necessarily in the depicted in the picture ----###
 
 
@@ -250,9 +252,7 @@ class Emotion(Template):
     """
 
     artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
-    type_of_emotion: (
-        str  # Sadness, melancholy, joy, despair, serenity, ecstasy, grief, awe
-    )
+    type_of_emotion: str  # Emotions such as Sadness, melancholy, joy, despair, serenity, ecstasy, grief, awe
 
 
 def emotion_relation_to_triplet(package: Emotion):
@@ -294,7 +294,7 @@ class Quality(Template):
     """
 
     artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
-    type_of_quality: str  # Vibrant, delicate, beautiful, impressive, rough, smooth, luminous, dark, ethereal
+    type_of_quality: str  # Qualities such as vibrant, delicate, beautiful, impressive, rough, smooth, luminous, dark, ethereal
 
 
 def quality_relation_to_triplet(package: Quality):
@@ -336,9 +336,7 @@ class Color(Template):
     """
 
     artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
-    type_of_color: (
-        str  # Gold, emerald green, pastel tones, ultramarine, vermilion, carmine, ochre
-    )
+    type_of_color: str  # Colors such as gold, emerald green, pastel tones, ultramarine, vermilion, carmine, ochre
 
 
 def color_relation_to_triplet(package: Color):
@@ -380,7 +378,7 @@ class PointInTime(Template):
     """
 
     artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
-    type_of_point_in_time: str  # 12 April 1450, circa 1890, mid-16th century, Renaissance period, 3rd century BCE
+    type_of_point_in_time: str  # Point in time such as 12 April 1450, circa 1890, mid-16th century, Renaissance period, 3rd century BCE
 
 
 def point_in_time_relation_to_triplet(package: PointInTime):
@@ -422,7 +420,7 @@ class Season(Template):
     """
 
     artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
-    type_of_season: str  # Spring, summer, fall, winter, rainy season, dry season
+    type_of_season: str  # Type of seasons such as spring, summer, fall, winter, rainy season, dry season
 
 
 def season_relation_to_triplet(package: Season):
@@ -464,9 +462,7 @@ class Person(Template):
     """
 
     artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
-    type_of_person: (
-        str  # Napoleon, Julius Caesar, Marie Antoinette, Cleopatra, Queen Elizabeth I
-    )
+    type_of_person: str  # Persons such as Napoleon, Julius Caesar, Marie Antoinette, Cleopatra, Queen Elizabeth I
 
 
 def person_relation_to_triplet(package: Person):
@@ -508,9 +504,7 @@ class MythicalCharacter(Template):
     """
 
     artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
-    type_of_mythical_character: (
-        str  # Zeus, Venus, Poseidon, Muses, Medusa, Achilles, Odin, Thor
-    )
+    type_of_mythical_character: str  # Mythical characters such as Zeus, Venus, Poseidon, Muses, Medusa, Achilles, Odin, Thor
 
 
 def mythical_character_relation_to_triplet(package: MythicalCharacter):
@@ -552,9 +546,7 @@ class ReligiousCharacter(Template):
     """
 
     artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
-    type_of_religious_character: (
-        str  # Adam, Jesus, Apostles, Mary Magdalene, Saint Francis, Buddha, Krishna
-    )
+    type_of_religious_character: str  # Religious characters such as Adam, Jesus, Apostles, Mary Magdalene, Saint Francis, Buddha, Krishna
 
 
 def religious_character_relation_to_triplet(package: ReligiousCharacter):
@@ -596,9 +588,7 @@ class AnatomicalStructure(Template):
     """
 
     artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
-    type_of_anatomical_structure: (
-        str  # Torso, arm, head, hands, legs, feet, ribcage, eye, fingers
-    )
+    type_of_anatomical_structure: str  # Anatomical structures such as torso, arm, head, hands, legs, feet, ribcage, eye, fingers
 
 
 def anatomical_structure_relation_to_triplet(package: AnatomicalStructure):
@@ -640,7 +630,7 @@ class Occupation(Template):
     """
 
     artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
-    type_of_occupation: str  # Blacksmith, priest, mourning woman, soldier, merchant, noblewoman, peasant, scholar
+    type_of_occupation: str  # Occupations such as blacksmith, priest, mourning woman, soldier, merchant, noblewoman, peasant, scholar
 
 
 def occupation_relation_to_triplet(package: Occupation):
@@ -683,7 +673,7 @@ class Posture(Template):
 
     person: str  # a depicted person ###-------
     artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
-    type_of_posture: str  # Reclining, head tilted, moving, sitting, standing, kneeling, running, gesturing
+    type_of_posture: str  # Postures such as reclining, head tilted, moving, sitting, standing, kneeling, running, gesturing
 
 
 def posture_relation_to_triplet(package: Posture):
@@ -737,7 +727,7 @@ class ArchitecturalStructure(Template):
     """
 
     artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
-    type_of_architectural_structure: str  # Palace, bridge, water garden, castle, cathedral, temple, tower, amphitheater
+    type_of_architectural_structure: str  # Architectural structures such as palace, bridge, water garden, castle, cathedral, temple, tower, amphitheater
 
 
 def architectural_structure_relation_to_triplet(package: ArchitecturalStructure):
@@ -779,9 +769,7 @@ class GeographicalFeature(Template):
     """
 
     artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
-    type_of_geographical_feature: (
-        str  # Forest, fields, pathways, mountains, river, desert, coastline, cliffs
-    )
+    type_of_geographical_feature: str  # FGeographical features such as forest, fields, pathways, mountains, river, desert, coastline, cliffs
 
 
 def geographical_feature_relation_to_triplet(package: GeographicalFeature):
@@ -823,9 +811,7 @@ class MythicalLocation(Template):
     """
 
     artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
-    type_of_mythical_location: (
-        str  # Paradise, Hell, Elysium, Limbo, Avalon, Valhalla, Shangri-La, Atlantis
-    )
+    type_of_mythical_location: str  # Mythical locations such as Paradise, Hell, Elysium, Limbo, Avalon, Valhalla, Shangri-La, Atlantis
 
 
 def mythical_location_relation_to_triplet(package: MythicalLocation):
@@ -870,7 +856,7 @@ class PhysicalLocation(Template):
     """
 
     artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
-    type_of_physical_location: str  # Camposanto, Paris, Mount Fuji, Eiffel Tower, Grand Canyon, Rome, Taj Mahal
+    type_of_physical_location: str  # Physical locations such as Camposanto, Paris, Mount Fuji, Eiffel Tower, Grand Canyon, Rome, Taj Mahal
 
 
 def physical_location_relation_to_triplet(package: PhysicalLocation):
@@ -912,7 +898,7 @@ class PhysicalSurface(Template):
     """
 
     artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
-    type_of_physical_surface: str  # Brick wall, marble floor, wood wall, rough stone, polished metal, woven fabric
+    type_of_physical_surface: str  # Physical surfaces such as brick wall, marble floor, wood wall, rough stone, polished metal, woven fabric
 
 
 def physical_surface_relation_to_triplet(package: PhysicalSurface):
@@ -954,7 +940,9 @@ class Animal(Template):
     """
 
     artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
-    type_of_animal: str  # Dog, giraffe, cat, horse, fish, elephant, lion, eagle
+    type_of_animal: (
+        str  # Animals such as Dog, giraffe, cat, horse, fish, elephant, lion, eagle
+    )
 
 
 def animal_relation_to_triplet(package: Animal):
@@ -996,9 +984,7 @@ class MythicalAnimal(Template):
     """
 
     artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
-    type_of_mythical_animal: (
-        str  # Pegasus, Sphinx, Centaur, Griffin, Dragon, Phoenix, Chimera
-    )
+    type_of_mythical_animal: str  # Mythical animals such as Pegasus, Sphinx, Centaur, Griffin, Dragon, Phoenix, Chimera
 
 
 def mythical_animal_relation_to_triplet(package: MythicalAnimal):
@@ -1040,7 +1026,7 @@ class Food(Template):
     """
 
     artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
-    type_of_food: str  # Bread, peach, plums, brioche, wine, grapes, pomegranate, figs
+    type_of_food: str  # Food such as bread, peach, plums, brioche, wine, grapes, pomegranate, figs
 
 
 def food_relation_to_triplet(package: Food):
@@ -1082,9 +1068,7 @@ class PhysicalObject(Template):
     """
 
     artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
-    type_of_physical_object: (
-        str  # Viola da gamba, sword, chair, goblet, mirror, book, crown, candle
-    )
+    type_of_physical_object: str  # Physical objects such as viola da gamba, sword, chair, goblet, mirror, book, crown, candle
 
 
 def physical_object_relation_to_triplet(package: PhysicalObject):
@@ -1126,7 +1110,7 @@ class Plant(Template):
     """
 
     artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
-    type_of_plant: str  # Examples of plants: Iris, tree, cactus, acanthus, laurel, olive branch, lotus, vine
+    type_of_plant: str  # Plants such as Iris, tree, cactus, acanthus, laurel, olive branch, lotus, vine
 
 
 def plant_relation_to_triplet(package: Plant):
