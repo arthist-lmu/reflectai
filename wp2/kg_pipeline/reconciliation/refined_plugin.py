@@ -96,5 +96,5 @@ class RefinedPlugin(
                     else:
                         triplet['object']['wikidata_label'] = None
                         triplet['object']['wikidata_id'] = None
-
+            print(entry)
             yield entry

@@ -3,7 +3,7 @@ from ..utils_typing import Relation, dataclass
 from ..utils_typing import Generic as Template
 
 """
-Relation definitions  # ignoring most if not all the meta data relations
+Relation definitions  
 """
 
 
@@ -14,10 +14,10 @@ class ArtGenre(Template):
     """
 
     artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
-    ArtGenre: str  # Art Genres such as Pre-Impressionism, 19th-century style, Romanticism, Symbolism, Futurism
+    art_genre: str  # Art Genres such as Pre-Impressionism, 19th-century style, Romanticism, Symbolism, Futurism
 
 
-def ArtGenre_relation_to_triplet(package: ArtGenre):
+def art_genre_relation_to_triplet(package: ArtGenre):
     triplets = [
         {
             "subject": {
@@ -28,7 +28,7 @@ def ArtGenre_relation_to_triplet(package: ArtGenre):
                 "wikidata_id": "wdt:P921",  # rather than "wdt:P136",
             },
             "object": {
-                "label": package.ArtGenre,
+                "label": package.art_genre,
             },
         },
         {
@@ -59,7 +59,8 @@ class ArtMovement(Template):
     movement: str  # Art movements such as Impressionism, Dadaism, Constructivism, Rococo, Suprematism
 
 
-def ArtMovement_relation_to_triplet(package: ArtMovement):
+
+def art_movement_relation_to_triplet(package: ArtMovement):
     triplets = [
         {
             "subject": {
@@ -101,13 +102,17 @@ class ArtMaterial(Template):
     material: str  # Art materials such as Tempera on wood, ink on rice paper, watercolor on parchment, mixed media, acrylic on linen
 
 
-def ArtMaterial_relation_to_triplet(package: ArtMaterial):
+
+def art_material_relation_to_triplet(package: ArtMaterial):
     triplets = [
         {
             "subject": {
                 "label": package.artwork,
             },
-            "relation": {"label": "made from material", "wikidata_id": "wdt:P186"},
+            "relation": {
+                "label": "made from material", 
+                "wikidata_id": "wdt:P186"
+            },
             "object": {
                 "label": package.material,
             },
@@ -140,7 +145,7 @@ class ArtisticTechnique(Template):
     fabricated: str  # Artistic technique such as Sfumato, drypoint engraving, mosaic inlay, glazing, fresco
 
 
-def ArtisticTechnique_relation_to_triplet(package: ArtisticTechnique):
+def artistic_technique_relation_to_triplet(package: ArtisticTechnique):
     triplets = [
         {
             "subject": {
@@ -182,7 +187,7 @@ class TypeOfWorkOfArt(Template):
     instance: str  # Types of work of art such as fresco, print, installation, performance art, tapestry
 
 
-def TypeOfWorkOfArt_relation_to_triplet(package: TypeOfWorkOfArt):
+def type_of_work_of_art_relation_to_triplet(package: TypeOfWorkOfArt):
     triplets = [
         {
             "subject": {
@@ -224,7 +229,7 @@ class PointInTime(Template):
     time: str  # Points in time such as 1300s, 1874, the High Renaissance, 1920s (Bauhaus period), Medieval period
 
 
-def PointInTime_relation_to_triplet(package: PointInTime):
+def point_in_time_relation_to_triplet(package: PointInTime):
     triplets = [
         {
             "subject": {
@@ -266,7 +271,7 @@ class StartTime(Template):
     time: str  # Start time such as 1420, 1860, 1919 (Bauhaus founded), 1947 (Abstract Expressionism emerges), 1780
 
 
-def StartTime_relation_to_triplet(package: StartTime):
+def start_time_relation_to_triplet(package: StartTime):
     triplets = [
         {
             "subject": {
@@ -308,7 +313,7 @@ class EndTime(Template):
     time: str  # End times such as 1527 (High Renaissance wanes), 1918 (end of Art Nouveau), 1970s, 1945, 1804
 
 
-def EndTime_relation_to_triplet(package: EndTime):
+def end_time_relation_to_triplet(package: EndTime):
     triplets = [
         {
             "subject": {
@@ -341,18 +346,17 @@ def EndTime_relation_to_triplet(package: EndTime):
 
 
 @dataclass
-class Person(Template):
+class PersonCreated(Template):
     """
     being that has certain capacities or attributes constituting personhood
+    ### hier muss klargestellt werden, dass nur dann Entitäte extrahiert werden sollen, wenn es sich um den Künstler selber handelt. 
     """
 
     artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
-    person: str  # Persons such as Rembrandt van Rijn, Claude Monet, Kazimir Malevich, Cindy Sherman, Caravaggio
-    influenced: str  # Persons like Rembrandt van Rijn, Claude Monet, Kazimir Malevich, Cindy Sherman, Caravaggio
+    creator: str  # Persons such as Rembrandt van Rijn, Claude Monet, Kazimir Malevich, Cindy Sherman, Caravaggio
 
 
-def Person_relation_to_triplet(package: Person):
-    ### should we rather split those up?
+def person_created_relation_to_triplet(package: PersonCreated):
     triplets = [
         {
             "subject": {
@@ -363,12 +367,12 @@ def Person_relation_to_triplet(package: Person):
                 "wikidata_id": "wdt:P170",
             },
             "object": {
-                "label": package.person,
+                "label": package.creator,
             },
         },
         {
             "subject": {
-                "label": package.person,
+                "label": package.creator,
             },
             "relation": {
                 "label": "instance of",
@@ -378,7 +382,27 @@ def Person_relation_to_triplet(package: Person):
                 "label": "person",  # or human
                 "wikidata_id": "wd:Q5",  # instead of "wd:Q215627", since that is what wikidata says
             },
-        },
+        }
+    ]
+
+    return triplets
+
+
+
+@dataclass
+class PersonInfluenced(Template):
+    """
+    being that has certain capacities or attributes constituting personhood
+    ### hier muss klargestellt werden, dass nur dann Entitäte extrahiert werden sollen, wenn es sich um die Person handelt, die den Künstler beeinflusst hat. 
+    """
+
+    artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+    influenced: str  # Persons like Rembrandt van Rijn, Claude Monet, Kazimir Malevich, Cindy Sherman, Caravaggio
+
+
+
+def person_influenced_relation_to_triplet(package: PersonInfluenced):
+    triplets = [
         {
             "subject": {
                 "label": package.artwork,
@@ -418,17 +442,19 @@ ENTITY_DEFINITIONS: List[Template] = [
     PointInTime,
     StartTime,
     EndTime,
-    Person,
+    PersonCreated,
+    PersonInfluenced
 ]
 
 ENTITY_PARSER = {
-    "ArtGenre": ArtGenre_relation_to_triplet,
-    "ArtMovement": ArtMovement_relation_to_triplet,
-    "ArtMaterial": ArtMaterial_relation_to_triplet,
-    "ArtisticTechnique": ArtisticTechnique_relation_to_triplet,
-    "TypeOfWorkOfArt": TypeOfWorkOfArt_relation_to_triplet,
-    "PointInTime": PointInTime_relation_to_triplet,
-    "StartTime": StartTime_relation_to_triplet,
-    "EndTime": EndTime_relation_to_triplet,
-    "Person": Person_relation_to_triplet,
+    "ArtGenre": art_genre_relation_to_triplet,
+    "ArtMovement": art_movement_relation_to_triplet,
+    "ArtMaterial": art_material_relation_to_triplet,
+    "ArtisticTechnique": artistic_technique_relation_to_triplet,
+    "TypeOfWorkOfArt": type_of_work_of_art_relation_to_triplet,
+    "PointInTime": point_in_time_relation_to_triplet,
+    "StartTime": start_time_relation_to_triplet,
+    "EndTime": end_time_relation_to_triplet,
+    "PersonCreated": person_created_relation_to_triplet,
+    "PersonInfluenced": person_influenced_relation_to_triplet
 }

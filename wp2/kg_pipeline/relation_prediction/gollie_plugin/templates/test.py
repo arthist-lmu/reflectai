@@ -1,3 +1,8 @@
+from typing import List
+
+from ..utils_typing import Relation, dataclass
+from ..utils_typing import Generic as Template
+
 @dataclass
 class PaintingDepictedConcept(Template):
     """A depicted concept in a painting. This includes all objects, scenes, items of clothing and people."""
@@ -16,3 +21,9 @@ class PaintingDepicts(Template):
 
     painting: str  # The name of the painting, i.e. Mona Lisa
     depicts: List[str]  # The name of the object shown in the painting
+
+
+ENTITY_DEFINITIONS: List[Template] = [
+    PaintingDepictedConcept,
+    PaintingDepicts,
+]

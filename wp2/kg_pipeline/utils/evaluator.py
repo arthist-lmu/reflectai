@@ -135,10 +135,10 @@ def calculate_metrics(s_tp, s_total_pre, s_total_pos, printing=False):
     return subject_scores
 
 
-def llm_query(predictions, mode='soft'):
+def llm_query(predictions, save_path, mode='soft'):
 
     try:
-        with open('/nfs/home/ritterd/reflect/reflectai/wp2/test/ollama_mitschrift.json', 'r', encoding='utf-8') as fp:
+        with open(save_path, 'r', encoding='utf-8') as fp:
             mitschrift = json.load(fp)
     except:
         mitschrift = {}
@@ -153,10 +153,11 @@ def llm_query(predictions, mode='soft'):
          llm_prompt = 'In the context of paintings, do the terms "{}" and "{}"' \
         'semantically describe the same thing? Note that both terms should only be equal if it is either exactly the same or '\
         'is in plural/singular form. Furthermore slight variations like one of the terms including information while the other does not. e.g. the first name of a person or the full name of a location.'\
-        'This also includes cases in where one term uses punctuation marks like an apostrophe while the other does not or in cases where the one term is the abbreviation of the other.'\
+        'This also includes cases in where one term uses punctuation marks like an apostrophe while the other does not or in cases where the one term is the abbreviation of the other. They are also equal,' \
+        'when one term uses article and such.'\
         'It should not be equal e.g. if one of the terms includes more information than just stated or if one term is a subcategory or instance of the other term. Answer with only yes and no.'
     flag = True  
-    #print(llm_prompt.format(predictions[0].lower(), predictions[1].lower()))
+
     try:
         response = client.chat(model='qwen3:14b', messages=[
             {
@@ -164,7 +165,6 @@ def llm_query(predictions, mode='soft'):
                 'content': llm_prompt.format(predictions[0].lower(), predictions[1].lower()),
             },
             ])
-        #print(response['message']['content'].lower())
 
     except _types.ResponseError as e: 
         print('Due to response Error "', e, '" the semantical filter LLM is not used!')
@@ -172,10 +172,12 @@ def llm_query(predictions, mode='soft'):
 
     resp = response['message']['content'].lower()
     mitschrift.update({f"{predictions[0].lower()}, {predictions[1].lower()}, {mode}" : resp})
-    with open('/nfs/home/ritterd/reflect/reflectai/wp2/test/ollama_mitschrift_2.json', 'a', encoding='utf-8') as fp:
+    with open(save_path, 'a', encoding='utf-8') as fp:
        json.dump(mitschrift, fp, indent=4, ensure_ascii=False)
-    
-    return resp
+
+    end = re.search('</think>', resp).end()
+    #print('y' in resp[end:])
+    return resp[end:]
 
 
 
@@ -436,8 +438,8 @@ def eval_subject_predicate_object_pair(entry):
     pos_predicates_dict = {}
 
     for predictions_ in entry['triplets']:
-            predictions_['content'] = filter_out_semantically_identicals(predictions=predictions_['content'])
-            predictions_['content'] = filter_out_semantically_identicals(predictions=predictions_['content'], mode=1)
+            # predictions_['content'] = filter_out_semantically_identicals(predictions=predictions_['content'])
+            # predictions_['content'] = filter_out_semantically_identicals(predictions=predictions_['content'], mode=1)
 
             reference = entry['annotations']
             ref_keys = reference.keys()
@@ -673,7 +675,7 @@ def eval_subject_accuracy(text_entries, mode='word_distance'):
                     # count up with llm prompts (hard cut)
                     
                     for tup in reference:
-                        if 'y' in llm_query((s_pred, tup[0]), mode):
+                        if 'y' in llm_query((s_pred, tup[0]), '/nfs/home/ritterd/reflect/reflectai/wp2/test/gollie_testset/mitschrift_subjekt.json', mode):
                             s_tp_flag = True
                             s_tp += 1
                             remove_entry(remove=s_pred, structure=reference)
@@ -682,7 +684,7 @@ def eval_subject_accuracy(text_entries, mode='word_distance'):
                 elif mode == 'soft':
                     # count up with llm prompts (soft cut)
                     for tup in reference:
-                        if 'y' in llm_query((s_pred, tup[0]), mode):
+                        if 'y' in llm_query((s_pred, tup[0]), '/nfs/home/ritterd/reflect/reflectai/wp2/test/gollie_testset/mitschrift_subjekt.json', mode):
                             s_tp_flag = True
                             s_tp += 1
                             remove_entry(remove=s_pred, structure=reference)
@@ -782,7 +784,7 @@ def eval_object_accuracy(text_entries, mode='word_distance'):
                 elif mode == 'hard':
                     # count up with llm prompts (hard cut)
                     for tup in reference:
-                        if 'y' in llm_query((o_pred, tup[0]), mode):
+                        if 'y' in llm_query((o_pred, tup[0]), '/nfs/home/ritterd/reflect/reflectai/wp2/test/gollie_testset/mitschrift_objekt.json', mode):
                             o_tp_flag = True
                             o_tp += 1
                             remove_entry(remove=o_pred, structure=reference)
@@ -791,7 +793,7 @@ def eval_object_accuracy(text_entries, mode='word_distance'):
                 elif mode == 'soft':
                     # count up with llm prompts (soft cut)
                     for tup in reference:
-                        if 'y' in llm_query((o_pred, tup[0]), mode):
+                        if 'y' in llm_query((o_pred, tup[0]), '/nfs/home/ritterd/reflect/reflectai/wp2/test/gollie_testset/mitschrift_objekt.json', mode):
                             o_tp_flag = True
                             o_tp += 1
                             remove_entry(remove=o_pred, structure=reference)
@@ -895,8 +897,8 @@ def eval_subject_object_accuracy(text_entries, mode='word_distance'):
                 elif mode == 'hard':
                     # count up with llm prompts (hard cut)
                     for tup in reference:
-                        if 'y' in llm_query((s_pred, tup[0]), mode):
-                            if 'y' in llm_query((o_pred, tup[1]), mode):
+                        if 'y' in llm_query((s_pred, tup[0]), '/nfs/home/ritterd/reflect/reflectai/wp2/test/gollie_testset/mitschrift_subjekt_objekt.json',mode):
+                            if 'y' in llm_query((o_pred, tup[1]), '/nfs/home/ritterd/reflect/reflectai/wp2/test/gollie_testset/mitschrift_subjekt_objekt.json', mode):
                                 os_tp_flag = True
                                 os_tp += 1
                                 remove_entry(remove=(s_pred, o_pred), structure=reference, mode='multiple')
@@ -905,8 +907,8 @@ def eval_subject_object_accuracy(text_entries, mode='word_distance'):
                 elif mode == 'soft':
                     # count up with llm prompts (soft cut)
                     for tup in reference:
-                        if 'y' in llm_query((s_pred, tup[0]), mode):
-                            if 'y' in llm_query((o_pred, tup[1]), mode):
+                        if 'y' in llm_query((s_pred, tup[0]), '/nfs/home/ritterd/reflect/reflectai/wp2/test/gollie_testset/mitschrift_subjekt_objekt.json',mode):
+                            if 'y' in llm_query((o_pred, tup[1]), '/nfs/home/ritterd/reflect/reflectai/wp2/test/gollie_testset/mitschrift_subjekt_objekt.json',mode):
                                 os_tp_flag = True
                                 os_tp += 1
                                 remove_entry(remove=(s_pred, o_pred), structure=reference, mode='multiple')
@@ -1022,8 +1024,8 @@ def eval_subject_object_predicate(text_entries, mode='word_distance'):
                 elif mode == 'hard':
                     # count up with llm prompts (hard cut)
                     for tup in reference:
-                        if 'y' in llm_query((s_pred, tup[0]), mode):
-                            if 'y' in llm_query((o_pred, tup[2]), mode):
+                        if 'y' in llm_query((s_pred, tup[0]), '/nfs/home/ritterd/reflect/reflectai/wp2/test/gollie_testset/mitschrift_subjekt_objekt_prädikat.json' ,mode):
+                            if 'y' in llm_query((o_pred, tup[2]), '/nfs/home/ritterd/reflect/reflectai/wp2/test/gollie_testset/mitschrift_subjekt_objekt_prädikat.json',mode):
                                 # since the predicates are hardcoded there is no need for the llm
                                 if tup[1].lower() == p_pred.lower():  
                                     p_tp_flag = True
@@ -1034,8 +1036,8 @@ def eval_subject_object_predicate(text_entries, mode='word_distance'):
                 elif mode == 'soft':
                     # count up with llm prompts (soft cut)
                     for tup in reference:
-                        if 'y' in llm_query((s_pred, tup[0]), mode):
-                            if 'y' in llm_query((o_pred, tup[2]), mode):
+                        if 'y' in llm_query((s_pred, tup[0]), '/nfs/home/ritterd/reflect/reflectai/wp2/test/gollie_testset/mitschrift_subjekt_objekt_prädikat.json',mode):
+                            if 'y' in llm_query((o_pred, tup[2]), '/nfs/home/ritterd/reflect/reflectai/wp2/test/gollie_testset/mitschrift_subjekt_objekt_prädikat.json',mode):
                                 # since the predicates are hardcoded there is no need for the llm
                                 if tup[1].lower() == p_pred.lower():
                                     p_tp_flag = True
@@ -1071,6 +1073,20 @@ def eval_subject_object_predicate(text_entries, mode='word_distance'):
     s_scores.to_csv('../test/gollie_testset/subject_object_predicate/subject_object_eval.csv')
 
 
+
+def eval_llm_acc(lst_a, lst_b, mode, labels=None, save_path=None, i=None):
+    predicted_labels = []
+    for subject in lst_a:
+        for g_subject in lst_b:
+            predicted_labels.append((subject, g_subject, mode, 
+                                     'y' in llm_query([subject, g_subject], 
+                                                      save_path=f'/nfs/home/ritterd/reflect/reflectai/wp2/test/ollama_mitschrift_{i}.json',
+                                                        mode=mode)))
+    return predicted_labels
+
+
+
+
 default_config = {}
 default_parameters = {}
 
@@ -1087,9 +1103,11 @@ class EvaluatorPlugin(
         #eval_subject_predicate_object_pair(entry) depricated
 
         # different evaluation schemes
-        #eval_subject_accuracy(text_entries, mode='perfect')
+        eval_subject_accuracy(text_entries, mode='hard')
         #eval_object_accuracy(text_entries, mode='hard')
-        #eval_subject_object_accuracy(text_entries)
+        #eval_subject_object_accuracy(text_entries, mode='soft')
+
+        #print(llm_query(['Der Schmadribachfall', 'Schmadribachfall'], '/nfs/home/ritterd/reflect/reflectai/wp2/test/gollie_testset/mitschrift_test.json', mode='hard'))
         #eval_subject_object_predicate(text_entries)
 
         # print(llm_query(['Tiger', 'Tiger eating a boar']))
@@ -1098,19 +1116,27 @@ class EvaluatorPlugin(
         # end = re.search('</think>', resp).end()
         # print('y' in resp[end:])
 
-        subjects = ['BRUNNENANLAGE MIT BADENDEN FRAUEN', 'In the foreground', 'lady', 'In the trees above the well', 'woman', 'cloak']
+        # subjects_1 = ['BRUNNENANLAGE MIT BADENDEN FRAUEN', 'In the foreground', 'lady', 'In the trees above the well', 'woman', 'cloak'] 
+        # subjects_2 = ['bridge', 'The Little Bridge', 'over a canal', 'canal'] 
+        # subjects_3 = ['Gropiusbau', 'sky', 'ohne Titel (Zeitgeist mit Springer)', 'In front of sand and debris', 'mountain of sand and debris']
+        # subjects_4 = ['green', 'stream' ,'mountain', 'nature', 'landscape', 'Der Schmadribachfall', 'at the foot', 'pine forest', 'above' ]
+        # subjects_5 = ['painting', 'sky', 'background', 'on the right', 'to the left' ]
 
-        g_subjects = [
-            'BRUNNENANLAGE','building', 'wells', 'well', 'water pool','pool','trees','tree'
-        ]
-        for subject in subjects:
-            for g_subject in g_subjects:
-                llm_query([subject, g_subject])
+        # g_subjects_1 = ['BRUNNENANLAGE','building', 'wells', 'well', 'water pool','pool','trees','tree']
+        # g_subjects_2 = ['The Little Bridge', 'painting', 'bridge', 'canal', 'house']
+        # g_subjects_3 = ['capital', 'metropolitan', 'Berlin', 'Potsdamer Platz', 'marshland', 'Gropiusbau', 'building', 'Gropius']
+        # g_subjects_4 = ['gem', 'rock', 'forest', 'zone', 'Smadribachfall', 'mountain', 'waterfall', 'region', 'stream', 'wood']
+        # g_subjects_5 = ['pavement', 'Via Appia', 'Tyrrhenian Sea', 'Ponza Islands', 'Ariccia', 'forest', 'town', 'Pontine marshes', 'Monte Circeo', 'contours']
+
+        # i = 9
+        # lst = eval_llm_acc(subjects_5, g_subjects_5, 'soft', i=i)
+        # with open(f'../test/ollama_acc_{i}.txt', 'w') as fp:
+        #     for a in lst:
+        #         fp.write(str(a) + '\n')
 
 
 
         yield text_entries
-
 
 
 
