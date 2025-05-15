@@ -6,13 +6,14 @@ from ..utils_typing import Generic as Template
 Relation definitions  # ignoring most if not all the meta data relations
 """
 
+
 @dataclass
 class ArtGenre(Template):
     """
     Form of art in terms of a medium, format, or theme
     """
 
-    work: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+    artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
     ArtGenre: str  # pre-impressionistic, 19th-century style
 
 
@@ -20,7 +21,7 @@ def ArtGenre_relation_to_triplet(package: ArtGenre):
     triplets = [
         {
             "subject": {
-                "label": package.work,
+                "label": package.artwork,
             },
             "relation": {
                 "label": "has genre",
@@ -54,7 +55,7 @@ class ArtMovement(Template):
     tendency or style in art with a specific common philosophy or goal, possibly associated with a specific historical period
     """
 
-    work: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+    artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
     movement: str  # Cubism
 
 
@@ -62,7 +63,7 @@ def ArtMovement_relation_to_triplet(package: ArtMovement):
     triplets = [
         {
             "subject": {
-                "label": package.work,
+                "label": package.artwork,
             },
             "relation": {
                 "label": "has movement",
@@ -93,10 +94,10 @@ def ArtMovement_relation_to_triplet(package: ArtMovement):
 @dataclass
 class ArtMaterial(Template):
     """
-    substance, raw ingredient, or tool that is utilized by an artist to create a work of art
+    substance, raw ingredient, or tool that is utilized by an artist to create a artwork of art
     """
 
-    work: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+    artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
     material: str  # oil on canvas
 
 
@@ -104,7 +105,7 @@ def ArtMaterial_relation_to_triplet(package: ArtMaterial):
     triplets = [
         {
             "subject": {
-                "label": package.work,
+                "label": package.artwork,
             },
             "relation": {"label": "made from material", "wikidata_id": "wdt:P186"},
             "object": {
@@ -135,7 +136,7 @@ class ArtisticTechnique(Template):
     method by which art is produced
     """
 
-    work: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+    artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
     fabricated: str  # wet paint,
 
 
@@ -143,7 +144,7 @@ def ArtisticTechnique_relation_to_triplet(package: ArtisticTechnique):
     triplets = [
         {
             "subject": {
-                "label": package.work,
+                "label": package.artwork,
             },
             "relation": {
                 "label": "fabricated by",
@@ -174,10 +175,10 @@ def ArtisticTechnique_relation_to_triplet(package: ArtisticTechnique):
 @dataclass
 class TypeOfWorkOfArt(Template):
     """
-    type of art work based on shared characteristics, functions, or stylistic features
+    type of art artwork based on shared characteristics, functions, or stylistic features
     """
 
-    work: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+    artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
     instance: str  # engraving
 
 
@@ -185,7 +186,7 @@ def TypeOfWorkOfArt_relation_to_triplet(package: TypeOfWorkOfArt):
     triplets = [
         {
             "subject": {
-                "label": package.work,
+                "label": package.artwork,
             },
             "relation": {
                 "label": "instance of",  ### HERE THIS MIGHT NOT BE THE RELATION THAT WE WANT
@@ -204,7 +205,7 @@ def TypeOfWorkOfArt_relation_to_triplet(package: TypeOfWorkOfArt):
                 "wikidata_id": "wdt:P31",
             },
             "object": {
-                "label": "type of work of art",
+                "label": "type of artwork of art",
                 "wikidata_id": "wd:Q116474095",
             },
         },
@@ -219,7 +220,7 @@ class PointInTime(Template):
     position of a particular instant in time
     """
 
-    work: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+    artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
     time: str  # 1502, 1370, 2010, 1875
 
 
@@ -227,7 +228,7 @@ def PointInTime_relation_to_triplet(package: PointInTime):
     triplets = [
         {
             "subject": {
-                "label": package.work,
+                "label": package.artwork,
             },
             "relation": {
                 "label": "created in",  ### or inception
@@ -261,7 +262,7 @@ class StartTime(Template):
     infimum of a temporal interval
     """
 
-    work: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+    artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
     time: str  # 1502, 1370, 2010, 1875
 
 
@@ -269,7 +270,7 @@ def StartTime_relation_to_triplet(package: StartTime):
     triplets = [
         {
             "subject": {
-                "label": package.work,
+                "label": package.artwork,
             },
             "relation": {
                 "label": "created in",  ### or inception
@@ -303,7 +304,7 @@ class EndTime(Template):
     time that some temporal entity ceases to exist
     """
 
-    work: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+    artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
     time: str  # 1502, 1370, 2010, 1875
 
 
@@ -311,7 +312,7 @@ def EndTime_relation_to_triplet(package: EndTime):
     triplets = [
         {
             "subject": {
-                "label": package.work,
+                "label": package.artwork,
             },
             "relation": {
                 "label": "created in",  ### or inception
@@ -345,7 +346,7 @@ class Person(Template):
     being that has certain capacities or attributes constituting personhood
     """
 
-    work: str  # Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+    artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
     person: str  # Massys, sitter, Karl Wittgenstein
     influenced: str  # Massys, sitter, Karl Wittgenstein
 
@@ -355,7 +356,7 @@ def Person_relation_to_triplet(package: Person):
     triplets = [
         {
             "subject": {
-                "label": package.work,
+                "label": package.artwork,
             },
             "relation": {
                 "label": "created by",
@@ -380,7 +381,7 @@ def Person_relation_to_triplet(package: Person):
         },
         {
             "subject": {
-                "label": package.work,
+                "label": package.artwork,
             },
             "relation": {
                 "label": "influenced by",
@@ -406,3 +407,28 @@ def Person_relation_to_triplet(package: Person):
     ]
 
     return triplets
+
+
+ENTITY_DEFINITIONS: List[Template] = [
+    ArtGenre,
+    ArtMovement,
+    ArtMaterial,
+    ArtisticTechnique,
+    TypeOfWorkOfArt,
+    PointInTime,
+    StartTime,
+    EndTime,
+    Person,
+]
+
+ENTITY_PARSER = {
+    "ArtGenre": ArtGenre_relation_to_triplet,
+    "ArtMovement": ArtMovement_relation_to_triplet,
+    "ArtMaterial": ArtMaterial_relation_to_triplet,
+    "ArtisticTechnique": ArtisticTechnique_relation_to_triplet,
+    "TypeOfWorkOfArt": TypeOfWorkOfArt_relation_to_triplet,
+    "PointInTime": PointInTime_relation_to_triplet,
+    "StartTime": StartTime_relation_to_triplet,
+    "EndTime": EndTime_relation_to_triplet,
+    "Person": Person_relation_to_triplet,
+}
