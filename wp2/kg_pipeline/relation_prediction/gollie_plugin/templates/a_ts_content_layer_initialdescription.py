@@ -52,7 +52,9 @@ def artistic_theme_relation_to_triplet(package: ArtisticTheme):
 @dataclass
 class CompositionDepicts(Template):
     """
-    Composition is the arrangement of visual elements to create balance, movement, or focus in a work of art.
+    This class refers to the identifiable elements, figures, or motifs that are present within a visual composition. It focuses on what the composition includes: content such as objects, figures, or symbolic elements.
+
+
     ### Hier muss klar werden, dass der Fokus bei dem Erkennen einer Komposition an sich ist, während der Inhalt der Komposition in die CompositionConatins Klasse gehört.
     """
 
@@ -92,16 +94,16 @@ def composition_depicts_relation_to_triplet(package: CompositionDepicts):
     return triplets
 
 
-
 @dataclass
 class CompositionContains(Template):
     """
-    Composition is the arrangement of visual elements to create balance, movement, or focus in a work of art.
-    ### Hier muss klar werden, dass der Fokus auf dem Inhalt einer Kompsition liegt, während die eigentliche Komposition selber in die CompositionDepicts Klasse gehört. 
+    This class refers to the overall structure or layout of visual elements within an artwork to convey balance, movement, or focus. It is concerned with how a composition is organized or visually structured.
+
+    ### Hier muss klar werden, dass der Fokus auf dem Inhalt einer Kompsition liegt, während die eigentliche Komposition selber in die CompositionDepicts Klasse gehört.
     """
 
     composition_of_artwork: str  # Compositions such as Diagonal lines, symmetry, central figure, perspective grid, foreshortening, overlapping planes
-    contains: str  # item or substance loacted within this item but not part of it. e.g. person 
+    contains: str  # item or substance located within this item but not part of it. e.g. person
 
 
 def composition_contains_relation_to_triplet(package: CompositionContains):
@@ -119,7 +121,7 @@ def composition_contains_relation_to_triplet(package: CompositionContains):
             },
         },
         ### Da es keine konkrete Klasse als Ziel gibt, ist es nicht möglich einfach so ein instance of zu setzen.
-        # { 
+        # {
         #     "subject": {
         #         "label": package.contains,
         #     },
@@ -135,9 +137,6 @@ def composition_contains_relation_to_triplet(package: CompositionContains):
     ]
 
     return triplets
-
-
-
 
 
 @dataclass
@@ -177,7 +176,9 @@ class ConceptDepicts(Template):
     """
 
     artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
-    concept_of_artwork: str  # Concepts such as Harmony, man, nature, balance, duality, chaos, order
+    concept_of_artwork: (
+        str  # Concepts such as Harmony, man, nature, balance, duality, chaos, order
+    )
 
 
 def concept_depicts_relation_to_triplet(package: ConceptDepicts):
@@ -219,8 +220,10 @@ class ConceptSymbolize(Template):
     ### hier muss klargestellt werden, dass entitäten nur dann extrahiert werden, wenn es sich um eine Person handelt.
     """
 
-    concept_of_artwork: str  # Concepts such as Harmony, man, nature, balance, duality, chaos, order
-    symbolize: str  # A specific person that is given in the text, but not necessarily in the depicted in the picture. for example: Napoleon, Julius Caesar, Marie Antoinette, Cleopatra, Queen Elizabeth I 
+    concept_of_artwork: (
+        str  # Concepts such as Harmony, man, nature, balance, duality, chaos, order
+    )
+    symbolize: str  # A specific person that is given in the text, but not necessarily in the depicted in the picture. for example: Napoleon, Julius Caesar, Marie Antoinette, Cleopatra, Queen Elizabeth I
 
 
 def concept_symbolize_relation_to_triplet(package: ConceptSymbolize):
@@ -250,12 +253,9 @@ def concept_symbolize_relation_to_triplet(package: ConceptSymbolize):
                 "wikidata_id": "wd:Q151885",
             },
         },
- 
     ]
 
     return triplets
-
-
 
 
 @dataclass
@@ -309,7 +309,9 @@ class RhetoricalDeviceSymbolize(Template):
     """
 
     device: str  # Rhetorical Devices such as irony, allegory, sarcasm, metaphor, symbolism, hyperbole
-    concept: str  # Concepts such as Harmony, man, nature, balance, duality, chaos, order
+    concept: (
+        str  # Concepts such as Harmony, man, nature, balance, duality, chaos, order
+    )
 
 
 def rhetorical_device_symbolize_relation_to_triplet(package: RhetoricalDeviceSymbolize):
@@ -339,7 +341,6 @@ def rhetorical_device_symbolize_relation_to_triplet(package: RhetoricalDeviceSym
                 "wikidata_id": "wd:Q151885",
             },
         },
-   
     ]
 
     return triplets
@@ -808,7 +809,6 @@ def posture_depicts_relation_to_triplet(package: PostureDepicts):
     return triplets
 
 
-
 @dataclass
 class PostureCharacteristic(Template):
     """
@@ -847,13 +847,9 @@ def posture_characteristic_relation_to_triplet(package: PostureCharacteristic):
                 "wikidata_id": "wd:Q8514257",
             },
         },
-
     ]
 
     return triplets
-
-
-
 
 
 @dataclass
