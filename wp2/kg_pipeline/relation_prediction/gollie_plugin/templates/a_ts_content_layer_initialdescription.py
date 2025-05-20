@@ -171,7 +171,9 @@ def work_of_art_relation_to_triplet(package: WorkOfArt):
 @dataclass
 class ConceptDepicts(Template):
     """
-    Concept is an abstract idea, feeling, or message expressed through artistic means.
+    This class refers to abstract ideas, emotions, or messages represented in a work of art through non-personal entities. Entities should only be extracted if they do not refer to specific persons.
+
+
     ### hier muss klargestellt werden, dass entitäten nur dann extrahiert werden, wenn es sich NICHT um eine Person handelt.
     """
 
@@ -216,7 +218,9 @@ def concept_depicts_relation_to_triplet(package: ConceptDepicts):
 @dataclass
 class ConceptSymbolize(Template):
     """
-    Concept is an abstract idea, feeling, or message expressed through artistic means.
+    This class refers to the symbolic representation of individuals or personified figures that carry abstract meaning in a work of art. Entities should only be extracted if they do refer to specific persons or personified representations.
+
+
     ### hier muss klargestellt werden, dass entitäten nur dann extrahiert werden, wenn es sich um eine Person handelt.
     """
 
