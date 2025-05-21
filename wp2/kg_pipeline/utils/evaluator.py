@@ -849,7 +849,7 @@ def eval_object_accuracy_classes_tricks(text_entries, save_path, mode='word_dist
         for predictions_ in entry['triplets']:
             reference = entry['annotations']
             reference = convert_annotation_to_triplet(reference)
-            reference = [(triplet['triplet']['subject'].lower(), triplet['triplet']['o_class']) for triplet in reference]
+            reference = [(triplet['triplet']['object'].lower(), triplet['triplet']['o_class']) for triplet in reference]
             reference = list(set(reference))
             #------- count the counter variables up ---------#
             for tup in reference:            
@@ -908,6 +908,7 @@ def eval_object_accuracy_classes_tricks(text_entries, save_path, mode='word_dist
                     pred_classes_dict = detailed_storage(class_name, pred_classes_dict, tp_flag)
     
     #------------- calculate and print total metrics -------------#
+    
     class_eval = calculate_metrics_detailed(pred_classes_dict, gt_classes_dict, mode='class')
     class_df = pd.DataFrame.from_dict(data=class_eval, orient='index', columns=['F1', 'precision', 'recall'])
     class_df.to_csv(save_path)
