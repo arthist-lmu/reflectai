@@ -630,6 +630,7 @@ def eval_subject_object_accuracy_classes(text_entries, save_path, mode='word_dis
                 if mode == 'word_distance':
                     candidate = ('', 0)
                     saved_tup = ()
+                    #TODO: change this part to having two loops like in the tricks functions
                     for tup in reference:
                         ratio = SequenceMatcher(lambda x: x==' ', s_pred[0], tup[0]).ratio() 
                         if ratio > 0.75:  # assuming that the string are similar enough
@@ -766,6 +767,20 @@ def eval_subject_object_predicate_classes(text_entries, save_path, mode='word_di
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ############################### these functions are part of the trick like approach and will therefore not last ##########################################
 def eval_subject_accuracy_classes_tricks(text_entries, save_path, mode='word_distance', llm_log_path=None):
     # evaluates the correctly found subjects only one of the three modes can be True
@@ -820,6 +835,7 @@ def eval_subject_accuracy_classes_tricks(text_entries, save_path, mode='word_dis
                         if tup[0] == s_pred[0]:
                             tp_flag = True
                             class_name = tup[1]
+                            # what about the case where s_pred is actually part of the class just not in gt
                             remove_entry(remove=s_pred[0], structure=reference)
                             break
                         
@@ -946,29 +962,30 @@ def eval_subject_object_accuracy_classes_tricks(text_entries, save_path, mode='w
                 s_pred = (trips[0], trips[2])
                 o_pred = (trips[1], trips[3])
                 s_class_name = ''
-                # s_class_name = trips[2]
-                # o_class_name = trips[3]
 
                 #---------- count the matches -------------#
                 os_tp_flag = False
                 ##----------count in different ways-------##
                 
-                if mode == 'word_distance':
-                    candidate = ('', 0)
-                    saved_tup = ()
+                if mode == 'word_distance': 
+                    saved_tups = []
+
+                    ###################################### this approachs for all the multiple cases
                     for tup in reference:
                         ratio = SequenceMatcher(lambda x: x==' ', s_pred[0], tup[0]).ratio() 
                         if ratio > 0.75:  # assuming that the string are similar enough
-                            if candidate[1] < ratio:
-                                candidate = (tup[0], ratio)
-                                saved_tup = tup
-                    
-                    if candidate[0] != '':  # IF needed and LLM wont work, maybe add a simple list count of valid entries might be useful  
+                            saved_tups.append(tup)
+                
+                    for saved_tup in saved_tups:  # IF needed and LLM wont work, maybe add a simple list count of valid entries might be useful  
                         ratio = SequenceMatcher(lambda x: x==' ', o_pred[0], saved_tup[1]).ratio() 
+
                         if ratio > 0.75:  # assuming that the string are similar enough 
                             os_tp_flag = True
                             s_class_name = saved_tup[2]
                             remove_entry(remove=(saved_tup[0], saved_tup[1]), structure=reference, mode='multiple')
+                            break
+                    #######################################      
+
 
                 elif mode == 'perfect':
                     # count up with perfect matches
@@ -997,7 +1014,8 @@ def eval_subject_object_accuracy_classes_tricks(text_entries, save_path, mode='w
 
 
     #------------- calculate and print total metrics -------------#
-
+    # print(pred_classes_dict)
+    # print(pos_classes_dict)
     class_eval = calculate_metrics_detailed(pred_classes_dict, pos_classes_dict, mode='class')
     class_df = pd.DataFrame.from_dict(data=class_eval, orient='index', columns=['F1', 'precision', 'recall'])
     class_df.to_csv(save_path)
@@ -1042,16 +1060,13 @@ def eval_subject_object_predicate_classes_tricks(text_entries, save_path, mode='
                 ##----------count in different ways-------##
                 
                 if mode == 'word_distance':
-                    candidate = ('', 0)
-                    saved_tup = ()
+                    saved_tups = []
                     for tup in reference:
                         ratio = SequenceMatcher(lambda x: x==' ', s_pred[0], tup[0]).ratio() 
                         if ratio > 0.75:  # assuming that the string are similar enough
-                            if candidate[1] < ratio:
-                                candidate = (tup[0], ratio)
-                                saved_tup = tup
+                            saved_tups.append(tup)
                     
-                    if candidate[0] != '':  # IF needed and LLM wont work, maybe add a simple list count of valid entries might be useful  
+                    for saved_tup in saved_tups:  # IF needed and LLM wont work, maybe add a simple list count of valid entries might be useful  
                         ratio = SequenceMatcher(lambda x: x==' ', o_pred[0], saved_tup[1]).ratio() 
                         if ratio > 0.75 and p_pred == saved_tup[1]:  # assuming that the string are similar enough 
                             os_tp_flag = True
@@ -1089,9 +1104,9 @@ def eval_subject_object_predicate_classes_tricks(text_entries, save_path, mode='
 
                   
     #------------- calculate and print total metrics -------------#
-    class_eval = calculate_metrics_detailed(pred_classes_dict, gt_classes_dict, mode='class')
+    class_eval = calculate_metrics_detailed(pred_classes_dict, gt_classes_dict, mode='class', with_n=True)
     #print(class_eval)
-    class_df = pd.DataFrame.from_dict(data=class_eval, orient='index', columns=['F1', 'precision', 'recall'])
+    class_df = pd.DataFrame.from_dict(data=class_eval, orient='index', columns=['F1', 'precision', 'recall', 'N'])
     class_df.to_csv(save_path)
 
 
