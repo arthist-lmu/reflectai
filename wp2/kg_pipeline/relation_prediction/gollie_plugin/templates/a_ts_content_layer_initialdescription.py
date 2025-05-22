@@ -50,12 +50,51 @@ def artistic_theme_relation_to_triplet(package: ArtisticTheme):
 
 
 @dataclass
+class Composition(Template):
+    """
+    Composition is the arrangement of visual elements to create balance, movement, or focus in a work of art.
+    """
+
+    artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+    composition_of_artwork: str  # Compositions such as Diagonal lines, symmetry, central figure, perspective grid, foreshortening, overlapping planes
+
+
+def composition__relation_to_triplet(package: Composition):
+    triplets = [
+        {
+            "subject": {
+                "label": package.artwork,
+            },
+            "relation": {
+                "label": "depicts",
+                "wikidata_id": "wdt:P180",
+            },
+            "object": {
+                "label": package.composition_of_artwork,
+            },
+        },
+        {
+            "subject": {
+                "label": package.composition_of_artwork,
+            },
+            "relation": {
+                "label": "instance of",
+                "wikidata_id": "wdt:P31",
+            },
+            "object": {
+                "label": "compositional technique",
+                "wikidata_id": "wd:Q462437",
+            },
+        },
+    ]
+
+    return triplets
+
+
+@dataclass
 class CompositionDepicts(Template):
     """
     This class refers to the identifiable elements, figures, or motifs that are present within a visual composition. It focuses on what the composition includes: content such as objects, figures, or symbolic elements.
-
-
-    ### Hier muss klar werden, dass der Fokus bei dem Erkennen einer Komposition an sich ist, während der Inhalt der Komposition in die CompositionConatins Klasse gehört.
     """
 
     artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
@@ -98,8 +137,6 @@ def composition_depicts_relation_to_triplet(package: CompositionDepicts):
 class CompositionContains(Template):
     """
     This class refers to the overall structure or layout of visual elements within an artwork to convey balance, movement, or focus. It is concerned with how a composition is organized or visually structured.
-
-    ### Hier muss klar werden, dass der Fokus auf dem Inhalt einer Kompsition liegt, während die eigentliche Komposition selber in die CompositionDepicts Klasse gehört.
     """
 
     composition_of_artwork: str  # Compositions such as Diagonal lines, symmetry, central figure, perspective grid, foreshortening, overlapping planes
@@ -169,12 +206,53 @@ def work_of_art_relation_to_triplet(package: WorkOfArt):
 
 
 @dataclass
+class Concept(Template):
+    """
+    Concept is an abstract idea, feeling, or message expressed through artistic means.
+    """
+
+    artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+    concept_of_artwork: (
+        str  # Concepts such as Harmony, man, nature, balance, duality, chaos, order
+    )
+
+
+def concept_relation_to_triplet(package: Concept):
+    triplets = [
+        {
+            "subject": {
+                "label": package.artwork,
+            },
+            "relation": {
+                "label": "depicts",
+                "wikidata_id": "wdt:P180",
+            },
+            "object": {
+                "label": package.concept_of_artwork,
+            },
+        },
+        {
+            "subject": {
+                "label": package.concept_of_artwork,
+            },
+            "relation": {
+                "label": "instance of",
+                "wikidata_id": "wdt:P31",
+            },
+            "object": {
+                "label": "concept",
+                "wikidata_id": "wd:Q151885",
+            },
+        },
+    ]
+
+    return triplets
+
+
+@dataclass
 class ConceptDepicts(Template):
     """
     This class refers to abstract ideas, emotions, or messages represented in a work of art through non-personal entities. Entities should only be extracted if they do not refer to specific persons.
-
-
-    ### hier muss klargestellt werden, dass entitäten nur dann extrahiert werden, wenn es sich NICHT um eine Person handelt.
     """
 
     artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
@@ -219,9 +297,6 @@ def concept_depicts_relation_to_triplet(package: ConceptDepicts):
 class ConceptSymbolize(Template):
     """
     This class refers to the symbolic representation of individuals or personified figures that carry abstract meaning in a work of art. Entities should only be extracted if they do refer to specific persons or personified representations.
-
-
-    ### hier muss klargestellt werden, dass entitäten nur dann extrahiert werden, wenn es sich um eine Person handelt.
     """
 
     concept_of_artwork: (
@@ -263,9 +338,52 @@ def concept_symbolize_relation_to_triplet(package: ConceptSymbolize):
 
 
 @dataclass
-class RhetoricalDeviceDepicts(Template):
+class RhetoricalDevice(Template):
     """
     Rhetorical Device is a technique in language or visuals to convey a deeper meaning.
+    """
+
+    artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+    device: str  # Rhetorical Devices such as irony, allegory, sarcasm, metaphor, symbolism, hyperbole
+
+
+def rhetorical_device_relation_to_triplet(package: RhetoricalDevice):
+    triplets = [
+        {
+            "subject": {
+                "label": package.artwork,
+            },
+            "relation": {
+                "label": "depicts",
+                "wikidata_id": "wdt:P180",
+            },
+            "object": {
+                "label": package.device,
+            },
+        },
+        {
+            "subject": {
+                "label": package.device,
+            },
+            "relation": {
+                "label": "instance of",
+                "wikidata_id": "wdt:P31",
+            },
+            "object": {
+                "label": "rhetorical device",
+                "wikidata_id": "wd:Q1762471",
+            },
+        },
+    ]
+
+    return triplets
+
+
+@dataclass
+class RhetoricalDeviceDepicts(Template):
+    """
+    Rhetorical Device is a technique in language or visuals to convey a deeper meaning. Entities should only be extracted under this class if they do not represent abstract concepts. For example: the use of scale to emphasize a figure, or visual exaggeration to depict authority.
+
     ### hier muss klargestellt werden, dass nur dann Entitäten extrahiert werden sollen, wenn es sich NICHT um ein Konzept handelt.
     """
 
@@ -308,7 +426,9 @@ def rhetorical_device_depicts_relation_to_triplet(package: RhetoricalDeviceDepic
 @dataclass
 class RhetoricalDeviceSymbolize(Template):
     """
-    Rhetorical Device is a technique in language or visuals to convey a deeper meaning.
+    Rhetorical Device is a technique in language or visuals to convey a deeper meaning. Entities should only be extracted under this class if they do represent abstract concepts. For example: an hourglass to symbolize time, or a skull to symbolize death.
+
+
     ### hier muss klargestellt werden, dass nur dann Entitäten extrahiert werden, wenn es sich um ein Konzept handelt
     """
 
@@ -814,6 +934,48 @@ def posture_depicts_relation_to_triplet(package: PostureDepicts):
 
 
 @dataclass
+class Posture(Template):
+    """
+    Posture is the pose or stance of a figure.
+    """
+
+    person: str  # A specific person that is given in the text, but not necessarily in the depicted in the picture. for example: Napoleon, Julius Caesar, Marie Antoinette, Cleopatra, Queen Elizabeth I
+    type_of_posture: str  # Reclining, head tilted, moving, sitting, standing, kneeling, running, gesturing
+
+
+def posture_relation_to_triplet(package: Posture):
+    triplets = [
+        {
+            "subject": {
+                "label": package.person,
+            },
+            "relation": {
+                "label": "has characteristic",
+                "wikidata_id": "wdt:P1552",
+            },
+            "object": {
+                "label": package.type_of_posture,
+            },
+        },
+        {
+            "subject": {
+                "label": package.type_of_posture,
+            },
+            "relation": {
+                "label": "instance of",
+                "wikidata_id": "wdt:P31",
+            },
+            "object": {
+                "label": "posture",
+                "wikidata_id": "wd:Q8514257",
+            },
+        },
+    ]
+
+    return triplets
+
+
+@dataclass
 class PostureCharacteristic(Template):
     """
     Posture is the pose or stance of a figure.
@@ -1280,11 +1442,14 @@ def plant_relation_to_triplet(package: Plant):
 
 ENTITY_DEFINITIONS: List[Template] = [
     ArtisticTheme,
+    Composition,
     CompositionContains,
     CompositionDepicts,
     WorkOfArt,
+    Concept,
     ConceptSymbolize,
     ConceptDepicts,
+    RhetoricalDevice,
     RhetoricalDeviceSymbolize,
     RhetoricalDeviceDepicts,
     Emotion,
@@ -1297,6 +1462,7 @@ ENTITY_DEFINITIONS: List[Template] = [
     ReligiousCharacter,
     AnatomicalStructure,
     Occupation,
+    Posture,
     PostureCharacteristic,
     PostureDepicts,
     ArchitecturalStructure,
@@ -1313,11 +1479,14 @@ ENTITY_DEFINITIONS: List[Template] = [
 
 ENTITY_PARSER = {
     "ArtisticTheme": artistic_theme_relation_to_triplet,
+    "Composition": composition__relation_to_triplet,
     "CompositionContains": composition_contains_relation_to_triplet,
     "CompositionDepicts": composition_depicts_relation_to_triplet,
     "WorkOfArt": work_of_art_relation_to_triplet,
+    "Concept": concept_relation_to_triplet,
     "ConceptSymbolize": concept_symbolize_relation_to_triplet,
     "ConceptDepicts": concept_depicts_relation_to_triplet,
+    "RhetoricalDevice": rhetorical_device_relation_to_triplet,
     "RhetoricalDeviceSymbolize": rhetorical_device_symbolize_relation_to_triplet,
     "RhetoricalDeviceDepicts": rhetorical_device_depicts_relation_to_triplet,
     "Emotion": emotion_relation_to_triplet,
@@ -1330,6 +1499,7 @@ ENTITY_PARSER = {
     "ReligiousCharacter": religious_character_relation_to_triplet,
     "AnatomicalStructure": anatomical_structure_relation_to_triplet,
     "Occupation": occupation_relation_to_triplet,
+    "Posture": posture_relation_to_triplet,
     "PostureCharacteristic": posture_characteristic_relation_to_triplet,
     "PostureDepicts": posture_depicts_relation_to_triplet,
     "ArchitecturalStructure": architectural_structure_relation_to_triplet,
