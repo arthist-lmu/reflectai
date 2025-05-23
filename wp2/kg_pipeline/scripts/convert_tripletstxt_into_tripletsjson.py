@@ -3,6 +3,7 @@ import json
 from convert_inception import xmi_parse_helper
 
 # Transforms the output of the TripletsPrinter into a json file
+# This is probably depricated
 
 def triplettxt_totripletjson():
     # transform txt triplet file into a json triplet file
@@ -26,5 +27,5 @@ def triplettxt_totripletjson():
                 triplet = (s.replace('\t ', ''), p, o.replace('\n', ''))
                 trips = xmi_parse_helper(trips, triplet)
 
-        with open(f'./gollie_resultset_of_the annoated_texts.json', 'w', encoding='utf-8') as fp:
+        with open(f'./gollie_resultset_of_the_annoated_texts.json', 'w', encoding='utf-8') as fp:
                 json.dump(trips, fp, indent=4, ensure_ascii=False)

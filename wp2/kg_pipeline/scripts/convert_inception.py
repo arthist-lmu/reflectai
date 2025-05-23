@@ -12,14 +12,13 @@ import xml.etree.ElementTree as ET
 
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="Knowledge extraction pipeline script")
+    parser = argparse.ArgumentParser(description="Script to extract the annotations of a specific user")
 
-    parser.add_argument("-v", "--verbose", action="store_true", help="verbose output")
-    parser.add_argument("-i", "--input_path", help="path to input file")
+    parser.add_argument("-i", "--input_path", help="path to input file", required=True)
     parser.add_argument(
-        "-u", "--user", help="only convert all annotations from a specific user"
+        "-u", "--user", help="only convert all annotations from a specific user", required=True
     )
-    parser.add_argument("-o", "--output_path", help="path to the output file")
+    parser.add_argument("-o", "--output_path", help="path to the output directory", required=True)
     args = parser.parse_args()
     return args
 
@@ -34,8 +33,8 @@ def parse_xmi_file(root, tripplets, args):
         if 'ContentType' in elem.attrib.keys() or 'EntityType' in elem.attrib.keys():
             class_name = elem.attrib[list(elem.attrib.keys())[-1]]
             class_name = ''.join(x for x in class_name.title() if not x.isspace())
-            begin = int(elem.attrib['begin']) #- 1
-            end = int(elem.attrib['end']) #+ 1 #because sometimes the object is not always fully grabbed
+            begin = int(elem.attrib['begin']) 
+            end = int(elem.attrib['end']) 
             if text is None:
                 continue
             value = text[begin:end]
@@ -139,20 +138,12 @@ def annotationxmi_to_annotationjson(save_individually):
         trips = {}
         for x in zip_file.infolist():
             if args.user:
-                # print(r"annotation/*/" + args.user + "\.xml")
                 if re.match(r"annotation/.*/" + args.user + "\.zip", x.filename):
-
-                    #with open('./annotated_texts.txt', 'a', encoding='utf-8') as fp:
-                    #    fp.write(x.filename[11:-14] + '\n')
-
                     with zip_file.open(x.filename) as f:
                         trips = extrext_annotation(BytesIO(f.read()), trips, args)
-                        #with open(f'./eval_test/testing/missing_txt.txt', 'a', encoding='utf-8') as fp:
-                        #    if len(trips) == 0:
-                        #        fp.write(f'No file found: {x.filename[11:]}\n')
                         if save_individually:
                             end = re.search('.*\.txt/', x.filename).span()[1]
-                            with open(f'../../test/gollie_testset/testing/{x.filename[11:(end - 5)]}.json', 'w', encoding='utf-8') as fp:
+                            with open(f'{args.output_path}/{x.filename[11:(end - 5)]}.json', 'w', encoding='utf-8') as fp:
                                 json.dump(trips, fp, indent=4, ensure_ascii=False)
                             trips = {}
     """
@@ -174,7 +165,6 @@ def main():
     # toggle True to False if you want to gather all the annotations into one big json file rather than 
     # many individual ones for each painting
     annotationxmi_to_annotationjson(True)
-
         
     return 0
 

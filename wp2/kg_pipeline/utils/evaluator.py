@@ -456,332 +456,10 @@ def eval_subject_object_predicate(text_entries, save_path, mode='word_distance',
 
 #-------------------------------------------------------------------------------#
 
-
-
-# --------------- evaluates the metrics for each class/relation ---------------#
-
-def mode_specific_counting(reference, s_pred, mode, llm_log_path=None):
-    ##----------count in different ways-------##
-    tp_flag = False
-    if mode == 'word_distance':
-        candidate = ('', 0)
-        for tup in reference:
-            ratio = SequenceMatcher(lambda x: x==' ', s_pred[0], tup[0]).ratio() 
-            if ratio > 0.75:  # assuming that the string are similar enough
-                if candidate[1] < ratio:
-                    candidate = (tup[0], ratio)
-                    saved_tup = tup
-
-        if candidate[0] != '':  # IF needed and LLM wont work, maybe add a simple list count of valid entries might be useful  
-            
-            if saved_tup[1] == s_pred[1]:
-                tp_flag = True
-                remove_entry(remove=candidate[0], structure=reference)
-
-    elif mode == 'perfect':
-        # count up with perfect matches
-        for tup in reference:
-            if tup[0] == s_pred[0]:
-                if tup[1] == s_pred[1]:
-                    tp_flag = True
-                    remove_entry(remove=s_pred[0], structure=reference)
-                    break
-            
-    elif mode in ('hard', 'soft'):
-        # count up with llm prompts (hard cut)
-        for tup in reference:
-            if 'y' in llm_query((s_pred[0], tup[0]), llm_log_path, mode):
-                if tup[1] == s_pred[1]:
-                    tp_flag = True
-                    remove_entry(remove=s_pred, structure=reference)
-                    break
-                
-    return tp_flag
-
-
-def eval_subject_accuracy_classes(text_entries, save_path, mode='word_distance', llm_log_path=None):
-    
-    # evaluates the correctly found subjects only one of the three modes can be True
-    pred_classes_dict = {}
-    gt_classes_dict = {}
-
-    for entry in text_entries:
-        for predictions_ in entry['triplets']:
-            reference = entry['annotations']
-            reference = convert_annotation_to_triplet(reference)
-            reference = [(triplet['triplet']['subject'].lower(), triplet['triplet']['s_class']) for triplet in reference]
-            reference = list(set(reference))
-            #------- count the counter variables up ---------#
-            for tup in reference:            
-                # count the occurences of all classes within the reference
-                if tup[1] not in gt_classes_dict.keys():
-                    gt_classes_dict.update({tup[1]: 1})
-                else:
-                    gt_classes_dict[tup[1]] += 1
-
-            # the class_name is directed towards the object and not the subject! 
-            predictions_['content'] = [(triplet['subject']['label'].lower(), triplet['subject']['s_class']) for triplet in  predictions_['content']]
-
-            # remove duplicates from the predictions 
-            predictions_['content'] = list(set(predictions_['content']))        
-            # -------- main evaluation process ----------#
-            for trips in predictions_['content']:
-                #----------- Extract the RDF tuples ----------#
-                s_pred = trips
-                class_name = trips[1]
-
-                #---------- count the matches detailed -------------#
-                tp_flag = mode_specific_counting(reference, s_pred, mode, llm_log_path=llm_log_path)
-                pred_classes_dict = detailed_storage(class_name, pred_classes_dict, tp_flag)
-    
-    #------------- calculate and print total metrics -------------#
-    class_eval = calculate_metrics_detailed(pred_classes_dict, gt_classes_dict, mode='class')
-    class_df = pd.DataFrame.from_dict(data=class_eval, orient='index', columns=['F1', 'precision', 'recall'])
-    class_df.to_csv(save_path)
-
-
-def eval_object_accuracy_classes(text_entries, save_path, mode='word_distance', llm_log_path=None):
-    # evaluates the correctly found subjects only one of the three modes can be True
-    pred_classes_dict = {}
-    pos_classes_dict = {}
-
-    for entry in text_entries:
-        for predictions_ in entry['triplets']:
-            reference = entry['annotations']
-            reference = convert_annotation_to_triplet(reference)
-            reference = [(triplet['triplet']['object'].lower(), triplet['triplet']['o_class']) for triplet in reference]
-            reference = list(set(reference))
-
-            #------- count the counter variables up ---------#
-            for tup in reference:            
-                # count the occurences of all classes within the reference
-                if tup[1] not in pos_classes_dict.keys():
-                    pos_classes_dict.update({tup[1]: 1})
-                else:
-                    pos_classes_dict[tup[1]] += 1
-
-            # maybe I could also use the objects from the reference as a metric
-            predictions_['content'] = [(triplet['object']['label'].lower(), triplet['class_name']) for triplet in  predictions_['content']]
-            
-            # remove duplicates from the predictions 
-            predictions_['content'] = list(set(predictions_['content']))
-            
-            # -------- main evaluation process ----------#
-            for trips in predictions_['content']:
-                #----------- Extract the RDF tuples ----------#
-                o_pred = trips
-                class_name = trips[1]
-
-                #---------- count the matches -------------#
-                o_tp_flag = mode_specific_counting(reference, o_pred, mode, llm_log_path=llm_log_path)
-
-                # ------------ count detailed ------------ #
-                try:
-                    pred_classes_dict = detailed_storage(class_name, pred_classes_dict, o_tp_flag)
-                    detailed = True
-                except UnboundLocalError:
-                    detailed = False
-                 
-    #------------- calculate and print total metrics -------------#
-    if detailed:   
-        class_eval = calculate_metrics_detailed(pred_classes_dict, pos_classes_dict, mode='class')
-        class_df = pd.DataFrame.from_dict(data=class_eval, orient='index', columns=['F1', 'precision', 'recall'])
-        class_df.to_csv(save_path)
-
-
-def eval_subject_object_accuracy_classes(text_entries, save_path, mode='word_distance', llm_log_path=None):
-    # evaluates the correctly found subjects only one of the three modes can be True
-    pred_classes_dict = {}
-    pos_classes_dict = {}
-
-    for entry in text_entries:
-        for predictions_ in entry['triplets']:
-            reference = entry['annotations']
-            reference = convert_annotation_to_triplet(reference)
-            reference = [(triplet['triplet']['subject'].lower(), triplet['triplet']['object'].lower(), triplet['triplet']['s_class'], triplet['triplet']['o_class']) for triplet in reference]
-            reference = list(set(reference))
-            #print(reference)
-            #------- count the counter variables up ---------#
-            for tup in reference:            
-                # count the occurences of all classes within the reference
-                if tup[2] not in pos_classes_dict.keys():
-                    pos_classes_dict.update({tup[2]: 1})
-                else:
-                    pos_classes_dict[tup[2]] += 1
-
-            # maybe I could also use the objects from the reference as a metric
-            predictions_['content'] = [(triplet['subject']['label'].lower(), triplet['object']['label'].lower(), triplet['subject']['s_class'], triplet['class_name']) for triplet in  predictions_['content']]
-
-            # remove duplicates from the predictions 
-            predictions_['content'] = list(set(predictions_['content']))
-            # -------- main evaluation process ----------#
-            for trips in predictions_['content']:
-                #----------- Extract the RDF tuples ----------#
-                 
-                s_pred = (trips[0], trips[2])
-                o_pred = (trips[1], trips[3])
-                s_class_name = trips[2]
-                o_class_name = trips[3]
-
-                #---------- count the matches -------------#
-                os_tp_flag = False
-                ##----------count in different ways-------##
-                
-                if mode == 'word_distance':
-                    candidate = ('', 0)
-                    saved_tup = ()
-                    #TODO: change this part to having two loops like in the tricks functions
-                    for tup in reference:
-                        ratio = SequenceMatcher(lambda x: x==' ', s_pred[0], tup[0]).ratio() 
-                        if ratio > 0.75:  # assuming that the string are similar enough
-                            if candidate[1] < ratio:
-                                candidate = (tup[0], ratio)
-                                saved_tup = tup
-                    
-                    if candidate[0] != '' and saved_tup[2] == s_pred[1]:  # IF needed and LLM wont work, maybe add a simple list count of valid entries might be useful  
-                        ratio = SequenceMatcher(lambda x: x==' ', o_pred[0], saved_tup[1]).ratio() 
-                        if ratio > 0.75 and saved_tup[3] == o_pred[1]:  # assuming that the string are similar enough 
-                            os_tp_flag = True
-                            remove_entry(remove=(saved_tup[0], saved_tup[1]), structure=reference, mode='multiple')
-
-                elif mode == 'perfect':
-                    # count up with perfect matches
-                    for tup in reference:
-                        if tup[0] == s_pred[0] and tup[2] == s_pred[1]:
-                            if tup[1] == o_pred[0] and tup[3] == o_pred[1]:
-                                os_tp_flag = True
-                                remove_entry(remove=(s_pred[0], o_pred[0]), structure=reference, mode='multiple')
-                                break
-                        
-                elif mode in ('hard', 'soft'):
-                    # count up with llm prompts (hard cut)
-                    for tup in reference:
-                        if 'y' in llm_query((s_pred[0], tup[0]), llm_log_path, mode) and tup[2] == s_pred[1]:
-                            if 'y' in llm_query((o_pred[0], tup[1]), llm_log_path, mode) and tup[3] == o_pred[1]:
-                                os_tp_flag = True
-                                remove_entry(remove=(s_pred[0], o_pred[0]), structure=reference, mode='multiple')
-                                break
-
-                ## ---------- /count in different ways ----------- ##
-                # ------------ count detailed ------------ #
-                try:
-                    pred_classes_dict = detailed_storage(s_class_name, pred_classes_dict, os_tp_flag)
-                    detailed = True
-                except UnboundLocalError:
-                    #print('Not in classes mode. Operating without taking classes into account!')
-                    detailed = False
-                  
-    #------------- calculate and print total metrics -------------#
-    if detailed:   
-        class_eval = calculate_metrics_detailed(pred_classes_dict, pos_classes_dict, mode='class')
-        class_df = pd.DataFrame.from_dict(data=class_eval, orient='index', columns=['F1', 'precision', 'recall'])
-        class_df.to_csv(save_path)
-
-
-def eval_subject_object_predicate_classes(text_entries, save_path, mode='word_distance', llm_log_path=None):
-    pred_predicates_dict = {}
-    gt_predicates_dict = {}    
-
-    for entry in text_entries:
-        for predictions_ in entry['triplets']:
-            reference = entry['annotations']
-            reference = convert_annotation_to_triplet(reference)
-            reference = [(triplet['triplet']['subject'].lower(), triplet['triplet']['predicate'], triplet['triplet']['object'].lower(), triplet['triplet']['s_class'], triplet['triplet']['o_class']) for triplet in reference]
-            reference = list(set(reference))
-            #------- count the counter variables up ---------#
-            for tup in reference:            
-                # count the occurences of all predocates within the reference
-                if tup[1] not in gt_predicates_dict.keys():
-                    gt_predicates_dict.update({tup[1]: 1})
-                else:
-                    gt_predicates_dict[tup[1]] += 1
-                
-
-            # maybe I could also use the objects from the reference as a metric
-            predictions_['content'] = [(triplet['subject']['label'].lower(), triplet['relation']['label'], triplet['object']['label'].lower(), triplet['subject']['s_class'], triplet['class_name']) for triplet in  predictions_['content']]
-
-            # remove duplicates from the predictions 
-            predictions_['content'] = list(set(predictions_['content']))
-            # -------- main evaluation process ----------#
-            for trips in predictions_['content']:
-                #----------- Extract the RDF tuples ----------#
-                s_pred = (trips[0], trips[3])
-                o_pred = (trips[2], trips[4])
-                p_pred = trips[1]
-
-                #---------- count the matches -------------#
-                p_tp_flag = False
-                ##----------count in different ways-------##
-                if mode == 'word_distance':
-                    candidate = ('', 0)
-                    saved_tup = ()
-                    for tup in reference:
-                        ratio = SequenceMatcher(lambda x: x==' ', s_pred[0], tup[0]).ratio() 
-                        if ratio > 0.75:  # assuming that the string are similar enough
-                            if candidate[1] < ratio:
-                                candidate = (tup[0], ratio)
-                                saved_tup = tup
-                    
-                    if candidate[0] != '' and saved_tup[3] == s_pred[1]:  # IF needed and LLM wont work, maybe add a simple list count of valid entries might be useful  
-                        ratio = SequenceMatcher(lambda x: x==' ', o_pred[0], saved_tup[2]).ratio() 
-                        if ratio > 0.75 and saved_tup[4] == o_pred[1] and p_pred == saved_tup[1]:  # assuming that the string are similar enough 
-                            p_tp_flag = True
-                            remove_entry(remove=(saved_tup[0], saved_tup[1], saved_tup[2]), structure=reference, mode='multiple')
-
-                elif mode == 'perfect':
-                    # count up with perfect matches
-                    for tup in reference:
-                        if tup[0] == s_pred[0] and tup[3] == s_pred[1]:
-                            if tup[2] == o_pred[0] and tup[4] == o_pred[1]:
-                                if tup[1] == p_pred:
-                                    p_tp_flag = True
-                                    remove_entry(remove=(s_pred[0], p_pred, o_pred[0]), structure=reference, mode='multiple')
-                                    break
-                        
-                elif mode in ('hard', 'soft'):
-                    # count up with llm prompts (hard cut)
-                    for tup in reference:
-                        if 'y' in llm_query((s_pred[0], tup[0]), llm_log_path, mode) and tup[3] == s_pred[1]:
-                            if 'y' in llm_query((o_pred[0], tup[2]), llm_log_path, mode) and tup[4] == o_pred[1]\
-                                            and p_pred == tup[1]:
-                                p_tp_flag = True
-                                remove_entry(remove=(tup[0], tup[1], tup[2]), structure=reference, mode='multiple')
-                                break
-
-                ## ---------- /count in different ways ----------- ##
-                # ------------ count detailed ------------ #
-                try:
-                    pred_predicates_dict = detailed_storage(p_pred, pred_predicates_dict, p_tp_flag)
-                    detailed = True
-                except UnboundLocalError:
-                    #print('Not in classes mode. Operating without taking classes into account!')
-                    detailed = False
-
-    #------------- calculate and print total metrics -------------#
-    if detailed:  
-        predicate_eval = calculate_metrics_detailed(pred_predicates_dict, gt_predicates_dict, mode='class', with_n=True)
-        predicate_df = pd.DataFrame.from_dict(data=predicate_eval, orient='index', columns=['F1', 'precision', 'recall', 'N'])
-        predicate_df.to_csv(save_path)
-    
-#------------------------------------------------------------------------------#
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ############################### these functions are part of the trick like approach and will therefore not last ##########################################
+#----------------------------------------- evaluates the metrics for the entire dataset ----------------------------------#
+
+
 def eval_subject_accuracy_classes_tricks(text_entries, save_path, mode='word_distance', llm_log_path=None):
     # evaluates the correctly found subjects only one of the three modes can be True
     pred_classes_dict = {}
@@ -805,21 +483,21 @@ def eval_subject_accuracy_classes_tricks(text_entries, save_path, mode='word_dis
             predictions_['content'] = [(triplet['subject']['label'].lower(), triplet['subject']['s_class']) for triplet in  predictions_['content']]
 
             # remove duplicates from the predictions 
-            predictions_['content'] = list(set(predictions_['content']))        
+            predictions_['content'] = list(set(predictions_['content']))    
+
             # -------- main evaluation process ----------#
             for trips in predictions_['content']:
                 #----------- Extract the RDF tuples ----------#
                 s_pred = trips
-                #class_name = trips[1]
-                class_name = ''
                 #---------- count the matches detailed -------------#
                 ##----------count in different ways-------##
                 tp_flag = False
                 if mode == 'word_distance':
                     candidate = ('', 0)
+                    class_name = s_pred[1]
                     for tup in reference:
                         ratio = SequenceMatcher(lambda x: x==' ', s_pred[0], tup[0]).ratio() 
-                        if ratio > 0.75:  # assuming that the string are similar enough
+                        if ratio > 0.75:  # assuming that the strings are similar enough
                             if candidate[1] < ratio:
                                 candidate = (tup[0], ratio)
                                 saved_tup = tup
@@ -830,6 +508,7 @@ def eval_subject_accuracy_classes_tricks(text_entries, save_path, mode='word_dis
                         remove_entry(remove=candidate[0], structure=reference)
 
                 elif mode == 'perfect':
+                    class_name = s_pred[1]
                     # count up with perfect matches
                     for tup in reference:
                         if tup[0] == s_pred[0]:
@@ -841,6 +520,7 @@ def eval_subject_accuracy_classes_tricks(text_entries, save_path, mode='word_dis
                         
                 elif mode in ('hard', 'soft'):
                     # count up with llm prompts (hard cut)
+                    class_name = s_pred[1]
                     for tup in reference:
                         if 'y' in llm_query((s_pred[0], tup[0]), llm_log_path, mode):
                             class_name = tup[1]
@@ -848,8 +528,8 @@ def eval_subject_accuracy_classes_tricks(text_entries, save_path, mode='word_dis
                             remove_entry(remove=s_pred, structure=reference)
                             break
 
-                if class_name:
-                    pred_classes_dict = detailed_storage(class_name, pred_classes_dict, tp_flag)
+                
+                pred_classes_dict = detailed_storage(class_name, pred_classes_dict, tp_flag)
     #------------- calculate and print total metrics -------------#
     class_eval = calculate_metrics_detailed(pred_classes_dict, gt_classes_dict, mode='class')
     class_df = pd.DataFrame.from_dict(data=class_eval, orient='index', columns=['F1', 'precision', 'recall'])
@@ -884,13 +564,12 @@ def eval_object_accuracy_classes_tricks(text_entries, save_path, mode='word_dist
             for trips in predictions_['content']:
                 #----------- Extract the RDF tuples ----------#
                 s_pred = trips
-                #class_name = trips[1]
-                class_name = ''
                 #---------- count the matches detailed -------------#
                 ##----------count in different ways-------##
                 tp_flag = False
                 if mode == 'word_distance':
                     candidate = ('', 0)
+                    class_name = s_pred[1]
                     for tup in reference:
                         ratio = SequenceMatcher(lambda x: x==' ', s_pred[0], tup[0]).ratio() 
                         if ratio > 0.75:  # assuming that the string are similar enough
@@ -905,6 +584,7 @@ def eval_object_accuracy_classes_tricks(text_entries, save_path, mode='word_dist
 
                 elif mode == 'perfect':
                     # count up with perfect matches
+                    class_name = s_pred[1]
                     for tup in reference:
                         if tup[0] == s_pred[0]:
                             tp_flag = True
@@ -914,14 +594,15 @@ def eval_object_accuracy_classes_tricks(text_entries, save_path, mode='word_dist
                         
                 elif mode in ('hard', 'soft'):
                     # count up with llm prompts (hard cut)
+                    class_name = s_pred[1]
                     for tup in reference:
                         if 'y' in llm_query((s_pred[0], tup[0]), llm_log_path, mode):
                             class_name = tup[1]
                             tp_flag = True
                             remove_entry(remove=s_pred, structure=reference)
                             break
-                if class_name:
-                    pred_classes_dict = detailed_storage(class_name, pred_classes_dict, tp_flag)
+                
+                pred_classes_dict = detailed_storage(class_name, pred_classes_dict, tp_flag)
     
     #------------- calculate and print total metrics -------------#
     
@@ -941,7 +622,6 @@ def eval_subject_object_accuracy_classes_tricks(text_entries, save_path, mode='w
             reference = convert_annotation_to_triplet(reference)
             reference = [(triplet['triplet']['subject'].lower(), triplet['triplet']['object'].lower(), triplet['triplet']['s_class'], triplet['triplet']['o_class']) for triplet in reference]
             reference = list(set(reference))
-            #print(reference)
             #------- count the counter variables up ---------#
             for tup in reference:            
                 # count the occurences of all classes within the reference
@@ -961,7 +641,6 @@ def eval_subject_object_accuracy_classes_tricks(text_entries, save_path, mode='w
                  
                 s_pred = (trips[0], trips[2])
                 o_pred = (trips[1], trips[3])
-                s_class_name = ''
 
                 #---------- count the matches -------------#
                 os_tp_flag = False
@@ -971,6 +650,7 @@ def eval_subject_object_accuracy_classes_tricks(text_entries, save_path, mode='w
                     saved_tups = []
 
                     ###################################### this approachs for all the multiple cases
+                    s_class_name = s_pred[1]
                     for tup in reference:
                         ratio = SequenceMatcher(lambda x: x==' ', s_pred[0], tup[0]).ratio() 
                         if ratio > 0.75:  # assuming that the string are similar enough
@@ -986,9 +666,9 @@ def eval_subject_object_accuracy_classes_tricks(text_entries, save_path, mode='w
                             break
                     #######################################      
 
-
                 elif mode == 'perfect':
                     # count up with perfect matches
+                    s_class_name = s_pred[1]
                     for tup in reference:
                         if tup[0] == s_pred[0]:
                             if tup[1] == o_pred[0]:
@@ -999,6 +679,7 @@ def eval_subject_object_accuracy_classes_tricks(text_entries, save_path, mode='w
                         
                 elif mode in ('hard', 'soft'):
                     # count up with llm prompts (hard cut)
+                    s_class_name = s_pred[1]
                     for tup in reference:
                         if 'y' in llm_query((s_pred[0], tup[0]), llm_log_path, mode):
                             if 'y' in llm_query((o_pred[0], tup[1]), llm_log_path, mode):
@@ -1008,14 +689,9 @@ def eval_subject_object_accuracy_classes_tricks(text_entries, save_path, mode='w
                                 break
 
                 ## ---------- /count in different ways ----------- ##
-                # ------------ count detailed ------------ #
-                if s_class_name:
-                    pred_classes_dict = detailed_storage(s_class_name, pred_classes_dict, os_tp_flag)
-
+                pred_classes_dict = detailed_storage(s_class_name, pred_classes_dict, os_tp_flag)
 
     #------------- calculate and print total metrics -------------#
-    # print(pred_classes_dict)
-    # print(pos_classes_dict)
     class_eval = calculate_metrics_detailed(pred_classes_dict, pos_classes_dict, mode='class')
     class_df = pd.DataFrame.from_dict(data=class_eval, orient='index', columns=['F1', 'precision', 'recall'])
     class_df.to_csv(save_path)
@@ -1032,7 +708,7 @@ def eval_subject_object_predicate_classes_tricks(text_entries, save_path, mode='
             reference = convert_annotation_to_triplet(reference)
             reference = [(triplet['triplet']['subject'].lower(), triplet['triplet']['predicate'], triplet['triplet']['object'].lower(), triplet['triplet']['s_class'], triplet['triplet']['o_class']) for triplet in reference]
             reference = list(set(reference))
-            #print(reference)
+
             #------- count the counter variables up ---------#
             for tup in reference:            
                 # count the occurences of all classes within the reference
@@ -1053,14 +729,13 @@ def eval_subject_object_predicate_classes_tricks(text_entries, save_path, mode='
                 s_pred = (trips[0], trips[3])
                 o_pred = (trips[2], trips[4])
                 p_pred = trips[1]
-                s_class_name = ''
-
                 #---------- count the matches -------------#
                 os_tp_flag = False
                 ##----------count in different ways-------##
                 
                 if mode == 'word_distance':
                     saved_tups = []
+                    s_class_name = p_pred
                     for tup in reference:
                         ratio = SequenceMatcher(lambda x: x==' ', s_pred[0], tup[0]).ratio() 
                         if ratio > 0.75:  # assuming that the string are similar enough
@@ -1075,6 +750,7 @@ def eval_subject_object_predicate_classes_tricks(text_entries, save_path, mode='
 
                 elif mode == 'perfect':
                     # count up with perfect matches
+                    s_class_name = p_pred
                     for tup in reference:
                         #print(tup)
                         if tup[0] == s_pred[0]:
@@ -1087,6 +763,7 @@ def eval_subject_object_predicate_classes_tricks(text_entries, save_path, mode='
                         
                 elif mode in ('hard', 'soft'):
                     # count up with llm prompts (hard cut)
+                    s_class_name = p_pred
                     for tup in reference:
                         if 'y' in llm_query((s_pred[0], tup[0]), llm_log_path, mode):
                             if 'y' in llm_query((o_pred[0], tup[1]), llm_log_path, mode):
@@ -1097,15 +774,11 @@ def eval_subject_object_predicate_classes_tricks(text_entries, save_path, mode='
                                     break
 
                 ## ---------- /count in different ways ----------- ##
-                # ------------ count detailed ------------ #
-                #print('class_name: ', s_class_name)
-                if s_class_name:
-                    pred_classes_dict = detailed_storage(s_class_name, pred_classes_dict, os_tp_flag)
+                pred_classes_dict = detailed_storage(s_class_name, pred_classes_dict, os_tp_flag)
 
                   
     #------------- calculate and print total metrics -------------#
     class_eval = calculate_metrics_detailed(pred_classes_dict, gt_classes_dict, mode='class', with_n=True)
-    #print(class_eval)
     class_df = pd.DataFrame.from_dict(data=class_eval, orient='index', columns=['F1', 'precision', 'recall', 'N'])
     class_df.to_csv(save_path)
 
@@ -1123,12 +796,7 @@ class EvaluatorPlugin(
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
-    def call(self, text_entries: List[Dict]) -> Generator:
-        try:
-            detailed = self._config['detailed']
-        except KeyError:
-            detailed = False
-        
+    def call(self, text_entries: List[Dict]) -> Generator:      
         ####################### for now we will use this kind of metric scheme, however, it will not last ##############################
         try:
             tricks = self._config['tricks']
@@ -1143,40 +811,8 @@ class EvaluatorPlugin(
             # maybe not raise and only tell about the issue and that no evaluation took place
             raise KeyError('An evaluation scheme (subject, object, subject_object, subject_object_predciates) and a mode (word_distance, perfect, soft, hard) needs to be given!')
         else:
-
-            # -------------------------------- Evaluate all four schemes with classes focus and without using "tricks" ---------------------------- #
-            if detailed:
-                if eval == 'subject':
-                    eval_subject_accuracy_classes(text_entries, save_path=f'../test/gollie_testset/subjects/classes_{mode}.csv', mode=mode, llm_log_path=f'../test/gollie_testset/subjects/llm_mitschrift_{mode}_classes.json')
-                    print('subjects done')
-                elif eval == 'object':
-                    eval_object_accuracy_classes(text_entries, save_path=f'../test/gollie_testset/objects/classes_{mode}.csv', mode=mode, llm_log_path=f'../test/gollie_testset/objects/llm_mitschrift_{mode}_classes.json')
-                    print('objects done')
-                elif eval == 'subject_object':
-                    eval_subject_object_accuracy_classes(text_entries, save_path=f'../test/gollie_testset/subject_object/classes_{mode}.csv', mode=mode, llm_log_path=f'../test/gollie_testset/subject_object/llm_mitschrift_{mode}_classes.json')
-                    print('subject_object_done')
-                elif eval == 'subject_object_predicate':
-                    eval_subject_object_predicate_classes(text_entries, save_path=f'../test/gollie_testset/subject_object_predicate/predicates_{mode}.csv', mode=mode, llm_log_path=f'../test/gollie_testset/subject_object_predicate/llm_mitschrift_{mode}_predicates.json')
-                    print('Subject_object_predicate done')
-            # -------------------------------------------------------------------------------------------------------------------------------------- #
-            
-            # --------------------------------- Evaluate all four schemes without classes focus ---------------------------------------------------- #
-            elif not tricks:
-                if eval == 'subject':
-                    eval_subject_accuracy(text_entries, save_path=f'../test/gollie_testset/subjects/subject_eval_{mode}.csv', mode=mode, llm_log_path=f'../test/gollie_testset/subjects/llm_mitschrift_{mode}_eval.json')
-                    print('subjects done')
-                elif eval == 'object':
-                    eval_object_accuracy(text_entries, save_path=f'../test/gollie_testset/objects/object_eval_{mode}.csv', mode=mode, llm_log_path=f'../test/gollie_testset/objects/llm_mitschrift_{mode}_eval.json')
-                    print('objects done')
-                elif eval == 'subject_object':
-                    eval_subject_object_accuracy(text_entries, save_path=f'../test/gollie_testset/subject_object/subject_object_eval_{mode}.csv', mode=mode, llm_log_path=f'../test/gollie_testset/subject_object/llm_mitschrift_{mode}_eval.json')
-                    print('subject_object_done')
-                elif eval == 'subject_object_predicate':
-                    eval_subject_object_predicate(text_entries, save_path=f'../test/gollie_testset/subject_object_predicate/subject_object_predicate_eval_{mode}.csv', mode=mode, llm_log_path=f'../test/gollie_testset/subject_object_predicate/llm_mitschrift_{mode}_eval.json')
-                    print('Subject_object_predicate done')
-
-
             ###################################### this part is only for the beginning and is not planned to be used in the end #############################################################
+            # ---------------------------------- Evaluate all four schemes with a classes focus -------------------------------------
             if tricks:
                 if eval == 'subject':
                     eval_subject_accuracy_classes_tricks(text_entries, save_path=f'../test/gollie_testset/subjects/classes_{mode}_tricks.csv', mode=mode, llm_log_path=f'../test/gollie_testset/subjects/llm_mitschrift_{mode}_classes_tricks.json')
@@ -1192,260 +828,18 @@ class EvaluatorPlugin(
                     print('Subject_object_predicate done')
             #####################################################################################################################################################################################
 
-        # different evaluation schemes
-        #eval_subject_accuracy(text_entries)
-        #eval_object_accuracy(text_entries, mode='hard')
-        #print(llm_query(['Der Schmadribachfall', 'Schmadribachfall'], '/nfs/home/ritterd/reflect/reflectai/wp2/test/gollie_testset/mitschrift_test.json', mode='hard'))
-        #eval_subject_object_predicate(text_entries)
-
+            # --------------------------------- Evaluate all four schemes without classes focus ---------------------------------------------------- #
+            else:
+                if eval == 'subject':
+                    eval_subject_accuracy(text_entries, save_path=f'../test/gollie_testset/subjects/subject_eval_{mode}.csv', mode=mode, llm_log_path=f'../test/gollie_testset/subjects/llm_mitschrift_{mode}_eval.json')
+                    print('subjects done')
+                elif eval == 'object':
+                    eval_object_accuracy(text_entries, save_path=f'../test/gollie_testset/objects/object_eval_{mode}.csv', mode=mode, llm_log_path=f'../test/gollie_testset/objects/llm_mitschrift_{mode}_eval.json')
+                    print('objects done')
+                elif eval == 'subject_object':
+                    eval_subject_object_accuracy(text_entries, save_path=f'../test/gollie_testset/subject_object/subject_object_eval_{mode}.csv', mode=mode, llm_log_path=f'../test/gollie_testset/subject_object/llm_mitschrift_{mode}_eval.json')
+                    print('subject_object_done')
+                elif eval == 'subject_object_predicate':
+                    eval_subject_object_predicate(text_entries, save_path=f'../test/gollie_testset/subject_object_predicate/subject_object_predicate_eval_{mode}.csv', mode=mode, llm_log_path=f'../test/gollie_testset/subject_object_predicate/llm_mitschrift_{mode}_eval.json')
+                    print('Subject_object_predicate done')
         yield text_entries
-
-
-
-################################################################################################################
-#################################################################################################################
-##############################################################################################################
-
-
-# def distingush_subjects(entry):
-#     # distingushes between subjects that are the same as the name of the painting and all the orther ones
-#     name_trips = []
-#     other_trips = []
-
-#     ref_name_trips = []
-#     ref_non_name_trips = []
-#     try:
-#         names = re.search('[a-zA-Z„"][a-zA-Z0-9 äüöÄÖÜ()"“,-\.]+\n\n', entry['text']).group()[:-2]
-#         for predictions in entry['triplets']:
-#             for triplet in predictions['content']:
-#                 if triplet['subject']['label'] == names:
-#                     name_trips.append(triplet)
-#                 else:
-#                     other_trips.append(triplet)
-
-            
-#         for s, po in entry['annotations'].items():
-#             if s == names:
-#                 ref_name_trips.append({s:po})
-#             else:
-#                 ref_non_name_trips.append({s:po})
-
-#     except AttributeError:
-#         print('No name found in: ', entry['text'][:20])
-
-    
-
-#     return name_trips, other_trips, ref_name_trips, ref_non_name_trips
-
-
-
-# def eval_subject_equals_name(entry):
-
-#     #------------- initializing variables for this entry -----------------------#
-#     name_trips, non_name_trips, ref_name_trips, ref_non_name_trips = distingush_subjects(entry)
-
-#     name_s_total_pre = name_po_total_pre = len(name_trips)
-#     non_s_total_pre = non_po_total_pre = len(non_name_trips)
-
-#     name_s_total_pos = 0
-#     name_po_total_pos = 0
-    
-    
-#     non_s_total_pos = 0
-#     non_po_total_pos = 0
-
-#     # name_po_total_pre = 0
-#     # non_po_total_pre = 0
- 
-#     for triplets in ref_name_trips:
-#         for po in triplets.values():
-#             for s, o in po.items():
-#                 if s != 's_class_name':
-#                     if type(o[0]) == list:
-#                         name_s_total_pos += len(o[0])
-#                     else:
-#                         name_s_total_pos += 1
-
-
-#     for triplets in ref_non_name_trips:
-#         for po in triplets.values():
-#             for s, o in po.items():
-#                 if s != 's_class_name':
-#                     if type(o[0]) == list:
-#                         non_s_total_pos += len(o[0])
-#                     else:
-#                         non_s_total_pos += 1
-
-
-#     for trips in ref_name_trips:
-#         for values in trips.values():
-#             for p, o in values.items():
-#                 if p != 's_class_name':
-#                     if type(o[0]) == list:
-#                         name_po_total_pos += len(o[0])
-#                     else:
-#                         name_po_total_pos += 1
-
-
-#     for trips in ref_non_name_trips:
-#         for values in trips.values():
-#             for p, o in values.items():
-#                 if p != 's_class_name':
-#                     if type(o[0]) == list:
-#                         non_po_total_pos += len(o[0])
-#                     else:
-#                         non_po_total_pos += 1
-    
-#     s_name_tp = 0
-#     s_non_name_tp = 0
-
-#     s_po_name_tp = 0
-#     s_po_non_name_tp = 0
-    
-#     #-------------- evaluation process for the trips with subject equals painting name -------------------#
-#     for name in name_trips:
-#         s_pred = name['subject']['label']
-#         p_pred = name['relation']['label']
-#         o_pred = name['object']['label']
-
-#         #---------- check for the most fitting refrence key subject from the prediction ----------------------# 
-#         candidate = ('', 0) 
-#         for ref_trip in ref_name_trips:
-#             ref_key = next(iter(ref_trip))
-#             ratio = SequenceMatcher(lambda x: x==' ', s_pred.lower(), ref_key.lower()).ratio() 
-
-#             # if ratio is big enough, the respective ref_key is to be taken instead of the acutal prediction
-#             if ratio > 0.75:  # assuming that the string are similar enough
-#                 if candidate[1] < ratio:
-#                     candidate = (ref_key, ratio)
-        
-
-#         ####
-#         #candidate = ('upper part', )
-#         ####
-#         if candidate[0] != '':  # IF needed and LLM wont work, maybe add a simple list count of valid entries might be useful  
-#             s_name_tp += 1
-
-#             #---------------------- check for the most fitting refrence key predicate from the prediction -------------#
-#             predicate_candidate = ('', 0)
-#             # fetch the correct predicate
-#             for ref_trips in ref_name_trips:
-#                 if candidate[0] in ref_trips:
-#                     correct_trip = ref_trips  # SAVE THIS TRIP SOMEWHERE EARLIER!
-
-#             for p in correct_trip[candidate[0]].keys():
-#                 ratio = SequenceMatcher(lambda x: x==' ', p_pred.lower(), p.lower()).ratio() 
-#                 if ratio > 0.75:  # assuming that the string are similar enough
-#                     if predicate_candidate[1] < ratio:
-#                         predicate_candidate = (p, ratio)
-
-#             ###
-#             #predicate_candidate = ('depicts',)
-#             ###
-            
-#             if predicate_candidate[0] != '':
-#                 # check whether the the predicated objects are wihtin the reference
-#                 coond1 = type(correct_trip[candidate[0]][predicate_candidate[0]][0]) == list 
-
-#                 #---------------------- check for the most fitting refrence key object from the prediction -------------#
-#                 object_candidate = ('', 0)
-#                 if coond1:
-#                     for o in correct_trip[candidate[0]][predicate_candidate[0]][0]:
-#                         ratio = SequenceMatcher(lambda x: x==' ', o_pred.lower(), o.lower()).ratio() 
-#                         if ratio > 0.75:  # assuming that the string are similar enough
-#                             if object_candidate[1] < ratio:
-#                                 object_candidate = (o, ratio)
-
-#                 else:
-#                     o = correct_trip[candidate[0]][predicate_candidate[0]][0]
-#                     ratio = SequenceMatcher(lambda x: x==' ', o_pred.lower(), o.lower()).ratio() 
-#                     if ratio > 0.75:  # assuming that the string are similar enough
-#                         if object_candidate[1] < ratio:
-#                             object_candidate = (o, ratio)
-
-#                 ####
-#                 #object_candidate = ('cometary beam of light',)
-#                 ####
-                
-#                 if object_candidate[0] != '':
-#                     s_po_name_tp += 1
-
-#                     # remove the triplet from refrence to avoid wrongfully counting found triplets
-#                     remove_entry(object_candidate[0], ref_name_trips, candidate[0], predicate_candidate[0], mode='split')
-
-    
-#     #-------------- evaluation process for the trips with subject equals painting name -------------------#
-#     for name in non_name_trips:
-#         s_pred = name['subject']['label']
-#         p_pred = name['relation']['label']
-#         o_pred = name['object']['label']
-
-#         #---------- check for the most fitting refrence key subject from the prediction ----------------------# 
-#         candidate = ('', 0) 
-#         for ref_trip in ref_non_name_trips:
-#             ref_key = next(iter(ref_trip))
-#             ratio = SequenceMatcher(lambda x: x==' ', s_pred.lower(), ref_key.lower()).ratio() 
-
-#             # if ratio is big enough, the respective ref_key is to be taken instead of the acutal prediction
-#             if ratio > 0.75:  # assuming that the string are similar enough
-#                 if candidate[1] < ratio:
-#                     candidate = (ref_key, ratio)
-        
-
-#         ####
-#         #candidate = ('upper part', )
-#         ####
-#         if candidate[0] != '':  # IF needed and LLM wont work, maybe add a simple list count of valid entries might be useful  
-#             s_non_name_tp += 1
-
-#             #---------------------- check for the most fitting refrence key predicate from the prediction -------------#
-#             predicate_candidate = ('', 0)
-#             # fetch the correct predicate
-#             for ref_trips in ref_non_name_trips:
-#                 if candidate[0] in ref_trips:
-#                     correct_trip = ref_trips  # SAVE THIS TRIP SOMEWHERE EARLIER!
-
-#             for p in correct_trip[candidate[0]].keys():
-#                 ratio = SequenceMatcher(lambda x: x==' ', p_pred.lower(), p.lower()).ratio() 
-#                 if ratio > 0.75:  # assuming that the string are similar enough
-#                     if predicate_candidate[1] < ratio:
-#                         predicate_candidate = (p, ratio)
-
-#             ###
-#             #predicate_candidate = ('depicts',)
-#             ###
-            
-#             if predicate_candidate[0] != '':
-#                 # check whether the the predicated objects are wihtin the reference
-#                 coond1 = type(correct_trip[candidate[0]][predicate_candidate[0]][0]) == list 
-
-#                 #---------------------- check for the most fitting refrence key object from the prediction -------------#
-#                 object_candidate = ('', 0)
-#                 if coond1:
-#                     for o in correct_trip[candidate[0]][predicate_candidate[0]][0]:
-#                         ratio = SequenceMatcher(lambda x: x==' ', o_pred.lower(), o.lower()).ratio() 
-#                         if ratio > 0.75:  # assuming that the string are similar enough
-#                             if object_candidate[1] < ratio:
-#                                 object_candidate = (o, ratio)
-
-#                 else:
-#                     o = correct_trip[candidate[0]][predicate_candidate[0]][0]
-#                     ratio = SequenceMatcher(lambda x: x==' ', o_pred.lower(), o.lower()).ratio() 
-#                     if ratio > 0.75:  # assuming that the string are similar enough
-#                         if object_candidate[1] < ratio:
-#                             object_candidate = (o, ratio)
-
-#                 ####
-#                 #object_candidate = ('cometary beam of light',)
-#                 ####
-                
-#                 if object_candidate[0] != '':
-#                     s_po_non_name_tp += 1
-
-#                     # remove the triplet from refrence to avoid wrongfully counting found triplets
-#                     remove_entry(object_candidate[0], ref_non_name_trips, candidate[0], predicate_candidate[0], mode='split')
-
-#     #print('finished!')
-#     return name_s_total_pre, name_po_total_pre, name_s_total_pos, name_po_total_pos, non_s_total_pre,\
-#     non_po_total_pre, non_s_total_pos, non_po_total_pos, s_name_tp, s_non_name_tp, s_po_name_tp, s_po_non_name_tp
-

@@ -5,7 +5,7 @@ import argparse
 
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="script to convert text inputs to jsonl files. Optionally also includes the Ground Truth annotations as a json-dictionary.")
+    parser = argparse.ArgumentParser(description="Script to convert text inputs to jsonl files. Optionally also includes the Ground Truth annotations as a json-dictionary.")
 
     parser.add_argument("-i", "--input_path",  help="path to input files", required=True)
     parser.add_argument("-o", "--output_path", help="path to the output file", required=True)
@@ -20,12 +20,11 @@ def create_jsonl_file():
 
     args = parse_args()
     collection = []
-    # if used with annoations make sure that only the textes are given that have the annotations
-    # Beschreibung mit der passenden annoattion knüpfen 
-    # /nfs/data/reflectai/data/annotation/txt/
+    # if used with annotations make sure that only the textes are given that have the annotations
 
+    # /nfs/data/reflectai/data/annotation/txt/
     for annotations_texts in os.listdir(args.input_path):
-        ## ---------------------- This part only for initial testing ------------------------------
+        ## ---------------------- This part only for initial testing! it just skips out annotations form others ------------------------------
         with open('../../test/gollie_testset/annotated_texts_by_tzischkin', encoding='utf-8') as testing:
             annotated_texts = testing.read()
             #print(annotated_texts)
@@ -41,17 +40,8 @@ def create_jsonl_file():
                     annotations = json.load(f)
             
             read = fp.read()
-            n = len(read) 
-            if n > 20000 and False:
-                while n > 20000:
-                    k = 0
-                    text = {'text': [{'content': read[k * 20000: (k+1) * 20000]}], 'id': annotations_texts, 'annotations':annotations}
-                    collection.append(text)  
-                    k += 1
-                    n -= 20000     
-            else: 
-                text = {'text': [{'content': read}], 'id': annotations_texts, 'annotations':annotations}
-                collection.append(text)
+            text = {'text': [{'content': read}], 'id': annotations_texts, 'annotations':annotations}
+            collection.append(text)
 
     # "/nfs/home/ritterd/reflect/reflectai/wp2/test/gollie_testset/gollietestset.jsonl"
     jsonl.dump(collection, args.output_path)
