@@ -12,13 +12,10 @@ Relation definitions
 class Emotion(Template):
     """
     Identify the **emotion or mood** conveyed or depicted in a work of art.
-
-    - **artwork**: The name of the artwork mentioned (e.g., Mona Lisa, Guernica).
-    - **emotion**: The specific emotion (e.g., Sadness, joy, despair, serenity).
     """
 
-    artwork: str
-    emotion: str
+    artwork: str  # The name of the artwork mentioned (e.g., Mona Lisa, Guernica)
+    emotion: str  # The specific emotion (e.g., Sadness, joy, despair, serenity)
 
 
 def emotion_to_triplet(package: Emotion) -> List[Dict]:
@@ -28,7 +25,7 @@ def emotion_to_triplet(package: Emotion) -> List[Dict]:
                 "label": package.artwork,
             },
             "relation": {
-                "label": "depicts",  
+                "label": "depicts",
                 "wikidata_id": "wdt:P180",  # Wikidata ID for 'depicts'
             },
             "object": {
@@ -56,13 +53,10 @@ def emotion_to_triplet(package: Emotion) -> List[Dict]:
 class Color(Template):
     """
     Identify **colors** (hues, shades, or tones) depicted as visual characteristics in a work of art.
-
-    - **artwork**: The name of the artwork mentioned (e.g., The Birth of Venus, The Starry Night).
-    - **color**: The specific color (e.g., gold, ultramarine, vermilion, ochre).
     """
 
-    artwork: str
-    color: str
+    artwork: str  # The name of the artwork mentioned (e.g., The Birth of Venus, The Starry Night)
+    color: str  # The specific color (e.g., gold, ultramarine, vermilion, ochre)
 
 
 def color_to_triplet(package: Color) -> List[Dict]:
@@ -72,7 +66,7 @@ def color_to_triplet(package: Color) -> List[Dict]:
                 "label": package.artwork,
             },
             "relation": {
-                "label": "depicts",  
+                "label": "depicts",
                 "wikidata_id": "wdt:P180",
             },
             "object": {
