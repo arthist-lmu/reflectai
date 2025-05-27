@@ -8,6 +8,7 @@ from kg_pipeline.plugin import Plugin
 from ollama import Client, _types
 import re
 from collections import defaultdict
+import itertools
 
 
 client = Client(
@@ -464,11 +465,13 @@ def eval_subject_object_predicate(text_entries, save_path, mode='word_distance',
 #----------------------------------------- evaluates the metrics for the entire dataset ----------------------------------#
 
 
-def mode_specific_counting(pred, reference, type_prediction, llm_log_path, mode, found):
+def calc_word_distance(pred, reference, type_prediction, found, single):
     tp_flag = False
-    if mode == 'word_distance':
+    if single:   
+        pred = pred[0] 
         candidate = ('', 0)
         class_name = pred[1]
+
         for tup in reference:
             ratio = SequenceMatcher(lambda x: x==' ', pred[0], tup[0]).ratio() 
             if ratio > 0.75:  # assuming that the strings are similar enough
@@ -493,14 +496,61 @@ def mode_specific_counting(pred, reference, type_prediction, llm_log_path, mode,
             tp_flag = True
             found = remove_entry(remove=saved_tup, structure=found)
             # rather than removing items from the list, we have to save it in a dict and ignore if found 
+    else:
+        s_pred = pred[0]
+        o_pred = pred[1]
+        class_name = s_pred[1]
+        saved_tups = []
 
-    elif mode == 'perfect':
-        class_name = pred[1]
-        #print(s_pred)
-        # count up with perfect matches
         for tup in reference:
-            if tup[0] == pred[0] and found.get(pred) is None:
-                #print('gefunden!')
+            ratio = SequenceMatcher(lambda x: x==' ', s_pred[0], tup[0]).ratio() 
+            if ratio > 0.75 and found.get(tup) is None:  # assuming that the string are similar enough
+                saved_tups.append(tup)
+    
+        for saved_tup in saved_tups:  # IF needed and LLM wont work, maybe add a simple list count of valid entries might be useful  
+            ratio = SequenceMatcher(lambda x: x==' ', o_pred[0], saved_tup[1]).ratio() 
+
+            if ratio > 0.75 and found.get(tup) is None:  # assuming that the string are similar enough 
+                if saved_tup[2] == s_pred[1]:
+                    if saved_tup[2] in type_prediction.keys():
+                        type_prediction[saved_tup[2]]['found'] += 1
+                        type_prediction[saved_tup[2]]['existing'] += 1
+                    else:
+                        type_prediction.update({saved_tup[2]: {'existing': 1, 'found':1}}) 
+                else:
+                    if saved_tup[2] in type_prediction.keys():
+                        type_prediction[saved_tup[2]]['existing'] += 1
+                    else:
+                        type_prediction.update({saved_tup[2]: {'existing': 1, 'found':0}})
+
+                if saved_tup[3] == o_pred[1]:
+                    if saved_tup[3] in type_prediction.keys():
+                        type_prediction[saved_tup[3]]['found'] += 1
+                        type_prediction[saved_tup[3]]['existing'] += 1
+                    else:
+                        type_prediction.update({saved_tup[3]: {'existing': 1, 'found':1}}) 
+                else:
+                    if saved_tup[3] in type_prediction.keys():
+                        type_prediction[saved_tup[3]]['existing'] += 1
+                    else:
+                        type_prediction.update({saved_tup[3]: {'existing': 1, 'found':0}})
+                
+                tp_flag = True
+                class_name = saved_tup[2]
+                found = remove_entry(remove=saved_tup, structure=found, mode='multiple')
+                break
+
+    return class_name, tp_flag, found
+
+
+def calc_perfect(pred=None, reference=None, type_prediction=None, found=None, single=None):
+    # count up with perfect matches
+    tp_flag = False
+    if single:
+        pred = pred[0]
+        class_name = pred[1]
+        for tup in reference:
+            if tup[0] == pred[0] and found.get(tup) is None:
                 tp_flag = True
                 class_name = tup[1]
                 # what about the case where s_pred is actually part of the class just not in gt
@@ -519,9 +569,51 @@ def mode_specific_counting(pred, reference, type_prediction, llm_log_path, mode,
                         type_prediction.update({tup[1]: {'existing': 1, 'found':0}}) 
 
                 break
-            
-    elif mode in ('hard', 'soft'):
-        # count up with llm prompts (hard cut)
+
+    else:
+        # count up with perfect matches
+        s_pred = pred[0]
+        o_pred = pred[1]
+        class_name = s_pred[1]
+        for tup in reference:
+            if tup[0] == s_pred[0] and found.get(tup) is None:
+                if tup[1] == o_pred[0] and found.get(tup) is None:  
+                    if tup[2] == s_pred[1]:
+                        if tup[2] in type_prediction.keys():
+                            type_prediction[tup[2]]['found'] += 1
+                            type_prediction[tup[2]]['existing'] += 1
+                        else:
+                            type_prediction.update({tup[2]: {'existing': 1, 'found':1}}) 
+                    else:
+                        if tup[2] in type_prediction.keys():
+                            type_prediction[tup[2]]['existing'] += 1
+                        else:
+                            type_prediction.update({tup[2]: {'existing': 1, 'found':0}})
+
+                    if tup[3] == o_pred[1]:
+                        if tup[3] in type_prediction.keys():
+                            type_prediction[tup[3]]['found'] += 1
+                            type_prediction[tup[3]]['existing'] += 1
+                        else:
+                            type_prediction.update({tup[3]: {'existing': 1, 'found':1}}) 
+                    else:
+                        if tup[3] in type_prediction.keys():
+                            type_prediction[tup[3]]['existing'] += 1
+                        else:
+                            type_prediction.update({tup[3]: {'existing': 1, 'found':0}})
+                    
+                    tp_flag = True
+                    class_name = tup[2]
+                    found = remove_entry(remove=tup, structure=found, mode='multiple')
+                    break
+        
+    return class_name, tp_flag, found
+
+
+def calc_ollama(pred, reference, type_prediction, found, llm_log_path, mode, single=True):
+    # count up with llm prompts (hard cut)
+    tp_flag = False
+    if single:    
         class_name = pred[1]
         for tup in reference:
             if found.get(pred) is None and 'y' in llm_query((pred[0], tup[0]), llm_log_path, mode):
@@ -541,6 +633,55 @@ def mode_specific_counting(pred, reference, type_prediction, llm_log_path, mode,
                 tp_flag = True
                 found = remove_entry(remove=tup, structure=found)
                 break
+    else:
+        s_pred = pred[0]
+        o_pred = pred[1]
+        class_name = s_pred[1]
+
+        for tup in reference:
+            if found.get(tup) is None and 'y' in llm_query((s_pred[0], tup[0]), llm_log_path, mode):
+                if found.get(tup) is None and 'y' in llm_query((o_pred[0], tup[1]), llm_log_path, mode):
+                    if tup[2] == s_pred[1]:
+                        if tup[2] in type_prediction.keys():
+                            type_prediction[tup[2]]['found'] += 1
+                            type_prediction[tup[2]]['existing'] += 1
+                        else:
+                            type_prediction.update({tup[2]: {'existing': 1, 'found':1}}) 
+                    else:
+                        if tup[2] in type_prediction.keys():
+                            type_prediction[tup[2]]['existing'] += 1
+                        else:
+                            type_prediction.update({tup[2]: {'existing': 1, 'found':0}})
+
+                    if tup[3] == o_pred[1]:
+                        if tup[3] in type_prediction.keys():
+                            type_prediction[tup[3]]['found'] += 1
+                            type_prediction[tup[3]]['existing'] += 1
+                        else:
+                            type_prediction.update({tup[3]: {'existing': 1, 'found':1}}) 
+                    else:
+                        if tup[3] in type_prediction.keys():
+                            type_prediction[tup[3]]['existing'] += 1
+                        else:
+                            type_prediction.update({tup[3]: {'existing': 1, 'found':0}})
+
+                    tp_flag = True
+                    class_name = tup[2]
+                    found = remove_entry(remove=tup, structure=found, mode='multiple')
+                    break
+
+    return class_name, tp_flag, found
+
+
+def mode_specific_counting(pred, reference, type_prediction, llm_log_path, mode, found, single=True):
+    if mode == 'word_distance':
+        class_name, tp_flag, found = calc_word_distance(pred, reference, type_prediction, found, single)
+
+    elif mode == 'perfect':
+        class_name, tp_flag, found = calc_perfect(pred, reference, type_prediction, found, single)
+            
+    elif mode in ('hard', 'soft'):
+        class_name, tp_flag, found = calc_ollama(pred, reference, type_prediction, found, llm_log_path, mode, single)
 
     return tp_flag, class_name, found, type_prediction
 
@@ -558,7 +699,7 @@ def eval_subject_accuracy_classes_tricks(text_entries, save_path, save_types, mo
             reference = entry['annotations']
             reference = convert_annotation_to_triplet(reference)
             reference = [(triplet['triplet']['subject'].lower(), triplet['triplet']['s_class']) for triplet in reference]
-            reference = list(set(reference))
+            reference = ([next(b) for a, b in itertools.groupby(reference, lambda y: y[0])])
  
             #------- count the counter variables up ---------#
             for tup in reference:            
@@ -569,11 +710,12 @@ def eval_subject_accuracy_classes_tricks(text_entries, save_path, save_types, mo
                     gt_classes_dict[tup[1]] += 1
 
             # the class_name is directed towards the object and not the subject! 
-            predictions_['content'] = [(triplet['subject']['label'].lower(), triplet['subject']['s_class']) for triplet in  predictions_['content']]
+            predictions_['content'] = [(triplet['subject']['label'].lower(), triplet['subject']['s_class']) for triplet in predictions_['content']]
 
             # remove duplicates from the predictions 
-            predictions_['content'] = list(set(predictions_['content']))    
-
+            predictions_['content'].sort()
+            predictions_['content']  = ([next(b) for a, b in itertools.groupby(predictions_['content'], lambda y: y[0])])    
+ 
             # -------- main evaluation process ----------#
             for trips in predictions_['content']:
                 #----------- Extract the RDF tuples ----------#
@@ -582,7 +724,7 @@ def eval_subject_accuracy_classes_tricks(text_entries, save_path, save_types, mo
                 #---------- count the matches detailed -------------#
                 ##----------count in different ways-------##
                 tp_flag, class_name, found, type_prediction = \
-                        mode_specific_counting(s_pred, reference, type_prediction, llm_log_path, mode, found)
+                        mode_specific_counting((s_pred, ), reference, type_prediction, llm_log_path, mode, found)
 
                 pred_classes_dict = detailed_storage(class_name, pred_classes_dict, tp_flag)
     #------------- calculate and print total metrics -------------#
@@ -607,7 +749,7 @@ def eval_object_accuracy_classes_tricks(text_entries, save_path, save_types, mod
             reference = entry['annotations']
             reference = convert_annotation_to_triplet(reference)
             reference = [(triplet['triplet']['object'].lower(), triplet['triplet']['o_class']) for triplet in reference]
-            reference = list(set(reference))
+            reference = ([next(b) for a, b in itertools.groupby(reference, lambda y: y[0])])
             #------- count the counter variables up ---------#
             for tup in reference:            
                 # count the occurences of all classes within the reference
@@ -620,7 +762,8 @@ def eval_object_accuracy_classes_tricks(text_entries, save_path, save_types, mod
             predictions_['content'] = [(triplet['object']['label'].lower(), triplet['class_name']) for triplet in  predictions_['content']]
 
             # remove duplicates from the predictions 
-            predictions_['content'] = list(set(predictions_['content']))        
+            predictions_['content'].sort()
+            predictions_['content']  = ([next(b) for a, b in itertools.groupby(predictions_['content'], lambda y: y[0])])        
             # -------- main evaluation process ----------#
             for trips in predictions_['content']:
                 #----------- Extract the RDF tuples ----------#
@@ -628,7 +771,7 @@ def eval_object_accuracy_classes_tricks(text_entries, save_path, save_types, mod
                 #---------- count the matches detailed -------------#
                 ##----------count in different ways-------##
                 tp_flag, class_name, found, type_prediction = \
-                        mode_specific_counting(o_pred, reference, type_prediction, llm_log_path, mode, found)
+                        mode_specific_counting((o_pred, ), reference, type_prediction, llm_log_path, mode, found)
  
                 pred_classes_dict = detailed_storage(class_name, pred_classes_dict, tp_flag)
     
@@ -654,7 +797,7 @@ def eval_subject_object_accuracy_classes_tricks(text_entries, save_path, save_ty
             reference = entry['annotations']
             reference = convert_annotation_to_triplet(reference)
             reference = [(triplet['triplet']['subject'].lower(), triplet['triplet']['object'].lower(), triplet['triplet']['s_class'], triplet['triplet']['o_class']) for triplet in reference]
-            reference = list(set(reference))
+            reference = ([next(b) for a, b in itertools.groupby(reference, lambda y: y[0])])
             #------- count the counter variables up ---------#
             for tup in reference:            
                 # count the occurences of all classes within the reference
@@ -667,7 +810,8 @@ def eval_subject_object_accuracy_classes_tricks(text_entries, save_path, save_ty
             predictions_['content'] = [(triplet['subject']['label'].lower(), triplet['object']['label'].lower(), triplet['subject']['s_class'], triplet['class_name']) for triplet in  predictions_['content']]
 
             # remove duplicates from the predictions 
-            predictions_['content'] = list(set(predictions_['content']))
+            predictions_['content'].sort()
+            predictions_['content']  = ([next(b) for a, b in itertools.groupby(predictions_['content'], lambda y: y[0])]) 
             # -------- main evaluation process ----------#
             for trips in predictions_['content']:
                 #----------- Extract the RDF tuples ----------#
@@ -676,127 +820,15 @@ def eval_subject_object_accuracy_classes_tricks(text_entries, save_path, save_ty
                 o_pred = (trips[1], trips[3])
 
                 #---------- count the matches -------------#
-                os_tp_flag = False
+                tp_flag = False
                 ##----------count in different ways-------##
-                
-                if mode == 'word_distance': 
-                    saved_tups = []
-
-                    s_class_name = s_pred[1]
-                    for tup in reference:
-                        ratio = SequenceMatcher(lambda x: x==' ', s_pred[0], tup[0]).ratio() 
-                        if ratio > 0.75 and found.get(tup) is None:  # assuming that the string are similar enough
-                            saved_tups.append(tup)
-                
-                    for saved_tup in saved_tups:  # IF needed and LLM wont work, maybe add a simple list count of valid entries might be useful  
-                        ratio = SequenceMatcher(lambda x: x==' ', o_pred[0], saved_tup[1]).ratio() 
-
-                        if ratio > 0.75 and found.get(tup) is None:  # assuming that the string are similar enough 
-                            if saved_tup[2] == s_pred[1]:
-                                if saved_tup[2] in type_prediction.keys():
-                                    type_prediction[saved_tup[2]]['found'] += 1
-                                    type_prediction[saved_tup[2]]['existing'] += 1
-                                else:
-                                    type_prediction.update({saved_tup[2]: {'existing': 1, 'found':1}}) 
-                            else:
-                                if saved_tup[2] in type_prediction.keys():
-                                    type_prediction[saved_tup[2]]['existing'] += 1
-                                else:
-                                    type_prediction.update({saved_tup[2]: {'existing': 1, 'found':0}})
-
-                            if saved_tup[3] == o_pred[1]:
-                                if saved_tup[3] in type_prediction.keys():
-                                    type_prediction[saved_tup[3]]['found'] += 1
-                                    type_prediction[saved_tup[3]]['existing'] += 1
-                                else:
-                                    type_prediction.update({saved_tup[3]: {'existing': 1, 'found':1}}) 
-                            else:
-                                if saved_tup[3] in type_prediction.keys():
-                                    type_prediction[saved_tup[3]]['existing'] += 1
-                                else:
-                                    type_prediction.update({saved_tup[3]: {'existing': 1, 'found':0}})
-                            
-                            os_tp_flag = True
-                            s_class_name = saved_tup[2]
-                            found = remove_entry(remove=saved_tup, structure=found, mode='multiple')
-                            break
-                       
-
-                elif mode == 'perfect':
-                    # count up with perfect matches
-                    s_class_name = s_pred[1]
-                    for tup in reference:
-                        if tup[0] == s_pred[0] and found.get(tup) is None:
-                            if tup[1] == o_pred[0] and found.get(tup) is None:  
-                                if tup[2] == s_pred[1]:
-                                    if tup[2] in type_prediction.keys():
-                                        type_prediction[tup[2]]['found'] += 1
-                                        type_prediction[tup[2]]['existing'] += 1
-                                    else:
-                                        type_prediction.update({tup[2]: {'existing': 1, 'found':1}}) 
-                                else:
-                                    if tup[2] in type_prediction.keys():
-                                        type_prediction[tup[2]]['existing'] += 1
-                                    else:
-                                        type_prediction.update({tup[2]: {'existing': 1, 'found':0}})
-
-                                if tup[3] == o_pred[1]:
-                                    if tup[3] in type_prediction.keys():
-                                        type_prediction[tup[3]]['found'] += 1
-                                        type_prediction[tup[3]]['existing'] += 1
-                                    else:
-                                        type_prediction.update({tup[3]: {'existing': 1, 'found':1}}) 
-                                else:
-                                    if tup[3] in type_prediction.keys():
-                                        type_prediction[tup[3]]['existing'] += 1
-                                    else:
-                                        type_prediction.update({tup[3]: {'existing': 1, 'found':0}})
-                               
-                                os_tp_flag = True
-                                s_class_name = tup[2]
-                                found = remove_entry(remove=tup, structure=found, mode='multiple')
-                                break
-                        
-                elif mode in ('hard', 'soft'):
-                    # count up with llm prompts (hard cut)
-                    s_class_name = s_pred[1]
-                    for tup in reference:
-                        if found.get(tup) is None and 'y' in llm_query((s_pred[0], tup[0]), llm_log_path, mode):
-                            if found.get(tup) is None and 'y' in llm_query((o_pred[0], tup[1]), llm_log_path, mode):
-                                if tup[2] == s_pred[1]:
-                                    if tup[2] in type_prediction.keys():
-                                        type_prediction[tup[2]]['found'] += 1
-                                        type_prediction[tup[2]]['existing'] += 1
-                                    else:
-                                        type_prediction.update({tup[2]: {'existing': 1, 'found':1}}) 
-                                else:
-                                    if tup[2] in type_prediction.keys():
-                                        type_prediction[tup[2]]['existing'] += 1
-                                    else:
-                                        type_prediction.update({tup[2]: {'existing': 1, 'found':0}})
-
-                                if tup[3] == o_pred[1]:
-                                    if tup[3] in type_prediction.keys():
-                                        type_prediction[tup[3]]['found'] += 1
-                                        type_prediction[tup[3]]['existing'] += 1
-                                    else:
-                                        type_prediction.update({tup[3]: {'existing': 1, 'found':1}}) 
-                                else:
-                                    if tup[3] in type_prediction.keys():
-                                        type_prediction[tup[3]]['existing'] += 1
-                                    else:
-                                        type_prediction.update({tup[3]: {'existing': 1, 'found':0}})
-
-                                os_tp_flag = True
-                                s_class_name = tup[2]
-                                found = remove_entry(remove=tup, structure=found, mode='multiple')
-                                break
+                tp_flag, class_name, found, type_prediction = \
+                        mode_specific_counting((s_pred, o_pred), reference, type_prediction, llm_log_path, mode, found, single=False)
 
                 ## ---------- /count in different ways ----------- ##
-                pred_classes_dict = detailed_storage(s_class_name, pred_classes_dict, os_tp_flag)
+                pred_classes_dict = detailed_storage(class_name, pred_classes_dict, tp_flag)
 
     #------------- calculate and print total metrics -------------#
-    print(pred_classes_dict)
     class_eval = calculate_metrics_detailed(pred_classes_dict, pos_classes_dict, mode='class')
     class_df = pd.DataFrame.from_dict(data=class_eval, orient='index', columns=['F1', 'precision', 'recall'])
     class_df.to_csv(save_path)
@@ -817,7 +849,7 @@ def eval_subject_object_predicate_classes_tricks(text_entries, save_path, mode='
             reference = entry['annotations']
             reference = convert_annotation_to_triplet(reference)
             reference = [(triplet['triplet']['subject'].lower(), triplet['triplet']['predicate'], triplet['triplet']['object'].lower(), triplet['triplet']['s_class'], triplet['triplet']['o_class']) for triplet in reference]
-            reference = list(set(reference))
+            reference = ([next(b) for a, b in itertools.groupby(reference, lambda y: y[0])])
 
             #------- count the counter variables up ---------#
             for tup in reference:            
@@ -831,7 +863,8 @@ def eval_subject_object_predicate_classes_tricks(text_entries, save_path, mode='
             predictions_['content'] = [(triplet['subject']['label'].lower(), triplet['relation']['label'], triplet['object']['label'].lower(), triplet['subject']['s_class'], triplet['class_name']) for triplet in  predictions_['content']]
 
             # remove duplicates from the predictions 
-            predictions_['content'] = list(set(predictions_['content']))
+            predictions_['content'].sort()
+            predictions_['content']  = ([next(b) for a, b in itertools.groupby(predictions_['content'], lambda y: y[0])])
             # -------- main evaluation process ----------#
             for trips in predictions_['content']:
                 #----------- Extract the RDF tuples ----------#
@@ -887,7 +920,6 @@ def eval_subject_object_predicate_classes_tricks(text_entries, save_path, mode='
 
                   
     #------------- calculate and print total metrics -------------#
-    print(pred_classes_dict)
     class_eval = calculate_metrics_detailed(pred_classes_dict, gt_classes_dict, mode='class', with_n=True)
     class_df = pd.DataFrame.from_dict(data=class_eval, orient='index', columns=['F1', 'precision', 'recall', 'N'])
     class_df.to_csv(save_path)
