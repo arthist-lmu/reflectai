@@ -69,21 +69,7 @@ def detailed_storage(key, dct, s_tp_flag):
 def remove_entry(remove, structure, mode='single'):
     structure.update({remove:1})
     return structure
-    # if mode == 'single':
-    #     for triplet in structure:
-    #         if triplet[0] == remove:
-    #             return structure.remove(triplet)
-            
-    # elif mode == 'multiple':
-    #     for triplet in structure:
-    #         found_flag = True
-    #         for i, element in enumerate(triplet[:-2]):
-    #             if element != remove[i]:
-    #                 found_flag = False
-    #                 break
 
-    #         if found_flag:
-    #             return structure.remove(triplet)
 
 
 def calculate_metrics_detailed(pred_dict, pos_dict, mode='class', with_n=False):
@@ -184,6 +170,60 @@ def llm_query(predictions, save_path, mode='soft'):
     end = re.search('</think>', resp).end()
     return resp[end:]
 
+
+def calculate_metrics_df(pred_classes_dict, gt_classes_dict, save_path, save_types=None, type_prediction=None):
+    class_eval = calculate_metrics_detailed(pred_classes_dict, gt_classes_dict, mode='class')
+    class_df = pd.DataFrame.from_dict(data=class_eval, orient='index', columns=['F1', 'precision', 'recall'])
+    class_df.to_csv(save_path)
+
+    if save_types is not None and type_prediction is not None:
+        type_prediction_df = pd.DataFrame.from_dict(data=type_prediction, orient='index')
+        type_prediction_df["procentage"] = type_prediction_df['found'] / type_prediction_df['existing']
+        type_prediction_df.to_csv(save_types)
+
+
+def count_type_accuracy(tup, pred, type_prediction, single):
+    if single == '':
+        pred = pred[0]
+        if tup[1] == pred[1]:
+            if tup[1] in type_prediction.keys():
+                type_prediction[tup[1]]['found'] += 1
+                type_prediction[tup[1]]['existing'] += 1
+            else:
+                type_prediction.update({tup[1]: {'existing': 1, 'found':1}}) 
+        else:
+            if tup[1] in type_prediction.keys():
+                type_prediction[tup[1]]['existing'] += 1
+            else:
+                type_prediction.update({tup[1]: {'existing': 1, 'found':0}})
+    else:
+        s_pred = pred[0]
+        o_pred = pred[1]
+        if tup[2] == s_pred[1]:
+            if tup[2] in type_prediction.keys():
+                type_prediction[tup[2]]['found'] += 1
+                type_prediction[tup[2]]['existing'] += 1
+            else:
+                type_prediction.update({tup[2]: {'existing': 1, 'found':1}}) 
+        else:
+            if tup[2] in type_prediction.keys():
+                type_prediction[tup[2]]['existing'] += 1
+            else:
+                type_prediction.update({tup[2]: {'existing': 1, 'found':0}})
+
+        if tup[3] == o_pred[1]:
+            if tup[3] in type_prediction.keys():
+                type_prediction[tup[3]]['found'] += 1
+                type_prediction[tup[3]]['existing'] += 1
+            else:
+                type_prediction.update({tup[3]: {'existing': 1, 'found':1}}) 
+        else:
+            if tup[3] in type_prediction.keys():
+                type_prediction[tup[3]]['existing'] += 1
+            else:
+                type_prediction.update({tup[3]: {'existing': 1, 'found':0}}) 
+    
+    return type_prediction
 #-------------------------------------------------------------------------------#
 
 
@@ -480,22 +520,12 @@ def calc_word_distance(pred, reference, type_prediction, found, single):
                     saved_tup = tup
 
         if candidate[0] != '' and found.get(pred) is None:  # IF needed and LLM wont work, maybe add a simple list count of valid entries might be useful  
-            if saved_tup[1] == pred[1]:
-                if saved_tup[1] in type_prediction.keys():
-                    type_prediction[saved_tup[1]]['found'] += 1
-                    type_prediction[saved_tup[1]]['existing'] += 1
-                else:
-                    type_prediction.update({saved_tup[1]: {'existing': 1, 'found':1}}) 
-            else:
-                if saved_tup[1] in type_prediction.keys():
-                    type_prediction[saved_tup[1]]['existing'] += 1
-                else:
-                    type_prediction.update({saved_tup[1]: {'existing': 1, 'found':0}})
-
+            type_prediction = count_type_accuracy(tup, (pred, ), type_prediction, single)
             class_name = saved_tup[1]
             tp_flag = True
             found = remove_entry(remove=saved_tup, structure=found)
             # rather than removing items from the list, we have to save it in a dict and ignore if found 
+    
     elif single == 'c':
         s_pred = pred[0]
         o_pred = pred[1]
@@ -511,30 +541,7 @@ def calc_word_distance(pred, reference, type_prediction, found, single):
             ratio = SequenceMatcher(lambda x: x==' ', o_pred[0], saved_tup[1]).ratio() 
 
             if ratio > 0.75 and found.get(tup) is None:  # assuming that the string are similar enough 
-                if saved_tup[2] == s_pred[1]:
-                    if saved_tup[2] in type_prediction.keys():
-                        type_prediction[saved_tup[2]]['found'] += 1
-                        type_prediction[saved_tup[2]]['existing'] += 1
-                    else:
-                        type_prediction.update({saved_tup[2]: {'existing': 1, 'found':1}}) 
-                else:
-                    if saved_tup[2] in type_prediction.keys():
-                        type_prediction[saved_tup[2]]['existing'] += 1
-                    else:
-                        type_prediction.update({saved_tup[2]: {'existing': 1, 'found':0}})
-
-                if saved_tup[3] == o_pred[1]:
-                    if saved_tup[3] in type_prediction.keys():
-                        type_prediction[saved_tup[3]]['found'] += 1
-                        type_prediction[saved_tup[3]]['existing'] += 1
-                    else:
-                        type_prediction.update({saved_tup[3]: {'existing': 1, 'found':1}}) 
-                else:
-                    if saved_tup[3] in type_prediction.keys():
-                        type_prediction[saved_tup[3]]['existing'] += 1
-                    else:
-                        type_prediction.update({saved_tup[3]: {'existing': 1, 'found':0}})
-                
+                type_prediction = count_type_accuracy(tup, pred, type_prediction, single)
                 tp_flag = True
                 class_name = saved_tup[2]
                 found = remove_entry(remove=saved_tup, structure=found, mode='multiple')
@@ -571,20 +578,8 @@ def calc_perfect(pred=None, reference=None, type_prediction=None, found=None, si
             if tup[0] == pred[0] and found.get(tup) is None:
                 tp_flag = True
                 class_name = tup[1]
-                # what about the case where s_pred is actually part of the class just not in gt
                 found = remove_entry(remove=tup, structure=found)
-
-                if tup[1] == pred[1]:
-                    if tup[1] in type_prediction.keys():
-                        type_prediction[tup[1]]['found'] += 1
-                        type_prediction[tup[1]]['existing'] += 1
-                    else:
-                        type_prediction.update({tup[1]: {'existing': 1, 'found':1}}) 
-                else:
-                    if tup[1] in type_prediction.keys():
-                        type_prediction[tup[1]]['existing'] += 1
-                    else:
-                        type_prediction.update({tup[1]: {'existing': 1, 'found':0}}) 
+                type_prediction = count_type_accuracy(tup, (pred, ), type_prediction, single)
 
                 break
 
@@ -595,30 +590,8 @@ def calc_perfect(pred=None, reference=None, type_prediction=None, found=None, si
         class_name = s_pred[1]
         for tup in reference:
             if tup[0] == s_pred[0] and found.get(tup) is None:
-                if tup[1] == o_pred[0] and found.get(tup) is None:  
-                    if tup[2] == s_pred[1]:
-                        if tup[2] in type_prediction.keys():
-                            type_prediction[tup[2]]['found'] += 1
-                            type_prediction[tup[2]]['existing'] += 1
-                        else:
-                            type_prediction.update({tup[2]: {'existing': 1, 'found':1}}) 
-                    else:
-                        if tup[2] in type_prediction.keys():
-                            type_prediction[tup[2]]['existing'] += 1
-                        else:
-                            type_prediction.update({tup[2]: {'existing': 1, 'found':0}})
-
-                    if tup[3] == o_pred[1]:
-                        if tup[3] in type_prediction.keys():
-                            type_prediction[tup[3]]['found'] += 1
-                            type_prediction[tup[3]]['existing'] += 1
-                        else:
-                            type_prediction.update({tup[3]: {'existing': 1, 'found':1}}) 
-                    else:
-                        if tup[3] in type_prediction.keys():
-                            type_prediction[tup[3]]['existing'] += 1
-                        else:
-                            type_prediction.update({tup[3]: {'existing': 1, 'found':0}})
+                if tup[1] == o_pred[0] and found.get(tup) is None: 
+                    type_prediction = count_type_accuracy(tup, pred, type_prediction, single) 
                     
                     tp_flag = True
                     class_name = tup[2]
@@ -649,22 +622,12 @@ def calc_ollama(pred, reference, type_prediction, found, llm_log_path, mode, sin
         class_name = pred[1]
         for tup in reference:
             if found.get(pred) is None and 'y' in llm_query((pred[0], tup[0]), llm_log_path, mode):
-                if tup[1] == pred[1]:
-                    if tup[1] in type_prediction.keys():
-                        type_prediction[tup[1]]['found'] += 1
-                        type_prediction[tup[1]]['existing'] += 1
-                    else:
-                        type_prediction.update({tup[1]: {'existing': 1, 'found':1}}) 
-                else:
-                    if tup[1] in type_prediction.keys():
-                        type_prediction[tup[1]]['existing'] += 1
-                    else:
-                        type_prediction.update({tup[1]: {'existing': 1, 'found':0}})
-
+                type_prediction = count_type_accuracy(tup, (pred, ), type_prediction, single)
                 class_name = tup[1]
                 tp_flag = True
                 found = remove_entry(remove=tup, structure=found)
                 break
+
     elif single == 'c':
         s_pred = pred[0]
         o_pred = pred[1]
@@ -673,30 +636,7 @@ def calc_ollama(pred, reference, type_prediction, found, llm_log_path, mode, sin
         for tup in reference:
             if found.get(tup) is None and 'y' in llm_query((s_pred[0], tup[0]), llm_log_path, mode):
                 if found.get(tup) is None and 'y' in llm_query((o_pred[0], tup[1]), llm_log_path, mode):
-                    if tup[2] == s_pred[1]:
-                        if tup[2] in type_prediction.keys():
-                            type_prediction[tup[2]]['found'] += 1
-                            type_prediction[tup[2]]['existing'] += 1
-                        else:
-                            type_prediction.update({tup[2]: {'existing': 1, 'found':1}}) 
-                    else:
-                        if tup[2] in type_prediction.keys():
-                            type_prediction[tup[2]]['existing'] += 1
-                        else:
-                            type_prediction.update({tup[2]: {'existing': 1, 'found':0}})
-
-                    if tup[3] == o_pred[1]:
-                        if tup[3] in type_prediction.keys():
-                            type_prediction[tup[3]]['found'] += 1
-                            type_prediction[tup[3]]['existing'] += 1
-                        else:
-                            type_prediction.update({tup[3]: {'existing': 1, 'found':1}}) 
-                    else:
-                        if tup[3] in type_prediction.keys():
-                            type_prediction[tup[3]]['existing'] += 1
-                        else:
-                            type_prediction.update({tup[3]: {'existing': 1, 'found':0}})
-
+                    type_prediction = count_type_accuracy(tup, pred, type_prediction, single)
                     tp_flag = True
                     class_name = tup[2]
                     found = remove_entry(remove=tup, structure=found, mode='multiple')
@@ -745,9 +685,10 @@ def eval_subject_accuracy_classes_tricks(text_entries, save_path, save_types, mo
             reference = entry['annotations']
             reference = convert_annotation_to_triplet(reference)
             reference = [(triplet['triplet']['subject'].lower(), triplet['triplet']['s_class']) for triplet in reference]
+            # remove duplicates from the reference
             reference = ([next(b) for a, b in itertools.groupby(reference, lambda y: y[0])])
  
-            #------- count the counter variables up ---------#
+            #------- count the grounf truth up for each class ---------#
             for tup in reference:            
                 # count the occurences of all classes within the reference
                 if tup[1] not in gt_classes_dict.keys():
@@ -760,27 +701,19 @@ def eval_subject_accuracy_classes_tricks(text_entries, save_path, save_types, mo
 
             # remove duplicates from the predictions 
             predictions_['content'].sort()
-            predictions_['content']  = ([next(b) for a, b in itertools.groupby(predictions_['content'], lambda y: y[0])])    
+            predictions_['content'] = ([next(b) for a, b in itertools.groupby(predictions_['content'], lambda y: y[0])])    
  
             # -------- main evaluation process ----------#
             for trips in predictions_['content']:
-                #----------- Extract the RDF tuples ----------#
+                #---------- count the matches detailed in differnt ways -------------#
                 s_pred = trips
-
-                #---------- count the matches detailed -------------#
-                ##----------count in different ways-------##
                 tp_flag, class_name, found, type_prediction = \
                         mode_specific_counting((s_pred, ), reference, type_prediction, llm_log_path, mode, found, single='')
 
                 pred_classes_dict = detailed_storage(class_name, pred_classes_dict, tp_flag)
-    #------------- calculate and print total metrics -------------#
-    class_eval = calculate_metrics_detailed(pred_classes_dict, gt_classes_dict, mode='class')
-    class_df = pd.DataFrame.from_dict(data=class_eval, orient='index', columns=['F1', 'precision', 'recall'])
-    class_df.to_csv(save_path)
 
-    type_prediction_df = pd.DataFrame.from_dict(data=type_prediction, orient='index')
-    type_prediction_df["procentage"] = type_prediction_df['found'] / type_prediction_df['existing']
-    type_prediction_df.to_csv(save_types)
+    #------------- calculate metrics -------------#
+    calculate_metrics_df(pred_classes_dict, gt_classes_dict, save_path=save_path, save_types=save_types, type_prediction=type_prediction)
 
 
 def eval_object_accuracy_classes_tricks(text_entries, save_path, save_types, mode='word_distance', llm_log_path=None):
@@ -810,31 +743,22 @@ def eval_object_accuracy_classes_tricks(text_entries, save_path, save_types, mod
             # remove duplicates from the predictions 
             predictions_['content'].sort()
             predictions_['content']  = ([next(b) for a, b in itertools.groupby(predictions_['content'], lambda y: y[0])])        
-            # -------- main evaluation process ----------#
+            #-------- main evaluation process ----------#
             for trips in predictions_['content']:
-                #----------- Extract the RDF tuples ----------#
                 o_pred = trips
-                #---------- count the matches detailed -------------#
-                ##----------count in different ways-------##
                 tp_flag, class_name, found, type_prediction = \
                         mode_specific_counting((o_pred, ), reference, type_prediction, llm_log_path, mode, found, single='')
  
                 pred_classes_dict = detailed_storage(class_name, pred_classes_dict, tp_flag)
     
     #------------- calculate and print total metrics -------------#
-    class_eval = calculate_metrics_detailed(pred_classes_dict, gt_classes_dict, mode='class')
-    class_df = pd.DataFrame.from_dict(data=class_eval, orient='index', columns=['F1', 'precision', 'recall'])
-    class_df.to_csv(save_path)
-
-    type_prediction_df = pd.DataFrame.from_dict(data=type_prediction, orient='index')
-    type_prediction_df["procentage"] = type_prediction_df['found'] / type_prediction_df['existing']
-    type_prediction_df.to_csv(save_types)
+    calculate_metrics_df(pred_classes_dict, gt_classes_dict, save_path, save_types, type_prediction)
 
 
 def eval_subject_object_accuracy_classes_tricks(text_entries, save_path, save_types, mode='word_distance', llm_log_path=None):
     # evaluates the correctly found subjects only one of the three modes can be True
     pred_classes_dict = {}
-    pos_classes_dict = {}
+    gt_classes_dict = {}
     type_prediction = {}
     found = {}
 
@@ -843,21 +767,22 @@ def eval_subject_object_accuracy_classes_tricks(text_entries, save_path, save_ty
             reference = entry['annotations']
             reference = convert_annotation_to_triplet(reference)
             reference = [(triplet['triplet']['subject'].lower(), triplet['triplet']['object'].lower(), triplet['triplet']['s_class'], triplet['triplet']['o_class']) for triplet in reference]
-            reference = ([next(b) for a, b in itertools.groupby(reference, lambda y: y[0])])
+            seen = set()
+            reference = [(a, b, c, d) for a, b, c, d in reference if not ((a, b) in seen or seen.add((a, b)))]
             #------- count the counter variables up ---------#
             for tup in reference:            
                 # count the occurences of all classes within the reference
-                if tup[2] not in pos_classes_dict.keys():
-                    pos_classes_dict.update({tup[2]: 1})
+                if tup[2] not in gt_classes_dict.keys():
+                    gt_classes_dict.update({tup[2]: 1})
                 else:
-                    pos_classes_dict[tup[2]] += 1
+                    gt_classes_dict[tup[2]] += 1
 
             # maybe I could also use the objects from the reference as a metric
             predictions_['content'] = [(triplet['subject']['label'].lower(), triplet['object']['label'].lower(), triplet['subject']['s_class'], triplet['class_name']) for triplet in  predictions_['content']]
-
             # remove duplicates from the predictions 
             predictions_['content'].sort()
-            predictions_['content']  = ([next(b) for a, b in itertools.groupby(predictions_['content'], lambda y: y[0])]) 
+            seen = set()
+            predictions_['content'] = [(a, b, c, d) for a, b, c, d in predictions_['content'] if not ((a, b) in seen or seen.add((a, b)))]
             # -------- main evaluation process ----------#
             for trips in predictions_['content']:
                 #----------- Extract the RDF tuples ----------#
@@ -875,13 +800,7 @@ def eval_subject_object_accuracy_classes_tricks(text_entries, save_path, save_ty
                 pred_classes_dict = detailed_storage(class_name, pred_classes_dict, tp_flag)
 
     #------------- calculate and print total metrics -------------#
-    class_eval = calculate_metrics_detailed(pred_classes_dict, pos_classes_dict, mode='class')
-    class_df = pd.DataFrame.from_dict(data=class_eval, orient='index', columns=['F1', 'precision', 'recall'])
-    class_df.to_csv(save_path)
-
-    type_prediction_df = pd.DataFrame.from_dict(data=type_prediction, orient='index')
-    type_prediction_df["procentage"] = type_prediction_df['found'] / type_prediction_df['existing']
-    type_prediction_df.to_csv(save_types)
+    calculate_metrics_df(pred_classes_dict, gt_classes_dict, save_path, save_types, type_prediction)
 
 
 def eval_subject_object_predicate_classes_tricks(text_entries, save_path, mode='word_distance', llm_log_path=None):
@@ -895,7 +814,8 @@ def eval_subject_object_predicate_classes_tricks(text_entries, save_path, mode='
             reference = entry['annotations']
             reference = convert_annotation_to_triplet(reference)
             reference = [(triplet['triplet']['subject'].lower(), triplet['triplet']['predicate'], triplet['triplet']['object'].lower(), triplet['triplet']['s_class'], triplet['triplet']['o_class']) for triplet in reference]
-            reference = ([next(b) for a, b in itertools.groupby(reference, lambda y: y[0])])
+            seen = set()
+            reference = [(a, b, c, d, e) for a, b, c, d, e in reference if not ((a, b, c) in seen or seen.add((a, b, c)))]
             type_prediction = {}
             #------- count the counter variables up ---------#
             for tup in reference:            
@@ -910,7 +830,8 @@ def eval_subject_object_predicate_classes_tricks(text_entries, save_path, mode='
 
             # remove duplicates from the predictions 
             predictions_['content'].sort()
-            predictions_['content']  = ([next(b) for a, b in itertools.groupby(predictions_['content'], lambda y: y[0])])
+            seen = set()
+            predictions_['content'] = [(a, b, c, d, e) for a, b, c, d, e in predictions_['content'] if not ((a, b, c) in seen or seen.add((a, b, c)))]
             # -------- main evaluation process ----------#
             for trips in predictions_['content']:
                 #----------- Extract the RDF tuples ----------#
@@ -929,11 +850,7 @@ def eval_subject_object_predicate_classes_tricks(text_entries, save_path, mode='
 
                   
     #------------- calculate and print total metrics -------------#
-    class_eval = calculate_metrics_detailed(pred_classes_dict, gt_classes_dict, mode='class', with_n=True)
-    class_df = pd.DataFrame.from_dict(data=class_eval, orient='index', columns=['F1', 'precision', 'recall', 'N'])
-    class_df.to_csv(save_path)
-
-
+    calculate_metrics_df(pred_classes_dict, gt_classes_dict, save_path)
 
 ######################################################################################################################################################################
 
