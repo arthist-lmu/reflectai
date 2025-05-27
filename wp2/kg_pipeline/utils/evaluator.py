@@ -467,7 +467,7 @@ def eval_subject_object_predicate(text_entries, save_path, mode='word_distance',
 
 def calc_word_distance(pred, reference, type_prediction, found, single):
     tp_flag = False
-    if single:   
+    if single == '':   
         pred = pred[0] 
         candidate = ('', 0)
         class_name = pred[1]
@@ -496,7 +496,7 @@ def calc_word_distance(pred, reference, type_prediction, found, single):
             tp_flag = True
             found = remove_entry(remove=saved_tup, structure=found)
             # rather than removing items from the list, we have to save it in a dict and ignore if found 
-    else:
+    elif single == 'c':
         s_pred = pred[0]
         o_pred = pred[1]
         class_name = s_pred[1]
@@ -539,6 +539,24 @@ def calc_word_distance(pred, reference, type_prediction, found, single):
                 class_name = saved_tup[2]
                 found = remove_entry(remove=saved_tup, structure=found, mode='multiple')
                 break
+    else:
+        s_pred = pred[0]
+        o_pred = pred[1]
+        p_pred = pred[2]
+        class_name = p_pred
+        saved_tups = []
+        class_name = p_pred
+        for tup in reference:
+            ratio = SequenceMatcher(lambda x: x==' ', s_pred[0], tup[0]).ratio() 
+            if ratio > 0.75 and found.get(tup) is None:  # assuming that the string are similar enough
+                saved_tups.append(tup)
+        
+        for saved_tup in saved_tups:  # IF needed and LLM wont work, maybe add a simple list count of valid entries might be useful  
+            ratio = SequenceMatcher(lambda x: x==' ', o_pred[0], saved_tup[1]).ratio() 
+            if ratio > 0.75 and p_pred == saved_tup[1] and found.get(tup) is None:  # assuming that the string are similar enough 
+                tp_flag = True
+                class_name = saved_tup[1]
+                found = remove_entry(remove=saved_tup, structure=found, mode='multiple')
 
     return class_name, tp_flag, found
 
@@ -546,7 +564,7 @@ def calc_word_distance(pred, reference, type_prediction, found, single):
 def calc_perfect(pred=None, reference=None, type_prediction=None, found=None, single=None):
     # count up with perfect matches
     tp_flag = False
-    if single:
+    if single == '':
         pred = pred[0]
         class_name = pred[1]
         for tup in reference:
@@ -570,7 +588,7 @@ def calc_perfect(pred=None, reference=None, type_prediction=None, found=None, si
 
                 break
 
-    else:
+    elif single == 'c':
         # count up with perfect matches
         s_pred = pred[0]
         o_pred = pred[1]
@@ -606,6 +624,20 @@ def calc_perfect(pred=None, reference=None, type_prediction=None, found=None, si
                     class_name = tup[2]
                     found = remove_entry(remove=tup, structure=found, mode='multiple')
                     break
+    else:
+        # count up with perfect matches
+        s_pred = pred[0]
+        o_pred = pred[1]
+        p_pred = pred[2]
+        class_name = p_pred
+        for tup in reference:
+            if tup[0] == s_pred[0] and found.get(tup) is None:
+                if tup[1] == o_pred[0] and found.get(tup) is None:
+                    if p_pred == tup[1] and found.get(tup) is None:
+                        tp_flag = True
+                        class_name = tup[1]
+                        found = remove_entry(remove=tup, structure=found, mode='multiple')
+                        break
         
     return class_name, tp_flag, found
 
@@ -613,7 +645,7 @@ def calc_perfect(pred=None, reference=None, type_prediction=None, found=None, si
 def calc_ollama(pred, reference, type_prediction, found, llm_log_path, mode, single=True):
     # count up with llm prompts (hard cut)
     tp_flag = False
-    if single:    
+    if single == '':    
         class_name = pred[1]
         for tup in reference:
             if found.get(pred) is None and 'y' in llm_query((pred[0], tup[0]), llm_log_path, mode):
@@ -633,7 +665,7 @@ def calc_ollama(pred, reference, type_prediction, found, llm_log_path, mode, sin
                 tp_flag = True
                 found = remove_entry(remove=tup, structure=found)
                 break
-    else:
+    elif single == 'c':
         s_pred = pred[0]
         o_pred = pred[1]
         class_name = s_pred[1]
@@ -669,6 +701,21 @@ def calc_ollama(pred, reference, type_prediction, found, llm_log_path, mode, sin
                     class_name = tup[2]
                     found = remove_entry(remove=tup, structure=found, mode='multiple')
                     break
+    else:
+        # count up with llm prompts (hard cut)
+        s_pred = pred[0]
+        o_pred = pred[1]
+        p_pred = pred[2]
+        class_name = p_pred
+        class_name = p_pred
+        for tup in reference:
+            if  found.get(tup) is None and 'y' in llm_query((s_pred[0], tup[0]), llm_log_path, mode):
+                if found.get(tup) is None and 'y' in llm_query((o_pred[0], tup[1]), llm_log_path, mode):
+                    if p_pred == tup[1]  and found.get(tup) is None:
+                        tp_flag = True
+                        class_name = tup[1]
+                        found = remove_entry(remove=tup, structure=found, mode='multiple')
+                        break
 
     return class_name, tp_flag, found
 
@@ -684,7 +731,6 @@ def mode_specific_counting(pred, reference, type_prediction, llm_log_path, mode,
         class_name, tp_flag, found = calc_ollama(pred, reference, type_prediction, found, llm_log_path, mode, single)
 
     return tp_flag, class_name, found, type_prediction
-
 
 
 def eval_subject_accuracy_classes_tricks(text_entries, save_path, save_types, mode='word_distance', llm_log_path=None):
@@ -724,7 +770,7 @@ def eval_subject_accuracy_classes_tricks(text_entries, save_path, save_types, mo
                 #---------- count the matches detailed -------------#
                 ##----------count in different ways-------##
                 tp_flag, class_name, found, type_prediction = \
-                        mode_specific_counting((s_pred, ), reference, type_prediction, llm_log_path, mode, found)
+                        mode_specific_counting((s_pred, ), reference, type_prediction, llm_log_path, mode, found, single='')
 
                 pred_classes_dict = detailed_storage(class_name, pred_classes_dict, tp_flag)
     #------------- calculate and print total metrics -------------#
@@ -771,7 +817,7 @@ def eval_object_accuracy_classes_tricks(text_entries, save_path, save_types, mod
                 #---------- count the matches detailed -------------#
                 ##----------count in different ways-------##
                 tp_flag, class_name, found, type_prediction = \
-                        mode_specific_counting((o_pred, ), reference, type_prediction, llm_log_path, mode, found)
+                        mode_specific_counting((o_pred, ), reference, type_prediction, llm_log_path, mode, found, single='')
  
                 pred_classes_dict = detailed_storage(class_name, pred_classes_dict, tp_flag)
     
@@ -823,7 +869,7 @@ def eval_subject_object_accuracy_classes_tricks(text_entries, save_path, save_ty
                 tp_flag = False
                 ##----------count in different ways-------##
                 tp_flag, class_name, found, type_prediction = \
-                        mode_specific_counting((s_pred, o_pred), reference, type_prediction, llm_log_path, mode, found, single=False)
+                        mode_specific_counting((s_pred, o_pred), reference, type_prediction, llm_log_path, mode, found, single='c')
 
                 ## ---------- /count in different ways ----------- ##
                 pred_classes_dict = detailed_storage(class_name, pred_classes_dict, tp_flag)
@@ -850,7 +896,7 @@ def eval_subject_object_predicate_classes_tricks(text_entries, save_path, mode='
             reference = convert_annotation_to_triplet(reference)
             reference = [(triplet['triplet']['subject'].lower(), triplet['triplet']['predicate'], triplet['triplet']['object'].lower(), triplet['triplet']['s_class'], triplet['triplet']['o_class']) for triplet in reference]
             reference = ([next(b) for a, b in itertools.groupby(reference, lambda y: y[0])])
-
+            type_prediction = {}
             #------- count the counter variables up ---------#
             for tup in reference:            
                 # count the occurences of all classes within the reference
@@ -872,51 +918,14 @@ def eval_subject_object_predicate_classes_tricks(text_entries, save_path, mode='
                 s_pred = (trips[0], trips[3])
                 o_pred = (trips[2], trips[4])
                 p_pred = trips[1]
+                tp_flag = False
                 #---------- count the matches -------------#
-                os_tp_flag = False
                 ##----------count in different ways-------##
+                tp_flag, class_name, found, type_prediction = \
+                        mode_specific_counting((s_pred, o_pred, p_pred), reference, type_prediction, llm_log_path, mode, found, single='p')
                 
-                if mode == 'word_distance':
-                    saved_tups = []
-                    s_class_name = p_pred
-                    for tup in reference:
-                        ratio = SequenceMatcher(lambda x: x==' ', s_pred[0], tup[0]).ratio() 
-                        if ratio > 0.75 and found.get(tup) is None:  # assuming that the string are similar enough
-                            saved_tups.append(tup)
-                    
-                    for saved_tup in saved_tups:  # IF needed and LLM wont work, maybe add a simple list count of valid entries might be useful  
-                        ratio = SequenceMatcher(lambda x: x==' ', o_pred[0], saved_tup[1]).ratio() 
-                        if ratio > 0.75 and p_pred == saved_tup[1] and found.get(tup) is None:  # assuming that the string are similar enough 
-                            os_tp_flag = True
-                            s_class_name = saved_tup[1]
-                            found = remove_entry(remove=saved_tup, structure=found, mode='multiple')
-
-                elif mode == 'perfect':
-                    # count up with perfect matches
-                    s_class_name = p_pred
-                    for tup in reference:
-                        if tup[0] == s_pred[0] and found.get(tup) is None:
-                            if tup[1] == o_pred[0] and found.get(tup) is None:
-                                if p_pred == tup[1] and found.get(tup) is None:
-                                    os_tp_flag = True
-                                    s_class_name = tup[1]
-                                    found = remove_entry(remove=tup, structure=found, mode='multiple')
-                                    break
-                        
-                elif mode in ('hard', 'soft'):
-                    # count up with llm prompts (hard cut)
-                    s_class_name = p_pred
-                    for tup in reference:
-                        if  found.get(tup) is None and 'y' in llm_query((s_pred[0], tup[0]), llm_log_path, mode):
-                            if found.get(tup) is None and 'y' in llm_query((o_pred[0], tup[1]), llm_log_path, mode):
-                                if p_pred == tup[1]  and found.get(tup) is None:
-                                    os_tp_flag = True
-                                    s_class_name = tup[1]
-                                    found = remove_entry(remove=tup, structure=found, mode='multiple')
-                                    break
-
                 ## ---------- /count in different ways ----------- ##
-                pred_classes_dict = detailed_storage(s_class_name, pred_classes_dict, os_tp_flag)
+                pred_classes_dict = detailed_storage(class_name, pred_classes_dict, tp_flag)
 
                   
     #------------- calculate and print total metrics -------------#
