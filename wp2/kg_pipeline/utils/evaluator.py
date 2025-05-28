@@ -207,276 +207,414 @@ def count_type_accuracy(tup, pred, type_prediction, single):
 
 
 #---------------- evaluates the metrics for the entire dataset -----------------#
+def calc_word_distance_total(reference, pred, found, tp, single):
+    if single == '':
+        pred = pred[0]
+        candidate = ('', 0)
+        for tup in reference:
+            ratio = SequenceMatcher(lambda x: x==' ', pred[0], tup[0]).ratio() 
+            if ratio > 0.75:  # assuming that the string are similar enough
+                if candidate[1] < ratio:
+                    candidate = (tup[0], ratio)
+                    saved_tup = tup
 
-def eval_subject_accuracy(text_entries, save_path, mode='word_distance', llm_log_path=None):
-    # evaluates the correctly found subjects only one of the three modes can be True
-    s_tp = s_total_pos = s_total_pre = 0
+        if candidate[0] != ''  and found.get(tup) is None:  # IF needed and LLM wont work, maybe add a simple list count of valid entries might be useful  
+            tp += 1
+            found = remove_entry(remove=saved_tup, structure=found)
 
-    for entry in text_entries:
-        for predictions_ in entry['triplets']:
-            reference = entry['annotations']
-            reference = convert_annotation_to_triplet(reference)
-            reference = [(triplet['triplet']['subject'].lower(),) for triplet in reference]
-            reference = list(set(reference))
-
-            #------- count the counter variables up ---------#
-            s_total_pos += len(reference)
-
-            predictions_['content'] = [(triplet['subject']['label'].lower(),) for triplet in  predictions_['content']]
-
-            # remove duplicates from the predictions 
-            #predictions_['content'] = [i for n, i in enumerate(predictions_['content']) if i not in predictions_['content'][n + 1:]]
-            predictions_['content'] = list(set(predictions_['content']))
-            # -------- main evaluation process ----------#
-            for trips in predictions_['content']:
-                s_total_pre += 1
-            
-                #----------- Extract the RDF tuples ----------#
-                s_pred = trips
-
-                #---------- count the matches -------------#
-                ##----------count in different ways-------#
-
-                if mode == 'word_distance':
-                    candidate = ('', 0)
-                    for tup in reference:
-                        ratio = SequenceMatcher(lambda x: x==' ', s_pred[0], tup[0]).ratio() 
-                        if ratio > 0.75:  # assuming that the string are similar enough
-                            if candidate[1] < ratio:
-                                candidate = (tup[0], ratio)
-       
-                    if candidate[0] != '':  # IF needed and LLM wont work, maybe add a simple list count of valid entries might be useful  
-                        remove_entry(remove=candidate[0], structure=reference)
-                
-                elif mode == 'perfect':
-                    # count up with perfect matches
-                    for tup in reference:
-                        if tup[0] == s_pred[0]:
-                            s_tp += 1
-                            remove_entry(remove=s_pred[0], structure=reference)
-                            break
-                      
-                elif mode == ('hard', 'soft'):
-                    # count up with llm prompts (hard cut)
-                    for tup in reference:
-                        if 'y' in llm_query((s_pred[0], tup[0]), llm_log_path, mode): # '/nfs/home/ritterd/reflect/reflectai/wp2/test/gollie_testset/mitschrift_subjekt.json'
-                            s_tp += 1
-                            remove_entry(remove=s_pred[0], structure=reference)
-                            break
-
-                ## ---------- /count in different ways ----------- ##
-
-    s_scores = calculate_metrics(s_tp, s_total_pre, s_total_pos)
-
-    s_scores.to_csv(save_path) # '../test/gollie_testset/subjects/subject_eval.csv')
-
-
-def eval_object_accuracy(text_entries, save_path, mode='word_distance', llm_log_path=None):
-    # evaluates the correctly found subjects only one of the three modes can be True
-    o_tp = o_total_pos = o_total_pre = 0
-
-    for entry in text_entries:
-        for predictions_ in entry['triplets']:
-            reference = entry['annotations']
-            reference = convert_annotation_to_triplet(reference)
-            reference = [(triplet['triplet']['object'].lower(), ) for triplet in reference]
-            reference = list(set(reference))
-
-            #------- count the counter variables up ---------#
-            o_total_pos += len(reference)
-
-            # maybe I could also use the objects from the reference as a metric
-            predictions_['content'] = [(triplet['object']['label'].lower(),) for triplet in  predictions_['content']]
-
-            # remove duplicates from the predictions 
-            predictions_['content'] = list(set(predictions_['content']))
-            # -------- main evaluation process ----------#
-            for trips in predictions_['content']:
-                o_total_pre += 1
-            
-                #----------- Extract the RDF tuples ----------#
-                o_pred = trips[0]
-
-                #---------- count the matches -------------#
-                ##----------count in different ways-------##
-                
-                if mode == 'word_distance':
-                    candidate = ('', 0, None)
-                    for tup in reference:
-                        ratio = SequenceMatcher(lambda x: x==' ', o_pred, tup[0]).ratio() 
-                        if ratio > 0.75:  # assuming that the string are similar enough
-                            if candidate[1] < ratio:
-                                candidate = (tup[0], ratio)
-                    
-                    if candidate[0] != '':  # IF needed and LLM wont work, maybe add a simple list count of valid entries might be useful  
-                        o_tp += 1
-
-                        remove_entry(remove=candidate[0], structure=reference)
-
-                elif mode == 'perfect':
-                    # count up with perfect matches
-                    for tup in reference:
-                        if tup[0] == o_pred:
-                            o_tp += 1
-                            remove_entry(remove=o_pred, structure=reference)
-                            break
-                        
-                elif mode in ('hard', 'soft'):
-                    # count up with llm prompts (hard cut)
-                    for tup in reference:
-                        if 'y' in llm_query((o_pred, tup[0]), llm_log_path, mode):
-                            o_tp += 1
-                            remove_entry(remove=o_pred, structure=reference)
-                            break
-
-                ## ---------- /count in different ways ----------- ##
-
-    o_scores = calculate_metrics(o_tp, o_total_pre, o_total_pos)
-    o_scores.to_csv(save_path) #'../test/gollie_testset/objects/object_eval.csv')
-
-
-def eval_subject_object_accuracy(text_entries, save_path, mode='word_distance', llm_log_path=None):
-    # evaluates the correctly found subjects only one of the three modes can be True
-    os_tp = os_total_pos = os_total_pre = 0
-
-    for entry in text_entries:
-        for predictions_ in entry['triplets']:
-            reference = entry['annotations']
-            reference = convert_annotation_to_triplet(reference)
-            reference = [(triplet['triplet']['subject'].lower(), triplet['triplet']['object'].lower(), triplet['triplet']['s_class'], triplet['triplet']['o_class']) for triplet in reference]
-            reference = list(set(reference))
-
-            #------- count the counter variables up ---------#
-            os_total_pos += len(reference)
-
-            # maybe I could also use the objects from the reference as a metric
-            predictions_['content'] = [(triplet['subject']['label'].lower(), triplet['object']['label'].lower(), triplet['subject']['s_class'], triplet['class_name']) for triplet in predictions_['content']]
-
-            # remove duplicates from the predictions 
-            predictions_['content'] = list(set(predictions_['content']))
-            # -------- main evaluation process ----------#
-            for trips in predictions_['content']:
-                os_total_pre += 1
-            
-                #----------- Extract the RDF tuples ----------#
-                s_pred = trips[0]
-                o_pred = trips[1]
-
-                #---------- count the matches -------------#
-                ##----------count in different ways-------##
-                
-                if mode == 'word_distance':
-                    candidate = ('', 0)
-                    saved_tup = ()
-                    for tup in reference:
-                        ratio = SequenceMatcher(lambda x: x==' ', s_pred, tup[0]).ratio() 
-                        if ratio > 0.75:  # assuming that the string are similar enough
-                            if candidate[1] < ratio:
-                                candidate = (tup[0], ratio)
-                                saved_tup = tup
-                    
-                    if candidate[0] != '':  # IF needed and LLM wont work, maybe add a simple list count of valid entries might be useful  
-                        ratio = SequenceMatcher(lambda x: x==' ', o_pred, saved_tup[1]).ratio() 
-                        if ratio > 0.75:  # assuming that the string are similar enough 
-                            os_tp += 1
-                            remove_entry(remove=(saved_tup[0], saved_tup[1]), structure=reference, mode='multiple')
-
-                elif mode == 'perfect':
-                    # count up with perfect matches
-                    for tup in reference:
-                        if tup[0] == s_pred:
-                            if tup[1] == o_pred:
-                                os_tp += 1
-                                remove_entry(remove=(s_pred, o_pred), structure=reference, mode='multiple')
-                                break
-                            
-                elif mode in  ('hard', 'soft'):
-                    # count up with llm prompts (soft cut)
-                    for tup in reference:
-                        if 'y' in llm_query((s_pred, tup[0]), llm_log_path, mode): #'/nfs/home/ritterd/reflect/reflectai/wp2/test/gollie_testset/mitschrift_subjekt_objekt.json'
-                            if 'y' in llm_query((o_pred, tup[1]), llm_log_path, mode):
-                                os_tp += 1
-                                remove_entry(remove=(s_pred, o_pred), structure=reference, mode='multiple')
-                                break
-
-                ## ---------- /count in different ways ----------- ##
-
-    s_scores = calculate_metrics(os_tp, os_total_pre, os_total_pos)
-    s_scores.to_csv(save_path) #'../test/gollie_testset/subject_object/subject_object_eval.csv'
-
-
-def eval_subject_object_predicate(text_entries, save_path, mode='word_distance', llm_log_path=None):
-    # evaluates the correctly found subjects only one of the three modes can be True
-    p_tp = p_total_pos = p_total_pre = 0
+    elif single == 'c':
+        s_pred = pred[0]
+        o_pred = pred[1]
+        candidate = ('', 0)
+        saved_tups = []
+        for tup in reference:
+            ratio = SequenceMatcher(lambda x: x==' ', s_pred[0], tup[0]).ratio() 
+            if ratio > 0.75 and found.get(tup) is None:  # assuming that the string are similar enough
+                saved_tups.append(tup)
     
+        for saved_tup in saved_tups:  # IF needed and LLM wont work, maybe add a simple list count of valid entries might be useful  
+            ratio = SequenceMatcher(lambda x: x==' ', o_pred[0], saved_tup[1]).ratio() 
+
+            if ratio > 0.75 and found.get(tup) is None:  # assuming that the string are similar enough 
+                tp += 1
+                found = remove_entry(remove=saved_tup, structure=found, mode='multiple')
+                break
+
+    elif single == 'p':
+        s_pred = pred[0]
+        o_pred = pred[1]
+        p_pred = pred[2]
+        candidate = ('', 0)
+        saved_tups = []
+        for tup in reference:
+            ratio = SequenceMatcher(lambda x: x==' ', s_pred[0], tup[0]).ratio() 
+            if ratio > 0.75 and found.get(tup) is None:  # assuming that the string are similar enough
+                saved_tups.append(tup)
+        
+        for saved_tup in saved_tups:  # IF needed and LLM wont work, maybe add a simple list count of valid entries might be useful  
+            ratio = SequenceMatcher(lambda x: x==' ', o_pred[0], saved_tup[1]).ratio() 
+            if ratio > 0.75 and p_pred == saved_tup[1] and found.get(tup) is None:  # assuming that the string are similar enough 
+                p_tp += 1
+                found = remove_entry(remove=saved_tup, structure=found, mode='multiple')
+                break
+
+    return tp, found
+
+
+def calc_perfect_total(reference, pred, found, tp, single):
+    if single == '':
+        pred = pred[0]
+        for tup in reference:
+            if tup[0] == pred[0]:
+                tp += 1
+                found = remove_entry(remove=tup, structure=found)
+                break
+
+    elif single == 'c':
+    # count up with perfect matches
+        s_pred = pred[0]
+        o_pred = pred[1]
+        for tup in reference:
+            if tup[0] == s_pred:
+                if tup[1] == o_pred:
+                    tp += 1
+                    found = remove_entry(remove=tup, structure=found, mode='multiple')
+                    break
+
+    elif single == 'p':
+        s_pred = pred[0]
+        o_pred = pred[1]
+        p_pred = pred[2]
+        for tup in reference:
+            if tup[0] == s_pred:
+                if tup[2] == o_pred:
+                    if tup[1] == p_pred:
+                        tp += 1
+                        found = remove_entry(remove=tup, structure=found, mode='multiple')
+                        break
+
+    return tp, found
+
+
+def calc_ollama_total(reference, pred, llm_log_path, mode, found, tp, single):
+    if single == '':
+        for tup in reference:
+            if 'y' in llm_query((pred[0], tup[0]), llm_log_path, mode): # '/nfs/home/ritterd/reflect/reflectai/wp2/test/gollie_testset/mitschrift_subjekt.json'
+                tp += 1
+                found = remove_entry(remove=tup, structure=found)
+                break
+
+    elif single == 'c':
+        # count up with llm prompts (soft cut)
+        for tup in reference:
+            if 'y' in llm_query((pred, tup[0]), llm_log_path, mode): #'/nfs/home/ritterd/reflect/reflectai/wp2/test/gollie_testset/mitschrift_subjekt_objekt.json'
+                if 'y' in llm_query((pred, tup[1]), llm_log_path, mode):
+                    tp += 1
+                    found = remove_entry(remove=tup, structure=found)
+                    break
+
+    elif single == 'p':
+        s_pred = pred[0]
+        o_pred = pred[1]
+        p_pred = pred[2]
+        # count up with llm prompts (hard cut)
+        for tup in reference:
+            if 'y' in llm_query((s_pred, tup[0]), llm_log_path, mode): #'/nfs/home/ritterd/reflect/reflectai/wp2/test/gollie_testset/mitschrift_subjekt_objekt_prädikat.json'
+                if 'y' in llm_query((o_pred, tup[2]), llm_log_path, mode):
+                    # since the predicates are hardcoded there is no need for the llm
+                    if tup[1] == p_pred:  
+                        tp += 1
+                        found = remove_entry(remove=tup, structure=found, mode='multiple')
+                        break
+
+    return tp, found
+
+
+def mode_specific_counting_total(pred, reference, llm_log_path, mode, found, single, tp):
+    if mode == 'word_distance':
+        tp, found = calc_word_distance_total(reference, pred, found, tp, single)
+    
+    elif mode == 'perfect':
+        tp, found = calc_perfect_total(reference, pred, found, tp, single)
+            
+    elif mode == ('hard', 'soft'):
+        tp, found = calc_ollama_total(reference, pred, llm_log_path, mode, found, tp, single)
+
+    return tp, found
+
+
+def eval_subject_accuracy(text_entries, save_path, mode='word_distance', llm_log_path=None, eval='subject'):
+    # evaluates the correctly found subjects only one of the three modes can be True
+    tp = total_pos = total_pre = 0
+    found = {}
+
     for entry in text_entries:
         for predictions_ in entry['triplets']:
             reference = entry['annotations']
             reference = convert_annotation_to_triplet(reference)
-            reference = [(triplet['triplet']['subject'].lower(), triplet['triplet']['predicate'], triplet['triplet']['object'].lower(), triplet['triplet']['s_class'], triplet['triplet']['o_class']) for triplet in reference]
-            reference = list(set(reference))
+            if eval == 'subject':
+                reference = [(triplet['triplet']['subject'].lower(),) for triplet in reference]
+                reference = list(set(reference))
+                predictions_['content'] = [(triplet['subject']['label'].lower(),) for triplet in  predictions_['content']]
+                predictions_['content'] = list(set(predictions_['content']))
+ 
+            elif eval == 'object':
+                reference = [(triplet['triplet']['object'].lower(), ) for triplet in reference]
+                reference = list(set(reference))
+                predictions_['content'] = [(triplet['object']['label'].lower(),) for triplet in  predictions_['content']]
+                predictions_['content'] = list(set(predictions_['content']))
+            
+            elif eval == 'subject_object':
+                reference = [(triplet['triplet']['subject'].lower(), triplet['triplet']['object'].lower(), triplet['triplet']['s_class'], triplet['triplet']['o_class']) for triplet in reference]
+                seen = set()
+                reference = [(a, b, c, d) for a, b, c, d in reference if not ((a, b) in seen or seen.add((a, b)))]
+                predictions_['content'] = [(triplet['subject']['label'].lower(), triplet['object']['label'].lower(), triplet['subject']['s_class'], triplet['class_name']) for triplet in predictions_['content']]
+                predictions_['content'].sort()
+                seen = set()
+                predictions_['content'] = [(a, b, c, d) for a, b, c, d in predictions_['content'] if not ((a, b) in seen or seen.add((a, b)))]
+           
+            elif eval == 'subject_object_predicate':
+                reference = [(triplet['triplet']['subject'].lower(), triplet['triplet']['predicate'], triplet['triplet']['object'].lower(), triplet['triplet']['s_class'], triplet['triplet']['o_class']) for triplet in reference]
+                seen = set()
+                reference = [(a, b, c, d, e) for a, b, c, d, e in reference if not ((a, b, c) in seen or seen.add((a, b, c)))]
+                predictions_['content'] = [(triplet['subject']['label'].lower(), triplet['relation']['label'], triplet['object']['label'].lower(), triplet['subject']['s_class'], triplet['class_name']) for triplet in  predictions_['content']]
+                predictions_['content'].sort()
+                seen = set()
+                predictions_['content'] = [(a, b, c, d, e) for a, b, c, d, e in predictions_['content'] if not ((a, b, c) in seen or seen.add((a, b, c)))]
 
             #------- count the counter variables up ---------#
-            p_total_pos += len(reference)
-            # maybe I could also use the objects from the reference as a metric
-            predictions_['content'] = [(triplet['subject']['label'].lower(), triplet['relation']['label'], triplet['object']['label'].lower(), triplet['subject']['s_class'], triplet['class_name']) for triplet in  predictions_['content']]
-
-            # remove duplicates from the predictions 
-            predictions_['content'] = list(set(predictions_['content']))
+            total_pos += len(reference)
+            
             # -------- main evaluation process ----------#
             for trips in predictions_['content']:
-                p_total_pre += 1
+                total_pre += 1
+                if eval in ('subject', 'object'):
+                    pred = trips
+                    tp, found = mode_specific_counting_total(pred=(pred, ), reference=reference, llm_log_path=llm_log_path, mode=mode, found=found, single='', tp=tp)
+                elif eval == 'subject_object':
+                    s_pred = (trips[0], trips[2])
+                    o_pred = (trips[1], trips[3])
+                    tp, found = mode_specific_counting_total(pred=(s_pred, o_pred), reference=reference, llm_log_path=llm_log_path, mode=mode, found=found, single='c', tp=tp)
+                elif eval == 'subject_object_predicate':
+                    s_pred = (trips[0], trips[3])
+                    o_pred = (trips[2], trips[4])
+                    p_pred = trips[1]
+                    tp, found = mode_specific_counting_total(pred=(s_pred, o_pred, p_pred), reference=reference, llm_log_path=llm_log_path, mode=mode, found=found, single='p', tp=tp)         
+    
+    # ------------- calculate metrics -------------#
+    scores = calculate_metrics(tp, total_pre, total_pos)
+    scores.to_csv(save_path) # '../test/gollie_testset/subjects/subject_eval.csv')
+
+
+# def eval_object_accuracy(text_entries, save_path, mode='word_distance', llm_log_path=None, eval):
+#     # evaluates the correctly found subjects only one of the three modes can be True
+#     o_tp = o_total_pos = o_total_pre = 0
+#     for entry in text_entries:
+#         for predictions_ in entry['triplets']:
+#             reference = entry['annotations']
+#             reference = convert_annotation_to_triplet(reference)
+#             if eval == 'subject':
+#                 reference = [(triplet['triplet']['object'].lower(), ) for triplet in reference]
+#                 reference = list(set(reference))
+#                 predictions = [(triplet['subject']['label'].lower(), triplet['subject']['s_class']) for triplet in predictions]
+#                 predictions.sort()
+#                 predictions = ([next(b) for a, b in itertools.groupby(predictions, lambda y: y[0])]) 
+
+#             #------- count the counter variables up ---------#
+#             o_total_pos += len(reference)
+
+#             # maybe I could also use the objects from the reference as a metric
+#             predictions_['content'] = [(triplet['object']['label'].lower(),) for triplet in  predictions_['content']]
+
+#             # remove duplicates from the predictions 
+#             predictions_['content'] = list(set(predictions_['content']))
+#             # -------- main evaluation process ----------#
+#             for trips in predictions_['content']:
+#                 o_total_pre += 1
             
-                #----------- Extract the RDF tuples ----------#
-                s_pred = trips[0]
-                p_pred = trips[1]
-                o_pred = trips[2]
+#                 #----------- Extract the RDF tuples ----------#
+#                 o_pred = trips[0]
 
-                #---------- count the matches -------------#
-                ##----------count in different ways-------##
-                if mode == 'word_distance':
-                    candidate = ('', 0)
-                    saved_tup = ()
-                    for tup in reference:
-                        ratio = SequenceMatcher(lambda x: x==' ', s_pred, tup[0]).ratio() 
-                        if ratio > 0.75:  # assuming that the string are similar enough
-                            if candidate[1] < ratio:
-                                candidate = (tup[0], ratio)
-                                saved_tup = tup
+#                 #---------- count the matches -------------#
+#                 ##----------count in different ways-------##
+                
+#                 if mode == 'word_distance':
+#                     candidate = ('', 0, None)
+#                     for tup in reference:
+#                         ratio = SequenceMatcher(lambda x: x==' ', o_pred, tup[0]).ratio() 
+#                         if ratio > 0.75:  # assuming that the string are similar enough
+#                             if candidate[1] < ratio:
+#                                 candidate = (tup[0], ratio)
                     
-                    if candidate[0] != '':  # IF needed and LLM wont work, maybe add a simple list count of valid entries might be useful  
-                        ratio = SequenceMatcher(lambda x: x==' ', o_pred, saved_tup[2]).ratio() 
-                        if ratio > 0.75:  # assuming that the string are similar enough
-                            ratio = SequenceMatcher(lambda x: x==' ', p_pred, saved_tup[1]).ratio() 
-                            if ratio > 0.75:  # assuming that the string are similar enough
-                                p_tp += 1
-                                remove_entry(remove=(saved_tup[0], saved_tup[1], saved_tup[2]), structure=reference, mode='multiple')
+#                     if candidate[0] != '':  # IF needed and LLM wont work, maybe add a simple list count of valid entries might be useful  
+#                         o_tp += 1
 
-                elif mode == 'perfect':
-                    # count up with perfect matches
-                    for tup in reference:
-                        if tup[0] == s_pred:
-                            if tup[2] == o_pred:
-                                if tup[1] == p_pred:
-                                    p_tp += 1
-                                    remove_entry(remove=(s_pred, p_pred, o_pred), structure=reference, mode='multiple')
-                                    break
+#                         remove_entry(remove=candidate[0], structure=reference)
+
+#                 elif mode == 'perfect':
+#                     # count up with perfect matches
+#                     for tup in reference:
+#                         if tup[0] == o_pred:
+#                             o_tp += 1
+#                             remove_entry(remove=o_pred, structure=reference)
+#                             break
                         
-                elif mode in ('hard', 'soft'):
-                    # count up with llm prompts (hard cut)
-                    for tup in reference:
-                        if 'y' in llm_query((s_pred, tup[0]), llm_log_path, mode): #'/nfs/home/ritterd/reflect/reflectai/wp2/test/gollie_testset/mitschrift_subjekt_objekt_prädikat.json'
-                            if 'y' in llm_query((o_pred, tup[2]), llm_log_path, mode):
-                                # since the predicates are hardcoded there is no need for the llm
-                                if tup[1] == p_pred:  
-                                    p_tp += 1
-                                    remove_entry(remove=(tup[0], tup[1], tup[2]), structure=reference, mode='multiple')
-                                    break
+#                 elif mode in ('hard', 'soft'):
+#                     # count up with llm prompts (hard cut)
+#                     for tup in reference:
+#                         if 'y' in llm_query((o_pred, tup[0]), llm_log_path, mode):
+#                             o_tp += 1
+#                             remove_entry(remove=o_pred, structure=reference)
+#                             break
 
-                ## ---------- /count in different ways ----------- ##
-    #------------- calculate and print total metrics -------------#
-    s_scores = calculate_metrics(p_tp, p_total_pre, p_total_pos)
-    s_scores.to_csv(save_path)
+#                 ## ---------- /count in different ways ----------- ##
+
+#     o_scores = calculate_metrics(o_tp, o_total_pre, o_total_pos)
+#     o_scores.to_csv(save_path) #'../test/gollie_testset/objects/object_eval.csv')
+
+
+# def eval_subject_object_accuracy(text_entries, save_path, mode='word_distance', llm_log_path=None):
+#     # evaluates the correctly found subjects only one of the three modes can be True
+#     os_tp = os_total_pos = os_total_pre = 0
+
+#     for entry in text_entries:
+#         for predictions_ in entry['triplets']:
+#             reference = entry['annotations']
+#             reference = convert_annotation_to_triplet(reference)
+#             reference = [(triplet['triplet']['subject'].lower(), triplet['triplet']['object'].lower(), triplet['triplet']['s_class'], triplet['triplet']['o_class']) for triplet in reference]
+#             reference = list(set(reference))
+
+#             #------- count the counter variables up ---------#
+#             os_total_pos += len(reference)
+
+#             # maybe I could also use the objects from the reference as a metric
+#             predictions_['content'] = [(triplet['subject']['label'].lower(), triplet['object']['label'].lower(), triplet['subject']['s_class'], triplet['class_name']) for triplet in predictions_['content']]
+
+#             # remove duplicates from the predictions 
+#             predictions_['content'] = list(set(predictions_['content']))
+#             # -------- main evaluation process ----------#
+#             for trips in predictions_['content']:
+#                 os_total_pre += 1
+            
+#                 #----------- Extract the RDF tuples ----------#
+#                 s_pred = trips[0]
+#                 o_pred = trips[1]
+
+#                 #---------- count the matches -------------#
+#                 ##----------count in different ways-------##
+                
+#                 if mode == 'word_distance':
+#                     candidate = ('', 0)
+#                     saved_tup = ()
+#                     for tup in reference:
+#                         ratio = SequenceMatcher(lambda x: x==' ', s_pred, tup[0]).ratio() 
+#                         if ratio > 0.75:  # assuming that the string are similar enough
+#                             if candidate[1] < ratio:
+#                                 candidate = (tup[0], ratio)
+#                                 saved_tup = tup
+                    
+#                     if candidate[0] != '':  # IF needed and LLM wont work, maybe add a simple list count of valid entries might be useful  
+#                         ratio = SequenceMatcher(lambda x: x==' ', o_pred, saved_tup[1]).ratio() 
+#                         if ratio > 0.75:  # assuming that the string are similar enough 
+#                             os_tp += 1
+#                             remove_entry(remove=(saved_tup[0], saved_tup[1]), structure=reference, mode='multiple')
+
+#                 elif mode == 'perfect':
+#                     # count up with perfect matches
+#                     for tup in reference:
+#                         if tup[0] == s_pred:
+#                             if tup[1] == o_pred:
+#                                 os_tp += 1
+#                                 remove_entry(remove=(s_pred, o_pred), structure=reference, mode='multiple')
+#                                 break
+                            
+#                 elif mode in  ('hard', 'soft'):
+#                     # count up with llm prompts (soft cut)
+#                     for tup in reference:
+#                         if 'y' in llm_query((s_pred, tup[0]), llm_log_path, mode): #'/nfs/home/ritterd/reflect/reflectai/wp2/test/gollie_testset/mitschrift_subjekt_objekt.json'
+#                             if 'y' in llm_query((o_pred, tup[1]), llm_log_path, mode):
+#                                 os_tp += 1
+#                                 remove_entry(remove=(s_pred, o_pred), structure=reference, mode='multiple')
+#                                 break
+
+#                 ## ---------- /count in different ways ----------- ##
+
+#     s_scores = calculate_metrics(os_tp, os_total_pre, os_total_pos)
+#     s_scores.to_csv(save_path) #'../test/gollie_testset/subject_object/subject_object_eval.csv'
+
+
+# def eval_subject_object_predicate(text_entries, save_path, mode='word_distance', llm_log_path=None):
+#     # evaluates the correctly found subjects only one of the three modes can be True
+#     p_tp = p_total_pos = p_total_pre = 0
+    
+#     for entry in text_entries:
+#         for predictions_ in entry['triplets']:
+#             reference = entry['annotations']
+#             reference = convert_annotation_to_triplet(reference)
+#             reference = [(triplet['triplet']['subject'].lower(), triplet['triplet']['predicate'], triplet['triplet']['object'].lower(), triplet['triplet']['s_class'], triplet['triplet']['o_class']) for triplet in reference]
+#             reference = list(set(reference))
+
+#             #------- count the counter variables up ---------#
+#             p_total_pos += len(reference)
+#             # maybe I could also use the objects from the reference as a metric
+#             predictions_['content'] = [(triplet['subject']['label'].lower(), triplet['relation']['label'], triplet['object']['label'].lower(), triplet['subject']['s_class'], triplet['class_name']) for triplet in  predictions_['content']]
+
+#             # remove duplicates from the predictions 
+#             predictions_['content'] = list(set(predictions_['content']))
+#             # -------- main evaluation process ----------#
+#             for trips in predictions_['content']:
+#                 p_total_pre += 1
+            
+#                 #----------- Extract the RDF tuples ----------#
+#                 s_pred = trips[0]
+#                 p_pred = trips[1]
+#                 o_pred = trips[2]
+
+#                 #---------- count the matches -------------#
+#                 ##----------count in different ways-------##
+#                 if mode == 'word_distance':
+#                     candidate = ('', 0)
+#                     saved_tup = ()
+#                     for tup in reference:
+#                         ratio = SequenceMatcher(lambda x: x==' ', s_pred, tup[0]).ratio() 
+#                         if ratio > 0.75:  # assuming that the string are similar enough
+#                             if candidate[1] < ratio:
+#                                 candidate = (tup[0], ratio)
+#                                 saved_tup = tup
+                    
+#                     if candidate[0] != '':  # IF needed and LLM wont work, maybe add a simple list count of valid entries might be useful  
+#                         ratio = SequenceMatcher(lambda x: x==' ', o_pred, saved_tup[2]).ratio() 
+#                         if ratio > 0.75:  # assuming that the string are similar enough
+#                             ratio = SequenceMatcher(lambda x: x==' ', p_pred, saved_tup[1]).ratio() 
+#                             if ratio > 0.75:  # assuming that the string are similar enough
+#                                 p_tp += 1
+#                                 remove_entry(remove=(saved_tup[0], saved_tup[1], saved_tup[2]), structure=reference, mode='multiple')
+
+#                 elif mode == 'perfect':
+#                     # count up with perfect matches
+#                     for tup in reference:
+#                         if tup[0] == s_pred:
+#                             if tup[2] == o_pred:
+#                                 if tup[1] == p_pred:
+#                                     p_tp += 1
+#                                     remove_entry(remove=(s_pred, p_pred, o_pred), structure=reference, mode='multiple')
+#                                     break
+                        
+#                 elif mode in ('hard', 'soft'):
+#                     # count up with llm prompts (hard cut)
+#                     for tup in reference:
+#                         if 'y' in llm_query((s_pred, tup[0]), llm_log_path, mode): #'/nfs/home/ritterd/reflect/reflectai/wp2/test/gollie_testset/mitschrift_subjekt_objekt_prädikat.json'
+#                             if 'y' in llm_query((o_pred, tup[2]), llm_log_path, mode):
+#                                 # since the predicates are hardcoded there is no need for the llm
+#                                 if tup[1] == p_pred:  
+#                                     p_tp += 1
+#                                     remove_entry(remove=(tup[0], tup[1], tup[2]), structure=reference, mode='multiple')
+#                                     break
+
+#                 ## ---------- /count in different ways ----------- ##
+#     #------------- calculate and print total metrics -------------#
+#     s_scores = calculate_metrics(p_tp, p_total_pre, p_total_pos)
+#     s_scores.to_csv(save_path)
 
 #-------------------------------------------------------------------------------#
 
@@ -703,7 +841,7 @@ def calc_ollama(pred, reference, type_prediction, found, llm_log_path, mode, sin
     return class_name, tp_flag, found
 
 
-def mode_specific_counting(pred, reference, type_prediction, llm_log_path, mode, found, single=True):
+def mode_specific_counting(pred, reference, type_prediction, llm_log_path, mode, found, single):
     if mode == 'word_distance':
         class_name, tp_flag, found = calc_word_distance(pred, reference, type_prediction, found, single)
 
@@ -735,7 +873,6 @@ def eval_accuracy_classes_tricks(text_entries, save_path, save_types, mode='word
                 pred_classes_dict = detailed_storage(class_name, pred_classes_dict, tp_flag)
 
     #------------- calculate metrics -------------#
-    print(gt_classes_dict) 
     calculate_metrics_df(pred_classes_dict, gt_classes_dict, save_path=save_path, save_types=save_types, type_prediction=type_prediction)
 
 ######################################################################################################################################################################
@@ -775,17 +912,10 @@ class EvaluatorPlugin(
 
             # --------------------------------- Evaluate all four schemes without classes focus ---------------------------------------------------- #
             else:
-                if eval == 'subject':
-                    eval_subject_accuracy(text_entries, save_path=f'../test/gollie_testset/subjects/subject_eval_{mode}.csv', mode=mode, llm_log_path=f'../test/gollie_testset/subjects/llm_mitschrift_{mode}_eval.json')
-                    print('subjects done')
-                elif eval == 'object':
-                    eval_object_accuracy(text_entries, save_path=f'../test/gollie_testset/objects/object_eval_{mode}.csv', mode=mode, llm_log_path=f'../test/gollie_testset/objects/llm_mitschrift_{mode}_eval.json')
-                    print('objects done')
-                elif eval == 'subject_object':
-                    eval_subject_object_accuracy(text_entries, save_path=f'../test/gollie_testset/subject_object/subject_object_eval_{mode}.csv', mode=mode, llm_log_path=f'../test/gollie_testset/subject_object/llm_mitschrift_{mode}_eval.json')
-                    print('subject_object_done')
-                elif eval == 'subject_object_predicate':
-                    eval_subject_object_predicate(text_entries, save_path=f'../test/gollie_testset/subject_object_predicate/subject_object_predicate_eval_{mode}.csv', mode=mode, llm_log_path=f'../test/gollie_testset/subject_object_predicate/llm_mitschrift_{mode}_eval.json')
-                    print('Subject_object_predicate done')
+                eval_subject_accuracy(text_entries, save_path=f'../test/gollie_testset/{eval}/eval_{mode}.csv', mode=mode, llm_log_path=f'../test/gollie_testset/{eval}/llm_mitschrift_{mode}_eval.json', eval=eval)
+                print(f'\n{eval} done')
         
         yield text_entries
+
+
+
