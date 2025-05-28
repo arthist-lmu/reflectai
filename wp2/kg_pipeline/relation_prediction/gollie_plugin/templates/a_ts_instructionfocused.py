@@ -678,3 +678,42 @@ def season_relation_to_triplet(package: Season):
     ]
 
     return triplets
+
+
+ENTITY_DEFINITIONS: List[Template] = [
+    ArtisticTheme,
+    Composition,
+    CompositionContains,
+    CompositionDepicts,
+    WorkOfArt,
+    Concept,
+    ConceptSymbolize,
+    ConceptDepicts,
+    RhetoricalDevice,
+    RhetoricalDeviceSymbolize,
+    RhetoricalDeviceDepicts,
+    Emotion,
+    Quality,
+    Color,
+    PointInTime,
+    Season,
+]
+
+ENTITY_PARSER = {
+    "ArtisticTheme": artistic_theme_relation_to_triplet,
+    "Composition": composition__relation_to_triplet,
+    "CompositionContains": composition_contains_relation_to_triplet,
+    "CompositionDepicts": composition_depicts_relation_to_triplet,
+    "WorkOfArt": work_of_art_relation_to_triplet,
+    "Concept": concept_relation_to_triplet,
+    "ConceptSymbolize": concept_symbolize_relation_to_triplet,
+    "ConceptDepicts": concept_depicts_relation_to_triplet,
+    "RhetoricalDevice": rhetorical_device_relation_to_triplet,
+    "RhetoricalDeviceSymbolize": rhetorical_device_symbolize_relation_to_triplet,
+    "RhetoricalDeviceDepicts": rhetorical_device_depicts_relation_to_triplet,
+    "Emotion": emotion_relation_to_triplet,
+    "Quality": quality_relation_to_triplet,
+    "Color": color_relation_to_triplet,
+    "PointInTime": point_in_time_relation_to_triplet,
+    "Season": season_relation_to_triplet,
+}
