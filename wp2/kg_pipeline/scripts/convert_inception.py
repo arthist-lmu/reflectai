@@ -104,12 +104,15 @@ def load_text(root, annotations_path='/nfs/data/reflectai/data/annotation'):
                         return text
                     
 
-def load_text2(root, args, annotations_path='/nfs/data/reflectai/data/annotation/txt/'):
+def load_text2(root, args, annotations_path='/nfs/data/reflectai/data/annotation/txt'):
     for elem in root.iter():
         if 'documentTitle' in elem.attrib.keys():
             for annotation_texts in os.listdir(annotations_path):
                 if annotation_texts == elem.attrib["documentTitle"]:
-                    with open(f'{annotations_path}/{annotation_texts}/{args.user}.txt', 'r', encoding='utf-8') as fp:
+                    user = args.user
+                    if args.user == 'curation':
+                        user = 'INITIAL_CAS' ### FOR NOW IT HAS TO BE LIKE THIS UNTIL WE GET THE TXT OF THE CURATION VERSION
+                    with open(f'{annotations_path}/{annotation_texts}/{user}.txt', 'r', encoding='utf-8') as fp:
                         text = fp.read()
 
                     return text
@@ -123,6 +126,7 @@ def extrext_annotation(zip_file_object, tripplets, args):
             if re.match(r".*\.xmi", x.filename):
                 with zip_file.open(x.filename) as f:
                     data = f.read()
+                    
 
     root = ET.fromstring(data)
 
@@ -137,15 +141,23 @@ def annotationxmi_to_annotationjson(save_individually):
     with ZipFile(args.input_path) as zip_file:
         trips = {}
         for x in zip_file.infolist():
-            if args.user:
-                if re.match(r"annotation/.*/" + args.user + "\.zip", x.filename):
-                    with zip_file.open(x.filename) as f:
-                        trips = extrext_annotation(BytesIO(f.read()), trips, args)
-                        if save_individually:
-                            end = re.search('.*\.txt/', x.filename).span()[1]
-                            with open(f'{args.output_path}/{x.filename[11:(end - 5)]}.json', 'w', encoding='utf-8') as fp:
-                                json.dump(trips, fp, indent=4, ensure_ascii=False)
-                            trips = {}
+            if args.user != 'curation':
+                found = re.match(r"annotation/.*/" + args.user + "\.zip", x.filename)
+            else:
+                found = re.match(r"curation/.*/.*\.zip", x.filename)
+                
+            if found:
+                with zip_file.open(x.filename) as f:
+                    trips = extrext_annotation(BytesIO(f.read()), trips, args)
+                    if save_individually:
+                        end = re.search('.*\.txt/', x.filename).span()[1]
+                        name = f'{args.output_path}/{x.filename[11:(end - 5)]}'
+                        if args.user == 'curation':
+                            name = f'{args.output_path}/{x.filename[9:(end - 5)]}'
+                        
+                        with open(f'{name}.json', 'w', encoding='utf-8') as fp:
+                            json.dump(trips, fp, indent=4, ensure_ascii=False)
+                        trips = {}
     """
     # ---------------------------------
     # this part only for individual xmi files

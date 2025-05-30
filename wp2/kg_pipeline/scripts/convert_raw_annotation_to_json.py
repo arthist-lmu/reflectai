@@ -24,20 +24,18 @@ def create_jsonl_file():
 
     # /nfs/data/reflectai/data/annotation/txt/
     for annotations_texts in os.listdir(args.input_path):
-        ## ---------------------- This part only for initial testing! it just skips out annotations form others ------------------------------
-        with open('../../test/gollie_testset/annotated_texts_by_tzischkin', encoding='utf-8') as testing:
-            annotated_texts = testing.read()
-            #print(annotated_texts)
-
-        if annotations_texts not in annotated_texts:
-            continue
-        ## ---------------------- This part only for initial testing ------------------------------
-
-        with open(f'{args.input_path}/{annotations_texts}/{args.user}.txt', encoding='utf-8') as fp:
+        user = args.user
+        if args.user == 'curation':
+            user = 'INITIAL_CAS'
+        with open(f'{args.input_path}/{annotations_texts}/{user}.txt', encoding='utf-8') as fp:
             annotations = {}
             if args.annotations:
-                with open(f'{args.annotations}/{annotations_texts[:-4]}.json', 'r', encoding='utf-8') as f:
-                    annotations = json.load(f)
+                # not all the txt files have been annotated/curated
+                try: 
+                    with open(f'{args.annotations}/{annotations_texts[:-4]}.json', 'r', encoding='utf-8') as f:
+                        annotations = json.load(f)
+                except FileNotFoundError:
+                    continue
             
             read = fp.read()
             text = {'text': [{'content': read}], 'id': annotations_texts, 'annotations':annotations}
