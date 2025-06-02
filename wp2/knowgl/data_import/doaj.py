@@ -22,7 +22,7 @@ def parse_args():
 
 def main():
     args = parse_args()
-
+    print("A")
     results = []
     with open(args.input_path) as f:
         for line in f:
@@ -56,9 +56,13 @@ def main():
                     ],
                 }
             )
-
+    print("B")
     with open(args.output_path, "w") as f:
         for r in results:
             f.write(json.dumps(r) + "\n")
 
     return
+
+
+if __name__ == "__main__":
+    sys.exit(main())

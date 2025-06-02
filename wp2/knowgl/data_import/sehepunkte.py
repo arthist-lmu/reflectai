@@ -28,17 +28,17 @@ def main():
             line_data = json.loads(line)
             line_id = uuid.uuid5(uuid.NAMESPACE_URL, line_data["url"]).hex
 
-            language = line_data["language"]
+            language = line_data.get("language", ["de"])
             if isinstance(language, (list, set)):
                 for l in language:
                     if l.lower() == "en":
                         language = "en"
+                    if l.lower() == "de":
+                        language = "de"
 
-                if language != "en":
+                if language != "en" and language != "de":
                     print(f"Unknown language: {line_data}")
                     exit(1)
-
-            print(line_data.get("images"))
 
             images = []
             if line_data.get("images"):
@@ -46,7 +46,9 @@ def main():
                     {
                         "url": line_data.get("images"),
                         "page": 0,
-                        "id": uuid.uuid5(uuid.NAMESPACE_URL, line_data.get("images")).hex,
+                        "id": uuid.uuid5(
+                            uuid.NAMESPACE_URL, line_data.get("images")
+                        ).hex,
                     }
                 )
             results.append(
@@ -61,7 +63,7 @@ def main():
                             "language": language.lower(),
                         },
                         {
-                            "content": line_data["text"]["description"],
+                            "content": line_data["text"]["Description"],
                             "page": 0,
                             "type": "text",
                             "language": language.lower(),

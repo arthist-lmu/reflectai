@@ -38,15 +38,13 @@ def main():
                     print(f"Unknown language: {line_data}")
                     exit(1)
 
-            print(line_data.get("images"))
-
             images = []
-            if line_data.get("images"):
+            for x in line_data.get("images", []):
                 images.append(
                     {
                         "url": line_data.get("images"),
                         "page": 0,
-                        "id": uuid.uuid5(uuid.NAMESPACE_URL, line_data.get("images")).hex,
+                        "id": uuid.uuid5(uuid.NAMESPACE_URL, x).hex,
                     }
                 )
             results.append(

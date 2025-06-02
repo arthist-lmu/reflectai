@@ -4,19 +4,19 @@ import json
 import uuid
 
 ### example input
-{
-    "url": "https://www.sammlung.pinakothek.de/de/bookmark/artwork/k2xnQ1m4Pd",
-    "title": "Afrikanischer Mythos,",
-    "text": {
-        "Material / Technik / Bildträger": "schwarzer Plastikabfall",
-        "Maße des Objekts": "550 cm",
-        "Ausgestellt": "Nicht ausgestellt",
-        "Inventarnummer": "B 810",
-        "Erwerb": "1985 erworben als Ankauf aus der Galerie Bernd Klüser, München.",
-        "Bestand": "Bayerische Staatsgemäldesammlungen - Sammlung Moderne Kunst\r\nin der Pinakothek der Moderne München",
-        "Zitiervorschlag": "Tony Cragg, Afrikanischer Mythos, 1985, Bayerische Staatsgemäldesammlungen - Sammlung Moderne Kunst\r\nin der Pinakothek der Moderne München, URL: (Zuletzt aktualisiert am 19.06.2023)",
-    },
-}
+#{
+#    "url": "https://www.sammlung.pinakothek.de/de/bookmark/artwork/k2xnQ1m4Pd",
+#    "title": "Afrikanischer Mythos,",
+#    "text": {
+#        "Material / Technik / Bildträger": "schwarzer Plastikabfall",
+#        "Maße des Objekts": "550 cm",
+#        "Ausgestellt": "Nicht ausgestellt",
+#        "Inventarnummer": "B 810",
+#        "Erwerb": "1985 erworben als Ankauf aus der Galerie Bernd Klüser, München.",
+#        "Bestand": "Bayerische Staatsgemäldesammlungen - Sammlung Moderne Kunst\r\nin der Pinakothek der Moderne München",
+#        "Zitiervorschlag": "Tony Cragg, Afrikanischer Mythos, 1985, Bayerische Staatsgemäldesammlungen - Sammlung Moderne Kunst\r\nin der Pinakothek der Moderne München, URL: (Zuletzt aktualisiert am 19.06.2023)",
+#    },
+#}
 
 
 def parse_args():
@@ -35,34 +35,48 @@ def parse_args():
 def main():
     args = parse_args()
 
+
     results = []
     with open(args.input_path) as f:
-        for line in f:
+        for i, line in enumerate(f):
             line_data = json.loads(line)
             line_id = uuid.uuid5(uuid.NAMESPACE_URL, line_data["url"]).hex
 
-            """ language = line_data["language"]
+            language = line_data["language"]
             if isinstance(language, (list, set)):
                 for l in language:
                     if l.lower() == "en":
-                        language = "en"                                          
-                    if language != "en":
+                        language = "en"
+
+                if language != "en":
                     print(f"Unknown language: {line_data}")
-                    exit(1) """
+                    exit(1)
 
             results.append(
                 {
                     "id": line_id,
                     "meta": {"url": line_data["url"]},
-                    "title": line_data["title"],
-                    "text": line_data["text"],
+                    "text": [
+                        {
+                            "content": line_data["title"],
+                            "page": 0,
+                            "type": "title",
+                            "language": language.lower(),
+                        },
+                        {
+                            "content": line_data["text"]["entry"],
+                            "page": 0,
+                            "type": "text",
+                            "language": language.lower(),
+                        },
+                    ],
                     "images": [
                         {
-                            "url": line_data["url"],
+                            "url": x,
                             "page": 0,
-                            "id": uuid.uuid5(uuid.NAMESPACE_URL, line_data["url"]).hex,
+                            "id": uuid.uuid5(uuid.NAMESPACE_URL, x).hex,
                         }
-                        # for x in line_data.get("images", [])
+                        for x in line_data.get("images", [])
                     ],
                 }
             )
