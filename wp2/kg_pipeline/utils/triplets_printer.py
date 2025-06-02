@@ -2,6 +2,7 @@ from kg_pipeline.plugin import Plugin
 from kg_pipeline.manager import Manager
 from typing import List, Dict
 import pandas as pd
+import re
 
 default_config = {}
 default_parameters = {}
@@ -29,17 +30,24 @@ class TripletsPrinterPlugin(
         
         dct = {}
         for entry in text_entries:
+            try:
+                end = re.search('^.*\n\n', entry['text']).end()
+                match = entry['text'][:end-2]
+            except (TypeError, AttributeError):
+                match = entry["id"]
+            
             with open(save_txt, 'a') as fp:
-                print(entry["id"], 'number of found triplets: ', len(entry['triplets'][0]["content"]))
+                print(f'{match}:', 'number of found triplets: ', len(entry['triplets'][0]["content"]))
                 total_triplets += len(entry['triplets'][0]["content"])
-                dct.update({entry["id"]: len(entry['triplets'][0]["content"])})
+                dct.update({match: len(entry['triplets'][0]["content"])})
 
-                fp.write(entry["id"] + '\n')
+                fp.write(match + '\n')
                 for triplets in entry.get("triplets", []):   
                     for triplet in triplets["content"]:
                         print(
-                            f"\t {triplet['subject']['label']},{triplet['relation']['label']},{triplet['object']['label']}"
+                            f"{match}\t {triplet['subject']['label']},{triplet['relation']['label']},{triplet['object']['label']}"
                         )
+                    print()
                  
             yield entry
 
