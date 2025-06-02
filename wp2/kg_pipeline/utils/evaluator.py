@@ -170,6 +170,7 @@ def llm_query(predictions, save_path, mode='soft'):
 def calculate_metrics_df(pred_classes_dict, gt_classes_dict, save_path, save_types, type_prediction):
     with_n = len(type_prediction) == 0
     class_eval = calculate_metrics_detailed(pred_classes_dict, gt_classes_dict, mode='class', with_n=with_n)
+    #print(class_eval)
     if with_n:
         class_df = pd.DataFrame.from_dict(data=class_eval, orient='index', columns=['F1', 'precision', 'recall', 'N'])
     else:
@@ -450,6 +451,7 @@ def prepare_data(reference, eval, predictions, gt_classes_dict):
         predictions.sort()
         seen = set()
         predictions = [(a, b, c, d) for a, b, c, d in predictions if not ((a, b) in seen or seen.add((a, b)))]
+        f = 2
 
     elif eval == 'subject_object_predicate':
         reference = [(triplet['triplet']['subject'].lower(), triplet['triplet']['predicate'], triplet['triplet']['object'].lower(), triplet['triplet']['s_class'], triplet['triplet']['o_class']) for triplet in reference]
@@ -459,10 +461,9 @@ def prepare_data(reference, eval, predictions, gt_classes_dict):
         predictions.sort()            
         seen = set()
         predictions = [(a, b, c, d, e) for a, b, c, d, e in predictions if not ((a, b, c) in seen or seen.add((a, b, c)))]
-        f = 2
 
     #------- count the ground truth up for each class ---------#
-    for tup in reference:            
+    for tup in reference:         
         # count the occurences of all classes within the reference
         gt_classes_dict[tup[f]] += 1
 
@@ -676,7 +677,7 @@ def eval_accuracy_classes_tricks(text_entries, save_path, save_types, mode='word
             for trips in predictions_['content']:
                 tp_flag, class_name, found, type_prediction = evaluate_tricks(trips, eval, reference, type_prediction, llm_log_path, mode, found)
                 pred_classes_dict = detailed_storage(class_name, pred_classes_dict, tp_flag)
-
+            
     #------------- calculate metrics -------------#
     calculate_metrics_df(pred_classes_dict, gt_classes_dict, save_path=save_path, save_types=save_types, type_prediction=type_prediction)
 
