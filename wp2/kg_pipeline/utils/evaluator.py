@@ -159,6 +159,7 @@ def llm_query(predictions, save_path, mode='soft'):
 
     resp = response['message']['content'].lower()
     mitschrift.update({f"{predictions[0].lower()}, {predictions[1].lower()}, {mode}" : resp})
+    print(mitschrift)
     with open(save_path, 'a', encoding='utf-8') as fp:
        json.dump(mitschrift, fp, indent=4, ensure_ascii=False)
 
@@ -357,9 +358,11 @@ def calc_ollama_total(reference, pred, llm_log_path, mode, found, tp, single):
 
     elif single == 'c':
         # count up with llm prompts (soft cut)
+        s_pred = pred[0]
+        o_pred = pred[1]
         for tup in reference:
-            if 'y' in llm_query((pred, tup[0]), llm_log_path, mode) and found.get(tup) is None: #'/nfs/home/ritterd/reflect/reflectai/wp2/test/gollie_testset/mitschrift_subjekt_objekt.json'
-                if 'y' in llm_query((pred, tup[1]), llm_log_path, mode):
+            if 'y' in llm_query((s_pred, tup[0]), llm_log_path, mode) and found.get(tup) is None: #'/nfs/home/ritterd/reflect/reflectai/wp2/test/gollie_testset/mitschrift_subjekt_objekt.json'
+                if 'y' in llm_query((o_pred, tup[1]), llm_log_path, mode):
                     tp += 1
                     found = remove_entry(remove=tup, structure=found)
                     break
@@ -601,11 +604,12 @@ def calc_perfect(pred=None, reference=None, type_prediction=None, found=None, si
 def calc_ollama(pred, reference, type_prediction, found, llm_log_path, mode, single=True):
     # count up with llm prompts (hard/soft cut)
     tp_flag = False
-    if single == '':    
+    if single == '':
+        pred = pred[0]  
         class_name = pred[1]
         for tup in reference:
-            if found.get(pred) is None and 'y' in llm_query((pred[0], tup[0]), llm_log_path, mode):
-                type_prediction = count_type_accuracy(tup, (pred, ), type_prediction, single)
+            if found.get(tup) is None and 'y' in llm_query((pred[0], tup[0]), llm_log_path, mode):
+                type_prediction = count_type_accuracy(tup, (pred,), type_prediction, single)
                 class_name = tup[1]
                 tp_flag = True
                 found = remove_entry(remove=tup, structure=found)

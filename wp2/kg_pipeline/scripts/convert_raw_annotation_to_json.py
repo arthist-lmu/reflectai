@@ -27,19 +27,20 @@ def create_jsonl_file():
         user = args.user
         if args.user == 'curation':
             user = 'INITIAL_CAS'
-        with open(f'{args.input_path}/{annotations_texts}/{user}.txt', encoding='utf-8') as fp:
-            annotations = {}
-            if args.annotations:
-                # not all the txt files have been annotated/curated
-                try: 
+        try:
+            with open(f'{args.input_path}/{annotations_texts}/{user}.txt', encoding='utf-8') as fp:
+                annotations = {}
+                if args.annotations:
+                    # not all the txt files have been annotated/curated
                     with open(f'{args.annotations}/{annotations_texts[:-4]}.json', 'r', encoding='utf-8') as f:
                         annotations = json.load(f)
-                except FileNotFoundError:
-                    continue
-            
-            read = fp.read()
-            text = {'text': [{'content': read}], 'id': annotations_texts, 'annotations':annotations}
-            collection.append(text)
+                    
+                
+                read = fp.read()
+                text = {'text': [{'content': read}], 'id': annotations_texts, 'annotations':annotations}
+                collection.append(text)
+        except FileNotFoundError:
+            continue
 
     # "/nfs/home/ritterd/reflect/reflectai/wp2/test/gollie_testset/gollietestset.jsonl"
     jsonl.dump(collection, args.output_path)

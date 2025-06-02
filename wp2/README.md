@@ -83,3 +83,40 @@ poetry run pipeline -i /nfs/data/reflectai/redai-data/data/processed/rijksmuseum
 ```
 srun --mem 128G -N 1 --exclude gpu3,devbox5,devbox4,devbox3 -G 1  --pty apptainer exec --env PYTHONPATH=".." /nfs/data/env/huggingface_24_04_16.sif python main.py -i ~/projects/reflect_ai/reflectai/wp2/test/test_dataset/museums/testset_museum.jsonl -p '[{"plugin": "NLLB200", "config":{"src_lang":"de", "tgt_lang":"en"}}, {"plugin": "FCoref"}, {"plugin": "NLTKSentenceSplitter"}, {"plugin": "KnowGL"}, {"plugin":"SentenceMerger"},  {"plugin": "TripletsPrinter"}]'
 ```
+
+## Preparing input data
+In advance, the following commands can only be run in the "scripts" directory:  ~/reflectai/wp2/kg_pipeline/scripts
+Also, the first case should be the go to case, since that one is the cleaner approach.
+### With inception annotations 
+```
+bash inception_and_raw_to_json.sh /path/to/annotation_scource.zip  user  /path/to/save/individual_annotations  /path/to/annotated_texts  path/to/save/gollietestset.jsonl
+```
+if you would like to run the pipeline with new annotations or curations run this command.
+* The first parameter is the zip file in which the annotation / curation is located
+* The scond one is the user of whom you would like to take the annotations. For the curation please use 'curation'
+* The third parameter is the path to where you would like to save the annotations / curations in a json format. They are saved individually
+* The fourth one is the path to all the text files that where used for annotation / curation
+* the last parameter is the output .jsonl file that is used as input for the main pipeline
+
+Example command:
+```
+ bash inception_and_raw_to_json.sh /nfs/data/reflectai/annotations/reflectai_annotation_250321_uima.zip tzischkin ../../test/gollie_testset/testting2 /nfs/data/reflectai/data/annotation/txt ../../test/gollie_testset/gollietestset2.jsonl
+```
+please keep in mind that it will fail if the paths do not exist!
+
+## Without inception annotations
+```
+bash inception_and_raw_to_json.sh /path/to/annotated_texts  user   path/to/save/gollietestset.jsonl  /path/to/individual_annotations/
+```
+if you would like to run the pipeline without new annotations or curations, i.e. you only want to create the input file for the pipeline, run this command.
+* The first parameter is the path to all the text files that where used for annotation / curation
+* The scond one is the user of whom you would like to take the annotations. For the curation please use 'curation'
+* The third parameter is the output .jsonl file that is used as input for the main pipeline
+* If you would like to add already present annoations, then use the fourth parameter, which is the path to where you would like to take the annotations / curations from. They need to be in a json format and there has to be one for each text that was used for annotation / curations.
+
+
+Example command:
+```
+bash inception_and_raw_to_json.sh /nfs/data/reflectai/data/annotation/txt tzischkin ../../test/gollie_testset/gollietestset2.jsonl ../../test/testting2/
+```
+please keep in mind that it will fail if the paths do not exist!
