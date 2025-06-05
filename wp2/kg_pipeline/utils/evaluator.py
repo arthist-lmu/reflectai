@@ -721,6 +721,10 @@ class EvaluatorPlugin(
 
             # --------------------------------- Evaluate all four schemes for the dataset in total ---------------------------------------------------- #
             else:
+                # for a in text_entries:
+                #     if len(a['triplets'][0]['content']) >= 8:
+                #         print(a['id'])
+                #         print(len(a['triplets'][0]['content']))
                 eval_accuracy_total(text_entries, save_path=f'../test/gollie_testset/{eval}/eval_{mode}.csv', mode=mode, llm_log_path=f'../test/gollie_testset/{eval}/llm_mitschrift_{mode}_eval.json', eval=eval)
                 print(f'\n{eval} done')
         

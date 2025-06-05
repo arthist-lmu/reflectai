@@ -16,7 +16,7 @@ default_config = {
     #              "ts_metadata_layer_wikidata copy", "ts_metadata_layer_wikidata_initialdescription copy", 
     #              "ts_metadata_layer_wikidata_llmeasylanguage" ]
 
-    "template": ["a_ts_content_layer_initialdescription"]
+    "template": ["test"]
 }
 default_parameters = {}
 

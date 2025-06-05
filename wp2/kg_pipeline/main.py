@@ -34,17 +34,27 @@ def parse_args():
         help="Whether to include the class name in the triplets or not",
         default=False,
     )
+    parser.add_argument(
+        "-f",
+        "--prefix",
+        action="store_true",
+        help="Whether to put the 'Work of Art: ' prefix in front of text",
+        default=False,
+    )
 
     args = parser.parse_args()
     return args
 
 
-def read_dataset(path: str, with_class_name=False) -> List[Dict]:
+def read_dataset(path: str, with_class_name=False, with_prefix=False) -> List[Dict]:
     results = []
     with open(path, "r") as file:
         for i, line in enumerate(file):
             data = json.loads(line)
-            text = "; ".join(text["content"] for text in data["text"])
+            prefix = ""
+            if with_prefix:
+                prefix = "Work of Art: "
+            text = prefix + "; ".join(text["content"] for text in data["text"])
             results.append(
                 dict(
                     id=data["id"],
@@ -77,7 +87,7 @@ def main():
     datasets = []
     for path in args.input_paths:
         try:
-            datasets.extend(read_dataset(path, args.class_name))
+            datasets.extend(read_dataset(path, args.class_name, args.prefix))
         except:
             logging.warning("Reading pipeline output")
             datasets.extend(read_pipeline_output(path))
