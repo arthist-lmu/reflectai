@@ -68,7 +68,7 @@ def remove_entry(remove, structure, mode='single'):
     return structure
 
 
-def calculate_metrics_detailed(pred_dict, pos_dict, mode='class', with_n=False):
+def calculate_metrics_detailed(pred_dict, pos_dict, mode='class', with_n=True):
     results = {}
     if mode == 'class':
         for key, values in pred_dict.items():
@@ -87,7 +87,7 @@ def calculate_metrics_detailed(pred_dict, pos_dict, mode='class', with_n=False):
     
             
             if with_n:
-                scores = [s_f1_score, s_precision, s_recall, s_total_pre]
+                scores = [s_f1_score, s_precision, s_recall, s_total_pre, s_total_pos]
             else:
                 scores = [s_f1_score, s_precision, s_recall]
 
@@ -97,7 +97,7 @@ def calculate_metrics_detailed(pred_dict, pos_dict, mode='class', with_n=False):
         for gt_key in pos_dict.keys():
             if gt_key not in results.keys():
                 if with_n:
-                    scores = [0, 0, 0, 0]
+                    scores = [0, 0, 0, 0, 0]
                 else:
                     scores = [0, 0, 0]
 
@@ -168,17 +168,14 @@ def llm_query(predictions, save_path, mode='soft'):
 
 
 def calculate_metrics_df(pred_classes_dict, gt_classes_dict, save_path, save_types, type_prediction):
-    with_n = len(type_prediction) == 0
-    class_eval = calculate_metrics_detailed(pred_classes_dict, gt_classes_dict, mode='class', with_n=with_n)
+    class_eval = calculate_metrics_detailed(pred_classes_dict, gt_classes_dict, mode='class')
     #print(class_eval)
-    if with_n:
-        class_df = pd.DataFrame.from_dict(data=class_eval, orient='index', columns=['F1', 'precision', 'recall', 'N'])
-    else:
-        class_df = pd.DataFrame.from_dict(data=class_eval, orient='index', columns=['F1', 'precision', 'recall'])
+
+    class_df = pd.DataFrame.from_dict(data=class_eval, orient='index', columns=['F1', 'precision', 'recall', 'N_pred', 'N_gt'])
 
     class_df.to_csv(save_path)
 
-    if not with_n:
+    if len(type_prediction) != 0:
         type_prediction_df = pd.DataFrame.from_dict(data=type_prediction, orient='index')
         type_prediction_df["procentage"] = type_prediction_df['found'] / type_prediction_df['existing']
         type_prediction_df.to_csv(save_types)
@@ -705,14 +702,20 @@ class EvaluatorPlugin(
         try:
             mode = self._config['mode']
             eval = self._config['eval']
+            save_path = self._config['save_path']
         except KeyError:
             # maybe not raise and only tell about the issue and that no evaluation took place
-            raise KeyError('An evaluation scheme (subject, object, subject_object, subject_object_predciates) and a mode (word_distance, perfect, soft, hard) needs to be given!')
+            raise KeyError('An evaluation scheme (eval) = (subject, object, subject_object, subject_object_predciates),' + 
+                           'a (mode) = (word_distance, perfect, soft, hard), a path to the directory in where to save the results (save_path) needs to be given!')
         else:
+            
             ###################################### this part is only for the beginning and is not planned to be used in the end #############################################################
             # ---------------------------------- Evaluate all four schemes with a classes focus -------------------------------------
+            save_types = save_path + f'/{eval}/types_{mode}.csv'
+            save_results = save_path + f'/{eval}/classes_{mode}.csv'
+            llm_log_path = save_path + f'/{eval}/llm_mitschrift_{mode}_classes.json'
             if tricks:
-                eval_accuracy_classes_tricks(text_entries, save_path=f'../test/gollie_testset/{eval}/classes_{mode}_tricks.csv', save_types=f'../test/gollie_testset/{eval}/types_{mode}_tricks.csv', mode=mode, llm_log_path=f'../test/gollie_testset/{eval}/llm_mitschrift_{mode}_classes_tricks.json', eval=eval)
+                eval_accuracy_classes_tricks(text_entries, save_path=save_results, save_types=save_types, mode=mode, llm_log_path=llm_log_path, eval=eval)
                 print(f'\n{eval} done')
             #####################################################################################################################################################################################
 
