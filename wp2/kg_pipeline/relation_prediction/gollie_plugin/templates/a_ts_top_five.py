@@ -311,7 +311,6 @@ def anatomical_structure_relation_to_triplet(package: AnatomicalStructure) -> Li
 
     return triplets
 
----
 
 ENTITY_DEFINITIONS: List[Template] = [Color, PhysicalObject, Occupation, AnatomicalStructure] 
 
