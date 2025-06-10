@@ -52,7 +52,7 @@ def color_relation_to_triplet(package: Color):
 @dataclass
 class PhysicalObject(Template):
     """
-    Identify an **item** contributing to composition, narrative, or symbolism.
+    Identify an **item** or **object**.
     """
 
     artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
