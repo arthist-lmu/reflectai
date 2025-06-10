@@ -48,9 +48,6 @@ def color_relation_to_triplet(package: Color):
 
     return triplets
 
-
----
-
 @dataclass
 class PhysicalObject(Template):
     """
