@@ -52,7 +52,7 @@ def color_relation_to_triplet(package: Color):
 @dataclass
 class PhysicalObject(Template):
     """
-    Identify an **item** or **object** in an artwork.
+    Identify an **item** or **object**.
     """
 
     artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
@@ -176,7 +176,7 @@ def season_relation_to_triplet(package: Season):
 @dataclass
 class Occupation(Template):
     """
-    Identify a **job, profession, or social role** depicted in a work of art.
+    Identify a **job, profession, or social role**.
     """
 
     artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
@@ -246,20 +246,31 @@ def occupation_relation_to_triplet(package: Occupation) -> List[dict]:
 
 
 @dataclass
-class AnatomicalStructure(Template): 
+class AnatomicalStructure(Template):
     """
     Identify a **body or body part** depicted as a visual characteristic in a work of art.
     """
+
     artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
 
-    body_as_whole: Optional[str] = None  # Examples: human body, torso, nude figure
-    head: Optional[str] = None           # Examples: head, face, eye, ear, nose, mouth, hair
-    limb: Optional[str] = None           # Examples: arm, hand, finger, leg, foot, toe
-    internal_organ: Optional[str] = None # Examples: heart, brain, lung, liver, ribcage (as a skeletal part)
-    other_part: Optional[str] = None     # For anatomical parts not covered by specific categories (e.g., bone, skeleton, skin)
+    body_as_whole: Optional[str] = (
+        None  # Body as a whole such as human body, torso, nude figure
+    )
+    head: Optional[str] = (
+        None  # Parts of the head such as face, eye, ear, nose, mouth, hair
+    )
+    limb: Optional[str] = None  # Limbs such as arm, hand, finger, leg, foot, toe
+    internal_organ: Optional[str] = (
+        None  # Internal Organs such as heart, brain, lung, liver, ribcage (as a skeletal part)
+    )
+    other_part: Optional[str] = (
+        None  # For anatomical parts not covered by specific categories (e.g., bone, skeleton, skin)
+    )
 
 
-def anatomical_structure_relation_to_triplet(package: AnatomicalStructure) -> List[dict]: 
+def anatomical_structure_relation_to_triplet(
+    package: AnatomicalStructure,
+) -> List[dict]:
     triplets = []
 
     # Find the specific anatomical part mentioned in the package
@@ -288,7 +299,7 @@ def anatomical_structure_relation_to_triplet(package: AnatomicalStructure) -> Li
                 "wikidata_id": "wdt:P180",
             },
             "object": {
-                "label": anatomical_label,  
+                "label": anatomical_label,
             },
         }
     )
@@ -296,15 +307,15 @@ def anatomical_structure_relation_to_triplet(package: AnatomicalStructure) -> Li
     triplets.append(
         {
             "subject": {
-                "label": anatomical_label,  
+                "label": anatomical_label,
             },
             "relation": {
                 "label": "instance of",
                 "wikidata_id": "wdt:P31",
             },
             "object": {
-                "label": "anatomical structure", 
-                "wikidata_id": "wd:Q4936952",    
+                "label": "anatomical structure",
+                "wikidata_id": "wd:Q4936952",
             },
         }
     )
@@ -312,11 +323,96 @@ def anatomical_structure_relation_to_triplet(package: AnatomicalStructure) -> Li
     return triplets
 
 
-ENTITY_DEFINITIONS: List[Template] = [Color, PhysicalObject, Occupation, AnatomicalStructure] 
+@dataclass
+class Person(Template):
+    """
+    Identify a **human figure** or **person**.
+    """
+
+    artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+
+    # Specific categories for persons to be extracted into triplets.
+    historical_figure: Optional[str] = (
+        None  # Historical figures Napoleon, Julius Caesar, Marie Antoinette, Queen Elizabeth I, Leonardo da Vinci
+    )
+    mythological_figure: Optional[str] = (
+        None  # Mythological figures such as Venus, Zeus, Hercules, Medusa, Cupid, Leda
+    )
+    religious_figure: Optional[str] = (
+        None  # Religious figures such as Jesus Christ, Virgin Mary, Saint Peter, Buddha, Prophet Muhammad
+    )
+    other_person_type: Optional[str] = (
+        None  # For specific types not covered by the above (e.g., unknown person, self-portrait, group)
+    )
+
+    # These fields are for descriptive purposes only and WILL NOT be extracted into Wikidata triplets.
+    gender: Optional[str] = None  # Examples: man, woman, child, boy, girl
+    age_group: Optional[str] = (
+        None  # Examples: infant, toddler, child, adolescent, adult, elderly person
+    )
+
+
+def person_relation_to_triplet(package: Person) -> List[dict]:
+    triplets = []
+
+    person_label: Optional[str] = None
+    if package.historical_figure is not None:
+        person_label = package.historical_figure
+    elif package.mythological_figure is not None:
+        person_label = package.mythological_figure
+    elif package.religious_figure is not None:
+        person_label = package.religious_figure
+    elif package.other_person_type is not None:
+        person_label = package.other_person_type
+
+    if person_label is None:
+        raise ValueError()
+
+    triplets.append(
+        {
+            "subject": {
+                "label": package.artwork,
+            },
+            "relation": {
+                "label": "depicts",
+                "wikidata_id": "wdt:P180",
+            },
+            "object": {
+                "label": person_label,
+            },
+        }
+    )
+
+    triplets.append(
+        {
+            "subject": {
+                "label": person_label,
+            },
+            "relation": {
+                "label": "instance of",
+                "wikidata_id": "wdt:P31",
+            },
+            "object": {
+                "label": "human",
+                "wikidata_id": "wd:Q5",
+            },
+        }
+    )
+    return triplets
+
+
+ENTITY_DEFINITIONS: List[Template] = [
+    Color,
+    PhysicalObject,
+    Occupation,
+    AnatomicalStructure,
+    Person,
+]
 
 ENTITY_PARSER = {
     "Color": color_relation_to_triplet,
     "PhysicalObject": physical_object_relation_to_triplet,
     "Occupation": occupation_relation_to_triplet,
     "AnatomicalStructure": anatomical_structure_relation_to_triplet,
+    "Person": person_relation_to_triplet,
 }
