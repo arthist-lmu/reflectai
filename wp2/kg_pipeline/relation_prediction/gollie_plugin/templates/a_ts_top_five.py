@@ -188,7 +188,7 @@ class Occupation(Template):
         None  # Professions such as doctor, lawyer, priest, nun, scholar, architect, artist, musician
     )
     social_role: Optional[str] = (
-        None  # Social Roles like noblewoman, peasant, king, queen, soldier, merchant, mourning woman, guardian, child
+        None  # Social Roles like noblewoman, peasant, king, queen, soldier, merchant, guardian
     )
     other_occupation: Optional[str] = (
         None  # For occupations not covered by the specific categories (e.g., warrior, pilgrim)
@@ -245,11 +245,79 @@ def occupation_relation_to_triplet(package: Occupation) -> List[dict]:
     return triplets
 
 
-ENTITY_DEFINITIONS: List[Template] = [Color, PhysicalObject, Season, Occupation]
+@dataclass
+class AnatomicalStructure(Template): 
+    """
+    Identify a **body or body part** depicted as a visual characteristic in a work of art.
+    """
+    artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+
+    body_as_whole: Optional[str] = None  # Examples: human body, torso, nude figure
+    head: Optional[str] = None           # Examples: head, face, eye, ear, nose, mouth, hair
+    limb: Optional[str] = None           # Examples: arm, hand, finger, leg, foot, toe
+    internal_organ: Optional[str] = None # Examples: heart, brain, lung, liver, ribcage (as a skeletal part)
+    other_part: Optional[str] = None     # For anatomical parts not covered by specific categories (e.g., bone, skeleton, skin)
+
+
+def anatomical_structure_relation_to_triplet(package: AnatomicalStructure) -> List[dict]: 
+    triplets = []
+
+    # Find the specific anatomical part mentioned in the package
+    anatomical_label: Optional[str] = None
+    if package.body_as_whole is not None:
+        anatomical_label = package.body_as_whole
+    elif package.head is not None:
+        anatomical_label = package.head
+    elif package.limb is not None:
+        anatomical_label = package.limb
+    elif package.internal_organ is not None:
+        anatomical_label = package.internal_organ
+    elif package.other_part is not None:
+        anatomical_label = package.other_part
+
+    if anatomical_label is None:
+        raise ValueError()
+
+    triplets.append(
+        {
+            "subject": {
+                "label": package.artwork,
+            },
+            "relation": {
+                "label": "depicts",
+                "wikidata_id": "wdt:P180",
+            },
+            "object": {
+                "label": anatomical_label,  
+            },
+        }
+    )
+
+    triplets.append(
+        {
+            "subject": {
+                "label": anatomical_label,  
+            },
+            "relation": {
+                "label": "instance of",
+                "wikidata_id": "wdt:P31",
+            },
+            "object": {
+                "label": "anatomical structure", 
+                "wikidata_id": "wd:Q4936952",    
+            },
+        }
+    )
+
+    return triplets
+
+---
+
+ENTITY_DEFINITIONS: List[Template] = [Color, PhysicalObject, Occupation, AnatomicalStructure] 
 
 ENTITY_PARSER = {
     "Color": color_relation_to_triplet,
     "PhysicalObject": physical_object_relation_to_triplet,
-    "Season": season_relation_to_triplet,
     "Occupation": occupation_relation_to_triplet,
+    "AnatomicalStructure": anatomical_structure_relation_to_triplet,
 }
