@@ -1,4 +1,4 @@
-from typing import List, Optional # Import Optional for optional fields
+from typing import List, Optional  # Import Optional for optional fields
 from ..utils_typing import Relation, dataclass
 from ..utils_typing import Generic as Template
 
@@ -48,6 +48,7 @@ def color_relation_to_triplet(package: Color):
 
     return triplets
 
+
 @dataclass
 class PhysicalObject(Template):
     """
@@ -59,12 +60,24 @@ class PhysicalObject(Template):
 
     # All specific object types are now optional.
     # The general 'type_of_physical_object' is removed as it's handled by picking one of these.
-    clothing: Optional[str] = None       # Examples: robe, cloak, tunic, dress, armor, veil, crown, hat, sash, shoe
-    instrument: Optional[str] = None     # Examples: lute, viola da gamba, flute, trumpet, harp, drum, organ, piano
-    religious_object: Optional[str] = None # Examples: crucifix, rosary, chalice, menorah, prayer beads, altar, icon, thurible, ark
-    tool: Optional[str] = None           # Examples: hammer, chisel, paintbrush, compass, quill, spindle, plow, loom, telescope, astrolabe
-    weapon: Optional[str] = None         # Examples: sword, spear, bow and arrow, shield, dagger, cannon, musket, axe, slingshot
-    other_object: Optional[str] = None   # For physical objects not covered by the specific categories (e.g., chair, goblet, mirror, book, crown, candle)
+    clothing: Optional[str] = (
+        None  # Examples: robe, cloak, tunic, dress, armor, veil, crown, hat, sash, shoe
+    )
+    instrument: Optional[str] = (
+        None  # Examples: lute, viola da gamba, flute, trumpet, harp, drum, organ, piano
+    )
+    religious_object: Optional[str] = (
+        None  # Examples: crucifix, rosary, chalice, menorah, prayer beads, altar, icon, thurible, ark
+    )
+    tool: Optional[str] = (
+        None  # Examples: hammer, chisel, paintbrush, compass, quill, spindle, plow, loom, telescope, astrolabe
+    )
+    weapon: Optional[str] = (
+        None  # Examples: sword, spear, bow and arrow, shield, dagger, cannon, musket, axe, slingshot
+    )
+    other_object: Optional[str] = (
+        None  # For physical objects not covered by the specific categories (e.g., chair, goblet, mirror, book, crown, candle)
+    )
 
 
 def physical_object_relation_to_triplet(package: PhysicalObject) -> List[dict]:
@@ -92,7 +105,9 @@ def physical_object_relation_to_triplet(package: PhysicalObject) -> List[dict]:
 
     if object_label is None:
         # If no specific physical object was provided, raise an error or return an empty list
-        raise ValueError("PhysicalObject instance must specify at least one type of object (e.g., clothing, instrument, etc.).")
+        raise ValueError(
+            "PhysicalObject instance must specify at least one type of object (e.g., clothing, instrument, etc.)."
+        )
 
     # Triplet: Artwork depicts specific object
     triplets.append(
@@ -105,7 +120,7 @@ def physical_object_relation_to_triplet(package: PhysicalObject) -> List[dict]:
                 "wikidata_id": "wdt:P180",
             },
             "object": {
-                "label": object_label, # Use the specific object label found
+                "label": object_label,  # Use the specific object label found
             },
         }
     )
@@ -114,7 +129,7 @@ def physical_object_relation_to_triplet(package: PhysicalObject) -> List[dict]:
     triplets.append(
         {
             "subject": {
-                "label": object_label, # The specific object is the subject here
+                "label": object_label,  # The specific object is the subject here
             },
             "relation": {
                 "label": "instance of",
@@ -122,18 +137,17 @@ def physical_object_relation_to_triplet(package: PhysicalObject) -> List[dict]:
             },
             "object": {
                 "label": "physical object",
-                "wikidata_id": "wd:Q223557", # All physical objects map to this generic ID
+                "wikidata_id": "wd:Q223557",  # All physical objects map to this generic ID
             },
         }
     )
 
     return triplets
 
----
 
 ENTITY_DEFINITIONS: List[Template] = [Color, PhysicalObject]
 
 ENTITY_PARSER = {
     "Color": color_relation_to_triplet,
-    "PhysicalObject": physical_object_relation_to_triplet, # Corrected key from "Composition"
+    "PhysicalObject": physical_object_relation_to_triplet,  # Corrected key from "Composition"
 }
