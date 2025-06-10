@@ -404,6 +404,7 @@ def person_relation_to_triplet(package: Person) -> List[dict]:
 ENTITY_DEFINITIONS: List[Template] = [
     Color,
     PhysicalObject,
+    Season,
     Occupation,
     AnatomicalStructure,
     Person,
@@ -412,6 +413,7 @@ ENTITY_DEFINITIONS: List[Template] = [
 ENTITY_PARSER = {
     "Color": color_relation_to_triplet,
     "PhysicalObject": physical_object_relation_to_triplet,
+    "Season": season_relation_to_triplet,
     "Occupation": occupation_relation_to_triplet,
     "AnatomicalStructure": anatomical_structure_relation_to_triplet,
     "Person": person_relation_to_triplet,
