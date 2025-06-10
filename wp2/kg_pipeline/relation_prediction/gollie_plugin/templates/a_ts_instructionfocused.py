@@ -22,6 +22,7 @@ def artistic_theme_relation_to_triplet(package: ArtisticTheme):
         {
             "subject": {
                 "label": package.artwork,
+                "s_class": "WorkOfArt",
             },
             "relation": {
                 "label": "depicts",
@@ -34,6 +35,7 @@ def artistic_theme_relation_to_triplet(package: ArtisticTheme):
         {
             "subject": {
                 "label": package.theme,
+                "s_class": "ArtisticTheme",
             },
             "relation": {
                 "label": "instance of",
@@ -56,6 +58,7 @@ class Composition(Template):
     """
 
     artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+
     composition_of_artwork: str  # Compositions such as Diagonal lines, symmetry, central figure, perspective grid, foreshortening, overlapping planes
 
 
@@ -64,6 +67,7 @@ def composition__relation_to_triplet(package: Composition):
         {
             "subject": {
                 "label": package.artwork,
+                "s_class": "WorkOfArt",
             },
             "relation": {
                 "label": "depicts",
@@ -76,6 +80,7 @@ def composition__relation_to_triplet(package: Composition):
         {
             "subject": {
                 "label": package.composition_of_artwork,
+                "s_class": "Composition",
             },
             "relation": {
                 "label": "instance of",
@@ -86,91 +91,6 @@ def composition__relation_to_triplet(package: Composition):
                 "wikidata_id": "wd:Q462437",
             },
         },
-    ]
-
-    return triplets
-
-
-@dataclass
-class CompositionDepicts(Template):
-    """
-    Identify the specific **elements, figures, or motifs** present in a visual composition.
-    """
-
-    artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
-    composition_of_artwork: str  # Compositions such as Diagonal lines, symmetry, central figure, perspective grid, foreshortening, overlapping planes
-
-
-def composition_depicts_relation_to_triplet(package: CompositionDepicts):
-    triplets = [
-        {
-            "subject": {
-                "label": package.artwork,
-            },
-            "relation": {
-                "label": "depicts",
-                "wikidata_id": "wdt:P180",
-            },
-            "object": {
-                "label": package.composition_of_artwork,
-            },
-        },
-        {
-            "subject": {
-                "label": package.composition_of_artwork,
-            },
-            "relation": {
-                "label": "instance of",
-                "wikidata_id": "wdt:P31",
-            },
-            "object": {
-                "label": "compositional technique",
-                "wikidata_id": "wd:Q462437",
-            },
-        },
-    ]
-
-    return triplets
-
-
-@dataclass
-class CompositionContains(Template):
-    """
-    This class refers to the overall structure or layout of visual elements within an artwork to convey balance, movement, or focus. It is concerned with how a composition is organized or visually structured.
-    """
-
-    composition_of_artwork: str  # Compositions such as Diagonal lines, symmetry, central figure, perspective grid, foreshortening, overlapping planes
-    contains: str  # item or substance located within this item but not part of it. e.g. person
-
-
-def composition_contains_relation_to_triplet(package: CompositionContains):
-    triplets = [
-        {
-            "subject": {
-                "label": package.composition_of_artwork,
-            },
-            "relation": {
-                "label": "contains",
-                "wikidata_id": "wdt:P4330",
-            },
-            "object": {
-                "label": package.contains,
-            },
-        },
-        ### Da es keine konkrete Klasse als Ziel gibt, ist es nicht möglich einfach so ein instance of zu setzen.
-        # {
-        #     "subject": {
-        #         "label": package.contains,
-        #     },
-        #     "relation": {
-        #         "label": "instance of",
-        #         "wikidata_id": "wdt:P31",
-        #     },
-        #     "object": {
-        #         "label": "compositional technique",
-        #         "wikidata_id": "wd:Q462437",
-        #     },
-        # },
     ]
 
     return triplets
@@ -190,6 +110,7 @@ def work_of_art_relation_to_triplet(package: WorkOfArt):
         {
             "subject": {
                 "label": package.artwork,
+                "s_class": "WorkOfArt",
             },
             "relation": {
                 "label": "instance of",
@@ -222,6 +143,7 @@ def concept_relation_to_triplet(package: Concept):
         {
             "subject": {
                 "label": package.artwork,
+                "s_class": "WorkOfArt",
             },
             "relation": {
                 "label": "depicts",
@@ -234,94 +156,7 @@ def concept_relation_to_triplet(package: Concept):
         {
             "subject": {
                 "label": package.concept_of_artwork,
-            },
-            "relation": {
-                "label": "instance of",
-                "wikidata_id": "wdt:P31",
-            },
-            "object": {
-                "label": "concept",
-                "wikidata_id": "wd:Q151885",
-            },
-        },
-    ]
-
-    return triplets
-
-
-@dataclass
-class ConceptDepicts(Template):
-    """
-    This class refers to abstract ideas, emotions, or messages represented in a work of art through non-personal entities. Entities should only be extracted if they do not refer to specific persons.
-    """
-
-    artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
-    concept_of_artwork: (
-        str  # Concepts such as Harmony, man, nature, balance, duality, chaos, order
-    )
-
-
-def concept_depicts_relation_to_triplet(package: ConceptDepicts):
-    triplets = [
-        {
-            "subject": {
-                "label": package.artwork,
-            },
-            "relation": {
-                "label": "depicts",
-                "wikidata_id": "wdt:P180",
-            },
-            "object": {
-                "label": package.concept_of_artwork,
-            },
-        },
-        {
-            "subject": {
-                "label": package.concept_of_artwork,
-            },
-            "relation": {
-                "label": "instance of",
-                "wikidata_id": "wdt:P31",
-            },
-            "object": {
-                "label": "concept",
-                "wikidata_id": "wd:Q151885",
-            },
-        },
-    ]
-
-    return triplets
-
-
-@dataclass
-class ConceptSymbolize(Template):
-    """
-    Identify **symbolic representations of individuals or personified figures** that carry abstract meaning.
-    """
-
-    concept_of_artwork: (
-        str  # Concepts such as Harmony, man, nature, balance, duality, chaos, order
-    )
-    symbolize: str  # A specific person that is given in the text, but not necessarily in the depicted in the picture. for example: Napoleon, Julius Caesar, Marie Antoinette, Cleopatra, Queen Elizabeth I
-
-
-def concept_symbolize_relation_to_triplet(package: ConceptSymbolize):
-    triplets = [
-        {
-            "subject": {
-                "label": package.symbolize,
-            },
-            "relation": {
-                "label": "symbolizes",
-                "wikidata_id": "wdt:P4878",  ### ich bin mir hier nicht ganz sicher ob das stimmt. Kannst du das gegenprüfen?
-            },
-            "object": {
-                "label": package.concept_of_artwork,
-            },
-        },
-        {
-            "subject": {
-                "label": package.concept_of_artwork,
+                "s_class": "Concept",
             },
             "relation": {
                 "label": "instance of",
@@ -352,6 +187,7 @@ def rhetorical_device_relation_to_triplet(package: RhetoricalDevice):
         {
             "subject": {
                 "label": package.artwork,
+                "s_class": "WorkOfArt",
             },
             "relation": {
                 "label": "depicts",
@@ -364,6 +200,7 @@ def rhetorical_device_relation_to_triplet(package: RhetoricalDevice):
         {
             "subject": {
                 "label": package.device,
+                "s_class": "RhetoricalDevice",
             },
             "relation": {
                 "label": "instance of",
@@ -372,97 +209,6 @@ def rhetorical_device_relation_to_triplet(package: RhetoricalDevice):
             "object": {
                 "label": "rhetorical device",
                 "wikidata_id": "wd:Q1762471",
-            },
-        },
-    ]
-
-    return triplets
-
-
-@dataclass
-class RhetoricalDeviceDepicts(Template):
-    """
-    Rhetorical Device is a technique in language or visuals to convey a deeper meaning. Entities should only be extracted under this class if they do not represent abstract concepts. For example: the use of scale to emphasize a figure, or visual exaggeration to depict authority.
-
-    ### hier muss klargestellt werden, dass nur dann Entitäten extrahiert werden sollen, wenn es sich NICHT um ein Konzept handelt.
-    """
-
-    artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
-    device: str  # Rhetorical Devices such as irony, allegory, sarcasm, metaphor, symbolism, hyperbole
-
-
-def rhetorical_device_depicts_relation_to_triplet(package: RhetoricalDeviceDepicts):
-    triplets = [
-        {
-            "subject": {
-                "label": package.artwork,
-            },
-            "relation": {
-                "label": "depicts",
-                "wikidata_id": "wdt:P180",
-            },
-            "object": {
-                "label": package.device,
-            },
-        },
-        {
-            "subject": {
-                "label": package.device,
-            },
-            "relation": {
-                "label": "instance of",
-                "wikidata_id": "wdt:P31",
-            },
-            "object": {
-                "label": "rhetorical device",
-                "wikidata_id": "wd:Q1762471",
-            },
-        },
-    ]
-
-    return triplets
-
-
-@dataclass
-class RhetoricalDeviceSymbolize(Template):
-    """
-    Rhetorical Device is a technique in language or visuals to convey a deeper meaning. Entities should only be extracted under this class if they do represent abstract concepts. For example: an hourglass to symbolize time, or a skull to symbolize death.
-
-
-    ### hier muss klargestellt werden, dass nur dann Entitäten extrahiert werden, wenn es sich um ein Konzept handelt
-    """
-
-    device: str  # Rhetorical Devices such as irony, allegory, sarcasm, metaphor, symbolism, hyperbole
-    concept: (
-        str  # Concepts such as Harmony, man, nature, balance, duality, chaos, order
-    )
-
-
-def rhetorical_device_symbolize_relation_to_triplet(package: RhetoricalDeviceSymbolize):
-    triplets = [
-        {
-            "subject": {
-                "label": package.device,
-            },
-            "relation": {
-                "label": "symbolizes",
-                "wikidata_id": "wdt:P4878",  ### ich bin mir hier nicht ganz sicher ob das stimmt. Kannst du das gegenprüfen?
-            },
-            "object": {
-                "label": package.concept,
-            },
-        },
-        {
-            "subject": {
-                "label": package.concept,
-            },
-            "relation": {
-                "label": "instance of",
-                "wikidata_id": "wdt:P31",
-            },
-            "object": {
-                "label": "concept",
-                "wikidata_id": "wd:Q151885",
             },
         },
     ]
@@ -485,6 +231,7 @@ def emotion_relation_to_triplet(package: Emotion):
         {
             "subject": {
                 "label": package.artwork,
+                "s_class": "WorkOfArt",
             },
             "relation": {
                 "label": "depicts",
@@ -497,6 +244,7 @@ def emotion_relation_to_triplet(package: Emotion):
         {
             "subject": {
                 "label": package.type_of_emotion,
+                "s_class": "Emotion",
             },
             "relation": {
                 "label": "instance of",
@@ -527,6 +275,7 @@ def quality_relation_to_triplet(package: Quality):
         {
             "subject": {
                 "label": package.artwork,
+                "s_class": "WorkOfArt",
             },
             "relation": {
                 "label": "has characteristic",
@@ -539,6 +288,7 @@ def quality_relation_to_triplet(package: Quality):
         {
             "subject": {
                 "label": package.type_of_quality,
+                "s_class": "Quality",
             },
             "relation": {
                 "label": "instance of",
@@ -569,6 +319,7 @@ def color_relation_to_triplet(package: Color):
         {
             "subject": {
                 "label": package.artwork,
+                "s_class": "WorkOfArt",
             },
             "relation": {
                 "label": "depicts",
@@ -581,6 +332,7 @@ def color_relation_to_triplet(package: Color):
         {
             "subject": {
                 "label": package.type_of_color,
+                "s_class": "Color",
             },
             "relation": {
                 "label": "instance of",
@@ -611,6 +363,7 @@ def point_in_time_relation_to_triplet(package: PointInTime):
         {
             "subject": {
                 "label": package.artwork,
+                "s_class": "WorkOfArt",
             },
             "relation": {
                 "label": "depicts",
@@ -623,6 +376,7 @@ def point_in_time_relation_to_triplet(package: PointInTime):
         {
             "subject": {
                 "label": package.type_of_point_in_time,
+                "s_class": "PointInTime",
             },
             "relation": {
                 "label": "instance of",
@@ -653,6 +407,7 @@ def season_relation_to_triplet(package: Season):
         {
             "subject": {
                 "label": package.artwork,
+                "s_class": "WorkOfArt",
             },
             "relation": {
                 "label": "depicts",
@@ -665,6 +420,7 @@ def season_relation_to_triplet(package: Season):
         {
             "subject": {
                 "label": package.type_of_season,
+                "s_class": "Season",
             },
             "relation": {
                 "label": "instance of",
@@ -695,6 +451,7 @@ def person_relation_to_triplet(package: Person):
         {
             "subject": {
                 "label": package.artwork,
+                "s_class": "WorkOfArt",
             },
             "relation": {
                 "label": "depicts",
@@ -707,6 +464,7 @@ def person_relation_to_triplet(package: Person):
         {
             "subject": {
                 "label": package.type_of_person,
+                "s_class": "Person",
             },
             "relation": {
                 "label": "instance of",

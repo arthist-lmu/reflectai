@@ -22,6 +22,7 @@ def color_relation_to_triplet(package: Color):
         {
             "subject": {
                 "label": package.artwork,
+                "s_class": "WorkOfArt",
             },
             "relation": {
                 "label": "depicts",
@@ -34,6 +35,7 @@ def color_relation_to_triplet(package: Color):
         {
             "subject": {
                 "label": package.type_of_color,
+                "s_class": "Color",
             },
             "relation": {
                 "label": "instance of",
@@ -101,6 +103,7 @@ def physical_object_relation_to_triplet(package: PhysicalObject) -> List[dict]:
         {
             "subject": {
                 "label": package.artwork,
+                "s_class": "WorkOfArt",
             },
             "relation": {
                 "label": "depicts",
@@ -116,6 +119,7 @@ def physical_object_relation_to_triplet(package: PhysicalObject) -> List[dict]:
         {
             "subject": {
                 "label": object_label,
+                "s_class": "PhysicalObject",
             },
             "relation": {
                 "label": "instance of",
@@ -146,6 +150,7 @@ def season_relation_to_triplet(package: Season):
         {
             "subject": {
                 "label": package.artwork,
+                "s_class": "WorkOfArt",
             },
             "relation": {
                 "label": "depicts",
@@ -158,6 +163,7 @@ def season_relation_to_triplet(package: Season):
         {
             "subject": {
                 "label": package.type_of_season,
+                "s_class": "Season",
             },
             "relation": {
                 "label": "instance of",
@@ -215,6 +221,7 @@ def occupation_relation_to_triplet(package: Occupation) -> List[dict]:
         {
             "subject": {
                 "label": package.artwork,
+                "s_class": "WorkOfArt",
             },
             "relation": {
                 "label": "depicts",
@@ -230,6 +237,7 @@ def occupation_relation_to_triplet(package: Occupation) -> List[dict]:
         {
             "subject": {
                 "label": occupation_label,
+                "s_class": "Occupation",
             },
             "relation": {
                 "label": "instance of",
@@ -293,6 +301,7 @@ def anatomical_structure_relation_to_triplet(
         {
             "subject": {
                 "label": package.artwork,
+                "s_class": "WorkOfArt",
             },
             "relation": {
                 "label": "depicts",
@@ -308,6 +317,7 @@ def anatomical_structure_relation_to_triplet(
         {
             "subject": {
                 "label": anatomical_label,
+                "s_class": "AnatomicalStructure",
             },
             "relation": {
                 "label": "instance of",
@@ -331,7 +341,6 @@ class Person(Template):
 
     artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
 
-    # Specific categories for persons to be extracted into triplets.
     historical_figure: Optional[str] = (
         None  # Historical figures Napoleon, Julius Caesar, Marie Antoinette, Queen Elizabeth I, Leonardo da Vinci
     )
@@ -372,6 +381,7 @@ def person_relation_to_triplet(package: Person) -> List[dict]:
         {
             "subject": {
                 "label": package.artwork,
+                "s_class": "WorkOfArt",
             },
             "relation": {
                 "label": "depicts",
@@ -387,6 +397,7 @@ def person_relation_to_triplet(package: Person) -> List[dict]:
         {
             "subject": {
                 "label": person_label,
+                "s_class": "Person",
             },
             "relation": {
                 "label": "instance of",

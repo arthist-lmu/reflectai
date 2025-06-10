@@ -22,6 +22,7 @@ def mythical_character_relation_to_triplet(package: MythicalCharacter):
         {
             "subject": {
                 "label": package.artwork,
+                "s_class": "WorkOfArt",
             },
             "relation": {
                 "label": "depicts",
@@ -34,6 +35,7 @@ def mythical_character_relation_to_triplet(package: MythicalCharacter):
         {
             "subject": {
                 "label": package.type_of_mythical_character,
+                "s_class": "MythicalCharacter",
             },
             "relation": {
                 "label": "instance of",
@@ -64,6 +66,7 @@ def religious_character_relation_to_triplet(package: ReligiousCharacter):
         {
             "subject": {
                 "label": package.artwork,
+                "s_class": "WorkOfArt",
             },
             "relation": {
                 "label": "depicts",
@@ -76,6 +79,7 @@ def religious_character_relation_to_triplet(package: ReligiousCharacter):
         {
             "subject": {
                 "label": package.type_of_religious_character,
+                "s_class": "ReligiousCharacter",
             },
             "relation": {
                 "label": "instance of",
@@ -106,6 +110,7 @@ def anatomical_structure_relation_to_triplet(package: AnatomicalStructure):
         {
             "subject": {
                 "label": package.artwork,
+                "s_class": "WorkOfArt",
             },
             "relation": {
                 "label": "depicts",
@@ -118,6 +123,7 @@ def anatomical_structure_relation_to_triplet(package: AnatomicalStructure):
         {
             "subject": {
                 "label": package.type_of_anatomical_structure,
+                "s_class": "AnatomicalStructure",
             },
             "relation": {
                 "label": "instance of",
@@ -148,6 +154,7 @@ def occupation_relation_to_triplet(package: Occupation):
         {
             "subject": {
                 "label": package.artwork,
+                "s_class": "WorkOfArt",
             },
             "relation": {
                 "label": "depicts",
@@ -160,6 +167,7 @@ def occupation_relation_to_triplet(package: Occupation):
         {
             "subject": {
                 "label": package.type_of_occupation,
+                "s_class": "Occupation",
             },
             "relation": {
                 "label": "instance of",
@@ -168,46 +176,6 @@ def occupation_relation_to_triplet(package: Occupation):
             "object": {
                 "label": "occupation",
                 "wikidata_id": "wd:Q12737077",
-            },
-        },
-    ]
-
-    return triplets
-
-
-@dataclass
-class PostureDepicts(Template):
-    """ """
-
-    artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
-    type_of_posture: str  # Postures such as reclining, head tilted, moving, sitting, standing, kneeling, running, gesturing
-
-
-def posture_depicts_relation_to_triplet(package: PostureDepicts):
-    triplets = [
-        {
-            "subject": {
-                "label": package.artwork,
-            },
-            "relation": {
-                "label": "depicts",
-                "wikidata_id": "wdt:P180",
-            },
-            "object": {
-                "label": package.type_of_posture,
-            },
-        },
-        {
-            "subject": {
-                "label": package.type_of_posture,
-            },
-            "relation": {
-                "label": "instance of",
-                "wikidata_id": "wdt:P31",
-            },
-            "object": {
-                "label": "posture",
-                "wikidata_id": "wd:Q8514257",
             },
         },
     ]
@@ -230,6 +198,7 @@ def posture_relation_to_triplet(package: Posture):
         {
             "subject": {
                 "label": package.person,
+                "s_class": "WorkOfArt",
             },
             "relation": {
                 "label": "has characteristic",
@@ -242,46 +211,7 @@ def posture_relation_to_triplet(package: Posture):
         {
             "subject": {
                 "label": package.type_of_posture,
-            },
-            "relation": {
-                "label": "instance of",
-                "wikidata_id": "wdt:P31",
-            },
-            "object": {
-                "label": "posture",
-                "wikidata_id": "wd:Q8514257",
-            },
-        },
-    ]
-
-    return triplets
-
-
-@dataclass
-class PostureCharacteristic(Template):
-    """ """
-
-    person: str  # A specific person that is given in the text, but not necessarily in the depicted in the picture. for example: Napoleon, Julius Caesar, Marie Antoinette, Cleopatra, Queen Elizabeth I
-    type_of_posture: str  # Reclining, head tilted, moving, sitting, standing, kneeling, running, gesturing
-
-
-def posture_characteristic_relation_to_triplet(package: PostureCharacteristic):
-    triplets = [
-        {
-            "subject": {
-                "label": package.person,
-            },
-            "relation": {
-                "label": "has characteristic",
-                "wikidata_id": "wdt:P1552",
-            },
-            "object": {
-                "label": package.type_of_posture,
-            },
-        },
-        {
-            "subject": {
-                "label": package.type_of_posture,
+                "s_class": "Posture",
             },
             "relation": {
                 "label": "instance of",
@@ -312,6 +242,7 @@ def architectural_structure_relation_to_triplet(package: ArchitecturalStructure)
         {
             "subject": {
                 "label": package.artwork,
+                "s_class": "WorkOfArt",
             },
             "relation": {
                 "label": "depicts",
@@ -324,6 +255,7 @@ def architectural_structure_relation_to_triplet(package: ArchitecturalStructure)
         {
             "subject": {
                 "label": package.type_of_architectural_structure,
+                "s_class": "ArchitecturalStructure",
             },
             "relation": {
                 "label": "instance of",
@@ -354,6 +286,7 @@ def geographical_feature_relation_to_triplet(package: GeographicalFeature):
         {
             "subject": {
                 "label": package.artwork,
+                "s_class": "WorkOfArt",
             },
             "relation": {
                 "label": "depicts",
@@ -366,6 +299,7 @@ def geographical_feature_relation_to_triplet(package: GeographicalFeature):
         {
             "subject": {
                 "label": package.type_of_geographical_feature,
+                "s_class": "GeographicalFeature",
             },
             "relation": {
                 "label": "instance of",
@@ -396,6 +330,7 @@ def mythical_location_relation_to_triplet(package: MythicalLocation):
         {
             "subject": {
                 "label": package.artwork,
+                "s_class": "WorkOfArt",
             },
             "relation": {
                 "label": "depicts",
@@ -408,6 +343,7 @@ def mythical_location_relation_to_triplet(package: MythicalLocation):
         {
             "subject": {
                 "label": package.type_of_mythical_location,
+                "s_class": "MythicalLocation",
             },
             "relation": {
                 "label": "instance of",
@@ -438,6 +374,7 @@ def physical_location_relation_to_triplet(package: PhysicalLocation):
         {
             "subject": {
                 "label": package.artwork,
+                "s_class": "WorkOfArt",
             },
             "relation": {
                 "label": "depicts",
@@ -450,6 +387,7 @@ def physical_location_relation_to_triplet(package: PhysicalLocation):
         {
             "subject": {
                 "label": package.type_of_physical_location,
+                "s_class": "PhysicalLocation",
             },
             "relation": {
                 "label": "instance of",
@@ -480,6 +418,7 @@ def physical_surface_relation_to_triplet(package: PhysicalSurface):
         {
             "subject": {
                 "label": package.artwork,
+                "s_class": "WorkOfArt",
             },
             "relation": {
                 "label": "depicts",
@@ -492,6 +431,7 @@ def physical_surface_relation_to_triplet(package: PhysicalSurface):
         {
             "subject": {
                 "label": package.type_of_physical_surface,
+                "s_class": "PhysicalSurface",
             },
             "relation": {
                 "label": "instance of",
@@ -524,6 +464,7 @@ def animal_relation_to_triplet(package: Animal):
         {
             "subject": {
                 "label": package.artwork,
+                "s_class": "WorkOfArt",
             },
             "relation": {
                 "label": "depicts",
@@ -536,6 +477,7 @@ def animal_relation_to_triplet(package: Animal):
         {
             "subject": {
                 "label": package.type_of_animal,
+                "s_class": "Animal",
             },
             "relation": {
                 "label": "instance of",
@@ -566,6 +508,7 @@ def mythical_animal_relation_to_triplet(package: MythicalAnimal):
         {
             "subject": {
                 "label": package.artwork,
+                "s_class": "WorkOfArt",
             },
             "relation": {
                 "label": "depicts",
@@ -578,6 +521,7 @@ def mythical_animal_relation_to_triplet(package: MythicalAnimal):
         {
             "subject": {
                 "label": package.type_of_mythical_animal,
+                "s_class": "MythicalAnimal",
             },
             "relation": {
                 "label": "instance of",
@@ -608,6 +552,7 @@ def food_relation_to_triplet(package: Food):
         {
             "subject": {
                 "label": package.artwork,
+                "s_class": "WorkOfArt",
             },
             "relation": {
                 "label": "depicts",
@@ -620,6 +565,7 @@ def food_relation_to_triplet(package: Food):
         {
             "subject": {
                 "label": package.type_of_food,
+                "s_class": "Food",
             },
             "relation": {
                 "label": "instance of",
@@ -650,6 +596,7 @@ def physical_object_relation_to_triplet(package: PhysicalObject):
         {
             "subject": {
                 "label": package.artwork,
+                "s_class": "WorkOfArt",
             },
             "relation": {
                 "label": "depicts",
@@ -662,6 +609,7 @@ def physical_object_relation_to_triplet(package: PhysicalObject):
         {
             "subject": {
                 "label": package.type_of_physical_object,
+                "s_class": "PhysicalObject",
             },
             "relation": {
                 "label": "instance of",
@@ -692,6 +640,7 @@ def plant_relation_to_triplet(package: Plant):
         {
             "subject": {
                 "label": package.artwork,
+                "s_class": "WorkOfArt",
             },
             "relation": {
                 "label": "depicts",
@@ -704,6 +653,7 @@ def plant_relation_to_triplet(package: Plant):
         {
             "subject": {
                 "label": package.type_of_plant,
+                "s_class": "Plant",
             },
             "relation": {
                 "label": "instance of",
