@@ -10,13 +10,13 @@ default_config = {
     # "template": ["iconography","museum_mentions","painting_alias",
     #             "painting_content","painting_genre","painting_material",
     #             "painting_metadata"]
-
-    # "template": ["a_ts_content_layer_initialdescription", "ts_content_layer_initialdescription", 
-    #              "ts_content_layer_llmeasylanguage", "ts_content_layer_wikidata", 
-    #              "ts_metadata_layer_wikidata copy", "ts_metadata_layer_wikidata_initialdescription copy", 
+    # "template": ["a_ts_content_layer_initialdescription", "ts_content_layer_initialdescription",
+    #              "ts_content_layer_llmeasylanguage", "ts_content_layer_wikidata",
+    #              "ts_metadata_layer_wikidata copy", "ts_metadata_layer_wikidata_initialdescription copy",
     #              "ts_metadata_layer_wikidata_llmeasylanguage" ]
-
-    "template": ["test"]
+    "template": ["test"],
+    "split_templates": False,
+    "max_new_tokens": 256,
 }
 default_parameters = {}
 
@@ -35,22 +35,35 @@ class GolliePlugin(
         from transformers import AutoTokenizer, AutoModelForCausalLM
 
         self.templates = []
-        for template in self.config.get('template'):
+        for template in self.config.get("template"):
             template_definition = importlib.import_module(
                 "kg_pipeline.relation_prediction.gollie_plugin.templates.{}".format(
                     template
                 )
             )
-            self.templates.append({
-                'name': template,
-                'entity_parser': template_definition.ENTITY_PARSER,
-                'entity_definitions': template_definition.ENTITY_DEFINITIONS,
-                'guidelines': [
-                    inspect.getsource(definition)
-                    for definition in template_definition.ENTITY_DEFINITIONS
-                ]
-            })
+            if self.config.get("split_templates"):
+                for x in template_definition.ENTITY_DEFINITIONS:
+                    self.templates.append(
+                        {
+                            "name": template,
+                            "entity_parser": template_definition.ENTITY_PARSER,
+                            "entity_definitions": x,
+                            "guidelines": [inspect.getsource(x)],
+                        }
+                    )
 
+            else:
+                self.templates.append(
+                    {
+                        "name": template,
+                        "entity_parser": template_definition.ENTITY_PARSER,
+                        "entity_definitions": template_definition.ENTITY_DEFINITIONS,
+                        "guidelines": [
+                            inspect.getsource(definition)
+                            for definition in template_definition.ENTITY_DEFINITIONS
+                        ],
+                    }
+                )
         if torch.cuda.is_available():
             self.device = torch.device("cuda")
             print("GPU available")
@@ -77,7 +90,9 @@ text = {{ text.__repr__() }}
         """
         self.template = Template(template_string)
 
-    def convert_to_triplets(self, gollie_outputs: list, entity_parser: dict, with_class_name=False) -> list[dict]:
+    def convert_to_triplets(
+        self, gollie_outputs: list, entity_parser: dict, with_class_name=False
+    ) -> list[dict]:
         results = []
         for x in gollie_outputs:
             if x.__class__.__name__ in entity_parser:
@@ -85,15 +100,15 @@ text = {{ text.__repr__() }}
                     triplets = entity_parser[x.__class__.__name__](x)
                     if with_class_name:
                         for t in triplets:
-                            t.update({'class_name':x.__class__.__name__})
+                            t.update({"class_name": x.__class__.__name__})
                 except Exception as e:
-                    print('Error converting Gollie output to triplet', e)
+                    print("Error converting Gollie output to triplet", e)
                     continue
                 results.extend(triplets)
 
         return results
 
-    def call(self, text_entries: list[dict]) -> Generator[dict,None,None]:
+    def call(self, text_entries: list[dict]) -> Generator[dict, None, None]:
         import black
         from .utils_typing import AnnotationList
 
@@ -101,7 +116,7 @@ text = {{ text.__repr__() }}
             triplets = []
             for template in self.templates:
                 formated_text = self.template.render(
-                    guidelines=template['guidelines'],
+                    guidelines=template["guidelines"],
                     text=entry["text"],
                 )
 
@@ -115,20 +130,20 @@ text = {{ text.__repr__() }}
                 model_input["attention_mask"] = model_input["attention_mask"][:, :-1]
                 model_ouput = self.model.generate(
                     **model_input.to(self.model.device),
-                    max_new_tokens=256,
+                    max_new_tokens=self.config.get("max_new_tokens"),
                     do_sample=False,
                     min_new_tokens=0,
                     num_beams=1,
                     num_return_sequences=1,
-                    pad_token_id=self.tokenizer.pad_token_id
+                    pad_token_id=self.tokenizer.pad_token_id,
                 )
                 try:
                     result = AnnotationList.from_output(
-                        self.tokenizer.decode(model_ouput[0], skip_special_tokens=True).split(
-                            "result = "
-                        )[-1],
+                        self.tokenizer.decode(
+                            model_ouput[0], skip_special_tokens=True
+                        ).split("result = ")[-1],
                         task_module="kg_pipeline.relation_prediction.gollie_plugin.templates.{}".format(
-                            template['name']
+                            template["name"]
                         ),
                     )
                 except Exception as e:
@@ -136,8 +151,12 @@ text = {{ text.__repr__() }}
                     continue
 
                 triplets.extend(
-                    self.convert_to_triplets(result, template['entity_parser'], entry['with_class_name'])
+                    self.convert_to_triplets(
+                        result,
+                        template["entity_parser"],
+                        entry.get("with_class_name", False),
+                    )
                 )
 
-            entry['triplets'].append({"type": "gollie", "content": triplets})
+            entry["triplets"].append({"type": "gollie", "content": triplets})
             yield entry
