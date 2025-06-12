@@ -97,7 +97,7 @@ def physical_object_relation_to_triplet(package: PhysicalObject) -> List[dict]:
         object_label = package.other_object
 
     if object_label is None:
-        raise ValueError()
+        return triplets
 
     triplets.append(
         {
@@ -215,7 +215,7 @@ def occupation_relation_to_triplet(package: Occupation) -> List[dict]:
         occupation_label = package.other_occupation
 
     if occupation_label is None:
-        raise ValueError()
+        return triplets
 
     triplets.append(
         {
@@ -295,7 +295,7 @@ def anatomical_structure_relation_to_triplet(
         anatomical_label = package.other_part
 
     if anatomical_label is None:
-        raise ValueError()
+        return triplets
 
     triplets.append(
         {
@@ -375,7 +375,7 @@ def person_relation_to_triplet(package: Person) -> List[dict]:
         person_label = package.other_person_type
 
     if person_label is None:
-        raise ValueError()
+        return triplets
 
     triplets.append(
         {
