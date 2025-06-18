@@ -53,7 +53,7 @@ def read_dataset(path: str, with_class_name=False, with_prefix=False) -> List[Di
             data = json.loads(line)
             prefix = ""
             if with_prefix:
-                prefix = "Work of Art: "
+                prefix = "The art work is called "
             text = prefix + "; ".join(text["content"] for text in data["text"])
             results.append(
                 dict(

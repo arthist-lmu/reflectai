@@ -1,6 +1,6 @@
 import logging
 from typing import Generator
-
+import re
 from kg_pipeline.plugin import Plugin
 from kg_pipeline.manager import Manager
 
@@ -14,7 +14,7 @@ default_config = {
     #              "ts_content_layer_llmeasylanguage", "ts_content_layer_wikidata",
     #              "ts_metadata_layer_wikidata copy", "ts_metadata_layer_wikidata_initialdescription copy",
     #              "ts_metadata_layer_wikidata_llmeasylanguage" ]
-    "template": ["test"],
+    "template": ["test copy"],
     "split_templates": False,
     "max_new_tokens": 256,
 }
@@ -90,17 +90,28 @@ text = {{ text.__repr__() }}
         """
         self.template = Template(template_string)
 
-    def convert_to_triplets(
-        self, gollie_outputs: list, entity_parser: dict, with_class_name=False
-    ) -> list[dict]:
+    def convert_to_triplets(self, gollie_outputs: list, entity_parser: dict, entry=None) -> list[dict]:
         results = []
+
         for x in gollie_outputs:
             if x.__class__.__name__ in entity_parser:
                 try:
                     triplets = entity_parser[x.__class__.__name__](x)
-                    if with_class_name:
+
+
+                    if entry['with_class_name']:
+                        # try:
+                        #     end = re.search('^.*\n\n', entry['text']).end()
+                        #     match = entry['text'][:end-2]
+                        # except (TypeError, AttributeError):
+                        #     match = entry["id"]
+                            
                         for t in triplets:
-                            t.update({"class_name": x.__class__.__name__})
+                            # if t['subject']['label'] == 'XXX':  ### REMOVE THIS AFTER THE TESTING IS DONE
+                            #     t['subject']['label'] = match
+                            t.update({'class_name':x.__class__.__name__})
+
+                              
                 except Exception as e:
                     print("Error converting Gollie output to triplet", e)
                     continue
@@ -151,11 +162,7 @@ text = {{ text.__repr__() }}
                     continue
 
                 triplets.extend(
-                    self.convert_to_triplets(
-                        result,
-                        template["entity_parser"],
-                        entry.get("with_class_name", False),
-                    )
+                    self.convert_to_triplets(result, template['entity_parser'], entry)
                 )
 
             entry["triplets"].append({"type": "gollie", "content": triplets})

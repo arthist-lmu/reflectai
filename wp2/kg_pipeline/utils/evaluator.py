@@ -1,6 +1,5 @@
 from typing import List, Dict, Generator
 import json
-import numpy as np
 import pandas as pd
 from kg_pipeline.manager import Manager
 from difflib import SequenceMatcher
@@ -14,6 +13,16 @@ import itertools
 client = Client(
   host='devbox2.research.tib.eu'
 )
+
+#----------------------------------------------------------------#
+# This is to count the predicates despite them beeing different but ought to mean the same 
+equal_predicates = {'depicts': ['depicts', 'symbolizes', 'contains', 'has_characteristic'], 
+                    'created_in': ['created_in', 'created_by'], 
+                    'contains': ['contains', 'depicts'], 
+                    'symbolizes': ['symbolizes', 'depicts'], 
+                    'has_characteristic': ['has_characteristic', 'depicts'], 
+                    'created_by': ['created_in', 'created_by', 'influenced_by']}
+#-----------------------------------------------------------------#
 
 # -------------------- utility functions --------------------------------------#
 
@@ -79,8 +88,7 @@ def calculate_metrics_detailed(pred_dict, pos_dict, mode='class', with_n=True):
                 s_total_pos = pos_dict[key]
             else:
                 s_total_pos = 0
-
-            
+             
             s_precision = s_tp / s_total_pre if s_total_pre > 0.0 else 0.0
             s_recall = s_tp / s_total_pos if s_total_pos > 0.0 else 0.0
             s_f1_score = 2 * s_precision * s_recall / (s_precision + s_recall) if (s_precision + s_recall) > 0.0 else 0.0
@@ -92,12 +100,12 @@ def calculate_metrics_detailed(pred_dict, pos_dict, mode='class', with_n=True):
                 scores = [s_f1_score, s_precision, s_recall]
 
             results.update({key: scores})
-        
+
         # include all the classes that have not been found but could have been found
         for gt_key in pos_dict.keys():
             if gt_key not in results.keys():
                 if with_n:
-                    scores = [0, 0, 0, 0, 0]
+                    scores = [0, 0, 0, 0, pos_dict[gt_key]]
                 else:
                     scores = [0, 0, 0]
 
@@ -159,7 +167,6 @@ def llm_query(predictions, save_path, mode='soft'):
 
     resp = response['message']['content'].lower()
     mitschrift.update({f"{predictions[0].lower()}, {predictions[1].lower()}, {mode}" : resp})
-    print(mitschrift)
     with open(save_path, 'a', encoding='utf-8') as fp:
        json.dump(mitschrift, fp, indent=4, ensure_ascii=False)
 
@@ -168,11 +175,9 @@ def llm_query(predictions, save_path, mode='soft'):
 
 
 def calculate_metrics_df(pred_classes_dict, gt_classes_dict, save_path, save_types, type_prediction):
+
     class_eval = calculate_metrics_detailed(pred_classes_dict, gt_classes_dict, mode='class')
-    #print(class_eval)
-
     class_df = pd.DataFrame.from_dict(data=class_eval, orient='index', columns=['F1', 'precision', 'recall', 'N_pred', 'N_gt'])
-
     class_df.to_csv(save_path)
 
     if len(type_prediction) != 0:
@@ -202,6 +207,22 @@ def count_type_accuracy(tup, pred, type_prediction, single):
         type_prediction = count_type_accuracy_block(tup, o_pred, type_prediction, 3)
     
     return type_prediction
+
+
+def determine_ollama_candidate(candidate1, candidate2):
+    ratio = SequenceMatcher(lambda x: x==' ', candidate1, candidate2).ratio()
+    if ratio >= 0.5:
+        return True
+    
+    longer = candidate1
+    shorter = candidate2
+    if len(candidate1) < len(candidate2):
+        longer = candidate2
+        shorter = candidate1
+
+    return shorter in longer
+
+
 #-------------------------------------------------------------------------------#
 
 
@@ -371,8 +392,8 @@ def calc_ollama_total(reference, pred, llm_log_path, mode, found, tp, single):
         p_pred = pred[2]
         # count up with llm prompts (hard cut)
         for tup in reference:
-            if 'y' in llm_query((s_pred, tup[0]), llm_log_path, mode) and found.get(tup) is None: #'/nfs/home/ritterd/reflect/reflectai/wp2/test/gollie_testset/mitschrift_subjekt_objekt_prädikat.json'
-                if 'y' in llm_query((o_pred, tup[2]), llm_log_path, mode):
+            if found.get(tup) is None and determine_ollama_candidate(s_pred[0], tup[0]) and 'y' in llm_query((s_pred, tup[0]), llm_log_path, mode): #'/nfs/home/ritterd/reflect/reflectai/wp2/test/gollie_testset/mitschrift_subjekt_objekt_prädikat.json'
+                if determine_ollama_candidate(o_pred[0], tup[2]) and 'y' in llm_query((o_pred, tup[2]), llm_log_path, mode):
                     # since the predicates are hardcoded there is no need for the llm
                     if tup[1] == p_pred:  
                         tp += 1
@@ -417,6 +438,132 @@ def eval_accuracy_total(text_entries, save_path, mode='word_distance', llm_log_p
     # ------------- calculate metrics -------------#
     scores = calculate_metrics(tp, total_pre, total_pos)
     scores.to_csv(save_path) 
+
+
+def eval_accuracy_total_triplets(text_entries, save_path, mode='perfect', eval='subject_object_predicate',
+                                  llm_log_path=None, gt_s=[], gt_p=[], gt_o=[], pred_s=[], pred_o=[], pred_p=[], 
+                                  with_subject=True, with_predicate=True):
+
+    # TODO Erweiterung möglich?
+    # pred_objects = "all"
+    # requireObjectTrue
+
+    # TODO Performance per Class
+    # splitPerformanceFor = "object"
+
+    # Beispielausgaben:
+    # - GT: A dear sitting on a cat, depicts, dear
+    # - Pred: cat, depicts, dear
+
+    tp = 0
+    found = {}
+    total_pre = 0
+    total_pos = 0
+    for entry in text_entries:
+        for predictions_ in entry['triplets']:
+            reference = entry['annotations']
+            reference = convert_annotation_to_triplet(reference)
+            reference, predictions_['content'] = prepare_data_total(reference, eval, predictions_['content'])
+
+            if gt_s:
+                reference = [a for a in reference if a[3] in gt_s]
+            if gt_o:
+                reference = [a for a in reference if a[4] in gt_o]
+            if gt_p:
+                reference = [a for a in reference if a[1] in gt_p]
+
+            if pred_s:
+                predictions_['content'] = [a for a in predictions_['content'] if a[3] in pred_s]
+            if pred_o:
+                predictions_['content'] = [a for a in predictions_['content'] if a[4] in pred_o]
+            if pred_p:
+                predictions_['content'] = [a for a in predictions_['content'] if a[1] in pred_p]
+
+            total_pos += len(reference)
+            for trips in predictions_['content']:
+                total_pre += 1
+
+                if mode == 'perfect':
+                    #tp, found = calc_perfect_total(reference=reference, pred=trips, found=found, tp=tp, single='p')
+                    s_pred = trips[0]
+                    o_pred = trips[2]
+                    p_pred = trips[1]
+                    
+                    for tup in reference:
+                        if not with_subject:
+                            s = True
+                        else:
+                            s = tup[0] == s_pred 
+                        
+                        if not with_predicate:
+                            p = True
+                        else:
+                            p = tup[1] == p_pred
+
+                        if s and found.get(tup) is None:
+                            if tup[2] == o_pred:
+                                if p:
+                                    tp += 1
+                                    found = remove_entry(remove=tup, structure=found, mode='multiple')
+                                    break
+
+                elif mode == 'word_distance':
+                    #tp, found = calc_word_distance_total(reference=reference, pred=trips, found=found, tp=tp, single='p')
+                    s_pred = trips[0]
+                    o_pred = trips[2]
+                    p_pred = trips[1]
+                    saved_tups = []
+
+                    if not with_subject:
+                        saved_tups = reference
+                    else:
+                        for tup in reference:
+                            ratio = SequenceMatcher(lambda x: x==' ', s_pred, tup[0]).ratio() 
+                            if ratio > 0.75 and found.get(tup) is None:  # assuming that the string are similar enough
+                                saved_tups.append(tup)
+
+                    for saved_tup in saved_tups:  # IF needed and LLM wont work, maybe add a simple list count of valid entries might be useful  
+                       
+                        if not with_predicate:
+                            p = True
+                        else:
+                            p = p_pred == saved_tup[1]
+
+                        ratio = SequenceMatcher(lambda x: x==' ', o_pred, saved_tup[2]).ratio() 
+                        if ratio > 0.75 and p and found.get(saved_tup) is None:  # assuming that the string are similar enough 
+                            tp += 1
+                            found = remove_entry(remove=saved_tup, structure=found, mode='multiple')
+                            break
+
+                elif mode in ('hard', 'soft'):
+                    #tp, found = calc_ollama_total(reference=reference, pred=trips, found=found, tp=tp, single='p', mode=mode, llm_log_path=llm_log_path)
+                    s_pred = trips[0]
+                    o_pred = trips[2]
+                    p_pred = trips[1]
+                    
+                    for tup in reference:
+                        if not with_subject:
+                            s = True
+                        else:
+                            s = determine_ollama_candidate(s_pred, tup[0]) and 'y' in llm_query((s_pred, tup[0]), llm_log_path, mode)
+                        
+                        if not with_predicate:
+                            p = True
+                        else:
+                            p = tup[1] == p_pred
+
+                        if found.get(tup) is None and s: #'/nfs/home/ritterd/reflect/reflectai/wp2/test/gollie_testset/mitschrift_subjekt_objekt_prädikat.json'
+                            if determine_ollama_candidate(o_pred, tup[2]) and 'y' in llm_query((o_pred, tup[2]), llm_log_path, mode):
+                                # since the predicates are hardcoded there is no need for the llm
+                                if p:  
+                                    tp += 1
+                                    found = remove_entry(remove=tup, structure=found, mode='multiple')
+                                    break
+    # ------------- calculate metrics -------------#
+    scores = calculate_metrics(tp, total_pre, total_pos)
+    scores.to_csv(save_path) 
+            
+
 
 #-------------------------------------------------------------------------------#
 
@@ -606,7 +753,7 @@ def calc_ollama(pred, reference, type_prediction, found, llm_log_path, mode, sin
         pred = pred[0]  
         class_name = pred[1]
         for tup in reference:
-            if found.get(tup) is None and 'y' in llm_query((pred[0], tup[0]), llm_log_path, mode):
+            if found.get(tup) is None and determine_ollama_candidate(pred[0], tup[0]) and 'y' in llm_query((pred[0], tup[0]), llm_log_path, mode):
                 type_prediction = count_type_accuracy(tup, (pred,), type_prediction, single)
                 class_name = tup[1]
                 tp_flag = True
@@ -619,8 +766,8 @@ def calc_ollama(pred, reference, type_prediction, found, llm_log_path, mode, sin
         class_name = s_pred[1]
 
         for tup in reference:
-            if found.get(tup) is None and 'y' in llm_query((s_pred[0], tup[0]), llm_log_path, mode):
-                if found.get(tup) is None and 'y' in llm_query((o_pred[0], tup[1]), llm_log_path, mode):
+            if found.get(tup) is None and determine_ollama_candidate(s_pred[0], tup[0]) and 'y' in llm_query((s_pred[0], tup[0]), llm_log_path, mode):
+                if found.get(tup) is None and determine_ollama_candidate(o_pred[0], tup[1]) and 'y' in llm_query((o_pred[0], tup[1]), llm_log_path, mode):
                     type_prediction = count_type_accuracy(tup, pred, type_prediction, single)
                     tp_flag = True
                     class_name = tup[2]
@@ -633,8 +780,8 @@ def calc_ollama(pred, reference, type_prediction, found, llm_log_path, mode, sin
         class_name = p_pred
         class_name = p_pred
         for tup in reference:
-            if  found.get(tup) is None and 'y' in llm_query((s_pred[0], tup[0]), llm_log_path, mode):
-                if found.get(tup) is None and 'y' in llm_query((o_pred[0], tup[1]), llm_log_path, mode):
+            if  found.get(tup) is None and determine_ollama_candidate(s_pred[0], tup[0]) and 'y' in llm_query((s_pred[0], tup[0]), llm_log_path, mode):
+                if found.get(tup) is None and determine_ollama_candidate(o_pred[0], tup[2]) and 'y' in llm_query((o_pred[0], tup[2]), llm_log_path, mode):
                     if p_pred == tup[1]  and found.get(tup) is None:
                         tp_flag = True
                         class_name = tup[1]
@@ -663,20 +810,90 @@ def eval_accuracy_classes_tricks(text_entries, save_path, save_types, mode='word
     gt_classes_dict = defaultdict(int)
     type_prediction = defaultdict(lambda: {'found':0, 'existing': 0})
     found = {}
+    cnt_ob = defaultdict(int)
+    cnt_sub = defaultdict(int)
+    cnt_pred_sub = defaultdict(int)
+    cnt_pred_ob = defaultdict(int)
+    cnt = defaultdict(int)
 
     for entry in text_entries:
         for predictions_ in entry['triplets']:
             reference = entry['annotations']
             reference = convert_annotation_to_triplet(reference)
             reference, predictions_['content'], gt_classes_dict = prepare_data(reference, eval, predictions_['content'], gt_classes_dict)
-           
+             
+            ##############THIS PART REMOVES ALL THE SUBJECTS WHERE SUBJECT != ARTWORK FROM THE LIST ################# 
+            
+            # print(len(reference))
+            # print(len(predictions_['content']))
+            # try:
+            #     end = re.search('^.*\n\n', entry['text']).end()
+            #     match = entry['text'][:end-2]
+            # except (TypeError, AttributeError):
+            #     match = entry["id"]
+
+            # reference_copy = reference.copy()
+            # reference = [x for x in reference_copy if x[0].lower() != match.lower()]
+            
+            # for a in reference:
+            #     cnt_sub[a[3]] += 1
+            #     cnt_sub['total'] += 1
+            #     cnt_ob[a[4]] += 1
+            #     cnt_ob['total'] += 1
+            #     cnt[a[1]] += 1
+            #     cnt['total'] += 1
+
+            # for a in predictions_['content']:
+            #     cnt_pred_sub[a[3]] += 1
+            #     cnt_pred_sub['total'] += 1
+            #     cnt_pred_ob[a[4]] += 1
+            #     cnt_pred_ob['total'] += 1
+
+            # predictions_copy = predictions_['content'].copy()
+            # predictions_['content'] = [x for x in predictions_copy if x[0].lower() == match.lower()]
+
+            # reference_copy = reference.copy()
+            # predictions_copy = predictions_['content'].copy()
+            # reference = [x for x in reference_copy if x[1].lower() == 'depicts']
+            # predictions_['content'] = [x for x in predictions_copy if x[1].lower() == 'depicts']
+
+            # for a in reference:
+            #     if a[-1] == 'Person':
+            #         print(a)
+            
+            # ref_person = [a for a in reference if a[-1] == 'Occupation']
+            # pred_person = [a for a in predictions_['content'] if a[-1] == 'Occupation']
+
+            # print(entry['id'])
+            # print(ref_person)
+            
+            # if len(ref_person) and len(pred_person) > 0:
+            #     print('ref:', ref_person)
+            #     print('pred:', pred_person)
+
+
+
+            ##########################################################################################################
+            
             # -------- main evaluation process ----------#
             for trips in predictions_['content']:
                 tp_flag, class_name, found, type_prediction = evaluate_tricks(trips, eval, reference, type_prediction, llm_log_path, mode, found)
                 pred_classes_dict = detailed_storage(class_name, pred_classes_dict, tp_flag)
             
     #------------- calculate metrics -------------#
+
     calculate_metrics_df(pred_classes_dict, gt_classes_dict, save_path=save_path, save_types=save_types, type_prediction=type_prediction)
+    ################################
+    #print(pred_classes_dict)
+
+    # pd.DataFrame.from_dict(cnt_sub, orient='index').to_csv('/nfs/home/ritterd/reflect/reflectai/wp2/test/experiments/subjectequalsnameannotationfiltered.jsonl/subject_object_predicate/gt_sub_classes.csv')
+    # pd.DataFrame.from_dict(cnt_ob, orient='index').to_csv('/nfs/home/ritterd/reflect/reflectai/wp2/test/experiments/subjectequalsnameannotationfiltered.jsonl/subject_object_predicate/gt_ob_classes.csv')
+    # pd.DataFrame.from_dict(cnt, orient='index').to_csv('/nfs/home/ritterd/reflect/reflectai/wp2/test/experiments/subjectequalsnameannotationfiltered.jsonl/subject_object_predicate/gt_pred.csv')
+
+    # pd.DataFrame.from_dict(cnt_pred_sub, orient='index').to_csv('/nfs/home/ritterd/reflect/reflectai/wp2/test/experiments/subjectequalsnameannotationfiltered.jsonl/subject_object_predicate/pred_sub_classes.csv')
+    # pd.DataFrame.from_dict(cnt_pred_ob, orient='index').to_csv('/nfs/home/ritterd/reflect/reflectai/wp2/test/experiments/subjectequalsnameannotationfiltered.jsonl/subject_object_predicate/pred_ob_classes.csv')
+    ################################
+
 
 ######################################################################################################################################################################
 
@@ -697,6 +914,12 @@ class EvaluatorPlugin(
             tricks = self._config['tricks']
         except KeyError:
             tricks = False
+
+        if not tricks:
+            try:
+                conf = self._config['conf']
+            except KeyError:
+                conf = False
         ################################################################################################################################
 
         try:
@@ -720,11 +943,58 @@ class EvaluatorPlugin(
             #####################################################################################################################################################################################
 
             # --------------------------------- Evaluate all four schemes for the dataset in total ---------------------------------------------------- #
+            
+            
+            elif conf:
+                save_results = save_path + f'/{eval}/total_{mode}.csv'
+                llm_log_path = save_path + f'/{eval}/llm_mitschrift_{mode}_total.json'
+                
+                try:
+                    gt_s = self._config['gt_subjects']
+                except KeyError:
+                    gt_s = []
+
+                try:
+                    gt_o = self._config['gt_objects']
+                except KeyError:
+                    gt_o = []
+
+                try:
+                    gt_p = self._config['gt_predicates']
+                except KeyError:
+                    gt_p = []
+
+
+                try:
+                    pred_s = self._config['pred_subjects']
+                except KeyError:
+                    pred_s = []
+
+                try:
+                    pred_o = self._config['pred_objects']
+                except KeyError:
+                    pred_o = []
+
+                try:
+                    pred_p = self._config['pred_predicates']
+                except KeyError:
+                    pred_p = [] 
+
+                try:
+                    with_subject = self._config['with_subject']
+                except KeyError:
+                    with_subject = False 
+
+                try:
+                    with_predicate = self._config['with_predicate']
+                except KeyError:
+                    with_predicate = False 
+                    
+                eval_accuracy_total_triplets(text_entries, save_path=save_results, llm_log_path=llm_log_path, mode=mode, 
+                                             gt_s=gt_s, gt_o=gt_o, gt_p=gt_p, pred_o=pred_o, pred_p=pred_p, pred_s=pred_s,
+                                             with_predicate=with_predicate, with_subject=with_subject)
+                
             else:
-                # for a in text_entries:
-                #     if len(a['triplets'][0]['content']) >= 8:
-                #         print(a['id'])
-                #         print(len(a['triplets'][0]['content']))
                 eval_accuracy_total(text_entries, save_path=f'../test/gollie_testset/{eval}/eval_{mode}.csv', mode=mode, llm_log_path=f'../test/gollie_testset/{eval}/llm_mitschrift_{mode}_eval.json', eval=eval)
                 print(f'\n{eval} done')
         
