@@ -54,7 +54,7 @@ def color_relation_to_triplet(package: Color):
 @dataclass
 class PhysicalObject(Template):
     """
-    Identify an **item** or **object**.
+    Identify an **item** contributing to composition, narrative, or symbolism.
     """
 
     artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
@@ -256,7 +256,7 @@ def occupation_relation_to_triplet(package: Occupation) -> List[dict]:
 @dataclass
 class AnatomicalStructure(Template):
     """
-    Identify a **body or body part** depicted as a visual characteristic in a work of art.
+    Identify a **body or body part**.
     """
 
     artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
@@ -336,7 +336,7 @@ def anatomical_structure_relation_to_triplet(
 @dataclass
 class Person(Template):
     """
-    Identify a **human figure** or **person**.
+    Identify a **human figure**.
     """
 
     artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
@@ -344,17 +344,9 @@ class Person(Template):
     historical_figure: Optional[str] = (
         None  # Historical figures Napoleon, Julius Caesar, Marie Antoinette, Queen Elizabeth I, Leonardo da Vinci
     )
-    mythological_figure: Optional[str] = (
-        None  # Mythological figures such as Venus, Zeus, Hercules, Medusa, Cupid, Leda
-    )
-    religious_figure: Optional[str] = (
-        None  # Religious figures such as Jesus Christ, Virgin Mary, Saint Peter, Buddha, Prophet Muhammad
-    )
     other_person_type: Optional[str] = (
         None  # For specific types not covered by the above (e.g., unknown person, self-portrait, group)
     )
-
-    # These fields are for descriptive purposes only and WILL NOT be extracted into Wikidata triplets.
     gender: Optional[str] = None  # Examples: man, woman, child, boy, girl
     age_group: Optional[str] = (
         None  # Examples: infant, toddler, child, adolescent, adult, elderly person
@@ -367,10 +359,10 @@ def person_relation_to_triplet(package: Person) -> List[dict]:
     person_label: Optional[str] = None
     if package.historical_figure is not None:
         person_label = package.historical_figure
-    elif package.mythological_figure is not None:
-        person_label = package.mythological_figure
-    elif package.religious_figure is not None:
-        person_label = package.religious_figure
+    elif package.gender is not None:
+        person_label = package.gender
+    elif package.age_group is not None:
+        person_label = package.age_group
     elif package.other_person_type is not None:
         person_label = package.other_person_type
 
@@ -412,13 +404,354 @@ def person_relation_to_triplet(package: Person) -> List[dict]:
     return triplets
 
 
+@dataclass
+class Animal(Template):
+    """
+    Identify an **animal**.
+    """
+
+    artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+
+    domestic_animal: Optional[str] = (
+        None  # Domestic animals such as dog, cat, horse, cow, sheep, goat, chicken, pig, donkey, goose, duck
+    )
+    wild_animal: Optional[str] = (
+        None  # Wild animals such as lion, tiger, elephant, bear, deer, wolf, fox, boar, leopard, zebra, giraffe
+    )
+    other_animal: Optional[str] = (
+        None  # For animals not covered by the specific categories (e.g., insect, bird, fish, reptile)
+    )
+
+
+def animal_relation_to_triplet(package: Animal) -> List[dict]:
+    triplets = []
+
+    animal_label: Optional[str] = None
+    if package.domestic_animal is not None:
+        animal_label = package.domestic_animal
+    elif package.wild_animal is not None:
+        animal_label = package.wild_animal
+    elif package.other_animal is not None:
+        animal_label = package.other_animal
+
+    if animal_label is None:
+        return triplets
+
+    triplets.append(
+        {
+            "subject": {
+                "label": package.artwork,
+                "s_class": "WorkOfArt",
+            },
+            "relation": {
+                "label": "depicts",
+                "wikidata_id": "wdt:P180",
+            },
+            "object": {
+                "label": animal_label,
+            },
+        }
+    )
+
+    triplets.append(
+        {
+            "subject": {
+                "label": animal_label,
+                "s_class": "Animal",
+            },
+            "relation": {
+                "label": "instance of",
+                "wikidata_id": "wdt:P31",
+            },
+            "object": {
+                "label": "animal",
+                "wikidata_id": "wd:Q729",
+            },
+        }
+    )
+    return triplets
+
+
+@dataclass
+class Plant(Template):
+    """
+    Identify a **plant**.
+    """
+
+    artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+
+    flower: Optional[str] = (
+        None  # Flowers such as rose, lily, sunflower, tulip, daisy, orchid
+    )
+    tree: Optional[str] = (
+        None  # Trees such as oak, willow, pine, cypress, palm, fig tree
+    )
+    fruit: Optional[str] = (
+        None  # Fruits such as apple, grape, orange, lemon, cherry, fig
+    )
+    vegetable: Optional[str] = (
+        None  # Vegetables such as cabbage, carrot, onion, potato, squash, bean
+    )
+    herb: Optional[str] = (
+        None  # Herbs such as rosemary, mint, basil, lavender, parsley, thyme
+    )
+    aquatic_plant: Optional[str] = (
+        None  # Aquatic plants such as water lily, lotus, reeds, seaweed
+    )
+    mythical_plant: Optional[str] = (
+        None  # Mythical plants such as Tree of Life, Golden Bough, Mandrake, Yggdrasil
+    )
+    other_plant: Optional[str] = (
+        None  # For plants not covered by specific categories (e.g., shrub, grass, vine, mushroom (fungus))
+    )
+
+
+def plant_relation_to_triplet(package: Plant) -> List[dict]:
+    triplets = []
+
+    plant_label: Optional[str] = None
+    if package.flower is not None:
+        plant_label = package.flower
+    elif package.tree is not None:
+        plant_label = package.tree
+    elif package.fruit is not None:
+        plant_label = package.fruit
+    elif package.vegetable is not None:
+        plant_label = package.vegetable
+    elif package.herb is not None:
+        plant_label = package.herb
+    elif package.aquatic_plant is not None:
+        plant_label = package.aquatic_plant
+    elif package.mythical_plant is not None:
+        plant_label = package.mythical_plant
+    elif package.other_plant is not None:
+        plant_label = package.other_plant
+
+    if plant_label is None:
+        return triplets
+
+    triplets.append(
+        {
+            "subject": {
+                "label": package.artwork,
+                "s_class": "WorkOfArt",
+            },
+            "relation": {
+                "label": "depicts",
+                "wikidata_id": "wdt:P180",
+            },
+            "object": {
+                "label": plant_label,
+            },
+        }
+    )
+
+    triplets.append(
+        {
+            "subject": {
+                "label": plant_label,
+                "s_class": "Plant",
+            },
+            "relation": {
+                "label": "instance of",
+                "wikidata_id": "wdt:P31",
+            },
+            "object": {
+                "label": "plant",
+                "wikidata_id": "wd:Q756",
+            },
+        }
+    )
+    return triplets
+
+
+@dataclass
+class Emotion(Template):
+    """
+    Identify the **emotion or mood** conveyed or depicted.
+    """
+
+    artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+
+    joy: Optional[str] = (
+        None  # Emotions like joy, happiness, euphoria, delight, amusement
+    )
+    sadness: Optional[str] = (
+        None  # Emotions like sadness, grief, despair, melancholy, sorrow
+    )
+    anger: Optional[str] = (
+        None  # Emotions like anger, rage, fury, irritation, resentment
+    )
+    fear: Optional[str] = None  # Emotions like fear, terror, anxiety, dread
+    surprise: Optional[str] = (
+        None  # Emotions like surprise, astonishment, shock, wonder
+    )
+    disgust: Optional[str] = (
+        None  # Emotions like disgust, revulsion, abhorrence, contempt
+    )
+    love: Optional[str] = (
+        None  # Emotions like love, affection, compassion, tenderness, adoration
+    )
+    calmness: Optional[str] = (
+        None  # Emotions like calmness, serenity, tranquility, peace, relaxation
+    )
+    other_emotion: Optional[str] = (
+        None  # For emotions not covered by the specific categories (e.g., confusion, excitement, shame, pride)
+    )
+
+
+def emotion_relation_to_triplet(package: Emotion) -> List[dict]:
+    triplets = []
+
+    emotion_label: Optional[str] = None
+    if package.joy is not None:
+        emotion_label = package.joy
+    elif package.sadness is not None:
+        emotion_label = package.sadness
+    elif package.anger is not None:
+        emotion_label = package.anger
+    elif package.fear is not None:
+        emotion_label = package.fear
+    elif package.surprise is not None:
+        emotion_label = package.surprise
+    elif package.disgust is not None:
+        emotion_label = package.disgust
+    elif package.love is not None:
+        emotion_label = package.love
+    elif package.calmness is not None:
+        emotion_label = package.calmness
+    elif package.other_emotion is not None:
+        emotion_label = package.other_emotion
+
+    if emotion_label is None:
+        return triplets
+
+    triplets.append(
+        {
+            "subject": {
+                "label": package.artwork,
+                "s_class": "WorkOfArt",
+            },
+            "relation": {
+                "label": "depicts",
+                "wikidata_id": "wdt:P180",
+            },
+            "object": {
+                "label": emotion_label,
+            },
+        }
+    )
+
+    triplets.append(
+        {
+            "subject": {
+                "label": emotion_label,
+                "s_class": "Emotion",
+            },
+            "relation": {
+                "label": "instance of",
+                "wikidata_id": "wdt:P31",
+            },
+            "object": {
+                "label": "emotion",
+                "wikidata_id": "wd:Q149453",
+            },
+        }
+    )
+    return triplets
+
+
+@dataclass
+class GeographicalFeature(Template):
+    """
+    Identify a **naturally occurring landform**.
+    """
+
+    artwork: str  # Artworks such as Mona Lisa, The Sistine Chapel, Guernica, The Birth of Venus, The Night Watch, The Starry Night
+
+    landform: Optional[str] = (
+        None  # Landforms such as mountain, hill, valley, plain, desert, island, cave, rock formation
+    )
+    body_of_water: Optional[str] = (
+        None  # Bodies of water such as river, lake, ocean, sea, waterfall, spring, marsh, canal
+    )
+    climate_feature: Optional[str] = (
+        None  # Climate features such as clouds, rain, snow, storm, rainbow, sunlight, moonlight
+    )
+    natural_phenomenon: Optional[str] = (
+        None  # Natural phenomena such as volcano eruption, earthquake, aurora, flood, drought
+    )
+    other_feature: Optional[str] = (
+        None  # For geographical features not covered by specific categories (e.g., forest, field, coast, sky)
+    )
+
+
+def geographical_feature_relation_to_triplet(
+    package: GeographicalFeature,
+) -> List[dict]:
+    triplets = []
+
+    feature_label: Optional[str] = None
+    if package.landform is not None:
+        feature_label = package.landform
+    elif package.body_of_water is not None:
+        feature_label = package.body_of_water
+    elif package.climate_feature is not None:
+        feature_label = package.climate_feature
+    elif package.natural_phenomenon is not None:
+        feature_label = package.natural_phenomenon
+    elif package.other_feature is not None:
+        feature_label = package.other_feature
+
+    if feature_label is None:
+        return triplets
+
+    triplets.append(
+        {
+            "subject": {
+                "label": package.artwork,
+                "s_class": "WorkOfArt",
+            },
+            "relation": {
+                "label": "depicts",
+                "wikidata_id": "wdt:P180",
+            },
+            "object": {
+                "label": feature_label,
+            },
+        }
+    )
+
+    triplets.append(
+        {
+            "subject": {
+                "label": feature_label,
+                "s_class": "GeographicalFeature",
+            },
+            "relation": {
+                "label": "instance of",
+                "wikidata_id": "wdt:P31",
+            },
+            "object": {
+                "label": "geographical feature",
+                "wikidata_id": "wd:Q271669",
+            },
+        }
+    )
+    return triplets
+
+
 ENTITY_DEFINITIONS: List[Template] = [
     Color,
     PhysicalObject,
     Season,
     Occupation,
     AnatomicalStructure,
+    Animal,
     Person,
+    Plant,
+    Emotion,
+    GeographicalFeature,
 ]
 
 ENTITY_PARSER = {
@@ -427,5 +760,9 @@ ENTITY_PARSER = {
     "Season": season_relation_to_triplet,
     "Occupation": occupation_relation_to_triplet,
     "AnatomicalStructure": anatomical_structure_relation_to_triplet,
+    "Animal": animal_relation_to_triplet,
     "Person": person_relation_to_triplet,
+    "Plant": plant_relation_to_triplet,
+    "Emotion": emotion_relation_to_triplet,
+    "GeographicalFeature": geographical_feature_relation_to_triplet,
 }
