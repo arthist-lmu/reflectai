@@ -1,0 +1,9 @@
+Bootstrap: docker
+From: pytorch/pytorch:2.4.1-cuda12.1-cudnn9-devel
+
+%post
+  export DEBIAN_FRONTEND=noninteractive
+  apt update -y && apt upgrade -y && apt install python3-opencv git -y
+  conda install -y  -c conda-forge -c pytorch --no-update-deps pip
+#pip install   torch==1.12.1+cu113
+pip install   torchvision "numpy<2" transformers tensorboard "pytorch-lightning<2" timm pycocotools ninja matplotlib pandas

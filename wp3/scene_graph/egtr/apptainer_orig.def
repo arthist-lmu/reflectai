@@ -1,0 +1,16 @@
+Bootstrap: docker
+From: nvcr.io/nvidia/pytorch:21.11-py3
+
+%files
+    $PWD/requirements.txt requirements.txt
+
+%post
+    export DEBIAN_FRONTEND=noninteractive
+    apt update -y && apt upgrade -y && apt install python3-opencv git -y
+    pip install -r requirements.txt
+    git clone https://github.com/NVIDIA/apex
+    cd apex
+    # if pip >= 23.1 (ref: https://pip.pypa.io/en/stable/news/#v23-1) which supports multiple `--config-settings` with the same key...
+    # pip install -v --disable-pip-version-check --no-cache-dir --no-build-isolation --config-settings "--build-option=--cpp_ext" --config-settings "--build-option=--cuda_ext" ./
+    # otherwise
+    pip install -v --disable-pip-version-check --no-cache-dir --no-build-isolation --global-option="--cpp_ext" --global-option="--cuda_ext" ./
