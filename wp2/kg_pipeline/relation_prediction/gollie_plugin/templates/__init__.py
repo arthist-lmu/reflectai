@@ -5,3 +5,8 @@ from . import painting_content
 from . import painting_genre
 from . import painting_material
 from . import painting_metadata
+from . import a_ts_top_ten_instruction_markdown
+from . import a_ts_top_ten_getty_thesaurus
+from . import a_ts_top_ten_initial_description
+from . import a_ts_top_ten_llm_simplelanguage
+from . import a_ts_top_ten_wikidata
