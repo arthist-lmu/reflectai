@@ -1,6 +1,6 @@
 from glob import glob
 import argparse
-
+import json
 import torch
 from PIL import Image
 import matplotlib.pyplot as plt
@@ -27,15 +27,14 @@ def parse_args():
     args = parser.parse_args()
     return args
 
-def main():
-    pass
+# def main():
+#     pass
 
-if __name__ == "__main__":
-    sys.exit(main())
+# if __name__ == "__main__":
+#     sys.exit(main())
 
 YOUR_ARTIFACT_PATH = "egtr__pretrained_detr__SenseTime__deformable-detr__batch__32__epochs__150_50__lr__1e-05_0.0001__visual_genome__finetune__version_0/batch__64__epochs__50_25__lr__2e-07_2e-06_0.0002__visual_genome__finetune/version_0"
-YOUR_IMAGE_PATH = "/nfs/home/springsteinm/tmp/reflectai_example_2.jpg"
-#YOUR_IMAGE_PATH = "/nfs/data/visual_genome/images/1009.jpg"
+YOUR_IMAGE_PATH = "/nfs/home/ritterd/reflect/reflectai/wp3/scene_graph/egtr/Q650635.jpg"
 YOUR_OBJ_THRESHOLD = 0.3
 YOUR_REL_THRESHOLD = 1e-4
 
@@ -78,6 +77,8 @@ outputs = model(
     output_attention_states=True
 )
 
+#print(outputs)
+
 pred_logits = outputs['logits'][0]
 obj_scores, pred_classes = torch.max(pred_logits.softmax(-1), -1)
 pred_boxes = outputs['pred_boxes'][0]
@@ -89,14 +90,31 @@ pred_rel = torch.mul(pred_rel, pred_connectivity)
 # get valid objects and triplets
 obj_threshold = YOUR_OBJ_THRESHOLD
 valid_obj_indices = (obj_scores >= obj_threshold).nonzero()[:, 0]
-print(valid_obj_indices)
+#print(valid_obj_indices)
 
 valid_obj_classes = pred_classes[valid_obj_indices] # [num_valid_objects]
 valid_obj_boxes = pred_boxes[valid_obj_indices] # [num_valid_objects, 4]
-print(valid_obj_classes)
-print(valid_obj_boxes)
+#print(valid_obj_classes)
+#print(valid_obj_boxes)
 
 rel_threshold = YOUR_REL_THRESHOLD
-print(pred_rel)
+#print(pred_rel)
 valid_triplets = (pred_rel[valid_obj_indices][:, valid_obj_indices] >= rel_threshold).nonzero() # [num_valid_triplets, 3]
-print(valid_triplets)
+#print(valid_triplets)
+
+with open("vg_label.json") as f:
+    id2label = json.load(f)
+
+with open("vg_relation.json") as f:
+    id2relation = json.load(f)
+
+
+triplets = []
+for trip in valid_triplets:
+    triplets.append([id2label[str(trip[0].item())], 
+                    id2relation[str(trip[1].item())], 
+                    id2label[str(trip[2].item())]])
+for a in triplets:
+    print(a)
+
+

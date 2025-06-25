@@ -72,6 +72,9 @@ def main():
         output_attention_states=True,
     )
 
+    print(outputs.keys())
+    #print(outputs)
+
     pred_logits = outputs["logits"][0]
     obj_scores, pred_classes = torch.max(pred_logits.softmax(-1), -1)
     pred_boxes = outputs["pred_boxes"][0]
@@ -83,22 +86,17 @@ def main():
     # get valid objects and triplets
     obj_threshold = YOUR_OBJ_THRESHOLD
     valid_obj_indices = (obj_scores >= obj_threshold).nonzero()[:, 0]
-    print(valid_obj_indices)
+    #print(valid_obj_indices)
 
     valid_obj_classes = pred_classes[valid_obj_indices]  # [num_valid_objects]
     valid_obj_boxes = pred_boxes[valid_obj_indices]  # [num_valid_objects, 4]
-    print(valid_obj_classes)
-    print(valid_obj_boxes)
 
     rel_threshold = YOUR_REL_THRESHOLD
-    print(pred_rel)
     valid_triplets = (
         pred_rel[valid_obj_indices][:, valid_obj_indices] >= rel_threshold
     ).nonzero()  # [num_valid_triplets, 3]
-    print(valid_triplets)
-
+########
     np_image = np.array(pil_image)
-    print(np_image.shape)
 
     with open("vg_label.json") as f:
         id2label = json.load(f)
@@ -114,8 +112,6 @@ def main():
         valid_obj_boxes = (
             pred_boxes[obj].detach().cpu().numpy()
         )  # [num_valid_objects, 4]
-        print(valid_obj_classes)
-        print(valid_obj_boxes)
         x = valid_obj_boxes[0] * np_image.shape[0]
         y = valid_obj_boxes[1] * np_image.shape[1]
         width = valid_obj_boxes[2] * np_image.shape[0]
@@ -126,7 +122,7 @@ def main():
         y_max = int((y_center + height / 2) * pil_image.height)
         x_min = int((x_center - width / 2) * pil_image.width)
         y_min = int((y_center - height / 2) * pil_image.height)
-        print(x_max, y_max, x_min, y_min)
+        #print(x_max, y_max, x_min, y_min)
         ax.add_patch(
             plt.Rectangle(
                 (x_max, y_min),
@@ -138,7 +134,7 @@ def main():
                 fc="none",
             )
         )
-        plt.text((x_max, y_min), id2label[valid_obj_classes.item()])
+        plt.text(x_max, y_min, id2label[str(valid_obj_classes.item())])
 
     plt.axis("off")
     plt.savefig("plot.pdf", bbox_inches="tight")
