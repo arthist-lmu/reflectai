@@ -488,10 +488,10 @@ class Plant(Template):
     )
     fruit: Optional[str] = (
         None  # Fruits such as apple, grape, orange, lemon, cherry, fig
-    )
+    ) #Gehören nach den Annotationsrichtlinien verm. eher zu Food.
     vegetable: Optional[str] = (
         None  # Vegetables such as cabbage, carrot, onion, potato, squash, bean
-    )
+    ) #Gehören nach den Annotationsrichtlinien verm. eher zu Food.
     herb: Optional[str] = (
         None  # Herbs such as rosemary, mint, basil, lavender, parsley, thyme
     )
