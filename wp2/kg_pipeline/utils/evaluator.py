@@ -77,7 +77,7 @@ def remove_entry(remove, structure, mode='single'):
     return structure
 
 
-def calculate_metrics_detailed(pred_dict, pos_dict, mode='class', with_n=True):
+def calculate_metrics_detailed(pred_dict, pos_dict, mode='class', with_n=True, full_dict=False):
     results = {}
     if mode == 'class':
         for key, values in pred_dict.items():
@@ -102,14 +102,15 @@ def calculate_metrics_detailed(pred_dict, pos_dict, mode='class', with_n=True):
             results.update({key: scores})
 
         # include all the classes that have not been found but could have been found
-        for gt_key in pos_dict.keys():
-            if gt_key not in results.keys():
-                if with_n:
-                    scores = [0, 0, 0, 0, pos_dict[gt_key]]
-                else:
-                    scores = [0, 0, 0]
+        if full_dict:
+            for gt_key in pos_dict.keys():
+                if gt_key not in results.keys():
+                    if with_n:
+                        scores = [0, 0, 0, 0, pos_dict[gt_key]]
+                    else:
+                        scores = [0, 0, 0]
 
-                results.update({gt_key: scores})
+                    results.update({gt_key: scores})
 
     return results
 
@@ -174,7 +175,7 @@ def llm_query(predictions, save_path, mode='soft'):
     return resp[end:]
 
 
-def calculate_metrics_df(pred_classes_dict, gt_classes_dict, save_path, save_types, type_prediction):
+def calculate_metrics_df(pred_classes_dict, gt_classes_dict, save_path, save_types, type_prediction, amounts=True, save_gt=None, save_pred=None):
 
     class_eval = calculate_metrics_detailed(pred_classes_dict, gt_classes_dict, mode='class')
     class_df = pd.DataFrame.from_dict(data=class_eval, orient='index', columns=['F1', 'precision', 'recall', 'N_pred', 'N_gt'])
@@ -184,6 +185,18 @@ def calculate_metrics_df(pred_classes_dict, gt_classes_dict, save_path, save_typ
         type_prediction_df = pd.DataFrame.from_dict(data=type_prediction, orient='index')
         type_prediction_df["procentage"] = type_prediction_df['found'] / type_prediction_df['existing']
         type_prediction_df.to_csv(save_types)
+    
+    if amounts:
+        gt_df = pd.DataFrame.from_dict(data=gt_classes_dict, orient='index', columns=['gt'])
+        #gt_df.to_csv(save_gt)
+        print(gt_df)
+
+        pred_df = pd.DataFrame.from_dict(data=pred_classes_dict, orient='index')
+        print(pred_df)
+        pred_df = pred_df.merge(gt_df, how='right', left_index=True, right_index=True)
+        pred_df.to_csv(save_pred)
+
+
 
 
 def count_type_accuracy_block(tup, pred, type_prediction, a):
@@ -560,6 +573,7 @@ def eval_accuracy_total_triplets(text_entries, save_path, mode='perfect', eval='
                                     found = remove_entry(remove=tup, structure=found, mode='multiple')
                                     break
     # ------------- calculate metrics -------------#
+    print(total_pos)
     scores = calculate_metrics(tp, total_pre, total_pos)
     scores.to_csv(save_path) 
             
@@ -614,12 +628,12 @@ def prepare_data(reference, eval, predictions, gt_classes_dict):
     return reference, predictions, gt_classes_dict
 
 
-def evaluate_tricks(trips, eval, reference, type_prediction, llm_log_path, mode, found):
+def evaluate_tricks(trips, eval, reference, type_prediction, llm_log_path, mode, found, entity_storage=None):
     #---------- count the matches detailed in differnt ways -------------#
     if eval in ('subject', 'object'):
         pred = trips
         tp_flag, class_name, found, type_prediction = \
-                mode_specific_counting((pred, ), reference, type_prediction, llm_log_path, mode, found, single='')
+                mode_specific_counting((pred, ), reference, type_prediction, llm_log_path, mode, found, single='', entity_storage=entity_storage)
 
     elif eval == 'subject_object':
         s_pred = (trips[0], trips[2])
@@ -791,9 +805,11 @@ def calc_ollama(pred, reference, type_prediction, found, llm_log_path, mode, sin
     return class_name, tp_flag, found
 
 
-def mode_specific_counting(pred, reference, type_prediction, llm_log_path, mode, found, single):
+def mode_specific_counting(pred, reference, type_prediction, llm_log_path, mode, found, single, entity_storage=None):
     if mode == 'word_distance':
+        
         class_name, tp_flag, found = calc_word_distance(pred, reference, type_prediction, found, single)
+        #store_entity(pred, entity_storage)  # if the ground truth class_name is needed replace pred[0][1] with class_name
 
     elif mode == 'perfect':
         class_name, tp_flag, found = calc_perfect(pred, reference, type_prediction, found, single)
@@ -804,7 +820,7 @@ def mode_specific_counting(pred, reference, type_prediction, llm_log_path, mode,
     return tp_flag, class_name, found, type_prediction
 
 
-def eval_accuracy_classes_tricks(text_entries, save_path, save_types, mode='word_distance', llm_log_path=None, eval='subject'):
+def eval_accuracy_classes_tricks(text_entries, save_path, save_types, mode='word_distance', llm_log_path=None, eval='subject', save_entity=None, save_gt=None, save_pred=None):
     # evaluates the correctly found subjects only one of the three modes can be True
     pred_classes_dict = {}
     gt_classes_dict = defaultdict(int)
@@ -815,74 +831,77 @@ def eval_accuracy_classes_tricks(text_entries, save_path, save_types, mode='word
     cnt_pred_sub = defaultdict(int)
     cnt_pred_ob = defaultdict(int)
     cnt = defaultdict(int)
+    with open(save_entity, 'w', encoding='utf-8') as fp:
+              
+        for entry in text_entries:
+            for predictions_ in entry['triplets']:
+                reference = entry['annotations']
+                reference = convert_annotation_to_triplet(reference)
+                reference, predictions_['content'], gt_classes_dict = prepare_data(reference, eval, predictions_['content'], gt_classes_dict)
+                
+                ##############THIS PART REMOVES ALL THE SUBJECTS WHERE SUBJECT != ARTWORK FROM THE LIST ################# 
+                
+                # print(len(reference))
+                # print(len(predictions_['content']))
+                # try:
+                #     end = re.search('^.*\n\n', entry['text']).end()
+                #     match = entry['text'][:end-2]
+                # except (TypeError, AttributeError):
+                #     match = entry["id"]
 
-    for entry in text_entries:
-        for predictions_ in entry['triplets']:
-            reference = entry['annotations']
-            reference = convert_annotation_to_triplet(reference)
-            reference, predictions_['content'], gt_classes_dict = prepare_data(reference, eval, predictions_['content'], gt_classes_dict)
-             
-            ##############THIS PART REMOVES ALL THE SUBJECTS WHERE SUBJECT != ARTWORK FROM THE LIST ################# 
-            
-            # print(len(reference))
-            # print(len(predictions_['content']))
-            # try:
-            #     end = re.search('^.*\n\n', entry['text']).end()
-            #     match = entry['text'][:end-2]
-            # except (TypeError, AttributeError):
-            #     match = entry["id"]
+                # reference_copy = reference.copy()
+                # reference = [x for x in reference_copy if x[0].lower() != match.lower()]
+                
+                # for a in reference:
+                #     cnt_sub[a[3]] += 1
+                #     cnt_sub['total'] += 1
+                #     cnt_ob[a[4]] += 1
+                #     cnt_ob['total'] += 1
+                #     cnt[a[1]] += 1
+                #     cnt['total'] += 1
 
-            # reference_copy = reference.copy()
-            # reference = [x for x in reference_copy if x[0].lower() != match.lower()]
-            
-            # for a in reference:
-            #     cnt_sub[a[3]] += 1
-            #     cnt_sub['total'] += 1
-            #     cnt_ob[a[4]] += 1
-            #     cnt_ob['total'] += 1
-            #     cnt[a[1]] += 1
-            #     cnt['total'] += 1
+                # for a in predictions_['content']:
+                #     cnt_pred_sub[a[3]] += 1
+                #     cnt_pred_sub['total'] += 1
+                #     cnt_pred_ob[a[4]] += 1
+                #     cnt_pred_ob['total'] += 1
 
-            # for a in predictions_['content']:
-            #     cnt_pred_sub[a[3]] += 1
-            #     cnt_pred_sub['total'] += 1
-            #     cnt_pred_ob[a[4]] += 1
-            #     cnt_pred_ob['total'] += 1
+                # predictions_copy = predictions_['content'].copy()
+                # predictions_['content'] = [x for x in predictions_copy if x[0].lower() == match.lower()]
 
-            # predictions_copy = predictions_['content'].copy()
-            # predictions_['content'] = [x for x in predictions_copy if x[0].lower() == match.lower()]
+                # reference_copy = reference.copy()
+                # predictions_copy = predictions_['content'].copy()
+                # reference = [x for x in reference_copy if x[1].lower() == 'depicts']
+                # predictions_['content'] = [x for x in predictions_copy if x[1].lower() == 'depicts']
 
-            # reference_copy = reference.copy()
-            # predictions_copy = predictions_['content'].copy()
-            # reference = [x for x in reference_copy if x[1].lower() == 'depicts']
-            # predictions_['content'] = [x for x in predictions_copy if x[1].lower() == 'depicts']
+                # for a in reference:
+                #     if a[-1] == 'Person':
+                #         print(a)
+                
+                # ref_person = [a for a in reference if a[-1] == 'Occupation']
+                # pred_person = [a for a in predictions_['content'] if a[-1] == 'Occupation']
 
-            # for a in reference:
-            #     if a[-1] == 'Person':
-            #         print(a)
-            
-            # ref_person = [a for a in reference if a[-1] == 'Occupation']
-            # pred_person = [a for a in predictions_['content'] if a[-1] == 'Occupation']
-
-            # print(entry['id'])
-            # print(ref_person)
-            
-            # if len(ref_person) and len(pred_person) > 0:
-            #     print('ref:', ref_person)
-            #     print('pred:', pred_person)
+                # print(entry['id'])
+                # print(ref_person)
+                
+                # if len(ref_person) and len(pred_person) > 0:
+                #     print('ref:', ref_person)
+                #     print('pred:', pred_person)
 
 
 
-            ##########################################################################################################
-            
-            # -------- main evaluation process ----------#
-            for trips in predictions_['content']:
-                tp_flag, class_name, found, type_prediction = evaluate_tricks(trips, eval, reference, type_prediction, llm_log_path, mode, found)
-                pred_classes_dict = detailed_storage(class_name, pred_classes_dict, tp_flag)
-            
+                ##########################################################################################################
+                
+                # -------- main evaluation process ----------#
+                for trips in predictions_['content']:
+                    tp_flag, class_name, found, type_prediction = evaluate_tricks(trips, eval, reference, type_prediction, llm_log_path, mode, found, entity_storage=save_entity)
+                    pred_classes_dict = detailed_storage(class_name, pred_classes_dict, tp_flag)
+                    print(f'entity: {trips[0]}   class: {trips[1]}\n')
+                    fp.write(f'entity: {trips[0]}   class: {trips[1]}\n')
+
     #------------- calculate metrics -------------#
-
-    calculate_metrics_df(pred_classes_dict, gt_classes_dict, save_path=save_path, save_types=save_types, type_prediction=type_prediction)
+    calculate_metrics_df(pred_classes_dict, gt_classes_dict, save_path=save_path, save_types=save_types, 
+                         type_prediction=type_prediction, amounts=True, save_gt=save_gt, save_pred=save_pred)
     ################################
     #print(pred_classes_dict)
 
@@ -937,8 +956,15 @@ class EvaluatorPlugin(
             save_types = save_path + f'/{eval}/types_{mode}.csv'
             save_results = save_path + f'/{eval}/classes_{mode}.csv'
             llm_log_path = save_path + f'/{eval}/llm_mitschrift_{mode}_classes.json'
+            save_entity = save_path + f'/{eval}/entities{mode}.txt'
+            save_gt = save_path + f'/{eval}/GTs_{mode}.csv'
+            save_pred = save_path + f'/{eval}/Preds_{mode}.csv'
+            
+
+
             if tricks:
-                eval_accuracy_classes_tricks(text_entries, save_path=save_results, save_types=save_types, mode=mode, llm_log_path=llm_log_path, eval=eval)
+                eval_accuracy_classes_tricks(text_entries, save_path=save_results, save_types=save_types, mode=mode, llm_log_path=llm_log_path,
+                                              eval=eval, save_entity=save_entity, save_gt=save_gt, save_pred=save_pred)
                 print(f'\n{eval} done')
             #####################################################################################################################################################################################
 
