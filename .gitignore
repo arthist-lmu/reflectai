@@ -12,3 +12,4 @@ build/
 .DStore
 .DS_Store
 slurm*.out
+*.tar*
